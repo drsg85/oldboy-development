@@ -1,13 +1,13 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const notify = require('gulp-notify');
-const sassImporter = require('sass-module-importer');
-const autoprefixer = require('gulp-autoprefixer');
+import gulp from 'gulp';
+import sass from 'gulp-sass';
+import { onError } from 'gulp-notify';
+import sassImporter from 'sass-module-importer';
+import autoprefixer from 'gulp-autoprefixer';
 
 gulp.task('styles', () => {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass({ importer: sassImporter() }))
-        .on('error', notify.onError((error) => {
+        .on('error', onError((error) => {
             return {
                 title: 'Styles',
                 message: error.message

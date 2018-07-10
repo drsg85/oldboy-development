@@ -1,11 +1,16 @@
-const gulp = require('gulp');
-const pug = require('gulp-pug');
-const notify = require('gulp-notify');
+import gulp from 'gulp';
+import pug from 'gulp-pug';
+import { onError } from 'gulp-notify';
+
+const dirs = {
+    src: './src/pug/*.pug',
+    dest: './dist'
+}
 
 gulp.task('pugRender', () => {
-    return gulp.src('./src/pug/*.pug')
+    return gulp.src(dirs.src)
         .pipe(pug())
-        .on('error', notify.onError((error) => {
+        .on('error', onError((error) => {
             return {
                 title: "Pug",
                 message: error.message
@@ -15,5 +20,5 @@ gulp.task('pugRender', () => {
             console.log(error.toString());
             this.emit('end');
         })
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(dirs.dest));
 });
