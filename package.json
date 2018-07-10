@@ -1,0 +1,24 @@
+{
+  "name": "oldboy-barbershop",
+  "version": "1.0.0",
+  "description": "Site for Oldboy Barbersop franshise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigel-riss/oldboy-barbershop.git"
+  },
+  "author": "Yuriy Kurenkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigel-riss/oldboy-barbershop/issues"
+  },
+  "homepage": "https://github.com/nigel-riss/oldboy-barbershop#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1"
+  }
+}
