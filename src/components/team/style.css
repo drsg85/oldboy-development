@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.team {
+    /* positioning */
+    position: relative;
+    
+    /* box model */
+    width: 338px;
+    height: 517px;
+    
+    /* visual */
+    background-color: #000000;
+    border-radius: 2%;  
+    overflow: hidden; 
+}
+
+.team__name {
+    /* positioning */
+    position: absolute;
+    bottom: 45px;
+    right: 17px;
+    z-index: 1;
+
+    /* typography */
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    transform: scale(1,2);
+    letter-spacing: 2px;
+}
+
+.team__post {
+    /* positioning */
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    z-index: 1;
+
+    /* typography */
+    text-transform: uppercase;
+    text-align: right;
+    color: #ca9853;
+}
+
+.team__header:after {
+    /* box model */
+    content: "";
+    display: block;
+
+    /* positioning */
+    position: absolute;
+    bottom: -20px;
+    right: -25px;
+    transform-origin: right center;
+    transform: rotate(-15deg);
+
+    /* box model */
+    width: 370px;
+    height: 175px;
+
+    /* visual */
+    background-color: rgba(15,18,11,0.5);
+}
+
+.team__button {
+    /* box model */
+    width: 55px;
+    height: 55px;
+
+    /* positioning */
+    position: absolute;
+    bottom: 18px;
+    left: 20px;
+    z-index: 2;
+
+    /* visual */
+    border-radius: 50%;
+    border: 3px solid #ca9853;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    line-height: 55px;
+}
+
+.team__button a {
+    /* visual */
+    text-decoration: none;
+    text-transform: uppercase;  
+    color: #ffffff;
+}
+
+.team__button img {
+    /* visual */
+    vertical-align: middle;
+}
+
+.team:hover .team__button {
+    /* box model */
+    width: 155px;
+
+    /* visual */
+    border-radius: 35px;
+}
+
+.team:hover .team__button-text {
+    opacity: 1;
+}
+
+.team:hover .team__button img {
+    display: none;
+}
+
+.team__button-text {
+    /* box model */
+    width: 125px;
+
+    /* positioning */
+    position: absolute;
+    bottom: 29px;
+    left: 37px;
+    z-index: 1;
+    
+    /* visual */
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: 0.3s
+}
