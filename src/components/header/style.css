@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    /* box model */
+    max-width: 1920px;
+    height: 930px;
+    margin: 0 auto;
+
+    /* positioning */
+    padding: 45px 145px 45px 145px;
+
+    /* visual */
+    background-color: #000000;
+    overflow: hidden;
+}   
+
+.header {
+    position: relative;
+}
+
+.header__logo {
+    margin-right: 50px;
+}
+
+.header__header {
+    /* box model */
+    display: flex;
+}
+
+.header__menu {
+    /* box model */
+    width: 1280px;
+    
+    /* positioning */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__menu ul {
+    /* box model */
+    width: 480px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.header__menu li {
+    /* visual */
+    list-style-type: none;
+}
+
+.header__menu li a {
+    /* visual */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.header__menu li a:hover {
+    /* visual */
+    color: #e0b04a;
+}
+
+.header__city {
+    
+    width: 294px;
+    /* positioning */
+    margin-left: 10px;
+
+    /* visual */
+    text-transform: uppercase;
+    color: #e0b04a;
+    z-index: 1;
+}
+
+.header__content {
+    /* box model */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__adress_city {
+    /* positioning */
+    transform: rotate(-15deg);
+    transform-origin: left center;
+    margin-top: 20px;
+
+    /* visual */
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #ffffff;
+    font-style: oblique;
+}
+
+.header__adress_street {
+    /* box model */
+    width: 290px;
+
+    /* positioning */
+    transform: rotate(-15deg);
+    transform-origin: left center;
+
+    /* visual */
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-style: oblique;
+    color: #ffffff;
+}
+
+.header__adress_street::after {
+    /* box model */
+    content: "";
+    display: block;
+    width: 305px;
+    height: 2px;
+
+    /* visual */
+    background-color: #e0b04a;
+}
+
+.header__title h1 {
+    /* positioning */
+    transform: rotate(-15deg);
+    transform-origin: left center;
+    width: 200px ;
+
+    /* visual */
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 52px;
+    font-style: oblique;
+}
+
+.header__title h1::after {
+    /* box model */
+    content: "";
+    display: block;
+    width: 345px;
+    height: 2px;
+
+    /* visual */
+    background-color: #e0b04a;
+}
+
+.header_about {
+    /* box model */
+    width: 226px;
+    
+    /* positioning */
+    transform: rotate(-15deg);
+    transform-origin: left center;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+    /* visual */
+    text-transform: uppercase;
+    font-size: 12px;
+    font-style: oblique;
+    color: #ffffff;
+}
+
+.header__app::after {
+    /* box model */
+    content: "";
+    display: block;
+    width: 615px;
+    height: 130%;
+
+    /* positioning */
+    position: absolute;
+    margin-left: -442px;
+    margin-top: -285px;
+
+    /* visual */
+    background-color: rgba(51,52,56,0.5);
+    transform: rotate(15deg);
+    transform-origin: bottom center;
+    z-index: 0;
+}
+
+.header__stripe::after {
+    /* box model */
+    content: "";
+    display: block;
+    width: 209px;
+    height: 2px;
+
+    /* positioning */
+    margin-left: -326px;
+    margin-top: -15px;
+    position: absolute;
+
+    /* visual */
+    background-color: #e0b04a;
+    z-index: 1;
+
+}
+
+.header__install {
+    /* box model */
+    width: 186px;
+
+    /* positioning */
+    position: absolute;
+    margin-left: -320px;
+    
+    /* visual */
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600; 
+    z-index: 1;
+}
+
+.header__install::first-line {
+    /* visual */
+    font-size: 12px;
+    color: #e0b04a;
+}
+
+.header__forentry {
+    /* box model */
+    width: 152px;
+
+    /* positioning */
+    position: absolute;
+    margin-top: 65px;
+    margin-left: -320px;
+
+    /* visual */
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600; 
+    z-index: 1;
+}
+
+.header__forentry::before {
+    /* box model */
+    content: "";
+    display: block;
+    width: 190px;
+    height: 2px;
+
+    /* positioning */
+    margin-bottom: 15px;
+    margin-left: -7px;
+
+    /* visual */
+    background-color: #e0b04a;
+}
+
+.header__phone_img {
+    /* positioning */   
+    margin-top: -70px;
+    margin-left: -245px;
+    position: absolute;
+
+    /* visual */
+    z-index: 1;
+}
+
+.header__bottom {
+    /* box model */
+    display: flex;  
+    justify-content: space-between;
+
+    /* positioning */
+    margin-top: 380px;
+}
+
+.header__contacts {
+    /* box model */
+    display: flex;  
+    justify-content: space-between;
+    width: 500px;
+}
+
+.header__contacts_adress {
+    /* positioning */
+    margin-right: 15px;
+}
+
+.header__adress_head {
+    /* visual */
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.header__adress {
+    /* box model */
+    width: 152px;
+
+    /* positioning */
+    margin-top: 15px;
+
+    /* visual */
+    text-align-last: left;
+    color: #ffffff;
+}
+
+.header__contacts_phone {
+    /* positioning */
+    margin-right: 15px;
+}
+
+.header__phone_head {
+    /* visual */
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.header_phone {
+    /* positioning */
+    margin-top: 15px;
+
+    /* visual */
+    text-align-last: left;
+    color: #ffffff;
+}
+
+.header__contacts_hours {
+    /* positioning */
+    margin-right: 15px;
+}
+
+.header_hours_head {
+    /* box model */
+    width: 170px;
+
+    /* visual */
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.header__hours {
+    /* positioning */
+    margin-top: 15px;
+
+    /* visual */
+    text-align-last: left;
+    color: #ffffff;
+}
+
+.header__buttons {
+    margin-top: -145px;
+}
+
+.header__entry {
+    /* box model */
+    display: block;
+    width: 200px;
+    height: 55px;
+
+    /* positioning */
+    margin-bottom: 25px;
+
+    /* visual */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid #e0b04a;
+    border-radius: 35px;
+    text-align: center;
+    line-height: 55px;
+    transition: 0.5s;
+}
+
+.header__entry:hover {
+    background-color: #d6a354;
+}
+
+.header__cert {
+    /* box model */
+    display: block;
+    width: 200px;
+    height: 55px;
+
+    /* positioning */
+    margin-bottom: 25px;
+    
+    /* visual */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid #e0b04a;
+    border-radius: 35px;
+    text-align: center;
+    line-height: 55px;
+    transition: 0.5s;
+}
+
+.header__cert:hover {
+    background-color: #d6a354;
+}
+
+.header__socials {
+    /* box model */
+    display: flex;
+    justify-content: center;
+}
+
+.header__socials a {
+    /* box model */
+    width: 40px;
+    height: 40px;
+
+    /* positioning */
+    margin-right: 15px;
+
+    /* visual */
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.header__socials a:hover {
+    border: 2px solid #e0b04a;
+    color: #e0b04a;
+}
+
+.header__app_links p {
+    /* positioning */
+    margin-top: -35px;
+    margin-left: 20px;
+
+    /* visual */
+    text-transform: uppercase;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.header__links {
+    display: flex;
+}
+
+.header__links a {
+    /* box model */
+    display: block;
+    width: 170px;
+    height: 55px;
+
+    /* positioning */
+    margin-right: 15px;
+    margin-top: 20px;
+
+    /* visual */
+    border: 2px solid #ffffff;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    line-height: 55px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.header__links a:hover {
+    border: 2px solid #e0b04a;
+    color: #e0b04a;
+}
+
+.fa-google-play {
+    margin-right: 10px;
+}
+
+.fa-apple {
+    margin-right: 10px;
+}
