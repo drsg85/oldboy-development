@@ -20,6 +20,10 @@ gulp.task('watch', () => {
 
     // pug
     watch('./src/pug/**/*.pug', () => {
-        gulp.start('pugRender');
+        gulp.start();
     });
+});
+
+gulp.task('pugChanged', ['pugRender'], () => {
+    browserSync.reload();
 });
