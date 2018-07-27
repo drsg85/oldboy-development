@@ -9,7 +9,8 @@ html(lang="en")
     body
         header.hero
             .hero__logo
-                img(src="", alt="")
+                a(href="#")
+                    img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
             .hero__nav
                 nav.main-nav
@@ -20,19 +21,54 @@ html(lang="en")
                         li.main-nav__item: a(href="#").main-nav__link Франшиза
 
             .hero__city
-                p Выбери свой город:
-                p Калининград
+                p Выбери свой город: 
+                    a(href="#") Калининград ▼
 
             .hero__caption 
-                p Крупнейшая международная сеть мужских парикмахерских
-                h1 Oldboy Barbershop
+                h1 Крупнейшая международная сеть мужских парикмахерских Oldboy Barbershop
                 p Калининград Театральная 30
 
             .hero__contacts
+                .contact
+                    h2.contact__title Адрес
+                    p.contact__value ул. Театральная, 30
+                    
+                .contact
+                    h2.contact__title Телефон
+                    p.contact__value 52–57–90
+
+                .contact
+                    h2.contact__title Часы работы
+                    p.contact__value 10:00 — 21:00 (Вс. с 11:00)
 
             .hero__buttons
+                a.button(href="#") Запись онлайн<br>
+                a.button(href="#") Сертификат
+
+                ul.hero__social
+                    li.hero__social-item
+                        a.social-icon(href="#") ВКонтакте
+                    li.hero__social-item
+                        a.social-icon(href="#") Instagram
+                    li.hero__social-item
+                        a.social-icon(href="#") Facebook
 
             .hero__app
+                article.app-promo
+                    header.app-promo__header
+                        h2.app-promo__title Установите специальное мобильное приложение
+                        p.app-promo__subtitle для удобной онлайн–записи
+
+                    .app-promo__image
+                        img(src="/img/app.png", alt="Oldboy Barbershop mobile application", title="Приложение Oldboy Barbershop")
+
+                    .app-promo__buttons
+                        //- p.app-promo__call Скачайте мобильное приложение
+                        a.app-button(href="#")
+                            img(src="/img/google-play.svg", alt="Google Play")
+
+                        a.app-button(href="#")
+                            img(src="/img/app-store.svg", alt="App Store")
 
         main
             section.promos
