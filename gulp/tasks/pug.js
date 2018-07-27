@@ -7,7 +7,7 @@ const dirs = {
     dest: './dist'
 }
 
-gulp.task('pugRender', () => {
+gulp.task('pugRender', function() {
     return gulp.src(dirs.src)
         .pipe(pug())
         .on('error', onError((error) => {

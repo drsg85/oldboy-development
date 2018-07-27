@@ -4,7 +4,7 @@ import { onError } from 'gulp-notify';
 import sassImporter from 'sass-module-importer';
 import autoprefixer from 'gulp-autoprefixer';
 
-gulp.task('styles', () => {
+gulp.task('styles', function() {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass({ importer: sassImporter() }))
         .on('error', onError((error) => {
