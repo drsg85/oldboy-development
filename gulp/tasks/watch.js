@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import watch from 'gulp-watch';
 import browserSync from 'browser-sync';
+import { start } from 'repl';
 
 gulp.task('watch', () => {
     browserSync.init({
@@ -18,7 +19,7 @@ gulp.task('watch', () => {
     });
 
     // pug
-    // watch('./src/pug/**/*.pug', () => {
-        
-    // });
+    watch('./src/pug/**/*.pug', () => {
+        gulp.start('pugRender');
+    });
 });
