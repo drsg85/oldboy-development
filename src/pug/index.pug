@@ -78,8 +78,6 @@ html(lang="en")
                         p.section-header__subtitle Режем цены
 
                 .promos__content
-                    //- TODO: Add Roman's code here
-                    p * Контент акций *
                     article.promo
                         a.promo__info-icon(href="#") i
                         header.promo__header
@@ -132,8 +130,71 @@ html(lang="en")
                         p.section-header__subtitle Стрижём и бреем
 
                 .price__content
-                    //- TODO: Add Price content here
-                    p * Контент прайса *
+                    table.price-table
+                        caption.price-table__caption Основные услуги
+
+                        tr.price-table__row
+                            td.price-table__service Стрижка мужская <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Стрижка детская <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1000
+                        tr.price-table__row
+                            td.price-table__service Коррекция бороды <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 500
+                        tr.price-table__row
+                            td.price-table__service Коррекция бороды с подбриванием <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1000
+                        tr.price-table__row
+                            td.price-table__service Бритьё королевское <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Стрижка под машинку <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 800
+                        tr.price-table__row
+                            td.price-table__service Стрижка усов <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 500
+                        tr.price-table__row
+                            td.price-table__service Бритьё головы по-королевски <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Tattoo <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price
+
+                    table.price-table
+                        caption.price-table__caption Дополнительные услуги
+
+                        tr.price-table__row
+                            td.price-table__service Камуфляж седены <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Окантовка с подбриванием <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 500
+                        tr.price-table__row
+                            td.price-table__service Мытьё и укладка волос <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1000
+
+                    table.price-table
+                        caption.price-table__caption Комплексные услуги
+
+                        tr.price-table__row
+                            td.price-table__service Друг + Друг <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Папа + Сын <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1000
+                        tr.price-table__row
+                            td.price-table__service Стрижка + Коррекция бороды <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 2000
+                        tr.price-table__row
+                            td.price-table__service Стрижка + Королевское бритьё <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 2500
+                        tr.price-table__row
+                            td.price-table__service Стрижка + Камуфляж <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1750
+                        tr.price-table__row
+                            td.price-table__service Борода + Камуфляж <a href="#" class="price-table__icon">i</a>
+                            td.price-table__price 1000
 
             section.team
                 .team__header
@@ -142,8 +203,96 @@ html(lang="en")
                         p.section-header__subtitle Команда Oldboy
 
                 .team__content
-                    //- TODO: Add Team content here
-                    p * Контент команды *
+                    article.member
+                        header.member__header
+                            h3.member__name Юрий
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/1.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Олег
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/2.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Виктор
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/3.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Евгений
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/4.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Даниил
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/5.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Раф
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/6.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Валера
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/7.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Денис
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/8.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Михаил
+                            p.member__position Тату–мастер
+                        .member__photo
+                            img(src="/img/members/9.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
 
             section
                 //- TODO: Add banner code here
