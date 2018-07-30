@@ -302,4 +302,14 @@ template {
   display: none; }
 
 body {
-  background-color: green; }
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.hero {
+  background-color: #131313; }
