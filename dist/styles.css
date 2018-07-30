@@ -312,6 +312,18 @@ body {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/OpenSans-Regular.woff2") format("woff2"), url("./fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/OpenSans-SemiBold.woff2") format("woff2"), url("./fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
 .hero {
   padding: 20px;
   background-color: #131313; }
@@ -345,7 +357,7 @@ body {
 
 .contact__value {
   color: #ffffff;
-  font-family: sans-serif; }
+  font-family: "Open Sans", Arial, sans-serif; }
 
 .city-select__title {
   margin: 0;
@@ -364,8 +376,8 @@ body {
   margin: 0 auto;
   margin-bottom: 20px;
   color: #ffffff;
-  font-family: sans-serif;
-  font-weight: 500;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
   line-height: 32px;
   text-align: center;
   text-decoration: none;
