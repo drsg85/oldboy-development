@@ -1,4 +1,15 @@
 
+
+
+// Box sizing fix
 body {
-    background-color: green;
+    // box model
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    // box model
+    box-sizing: inherit;
 }
