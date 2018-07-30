@@ -20,10 +20,20 @@ gulp.task('watch', () => {
 
     // pug
     watch('./src/pug/**/*.pug', () => {
-        gulp.start();
+        gulp.start('pugChanged');
     });
+
+    // style
+    watch('./src/sass/**/*.scss', () => {
+        gulp.start('cssInject');
+    })
 });
 
 gulp.task('pugChanged', ['pugRender'], () => {
     browserSync.reload();
+});
+
+gulp.task('cssInject', ['styles'], () => {
+    gulp.src('./dist/styles.css')
+        .pipe(browserSync.stream());
 });
