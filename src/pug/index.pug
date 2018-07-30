@@ -24,8 +24,10 @@ html(lang="en")
                         li.main-nav__item: a(href="#").main-nav__link Франшиза
 
             .hero__city
-                p Выбери свой город: 
-                    a(href="#") Калининград ▼
+                .city-select
+                    p.city-select__title Выбери свой город: 
+                    p.city-select__city
+                        a(href="#") Калининград ▼
 
             .hero__caption 
                 h1 Крупнейшая международная сеть мужских парикмахерских Oldboy Barbershop
@@ -46,7 +48,7 @@ html(lang="en")
 
             .hero__buttons
                 a.button(href="#") Запись онлайн<br>
-                a.button(href="#") Сертификат
+                a.button.button--ghost(href="#") Сертификат
 
                 ul.hero__social
                     li.hero__social-item
@@ -73,6 +75,8 @@ html(lang="en")
                         a.app-button(href="#")
                             img(src="/img/app-store.svg", alt="App Store")
 
+            .menu-icon
+                .menu-icon__middle
         main
             section.promos
                 .promos__header

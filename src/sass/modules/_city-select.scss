@@ -1,0 +1,24 @@
+.city-select {
+
+}
+
+.city-select__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+}
+
+.city-select__city {
+    // box model
+    margin: 0;
+
+    // typography
+}
+
+.city-select__city a {
+    // typography
+    color: $light;
+    text-decoration: none;
+}
