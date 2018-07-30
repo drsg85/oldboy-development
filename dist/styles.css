@@ -314,6 +314,9 @@ body {
 .hero {
   background-color: #131313; }
 
+.hero__logo img {
+  width: 100%; }
+
 .contact__title {
   color: #d6a354;
   font-family: sans-serif; }
