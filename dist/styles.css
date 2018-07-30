@@ -370,6 +370,15 @@ body {
   color: #ffffff;
   text-decoration: none; }
 
+.menu-button {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  height: 32px;
+  width: 32px;
+  border: 2px solid #d6a354;
+  border-radius: 50%; }
+
 .button {
   display: block;
   width: 200px;
