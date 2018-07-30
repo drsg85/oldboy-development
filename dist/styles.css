@@ -313,3 +313,11 @@ body {
 
 .hero {
   background-color: #131313; }
+
+.contact__title {
+  color: #d6a354;
+  font-family: sans-serif; }
+
+.contact__value {
+  color: #ffffff;
+  font-family: sans-serif; }
