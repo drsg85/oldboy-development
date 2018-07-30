@@ -1,5 +1,5 @@
 @charset 'utf-8';
 
-body {
-    background-color: green;
-}
+// base
+@import 'normalize.css';
+@import 'base/globals';
