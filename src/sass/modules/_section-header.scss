@@ -1,6 +1,8 @@
 .section-header {
     // positioning
+    position: relative;
     transform: skewY(-15deg);
+    z-index: 1;
 
     // TODO: remove this lately
     // box model
@@ -55,5 +57,15 @@
 
         // visual
         background-color: $darkGold;
+    }
+}
+
+.section-header__subtitle--light {
+    // typography
+    color: $light;
+
+    &::before {
+        // visual
+        background-color: $light;
     }
 }

@@ -301,10 +301,12 @@ template {
 [hidden] {
   display: none; }
 
+html {
+  font-size: 16px; }
+
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 14px; }
+  box-sizing: border-box; }
 
 *,
 *::before,
@@ -584,8 +586,10 @@ body {
   font-size: 1.125rem; }
 
 .section-header {
+  position: relative;
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
+  z-index: 1;
   margin-right: 20px; }
 
 .section-header__title {
@@ -629,6 +633,90 @@ body {
     width: 100%;
     margin-right: 5px;
     background-color: #896322; }
+
+.section-header__subtitle--light {
+  color: #ffffff; }
+  .section-header__subtitle--light::before {
+    background-color: #ffffff; }
+
+.price__content {
+  position: relative;
+  padding: 120px 20px;
+  background-color: #131313; }
+  .price__content::before {
+    content: "";
+    position: absolute;
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+    left: 0;
+    top: -100px;
+    z-index: -1;
+    width: 100%;
+    height: 180px;
+    background-color: #131313; }
+  .price__content::after {
+    content: "";
+    position: absolute;
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+    left: 0;
+    bottom: -100px;
+    z-index: -1;
+    width: 100%;
+    height: 180px;
+    background-color: #131313; }
+
+.price-table {
+  width: 100%;
+  margin-bottom: 40px;
+  border-collapse: collapse; }
+
+.price-table__caption {
+  padding-bottom: 10px;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem;
+  text-align: left; }
+
+.price-table__row:last-child .price-table__service,
+.price-table__row:last-child .price-table__price {
+  border-bottom: none; }
+
+.price-table__service {
+  padding: 6px 0;
+  padding-right: 20px;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff; }
+
+.price-table__price {
+  padding: 5px 0;
+  vertical-align: top;
+  color: #d6a354;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: right;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff; }
+
+.price-table__icon {
+  display: inline-block;
+  vertical-align: top;
+  height: 16px;
+  width: 16px;
+  color: #d6a354;
+  font-size: 0.5rem;
+  line-height: 13px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 2px solid #d6a354;
+  border-radius: 50%; }
 
 .team {
   display: none; }
