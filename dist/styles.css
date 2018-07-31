@@ -324,6 +324,12 @@ body {
   font-weight: 600;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Rex';
+  src: url("./fonts/RexBold.woff2") format("woff2"), url("./fonts/RexBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
 .hero {
   padding: 20px;
   background-color: #131313; }
@@ -353,7 +359,7 @@ body {
 
 .contact__title {
   color: #d6a354;
-  font-family: sans-serif; }
+  font-family: "Rex", Arial, sans-serif; }
 
 .contact__value {
   color: #ffffff;
