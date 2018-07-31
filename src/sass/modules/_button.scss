@@ -9,7 +9,7 @@
     color: $light;
     font-family: $mainFont;
     font-weight: 600;
-    line-height: 32px;
+    line-height: 42px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -17,7 +17,7 @@
     // visual
     background-color: $golden;
     border: 2px solid $golden;
-    border-radius: 18px;
+    border-radius: 23px; // 1/2 of line-height + 2px border-width
 
     &--ghost {
         // visual
