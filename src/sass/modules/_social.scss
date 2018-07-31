@@ -1,0 +1,46 @@
+.social {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // typography
+    text-align: center;
+}
+
+.social__item {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+.social__icon {
+    // box model
+    display: block;
+    height: 36px;
+    width: 36px;
+    margin: 0 5px;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    border: 2px solid $light;
+    border-radius: 50%;
+
+    &--vkontakte {
+        // visual
+        background-image: url('./img/social/vkontakte.svg');
+    }
+
+    &--facebook {
+        // visual
+        background-image: url('./img/social/facebook.svg');
+    }
+
+    &--instagram {
+        // visual
+        background-image: url('./img/social/instagram.svg');
+    }
+}
