@@ -1,0 +1,35 @@
+.app-button {
+    // box model
+    display: block;
+    margin-bottom: 25px;
+    max-width: 200px;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+    text-decoration: none;
+
+    // visual
+    border: 2px solid $light;
+    border-radius: 23px; // 1/2 of line-height + 2px border-width
+
+    &--thin {
+        // typography
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+}
+
+.app-button i::before {
+    // box model
+    display: inline-block;
+    vertical-align: sub;
+    padding-right: 3px;
+
+    // typography
+    font-size: 1.125rem;
+}
