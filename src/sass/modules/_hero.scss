@@ -6,11 +6,20 @@
     background-color: $dark;
 }
 
+.hero__top {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
 .hero__logo {
     // box model
     display: inline-block;
     vertical-align: top;
-    width: 80px;
+    width: 85px;
 
     img {
         // box model
@@ -28,10 +37,15 @@
 }
 
 .hero__city {
+    // positioning
+    position: absolute;
+    left: 105px;
+    top: 0;
+
     // box model
     display: inline-block;
     vertical-align: top;
-    width: 160px;
+    padding-right: 45px;
 }
 
 .hero__caption {
@@ -40,7 +54,8 @@
 }
 
 .hero__contacts {
-
+    // box model
+    padding-bottom: 20px;
 }
 
 .hero__buttons {

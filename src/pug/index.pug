@@ -11,23 +11,27 @@ html(lang="en")
 
     body
         header.hero
-            .hero__logo
-                a(href="#")
-                    img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+            .hero__top
+                .hero__logo
+                    a(href="#")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
-            .hero__nav
-                nav.main-nav
-                    ul.main-nav__list
-                        li.main-nav__item: a(href="#").main-nav__link Главная
-                        li.main-nav__item: a(href="#").main-nav__link Новости
-                        li.main-nav__item: a(href="#").main-nav__link Услуги
-                        li.main-nav__item: a(href="#").main-nav__link Франшиза
+                .hero__nav
+                    nav.main-nav
+                        ul.main-nav__list
+                            li.main-nav__item: a(href="#").main-nav__link Главная
+                            li.main-nav__item: a(href="#").main-nav__link Новости
+                            li.main-nav__item: a(href="#").main-nav__link Услуги
+                            li.main-nav__item: a(href="#").main-nav__link Франшиза
 
-            .hero__city
-                .city-select
-                    p.city-select__title Выбери свой город: 
-                    p.city-select__city
-                        a(href="#") Калининград ▼
+                .hero__city
+                    .city-select
+                        p.city-select__title Выбери свой город: 
+                        p.city-select__city
+                            a(href="#") Калининград <span class="city-select__triangle">▼</span>
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
 
             .hero__caption 
                 h1 Крупнейшая международная сеть мужских парикмахерских Oldboy Barbershop
@@ -50,13 +54,13 @@ html(lang="en")
                 a.button(href="#") Запись онлайн<br>
                 a.button.button--ghost(href="#") Сертификат
 
-                ul.hero__social
-                    li.hero__social-item
-                        a.social-icon(href="#") ВКонтакте
-                    li.hero__social-item
-                        a.social-icon(href="#") Instagram
-                    li.hero__social-item
-                        a.social-icon(href="#") Facebook
+                ul.social
+                    li.social__item
+                        a.social__icon.social__icon--vkontakte(href="#") ВКонтакте
+                    li.social__item
+                        a.social__icon.social__icon--facebook(href="#") Facebook
+                    li.social__item
+                        a.social__icon.social__icon--instagram(href="#") Instagram
 
             .hero__app
                 article.app-promo
@@ -75,8 +79,6 @@ html(lang="en")
                         a.app-button(href="#")
                             img(src="/img/app-store.svg", alt="App Store")
 
-            .menu-button
-                .menu-button__middle
         main
             section.promos
                 .promos__header

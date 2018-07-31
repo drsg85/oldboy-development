@@ -1,5 +1,6 @@
 .city-select {
-
+    // box model
+    margin-top: -2px;
 }
 
 .city-select__title {
@@ -8,17 +9,24 @@
 
     // typography
     color: $golden;
+    font-family: $titleFont;
 }
 
 .city-select__city {
     // box model
     margin: 0;
-
+    
     // typography
+    font-family: $titleFont;
 }
 
 .city-select__city a {
     // typography
     color: $light;
     text-decoration: none;
+}
+
+.city-select__triangle {
+    // typography
+    font-size: 0.75em;
 }
