@@ -1,26 +1,83 @@
 .menu-button {
     // positioning
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 15px;
+    top: 15px;
 
     // box model
-    height: 32px;
-    width: 32px;
+    height: 48px;
+    width: 48px;
 
     // visual
     border: 2px solid $golden;
     border-radius: 50%;
+    transition: all 0.25s ease-out;
+}
+
+.menu-button::before,
+.menu-button__middle,
+.menu-button::after {
+    // positioning
+    position: absolute;
+    left: 11px;
+
+    // box model
+    height: 3px;
+    width: 22px;
+
+    // visual
+    background-color: $light;
 }
 
 .menu-button::before {
-
+    content: "";
+    
+    // positioning
+    top: 14px;
 }
 
 .menu-button__middle {
-
+    // positioning
+    top: 21px;
 }
 
 .menu-button::after {
+    content: "";
 
+    // positioning
+    top: 28px;
+}
+
+// on close hide middle line
+.menu-button--close .menu-button__middle {
+    // box model
+    width: 0;
+
+    // visual
+    opacity: 0;
+}
+
+// on close form a cross
+.menu-button--close {
+    &::before {
+        // positioning
+        left: 14px;
+        top: 13px;
+        transform-origin: left center;
+        transform: rotate(45deg);
+
+        // box model
+        width: 23px;
+    }
+    
+    &::after {
+        // positioning
+        left: 14px;
+        top: 29px;
+        transform-origin: left center;
+        transform: rotate(-45deg);
+
+        // box model
+        width: 23px;
+    }
 }
