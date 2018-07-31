@@ -59,9 +59,11 @@
 }
 
 .hero__buttons {
-
+    // box model
+    padding-bottom: 60px;
 }
 
 .hero__app {
-
+    // box model
+    margin: 0 -20px;
 }

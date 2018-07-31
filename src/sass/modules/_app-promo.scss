@@ -1,0 +1,59 @@
+.app-promo {
+    // box model
+    display: flex;
+    flex-direction: row;
+}
+
+.app-promo__header {
+    // box model
+    flex-basis: 50%;
+}
+
+.app-promo__title {
+    // box model
+    margin: 0;
+    padding: 10px 20px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 0.75rem;
+    
+    // visual
+    border-top: 4px solid $golden;
+    border-bottom: 4px solid $golden;
+}
+
+.app-promo__title strong {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 3px;
+    
+    // typography
+    color: $light;
+    font-size: 1.5rem;
+}
+
+.app-promo__subtitle {
+    // box model
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 0.75rem;
+}
+
+.app-promo__image {
+    // box model
+    display: none;
+}
+
+.app-promo__buttons {
+    // box model
+    flex-basis: 50%;
+}

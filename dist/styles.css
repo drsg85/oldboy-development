@@ -330,6 +330,61 @@ body {
   font-weight: bold;
   font-style: normal; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("./fonts/icomoon.eot?zezhlj");
+  src: url("./fonts/icomoon.eot?zezhlj#iefix") format("embedded-opentype"), url("./fonts/icomoon.ttf?zezhlj") format("truetype"), url("./fonts/icomoon.woff?zezhlj") format("woff"), url("./fonts/icomoon.svg?zezhlj#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon--"],
+[class*=" icon--"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon--instagram2:before {
+  content: "\e900"; }
+
+.icon--facebook:before {
+  content: "\e901"; }
+
+.icon--facebook-f:before {
+  content: "\e901"; }
+
+.icon--vk:before {
+  content: "\e902"; }
+
+.icon--apple:before {
+  content: "\e903"; }
+
+.icon--close:before {
+  content: "\e904"; }
+
+.icon--remove:before {
+  content: "\e904"; }
+
+.icon--times:before {
+  content: "\e904"; }
+
+.icon--info:before {
+  content: "\e905"; }
+
+.icon--googleplay:before {
+  content: "\e906"; }
+
+.icon--instagram:before {
+  content: "\ea92"; }
+
 .hero {
   padding: 20px;
   background-color: #131313; }
@@ -364,6 +419,12 @@ body {
 
 .hero__contacts {
   padding-bottom: 20px; }
+
+.hero__buttons {
+  padding-bottom: 60px; }
+
+.hero__app {
+  margin: 0 -20px; }
 
 .contact {
   margin-bottom: 20px;
@@ -453,6 +514,51 @@ body {
   transform: rotate(-45deg);
   width: 23px; }
 
+.app-promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.app-promo__header {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%; }
+
+.app-promo__title {
+  margin: 0;
+  padding: 10px 20px;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 0.75rem;
+  border-top: 4px solid #d6a354;
+  border-bottom: 4px solid #d6a354; }
+
+.app-promo__title strong {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 3px;
+  color: #ffffff;
+  font-size: 1.5rem; }
+
+.app-promo__subtitle {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 0.75rem; }
+
+.app-promo__image {
+  display: none; }
+
+.app-promo__buttons {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%; }
+
 .team {
   display: none; }
 
@@ -490,12 +596,11 @@ body {
   height: 36px;
   width: 36px;
   margin: 0 5px;
+  color: #ffffff;
   font-size: 0;
+  line-height: 32px;
+  text-decoration: none;
   border: 2px solid #ffffff;
   border-radius: 50%; }
-  .social__icon--vkontakte {
-    background-image: url("./img/social/vkontakte.svg"); }
-  .social__icon--facebook {
-    background-image: url("./img/social/facebook.svg"); }
-  .social__icon--instagram {
-    background-image: url("./img/social/instagram.svg"); }
+  .social__icon::before {
+    font-size: 1rem; }
