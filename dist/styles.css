@@ -669,6 +669,100 @@ body {
   .section-header__subtitle--light::before {
     background-color: #ffffff; }
 
+.promos__content {
+  padding: 20px; }
+
+.promo {
+  position: relative;
+  height: 160px;
+  margin-bottom: 20px;
+  background-color: #896322;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.promo--open {
+  height: 390px; }
+
+.promo--open .promo__description {
+  opacity: 1;
+  visibility: visible; }
+
+.promo__header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0; }
+
+.promo__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  padding-top: 40px;
+  opacity: 0;
+  visibility: hidden; }
+
+.promo__service {
+  opacity: 0;
+  visibility: hidden; }
+
+.promo__bottom {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg);
+  height: 155px;
+  background-image: url("./img/dark-h-grunge.svg");
+  background-size: cover; }
+
+.promo__price {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2rem;
+  background-color: #d6a354; }
+
+.promo__name {
+  padding-left: 40px;
+  padding-right: 120px;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.75rem;
+  text-align: right; }
+
+.promo__tip {
+  display: none; }
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-align: right; }
+
+.promo__text {
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5; }
+  .promo__text p {
+    margin: 0;
+    margin-bottom: 1rem; }
+
+.promo__info-icon {
+  position: absolute;
+  border: 1px solid red; }
+
 .price__content {
   position: relative;
   padding: 120px 20px;
@@ -749,6 +843,9 @@ body {
   border-radius: 50%; }
 
 .team {
+  display: none; }
+
+.testimonials {
   display: none; }
 
 .button {

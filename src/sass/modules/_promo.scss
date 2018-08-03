@@ -1,39 +1,144 @@
+.promo {
+    // positioning
+    position: relative;
+
+    // box model
+    height: 160px;
+    margin-bottom: 20px;
+    
+    // visual
+    background-color: $darkGold;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.promo--open {
+    // box model
+    height: 390px;
+}
+
+.promo--open .promo__description {
+    // visual
+    opacity: 1;
+    visibility: visible;
+}
+
 .promo__header {
-
-}
-
-.promo__service {
-
-}
-
-.promo__bottom {
-
-}
-
-.promo__price {
-
-}
-
-.promo__name {
-
-}
-
-.promo__tip {
-
-}
-
-.promo__title {
-
-}
-
-.promo__text {
-
-}
-
-.promo__info-icon {
-
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    // box model
+    // border: 1px solid red;
 }
 
 .promo__description {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
 
+    // box model
+    padding: 20px;
+    padding-top: 40px;
+
+    // visual
+    opacity: 0;
+    visibility: hidden;
+}
+
+.promo__service {
+    // visual
+    opacity: 0;
+    visibility: hidden;
+}
+
+.promo__bottom {
+    // positioning
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    transform: skewY(-15deg);
+
+    // box model
+    height: 155px;
+
+    // visual
+    background-image: url('./img/dark-h-grunge.svg');
+    background-size: cover;
+}
+
+.promo__price {
+    // positioning
+    position: absolute;
+    right: 0;
+    top: -40px;
+
+    // box model
+    padding: 10px 15px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 2rem;
+
+    // visual
+    background-color: $golden;
+}
+
+.promo__name {
+    // box model
+    padding-left: 40px;
+    padding-right: 120px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.75rem;
+    text-align: right;
+}
+
+.promo__tip {
+    // box model
+    display: none;
+}
+
+.promo__title {
+    // box model
+    margin: 0;
+    margin-bottom: 2rem;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.75rem;
+    line-height: 1;
+    text-align: right;
+}
+
+.promo__text {
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    p {
+        // box model
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.promo__info-icon {
+    // positioning
+    position: absolute;
+
+    border: 1px solid red;
 }
