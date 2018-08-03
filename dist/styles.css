@@ -387,9 +387,20 @@ body {
   content: "\ea92"; }
 
 .hero {
+  position: relative;
   padding: 20px;
   padding-bottom: 100px;
   background-color: #131313; }
+
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 100%;
+  height: 100px;
+  background-image: url("./img/white-grunge.svg");
+  background-size: cover; }
 
 .hero__top {
   position: relative;
