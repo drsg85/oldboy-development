@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import wait from 'gulp-wait';
 import sass from 'gulp-sass';
 import { onError } from 'gulp-notify';
 import sassImporter from 'sass-module-importer';
@@ -7,6 +8,7 @@ import autoprefixer from 'gulp-autoprefixer';
 gulp.task('styles', function() {
     // return gulp.src('./src/sass/**/*.scss')
     return gulp.src('./src/sass/styles.scss')
+        .pipe(wait(100))
         .pipe(sass({ importer: sassImporter() }))
         .on('error', onError((error) => {
             return {

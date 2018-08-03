@@ -4,12 +4,17 @@
     transform: skewY(-15deg);
     z-index: 1;
 
-    // TODO: remove this lately
+    // TODO: fix this lately
     // box model
-    margin-right: 20px;
+    // margin-right: 40px;
+    width: 90%;
+    max-width: 325px;
 }
 
 .section-header__title {
+    // positioning
+    position: relative;
+
     // box model
     margin: 0;
     margin-bottom: 10px;
@@ -23,6 +28,26 @@
     // visual
     background-color: $golden;
     text-shadow: -3px 2px 0 $darkGold;
+}
+
+.section-header__title::after {
+    content: '';
+
+    // positioning
+    position: absolute;
+    right: -20px;
+    top: 0;
+
+    // box model
+    height: 100%;
+    width: 40px;
+    // border: 1px solid red;
+
+    // visual
+    background-image: url('./img/gold-v-grunge.svg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center center;
 }
 
 .section-header__subtitle {
