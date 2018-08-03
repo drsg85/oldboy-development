@@ -583,6 +583,7 @@ body {
   max-width: 200px;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.85rem;
   font-weight: 600;
   line-height: 42px;
   text-align: center;
@@ -591,14 +592,14 @@ body {
   border-radius: 23px; }
   .app-button--thin {
     letter-spacing: 2px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 400; }
 
 .app-button i::before {
   display: inline-block;
   vertical-align: sub;
   padding-right: 3px;
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 
 .section-header {
   position: relative;
