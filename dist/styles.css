@@ -876,14 +876,14 @@ body {
   padding: 60px 20px; }
 
 .footer {
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: #131313; }
 
 .footer__info {
   padding-bottom: 40px; }
 
 .footer__logo {
-  padding-bottom: 10px; }
+  padding: 10px 40px; }
 
 .footer__logo img {
   width: 100%; }
@@ -915,10 +915,16 @@ body {
   display: none; }
 
 .footer__services-nav {
-  border-bottom: 2px solid #d6a354;
-  border-top: 2px solid #d6a354; }
+  display: none; }
+
+.footer__info-nav {
+  margin-bottom: 40px;
+  border-top: 2px solid #d6a354;
+  border-bottom: 2px solid #d6a354; }
 
 .footer__copyrights p {
+  margin: 0;
+  padding: 0;
   color: #aeaeae;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.8rem;
@@ -932,27 +938,19 @@ body {
   list-style: none;
   text-align: center; }
 
-.footer-menu--small .footer-menu__title {
-  font-size: 1rem;
-  line-height: 32px; }
-
-.footer-menu--small .footer-menu__link {
-  font-size: 1rem;
-  line-height: 32px; }
-
 .footer-menu__title {
   margin: 0;
   padding: 0;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5; }
+  font-size: 1rem;
+  line-height: 2; }
 
 .footer-menu__link {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 2;
   text-decoration: none; }
 
 .button {

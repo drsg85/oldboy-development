@@ -8,20 +8,6 @@
     text-align: center;
 }
 
-.footer-menu--small {
-    .footer-menu__title {
-        // typography
-        font-size: 1rem;
-        line-height: 32px;
-    }
-
-    .footer-menu__link {
-        // typography
-        font-size: 1rem;
-        line-height: 32px;
-    }
-}
-
 .footer-menu__title {
     // box model
     margin: 0;
@@ -30,8 +16,8 @@
     // typography
     color: $lightGrey;
     font-family: $titleFont;
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 2;
 }
 
 .footer-menu__item {
@@ -42,7 +28,7 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 2;
     text-decoration: none;
 }
