@@ -482,8 +482,10 @@ body {
   position: fixed;
   right: 15px;
   top: 15px;
+  z-index: 9;
   height: 48px;
   width: 48px;
+  background-color: #131313;
   border: 2px solid #d6a354;
   border-radius: 50%;
   -webkit-transition: all 0.25s ease-out;
@@ -846,6 +848,14 @@ body {
   display: none; }
 
 .testimonials {
+  display: none; }
+
+.footer {
+  padding: 60px 20px;
+  padding-top: 100px;
+  background-color: #131313; }
+
+.footer__city {
   display: none; }
 
 .button {

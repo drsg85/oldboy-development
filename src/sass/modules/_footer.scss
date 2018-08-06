@@ -1,3 +1,16 @@
 .footer {
+    // box model
+    padding: 60px 20px;
+    padding-top: 100px;
 
+    // visual
+    background-color: $dark;
+}
+
+
+
+
+.footer__city {
+    // box model
+    display: none;
 }
