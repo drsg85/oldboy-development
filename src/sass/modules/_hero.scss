@@ -22,13 +22,13 @@
     // box model
     width: 102%;        // not 100% to compensate left and right gaps
     min-width: 600px;   // to compensate image downscaling on small devices
-    height: 100px;
+    height: 50px;
 
     // visual
     background-image: url('./img/white-grunge.svg');
-    background-size: contain;
+    background-size: 800px;
     background-repeat: repeat-x;
-    background-position: center bottom;
+    background-position: center top;
 }
 
 .hero__top {

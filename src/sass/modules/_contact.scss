@@ -6,6 +6,18 @@
     text-align: center;
 }
 
+.contact--footer {
+    .contact__title {
+        // typography
+        color: $light;
+    }
+
+    .contact__value {
+        // typography
+        color: $lightGrey;
+    }
+}
+
 .contact__title {
     // box model
     margin: 0;
@@ -24,4 +36,5 @@
     // typography
     color: $light;
     font-family: $mainFont;
+    font-weight: 600;
 }
