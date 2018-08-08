@@ -88,24 +88,22 @@ html(lang="en")
 
                 .promos__content
                     //- place news item code here
-                    article.news-item
-                        .news-item__city-wrap 
+                    article.news-item 
+                        header.news-item__header  
                             p.news-item__city Калининград
-                        
-                        .news-item__header
-                            header.news-item__header  
-                                p.news-item__title Косметика и аксессуары
-                                h3.news-item__description Старт продаж новой&nbsp;линейки косметики barber wild
-                                p.news-item__text Самый ожидаемый старт сезона уже в эти выходные
-                        
-                        .news-item__bottom 
-                            .news-item__date 
-                                p.news-item__number 27
-                                p.news-item__month Июля <br> 2018
-                            a.news-item__read(href="#") Читать&nbsp;полностью
+                            p.news-item__category Косметика и аксессуары
+                            h3.news-item__title Старт продаж новой линейки косметики Barber WILD
+                            p.news-item__description Самый ожидаемый старт сезона уже в эти выходные
                         
                         .news-item__photo
-                             img(src="img/news-item/news-item photo.jpg", alt="Новостная фотография")
+                             img(src="img/news-item/photo.jpg", alt="Новостная фотография")
+
+                        footer.news-item__footer
+                            .news-item__date 
+                                p.news-item__number 27
+                                p.news-item__month Июля <br>2018
+                            a.news-item__more(href="#") Читать&nbsp;полностью
+                        
 
 
 
