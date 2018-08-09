@@ -35,8 +35,8 @@
 
 .vip-nickname {
     // positioning
-    right: 15px;
     position: absolute;
+    right: 15px;
     top: 15px;
     
     // typography
@@ -53,7 +53,7 @@
 }
             
  .vip-item__name {
-    // positioning
+    // box model
     margin: 0;
             
     // typography
@@ -64,7 +64,7 @@
 }
             
    .vip-item__surname {
-   // positioning
+   // box model
     margin: 0;
             
     // typography
@@ -78,11 +78,11 @@
    .vip-item__status {
     // positioning
     left: 135px;
-    margin: 0;
     position: absolute;
     top: 10px;
-            
+    
     // box model
+    margin: 0;
     width: 215px;
             
     // typography

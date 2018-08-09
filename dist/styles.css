@@ -976,8 +976,8 @@ body {
   transform: skewY(-15deg); }
 
 .vip-nickname {
-  right: 15px;
   position: absolute;
+  right: 15px;
   top: 15px;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
@@ -1005,9 +1005,9 @@ body {
 
 .vip-item__status {
   left: 135px;
-  margin: 0;
   position: absolute;
   top: 10px;
+  margin: 0;
   width: 215px;
   color: #aeaeae;
   font-family: "Open Sans", Arial, sans-serif;
