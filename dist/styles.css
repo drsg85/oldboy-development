@@ -962,7 +962,9 @@ body {
 
 .vip-item__photo img {
   height: 350px;
-  max-width: 350px; }
+  max-width: 350px;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 .vip-nickname__wrapper {
   height: 100px;

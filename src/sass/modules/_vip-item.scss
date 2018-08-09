@@ -16,6 +16,7 @@
     // box model          //Временное решение для картинки
     height: 350px;
     max-width: 350px;
+    object-fit: cover;
 }
 
 .vip-nickname__wrapper {
