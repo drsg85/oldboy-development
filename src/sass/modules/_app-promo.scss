@@ -2,18 +2,59 @@
     // box model
     display: flex;
     flex-direction: row;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+
+        // box model
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 80px;
+        padding-left: 0;
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+
+
+            // box model
+            // width: 200px;
+            // height: 200px;
+
+            // visual
+            background-color: rgba($dark, 0.5);
+            transform: skewX(-15deg);
+        }
+    }
 }
 
 .app-promo__header {
     // box model
     flex-basis: 50%;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+        z-index: 1;
+        
+        // box model
+        flex-basis: auto;
+    }
 }
 
 .app-promo__title {
     // box model
     margin: 0;
     padding: 10px 20px;
-
+    
     // typography
     color: $golden;
     font-family: $titleFont;
@@ -51,10 +92,36 @@
 .app-promo__image {
     // box model
     display: none;
+    
+    @include atTablet {
+        // positioning
+        position: absolute;
+        bottom: 0;
+        right: -50px;
+        z-index: 1;
+        
+        // box model
+        display: block;
+        height: 450px;
+    }
+}
+
+.app-promo__image img {
+    // box model
+    height: 100%;
 }
 
 .app-promo__buttons {
     // box model
     flex-basis: 50%;
     padding: 0 20px;
+    
+    @include atTablet {
+        // positioning
+        position: relative;
+        z-index: 2;
+
+        // box model
+        flex-basis: auto;
+    }
 }

@@ -10,10 +10,16 @@
     width: 48px;
 
     // visual
-    background-color: $dark;
+    background-color: rgba($dark, 0.5);
     border: 2px solid $golden;
     border-radius: 50%;
     transition: all 0.25s ease-out;
+
+    @include atTablet {
+        // positioning
+        right: 33px;
+        top: 37px;
+    }
 }
 
 .menu-button::before,
