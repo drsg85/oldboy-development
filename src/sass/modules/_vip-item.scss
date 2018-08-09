@@ -1,0 +1,92 @@
+.vip-item {
+    // box model
+    height: 350px;
+    width: 350px;
+    
+    // visual
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.vip-item__photo {
+    position: relative;
+}
+
+.vip-item__photo img { 
+    // box model          //Временное решение для картинки
+    height: 350px;
+    max-width: 350px;
+}
+
+.vip-nickname__wrapper {
+    // box model
+    height: 100px;
+    width: 100%;
+    
+    // positioning
+    bottom: -60px;
+    position: absolute;
+
+    // visual
+    background-image: url('./img/dark-h-grunge.svg');
+    transform: skewY(-15deg);
+}
+
+.vip-nickname {
+    // positioning
+    right: 15px;
+    position: absolute;
+    top: 15px;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.vip-item__header {
+    // positioning
+    position: absolute;
+    top: 365px;
+}
+            
+ .vip-item__name {
+    // positioning
+    margin: 0;
+            
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+            
+   .vip-item__surname {
+   // positioning
+    margin: 0;
+            
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+            
+   .vip-item__status {
+    // positioning
+    left: 135px;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+            
+    // box model
+    width: 215px;
+            
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
