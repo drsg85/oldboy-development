@@ -5,7 +5,7 @@ import { onError } from 'gulp-notify';
 const dirs = {
     src: './src/pug/*.pug',
     dest: './dist'
-}
+};
 
 gulp.task('pugRender', function() {
     return gulp.src(dirs.src)

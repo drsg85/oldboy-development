@@ -1,15 +1,19 @@
 import gulp from 'gulp';
-import watch from 'gulp-watch';
 import browserSync from 'browser-sync';
-import { start } from 'repl';
+// import { start } from 'repl';
+
+const dirs = {
+    pug: './src/pug/**/*.pug',
+    sass: './src/sass/**/*.scss',
+    css: './dist/styles.css'
+};
 
 gulp.task('watch', () => {
     browserSync.init({
         server: {
             baseDir: 'dist'
         },
-        // this is needed to move notify popup to bottom, cause it usually
-        // overlaps page elements on its default position
+        // this is needed to move notify popup to bottom, cause it usually overlaps page elements on its default position
         notify: {
             styles: { 
                 top: 'auto',
@@ -19,14 +23,10 @@ gulp.task('watch', () => {
     });
 
     // pug
-    watch('./src/pug/**/*.pug', () => {
-        gulp.start('pugChanged');
-    });
+    gulp.watch(dirs.pug, ['pugChanged']);
 
     // style
-    watch('./src/sass/**/*.scss', () => {
-        gulp.start('cssInject');
-    })
+    gulp.watch(dirs.sass, ['cssInject'])
 });
 
 gulp.task('pugChanged', ['pugRender'], () => {
@@ -34,6 +34,6 @@ gulp.task('pugChanged', ['pugRender'], () => {
 });
 
 gulp.task('cssInject', ['styles'], () => {
-    gulp.src('./dist/styles.css')
+    gulp.src(dirs.css)
         .pipe(browserSync.stream());
 });

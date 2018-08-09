@@ -5,9 +5,13 @@ import { onError } from 'gulp-notify';
 import sassImporter from 'sass-module-importer';
 import autoprefixer from 'gulp-autoprefixer';
 
+const dirs = {
+    src: './src/sass/styles.scss',
+    dest: './dist'
+};
+
 gulp.task('styles', function() {
-    // return gulp.src('./src/sass/**/*.scss')
-    return gulp.src('./src/sass/styles.scss')
+    return gulp.src(dirs.src)
         .pipe(wait(100))
         .pipe(sass({ importer: sassImporter() }))
         .on('error', onError((error) => {
@@ -24,5 +28,5 @@ gulp.task('styles', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(dirs.dest));
 });
