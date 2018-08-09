@@ -10,13 +10,85 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-              
-                vip__content
+        header.hero
+            .hero__top
+                .hero__logo
+                    a(href="#")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav
+                    nav.main-nav
+                        ul.main-nav__list
+                            li.main-nav__item: a(href="#").main-nav__link Главная
+                            li.main-nav__item: a(href="#").main-nav__link Новости
+                            li.main-nav__item: a(href="#").main-nav__link Услуги
+                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+
+                .hero__city
+                    .city-select
+                        p.city-select__title Выбери свой город: 
+                        p.city-select__city
+                            a(href="#") Калининград <span class="city-select__triangle">▼</span>
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__caption 
+                h1 Крупнейшая международная сеть мужских парикмахерских Oldboy Barbershop
+                p Калининград Театральная 30
+
+            .hero__contacts
+                .contact
+                    h2.contact__title Адрес
+                    p.contact__value ул. Театральная, 30
+                    
+                .contact
+                    h2.contact__title Телефон
+                    p.contact__value 52–57–90
+
+                .contact
+                    h2.contact__title Часы работы
+                    p.contact__value 10:00 — 21:00 (Вс. с 11:00)
+
+            .hero__buttons
+                a.button(href="#") Запись онлайн<br>
+                a.button.button--ghost(href="#") Сертификат
+
+                ul.social
+                    li.social__item
+                        a.social__icon.icon--vk(href="#") ВКонтакте
+                    li.social__item
+                        a.social__icon.icon--facebook(href="#") Facebook
+                    li.social__item
+                        a.social__icon.icon--instagram(href="#") Instagram
+
+            .hero__app
+                article.app-promo
+                    header.app-promo__header
+                        h2.app-promo__title Установите специальное <br><strong>мобильное приложение</strong>
+                        p.app-promo__subtitle для удобной онлайн–записи
+
+                    .app-promo__image
+                        img(src="/img/app.png", alt="Oldboy Barbershop mobile application", title="Приложение Oldboy Barbershop")
+
+                    .app-promo__buttons
+                        //- p.app-promo__call Скачайте мобильное приложение
+                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
+
+                        a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> APP STORE
+
+        main
+            section.promos
+                .promos__header
+                    header.section-header
+                        h2.section-header__title Акции <br>барбершопа
+                        p.section-header__subtitle Режем&nbsp;цены
+
+                .promos__content
                     article.vip-item
                         .vip-item__photo
                             img(src="img/news-item/news-item.jpg", alt="Фотография с VIP звездой")
-                            .vip-nickname__wrapper
-                                p.vip-nickname @cheryshev90
+                            a.vip-item__instagram(href="https://www.instagram.com/cheryshev90") @cheryshev90
 
                         header.vip-item__header
                             p.vip-item__name Денис
