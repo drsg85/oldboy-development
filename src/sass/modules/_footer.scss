@@ -4,6 +4,16 @@
 
     // visual
     background-color: $dark;
+
+    @include atTablet {
+        // visual
+        background-image: 
+        url('./img/white-grunge-180.svg'),
+            url('./img/bgs/footer-t.jpg');
+        background-position: top -170px center, center left;
+        background-size: 800px, cover;
+        background-repeat: repeat-x, no-repeat;
+    }
 }
 
 .footer__info {
@@ -45,7 +55,8 @@
 }
 
 .footer__social {
-
+    // typography
+    text-align: center;
 }
 
 .footer__contacts {

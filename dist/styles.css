@@ -391,6 +391,10 @@ body {
   padding: 20px;
   padding-bottom: 100px;
   background-color: #131313;
+  background-image: url("./img/white-grunge.svg");
+  background-position: bottom -150px center;
+  background-repeat: repeat-x;
+  background-size: 800px;
   overflow: hidden; }
   @media (min-width: 700px) {
     .hero {
@@ -407,11 +411,7 @@ body {
   z-index: 2;
   width: 102%;
   min-width: 600px;
-  height: 50px;
-  background-image: url("./img/white-grunge.svg");
-  background-size: 800px;
-  background-repeat: repeat-x;
-  background-position: center top; }
+  height: 50px; }
   @media (min-width: 700px) {
     .hero::after {
       height: 80px; } }
@@ -1140,20 +1140,14 @@ body {
 
 .testimonials {
   position: relative;
-  background-color: #ffffff; }
-
-.testimonials::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  z-index: 1;
-  width: 100%;
-  height: 50px;
+  background-color: #ffffff;
   background-image: url("./img/dark-o-h-grunge.svg");
-  background-size: 800px;
+  background-position: bottom -150px center;
   background-repeat: repeat-x;
-  background-position: center top; }
+  background-size: 800px; }
+  @media (min-width: 700px) {
+    .testimonials {
+      background-image: none; } }
 
 .testimonials__content {
   padding: 60px 20px; }
@@ -1231,6 +1225,12 @@ body {
 .footer {
   padding: 40px 20px;
   background-color: #131313; }
+  @media (min-width: 700px) {
+    .footer {
+      background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
+      background-position: top -170px center, center left;
+      background-size: 800px, cover;
+      background-repeat: repeat-x, no-repeat; } }
 
 .footer__info {
   padding-bottom: 20px; }
@@ -1256,6 +1256,9 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: center; }
+
+.footer__social {
   text-align: center; }
 
 .footer__contacts {
