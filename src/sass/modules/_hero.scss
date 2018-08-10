@@ -8,17 +8,13 @@
 
     // visual
     background-color: $dark;
-    background-image: url('./img/white-grunge.svg');
-    background-position: bottom -150px center;
-    background-repeat: repeat-x;
-    background-size: 800px;
     overflow: hidden;
     
     @include atTablet {
         // box model
-        padding: 30px 40px;
+        padding: 40px;
         padding-bottom: 60px;
-
+        
         // visual
         background-image: url('./img/bgs/hero-t.jpg');
         background-size: cover;
@@ -27,24 +23,22 @@
 
 .hero::after {
     content: '';
-
+    
     // positioning
     position: absolute;
-    left: -2px;         // not 0 to compensate left gap
-    bottom: -1px;       // not 0 to compensate bottom gap
+    bottom: 0;
+    left: 0;
     z-index: 2;
-
+    
     // box model
-    width: 102%;        // not 100% to compensate left and right gaps
-    min-width: 600px;   // to compensate image downscaling on small devices
-    height: 50px;
-
+    width: 100%;
+    height: 80px;
+    
     // visual
-
-    @include atTablet {
-        // box model
-        height: 80px;
-    }
+    background-image: url('./img/white-grunge.svg');
+    background-position: top 2px center;
+    background-repeat: repeat-x;
+    background-size: 800px;
 }
 
 .hero__top {
@@ -114,7 +108,6 @@
         // box model
         display: block;
         width: 260px;
-        margin-bottom: 70px;
 
         // visual
         transform: skewY(-15deg);
@@ -173,6 +166,7 @@
         // box model
         display: flex;
         justify-content: space-around;
+        padding-top: 140px;
         padding-bottom: 60px;
     }
 }
