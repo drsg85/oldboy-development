@@ -13,7 +13,7 @@
     @include atTablet {
         // box model
         padding: 30px 40px;
-        padding-bottom: 100px;
+        padding-bottom: 60px;
 
         // visual
         background-image: url('./img/bgs/hero-t.jpg');
@@ -28,6 +28,7 @@
     position: absolute;
     left: -2px;         // not 0 to compensate left gap
     bottom: -1px;       // not 0 to compensate bottom gap
+    z-index: 2;
 
     // box model
     width: 102%;        // not 100% to compensate left and right gaps
@@ -98,6 +99,7 @@
         // positioning
         left: auto;
         right: 0;
+        z-index: 2;
 
         // box model
         padding-right: 70px;
@@ -112,7 +114,7 @@
         // box model
         display: block;
         width: 260px;
-        margin-bottom: 80px;
+        margin-bottom: 70px;
 
         // visual
         transform: skewY(-15deg);
@@ -160,9 +162,14 @@
 
 .hero__contacts {
     // box model
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 15px;
 
     @include atTablet {
+        // positioning
+        position: relative;
+        z-index: 4;
+
         // box model
         display: flex;
         justify-content: space-around;
@@ -172,9 +179,6 @@
 
 .hero__buttons {
     // box model
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     width: 220px;
     margin: 0 auto;
     padding-bottom: 60px;
@@ -184,6 +188,10 @@
     text-align: center;
 
     @include atTablet {
+        // positioning
+        position: relative;
+        z-index: 2;
+
         // box model
         margin: 0;
     }
@@ -199,7 +207,34 @@
         bottom: 0;
         right: 0;
         top: 0;
-        left: 50%;
-        border: 1px solid red;
+        // left: 50%;
+        z-index: 1;
+        // border: 1px solid red;
+
+        // box model
+        width: 55%;
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            // right: 0;
+            top: 0;
+
+
+            // box model
+            // width: 200px;
+            width: 130%;
+            // height: 200px;
+
+            // visual
+            // background-color: rgba($dark, 0.5);
+            background-image: url('./img/dark-v-grunge.svg');
+            background-size: cover;
+            transform: skewX(-15deg);
+        }
     }
 }

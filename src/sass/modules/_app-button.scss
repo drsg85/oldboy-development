@@ -1,8 +1,9 @@
 .app-button {
     // box model
     display: block;
-    margin-bottom: 25px;
     max-width: 200px;
+    min-width: 150px;
+    margin: 5px 0;
 
     // typography
     color: $light;
