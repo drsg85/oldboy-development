@@ -7,6 +7,10 @@
 }
 
 .contact--footer {
+    @include atTablet {
+        // box model
+        padding-bottom: 20px;
+    }
     .contact__title {
         // typography
         color: $light;

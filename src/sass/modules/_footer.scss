@@ -6,24 +6,54 @@
     background-color: $dark;
 
     @include atTablet {
+        // box model
+        padding: 80px 40px;
+        padding-bottom: 40px;
+
         // visual
-        background-image: 
-        url('./img/white-grunge-180.svg'),
+        background-image:
+            url('./img/white-grunge-180.svg'),
             url('./img/bgs/footer-t.jpg');
-        background-position: top -170px center, center left;
-        background-size: 800px, cover;
-        background-repeat: repeat-x, no-repeat;
+        background-position:
+            top -170px center,
+            center left;
+        background-size:
+            800px,
+            cover;
+        background-repeat:
+            repeat-x,
+            no-repeat;
+    }
+}
+
+.footer__info-n-contacts {
+    @include atTablet {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 .footer__info {
     // box model
     padding-bottom: 20px;
+
+    @include atTablet {
+        // box model
+        padding-bottom: 40px;
+        width: 320px;
+    }
 }
 
 .footer__logo {
     // box model
     padding: 10px 40px;
+
+    @include atTablet {
+        // box model
+        padding: 0;
+        padding-bottom: 30px;
+        padding-right: 10px;
+    }
 }
 
 .footer__logo img {
@@ -39,12 +69,17 @@
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .footer__subtitle {
     // box model
     padding-bottom: 40px;
-
+    
     // typography
     color: $lightGrey;
     font-family: $mainFont;
@@ -52,56 +87,119 @@
     font-weight: 600;
     line-height: 1.5;
     text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .footer__social {
     // typography
     text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
+}
+
+.footer__social-cta {
+    // box model
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1rem;
 }
 
 .footer__contacts {
     // box model
     padding: 30px 0;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 
 .footer__city {
     // box model
     display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+
+        // typography
+        color: $light;
+        font-family: $titleFont;
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+.footer__menues {
+    // visual
+    border-top: 2px solid $golden;
+    border-bottom: 2px solid $golden;
+
+    // box model
+    margin-bottom: 40px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 0;
+    }
 }
 
 .footer__main-nav {
     // box model
     display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+    }
 }
 
 .footer__services-nav {
     // box model
     display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+    }
 }
 
 .footer__info-nav {
-    // box model
-    margin-bottom: 40px;
-
-    // visual
-    border-top: 2px solid $golden;
-    border-bottom: 2px solid $golden;
+    
 }
 
 .footer__copyrights {
+    // typography
+    text-align: center;
 
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
 }
 
 .footer__copyrights p {
     // box model
     margin: 0;
     padding: 0;
-
+    
     // typography
     color: $lightGrey;
     font-family: $mainFont;
     font-size: 0.8rem;
     font-weight: 600;
-    text-align: center;
     text-transform: uppercase;
 }

@@ -6,6 +6,11 @@
 
     // typography
     text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .footer-menu__title {
@@ -18,6 +23,11 @@
     font-family: $titleFont;
     font-size: 1rem;
     line-height: 2;
+
+    @include atTablet {
+        // typography
+        font-size: 1.125rem;
+    }
 }
 
 .footer-menu__item {
@@ -31,4 +41,9 @@
     font-size: 1rem;
     line-height: 2;
     text-decoration: none;
+
+    @include atTablet {
+        // typography
+        font-size: 1.125rem;
+    }
 }

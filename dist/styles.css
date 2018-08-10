@@ -537,6 +537,10 @@ body {
   margin-bottom: 20px;
   text-align: center; }
 
+@media (min-width: 700px) {
+  .contact--footer {
+    padding-bottom: 20px; } }
+
 .contact--footer .contact__title {
   color: #ffffff; }
 
@@ -1227,16 +1231,36 @@ body {
   background-color: #131313; }
   @media (min-width: 700px) {
     .footer {
+      padding: 80px 40px;
+      padding-bottom: 40px;
       background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
-      background-position: top -170px center, center left;
-      background-size: 800px, cover;
-      background-repeat: repeat-x, no-repeat; } }
+      background-position: top -170px center, center left;
+      background-size: 800px, cover;
+      background-repeat: repeat-x, no-repeat; } }
+
+@media (min-width: 700px) {
+  .footer__info-n-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
 
 .footer__info {
   padding-bottom: 20px; }
+  @media (min-width: 700px) {
+    .footer__info {
+      padding-bottom: 40px;
+      width: 320px; } }
 
 .footer__logo {
   padding: 10px 40px; }
+  @media (min-width: 700px) {
+    .footer__logo {
+      padding: 0;
+      padding-bottom: 30px;
+      padding-right: 10px; } }
 
 .footer__logo img {
   width: 100%; }
@@ -1248,6 +1272,9 @@ body {
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .footer__title {
+      text-align: left; } }
 
 .footer__subtitle {
   padding-bottom: 40px;
@@ -1257,26 +1284,76 @@ body {
   font-weight: 600;
   line-height: 1.5;
   text-align: center; }
+  @media (min-width: 700px) {
+    .footer__subtitle {
+      text-align: left; } }
 
 .footer__social {
   text-align: center; }
+  @media (min-width: 700px) {
+    .footer__social {
+      text-align: left; } }
+
+.footer__social-cta {
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem; }
 
 .footer__contacts {
   padding: 30px 0; }
+  @media (min-width: 700px) {
+    .footer__contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
 
 .footer__city {
   display: none; }
+  @media (min-width: 700px) {
+    .footer__city {
+      display: block;
+      color: #ffffff;
+      font-family: "Rex", Arial, sans-serif;
+      font-size: 3rem;
+      text-align: center; } }
+
+.footer__menues {
+  border-top: 2px solid #d6a354;
+  border-bottom: 2px solid #d6a354;
+  margin-bottom: 40px; }
+  @media (min-width: 700px) {
+    .footer__menues {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      padding: 40px 0; } }
 
 .footer__main-nav {
   display: none; }
+  @media (min-width: 700px) {
+    .footer__main-nav {
+      display: block; } }
 
 .footer__services-nav {
   display: none; }
+  @media (min-width: 700px) {
+    .footer__services-nav {
+      display: block; } }
 
-.footer__info-nav {
-  margin-bottom: 40px;
-  border-top: 2px solid #d6a354;
-  border-bottom: 2px solid #d6a354; }
+.footer__copyrights {
+  text-align: center; }
+  @media (min-width: 700px) {
+    .footer__copyrights {
+      text-align: right; } }
 
 .footer__copyrights p {
   margin: 0;
@@ -1285,7 +1362,6 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  text-align: center;
   text-transform: uppercase; }
 
 .footer-menu {
@@ -1293,6 +1369,9 @@ body {
   padding: 15px 0;
   list-style: none;
   text-align: center; }
+  @media (min-width: 700px) {
+    .footer-menu {
+      text-align: left; } }
 
 .footer-menu__title {
   margin: 0;
@@ -1301,6 +1380,9 @@ body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem;
   line-height: 2; }
+  @media (min-width: 700px) {
+    .footer-menu__title {
+      font-size: 1.125rem; } }
 
 .footer-menu__link {
   color: #ffffff;
@@ -1308,6 +1390,9 @@ body {
   font-size: 1rem;
   line-height: 2;
   text-decoration: none; }
+  @media (min-width: 700px) {
+    .footer-menu__link {
+      font-size: 1.125rem; } }
 
 .button {
   display: inline-block;
