@@ -881,6 +881,18 @@ body {
   padding: 20px; }
   @media (min-width: 700px) {
     .promos__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
       padding: 40px; } }
 
 .promo {
@@ -890,6 +902,11 @@ body {
   background-color: #896322;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 700px) {
+    .promo {
+      height: 390px;
+      width: 45%;
+      margin-bottom: 40px; } }
 
 .promo--open {
   height: 390px; }
@@ -1189,6 +1206,83 @@ body {
 
 .team {
   display: none; }
+  @media (min-width: 700px) {
+    .team {
+      display: block;
+      margin-top: -400px;
+      padding-bottom: 300px;
+      background-image: url("./img/bgs/team-t.jpg");
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat; } }
+
+@media (min-width: 700px) {
+  .team__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 40px; } }
+
+.member {
+  position: relative;
+  width: 30%;
+  height: 280px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.member__header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 80px;
+  padding: 20px;
+  text-align: right; }
+
+.member__header::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg);
+  z-index: -1;
+  height: 135px;
+  background-image: url("./img/dark-h-grunge.svg");
+  background-size: cover; }
+
+.member__name {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem; }
+
+.member__position {
+  margin: 0;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 0.85rem; }
+
+.member__photo {
+  height: 100%; }
+
+.member__photo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 .testimonials {
   position: relative;

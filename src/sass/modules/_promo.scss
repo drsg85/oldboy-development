@@ -10,6 +10,13 @@
     background-color: $darkGold;
     border-radius: 5px;
     overflow: hidden;
+
+    @include atTablet {
+        // box model
+        height: 390px;
+        width: 45%;
+        margin-bottom: 40px;
+    }
 }
 
 .promo--open {
