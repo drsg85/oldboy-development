@@ -28,6 +28,18 @@
     // visual
     background-color: $golden;
     text-shadow: -3px 2px 0 $darkGold;
+    
+    @include atTablet {
+        // box model
+        padding: 20px 40px;
+        
+        // typography
+        font-size: 3rem;
+        
+        // visual
+        box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
+        text-shadow: -4px 3px 0 $darkGold;
+    }
 }
 
 .section-header__title::after {
@@ -54,7 +66,7 @@
     // positioning
     position: relative;
 
-    // // box model
+    // box model
     display: flex;
     flex-direction: row;
     flex-grow: 10;
@@ -66,22 +78,34 @@
     font-family: $titleFont;
     font-size: 2rem;
 
-    &::before {
-        content: "";
+    @include atTablet {
+        // typography
+        font-size: 2.25rem;
+    }
 
-        // positioning
-        position: relative;
-        top: 17px;
+}
 
+.section-header__subtitle::before {
+    content: "";
+
+    // positioning
+    position: relative;
+    left: -10px;
+    top: 17px;
+
+    // box model
+    flex-grow: 1;
+    flex-shrink: 10;
+    height: 3px;
+    width: 100%;
+    margin-right: 5px;
+
+    // visual
+    background-color: $darkGold;
+
+    @include atTablet {
         // box model
-        flex-grow: 1;
-        flex-shrink: 10;
-        height: 3px;
-        width: 100%;
-        margin-right: 5px;
-
-        // visual
-        background-color: $darkGold;
+        // padding-right: 200px;
     }
 }
 

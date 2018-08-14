@@ -1,9 +1,6 @@
 .promos {
-
-    @include atTablet {
-        // box model
-        margin-top: -20px;
-    }
+    // box model
+    margin-top: -50px;
 }
 
 .promos__header {
@@ -14,4 +11,9 @@
 .promos__content {
     // box model
     padding: 20px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
 }
