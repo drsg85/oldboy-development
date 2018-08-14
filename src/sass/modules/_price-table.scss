@@ -15,6 +15,16 @@
     font-family: $titleFont;
     font-size: 1.5rem;
     text-align: left;
+
+    @include atTablet {
+        // box model
+        padding-bottom: 20px;
+        margin-left: -0.05em;
+
+        // typography
+        color: $dark;
+        font-size: 2.5rem;
+    }
 }
 
 .price-table__row {
@@ -42,6 +52,27 @@
     
     // visual
     border-bottom: 1px solid $light;
+
+    @include atTablet {
+        // typography
+        color: $dark;
+
+        // visual
+        border-bottom: 1px solid rgba($dark, 0.25);
+
+        // TODO: try to make hairthin line here
+        // @media (min-resolution: 2dppx) {
+        //     border-bottom: 0.5px solid (red, 0.25);
+        // }
+
+        // @media (min-resolution: 3dppx) {
+        //     border-bottom: 0.3333333px solid (red, 0.25);
+        // }
+
+        // @media (min-resolution: 4dppx) {
+        //     border-bottom: 0.5px solid (red, 0.25);
+        // }
+    }
 }
 
 .price-table__price {
@@ -59,6 +90,15 @@
     
     // visual
     border-bottom: 1px solid $light;
+
+    @include atTablet {
+        // visual
+        border-bottom: 1px solid rgba($dark, 0.25);
+
+        @media (min-resolution: 2dppx) {
+            border-bottom: 0.5px solid ($dark, 0.25);
+        }
+    }
 }
 
 .price-table__icon {

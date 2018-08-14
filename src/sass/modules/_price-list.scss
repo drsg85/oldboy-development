@@ -1,0 +1,89 @@
+.price-list {
+    @include atTablet {
+        // box model
+        padding-bottom: 400px;
+
+        // visual
+        background-image:
+            url('./img/bgs/price-top-t.jpg'),
+            url('./img/bgs/price-bottom-t.jpg');
+        background-size:
+            contain,
+            contain;
+        background-position:
+            top center,
+            bottom center;
+        background-repeat:
+            no-repeat,
+            no-repeat;
+    }
+}
+
+.price-list__header {
+
+}
+
+.price-list__content {
+    // positioning
+    position: relative;
+
+    // box model
+    padding: 120px 20px;
+
+    // visual
+    background-color: $dark;
+    
+    @include atTablet {
+        // box model
+        padding: 80px 40px;
+
+        // visual
+        background-color: transparent;
+    }
+}
+
+.price-list__content::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    transform: skewY(-15deg);
+    left: 0;
+    top: -100px;
+
+    z-index: -1;
+
+    // box model
+    width: 100%;
+    height: 180px;
+
+    background-color: $dark;
+
+    @include atTablet {
+        // box model
+        display: none;
+    }
+}
+
+.price-list__content::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    transform: skewY(-15deg);
+    left: 0;
+    bottom: -100px;
+
+    z-index: -1;
+
+    // box model
+    width: 100%;
+    height: 180px;
+
+    background-color: $dark;
+
+    @include atTablet {
+        // box model
+        display: none;
+    }
+}
