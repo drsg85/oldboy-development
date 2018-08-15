@@ -1,31 +1,81 @@
 .comment {
-    
+    height: 220px;
+    width: 300px;
+    padding-right: 60px;
 }
 
 .comment.comment--main {
+    // box model
+    height: auto;
+    width: auto;
+    padding-right: 0;
 
+    .comment__icon {
+
+    }
+
+    .comment__name {
+        // typography
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
+    .comment__text {
+        // typography
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
 }
 
 .comment__header {
-
 }
 
 .comment__icon {
+    // box model
+    height: 54px;
+    width: 54px;
+    margin-bottom: -50px;
 
+    // visual
+    border: 3px solid $darkGold;
+    border-radius: 50%;
 }
 
 .comment__caption {
-
+    // box model
+    padding-left: 64px;
 }
 
 .comment__name {
+    // box model
+    margin: 0;
+    padding-bottom: 10px;
 
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .comment__about {
+    // box model
+    margin: 0;
 
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .comment__text {
-
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.5;
 }

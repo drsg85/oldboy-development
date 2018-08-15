@@ -2,6 +2,9 @@
     // positioning
     position: relative;
 
+    // box model
+    padding-top: 40px;
+
     // visual
     background-color: $light;
     background-image: url('./img/dark-o-h-grunge.svg');
@@ -22,12 +25,25 @@
 .testimonials__content {
     // box model
     padding: 60px 20px;
+
+    @include atTablet {
+        // box model
+        padding: 60px 40px;
+    }
 }
 
 .testimonials__main-comment {
-
+    // box model
+    padding-bottom: 40px;
 }
 
 .testimonials__comments {
-    
+    // box model
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 600px;
+
+    overflow-x: scroll;
 }

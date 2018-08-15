@@ -1,0 +1,45 @@
+.academy-banner {
+    // box model
+    margin: 30px;
+    padding: 30px;
+    
+    // visual
+    background-color: $light;
+    box-shadow: 0 20px 30px -10px rgba($dark, 0.25);
+}
+
+.academy-banner__header {
+    // positioning
+    transform: skewY(-15deg);
+    transform-origin: center left;
+}
+
+.academy-banner__title {
+    // box model
+    margin: 10px -30px;
+    margin-right: 0;
+    padding: 10px 30px;
+    
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 3rem;
+
+    // visual
+    border-bottom: 4px solid $golden;
+    border-top: 4px solid $golden;
+}
+
+.academy-banner__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+}
+
+.academy-banner__content {
+
+}
