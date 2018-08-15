@@ -13,7 +13,7 @@
 
     @include atTablet {
         // box model
-        height: 390px;
+        height: 420px;
         width: 45%;
         margin-bottom: 40px;
     }
@@ -22,6 +22,20 @@
 .promo--open {
     // box model
     height: 390px;
+
+    @include atTablet {
+        height: 420px;
+    }
+
+    .promo__close-button {
+        // box model
+        display: block;
+    }
+
+    .promo__info-button {
+        // box model
+        display: none;
+    }
 }
 
 .promo--open .promo__description {
@@ -97,6 +111,15 @@
 
     // visual
     background-color: $golden;
+    text-shadow: -3px 2px 0 $darkGold;
+
+    @include atTablet {
+        // typography
+        font-size: 2.5rem;
+
+        // visual
+        text-shadow: -3px 3px 0 $darkGold;
+    }
 }
 
 .promo__name {
@@ -109,6 +132,14 @@
     font-family: $titleFont;
     font-size: 1.75rem;
     text-align: right;
+
+    @include atTablet {
+        // box model
+        padding-top: 10px;
+
+        // typography
+        font-size: 1.3rem;
+    }
 }
 
 .promo__tip {
@@ -136,16 +167,38 @@
     font-size: 1rem;
     line-height: 1.5;
 
-    p {
-        // box model
-        margin: 0;
-        margin-bottom: 1rem;
-    }
 }
 
-.promo__info-icon {
+.promo__text p {
+    // box model
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.promo__close-button,
+.promo__info-button {
     // positioning
     position: absolute;
+    left: 15px;
+    top: 15px;
+    
+    // box model
+    height: 32px;
+    width: 32px;
 
-    border: 1px solid red;
+    // typography
+    color: $light;
+    font-size: 1.25rem;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+
+    // visual
+    border: 3px solid $light;
+    border-radius: 50%;
+}
+
+.promo__close-button {
+    // box model
+    display: none;
 }

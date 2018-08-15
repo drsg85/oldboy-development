@@ -28,8 +28,7 @@
 }
 
 .price-table__row {
-    // box model
-
+    // Removing last bottom border for price table
     &:last-child .price-table__service,
     &:last-child .price-table__price{
         // visual
