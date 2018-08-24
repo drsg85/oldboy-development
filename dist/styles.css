@@ -1669,6 +1669,50 @@ body {
     .footer-menu__link {
       font-size: 1.125rem; } }
 
+.city-form__title {
+  display: none; }
+
+.city-form__input {
+  display: block;
+  width: 280px;
+  padding: 5px 10px;
+  border: 2px solid #d6a354;
+  border-radius: 20px;
+  outline: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 30px; }
+
+.main-nav {
+  padding: 30px 20px 45px 25px; }
+
+.main-nav__caption {
+  display: none;
+  border: 1px solid red; }
+
+.town-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.town-select__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  list-style: none; }
+
+.town-select__item {
+  margin-right: 10px;
+  padding: 5px 18px;
+  height: 40px;
+  background-color: #d6a354;
+  border-radius: 23px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff; }
+
 .button {
   display: inline-block;
   vertical-align: top;

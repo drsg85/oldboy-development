@@ -1,0 +1,29 @@
+.town-select {
+    // box model
+    display: flex;
+}
+
+.town-select__list {
+    // box model
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.town-select__item {
+    // box model
+    margin-right: 10px;
+    padding: 5px 18px;
+    height: 40px;
+
+    // visual   
+    background-color: $golden;
+    border-radius: 23px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: $light;
+}
