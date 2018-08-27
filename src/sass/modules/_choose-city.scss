@@ -1,0 +1,36 @@
+.choose-city__list {
+    // typography   
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    color: $dark;
+}
+
+.choose-city__item {
+    // box model
+    margin-left: 25px;
+
+    // visual
+    list-style: none;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 1.2rem;
+    color: $dark;
+}
+
+.choose-city__item::before {
+    content: "";
+    // box model
+    position: relative;
+    display: block;
+    width: 8px;
+    height: 8px;
+
+    // positioning  
+    left: -25px;
+    top: 16px;
+
+    // visual
+    background-color: $golden;
+    border-radius: 50%;
+}
