@@ -1676,6 +1676,7 @@ body {
   display: block;
   width: 280px;
   padding: 5px 10px;
+  margin-bottom: 20px;
   border: 2px solid #d6a354;
   border-radius: 20px;
   outline: none;
@@ -1692,26 +1693,37 @@ body {
 .town-select {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-left: -25px;
+  overflow-x: scroll;
+  border-bottom: 1px solid rgba(174, 174, 174, 0.5); }
 
 .town-select__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
   list-style: none; }
 
 .town-select__item {
+  display: inline-block;
   margin-right: 10px;
-  padding: 5px 18px;
+  padding: 10px;
+  width: auto;
   height: 40px;
-  background-color: #d6a354;
+  background-color: #e6e6e6;
   border-radius: 23px;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
   text-align: center;
-  color: #ffffff; }
+  color: #131313;
+  vertical-align: middle; }
+
+.addreses {
+  padding: 0 25px; }
 
 .button {
   display: inline-block;
