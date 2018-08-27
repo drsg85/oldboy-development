@@ -1812,3 +1812,23 @@ body {
   border-radius: 50%; }
   .social__icon::before {
     font-size: 1rem; }
+
+.city-catalogue__list {
+  margin: 0;
+  list-style-type: none; }
+
+.city-catalogue__item {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #131313; }
+
+.city-catalogue__item::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  left: -25px;
+  top: 16px;
+  background-color: #d6a354;
+  border-radius: 50%; }
