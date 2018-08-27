@@ -1,3 +1,54 @@
 .addreses {
     padding: 0 25px;
 }
+
+.addreses-header__city {
+    // box model
+    position: relative;
+    width: 90px;
+    position: relative;
+
+    // positioning
+    top: -20px;
+
+    // visual
+    transform: skewY(-15deg);
+    border-top: 3px solid $golden;
+}
+
+.adresses-header__title {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.adresses-header__subtitle {
+    // box model
+    margin: 0;
+    display: flex;
+
+    // typography
+    text-align: right;
+    font-family: $titleFont;
+    color: $golden;
+}
+
+.adresses-header__subtitle::before {
+    // box model
+    content: "";
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin-right: 5px;
+
+    // positioning
+    top: 8px;
+
+    // visual
+    background-color: $golden;
+}

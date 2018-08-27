@@ -2,6 +2,8 @@
     // box model
     display: flex;
     margin-left: -25px;
+    margin-right: -25px;
+    padding: 0 25px;
 
     // visual
     overflow-x: scroll;
@@ -28,6 +30,7 @@
     // visual   
     background-color: #e6e6e6;
     border-radius: 23px;
+    transition: 0.5s;
 
     // typography
     font-family: $mainFont;
@@ -36,4 +39,10 @@
     text-align: center;
     color: $dark;
     vertical-align: middle;
+}
+
+.town-select__item:hover {
+    // visual
+    background-color: $golden;
+    color: $light;
 }
