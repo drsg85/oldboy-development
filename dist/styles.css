@@ -1734,10 +1734,15 @@ body {
 .addreses {
   padding: 0 25px; }
 
+.addreses-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .addreses-header__city {
   position: relative;
   width: 90px;
-  position: relative;
   top: -20px;
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
@@ -1768,6 +1773,11 @@ body {
   top: 8px;
   background-color: #d6a354; }
 
+.addreses-header__buttons {
+  position: absolute;
+  right: 0;
+  top: -30px; }
+
 .button {
   display: inline-block;
   vertical-align: top;
@@ -1785,6 +1795,12 @@ body {
   border-radius: 23px; }
   .button--ghost {
     background-color: transparent; }
+  .button--map {
+    display: none; }
+  .button--metro {
+    background-color: transparent;
+    border: 2px solid #d6a354;
+    color: #131313; }
 
 .social {
   display: inline-block;
