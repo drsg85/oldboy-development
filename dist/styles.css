@@ -1860,6 +1860,17 @@ body {
   font-size: 1rem;
   color: #131313;
   text-transform: uppercase; }
+  .choose-city__list--soon {
+    padding-left: 35px;
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: "Rex", Arial, sans-serif;
+    font-size: 1rem;
+    color: #131313;
+    text-transform: uppercase; }
+    .choose-city__list--soon .choose-city__item::before {
+      background-color: transparent;
+      border: 1px solid #d6a354; }
 
 .choose-city__letter {
   position: absolute;
@@ -1886,6 +1897,10 @@ body {
   width: 8px;
   height: 8px;
   left: -25px;
-  top: 16px;
+  top: 13px;
   background-color: #d6a354;
   border-radius: 50%; }
+
+.coming-soon {
+  font-family: "Rex", Arial, sans-serif;
+  color: #d6a354; }

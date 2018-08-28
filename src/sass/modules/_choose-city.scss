@@ -12,7 +12,6 @@
 
 .choose-city__list {
     // box model
-    // position: relative;
     padding-left: 35px;
     margin: 0;
     margin-bottom: 25px;
@@ -22,6 +21,25 @@
     font-size: 1rem;
     color: $dark;
     text-transform: uppercase;
+    
+    &--soon {
+       & .choose-city__item::before {
+            // visual
+            background-color: transparent;
+            border: 1px solid $golden;
+        }
+
+    // box model
+    padding-left: 35px;
+    margin: 0;
+    margin-bottom: 25px;
+    
+    // typography   
+    font-family: $titleFont;
+    font-size: 1rem;
+    color: $dark;
+    text-transform: uppercase;
+     }
 }
 
 .choose-city__letter {
@@ -45,15 +63,14 @@
     // box model
     margin-left: 40px;
     margin-bottom: 10px;
-
+    
     // visual
     list-style: none;
-
+    
     // typography
     font-family: $mainFont;
     font-size: 1rem;
     color: $dark;
-
     text-transform: uppercase;
 }
 
@@ -64,11 +81,11 @@
     display: block;
     width: 8px;
     height: 8px;
-
+    
     // positioning  
     left: -25px;
-    top: 16px;
-
+    top: 13px;
+    
     // visual
     background-color: $golden;
     border-radius: 50%;
