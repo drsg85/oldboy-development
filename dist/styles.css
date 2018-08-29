@@ -317,7 +317,7 @@ body {
 @font-face {
   font-family: 'Open Sans';
   src: url("./fonts/OpenSans-Regular.woff2") format("woff2"), url("./fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
@@ -329,7 +329,7 @@ body {
 @font-face {
   font-family: 'Rex';
   src: url("./fonts/RexBold.woff2") format("woff2"), url("./fonts/RexBold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal; }
 
 @font-face {
@@ -793,6 +793,53 @@ body {
   vertical-align: sub;
   padding-right: 3px;
   font-size: 1rem; }
+
+.location-selector {
+  background-color: #ffffff; }
+
+.location-selector__header {
+  padding: 25px;
+  border-bottom: 1px solid rgba(174, 174, 174, 0.5); }
+
+.location-selector__caption {
+  display: none; }
+
+.place-groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll; }
+
+.place-groups__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  list-style: none; }
+
+.place-groups__item {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear; }
+
+.place-groups__item:hover {
+  color: #ffffff;
+  background-color: #d6a354; }
 
 .section-header {
   position: relative;
@@ -1703,61 +1750,14 @@ body {
 .city-form__input {
   display: block;
   width: 280px;
-  padding: 5px 10px;
+  padding: 0 16px;
   margin-bottom: 20px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 36px;
   border: 2px solid #d6a354;
   border-radius: 20px;
-  outline: none;
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #131313;
-  line-height: 2; }
-
-.main-nav {
-  padding: 30px 20px 45px 25px; }
-
-.main-nav__caption {
-  display: none;
-  border: 1px solid red; }
-
-.town-select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-  margin-right: -25px;
-  padding: 0 25px;
-  overflow-x: scroll;
-  border-bottom: 1px solid rgba(174, 174, 174, 0.5); }
-
-.town-select__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 15px;
-  list-style: none; }
-
-.town-select__item {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 10px;
-  width: auto;
-  height: 40px;
-  background-color: #e6e6e6;
-  border-radius: 23px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  color: #131313;
-  vertical-align: middle; }
-
-.town-select__item:hover {
-  background-color: #d6a354;
-  color: #ffffff; }
+  outline: none; }
 
 .addreses {
   padding: 0 25px; }

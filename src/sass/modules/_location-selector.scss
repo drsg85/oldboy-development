@@ -1,0 +1,17 @@
+.location-selector {
+    // visual
+    background-color: $light;
+}
+
+.location-selector__header {
+    // box model
+    padding: 25px;
+    
+    // visual
+    border-bottom: 1px solid rgba($lightGrey, 0.5);
+}
+
+.location-selector__caption {
+    // box model
+    display: none;
+}
