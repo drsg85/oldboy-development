@@ -1344,6 +1344,34 @@ body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
 
+.academy-banner__motto {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase; }
+
+.academy-banner__text {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5; }
+
+.academy-banner__address {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase; }
+
+.academy-banner__phone {
+  color: #d6a354;
+  text-decoration: none; }
+
+.academy-banner__cta {
+  color: #d6a354;
+  text-decoration: none; }
+
 .testimonials {
   position: relative;
   padding-top: 40px;
