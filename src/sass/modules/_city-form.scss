@@ -1,0 +1,22 @@
+.city-form__title {
+    // box model
+    display: none;
+}
+
+.city-form__input {
+    // box model
+    display: block;
+    width: 280px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+
+    // visual
+    border: 2px solid $golden;
+    border-radius: 20px;
+    outline: none;
+
+    // typography
+    font-family: $mainFont;
+    color: $dark;
+    line-height: 2;
+}

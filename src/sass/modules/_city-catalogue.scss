@@ -1,0 +1,48 @@
+.city-catalogue {
+    // box model
+    padding-left: 100px;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    // visual
+    border-bottom: 1px solid rgba($lightGrey, 0.5);
+}
+
+.city-catalogue__list {
+    // box model
+    padding: 0;
+    margin: 0;
+
+    // visual
+    list-style-type: none;
+}
+
+.city-catalogue__item {
+    // box model
+    margin-bottom: 20px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 1rem;
+    color: $dark;
+    text-transform: uppercase;
+}
+
+.city-catalogue__item::before {
+    content: "";
+    // box model
+    position: relative;
+    display: block;
+    width: 8px;
+    height: 8px;
+
+    // positioning  
+    left: -25px;
+    top: 16px;
+
+    // visual
+    background-color: $golden;
+    border-radius: 50%;
+}
