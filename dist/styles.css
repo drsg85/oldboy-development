@@ -799,15 +799,20 @@ body {
 
 .location-selector__header {
   padding: 25px;
-  border-bottom: 1px solid rgba(174, 174, 174, 0.5); }
+  padding-bottom: 0; }
 
 .location-selector__caption {
   display: none; }
+
+.location-selector__places {
+  margin: 0 -25px; }
 
 .place-groups {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 25px;
+  padding-bottom: 15px;
   overflow-x: scroll; }
 
 .place-groups__list {
@@ -816,7 +821,6 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
   list-style: none; }
 
 .place-groups__item {
@@ -840,6 +844,93 @@ body {
 .place-groups__item:hover {
   color: #ffffff;
   background-color: #d6a354; }
+
+.city-form__title {
+  display: none; }
+
+.city-form__input {
+  display: block;
+  width: 280px;
+  padding: 0 16px;
+  margin-bottom: 20px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 36px;
+  border: 2px solid #d6a354;
+  border-radius: 20px;
+  outline: none; }
+
+.featured-location {
+  padding: 25px;
+  border-bottom: 1px solid rgba(174, 174, 174, 0.5);
+  border-top: 1px solid rgba(174, 174, 174, 0.5); }
+
+.featured-location__caption {
+  position: relative;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg);
+  display: inline-block;
+  vertical-align: top;
+  border-top: 3px solid #d6a354; }
+
+.featured-location__title {
+  margin: 0;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem; }
+
+.featured-location__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  text-align: right; }
+  .featured-location__subtitle::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin-right: 5px;
+    top: 8px;
+    background-color: #d6a354; }
+
+.featured-location__content {
+  padding: 25px; }
+
+.location-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.location-list__city {
+  margin: 0;
+  margin-bottom: 1em;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.25rem; }
+
+.location-list__item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 1em;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  .location-list__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #d6a354;
+    border-radius: 50%; }
 
 .section-header {
   position: relative;
@@ -1744,68 +1835,6 @@ body {
     .footer-menu__link {
       font-size: 1.125rem; } }
 
-.city-form__title {
-  display: none; }
-
-.city-form__input {
-  display: block;
-  width: 280px;
-  padding: 0 16px;
-  margin-bottom: 20px;
-  color: #131313;
-  font-family: "Open Sans", Arial, sans-serif;
-  line-height: 36px;
-  border: 2px solid #d6a354;
-  border-radius: 20px;
-  outline: none; }
-
-.addreses {
-  padding: 0 25px; }
-
-.addreses-header {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.addreses-header__city {
-  position: relative;
-  width: 90px;
-  top: -20px;
-  -webkit-transform: skewY(-15deg);
-  transform: skewY(-15deg);
-  border-top: 3px solid #d6a354; }
-
-.adresses-header__title {
-  margin: 0;
-  font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em; }
-
-.adresses-header__subtitle {
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: right;
-  font-family: "Rex", Arial, sans-serif;
-  color: #d6a354; }
-
-.adresses-header__subtitle::before {
-  content: "";
-  position: relative;
-  display: block;
-  height: 3px;
-  width: 100%;
-  margin-right: 5px;
-  top: 8px;
-  background-color: #d6a354; }
-
-.addreses-header__buttons {
-  position: absolute;
-  right: 0;
-  top: -30px; }
-
 .button {
   display: inline-block;
   vertical-align: top;
@@ -1814,21 +1843,18 @@ body {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
-  line-height: 42px;
+  line-height: 36px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #d6a354;
   border: 2px solid #d6a354;
-  border-radius: 23px; }
+  border-radius: 20px; }
   .button--ghost {
     background-color: transparent; }
-  .button--map {
-    display: none; }
-  .button--metro {
-    background-color: transparent;
-    border: 2px solid #d6a354;
-    color: #131313; }
+  .button--ghost-dark {
+    color: #131313;
+    background-color: transparent; }
 
 .social {
   display: inline-block;

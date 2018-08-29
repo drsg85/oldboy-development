@@ -9,7 +9,7 @@
     color: $light;
     font-family: $mainFont;
     font-weight: 600;
-    line-height: 42px;
+    line-height: 36px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -17,22 +17,21 @@
     // visual
     background-color: $golden;
     border: 2px solid $golden;
-    border-radius: 23px; // 1/2 of line-height + 2px border-width
+    border-radius: 20px; // 1/2 of line-height + 2px border-width
 
     &--ghost {
+        // typography
+        // color: $dark;
+
         // visual
         background-color: transparent;
     }
 
-    &--map {
-        // box model
-        display: none;
-    }
+    &--ghost-dark {
+        // typography
+        color: $dark;
 
-    &--metro {
         // visual
-    background-color: transparent;
-    border: 2px solid $golden;
-    color: $dark;
+        background-color: transparent;
     }
 }

@@ -24,230 +24,227 @@ html(lang="en")
                         form.city-form__form(action="")
                             input.city-form__input(type="search" name="search" placeholder="Введите название города" autofocus)
                     
-                    //- TODO: change block name
-                    .place-groups
-                        .place-groups__cities
-                            ul.place-groups__list
-                                li.place-groups__item Москва
-                                li.place-groups__item Московская&nbsp;область
-                                li.place-groups__item Санкт-&nbsp;Петербург
+                    .location-selector__places
+                        .place-groups
+                            .place-groups__cities
+                                ul.place-groups__list
+                                    li.place-groups__item Москва
+                                    li.place-groups__item Московская&nbsp;область
+                                    li.place-groups__item Санкт-&nbsp;Петербург
 
-                        .place-groups__countries
-                            ul.place-groups__list
-                                li.place-groups__item Испания
-                                li.place-groups__item Кипр
-                                li.place-groups__item Сербия
-                                li.place-groups__item Грузия
-                                li.place-groups__item Казахстан
-                                li.place-groups__item Беларусь
-                                li.place-groups__item Россия
+                            .place-groups__countries
+                                ul.place-groups__list
+                                    li.place-groups__item Испания
+                                    li.place-groups__item Кипр
+                                    li.place-groups__item Сербия
+                                    li.place-groups__item Грузия
+                                    li.place-groups__item Казахстан
+                                    li.place-groups__item Беларусь
+                                    li.place-groups__item Россия
 
-                .clear-button
-
+                .location-selector__close
+                    //- TODO: rename block
+                    .clear-button
 
             .location-selector__content
-                section.addreses
-                    .addreses-header
-                        .addreses-header__city
-                            h3.adresses-header__title Москва
-                            h4.adresses-header__subtitle Moscow
+                section.featured-location
+                    header.featured-location__header
+                        .featured-location__caption
+                            h3.featured-location__title Санкт–Петербург
+                            p.featured-location__subtitle Moscow
+                        .featured-location__buttons
+                            //- TODO: make separate block
+                            a.button.button--ghost-dark(href="#") На карте
+                            a.button.button--ghost-dark(href="#") На схеме метро
 
-                        .addreses-header__buttons
-                            a.button.button--map(href="#") На карте
-                            a.button.button--metro(href="#") На схеме метро
+                    .featured-location__content
+                        ul.location-list
+                            li.location-list__item 3-я Владимирская, 20
+                            li.location-list__item 6-я Радиальная, 5 к.4
+                            li.location-list__item Автозаводская, 18
+                            li.location-list__item Алтуфьевское шоссе, 70к.1
+                            li.location-list__item Бориса Галушкина, 17
+                            li.location-list__item Боровское Шоссе, 36
+                            li.location-list__item Вертолетчиков, 9/1
+                            li.location-list__item Вешняковская, 2
+                            li.location-list__item Осенний бульвар, 7к1
+                            li.location-list__item Поречная, 10 (ТЦ Мари)
+                            li.location-list__item Вишневая, 9к.1
+                            li.location-list__item Волгоградский пр-кт, 26а
+                            li.location-list__item Волокаменское ш. 15/22
+                            li.location-list__item Гарибальди, 7
+                            li.location-list__item Генерала кузнецова, 11к.1
+                            li.location-list__item Главмосстроя, 12
+                            li.location-list__item Гончарная набережная, 9/16 С2
+                            li.location-list__item Дмитровское шоссе, 62С5
+                            li.location-list__item Добролюбова, 20
+                            li.location-list__item Новослободская, 52
+                            li.location-list__item Киевское шоссе, 6 стр.1
+                            li.location-list__item Кировоградская, 9к1
+                            li.location-list__item Красноказарменная, 19
+                            li.location-list__item Ленинградское шоссе, 120 КЗ
+                            li.location-list__item Маршала Вершинина, 8К.1
+                            li.location-list__item Машкова, 24 (м. Курская)
+                            li.location-list__item Мичуринский проспект, 26
+                            li.location-list__item Мытная, 52
+                            li.location-list__item Нагатинская, 16
+                            li.location-list__item Нахимовский проспект, 9К1
+                            li.location-list__item пр. 60-летия октября, 14
+                            li.location-list__item Пресненский вал, 14 К.2
+                            li.location-list__item Профсоюзная 102А
+                            li.location-list__item Пятницкая, 6/1
+                            li.location-list__item Святоозерская, 16
+                            li.location-list__item Студенческая, 26
+                            li.location-list__item Удальцова, 71 К2
+                            li.location-list__item Шереметьевская, 20А
+
+                section.all-locations
+                    .some-letter-block
+                        .some-letter-block__letter А
+                        .some-letter-block__content
+                            ul.location-list 
+                                h4.location-list__city Актау
+                                li.location-list__item ЖК Миланский квартал
+                                li.location-list__item Иманова, 16
+
+                        //- все дальше не так уже
+                            ul.location-list__list Алматы
+                                li.location-list__item Губкина, 38Б
+                                li.location-list__item Попова, 36
+
+                            ul.location-list__list Атырау
+                                li.location-list__item Петербургская, 9
+
+                            ul.location-list__list Армавир
+                                li.location-list__item Петербургская, 9
+
+                            ul.location-list__list Альметьевск
+                                li.location-list__item Петербургская, 9
+
+                            ul.location-list__list--soon Ашхабад
+                                li.location-list__item Петербургская, 9 <br> <span class="coming-soon">Скоро открытие</span>
+
+                        .location-list__wrapper
+                            span.location-list__letter Б
+                            ul.location-list__list Балаково
+                                li.location-list__item Кубанская наб., 64
+                        
+                            ul.location-list__list Барнаул
+                                li.location-list__item Губкина, 38Б
+                                li.location-list__item Попова, 36
+
+                            ul.location-list__list Бишкек
+                                li.location-list__item Кубанская наб., 64
+
+                            ul.location-list__list Брянск
+                                li.location-list__item Губкина, 38Б
+
+                            ul.location-list__list--soon Беслан
+                                li.location-list__item Кубанская наб., 64<br> <span class="coming-soon">Скоро открытие</span>
+
+                            ul.location-list__list--soon Брест
+                                li.location-list__item Кубанская наб., 64<br> <span class="coming-soon">Скоро открытие</span>
+
                     
-                    .city-catalogue
-                        ul.city-catalogue__list
-                            li.city-catalogue__item 3-я Владимирская, 20
-                            li.city-catalogue__item 6-я Радиальная, 5 к.4
-                            li.city-catalogue__item Автозаводская, 18
-                            li.city-catalogue__item Алтуфьевское шоссе, 70к.1
-                            li.city-catalogue__item Бориса Галушкина, 17
-                            li.city-catalogue__item Боровское Шоссе, 36
-                            li.city-catalogue__item Вертолетчиков, 9/1
-                            li.city-catalogue__item Вешняковская, 2
-                            li.city-catalogue__item Осенний бульвар, 7к1
-                            li.city-catalogue__item Поречная, 10 (ТЦ Мари)
+                        .location-list__wrapper
+                            span.location-list__letter К
+                            ul.location-list__list Кемерово
+                            ul.location-list__list Калуга
+                            ul.location-list__list Караганда
+                            ul.location-list__list Курск
+                            ul.location-list__list Каспийск
 
-                        ul.city-catalogue__list
-                            li.city-catalogue__item Вишневая, 9к.1
-                            li.city-catalogue__item Волгоградский пр-кт, 26а
-                            li.city-catalogue__item Волокаменское ш. 15/22
-                            li.city-catalogue__item Гарибальди, 7
-                            li.city-catalogue__item Генерала кузнецова, 11к.1
-                            li.city-catalogue__item Главмосстроя, 12
-                            li.city-catalogue__item Гончарная набережная, 9/16 С2
-                            li.city-catalogue__item Дмитровское шоссе, 62С5
-                            li.city-catalogue__item Добролюбова, 20
-                            li.city-catalogue__item Новослободская, 52
+                        .location-list__wrapper
+                            span.location-list__letter М
+                            ul.location-list__list Махачкала
+                            ul.location-list__list Мурманск
+                            ul.location-list__list Минск
 
-                        ul.city-catalogue__list
-                            li.city-catalogue__item Киевское шоссе, 6 стр.1
-                            li.city-catalogue__item Кировоградская, 9к1
-                            li.city-catalogue__item Красноказарменная, 19
-                            li.city-catalogue__item Ленинградское шоссе, 120 КЗ
-                            li.city-catalogue__item Маршала Вершинина, 8К.1
-                            li.city-catalogue__item Машкова, 24 (м. Курская)
-                            li.city-catalogue__item Мичуринский проспект, 26
-                            li.city-catalogue__item Мытная, 52
-                            li.city-catalogue__item Нагатинская, 16
-                            li.city-catalogue__item Нахимовский проспект, 9К1
+                        .location-list__wrapper
+                            span.location-list__letter Н
+                            ul.location-list__list Нижневаторск
+                            ul.location-list__list Норильск
+                            ul.location-list__list Новый Уренгой
+                            ul.location-list__list Новороссийск
+                            ul.location-list__list Новосибирск
+                            ul.location-list__list Находка
+                            ul.location-list__list Набережные Челны
+                            ul.location-list__list Ноябрьск
+                            ul.location-list__list Нефтекамск
+                            ul.location-list__list Нижний Тагил
+                            ul.location-list__list Новокузнецк
 
-                        ul.city-catalogue__list
-                            li.city-catalogue__item пр. 60-летия октября, 14
-                            li.city-catalogue__item Пресненский вал, 14 К.2
-                            li.city-catalogue__item Профсоюзная 102А
-                            li.city-catalogue__item Пятницкая, 6/1
-                            li.city-catalogue__item Святоозерская, 16
-                            li.city-catalogue__item Студенческая, 26
-                            li.city-catalogue__item Удальцова, 71 К2
-                            li.city-catalogue__item Шереметьевская, 20А
-
-                section.choose-city
-                .choose-city__column
-                    .choose-city__wrapper
-                        span.choose-city__letter А
-                        ul.choose-city__list Актау
-                            li.choose-city__item ЖК Миланский квартал
-                            li.choose-city__item Иманова, 16
                     
-                        ul.choose-city__list Алматы
-                            li.choose-city__item Губкина, 38Б
-                            li.choose-city__item Попова, 36
+                        .location-list__wrapper
+                            span.location-list__letter П
+                            ul.location-list__list Петропавловск-Камчатский
+                            ul.location-list__list Пермь
+                            ul.location-list__list Псков
 
-                        ul.choose-city__list Атырау
-                            li.choose-city__item Петербургская, 9
+                        .location-list__wrapper
+                            span.location-list__letter Р
+                            ul.location-list__list Ростов-на-Дону
 
-                        ul.choose-city__list Армавир
-                            li.choose-city__item Петербургская, 9
+                        .location-list__wrapper
+                            span.location-list__letter С
+                            ul.location-list__list Севастополь
+                            ul.location-list__list Ставрополь
+                            ul.location-list__list Сургут
+                            ul.location-list__list Самара
+                            ul.location-list__list Симферополь
+                            ul.location-list__list--soon Салехад <span class="coming-soon">Скоро открытие</span>
 
-                        ul.choose-city__list Альметьевск
-                            li.choose-city__item Петербургская, 9
+                        .location-list__wrapper
+                            span.location-list__letter Т
+                            ul.location-list__list Тюмень
+                            ul.location-list__list Тамбов
+                            ul.location-list__list Тольятти
+                            ul.location-list__list Тверь
+                            ul.location-list__list Тбилиси
 
-                        ul.choose-city__list--soon Ашхабад
-                            li.choose-city__item Петербургская, 9 <br> <span class="coming-soon">Скоро открытие</span>
+                        
+                        .location-list__wrapper
+                            span.location-list__letter Г
+                            ul.location-list__list Гомель
+                            ul.location-list__list Грозный
 
-                    .choose-city__wrapper
-                        span.choose-city__letter Б
-                        ul.choose-city__list Балаково
-                            li.choose-city__item Кубанская наб., 64
+                        .location-list__wrapper 
+                            span.location-list__letter Е    
+                            ul.location-list__list Екатеринбург
+                            ul.location-list__list Ессентуки <span class="coming-soon">Скоро открытие</span>
+
+                        .location-list__wrapper
+                            span.location-list__letter О
+                            ul.location-list__list Омск
+                            ul.location-list__list Оренбург
+
+                        .location-list__wrapper
+                            span.location-list__letter У
+                            ul.location-list__list Усть-Каменогорск
+                            ul.location-list__list Уфа
+                            ul.location-list__list Уссурийск
+
+                        .location-list__wrapper
+                            span.location-list__letter Х
+                            ul.location-list__list Харьков
+                            ul.location-list__list Хабаровск
+
                     
-                        ul.choose-city__list Барнаул
-                            li.choose-city__item Губкина, 38Б
-                            li.choose-city__item Попова, 36
+                        .location-list__wrapper
+                            span.location-list__letter Ч
+                            ul.location-list__list Чебоксары
+                            ul.location-list__list Череповец
+                            ul.location-list__list Челябинск
 
-                        ul.choose-city__list Бишкек
-                            li.choose-city__item Кубанская наб., 64
+                        .location-list__wrapper
+                            span.location-list__letter Ю
+                            ul.location-list__list 
+                            ul.location-list__list Югорск
 
-                        ul.choose-city__list Брянск
-                            li.choose-city__item Губкина, 38Б
-
-                        ul.choose-city__list--soon Беслан
-                            li.choose-city__item Кубанская наб., 64<br> <span class="coming-soon">Скоро открытие</span>
-
-                        ul.choose-city__list--soon Брест
-                            li.choose-city__item Кубанская наб., 64<br> <span class="coming-soon">Скоро открытие</span>
-
-                .choose-city__column
-                    .choose-city__wrapper
-                        span.choose-city__letter К
-                        ul.choose-city__list Кемерово
-                        ul.choose-city__list Калуга
-                        ul.choose-city__list Караганда
-                        ul.choose-city__list Курск
-                        ul.choose-city__list Каспийск
-
-                    .choose-city__wrapper
-                        span.choose-city__letter М
-                        ul.choose-city__list Махачкала
-                        ul.choose-city__list Мурманск
-                        ul.choose-city__list Минск
-
-                    .choose-city__wrapper
-                        span.choose-city__letter Н
-                        ul.choose-city__list Нижневаторск
-                        ul.choose-city__list Норильск
-                        ul.choose-city__list Новый Уренгой
-                        ul.choose-city__list Новороссийск
-                        ul.choose-city__list Новосибирск
-                        ul.choose-city__list Находка
-                        ul.choose-city__list Набережные Челны
-                        ul.choose-city__list Ноябрьск
-                        ul.choose-city__list Нефтекамск
-                        ul.choose-city__list Нижний Тагил
-                        ul.choose-city__list Новокузнецк
-
-                .choose-city__column
-                    .choose-city__wrapper
-                        span.choose-city__letter П
-                        ul.choose-city__list Петропавловск-Камчатский
-                        ul.choose-city__list Пермь
-                        ul.choose-city__list Псков
-
-                    .choose-city__wrapper
-                        span.choose-city__letter Р
-                        ul.choose-city__list Ростов-на-Дону
-
-                    .choose-city__wrapper
-                        span.choose-city__letter С
-                        ul.choose-city__list Севастополь
-                        ul.choose-city__list Ставрополь
-                        ul.choose-city__list Сургут
-                        ul.choose-city__list Самара
-                        ul.choose-city__list Симферополь
-                        ul.choose-city__list--soon Салехад <span class="coming-soon">Скоро открытие</span>
-
-                    .choose-city__wrapper
-                        span.choose-city__letter Т
-                        ul.choose-city__list Тюмень
-                        ul.choose-city__list Тамбов
-                        ul.choose-city__list Тольятти
-                        ul.choose-city__list Тверь
-                        ul.choose-city__list Тбилиси
-
-                .choose-city__column    
-                    .choose-city__wrapper
-                        span.choose-city__letter Г
-                        ul.choose-city__list Гомель
-                        ul.choose-city__list Грозный
-
-                    .choose-city__wrapper 
-                        span.choose-city__letter Е    
-                        ul.choose-city__list Екатеринбург
-                        ul.choose-city__list Ессентуки <span class="coming-soon">Скоро открытие</span>
-
-                    .choose-city__wrapper
-                        span.choose-city__letter О
-                        ul.choose-city__list Омск
-                        ul.choose-city__list Оренбург
-
-                    .choose-city__wrapper
-                        span.choose-city__letter У
-                        ul.choose-city__list Усть-Каменогорск
-                        ul.choose-city__list Уфа
-                        ul.choose-city__list Уссурийск
-
-                    .choose-city__wrapper
-                        span.choose-city__letter Х
-                        ul.choose-city__list Харьков
-                        ul.choose-city__list Хабаровск
-
-                .choose-city__column
-                    .choose-city__wrapper
-                        span.choose-city__letter Ч
-                        ul.choose-city__list Чебоксары
-                        ul.choose-city__list Череповец
-                        ul.choose-city__list Челябинск
-
-                    .choose-city__wrapper
-                        span.choose-city__letter Ю
-                        ul.choose-city__list 
-                        ul.choose-city__list Югорск
-
-                    .choose-city__wrapper
-                        span.choose-city__letter Я
-                        ul.choose-city__list Ярославль
-                        ul.choose-city__list Якутск
+                        .location-list__wrapper
+                            span.location-list__letter Я
+                            ul.location-list__list Ярославль
+                            ul.location-list__list Якутск
 
 
 

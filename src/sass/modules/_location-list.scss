@@ -1,0 +1,53 @@
+.location-list {
+    // box model
+    padding: 0;
+    margin: 0;
+
+    // visual
+    list-style-type: none;
+}
+
+.location-list__city {
+    // box model
+    margin: 0;
+    margin-bottom: 1em;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 1.25rem;
+}
+
+.location-list__item {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-left: 30px;
+    margin-bottom: 1em;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &::before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    
+        // box model
+        display: block;
+        width: 8px;
+        height: 8px;
+    
+        // visual
+        background-color: $golden;
+        border-radius: 50%;
+    }
+}

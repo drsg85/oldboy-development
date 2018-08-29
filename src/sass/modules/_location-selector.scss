@@ -6,12 +6,19 @@
 .location-selector__header {
     // box model
     padding: 25px;
-    
-    // visual
-    border-bottom: 1px solid rgba($lightGrey, 0.5);
+    padding-bottom: 0;
 }
 
 .location-selector__caption {
     // box model
     display: none;
+}
+
+.location-selector__fast-nav {
+    // 
+}
+
+.location-selector__places {
+    // box model
+    margin: 0 -25px;
 }
