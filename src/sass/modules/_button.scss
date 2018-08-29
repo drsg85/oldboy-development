@@ -23,4 +23,16 @@
         // visual
         background-color: transparent;
     }
+
+    &--map {
+        // box model
+        display: none;
+    }
+
+    &--metro {
+        // visual
+    background-color: transparent;
+    border: 2px solid $golden;
+    color: $dark;
+    }
 }

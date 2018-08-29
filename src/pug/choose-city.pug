@@ -21,24 +21,24 @@ html(lang="en")
                     .city-form
                         h3.city-form__title Выбери свой город
                         form.city-form__form(action="")  
-                            input.city-form__input(type="text" name="city" placeholder="Введите название города")
+                            input.city-form__input(type="search" name="search" placeholder="Введите название города" autofocus)
 
-                    .city-select
-                        .city-select__cities
-                            ul.city-select__list
-                                li.city-select__item Москва
-                                li.city-select__item Московская область
-                                li.city-select__item Санкт-Петербург
-                                li.city-select__item Испания
-                                li.city-select__item Кипр
+                    .town-select
+                        .town-select__cities
+                            ul.town-select__list
+                                li.town-select__item Москва
+                                li.town-select__item Московская&nbsp;область
+                                li.town-select__item Санкт-&nbsp;Петербург
+                                li.town-select__item Испания
+                                li.town-select__item Кипр
 
-                        .city-select__countries
-                            ul.city-select__list
-                                li.city-select__item Сербия
-                                li.city-select__item Грузия
-                                li.city-select__item Казахстан
-                                li.city-select__item Беларусь
-                                li.city-select__item Россия
+                        .town-select__countries
+                            ul.town-select__list
+                                li.town-select__item Сербия
+                                li.town-select__item Грузия
+                                li.town-select__item Казахстан
+                                li.town-select__item Беларусь 
+                                li.town-select__item Россия
 
                 .clear-button
 
@@ -48,9 +48,9 @@ html(lang="en")
                     h3.adresses-header__title Москва
                     h4.adresses-header__subtitle Moscow
 
-                .addresses-header__buttons
-                    a.button(href="#") На карте
-                    a.button(href="#") На схеме метро
+                .addreses-header__buttons
+                    a.button.button--map(href="#") На карте
+                    a.button.button--metro(href="#") На схеме метро
             
             .city-catalogue
                 ul.city-catalogue__list
@@ -101,132 +101,149 @@ html(lang="en")
 
         section.choose-city
             .choose-city__column
-                ul.choose-city__list--a_letter Актау
-                    li.choose-city__item ЖК Миланский квартал
-                    li.choose-city__item Иманова, 16
+                .choose-city__wrapper
+                    span.choose-city__letter А
+                    ul.choose-city__list Актау
+                        li.choose-city__item ЖК Миланский квартал
+                        li.choose-city__item Иманова, 16
                 
-                ul.choose-city__list--a_letter Алматы
-                    li.choose-city__item Губкина, 38Б
-                    li.choose-city__item Попова, 36
+                    ul.choose-city__list Алматы
+                        li.choose-city__item Губкина, 38Б
+                        li.choose-city__item Попова, 36
 
-                ul.choose-city__list--a_letter Атырау
-                    li.choose-city__item Петербургская, 9
+                    ul.choose-city__list Атырау
+                        li.choose-city__item Петербургская, 9
 
-                ul.choose-city__list--a_letter Армавир
-                    li.choose-city__item Петербургская, 9
+                    ul.choose-city__list Армавир
+                        li.choose-city__item Петербургская, 9
 
-                ul.choose-city__list--a_letter Альметьевск
-                    li.choose-city__item Петербургская, 9
+                    ul.choose-city__list Альметьевск
+                        li.choose-city__item Петербургская, 9
 
-                ul.choose-city__list--a_letter Ашхабад
-                    li.choose-city__item Петербургская, 9
-                    li.choose-city__item--soon Скоро открытие
+                    ul.choose-city__list--soon Ашхабад
+                        li.choose-city__item Петербургская, 9 <br> <span class="coming-soon">Скоро открытие</span>
 
-                ul.choose-city__list--b_letter Балаково
-                    li.choose-city__item Кубанская наб., 64
+                .choose-city__wrapper
+                    span.choose-city__letter Б
+                    ul.choose-city__list Балаково
+                        li.choose-city__item Кубанская наб., 64
                 
-                ul.choose-city__list--b_letter Барнаул
-                    li.choose-city__item Губкина, 38Б
-                    li.choose-city__item Попова, 36
+                    ul.choose-city__list Барнаул
+                        li.choose-city__item Губкина, 38Б
+                        li.choose-city__item Попова, 36
 
-                ul.choose-city__list--b_letter Бишкек
-                    li.choose-city__item Кубанская наб., 64
+                    ul.choose-city__list Бишкек
+                        li.choose-city__item Кубанская наб., 64
 
-                ul.choose-city__list--b_letter Брянск
-                    li.choose-city__item Губкина, 38Б
+                    ul.choose-city__list Брянск
+                        li.choose-city__item Губкина, 38Б
 
-                ul.choose-city__list--b_letter Беслан
-                    li.choose-city__item Кубанская наб., 64
-                    li.choose-city__item--soon Скоро открытие
+                    ul.choose-city__list--soon Беслан
+                        li.choose-city__item Кубанская наб., 64<br> <span class="coming-soon">Скоро открытие</span>
 
-                ul.choose-city__list--b_letter Брест
-                    li.choose-city__item Кубанская наб., 64
-                    li.choose-city__item--soon Скоро открытие
+                    ul.choose-city__list--soon Брест
+                        li.choose-city__item Кубанская наб., 64<br> <span class="coming-soon">Скоро открытие</span>
 
             .choose-city__column
-                ul.choose-city__list--k_letter 
-                    li.choose-city__item Кемерово
-                    li.choose-city__item Калуга
-                    li.choose-city__item Караганда
-                    li.choose-city__item Курск
-                    li.choose-city__item Каспийск
-                
-                ul.choose-city__list--m_letter 
-                    li.choose-city__item Махачкала
-                    li.choose-city__item Мурманск
-                    li.choose-city__item Минск
+                .choose-city__wrapper
+                    span.choose-city__letter К
+                    ul.choose-city__list Кемерово
+                    ul.choose-city__list Калуга
+                    ul.choose-city__list Караганда
+                    ul.choose-city__list Курск
+                    ul.choose-city__list Каспийск
 
-                ul.choose-city__list--n_letter 
-                    li.choose-city__item Нижневаторск
-                    li.choose-city__item Норильск
-                    li.choose-city__item Новый Уренгой
-                    li.choose-city__item Новороссийск
-                    li.choose-city__item Новосибирск
-                    li.choose-city__item Находка
-                    li.choose-city__item Набережные Челны
-                    li.choose-city__item Ноябрьск
-                    li.choose-city__item Нефтекамск
-                    li.choose-city__item Нижний Тагил
-                    li.choose-city__item Новокузнецк
+                .choose-city__wrapper
+                    span.choose-city__letter М
+                    ul.choose-city__list Махачкала
+                    ul.choose-city__list Мурманск
+                    ul.choose-city__list Минск
 
-            .choose-city__column
-                ul.choose-city__list--p_letter 
-                    li.choose-city__item Петропавловск-Камчатский
-                    li.choose-city__item Пермь
-                    li.choose-city__item Псков
-
-                ul.choose-city__list--r_letter 
-                    li.choose-city__item Ростов-на-Дону
-
-                ul.choose-city__list--s_letter 
-                    li.choose-city__item Севастополь
-                    li.choose-city__item Ставрополь
-                    li.choose-city__item Сургут
-                    li.choose-city__item Самара
-                    li.choose-city__item Симферополь
-                    li.choose-city__item Салехад
-
-                ul.choose-city__list--t_letter 
-                    li.choose-city__item Тюмень
-                    li.choose-city__item Тамбов
-                    li.choose-city__item Тольятти
-                    li.choose-city__item Тверь
-                    li.choose-city__item Тбилиси
+                .choose-city__wrapper
+                    span.choose-city__letter Н
+                    ul.choose-city__list Нижневаторск
+                    ul.choose-city__list Норильск
+                    ul.choose-city__list Новый Уренгой
+                    ul.choose-city__list Новороссийск
+                    ul.choose-city__list Новосибирск
+                    ul.choose-city__list Находка
+                    ul.choose-city__list Набережные Челны
+                    ul.choose-city__list Ноябрьск
+                    ul.choose-city__list Нефтекамск
+                    ul.choose-city__list Нижний Тагил
+                    ul.choose-city__list Новокузнецк
 
             .choose-city__column
-                ul.choose-city__list--g_letter 
-                    li.choose-city__item Гомель
-                    li.choose-city__item Грозный
-                    
-                ul.choose-city__list--e_letter 
-                    li.choose-city__item Екатеринбург
-                    li.choose-city__item Ессентуки
+                .choose-city__wrapper
+                    span.choose-city__letter П
+                    ul.choose-city__list Петропавловск-Камчатский
+                    ul.choose-city__list Пермь
+                    ul.choose-city__list Псков
 
-                ul.choose-city__list--o_letter 
-                    li.choose-city__item Омск
-                    li.choose-city__item Оренбург
+                .choose-city__wrapper
+                    span.choose-city__letter Р
+                    ul.choose-city__list Ростов-на-Дону
 
-                ul.choose-city__list--u_letter 
-                    li.choose-city__item Усть-Каменогорск
-                    li.choose-city__item Уфа
-                    li.choose-city__item Уссурийск
+                .choose-city__wrapper
+                    span.choose-city__letter С
+                    ul.choose-city__list Севастополь
+                    ul.choose-city__list Ставрополь
+                    ul.choose-city__list Сургут
+                    ul.choose-city__list Самара
+                    ul.choose-city__list Симферополь
+                    ul.choose-city__list--soon Салехад <span class="coming-soon">Скоро открытие</span>
 
-                ul.choose-city__list--x_letter 
-                    li.choose-city__item Харьков
-                    li.choose-city__item Хабаровск
+                .choose-city__wrapper
+                    span.choose-city__letter Т
+                    ul.choose-city__list Тюмень
+                    ul.choose-city__list Тамбов
+                    ul.choose-city__list Тольятти
+                    ul.choose-city__list Тверь
+                    ul.choose-city__list Тбилиси
+
+            .choose-city__column    
+                .choose-city__wrapper
+                    span.choose-city__letter Г
+                    ul.choose-city__list Гомель
+                    ul.choose-city__list Грозный
+
+                .choose-city__wrapper 
+                    span.choose-city__letter Е    
+                    ul.choose-city__list Екатеринбург
+                    ul.choose-city__list Ессентуки <span class="coming-soon">Скоро открытие</span>
+
+                .choose-city__wrapper
+                    span.choose-city__letter О
+                    ul.choose-city__list Омск
+                    ul.choose-city__list Оренбург
+
+                .choose-city__wrapper
+                    span.choose-city__letter У
+                    ul.choose-city__list Усть-Каменогорск
+                    ul.choose-city__list Уфа
+                    ul.choose-city__list Уссурийск
+
+                .choose-city__wrapper
+                    span.choose-city__letter Х
+                    ul.choose-city__list Харьков
+                    ul.choose-city__list Хабаровск
 
             .choose-city__column
-                ul.choose-city__list--ch_letter 
-                    li.choose-city__item Чебоксары
-                    li.choose-city__item Череповец
-                    li.choose-city__item Челябинск
-                    
-                ul.choose-city__list--ju_letter 
-                    li.choose-city__item Югорск
+                .choose-city__wrapper
+                    span.choose-city__letter Ч
+                    ul.choose-city__list Чебоксары
+                    ul.choose-city__list Череповец
+                    ul.choose-city__list Челябинск
 
-                ul.choose-city__list--ya_letter 
-                    li.choose-city__item Ярославль
-                    li.choose-city__item Якутск
+                .choose-city__wrapper
+                    span.choose-city__letter Ю
+                    ul.choose-city__list 
+                    ul.choose-city__list Югорск
+
+                .choose-city__wrapper
+                    span.choose-city__letter Я
+                    ul.choose-city__list Ярославль
+                    ul.choose-city__list Якутск
                     
 
                 
