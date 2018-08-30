@@ -1,0 +1,21 @@
+.button-location {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin-bottom: 20px;
+
+    // typography
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $dark;
+    font-family: $mainFont;
+    font-weight: 600;
+    line-height: 36px;
+
+    // visual
+    background-color: transparent;
+    border: 2px solid $golden;
+    border-radius: 20px;
+}
