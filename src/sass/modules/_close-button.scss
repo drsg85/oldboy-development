@@ -1,0 +1,47 @@
+.close-button {
+    // box model
+    width: 40px;
+    height: 40px;
+
+    // visual
+    background-color: #e6e6e6;
+    border-radius: 50%;
+
+    &::before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 11px;
+        top: 9px;
+        transform-origin: 0 50%;
+        transform: skewY(45deg);
+        
+        // box model
+        height: 2px;
+        width: 20px;
+        
+        // visual
+        background-color: $dark;
+        transition: all 0.3s ease-out;
+    }
+
+    &::after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 9px;
+        top: 18px;
+        transform-origin: 50% 0;
+        transform: skewY(-45deg);
+        
+        // box model
+        height: 2px;
+        width: 19px;
+        
+        // visual
+        background-color: $dark;
+        transition: all 0.3s ease-out;
+    }
+}
