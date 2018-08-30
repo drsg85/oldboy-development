@@ -794,6 +794,9 @@ body {
   padding-right: 3px;
   font-size: 1rem; }
 
+.all-locations {
+  padding: 0 25px; }
+
 .location-selector {
   background-color: #ffffff; }
 
@@ -907,8 +910,12 @@ body {
 .location-list__city {
   margin: 0;
   margin-bottom: 1em;
+  padding: 0;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
+  .location-list__city em {
+    font-family: "Rex", Arial, sans-serif;
+    color: #d6a354; }
 
 .location-list__item {
   position: relative;
@@ -918,7 +925,8 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
-  white-space: nowrap; }
+  white-space: nowrap;
+  list-style: none; }
   .location-list__item::before {
     content: "";
     position: absolute;
@@ -931,6 +939,20 @@ body {
     height: 8px;
     background-color: #d6a354;
     border-radius: 50%; }
+  .location-list__item em {
+    font-family: "Rex", Arial, sans-serif;
+    color: #d6a354; }
+
+.branch-addreses {
+  padding: 0 25px; }
+
+.branch-addreses__letter {
+  position: relative;
+  left: -30px;
+  top: 34px;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2rem;
+  color: #d6a354; }
 
 .section-header {
   position: relative;

@@ -11,10 +11,17 @@
     // box model
     margin: 0;
     margin-bottom: 1em;
+    padding: 0;
 
     // typography
     font-family: $titleFont;
     font-size: 1.25rem;
+
+    & em {
+        // visual
+    font-family: $titleFont;
+    color: $golden;
+    }
 }
 
 .location-list__item {
@@ -31,6 +38,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     white-space: nowrap;
+    list-style: none;
 
     &::before {
         content: "";
@@ -49,5 +57,11 @@
         // visual
         background-color: $golden;
         border-radius: 50%;
+    }
+
+    & em {
+        // visual
+    font-family: $titleFont;
+    color: $golden;
     }
 }
