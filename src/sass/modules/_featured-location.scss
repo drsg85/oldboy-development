@@ -11,8 +11,6 @@
     // box model
     display: flex;
     justify-content: space-between;
-    justify-content: flex-end;
-    border: 1px solid red;
 }
 
 .featured-location__caption {
@@ -21,8 +19,8 @@
     transform: skewY(-15deg);
 
     // box model
-    display: inline-block;
-    vertical-align: top;
+    // display: inline-block;
+    // vertical-align: top;
 
     // visual
     border-top: 3px solid $golden;
@@ -72,6 +70,6 @@
 .featured-location__buttons {
     // box model
     // display: block;
-    display: inline-block;
-    vertical-align: top;
+    // display: inline-block;
+    // vertical-align: top;
 }
