@@ -916,7 +916,8 @@ body {
   padding: 25px; }
 
 .featured-location__buttons {
-  margin-top: -20px; }
+  margin-top: -20px;
+  margin-left: 60px; }
 
 .location-list {
   padding: 0;
@@ -994,8 +995,8 @@ body {
   .close-button::before {
     content: "";
     position: absolute;
-    left: 11px;
-    top: 9px;
+    left: 10px;
+    top: 10px;
     -webkit-transform-origin: 0 50%;
     transform-origin: 0 50%;
     -webkit-transform: skewY(45deg);
@@ -1008,8 +1009,8 @@ body {
   .close-button::after {
     content: "";
     position: absolute;
-    left: 9px;
-    top: 18px;
+    left: 10px;
+    top: 20px;
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
     -webkit-transform: skewY(-45deg);
