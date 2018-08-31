@@ -7,6 +7,12 @@
     border-top: 1px solid rgba($lightGrey, 0.5);
 }
 
+.featured-location__header {
+    // box model
+    display: flex;
+    justify-content: space-between;
+}
+
 .featured-location__caption {
     // positioning
     position: relative;
@@ -62,5 +68,7 @@
 }
 
 .featured-location__buttons {
-
+    // box model
+    margin-top: -20px;
+    margin-left: 60px;
 }
