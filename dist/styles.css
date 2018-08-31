@@ -798,7 +798,9 @@ body {
   padding: 0 25px; }
 
 .location-selector {
-  background-color: #ffffff; }
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden; }
 
 .location-selector__header {
   padding: 25px;
@@ -810,10 +812,10 @@ body {
 .location-selector__places {
   margin: 0 -25px; }
 
-.location-selector__closure {
+.location-selector__close {
   position: fixed;
   top: 25px;
-  right: 25px; }
+  right: 15px; }
 
 .place-groups {
   display: -webkit-box;
@@ -853,12 +855,15 @@ body {
   color: #ffffff;
   background-color: #d6a354; }
 
+.city-form {
+  margin-right: 40px; }
+
 .city-form__title {
   display: none; }
 
 .city-form__input {
   display: block;
-  width: 280px;
+  width: 100%;
   padding: 0 16px;
   margin-bottom: 20px;
   color: #131313;
@@ -879,7 +884,11 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  border: 1px solid red; }
 
 .featured-location__caption {
   position: relative;
@@ -916,8 +925,8 @@ body {
   padding: 25px; }
 
 .featured-location__buttons {
-  margin-top: -20px;
-  margin-left: 60px; }
+  display: inline-block;
+  vertical-align: top; }
 
 .location-list {
   padding: 0;

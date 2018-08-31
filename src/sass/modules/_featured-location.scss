@@ -11,6 +11,8 @@
     // box model
     display: flex;
     justify-content: space-between;
+    justify-content: flex-end;
+    border: 1px solid red;
 }
 
 .featured-location__caption {
@@ -69,6 +71,7 @@
 
 .featured-location__buttons {
     // box model
-    margin-top: -20px;
-    margin-left: 60px;
+    // display: block;
+    display: inline-block;
+    vertical-align: top;
 }
