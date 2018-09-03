@@ -1,6 +1,24 @@
 .city-form__title {
     // box model
     display: none;
+    margin: 0;
+    margin-right: 40px;
+    margin-top: 10px;
+
+    // typography
+    font-family: $titleFont;
+
+    @include atFullHD {
+        // box model
+        display: block;
+    }
+}
+
+.city-form {
+    @include atFullHD {
+        // box model
+        display: flex;
+    }
 }
 
 .city-form__input {
@@ -12,11 +30,16 @@
     
     // typography
     color: $dark;
-    font-family: $mainFont;
+    font-family: $titleFont;
     line-height: 36px;
 
     // visual
     border: 2px solid $golden;
     border-radius: 20px;
     outline: none;
+
+    @include atFullHD {
+        // box model
+        width: 675px;
+    }
 }

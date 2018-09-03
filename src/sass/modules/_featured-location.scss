@@ -5,12 +5,23 @@
     // visual
     border-bottom: 1px solid rgba($lightGrey, 0.5);
     border-top: 1px solid rgba($lightGrey, 0.5);
+
+    @include atFullHD {
+    // box model
+    padding: 0;
+    padding: 90px 190px 0 120px;
+    }
 }
 
 .featured-location__header {
     // box model
     display: flex;
     justify-content: space-between;
+
+    @include atFullHD {
+        // box model
+        justify-content: flex-start;
+    }
 }
 
 .featured-location__caption {
@@ -33,6 +44,11 @@
     // typography
     font-family: $titleFont;
     font-size: 1.5rem;
+
+    @include atFullHD {
+        // typography
+        font-size: 4rem;
+    }
 }
 
 .featured-location__subtitle {
@@ -60,15 +76,45 @@
         // visual
         background-color: $golden;
     }
+    @include atFullHD {
+        // typography
+        font-size: 1.6rem;
+
+        &::before {
+        // positioning
+        top: 13px;
+        }
+    }
 }
 
 .featured-location__content {
     // box model
     padding: 25px;
+
+    @include atFullHD {
+        // box model
+        margin-left: 225px;
+    }
+
+    & .location-list {
+        @include atFullHD {
+            // box model
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 340px;
+        }
+    }
 }
 
 .featured-location__buttons {
     // box model
     margin-top: -20px;
     margin-left: 60px;
+
+    @include atFullHD {
+        margin: 0;
+        margin-left: 100px;
+        margin-top: -30px;
+    }
 }

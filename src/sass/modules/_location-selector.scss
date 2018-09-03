@@ -7,11 +7,33 @@
     // box model
     padding: 25px;
     padding-bottom: 0;
+
+    @include atFullHD {
+        // box model
+        width: 100%;
+        display: flex;
+        padding: 50px 150px 0;
+        justify-content: space-between;
+    }
 }
 
 .location-selector__caption {
     // box model
     display: none;
+    
+    @include atFullHD {
+        // box model
+     display: flex;
+    }
+}
+
+.location-selector__caption img {
+    @include atFullHD {
+    // box model
+    width: 155px;
+    height: 85px;
+    margin-right: 25px;
+    }
 }
 
 .location-selector__fast-nav {
@@ -23,11 +45,17 @@
     margin: 0 -25px;
 }
 
-.location-selector__closure {
+.location-selector__close {
     // box model
     position: fixed;
 
     // positioning
     top: 25px;
     right: 25px;
+
+    @include atFullHD {
+        // positioning
+        top: 50px;
+        right: 55px;
+    }
 }
