@@ -6,20 +6,18 @@
     border-bottom: 1px solid rgba($lightGrey, 0.5);
     border-top: 1px solid rgba($lightGrey, 0.5);
 
-    @include atFullHD {
-    // box model
-    padding: 0;
-    padding: 90px 190px 0 120px;
+    @include atDesktopS {
+        // box model
+        padding: 30px 50px;
     }
 }
 
 .featured-location__header {
     // box model
-    display: flex;
-    justify-content: space-between;
-
-    @include atFullHD {
+    
+    @include atDesktopS {
         // box model
+        display: flex;
         justify-content: flex-start;
     }
 }
@@ -30,24 +28,49 @@
     transform: skewY(-15deg);
 
     // box model
-    // display: inline-block;
-    // vertical-align: top;
-
+    display: inline-block;
+    vertical-align: top;
+    
     // visual
     border-top: 3px solid $golden;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 40px;
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+}
+
+.featured-location__buttons {
+    // box model
+    margin-right: 0;
+    margin-left: auto;
+    max-width: 180px;
+
+    // TODO: Move this breakpoint to lower res
+    @include atDesktopS {
+        margin: 0;
+        max-width: inherit;
+    }
 }
 
 .featured-location__title {
     // box model
     margin: 0;
+    padding: 5px;
 
     // typography
     font-family: $titleFont;
     font-size: 1.5rem;
 
-    @include atFullHD {
+    @include atDesktopS {
+        // box model
+        padding: 15px;
+        padding-bottom: 5px;
+
         // typography
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 
@@ -77,26 +100,14 @@
         background-color: $golden;
     }
 
-    @include atFullHD {
+    @include atDesktopS {
         // typography
-        font-size: 1.6rem;
+        font-size: 1.25rem;
 
         &::before {
-        // positioning
-        top: 13px;
+            // positioning
+            top: 10px;
         }
-    }
-}
-
-.featured-location__buttons {
-    // box model
-    margin-top: -0px;
-    // margin-left: 60px;
-    
-    @include atFullHD {
-        margin: 0;
-        margin-left: 100px;
-        margin-top: -30px;
     }
 }
 
@@ -104,18 +115,22 @@
     // box model
     padding: 25px;
 
-    @include atFullHD {
+    @include atDesktopS {
         // box model
         margin-left: 225px;
     }
+}
 
+.featured-location__content {
     .location-list {
-        @include atFullHD {
-            // box model
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            max-height: 340px;
+        @include atTablet {
+            // other
+            column-count: 2;
+        }
+
+        @include atDesktopM {
+            // other
+            column-count: 3;
         }
     }
 }

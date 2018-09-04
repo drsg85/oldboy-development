@@ -19,8 +19,8 @@
 
     & em {
         // visual
-    font-family: $titleFont;
-    color: $golden;
+        font-family: $titleFont;
+        color: $golden;
     }
 }
 
@@ -40,6 +40,11 @@
     white-space: nowrap;
     list-style: none;
 
+    @include atTablet {
+        // box model
+        margin-right: 40px;
+    }
+
     &::before {
         content: "";
 
@@ -51,17 +56,17 @@
     
         // box model
         display: block;
-        width: 8px;
         height: 8px;
+        width: 8px;
     
         // visual
         background-color: $golden;
         border-radius: 50%;
     }
 
-    & em {
-        // visual
-    font-family: $titleFont;
+}
+.location-list__item em {
+    // visual
     color: $golden;
-    }
+    font-family: $titleFont;
 }

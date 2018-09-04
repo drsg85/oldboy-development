@@ -1,0 +1,51 @@
+.branch-addresses {
+    // box model
+    padding: 0 25px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-left: 255px;
+    }
+}
+
+.branch-addresses__index {
+    // box model
+    flex-basis: 275px;
+    margin-bottom: 40px;
+    margin-right: 25px;
+
+    @include atDesktopM {
+        // box model
+        margin-right: 50px;
+    }
+}
+
+.branch-addresses__letter {
+    // positioning
+    position: relative;
+    left: -50px;
+    top: 32px;
+
+    // box model
+    width: 40px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: center;
+
+    // visual
+    background-color: $golden;
+    border-radius: 50%;
+}
+
+
+.branch-addresses__content {
+
+}

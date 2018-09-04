@@ -1,8 +1,9 @@
 .all-locations {
+    // box model
     padding: 0 25px;
 
-    @include atFullHD {
-        padding: 0;
-        padding: 70px 175px 30px 150px;
+    @include atDesktopS {
+        // box model
+        padding: 25px 50px;
     }
 }
