@@ -29,8 +29,10 @@
 
     @include atDesktopS {
         // box model
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: flex-start;
+        // justify-content: space-between;
+        // justify-content: space-around;
     }
 }
 
@@ -63,4 +65,5 @@
 
     // visual
     background-color: $golden;
+    cursor: pointer;
 }
