@@ -1,6 +1,10 @@
 .location-selector {
+    // box model
+    width: 100%;
+
     // visual
     background-color: $light;
+    overflow: hidden;
 }
 
 .location-selector__header {
