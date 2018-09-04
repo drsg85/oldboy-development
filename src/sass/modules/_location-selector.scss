@@ -12,12 +12,12 @@
     padding: 25px;
     padding-bottom: 0;
 
-    @include atFullHD {
+    @include atDesktopS {
         // box model
-        width: 100%;
         display: flex;
-        padding: 50px 150px 0;
         justify-content: space-between;
+        padding: 50px;
+        padding-bottom: 30px;
     }
 }
 
@@ -25,28 +25,82 @@
     // box model
     display: none;
     
-    @include atFullHD {
+    @include atDesktopS {
         // box model
-     display: flex;
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        justify-content: space-between;
+        padding-right: 40px;
     }
 }
 
 .location-selector__caption img {
-    @include atFullHD {
+    // positioning
+    position: relative;
+    z-index: 2;
+    
     // box model
-    width: 155px;
-    height: 85px;
-    margin-right: 25px;
+    // width: 155px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    
+    @include atDesktopM {
+        // box model
+        // width: 155px;
+        margin-right: 25px;
+    }
+}
+
+.location-selector__intro {
+    // box model
+    width: 220px;
+    margin: 0;
+    padding: 0.5em 0;
+
+    // visual
+    border-top: 3px solid $golden;
+    border-bottom: 3px solid $golden;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1rem;
+    line-height: 1.25;
+
+    em {
+        // typography
+        color: $golden;
+        font-style: normal;
+    }
+
+    @include atDesktopS {
+        // box model
+        // display: none;
     }
 }
 
 .location-selector__fast-nav {
-    // 
+    // box model
+    padding-right: 45px;
+
+    @include atDesktopS {
+        // box model
+        padding-right: 25px;
+    }
 }
 
 .location-selector__places {
     // box model
     margin: 0 -25px;
+    margin-right: -70px;
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+    }
 }
 
 .location-selector__close {
@@ -55,7 +109,7 @@
 
     // positioning
     top: 25px;
-    right: 25px;
+    right: 20px;
 
     @include atFullHD {
         // positioning

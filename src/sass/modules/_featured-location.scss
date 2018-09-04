@@ -76,6 +76,7 @@
         // visual
         background-color: $golden;
     }
+
     @include atFullHD {
         // typography
         font-size: 1.6rem;
@@ -84,6 +85,18 @@
         // positioning
         top: 13px;
         }
+    }
+}
+
+.featured-location__buttons {
+    // box model
+    margin-top: -0px;
+    // margin-left: 60px;
+    
+    @include atFullHD {
+        margin: 0;
+        margin-left: 100px;
+        margin-top: -30px;
     }
 }
 
@@ -96,7 +109,7 @@
         margin-left: 225px;
     }
 
-    & .location-list {
+    .location-list {
         @include atFullHD {
             // box model
             display: flex;
@@ -104,17 +117,5 @@
             flex-wrap: wrap;
             max-height: 340px;
         }
-    }
-}
-
-.featured-location__buttons {
-    // box model
-    margin-top: -20px;
-    margin-left: 60px;
-
-    @include atFullHD {
-        margin: 0;
-        margin-left: 100px;
-        margin-top: -30px;
     }
 }

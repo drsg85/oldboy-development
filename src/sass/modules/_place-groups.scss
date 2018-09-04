@@ -7,11 +7,10 @@
     // visual
     overflow-x: scroll;
 
-    @include atFullHD {
+    @include atDesktopS {
         // box model
         display: block;
         padding: 0;
-        padding-left: 10px;
 
         // visual
         overflow: hidden;
@@ -27,6 +26,12 @@
 
     // other
     list-style: none;
+
+    @include atDesktopS {
+        // box model
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
 
 .place-groups__item {
