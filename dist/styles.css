@@ -799,7 +799,7 @@ body {
   @media (min-width: 1900px) {
     .all-locations {
       padding: 0;
-      padding: 36px 175px 0 150px; } }
+      padding: 70px 175px 30px 150px; } }
 
 .location-selector {
   background-color: #ffffff; }
@@ -1063,7 +1063,7 @@ body {
       flex-direction: column;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      max-height: 1050px; } }
+      max-height: 1160px; } }
 
 .branch-addreses__letter {
   position: relative;
