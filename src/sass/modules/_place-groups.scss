@@ -6,6 +6,16 @@
 
     // visual
     overflow-x: scroll;
+
+    @include atFullHD {
+        // box model
+        display: block;
+        padding: 0;
+        padding-left: 10px;
+
+        // visual
+        overflow: hidden;
+    }
 }
 
 .place-groups__list {
@@ -13,6 +23,7 @@
     display: flex;
     padding: 0;
     margin: 0;
+    justify-content: space-around;
 
     // other
     list-style: none;

@@ -1,3 +1,8 @@
 .all-locations {
     padding: 0 25px;
+
+    @include atFullHD {
+        padding: 0;
+        padding: 70px 175px 30px 150px;
+    }
 }

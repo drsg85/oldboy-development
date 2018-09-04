@@ -1,6 +1,13 @@
 .branch-addreses {
     // box model
     padding: 0 25px;
+
+    @include atFullHD {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1160px;
+    }
 }
 
 .branch-addreses__letter {
@@ -15,4 +22,9 @@
     font-family: $titleFont;
     font-size: 2rem;
     color: $golden;
+}
+
+
+.branch-addreses__content {
+
 }
