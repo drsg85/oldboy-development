@@ -20,6 +20,12 @@
         display: flex;
         justify-content: flex-start;
     }
+
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 .featured-location__caption {
@@ -40,6 +46,10 @@
         margin-right: 40px;
         margin-top: 40px;
     }
+
+    @include atTablet {
+        margin-right: 40px;
+    }
 }
 
 .featured-location__buttons {
@@ -50,6 +60,11 @@
 
     // TODO: Move this breakpoint to lower res
     @include atDesktopS {
+        margin: 0;
+        max-width: inherit;
+    }
+
+    @include atTablet {
         margin: 0;
         max-width: inherit;
     }
