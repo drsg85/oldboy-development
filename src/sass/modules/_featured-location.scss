@@ -15,13 +15,8 @@
 .featured-location__header {
     // box model
     
-    @include atDesktopS {
-        // box model
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    @include atTablet {
+    // custom breakpoint to move buttons
+    @include atFeatured600 {
         // box model
         display: flex;
         justify-content: flex-start;
@@ -39,16 +34,16 @@
     
     // visual
     border-top: 3px solid $golden;
+    
+    @include atFeatured600 {
+        margin-right: 40px;
+    }
 
     @include atDesktopS {
         // box model
         margin-bottom: 40px;
         margin-right: 40px;
         margin-top: 40px;
-    }
-
-    @include atTablet {
-        margin-right: 40px;
     }
 }
 
@@ -58,13 +53,14 @@
     margin-left: auto;
     max-width: 180px;
 
-    // TODO: Move this breakpoint to lower res
-    @include atDesktopS {
-        margin: 0;
-        max-width: inherit;
+    // custom breakpoint to move buttons
+    @include atFeatured450 {
+        // box model
+        margin-top: -60px;
     }
 
-    @include atTablet {
+    @include atFeatured600 {
+        // box model
         margin: 0;
         max-width: inherit;
     }

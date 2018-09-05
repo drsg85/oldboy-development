@@ -19,15 +19,8 @@
     border: 2px solid $golden;
     border-radius: 20px;
 
-    @include atDesktopS {
-        // box model
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 20px;
-        padding: 0 20px;
-    }
-
-    @include atTablet {
+    // custom breakpoint to move buttons
+    @include atFeatured600 {
         // box model
         display: inline-block;
         vertical-align: top;

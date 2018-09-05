@@ -7,12 +7,14 @@
     }
 }
 
+// small desktop and tablets landscape
 @mixin atDesktopS {
     @media (min-width: 1000px) {
         @content;
     }
 }
 
+// medium desktop and generic laptops
 @mixin atDesktopM {
     @media (min-width: 1200px) {
         @content;
@@ -33,6 +35,19 @@
 
 @mixin atUltraHD {
     @media (min-width: 2540px) {
+        @content;
+    }
+}
+
+// custom breakpoints for buttons at featured location
+@mixin atFeatured450 {
+    @media (min-width: 450px) {
+        @content;
+    }
+}
+
+@mixin atFeatured600 {
+    @media (min-width: 600px) {
         @content;
     }
 }

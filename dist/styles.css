@@ -975,16 +975,7 @@ body {
     .featured-location {
       padding: 30px 50px; } }
 
-@media (min-width: 1000px) {
-  .featured-location__header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; } }
-
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .featured-location__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1000,24 +991,23 @@ body {
   display: inline-block;
   vertical-align: top;
   border-top: 3px solid #d6a354; }
+  @media (min-width: 600px) {
+    .featured-location__caption {
+      margin-right: 40px; } }
   @media (min-width: 1000px) {
     .featured-location__caption {
       margin-bottom: 40px;
       margin-right: 40px;
       margin-top: 40px; } }
-  @media (min-width: 700px) {
-    .featured-location__caption {
-      margin-right: 40px; } }
 
 .featured-location__buttons {
   margin-right: 0;
   margin-left: auto;
   max-width: 180px; }
-  @media (min-width: 1000px) {
+  @media (min-width: 450px) {
     .featured-location__buttons {
-      margin: 0;
-      max-width: inherit; } }
-  @media (min-width: 700px) {
+      margin-top: -60px; } }
+  @media (min-width: 600px) {
     .featured-location__buttons {
       margin: 0;
       max-width: inherit; } }
@@ -1202,13 +1192,7 @@ body {
   background-color: transparent;
   border: 2px solid #d6a354;
   border-radius: 20px; }
-  @media (min-width: 1000px) {
-    .button-location {
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 20px;
-      padding: 0 20px; } }
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     .button-location {
       display: inline-block;
       vertical-align: top;
