@@ -107,10 +107,15 @@
 
     // positioning
     top: 25px;
-    right: 20px;
+    right: 25px;
 
     @include atFullHD {
         // positioning
+        top: 50px;
+        right: 55px;
+    }
+
+    @include atDesktopS {
         top: 50px;
         right: 55px;
     }

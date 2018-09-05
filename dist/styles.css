@@ -872,8 +872,12 @@ body {
 .location-selector__close {
   position: fixed;
   top: 25px;
-  right: 20px; }
+  right: 25px; }
   @media (min-width: 1900px) {
+    .location-selector__close {
+      top: 50px;
+      right: 55px; } }
+  @media (min-width: 1000px) {
     .location-selector__close {
       top: 50px;
       right: 55px; } }
@@ -961,7 +965,7 @@ body {
   outline: none; }
   @media (min-width: 1900px) {
     .city-form__input {
-      width: 675px; } }
+      width: 600px; } }
 
 .featured-location {
   padding: 25px;
