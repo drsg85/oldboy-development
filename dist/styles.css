@@ -1132,7 +1132,7 @@ body {
     opacity: 0; }
 
 .branch-addresses {
-  padding: 0 25px; }
+  padding: 25px; }
   @media (min-width: 700px) {
     .branch-addresses {
       display: -webkit-box;
@@ -1144,28 +1144,34 @@ body {
       flex-direction: row;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start; } }
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
   @media (min-width: 1000px) {
     .branch-addresses {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       padding-left: 255px; } }
 
 .branch-addresses__index {
-  -ms-flex-preferred-size: 275px;
-  flex-basis: 275px;
+  -ms-flex-preferred-size: 45%;
+  flex-basis: 45%;
   margin-bottom: 40px;
   margin-right: 25px; }
+  @media (min-width: 1000px) {
+    .branch-addresses__index {
+      -ms-flex-preferred-size: 275px;
+      flex-basis: 275px; } }
   @media (min-width: 1200px) {
     .branch-addresses__index {
       margin-right: 50px; } }
 
 .branch-addresses__letter {
-  position: relative;
-  left: 0px;
-  top: 32px;
-  margin-left: -3px;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
   width: 40px;
+  margin-bottom: 15px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 2rem;
@@ -1173,9 +1179,6 @@ body {
   text-align: center;
   background-color: #d6a354;
   border-radius: 50%; }
-
-.branch-addresses__content {
-  margin-top: 50px; }
 
 .button-location {
   display: block;
