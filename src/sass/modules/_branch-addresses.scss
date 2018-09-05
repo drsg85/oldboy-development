@@ -8,6 +8,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+    }
+
+    @include atDesktopS {
+        // box model
         padding-left: 255px;
     }
 }
