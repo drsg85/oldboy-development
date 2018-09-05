@@ -25,12 +25,13 @@
 }
 
 .location-list__item {
-    // positioning
-    position: relative;
-
     // box model
     padding-left: 30px;
     margin-bottom: 1em;
+
+    // positioning
+    position: relative;
+    z-index: 1;
 
     // typography
     color: $dark;
@@ -39,6 +40,9 @@
     text-transform: uppercase;
     white-space: nowrap;
     list-style: none;
+
+    // visual
+    transition: all 0.35s linear;
 
     @include atTablet {
         // box model
@@ -63,10 +67,46 @@
         background-color: $golden;
         border-radius: 50%;
     }
-
+    
+    &::after {
+        content: "";
+        // box model
+        display: block;
+        position: absolute;
+        width: 325px;
+        height: 40px;
+        
+        // positioning
+        left: -8px;
+        top: -12px;
+        
+        // visual
+        background-color: $golden;
+        border-radius: 23px;
+        opacity: 0;
+    }
 }
 .location-list__item em {
     // visual
     color: $golden;
     font-family: $titleFont;
+}
+
+.location-list__item:hover {
+    // typography
+    color: $light;
+
+    &::after {
+    // positioning
+    z-index: -1;
+
+    // visual
+    opacity: 1;
+    transition: all 0.35s linear;
+    }
+
+    em {
+        // box model
+        opacity: 0;
+    }
 }
