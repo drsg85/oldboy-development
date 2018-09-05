@@ -31,8 +31,9 @@
 .branch-addresses__letter {
     // positioning
     position: relative;
-    left: -50px;
+    left: 0px;
     top: 32px;
+    margin-left: -3px;
 
     // box model
     width: 40px;
@@ -51,5 +52,6 @@
 
 
 .branch-addresses__content {
-
+    // box model
+    margin-top: 50px;
 }
