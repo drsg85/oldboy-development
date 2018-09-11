@@ -35,17 +35,18 @@ html(lang="en")
 
         main
             section.news
-                header.section-header
+                header.section-headern-header
                         h2.section-header__title Наши <br>новости
                         p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
+                //- TODO: change class name to 'editorial'
                 .main-news
                     .main-news__photo
                         img(src="", alt="")
                         p.main-news__description Новости франшизы
 
                     .main-news__caption
-                        h2.main-news__title Открытие нового барбершопа Oldboy в барселоне
+                        h3.main-news__title Открытие нового барбершопа Oldboy в барселоне
                         p.main-news__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
 
                     .main-news__footer
@@ -53,17 +54,18 @@ html(lang="en")
                         a.main-news__cta(href="") Читать полностью
 
                 .news-feed
-                    .news-feed__item
-                        .news-feed__photo
+                    //- TODO: change all items as example. Add sample photos
+                    article.news-item
+                        .news-item__photo
                             img(src="#", alt="")
                         
-                        .news-feed__text
-                            p.news-feed__area Косметика и аксессуары
-                            p.news-feed__title Старт продаж новой косметики Barber Wild
+                        header.news-item__header
+                            p.news-item__category Косметика и аксессуары
+                            h3.news-item__title Старт продаж новой косметики Barber Wild
 
-                        .main-news__footer
-                            p.main-news__date 27 июля 2018
-                            a.main-news__cta(href="") Читать полностью
+                        footer.main-news__footer
+                            p.main-item__date 27 июля 2018
+                            a.main-item__cta(href="") Читать полностью
 
                     .news-feed__item
                         .news-feed__photo
@@ -90,8 +92,8 @@ html(lang="en")
                             a.main-news__cta(href="") Читать полностью
 
                     .news-feed__cta
-                        a.news-feed__button(href="#")
-                        p Узнайте ещё больше новостей барбершопов oldboy
+                        a.button(href="#")
+                        p.news-feed__see-more Узнайте ещё больше новостей барбершопов oldboy
 
             section.services
                 header.section-header
@@ -100,41 +102,41 @@ html(lang="en")
 
                 .services__content
                     article.service-main
-                        .service-main__header
+                        header.service-main__header
                             h3.service-main__title Мужские стрижки
                             p.service-main__description Лучшее качество
 
                         a.service-main__button(href="") Все о стрижках
 
                     article.service-main
-                        .service-main__header
+                        header.service-main__header
                             h3.service-main__title Стрижка усов и бороды
                             p.service-main__description Наша специализация
 
                         a.service-main__button(href="") Усы и борода
 
-                    .service-item
-                        .service-item__header
+                    article.service-item
+                        header.service-item__header
                             p.service-item__description Стиль и профессионализм
                             h3.service-item__title Бритьё головы и бороды
 
                         a.service-item__button(href="#") Услуги бритья
 
-                    .service-item
+                    article.service-item
                         .service-item__header
                             p.service-item__description Для настоящих ценителей
                             h3.service-item__title Королевское бритьё
 
                         a.service-item__button(href="#") Для ценителей
 
-                    .service-item
+                    article.service-item
                         .service-item__header
                             p.service-item__description Лучшие мастера
                             h3.service-item__title Нанесение татуировок
 
                         a.service-item__button(href="#") Услуги тату салона
 
-                    a.service-more__button(href="") Больше услуг
+                    a.button(href="#") Больше услуг
 
             section.academy-banner
                 header.academy-banner__header
@@ -154,19 +156,23 @@ html(lang="en")
                     h2.section-header__title Карта <br>филиалов
                     p.section-header__subtitle Сеть&nbsp;Oldboy
 
-                .map
+                .franchise__map
+                    //- TODO: beat up map from designers and add it.
                     img(src="#", alt="")
 
                 .franchise__header
-                    h3.franchise__title Франшиза <br> <span>Oldboy Barbershop</span> 
+                    h3.franchise__title Франшиза <br><span>Oldboy Barbershop</span> 
                     .franchise__logo
                         a(href="#")
+                            //- TODO: same that with the map
                             img(src="#", alt="")
 
-                a.franchise__button(href="") Открой свой барбершоп
+                .franchise__button
+                    a.button(href="") Открой свой барбершоп
 
                 .franchise__summary
                     p.franchise__count 129
+                    //- TODO: try some other naming options here
                     .franchise__text
                         p.franchise__branch Филиалов
                         p.franchise__report В 5 странах и в 5 столицах
