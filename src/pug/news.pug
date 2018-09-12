@@ -28,9 +28,10 @@ html(lang="en")
             article.top-news
                 header.top-news__header
                     p.top-news__category Новости франшизы
-                    h2.top-news__title Открытие нового барбершопа Oldboy
+                    h1.top-news__title Открытие нового барбершопа Oldboy
                     p.top-news__deatails Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
 
+                //- TODO: STOP using non relative elements in blocks
                 a.editorial__cta(href="#") Читать полностью
 
                 footer.top-news__footer
@@ -49,7 +50,9 @@ html(lang="en")
                         a.social__icon.icon--instagram(href="#") Instagram
 
         main
+            //- TODO: ".news-categories"
             section.news-category
+                //- TODO: seperate block here
                 article.news-category__item
                     h3.news-category__title Новости регионов
                     p.news-category__info Новые акции для выпускников
@@ -63,7 +66,7 @@ html(lang="en")
                     p.news-category__info Старт новой косметики Barber Wild
 
             section.news-feed
-                header.section-headern-header
+                header.section-header
                     h2.section-header__title Наши <br>новости
                     p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
@@ -74,7 +77,7 @@ html(lang="en")
                     header.news-item__header
                         p.news-item__category Косметика и аксессуары
                         h3.news-item__title Старт продаж новой косметики Barber Wild
-
+                    //- TODO: rename footer according to block name
                     footer.editorial__footer
                         p.editorial__date 27 июля 2018
                         a.editorial__cta(href="#") Читать полностью
@@ -157,32 +160,33 @@ html(lang="en")
                         p.editorial__date 27 июля 2018
                         a.editorial__cta(href="#") Читать полностью
 
-            footer.footer
-                .footer__info
-                    .footer__logo
-                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                    h2.footer__title Крупнейшая международная сеть мужских парикмахерских
-                    p.footer__subtitle Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+        //- TODO: check and fix if needed footer nesting
+        footer.footer
+            .footer__info
+                .footer__logo
+                    img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                h2.footer__title Крупнейшая международная сеть мужских парикмахерских
+                p.footer__subtitle Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
 
-                .footer__services-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Услуги
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") СТРИЖКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БРИТЬЁ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ТАТУИРОВКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БАРБЕР-СПА
+            .footer__services-nav
+                ul.footer-menu
+                    h3.footer-menu__title Услуги
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") СТРИЖКИ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") БРИТЬЁ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") ТАТУИРОВКИ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") БАРБЕР-СПА
 
-                .footer__info-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Информация
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+            .footer__info-nav
+                ul.footer-menu
+                    h3.footer-menu__title Информация
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
-            .footer__copyrights
-                p © 2014–2019 Oldboy Barbershop
+        .footer__copyrights
+            p © 2014–2019 Oldboy Barbershop
