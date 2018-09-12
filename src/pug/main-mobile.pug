@@ -40,18 +40,18 @@ html(lang="en")
                         p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
                 //- TODO: change class name to 'editorial'
-                .main-news
-                    .main-news__photo
+                .editorial
+                    .editorial__photo
                         img(src="", alt="")
-                        p.main-news__description Новости франшизы
+                        p.editorial__description Новости франшизы
 
-                    .main-news__caption
-                        h3.main-news__title Открытие нового барбершопа Oldboy в барселоне
-                        p.main-news__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
+                    .editorial__caption
+                        h3.editorial__title Открытие нового барбершопа Oldboy в барселоне
+                        p.editorial__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
 
-                    .main-news__footer
-                        p.main-news__date 27 июля 2018
-                        a.main-news__cta(href="") Читать полностью
+                    footer.editorial__footer
+                        p.editorial__date 27 июля 2018
+                        a.editorial__cta(href="#") Читать полностью
 
                 .news-feed
                     //- TODO: change all items as example. Add sample photos
@@ -63,33 +63,33 @@ html(lang="en")
                             p.news-item__category Косметика и аксессуары
                             h3.news-item__title Старт продаж новой косметики Barber Wild
 
-                        footer.main-news__footer
-                            p.main-item__date 27 июля 2018
-                            a.main-item__cta(href="") Читать полностью
+                        footer.editorial__footer
+                            p.editorial__date 27 июля 2018
+                            a.editorial__cta(href="#") Читать полностью
 
-                    .news-feed__item
-                        .news-feed__photo
+                    article.news-item
+                        .news-item__photo
                             img(src="#", alt="")
                         
-                        .news-feed__text
-                            p.news-feed__area Новости регионов
-                            p.news-feed__title Новые акции для выпускников
+                        header.news-item__header
+                            p.news-item__category Новости регионов
+                            h3.news-item__title Новые акции для выпускников
 
-                        .main-news__footer
-                            p.main-news__date 27 июля 2018
-                            a.main-news__cta(href="") Читать полностью
+                        footer.editorial__footer
+                            p.editorial__date 27 июля 2018
+                            a.editorial__cta(href="#") Читать полностью
 
-                    .news-feed__item
-                        .news-feed__photo
+                    article.news-item
+                        .news-item__photo
                             img(src="#", alt="")
                         
-                        .news-feed__text
-                            p.news-feed__area Новинки
-                            p.news-feed__title Новая услуга в линейке oldboy - Барбер-Спа
+                        header.news-item__header
+                            p.news-item__category Новинки
+                            p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
 
-                        .main-news__footer
-                            p.main-news__date 27 июля 2018
-                            a.main-news__cta(href="") Читать полностью
+                        footer.editorial__footer
+                            p.editorial__date 27 июля 2018
+                            a.editorial__cta(href="#") Читать полностью
 
                     .news-feed__cta
                         a.button(href="#")
@@ -106,14 +106,14 @@ html(lang="en")
                             h3.service-main__title Мужские стрижки
                             p.service-main__description Лучшее качество
 
-                        a.service-main__button(href="") Все о стрижках
+                        a.service-main__button(href="#") Все о стрижках
 
                     article.service-main
                         header.service-main__header
                             h3.service-main__title Стрижка усов и бороды
                             p.service-main__description Наша специализация
 
-                        a.service-main__button(href="") Усы и борода
+                        a.service-main__button(href="#") Усы и борода
 
                     article.service-item
                         header.service-item__header
@@ -173,9 +173,9 @@ html(lang="en")
                 .franchise__summary
                     p.franchise__count 129
                     //- TODO: try some other naming options here
-                    .franchise__text
-                        p.franchise__branch Филиалов
-                        p.franchise__report В 5 странах и в 5 столицах
+                    .franchise__details
+                        p.franchise__top Филиалов
+                        p.franchise__bottom В 5 странах и в 5 столицах
 
             footer.footer
                 .footer__info
