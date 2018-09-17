@@ -31,8 +31,7 @@ html(lang="en")
                     h1.top-news__title Открытие нового барбершопа Oldboy
                     p.top-news__deatails Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
 
-                //- TODO: STOP using non relative elements in blocks
-                a.editorial__cta(href="#") Читать полностью
+                a.top-news__cta(href="#") Читать полностью
 
                 footer.top-news__footer
                     p.top-news__date <span>Дата</span>27 июля 2018
@@ -50,18 +49,16 @@ html(lang="en")
                         a.social__icon.icon--instagram(href="#") Instagram
 
         main
-            //- TODO: ".news-categories"
-            section.news-category
-                //- TODO: seperate block here
-                article.news-category__item
+            section.news-categories
+                article.news-category
                     h3.news-category__title Новости регионов
                     p.news-category__info Новые акции для выпускников
 
-                article.news-category__item
+                article.news-category
                     h3.news-category__title Новинки
                     p.news-category__info Новая услуга в линейке Oldboy Барбер-спа
 
-                article.news-category__item
+                article.news-category
                     h3.news-category__title Новости франшизы
                     p.news-category__info Старт новой косметики Barber Wild
 
@@ -77,10 +74,9 @@ html(lang="en")
                     header.news-item__header
                         p.news-item__category Косметика и аксессуары
                         h3.news-item__title Старт продаж новой косметики Barber Wild
-                    //- TODO: rename footer according to block name
-                    footer.editorial__footer
-                        p.editorial__date 27 июля 2018
-                        a.editorial__cta(href="#") Читать полностью
+                    footer.news-item__footer
+                        p.news-item__date 27 июля 2018
+                        a.news-item__cta(href="#") Читать полностью
 
                 article.news-item
                     .news-item__photo
@@ -90,9 +86,9 @@ html(lang="en")
                         p.news-item__category Новости регионов
                         h3.news-item__title Новые акции для выпускников
 
-                    footer.editorial__footer
-                        p.editorial__date 27 июля 2018
-                        a.editorial__cta(href="#") Читать полностью
+                    footer.news-item__footer
+                        p.news-item__date 27 июля 2018
+                        a.news-item__cta(href="#") Читать полностью
 
                 article.news-item
                     .news-item__photo
@@ -102,9 +98,9 @@ html(lang="en")
                         p.news-item__category Новинки
                         p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
 
-                    footer.editorial__footer
-                        p.editorial__date 27 июля 2018
-                        a.editorial__cta(href="#") Читать полностью
+                    footer.news-item__footer
+                        p.news-item__date 27 июля 2018
+                        a.news-item__cta(href="#") Читать полностью
 
             section.academy-banner
                 header.academy-banner__header
@@ -120,7 +116,7 @@ html(lang="en")
                     .academy-banner__cta: a.button(href="#") Узнать подробнее
 
             section.news-feed
-                header.section-headern-header
+                header.section-header
                     h2.section-header__title Новости<br>регионов
                     p.section-header__subtitle Со&nbsp;всего&nbsp;мира
 
@@ -160,7 +156,6 @@ html(lang="en")
                         p.editorial__date 27 июля 2018
                         a.editorial__cta(href="#") Читать полностью
 
-        //- TODO: check and fix if needed footer nesting
         footer.footer
             .footer__info
                 .footer__logo
@@ -188,5 +183,5 @@ html(lang="en")
                     li.footer-menu__item
                         a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
-        .footer__copyrights
-            p © 2014–2019 Oldboy Barbershop
+            .footer__copyrights
+                p © 2014–2019 Oldboy Barbershop
