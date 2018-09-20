@@ -1,0 +1,56 @@
+.franchise {
+    // box model
+    margin-top: 70px;
+}
+
+.franchise__map {
+    img {
+        display: inline-block;
+        width: 50%;
+    }
+}
+
+.franchise__header {
+    // box model
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 20px 0 65px;
+    justify-content: space-between;
+}
+
+.franchise__title {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    text-align: left;
+    
+    span {
+        font-size: 2rem;
+    }
+}
+
+.franchise__logo {
+    img {
+        height: 85px;
+    }
+}
+.franchise__button {
+    // box model
+    text-align: center;
+
+    .button {
+        // box model
+        display: inline-block;
+        width: 295px;
+
+        // typography
+        color: $dark;
+        text-align: center;
+
+        // visual
+        background-color: transparent;
+    }
+}

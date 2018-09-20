@@ -2,6 +2,7 @@
     // box model
     width: 325px;
     height: 180px;
+    margin: 0;
     margin-bottom: 25px;
     
     // positioning
@@ -53,6 +54,7 @@
     // typography
     color: $golden;
     font-family: $titleFont;
+    text-align: left;
     font-size: 0.75rem;
     text-transform: uppercase;
 }

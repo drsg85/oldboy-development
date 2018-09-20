@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+    padding-right: 10px;
 }
 
 .service-item__description {
@@ -13,6 +14,7 @@
     color: $golden;
     font-family: $titleFont;
     font-size: 0.75rem;
+    text-align: left;
     text-transform: uppercase;
 }
 
@@ -24,6 +26,7 @@
     color: $dark;
     font-family: $titleFont;
     font-size: 1rem;
+    text-align: left;
 
     span {
         font-size: 1.5rem;

@@ -1661,6 +1661,7 @@ body {
 .service-main {
   width: 325px;
   height: 180px;
+  margin: 0;
   margin-bottom: 25px;
   position: relative; }
   .service-main img {
@@ -1692,6 +1693,7 @@ body {
   margin: 0;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
+  text-align: left;
   font-size: 0.75rem;
   text-transform: uppercase; }
 
@@ -1718,7 +1720,8 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 60px; }
+  margin-top: 60px;
+  padding-right: 10px; }
 
 .service-item__description {
   margin: 0;
@@ -1726,13 +1729,15 @@ body {
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75rem;
+  text-align: left;
   text-transform: uppercase; }
 
 .service-item__title {
   margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  text-align: left; }
   .service-item__title span {
     font-size: 1.5rem; }
 
@@ -1753,6 +1758,43 @@ body {
   background-color: transparent;
   border-radius: 20px;
   text-decoration: none; }
+
+.franchise {
+  margin-top: 70px; }
+
+.franchise__map img {
+  display: inline-block;
+  width: 50%; }
+
+.franchise__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0 20px 0 65px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.franchise__title {
+  margin: 0;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  text-align: left; }
+  .franchise__title span {
+    font-size: 2rem; }
+
+.franchise__logo img {
+  height: 85px; }
+
+.franchise__button {
+  text-align: center; }
+  .franchise__button .button {
+    display: inline-block;
+    width: 295px;
+    color: #131313;
+    text-align: center;
+    background-color: transparent; }
 
 @media (min-width: 700px) {
   .price-list {
