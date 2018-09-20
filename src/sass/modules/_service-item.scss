@@ -1,0 +1,55 @@
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.service-item__description {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.service-item__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1rem;
+
+    span {
+        font-size: 1.5rem;
+    }
+}
+
+.service-item__button {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    width: 165px;
+    height: 100%;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+
+    // visual
+    border: 2px solid $golden;
+    background-color: transparent;
+    border-radius: 20px;
+    text-decoration: none;
+}

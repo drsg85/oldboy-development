@@ -1647,16 +1647,27 @@ body {
 
 .services__content {
   padding: 0 20px;
-  margin-top: 15px; }
+  margin-top: 15px;
+  margin-bottom: 75px;
+  text-align: center; }
+  .services__content .button {
+    width: 295px;
+    margin: 0;
+    margin-top: 65px;
+    color: #131313;
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: transparent; }
 
 .service-main {
-  position: relative;
   width: 325px;
-  height: 180px; }
+  height: 180px;
+  margin-bottom: 25px;
+  position: relative; }
   .service-main img {
-    position: absolute;
+    display: block;
     width: 100%;
     height: 100%;
+    position: absolute;
     border-radius: 5px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -1664,8 +1675,7 @@ body {
 
 .service-main__header {
   margin: 0;
-  padding-top: 30px;
-  padding-left: 20px; }
+  padding: 25px 20px; }
 
 .service-main__title {
   margin: 0;
@@ -1688,9 +1698,54 @@ body {
 .service-main__button {
   display: inline-block;
   width: 170px;
+  position: absolute;
+  right: 15px;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.75rem;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #d6a354;
+  background-color: transparent;
+  border-radius: 20px;
+  text-decoration: none; }
+
+.service-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 60px; }
+
+.service-item__description {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase; }
+
+.service-item__title {
+  margin: 0;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem; }
+  .service-item__title span {
+    font-size: 1.5rem; }
+
+.service-item__button {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  width: 165px;
+  height: 100%;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
