@@ -1471,9 +1471,8 @@ body {
   margin-bottom: 20px; }
 
 .news-item__photo {
+  width: calc(100% - 300px);
   min-width: 150px;
-  max-width: 150px;
-  height: 150px;
   margin-right: 10px; }
   .news-item__photo img {
     display: block;
@@ -1482,6 +1481,9 @@ body {
     border-radius: 5px;
     -o-object-fit: cover;
     object-fit: cover; }
+
+.news-item_text {
+  width: 300px; }
 
 .news-item__header {
   margin-bottom: 30px;
@@ -1659,8 +1661,8 @@ body {
     background-color: transparent; }
 
 .service-main {
-  width: 325px;
-  height: 180px;
+  width: 100%;
+  min-height: 180px;
   margin: 0;
   margin-bottom: 25px;
   position: relative; }
