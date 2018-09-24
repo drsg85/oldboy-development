@@ -1944,6 +1944,15 @@ body {
   text-align: left;
   text-transform: uppercase; }
 
+.news-category__title {
+  margin: 0; }
+
+.news-category__info {
+  margin: 0; }
+
+.news-categories {
+  padding: 0 20px; }
+
 @media (min-width: 700px) {
   .price-list {
     padding-bottom: 400px;
