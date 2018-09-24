@@ -1,6 +1,7 @@
 .franchise {
     // box model
     margin-top: 70px;
+    margin-bottom: 60px;
 }
 
 .franchise__map {
@@ -34,6 +35,7 @@
 
 .franchise__logo {
     img {
+        // box model
         height: 85px;
     }
 }
@@ -75,6 +77,9 @@
     color: $golden;
     font-family: $titleFont;
     font-size: 6rem;
+    background: linear-gradient(to right, rgba(247, 220, 147, 1), rgba(168, 149, 93, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .franchise__details {
@@ -86,8 +91,8 @@
     // visual
     border-top: 2px solid transparent;
     border-bottom: 2px solid $golden;
-    border-image: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75));  
-    border-image-slice: 3; 
+    border-image: linear-gradient(to right, rgba(168, 149, 93, 1), rgba(247, 220, 147, 1));
+    border-image-slice: 2; 
 }
 
 .franchise__top {
@@ -109,4 +114,5 @@
     color: $dark;
     font-family: $titleFont;
     font-size: 0.85rem;
+    text-align: center;
 }

@@ -1768,7 +1768,8 @@ body {
   text-decoration: none; }
 
 .franchise {
-  margin-top: 70px; }
+  margin-top: 70px;
+  margin-bottom: 60px; }
 
 .franchise__map img {
   width: 100%; }
@@ -1819,7 +1820,11 @@ body {
   margin-top: -17px;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 6rem; }
+  font-size: 6rem;
+  background: -webkit-gradient(linear, left top, right top, from(#f7dc93), to(#a8955d));
+  background: linear-gradient(to right, #f7dc93, #a8955d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 .franchise__details {
   height: 100%;
@@ -1827,10 +1832,10 @@ body {
   padding-top: 5px;
   border-top: 2px solid transparent;
   border-bottom: 2px solid #d6a354;
-  -o-border-image: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75));
-  border-image: -webkit-gradient(linear, left top, right top, from(rgba(214, 163, 84, 0)), to(rgba(214, 163, 84, 0.75)));
-  border-image: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75));
-  border-image-slice: 3; }
+  -o-border-image: linear-gradient(to right, #a8955d, #f7dc93);
+  border-image: -webkit-gradient(linear, left top, right top, from(#a8955d), to(#f7dc93));
+  border-image: linear-gradient(to right, #a8955d, #f7dc93);
+  border-image-slice: 2; }
 
 .franchise__top {
   margin: 0;
@@ -1843,7 +1848,8 @@ body {
   margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 0.85rem; }
+  font-size: 0.85rem;
+  text-align: center; }
 
 @media (min-width: 700px) {
   .price-list {
