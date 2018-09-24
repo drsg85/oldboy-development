@@ -1655,7 +1655,11 @@ body {
   padding: 0 20px;
   margin-top: 15px;
   margin-bottom: 75px;
-  text-align: center; }
+  text-align: center;
+  background-image: url("/img/razors.svg");
+  background-position: 50% 85%;
+  background-repeat: no-repeat;
+  background-size: 50% 42%; }
   .services__content .button {
     width: 295px;
     margin: 0;
