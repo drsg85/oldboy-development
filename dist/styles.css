@@ -1945,7 +1945,8 @@ body {
   text-transform: uppercase; }
 
 .news-categories {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin-bottom: -15px; }
 
 .news-category {
   width: 100%;
