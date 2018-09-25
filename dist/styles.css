@@ -1944,14 +1944,41 @@ body {
   text-align: left;
   text-transform: uppercase; }
 
-.news-category__title {
-  margin: 0; }
-
-.news-category__info {
-  margin: 0; }
-
 .news-categories {
   padding: 0 20px; }
+
+.news-category {
+  width: 100%;
+  min-height: 150px;
+  position: relative;
+  margin-bottom: 25px; }
+  .news-category img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    -o-object-fit: none;
+    object-fit: none;
+    z-index: -1; }
+
+.news-category__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 35px;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+
+.news-category__info {
+  margin: 0;
+  padding: 0 35px;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase; }
 
 @media (min-width: 700px) {
   .price-list {
