@@ -1982,14 +1982,15 @@ body {
   text-transform: uppercase; }
 
 .current-news {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin-bottom: 70px; }
 
 .current-news__title {
   margin: 0;
   margin-bottom: 30px;
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: left;
   text-transform: uppercase; }
 
@@ -1998,6 +1999,18 @@ body {
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem; }
+
+.current-news__quote {
+  margin: 30px 0;
+  margin-left: -20px;
+  padding: 20px 60px 25px 20px;
+  width: 80%;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  border-top: 2px solid #d6a354;
+  border-bottom: 2px solid #d6a354; }
 
 .news-photo {
   margin-top: 20px; }
@@ -2008,8 +2021,18 @@ body {
     -o-object-fit: cover;
     object-fit: cover; }
 
+.news-photo__description {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.65rem;
+  text-align: center;
+  text-transform: uppercase; }
+
 .news-qoute {
-  margin-top: -90px;
+  margin-top: -100px;
   margin-left: -20px;
   margin-right: -20px;
   margin-bottom: 20px;
@@ -2022,11 +2045,25 @@ body {
 .news-qoute__text {
   margin: 0;
   margin-bottom: 30px;
+  margin-top: -70px;
   padding: 0 5px;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
+
+.news-qoute__text::before {
+  content: "\201d";
+  width: 50px;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 8rem; }
 
 .news-qoute__author {
   margin: 0;

@@ -1,6 +1,7 @@
 .current-news {
     // box model
     padding: 0 20px;
+    margin-bottom: 70px;
 }
 
 .current-news__title {
@@ -11,7 +12,7 @@
     // typography
     color: $dark;
     font-family: $mainFont;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
     text-transform: uppercase;
 }
@@ -24,4 +25,22 @@
     color: $dark;
     font-family: $mainFont;
     font-size: 1rem;
+}
+
+.current-news__quote {
+    // box model
+    margin: 30px 0;
+    margin-left: -20px;
+    padding: 20px 60px 25px 20px;
+    width: 80%;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    text-align: left;
+    text-transform: uppercase;
+
+    // visual
+    border-top: 2px solid $golden;
+    border-bottom: 2px solid $golden;
 }
