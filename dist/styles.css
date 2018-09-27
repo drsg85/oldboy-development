@@ -1981,6 +1981,65 @@ body {
   text-align: center;
   text-transform: uppercase; }
 
+.current-news {
+  padding: 0 20px; }
+
+.current-news__title {
+  margin: 0;
+  margin-bottom: 30px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  text-transform: uppercase; }
+
+.current-news__text {
+  margin: 0;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem; }
+
+.news-photo {
+  margin-top: 20px; }
+  .news-photo img {
+    width: 100%;
+    max-height: 180px;
+    border-radius: 5px;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.news-qoute {
+  margin-top: -90px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 20px;
+  padding-top: 155px;
+  padding-bottom: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fdf6ee; }
+
+.news-qoute__text {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 5px;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+
+.news-qoute__author {
+  margin: 0;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+  .news-qoute__author span {
+    display: block;
+    margin-top: 5px;
+    color: #d6a354;
+    line-height: 20px; }
+
 @media (min-width: 700px) {
   .price-list {
     padding-bottom: 400px;
