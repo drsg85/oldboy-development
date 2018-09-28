@@ -5,7 +5,7 @@
 }
 .top-news__header {
     // box model
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 .top-news__category {
     // box model
@@ -22,6 +22,7 @@
     // box model
     margin: 0;
     margin-bottom: 10px;
+    width: 260px;
 
     // typography
     color: $light;
