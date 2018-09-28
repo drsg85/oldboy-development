@@ -17,6 +17,11 @@
         object-fit: none;
         z-index: -1;
     }
+
+    @include atFullHD {
+        // box model
+        width: 350px;
+    }
 }
 
 .news-category__title {

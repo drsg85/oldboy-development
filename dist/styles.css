@@ -1867,6 +1867,9 @@ body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem;
   text-transform: uppercase; }
+  @media (min-width: 1900px) {
+    .top-news__category {
+      font-size: 1.2rem; } }
 
 .top-news__title {
   margin: 0;
@@ -1876,6 +1879,10 @@ body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 2rem;
   text-transform: uppercase; }
+  @media (min-width: 1900px) {
+    .top-news__title {
+      width: 400px;
+      font-size: 3rem; } }
 
 .top-news__details {
   margin: 0;
@@ -1885,6 +1892,10 @@ body {
   font-size: 0.75rem;
   font-weight: 400;
   text-align: left; }
+  @media (min-width: 1900px) {
+    .top-news__details {
+      width: 335px;
+      font-size: 1rem; } }
 
 .top-news__cta {
   display: block;
@@ -1895,9 +1906,13 @@ body {
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase; }
+  @media (min-width: 1900px) {
+    .top-news__cta {
+      font-size: 1rem; } }
 
 .top-news__footer {
   width: 230px;
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1908,7 +1923,6 @@ body {
 
 .top-news__date {
   margin: 0;
-  margin-top: 10px;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
@@ -1920,10 +1934,12 @@ body {
     font-size: 0.85rem;
     text-align: left;
     text-transform: uppercase; }
+    @media (min-width: 1900px) {
+      .top-news__date span {
+        font-size: 1rem; } }
 
 .top-news__location {
   margin: 0;
-  margin-top: 10px;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
@@ -1935,6 +1951,9 @@ body {
     font-size: 0.85rem;
     text-align: left;
     text-transform: uppercase; }
+    @media (min-width: 1900px) {
+      .top-news__location span {
+        font-size: 1rem; } }
 
 .hero-social__text {
   margin: 0;
@@ -1944,10 +1963,19 @@ body {
   font-size: 0.85rem;
   text-align: left;
   text-transform: uppercase; }
+  @media (min-width: 1900px) {
+    .hero-social__text {
+      font-size: 1rem; } }
 
 .news-categories {
   padding: 0 20px;
   margin-bottom: -15px; }
+  @media (min-width: 1900px) {
+    .news-categories {
+      position: absolute;
+      top: 115px;
+      right: 90px;
+      z-index: 1; } }
 
 .news-category {
   width: 100%;
@@ -1963,6 +1991,9 @@ body {
     -o-object-fit: none;
     object-fit: none;
     z-index: -1; }
+  @media (min-width: 1900px) {
+    .news-category {
+      width: 350px; } }
 
 .news-category__title {
   margin: 0;

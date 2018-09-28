@@ -16,6 +16,11 @@
     font-family: $titleFont;
     font-size: 1rem;
     text-transform: uppercase;
+
+    @include atFullHD {
+        // typography
+        font-size: 1.2rem;
+    }
 }
 
 .top-news__title {
@@ -29,6 +34,14 @@
     font-family: $titleFont;
     font-size: 2rem;
     text-transform: uppercase;
+
+    @include atFullHD {
+        // box model
+        width: 400px;
+
+        // typography
+        font-size: 3rem;
+    }
 }
 
 .top-news__details {
@@ -42,6 +55,14 @@
     font-size: 0.75rem;
     font-weight: 400;
     text-align: left;
+
+    @include atFullHD {
+        // box model
+        width: 335px;
+
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .top-news__cta {
@@ -56,11 +77,17 @@
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include atFullHD {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .top-news__footer {
     // box model
     width: 230px;
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
 
@@ -71,7 +98,6 @@
 .top-news__date {
     // box model
     margin: 0;
-    margin-top: 10px;
 
     // typography
     color: $lightGrey;
@@ -89,13 +115,17 @@
         font-size: 0.85rem;
         text-align: left;
         text-transform: uppercase;
+
+        @include atFullHD {
+            // typography
+            font-size: 1rem;
+        }
     }
 }
 
 .top-news__location {
     // box model
     margin: 0;
-    margin-top: 10px;
 
     // typography
     color: $lightGrey;
@@ -113,6 +143,11 @@
         font-size: 0.85rem;
         text-align: left;
         text-transform: uppercase;
+
+        @include atFullHD {
+            // typography
+            font-size: 1rem;
+        }
     }
 }
 
@@ -131,4 +166,9 @@
     font-size: 0.85rem;
     text-align: left;
     text-transform: uppercase;
+
+    @include atFullHD {
+        // typography
+        font-size: 1rem;
+    }
 }
