@@ -93,6 +93,11 @@
 
     // visual
     border-top: 2px solid $golden;
+
+    @include atFullHD {
+        // box model
+        width: 280px;
+    }
 }
 
 .top-news__date {

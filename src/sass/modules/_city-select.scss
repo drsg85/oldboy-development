@@ -1,6 +1,11 @@
 .city-select {
     // box model
     margin-top: -2px;
+
+    @include atFullHD {
+        // box model
+        display: flex;
+    }
 }
 
 .city-select__title {
@@ -31,6 +36,11 @@
         // typography
         font-size: 1.125rem;
         line-height: 1.25;
+    }
+
+    @include atFullHD {
+        // box model
+        margin-left: 10px;
     }
 }
 

@@ -429,9 +429,15 @@ body {
   width: 100%; }
 
 .hero__nav {
-  position: fixed;
-  opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  opacity: 0; }
+  @media (min-width: 1900px) {
+    .hero__nav {
+      position: absolute;
+      right: 40%;
+      top: 0;
+      visibility: visible;
+      opacity: 1; } }
 
 .hero__city-select {
   position: absolute;
@@ -558,6 +564,11 @@ body {
 
 .city-select {
   margin-top: -2px; }
+  @media (min-width: 1900px) {
+    .city-select {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .city-select__title {
   margin: 0;
@@ -577,6 +588,9 @@ body {
     .city-select__city {
       font-size: 1.125rem;
       line-height: 1.25; } }
+  @media (min-width: 1900px) {
+    .city-select__city {
+      margin-left: 10px; } }
 
 .city-select__city a {
   color: #ffffff;
@@ -1920,6 +1934,9 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   border-top: 2px solid #d6a354; }
+  @media (min-width: 1900px) {
+    .top-news__footer {
+      width: 280px; } }
 
 .top-news__date {
   margin: 0;
@@ -2688,6 +2705,23 @@ body {
   @media (min-width: 700px) {
     .footer-menu__link {
       font-size: 1.125rem; } }
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0; }
+
+.main-nav__item {
+  list-style-type: none; }
+
+.main-nav__link {
+  margin-right: 50px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.125rem;
+  text-transform: uppercase; }
 
 .button {
   display: inline-block;
