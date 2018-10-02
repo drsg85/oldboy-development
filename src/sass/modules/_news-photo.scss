@@ -1,0 +1,28 @@
+.news-photo {
+    // box model
+    margin-top: 20px;
+    
+    img {
+        // box model
+        width: 100%;
+        max-height: 180px;
+
+        // visual
+        border-radius: 5px;
+        object-fit: cover;
+    }
+}
+
+.news-photo__description {
+    // box model
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 0.70rem;
+    text-align: center;
+    text-transform: uppercase;
+}

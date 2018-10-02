@@ -1,0 +1,118 @@
+.franchise {
+    // box model
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.franchise__map {
+    img {
+        width: 100%;
+    }
+}
+
+.franchise__header {
+    // box model
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.franchise__title {
+    // box model
+    margin: 0;
+    margin-top: 32px;
+    
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    text-align: left;
+    
+    span {
+        font-size: 2rem;
+    }
+}
+
+.franchise__logo {
+    img {
+        // box model
+        height: 85px;
+    }
+}
+.franchise__button {
+    // box model
+    margin-bottom: 55px;
+
+    // typography
+    text-align: center;
+    
+    .button {
+        // box model
+        display: inline-block;
+        width: 295px;
+        margin: 0;
+
+        // typography
+        color: $dark;
+        text-align: center;
+
+        // visual
+        background-color: transparent;
+    }
+}
+
+.franchise__summary {
+    // box model
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-around;
+}
+
+.franchise__count {
+    // box model
+    margin: 0;
+    margin-top: -17px;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 6rem;
+    background: linear-gradient(to right, rgba(247, 220, 147, 1), rgba(168, 149, 93, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.franchise__details {
+    // box model
+    height: 100%;
+    padding-bottom: 10px;
+    padding-top: 5px;
+
+    // visual
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid $golden;
+    border-image: linear-gradient(to right, rgba(168, 149, 93, 1), rgba(247, 220, 147, 1));
+    border-image-slice: 2; 
+}
+
+.franchise__top {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.franchise__bottom {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    text-align: center;
+}

@@ -1,3 +1,25 @@
-.main-nav {
-    // 
+.main-nav__list {
+    // box model
+    display: flex;
+    margin: 0;
+}
+
+.main-nav__item {
+    // visual
+    list-style-type: none;
+}
+
+.main-nav__link {
+    // box model
+    margin-right: 50px;
+    
+    // visual
+    text-decoration: none;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+
 }

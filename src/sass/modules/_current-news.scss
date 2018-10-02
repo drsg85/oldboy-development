@@ -1,0 +1,48 @@
+.current-news {
+    // box model
+    padding: 0 20px;
+    margin-bottom: 70px;
+}
+
+.current-news__title {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1.2rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.current-news__text {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 22px;
+}
+
+.current-news__quote {
+    // box model
+    margin: 30px 0;
+    margin-left: -20px;
+    padding: 20px 60px 25px 20px;
+    width: 80%;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    line-height: 22px;
+    text-align: left;
+    text-transform: uppercase;
+
+    // visual
+    border-top: 2px solid $golden;
+    border-bottom: 2px solid $golden;
+}

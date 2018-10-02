@@ -1,0 +1,16 @@
+.news-categories {
+    // box model
+    padding: 0 20px;
+    margin-bottom: -15px;
+
+    @include atFullHD {
+        // box model
+        position: absolute;
+        top: 115px;
+        right: 90px;
+
+        // visual
+        z-index: 1;
+    }
+}
+

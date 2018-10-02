@@ -68,12 +68,19 @@
 }
 
 .hero__nav {
-    // positioning
-    position: fixed;
-
     // visual
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
+
+    @include atFullHD {
+    // positioning
+    position: absolute;
+    right: 40%;
+    top: 0;
+
+    visibility: visible;
+    opacity: 1;
+    }
 }
 
 .hero__city-select {
