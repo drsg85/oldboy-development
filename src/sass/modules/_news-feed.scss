@@ -2,6 +2,11 @@
     // box model
     padding: 0 20px;
     margin-bottom: 50px;
+
+    @include atFullHD {
+        // box model
+        display: flex;
+    }
 }
 
 .news-feed__cta {
