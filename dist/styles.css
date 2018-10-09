@@ -1677,7 +1677,7 @@ body {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-bottom: 140px;
+      margin-bottom: 30px;
       margin-left: 80px;
       margin-top: -200px;
       padding: 120px 140px;
@@ -2372,12 +2372,22 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: 0 20px 30px -10px rgba(19, 19, 19, 0.25);
   box-shadow: 0 20px 30px -10px rgba(19, 19, 19, 0.25); }
+  @media (min-width: 1900px) {
+    .academy-banner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; } }
 
 .academy-banner__header {
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
   -webkit-transform-origin: center left;
   transform-origin: center left; }
+  @media (min-width: 1900px) {
+    .academy-banner__header {
+      margin-top: 30px; } }
 
 .academy-banner__title {
   max-width: 320px;
@@ -2402,6 +2412,9 @@ body {
   font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase; }
+  @media (min-width: 1900px) {
+    .academy-banner__motto {
+      font-size: 1.3rem; } }
 
 .academy-banner__text {
   font-family: "Open Sans", Arial, sans-serif;
