@@ -2170,6 +2170,34 @@ body {
     color: #d6a354;
     line-height: 20px; }
 
+.active-map {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 155px;
+  margin-bottom: 45px; }
+  .active-map a {
+    color: #ffffff;
+    font-family: "Rex", Arial, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .active-map a span {
+      color: #d6a354; }
+
+.show-locations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  text-align: center; }
+
+.show-locations__text {
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase; }
+
 @media (min-width: 700px) {
   .price-list {
     padding-bottom: 400px;
