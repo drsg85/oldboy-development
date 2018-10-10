@@ -1,84 +1,78 @@
 .news-item {
     // box model
     display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
+    height: 30vw;
 }
 
 .news-item__photo {
-    // box model
-    width: calc(100% - 300px);
-    min-width: 150px;
-    margin-right: 10px;
+    // positioning
+    position: relative;
     
-    img {
-        // box model
-        display: block;
-        width: 100%;
-        height: 100%;
-        
-        // visual
-        border-radius: 5px;
-        box-shadow: 0 10px 15px 0 rgba(19, 19, 19, 0.25);
-        object-fit: cover;
-
-        @include atFullHD {
-            // box model
-            width: 355px;
-            height: 355px;
-            margin-right: 75px;
-        }
-    }
-
-    @include atFullHD {
-        // positioning
-        position: relative;
-    }
+    // box model
+    flex-basis: 40%;
+    
+    // visual
+    border-radius: 5px;
+    // box-shadow: 0 10px 15px 0 rgba(19, 19, 19, 0.25);
+    overflow: hidden;
 }
 
 .news-item__text {
     // box model
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    @include atFullHD {
-        // box model
-        margin-top: 180px;
-        width: 355px;
+    flex-basis: 60%;
 
-        // positioning
-        position: absolute;
-    }
+    padding: 5px 0;
+    padding-left: 20px;
+
+    // typography
+    font-size: 1rem;
+    font-size: 4vw;
+}
+
+.news-item__photo::after {
+    content: '';
+    
+    // positioning
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    // visual
+    // background-color: red;
+}
+
+.news-item__photo img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    // visual
+    object-fit: cover;
 }
 
 .news-item__header {
     // box model
-    margin-bottom: 30px;
-    margin-top: 10px;
-
-    @include atFullHD {
-        // box model
-        margin-bottom: 130px;
-        height: 50px;
-        
-        // typography
-        text-align: center;
-    }
 }
 
 .news-item__category {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0.5em;
 
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 0.7rem;
+    font-size: 0.75em;
     text-transform: uppercase;
-
-    @include atFullHD {
-        // typography
-        font-size: 1rem;
-    }
 }
 
 .news-item__title {
@@ -88,26 +82,14 @@
     // typography
     color: $dark;
     font-family: $titleFont;
-    font-size: 1rem;
-
-    @include atFullHD {
-        // box model
-        padding: 0 15px;
-        // typography
-        font-size: 1.3rem;
-        color: $light;
-    }
+    font-size: 1em;
 }
 
 .news-item__footer {
     // box model
     display: flex;
     justify-content: space-between;
-
-    @include atFullHD {
-        // box model
-        padding: 0 5px;
-    }
+    align-items: flex-end;
 }
 
 .news-item__date {
@@ -125,7 +107,7 @@
         display: block;
 
         // typography
-        font-size: 2rem;
+        font-size: 2em;
         font-weight: 600;
     }
 
@@ -136,7 +118,7 @@
         margin-top: 1px;
 
         // typography
-        font-size: 0.75rem;
+        font-size: 0.75em;
         line-height: 17px;
     }
 }
@@ -148,149 +130,9 @@
     // typography
     color: $golden;
     font-family: $mainFont;
-    font-size: 0.7rem;
+    font-size: 0.75em;
     font-weight: 600;
     text-align: right;
     text-decoration: none;
     text-transform: uppercase;
 }
-
-
-
-
-
-// .news-item {
-//     // positioning
-//     position: relative;
-    
-//     // box model
-//     width: 350px;
-//     margin-bottom: 40px;
-    
-//     // visual
-//     border-radius: 5px;
-//     overflow: hidden;
-// }
-
-
-// .news-item__header {
-//     // positioning
-//     position: relative;
-//     z-index: 2;
-    
-//     // box model
-//     height: 350px;
-//     padding: 20px;
-    
-//     // visual
-//     border-radius: 5px;
-//     // background-color: $dark;
-//     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.95))
-// }
-
-// .news-item__city {
-//     // box model
-//     margin: 0;
-//     padding: 0;
-//     padding-bottom: 100px;  // temporary solution until conversation with designer
-
-//     // typography
-//     color: $light;
-//     font-family: $mainFont;
-//     font-size: 0.85rem;
-//     text-align: right;
-//     text-transform: uppercase;
-// }
-
-// .news-item__category {
-//     // typography
-//     color: $golden;
-//     font-family: $titleFont;
-//     font-size: 1.25rem;
-//     text-align: center;
-// }
-
-// .news-item__title {
-//     // typography
-//     color: $light;
-//     font-family: $titleFont;
-//     font-size: 1.5rem;
-//     text-align: center;
-// }
-
-// .news-item__description {
-//     // typography
-//     color: $light;
-//     font-family: $mainFont;
-//     font-size: 0.75rem;
-//     line-height: 1.5; 
-//     text-align: center;
-//     text-transform: uppercase;
-// }
-
-// .news-item__photo {
-//     // positioning
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     z-index: 1;
-
-//     // box model
-//     height: 350px;
-// }
-
-// .news-item__photo img {
-//     // box model
-//     height: 100%;
-//     max-width: 100%;
-//     min-width: 100%;
-//     object-fit: cover;
-// }
-
-// .news-item__footer {
-//     // box model
-//     display: flex;
-//     justify-content: space-between;
-//     padding: 15px 10px;
-// }
-
-// .news-item__date {
-//     // box model
-//     display: flex;
-    
-//     // typography
-//     color: $lightGrey;
-//     font-family: $titleFont;
-// }
-
-// .news-item__number {
-//     // box model
-//     margin: 0;
-    
-//     // typography
-//     font-size: 40px;
-//     line-height: 40px;
-// }
-
-// .news-item__month {
-//     // box model
-//     margin: 0;
-//     padding-top: 2px;
-//     padding-left: 5px;
-    
-//     // typography
-//     line-height: 1.125;
-// }
-
-// .news-item__more{
-//     // typography
-//     color: $golden;
-//     font-family: $mainFont;
-//     font-size: 0.85rem;
-//     font-weight: 600;
-//     line-height: 40px;
-//     text-align: right;
-//     text-decoration: none;
-//     text-transform: uppercase;
-        
-// }

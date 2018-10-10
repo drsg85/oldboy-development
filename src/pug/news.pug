@@ -57,6 +57,7 @@ html(lang="en")
                         a.social__icon.icon--instagram(href="#") Instagram
 
         main
+            //- TODO: move this to page header (hero)
             section.news-categories
                 article.news-category
                     img(src="/img/news/news-feed1-dark.jpg", alt="Oldboy Barbershop news photo")
@@ -73,23 +74,27 @@ html(lang="en")
                     h3.news-category__title Новости франшизы
                     p.news-category__info Старт новой косметики Barber Wild
             //- Is it correct to place section-header here?
+
+
             header.section-header 
                 h2.section-header__title Наши <br>новости
                 p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
             section.news-feed
+                //- TODO: make all .news-item(s) like this
                 article.news-item
                     .news-item__photo
                         img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
-                        
+
                     .news-item__text
                         header.news-item__header
                             p.news-item__category Косметика и аксессуары
                             h3.news-item__title Старт продаж новой косметики Barber Wild
 
                         footer.news-item__footer
+                            //- TODO: change strong and span to span with classes
                             p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            a.news-item__cta(href="#") Читать <br>полностью
 
                 article.news-item
                     .news-item__photo
