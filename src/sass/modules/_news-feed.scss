@@ -2,6 +2,19 @@
     // box model
     padding: 0 20px;
     margin-bottom: 50px;
+
+    @include atFullHD {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-left: 80px;
+        margin-top: -200px;
+        padding: 120px 140px;
+
+        // visual
+        background-color: #fdf6ee;
+    }
 }
 
 .news-feed__cta {
