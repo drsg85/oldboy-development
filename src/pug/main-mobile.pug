@@ -1,3 +1,4 @@
+//- TODO: rename file to main.pug
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -35,23 +36,26 @@ html(lang="en")
 
         main
             section.news
-                header.section-header
-                    h2.section-header__title Наши <br>новости
-                    p.section-header__subtitle О&nbsp;самом&nbsp;главном
+                .news__header
+                    header.section-header
+                        h2.section-header__title Наши <br>новости
+                        p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
-                .editorial
-                    .editorial__photo
-                        img(src="/img/news/opening.jpg", alt="Barbershop main news photo")
-                        p.editorial__description Новости франшизы
+                .news__editorial
+                    .editorial
+                        .editorial__photo
+                            img(src="/img/news/opening.jpg", alt="Barbershop main news photo")
+                            p.editorial__description Новости франшизы
 
-                    .editorial__caption
-                        h3.editorial__title Открытие нового барбершопа Oldboy в барселоне
-                        p.editorial__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
+                        .editorial__caption
+                            h3.editorial__title Открытие нового барбершопа Oldboy в барселоне
+                            p.editorial__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
 
-                    footer.editorial__footer
-                        p.editorial__date <strong>27</strong> <span>июля<br>2018</span>
-                        a.editorial__cta(href="#") Читать полностью
+                        footer.editorial__footer
+                            p.editorial__date <strong>27</strong> <span>июля<br>2018</span>
+                            a.editorial__cta(href="#") Читать полностью
 
+                //- TODO: swap .news-feed to .news__feed
                 section.news-feed
                     article.news-item
                         .news-item__photo
@@ -70,6 +74,7 @@ html(lang="en")
                         .news-item__photo
                             img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
                         
+                        //- TODO: change &__text to &__content
                         .news-item__text
                             header.news-item__header
                                 p.news-item__category Новости регионов
@@ -177,35 +182,35 @@ html(lang="en")
                         p.franchise__top Филиалов
                         p.franchise__bottom В 5 странах и в 5 столицах
 
-            footer.footer
-                .footer__info
-                    .footer__logo
-                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                    h2.footer__title Крупнейшая международная сеть мужских парикмахерских
-                    p.footer__subtitle Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+        footer.footer
+            .footer__info
+                .footer__logo
+                    img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                h2.footer__title Крупнейшая международная сеть мужских парикмахерских
+                p.footer__subtitle Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
 
-                .footer__services-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Услуги
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") СТРИЖКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БРИТЬЁ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ТАТУИРОВКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БАРБЕР-СПА
+            .footer__services-nav
+                ul.footer-menu
+                    h3.footer-menu__title Услуги
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") СТРИЖКИ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") БРИТЬЁ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") ТАТУИРОВКИ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") БАРБЕР-СПА
 
-                .footer__info-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Информация
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+            .footer__info-nav
+                ul.footer-menu
+                    h3.footer-menu__title Информация
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                    li.footer-menu__item
+                        a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
-            .footer__copyrights
-                p © 2014–2019 Oldboy Barbershop
+        .footer__copyrights
+            p © 2014–2019 Oldboy Barbershop
 
 
 
