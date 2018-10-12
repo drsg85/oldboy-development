@@ -2236,6 +2236,80 @@ body {
   font-size: 1rem;
   text-transform: uppercase; }
 
+.four-o-four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.info-404 {
+  width: 370px; }
+
+.info-404__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #d6a354;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 35px;
+  text-align: left;
+  text-transform: uppercase; }
+
+.info-404__subtitle {
+  margin: 0;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  text-align-last: left;
+  text-transform: uppercase; }
+
+.info-404__text {
+  margin: 0;
+  padding-right: 85px;
+  color: #aeaeae;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align-last: left; }
+
+.message-404__subtitle {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2rem;
+  text-align: right; }
+
+.message-404__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.message-404__text {
+  margin: 0;
+  color: #aeaeae;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  text-transform: uppercase; }
+
+.quote-404 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  text-transform: uppercase; }
+  .quote-404 span {
+    font-size: 0.65rem; }
+
 @media (min-width: 700px) {
   .price-list {
     padding-bottom: 400px;

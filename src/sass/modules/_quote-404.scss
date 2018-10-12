@@ -1,0 +1,20 @@
+.quote-404 {
+
+}
+
+.quote-404 {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 1rem;
+    text-align: right;
+    text-transform: uppercase; 
+
+        span {
+            // typography
+            font-size: 0.65rem;
+        }
+}
