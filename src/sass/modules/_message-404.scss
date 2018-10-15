@@ -1,5 +1,9 @@
 .message-404 {
+    // box model
+    margin-top: -60px;
 
+    // positioning
+    position: relative;
 }
 
 .message-404__subtitle {
@@ -13,6 +17,22 @@
     text-align: right;
 }
 
+.message-404__subtitle::before {
+    content: "";
+    // box model
+    display: block;
+    width: 205px;
+    height: 3px;
+
+    // positioning
+    position: relative;
+    left: 20px;
+    top: 20px;
+
+    // visual
+    background: linear-gradient(to right, rgba(144, 125, 74, 1), rgba(229, 195, 124, 1));
+}
+
 .message-404__title {
     // box model
     margin: 0;
@@ -21,7 +41,7 @@
     color: $light;
     font-family: $titleFont;
     font-size: 3.5rem;
-    text-align: center;
+    text-align: right;
     text-transform: uppercase;
 }
 
@@ -37,6 +57,12 @@
 .message-404__text {
     // box model
     margin: 0;
+    width: 180px;
+
+    // positioning
+    position: absolute;
+    right: 20px;
+    bottom: 90px; 
 
     // typography
     color: $lightGrey;
@@ -44,4 +70,20 @@
     font-size: 1rem;
     text-align: right;
     text-transform: uppercase;
+}
+
+.message-404__text::before {
+    content: "";
+    // box model
+    display: block;
+    position: absolute;
+    width: 480px;
+    height: 3px;
+
+    // positioning
+    right: 0;
+    top: -10px;
+
+    // visual
+    background: linear-gradient(to right, rgba(229, 195, 124, 1), rgba(65, 55, 27, 1), rgba(144, 125, 74, 1));
 }
