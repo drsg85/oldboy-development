@@ -5,7 +5,7 @@
 | Main            | index.pug        |   🚧  |  🚧 | ❌ |  ❌  |  ❌ |   ❌   |
 | Franchise       | franchise.pug    |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | City            | city.pug         |   🚧  |  🚧 | ❌ |  ❌  |  ❌ |   ❌   |
-| Choose City     | choose-city.pug  |   ✔️  |  ✔️ | ✔️ |  ✔️  |  ✔️ |   ✔️   |
+| Choose City     | choose-city.pug  |   ✔️  |  ✔️ | ✔️ |  ✔️  |  ✔️ |   ❌   |
 | Branch          | branch.pug       |   🚧  |  🚧 | 🚧 |  ❌  |  ❌ |   ❌   |
 | Branch Dummy    | branch-dummy.pug |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. Royal  | royal.pug        |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
