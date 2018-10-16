@@ -16,14 +16,6 @@ html(lang="en")
                     a(href="#")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
-                .hero__nav
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
-
                 .hero__city-select
                     .city-select
                         p.city-select__title Выбери свой город: 
@@ -62,68 +54,62 @@ html(lang="en")
                             p.editorial__date <strong>27</strong> <span>июля<br>2018</span>
                             a.editorial__cta(href="#") Читать полностью
 
-                .news__feed
-                    section.news-feed
-                        article.news-item
-                            .news-item__photo
-                                img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
-                            
-                            .news-item__text
-                                header.news-item__header
-                                    p.news-item__category Косметика и аксессуары
-                                    h3.news-item__title Старт продаж новой косметики Barber Wild
+                section.news-feed
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                        
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Косметика и аксессуары
+                                h3.news-item__title Старт продаж новой косметики Barber Wild
 
-                                footer.news-item__footer
-                                    p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                                    a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                        article.news-item
-                            .news-item__photo
-                                img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
-                            
-                            //- TODO: change &__text to &__content
-                            .news-item__text
-                                header.news-item__header
-                                    p.news-item__category Новости регионов
-                                    h3.news-item__title Новые акции для выпускников
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                        
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новости регионов
+                                h3.news-item__title Новые акции для выпускников
 
-                                footer.news-item__footer
-                                    p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                                    a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                        article.news-item
-                            .news-item__photo
-                                img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
 
-                            .news-item__text
-                                header.news-item__header
-                                    p.news-item__category Новинки
-                                    p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новинки
+                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
 
-                                footer.news-item__footer
-                                    p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                                    a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                        .news-feed__cta
-                            a.button(href="#") Смотреть все новости
-                            p.news-feed__see-more Узнайте ещё больше новостей барбершопов oldboy
+                    .news-feed__cta
+                        a.button(href="#") Смотреть все новости
+                        p.news-feed__see-more Узнайте ещё больше новостей барбершопов oldboy
 
             section.services
-                .services__header
-                    header.section-header
-                        h2.section-header__title Услуги <br>барбершопа
-                        p.section-header__subtitle Стрижем&nbsp;и&nbsp;бреем
+                header.section-header
+                    h2.section-header__title Услуги <br>барбершопа
+                    p.section-header__subtitle Стрижем&nbsp;и&nbsp;бреем
 
                 .services__content
                     article.service-main
-                        //- TODO move photos to background-image and add modifiers to block
                         img(src="/img/service-photo1.jpg", alt="Мужские стрижки в Oldboy Барбершоп")
                         header.service-main__header
                             h3.service-main__title Мужские<br><span>стрижки</span>
-                            //- TODO: .service-main__subtitle
                             p.service-main__description Лучшее качество
-                        
-                        //- TODO: think about moving .service__main__buttons -> a.button
+
                         a.service-main__button(href="#") Все о стрижках
 
                     article.service-main
@@ -170,7 +156,6 @@ html(lang="en")
                     
                     .academy-banner__cta: a.button(href="#") Узнать подробнее
 
-            //- TODO: think about this section later
             section.franchise
                 header.section-header
                     h2.section-header__title Карта <br>филиалов
