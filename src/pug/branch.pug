@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero
+            .hero__top
+                .hero__logo
+                    a(href="#")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav
+                    nav.main-nav
+                        ul.main-nav__list
+                            li.main-nav__item: a(href="#").main-nav__link Главная
+                            li.main-nav__item: a(href="#").main-nav__link Новости
+                            li.main-nav__item: a(href="#").main-nav__link Услуги
+                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+
+                .hero__city-select
+                    .city-select
+                        p.city-select__title Выбери свой город: 
+                        p.city-select__city
+                            a(href="choose-city.html") Калининград <span class="city-select__triangle">▼</span>
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__caption 
+                h1.hero__title Крупнейшая международная сеть мужских парикмахерских <span class="hero__oldboy">OLDBOY <br>BARBERSHOP</span>
+                p.hero__city Калининград
+
+            .hero__contacts
+                .contact
+                    h2.contact__title Адрес
+                    p.contact__value ул. Театральная, 30
+                    
+                .contact
+                    h2.contact__title Телефон
+                    p.contact__value 52–57–90
+
+                .contact
+                    h2.contact__title Часы работы
+                    p.contact__value 10:00 — 21:00 (Вс. с 11:00)
+
+            .hero__buttons
+                a.button(href="#") Запись онлайн<br>
+                a.button.button--ghost(href="#") Сертификат
+
+                ul.social
+                    li.social__item
+                        a.social__icon.icon--vk(href="#") ВКонтакте
+                    li.social__item
+                        a.social__icon.icon--facebook(href="#") Facebook
+                    li.social__item
+                        a.social__icon.icon--instagram(href="#") Instagram
+
+            .hero__app
+                article.app-promo
+                    header.app-promo__header
+                        h2.app-promo__title Установите специальное <br><strong>мобильное <br>приложение</strong>
+                        p.app-promo__subtitle для удобной онлайн–записи
+
+                    .app-promo__image
+                        img(src="/img/mobile-app.png", alt="Oldboy Barbershop mobile application", title="Приложение Oldboy Barbershop")
+
+                    .app-promo__buttons
+                        //- p.app-promo__call Скачайте мобильное приложение
+                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
+
+                        a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> APP STORE
+
+        main
+            section.promos
+                .promos__header
+                    header.section-header
+                        h2.section-header__title Акции <br>барбершопа
+                        p.section-header__subtitle Режем&nbsp;цены
+
+                .promos__content
+                    article.promo
+                        a.promo__info-button(href="#"): span.icon--info
+                        a.promo__close-button(href="#"): span.icon--close
+                        header.promo__header
+                            p.promo__service Комплексная услуга
+                            .promo__bottom
+                                p.promo__price 2500
+                                p.promo__name Отец + Сын
+
+                        .promo__description
+                            p.promo__tip Описание услуги
+                            h3.promo__title «Отец + Сын» Комплексная услуга
+                            .promo__text
+                                p Две мужские стрижки, подряд, у одного мастера со скидкой 17%.
+                                p Более подробные условия уточняйте у администратора.
+
+                    article.promo
+                        a.promo__info-button(href="#"): span.icon--info
+                        a.promo__close-button(href="#"): span.icon--close
+                        header.promo__header
+                            p.promo__service Комплексная услуга
+                            .promo__bottom
+                                p.promo__price 1800
+                                p.promo__name Друг + Друг
+
+                        .promo__description
+                            p.promo__tip Описание услуги
+                            h3.promo__title «Друг + Друг» Комплексная услуга
+                            .promo__text
+                                p Две мужские стрижки, подряд, у одного мастера со скидкой 17%.
+                                p Более подробные условия уточняйте у администратора.
+
+                    article.promo.promo--open
+                        a.promo__info-button(href="#"): span.icon--info
+                        a.promo__close-button(href="#"): span.icon--close
+                        header.promo__header
+                            p.promo__service Комплексная услуга
+                            .promo__bottom
+                                p.promo__price 2500
+                                p.promo__name Королевское бритьё
+
+                        .promo__description
+                            p.promo__tip Описание услуги
+                            h3.promo__title «Друг + Друг» Комплексная услуга
+                            .promo__text
+                                p Две мужские стрижки, подряд, у одного мастера со скидкой 17%.
+                                p Более подробные условия уточняйте у администратора.
+
+            section.price-list
+                .price-list__header
+                    header.section-header
+                        h2.section-header__title Прайс-лист на&nbsp;услуги
+                        p.section-header__subtitle.section-header__subtitle--price Стрижём&nbsp;и&nbsp;бреем
+
+                .price-list__content
+                    table.price-table
+                        caption.price-table__caption Основные услуги
+
+                        tr.price-table__row
+                            td.price-table__service Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1000
+                        tr.price-table__row
+                            td.price-table__service Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 500
+                        tr.price-table__row
+                            td.price-table__service Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1000
+                        tr.price-table__row
+                            td.price-table__service Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 800
+                        tr.price-table__row
+                            td.price-table__service Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 500
+                        tr.price-table__row
+                            td.price-table__service Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price &nbsp;
+
+                    table.price-table
+                        caption.price-table__caption Дополнительные услуги
+
+                        tr.price-table__row
+                            td.price-table__service Камуфляж седены&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 500
+                        tr.price-table__row
+                            td.price-table__service Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1000
+
+                    table.price-table
+                        caption.price-table__caption Комплексные услуги
+
+                        tr.price-table__row
+                            td.price-table__service Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1500
+                        tr.price-table__row
+                            td.price-table__service Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1000
+                        tr.price-table__row
+                            td.price-table__service Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 2000
+                        tr.price-table__row
+                            td.price-table__service Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 2500
+                        tr.price-table__row
+                            td.price-table__service Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1750
+                        tr.price-table__row
+                            td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                            td.price-table__price 1000
+
+            section.team
+                .team__header
+                    header.section-header
+                        h2.section-header__title Наши мастера
+                        p.section-header__subtitle Команда&nbsp;Oldboy
+
+                .team__content
+                    article.member
+                        header.member__header
+                            h3.member__name Юрий
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/1.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Олег
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/2.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Виктор
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/3.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Евгений
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/4.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Даниил
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/5.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Раф
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/6.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Валера
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/7.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Денис
+                            p.member__position Барбер
+                        .member__photo
+                            img(src="/img/members/8.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+                    article.member
+                        header.member__header
+                            h3.member__name Михаил
+                            p.member__position Тату–мастер
+                        .member__photo
+                            img(src="/img/members/9.jpg", alt="Фотография барбера")
+                        a.register(href="#")
+                            p.register__text Записаться онлайн
+                            .register__icon
+
+
+            section.academy-banner
+                header.academy-banner__header
+                    h2.academy-banner__title Академия <br>Oldboy
+                    p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
+
+                .academy-banner__content
+                    p.academy-banner__motto Академия барберинга Oldboy — место, где рождаются настоящие мужские парикмахеры
+                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и ведущим специалистом барбершопа
+
+                    p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
+                    
+                    .academy-banner__cta: a.button(href="#") Узнать подробнее
+
+            section.testimonials
+                .testimonials__header
+                    header.section-header
+                        h2.section-header__title Ваши <br>отзывы
+                        p.section-header__subtitle Что&nbsp;говорят&nbsp;клиенты
+
+                .testimonials__content
+                    .testimonials__main-comment
+                        article.comment.comment--main
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Виктор
+                                    p.comment__about отзыв о барбере: <span class="">Олег</span>
+                            p.comment__text Олег стриг на своё усмотрение, а получилось так как я хотел, я очень доволен (кстати, и окружающие тоже). Браво, Олег!
+
+                    .testimonials__comments
+                        article.comment
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Виктор
+                                    p.comment__about отзыв о барбере: <span class="">Олег</span>
+                            p.comment__text Олег стриг на своё усмотрение, а получилось так как я хотел, я очень доволен (кстати, и окружающие тоже). Браво, Олег!
+                            
+                        article.comment
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Георгий
+                                    p.comment__about отзыв о барбере: <span class="">Виктор</span>
+                            p.comment__text Очень понравилось качество стрижки и старательность мастера. Весьма доволен результатом.
+
+                        article.comment
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Алексей
+                                    p.comment__about отзыв о барбере: <span class="">Даниил</span>
+                            p.comment__text Даниил - отличный Мастер, как и всегда ребята. Приобщает его тщательность, скурпулёзность и внимание к тонкостям в модели стрижки. Остался доволен результатом искренне благодарю за работу.
+
+                        article.comment
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Юрий
+                                    p.comment__about отзыв о барбере: <span class="">Раф</span>
+                            p.comment__text Как всегда отличная стрижка. Раф держит марку.
+
+                        article.comment
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Виктор
+                                    p.comment__about отзыв о барбере: <span class="">Олег</span>
+                            p.comment__text Олег стриг на своё усмотрение, а получилось так как я хотел, я очень доволен (кстати, и окружающие тоже). Браво, Олег!
+                            
+                        article.comment
+                            header.comment__header
+                                .comment__icon
+                                .comment__caption
+                                    h3.comment__name Георгий
+                                    p.comment__about отзыв о барбере: <span class="">Виктор</span>
+                            p.comment__text Очень понравилось качество стрижки и старательность мастера. Весьма доволен результатом.
+
+
+        footer.footer
+            .footer__info-n-contacts
+                .footer__info
+                    .footer__logo
+                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                    h2.footer__title Крупнейшая международная сеть мужских парикмахерских
+                    p.footer__subtitle Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+
+                    .footer__social
+                        p.footer__social-cta Следите за нами в соц. сетях
+                        ul.social.social--golden
+                            li.social__item
+                                a.social__icon.icon--vk(href="#") ВКонтакте
+                            li.social__item
+                                a.social__icon.icon--facebook(href="#") Facebook
+                            li.social__item
+                                a.social__icon.icon--instagram(href="#") Instagram
+
+                .footer__contacts
+                    .contact.contact--footer
+                        h3.contact__title Адрес
+                        p.contact__value ул. Театральная, 30
+                        
+                    .contact.contact--footer
+                        h3.contact__title Телефон
+                        p.contact__value 52–57–90
+
+                    .contact.contact--footer
+                        h3.contact__title Часы работы
+                        p.contact__value 10:00 — 21:00 (Вс. с 11:00)
+
+                    .footer__city Калининград
+
+            .footer__menues
+                .footer__main-nav
+                    ul.footer-menu
+                        h3.footer-menu__title Меню
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ГЛАВНАЯ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") НОВОСТИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") УСЛУГИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ФРАНШИЗА
+
+                .footer__services-nav
+                    ul.footer-menu
+                        h3.footer-menu__title Услуги
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") СТРИЖКИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") БРИТЬЁ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ТАТУИРОВКИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") БАРБЕР-СПА
+
+                .footer__info-nav
+                    ul.footer-menu
+                        h3.footer-menu__title Информация
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+
+
+            .footer__copyrights
+                p © 2014–2019 Oldboy Barbershop
