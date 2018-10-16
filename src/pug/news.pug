@@ -56,8 +56,6 @@ html(lang="en")
                     li.social__item
                         a.social__icon.icon--instagram(href="#") Instagram
 
-        main
-            //- TODO: move this to page header (hero)
             section.news-categories
                 article.news-category
                     img(src="/img/news/news-feed1-dark.jpg", alt="Oldboy Barbershop news photo")
@@ -73,26 +71,25 @@ html(lang="en")
                     img(src="/img/news/news-feed3-dark.jpg", alt="Oldboy Barbershop news photo")
                     h3.news-category__title Новости франшизы
                     p.news-category__info Старт новой косметики Barber Wild
-            //- Is it correct to place section-header here?
 
+        main
+            //- TODO: move this to page header (hero)
 
             header.section-header 
                 h2.section-header__title Наши <br>новости
                 p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
             section.news-feed
-                //- TODO: make all .news-item(s) like this
                 article.news-item
                     .news-item__photo
                         img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
 
-                    .news-item__text
+                    .news-item__content
                         header.news-item__header
                             p.news-item__category Косметика и аксессуары
                             h3.news-item__title Старт продаж новой косметики Barber Wild
 
                         footer.news-item__footer
-                            //- TODO: change strong and span to span with classes
                             p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
                             a.news-item__cta(href="#") Читать <br>полностью
 
@@ -100,7 +97,7 @@ html(lang="en")
                     .news-item__photo
                         img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
                         
-                    .news-item__text
+                    .news-item__content
                         header.news-item__header
                             p.news-item__category Новости регионов
                             h3.news-item__title Новые акции для выпускников
@@ -113,7 +110,7 @@ html(lang="en")
                     .news-item__photo
                         img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
                         
-                    .news-item__text
+                    .news-item__content
                         header.news-item__header
                             p.news-item__category Новинки
                             p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
@@ -134,7 +131,7 @@ html(lang="en")
                     p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
                         
                     .academy-banner__cta: a.button(href="#") Узнать подробнее
-            //- same here...
+
             header.section-header
                 h2.section-header__title Новости<br>регионов
                 p.section-header__subtitle Со&nbsp;всего&nbsp;мира
@@ -144,7 +141,7 @@ html(lang="en")
                     .news-item__photo
                         img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
                         
-                    .news-item__text
+                    .news-item__content
                         header.news-item__header
                             p.news-item__category Косметика и аксессуары
                             h3.news-item__title Старт продаж новой косметики Barber Wild
@@ -157,7 +154,7 @@ html(lang="en")
                     .news-item__photo
                         img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
                         
-                    .news-item__text
+                    .news-item__content
                         header.news-item__header
                             p.news-item__category Новости регионов
                             h3.news-item__title Новые акции для выпускников
@@ -170,7 +167,7 @@ html(lang="en")
                     .news-item__photo
                         img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
                         
-                    .news-item__text
+                    .news-item__content
                         header.news-item__header
                             p.news-item__category Новинки
                             p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
