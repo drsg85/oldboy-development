@@ -108,17 +108,13 @@
 }
 
 .hero__caption {
-    // box model
-    display: none;
-
-    @include atTablet {
         // box model
         display: block;
         width: 260px;
+        margin-bottom: 80px;
 
         // visual
         transform: skewY(-15deg);
-    }
 }
 
 .hero__title {
@@ -131,6 +127,16 @@
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
+}
+
+.hero__motto {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.25rem;
 }
 
 .hero__oldboy {
@@ -182,19 +188,19 @@
     // box model
     width: 220px;
     margin: 0 auto;
-    padding-bottom: 60px;
-
+    
     // typography
     // to align items on browsers without flex support
     text-align: center;
-
+    
     @include atTablet {
         // positioning
         position: relative;
         z-index: 2;
-
+        
         // box model
         margin: 0;
+        padding-bottom: 60px;
     }
 }
 
@@ -232,4 +238,18 @@
             transform: skewX(-15deg);
         }
     }
+}
+
+.hero__image {
+    // positioning
+    position: absolute;
+}
+
+.hero__image img {
+
+}
+
+.hero__aside {
+    // box model
+    display: none;
 }

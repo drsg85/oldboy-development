@@ -454,13 +454,11 @@ body {
       padding-right: 70px; } }
 
 .hero__caption {
-  display: none; }
-  @media (min-width: 700px) {
-    .hero__caption {
-      display: block;
-      width: 260px;
-      -webkit-transform: skewY(-15deg);
-      transform: skewY(-15deg); } }
+  display: block;
+  width: 260px;
+  margin-bottom: 80px;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg); }
 
 .hero__title {
   margin: 0;
@@ -469,6 +467,12 @@ body {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5; }
+
+.hero__motto {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.25rem; }
 
 .hero__oldboy {
   display: block;
@@ -505,13 +509,13 @@ body {
 .hero__buttons {
   width: 220px;
   margin: 0 auto;
-  padding-bottom: 60px;
   text-align: center; }
   @media (min-width: 700px) {
     .hero__buttons {
       position: relative;
       z-index: 2;
-      margin: 0; } }
+      margin: 0;
+      padding-bottom: 60px; } }
 
 .hero__app {
   margin: 0 -20px; }
@@ -534,6 +538,12 @@ body {
         background-size: cover;
         -webkit-transform: skewX(-15deg);
         transform: skewX(-15deg); } }
+
+.hero__image {
+  position: absolute; }
+
+.hero__aside {
+  display: none; }
 
 .contact {
   margin-bottom: 20px;
