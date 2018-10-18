@@ -389,9 +389,11 @@ body {
 .hero {
   position: relative;
   padding: 20px;
-  padding-bottom: 140px;
+  padding-bottom: 100px;
   background-color: #131313;
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: url("./img/bgs/hero-m.jpg");
+  background-position: bottom center; }
   @media (min-width: 700px) {
     .hero {
       padding: 40px;
@@ -453,6 +455,9 @@ body {
       z-index: 2;
       padding-right: 70px; } }
 
+.hero__content {
+  position: relative; }
+
 .hero__caption {
   display: block;
   width: 260px;
@@ -485,7 +490,7 @@ body {
   border-bottom: 4px solid #d6a354;
   border-top: 4px solid #d6a354; }
 
-.hero__city {
+.hero__location {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
@@ -540,7 +545,12 @@ body {
         transform: skewX(-15deg); } }
 
 .hero__image {
-  position: absolute; }
+  position: absolute;
+  bottom: 0;
+  display: none; }
+
+.hero__image img {
+  width: 100%; }
 
 .hero__aside {
   display: none; }
@@ -990,101 +1000,6 @@ body {
   @media (min-width: 1900px) {
     .city-form__input {
       width: 600px; } }
-
-.featured-location {
-  padding: 25px;
-  border-bottom: 1px solid rgba(174, 174, 174, 0.5);
-  border-top: 1px solid rgba(174, 174, 174, 0.5); }
-  @media (min-width: 1000px) {
-    .featured-location {
-      padding: 30px 50px; } }
-
-@media (min-width: 600px) {
-  .featured-location__header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; } }
-
-.featured-location__caption {
-  position: relative;
-  -webkit-transform: skewY(-15deg);
-  transform: skewY(-15deg);
-  display: inline-block;
-  vertical-align: top;
-  border-top: 3px solid #d6a354; }
-  @media (min-width: 600px) {
-    .featured-location__caption {
-      margin-right: 40px; } }
-  @media (min-width: 1000px) {
-    .featured-location__caption {
-      margin-bottom: 40px;
-      margin-right: 40px;
-      margin-top: 40px; } }
-
-.featured-location__buttons {
-  margin-right: 0;
-  margin-left: auto;
-  max-width: 180px; }
-  @media (min-width: 450px) {
-    .featured-location__buttons {
-      margin-top: -60px; } }
-  @media (min-width: 600px) {
-    .featured-location__buttons {
-      margin: 0;
-      max-width: inherit; } }
-
-.featured-location__title {
-  margin: 0;
-  padding: 5px;
-  font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem; }
-  @media (min-width: 1000px) {
-    .featured-location__title {
-      padding: 15px;
-      padding-bottom: 5px;
-      font-size: 3rem; } }
-
-.featured-location__subtitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  color: #d6a354;
-  font-family: "Rex", Arial, sans-serif;
-  text-align: right; }
-  .featured-location__subtitle::before {
-    content: "";
-    position: relative;
-    display: block;
-    height: 3px;
-    width: 100%;
-    margin-right: 5px;
-    top: 8px;
-    background-color: #d6a354; }
-  @media (min-width: 1000px) {
-    .featured-location__subtitle {
-      font-size: 1.25rem; }
-      .featured-location__subtitle::before {
-        top: 10px; } }
-
-.featured-location__content {
-  padding: 25px; }
-  @media (min-width: 1000px) {
-    .featured-location__content {
-      margin-left: 225px; } }
-
-@media (min-width: 700px) {
-  .featured-location__content .location-list {
-    -webkit-column-count: 2;
-    column-count: 2; } }
-
-@media (min-width: 1200px) {
-  .featured-location__content .location-list {
-    -webkit-column-count: 3;
-    column-count: 3; } }
 
 .location-list {
   padding: 0;
@@ -2217,20 +2132,6 @@ body {
     margin-top: 5px;
     color: #d6a354;
     line-height: 20px; }
-
-.active-map {
-  width: 250px;
-  margin: 0 auto;
-  margin-top: 155px;
-  margin-bottom: 45px; }
-  .active-map a {
-    color: #ffffff;
-    font-family: "Rex", Arial, sans-serif;
-    font-size: 1rem;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .active-map a span {
-      color: #d6a354; }
 
 .show-locations {
   display: -webkit-box;

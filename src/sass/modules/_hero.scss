@@ -4,11 +4,14 @@
 
     // box model
     padding: 20px;
-    padding-bottom: 140px;
+    padding-bottom: 100px;
 
     // visual
     background-color: $dark;
     overflow: hidden;
+
+    background-image: url('./img/bgs/hero-m.jpg');
+    background-position: bottom center;
     
     @include atTablet {
         // box model
@@ -18,6 +21,14 @@
         // visual
         background-image: url('./img/bgs/hero-t.jpg');
         background-size: cover;
+    }
+
+    &--city {
+
+    }
+
+    &--branch {
+
     }
 }
 
@@ -107,6 +118,11 @@
     }
 }
 
+.hero__content {
+    // positioning
+    position: relative;
+}
+
 .hero__caption {
         // box model
         display: block;
@@ -156,7 +172,7 @@
     border-top: 4px solid $golden;
 }
 
-.hero__city {
+.hero__location {
     // box model
     margin: 0;
 
@@ -243,10 +259,15 @@
 .hero__image {
     // positioning
     position: absolute;
+    bottom: 0;
+    
+    // box model
+    display: none;
 }
 
 .hero__image img {
-
+    // box model
+    width: 100%;
 }
 
 .hero__aside {
