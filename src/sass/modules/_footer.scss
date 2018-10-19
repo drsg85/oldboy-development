@@ -35,7 +35,9 @@
 
 .footer__info {
     // box model
-    padding-bottom: 20px;
+    padding: 20px;
+    // padding-bottom: 20px;
+    padding-top: 0;
 
     @include atTablet {
         // box model

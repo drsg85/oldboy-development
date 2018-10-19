@@ -2700,7 +2700,8 @@ body {
     justify-content: space-between; } }
 
 .footer__info {
-  padding-bottom: 20px; }
+  padding: 20px;
+  padding-top: 0; }
   @media (min-width: 700px) {
     .footer__info {
       padding-bottom: 40px;
