@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav
+                    nav.main-nav
+                        ul.main-nav__list
+                            li.main-nav__item: a(href="#").main-nav__link Главная
+                            li.main-nav__item: a(href="#").main-nav__link Новости
+                            li.main-nav__item: a(href="#").main-nav__link Услуги
+                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+
+                .hero__city-select
+                    .city-select
+                        p.city-select__title Выбери свой город: 
+                        p.city-select__city
+                            a(href="choose-city.html") Калининград <span class="city-select__triangle">▼</span>
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+
+
+        footer.footer
+            .footer__info-n-contacts
+                .footer__info
+                    .footer__logo
+                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                    h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
+                    p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
+                    p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+
+            .footer__menues
+                .footer__main-nav
+                    ul.footer-menu
+                        h3.footer-menu__title Меню
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ГЛАВНАЯ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") НОВОСТИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") УСЛУГИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ФРАНШИЗА
+
+                .footer__services-nav
+                    ul.footer-menu
+                        h3.footer-menu__title Услуги
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") СТРИЖКИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") БРИТЬЁ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ТАТУИРОВКИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") БАРБЕР-СПА
+
+                .footer__info-nav
+                    ul.footer-menu
+                        h3.footer-menu__title Информация
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                        li.footer-menu__item
+                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+
+
+            .footer__copyrights
+                p © 2014–2019 Oldboy Barbershop

@@ -13,7 +13,7 @@ html(lang="en")
         header.hero
             .hero__top
                 .hero__logo
-                    a(href="#")
+                    a(href="index.html")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav
@@ -24,185 +24,26 @@ html(lang="en")
                             li.main-nav__item: a(href="#").main-nav__link Услуги
                             li.main-nav__item: a(href="#").main-nav__link Франшиза
 
-                .hero__city
+                .hero__city-select
                     .city-select
                         p.city-select__title Выбери свой город: 
                         p.city-select__city
-                            a(href="#") Калининград <span class="city-select__triangle">▼</span>
+                            a(href="choose-city.html") Калининград <span class="city-select__triangle">▼</span>
 
                 .menu-button.menu-button--close
                     .menu-button__middle
 
-            .hero__caption 
-                h1 Крупнейшая международная сеть мужских парикмахерских Oldboy Barbershop
-                p Калининград Театральная 30
-
-            .hero__contacts
-                .contact
-                    h2.contact__title Адрес
-                    p.contact__value ул. Театральная, 30
-                    
-                .contact
-                    h2.contact__title Телефон
-                    p.contact__value 52–57–90
-
-                .contact
-                    h2.contact__title Часы работы
-                    p.contact__value 10:00 — 21:00 (Вс. с 11:00)
-
-            .hero__buttons
-                a.button(href="#") Запись онлайн<br>
-                a.button.button--ghost(href="#") Сертификат
-
-                ul.social
-                    li.social__item
-                        a.social__icon.icon--vk(href="#") ВКонтакте
-                    li.social__item
-                        a.social__icon.icon--facebook(href="#") Facebook
-                    li.social__item
-                        a.social__icon.icon--instagram(href="#") Instagram
-
-            .hero__app
-                article.app-promo
-                    header.app-promo__header
-                        h2.app-promo__title Установите специальное <br><strong>мобильное приложение</strong>
-                        p.app-promo__subtitle для удобной онлайн–записи
-
-                    .app-promo__image
-                        img(src="/img/app.png", alt="Oldboy Barbershop mobile application", title="Приложение Oldboy Barbershop")
-
-                    .app-promo__buttons
-                        //- p.app-promo__call Скачайте мобильное приложение
-                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
-
-                        a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> APP STORE
-
-        main
-            section.promos
-                .promos__header
-                    header.section-header
-                        h2.section-header__title Акции <br>барбершопа
-                        p.section-header__subtitle Режем&nbsp;цены
-
-
-
-                .promos__content
-                    //- place news item code here
-                    article.news-item 
-                        header.news-item__header  
-                            p.news-item__city Калининград
-                            p.news-item__category Косметика и аксессуары
-                            h3.news-item__title Старт продаж новой линейки косметики Barber WILD
-                            p.news-item__description Самый ожидаемый старт сезона уже в эти выходные
-                        
-                        .news-item__photo
-                             img(src="img/news-item/photo.jpg", alt="Новостная фотография")
-
-                        footer.news-item__footer
-                            .news-item__date 
-                                p.news-item__number 27
-                                p.news-item__month Июля <br>2018
-                            a.news-item__more(href="#") Читать&nbsp;полностью
-                        
-
-
-
-            section.testimonials
-                .testimonials__header
-                    header.section-header
-                        h2.section-header__title Ваши <br>отзывы
-                        p.section-header__subtitle Что&nbsp;говорят&nbsp;клиенты
-
-                .testimonials__content
-                    .testimonials__main-comment
-                        article.comment.comment--main
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Виктор
-                                    p.comment__about отзыв о барбере: <span class="">Олег</span>
-                            p.comment__text Олег стриг на своё усмотрение, а получилось так как я хотел, я очень доволен (кстати, и окружающие тоже). Браво, Олег!
-
-                    .testimonials__comments
-                        article.comment
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Виктор
-                                    p.comment__about отзыв о барбере: <span class="">Олег</span>
-                            p.comment__text Олег стриг на своё усмотрение, а получилось так как я хотел, я очень доволен (кстати, и окружающие тоже). Браво, Олег!
-                            
-                        article.comment
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Георгий
-                                    p.comment__about отзыв о барбере: <span class="">Виктор</span>
-                            p.comment__text Очень понравилось качество стрижки и старательность мастера. Весьма доволен результатом.
-
-                        article.comment
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Алексей
-                                    p.comment__about отзыв о барбере: <span class="">Даниил</span>
-                            p.comment__text Даниил - отличный Мастер, как и всегда ребята. Приобщает его тщательность, скурпулёзность и внимание к тонкостям в модели стрижки. Остался доволен результатом искренне благодарю за работу.
-
-                        article.comment
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Юрий
-                                    p.comment__about отзыв о барбере: <span class="">Раф</span>
-                            p.comment__text Как всегда отличная стрижка. Раф держит марку.
-
-                        article.comment
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Виктор
-                                    p.comment__about отзыв о барбере: <span class="">Олег</span>
-                            p.comment__text Олег стриг на своё усмотрение, а получилось так как я хотел, я очень доволен (кстати, и окружающие тоже). Браво, Олег!
-                            
-                        article.comment
-                            header.comment__header
-                                .comment__icon
-                                .comment__caption
-                                    h3.comment__name Георгий
-                                    p.comment__about отзыв о барбере: <span class="">Виктор</span>
-                            p.comment__text Очень понравилось качество стрижки и старательность мастера. Весьма доволен результатом.
+            .hero__content
 
 
         footer.footer
-            .footer__info
-                .footer__logo
-                    img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                h2.footer__title Крупнейшая международная сеть мужских парикмахерских
-                p.footer__subtitle Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
-
-                .footer__social
-                    ul.social.social--golden
-                        li.social__item
-                            a.social__icon.icon--vk(href="#") ВКонтакте
-                        li.social__item
-                            a.social__icon.icon--facebook(href="#") Facebook
-                        li.social__item
-                            a.social__icon.icon--instagram(href="#") Instagram
-
-            .footer__contacts
-                .contact.contact--footer
-                    h3.contact__title Адрес
-                    p.contact__value ул. Театральная, 30
-                    
-                .contact.contact--footer
-                    h3.contact__title Телефон
-                    p.contact__value 52–57–90
-
-                .contact.contact--footer
-                    h3.contact__title Часы работы
-                    p.contact__value 10:00 — 21:00 (Вс. с 11:00)
-
-                .footer__city Калининград
+            .footer__info-n-contacts
+                .footer__info
+                    .footer__logo
+                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                    h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
+                    p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
+                    p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
 
             .footer__menues
                 .footer__main-nav
@@ -230,7 +71,7 @@ html(lang="en")
                             a.footer-menu__link(href="") БАРБЕР-СПА
 
                 .footer__info-nav
-                    ul.footer-menu.footer-menu--small
+                    ul.footer-menu
                         h3.footer-menu__title Информация
                         li.footer-menu__item
                             a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
@@ -238,5 +79,5 @@ html(lang="en")
                             a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
 
-                .footer__copyrights
-                    p © 2014–2019 Oldboy Barbershop
+            .footer__copyrights
+                p © 2014–2019 Oldboy Barbershop
