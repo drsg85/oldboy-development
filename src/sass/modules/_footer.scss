@@ -64,12 +64,12 @@
 .footer__title {
     // typography
     color: $golden;
-    font-family: $mainFont;
-    font-size: 1rem;
+    font-family: $titleFont;
+    font-size: 1.25rem;
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
-
+    
     @include atTablet {
         // typography
         text-align: left;
@@ -77,14 +77,21 @@
 }
 
 .footer__subtitle {
-    // box model
-    padding-bottom: 40px;
-    
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer__text {
     // typography
     color: $lightGrey;
     font-family: $mainFont;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    // font-weight: 600;
     line-height: 1.5;
     text-align: center;
 
@@ -95,6 +102,9 @@
 }
 
 .footer__social {
+    // box model
+    margin-bottom: 20px;
+
     // typography
     text-align: center;
 
@@ -106,7 +116,7 @@
 
 .footer__social-cta {
     // box model
-
+    
     // typography
     color: $golden;
     font-family: $titleFont;
@@ -115,7 +125,10 @@
 
 .footer__contacts {
     // box model
-    padding: 30px 0;
+    padding: 15px 0;
+
+    // visual
+    border-top: 2px solid $golden;
 
     @include atTablet {
         // box model
@@ -142,12 +155,12 @@
 }
 
 .footer__menues {
+    // box model
+    margin-bottom: 40px;
+
     // visual
     border-top: 2px solid $golden;
     border-bottom: 2px solid $golden;
-
-    // box model
-    margin-bottom: 40px;
 
     @include atTablet {
         // box model
