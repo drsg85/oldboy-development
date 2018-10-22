@@ -136,49 +136,46 @@ html(lang="en")
                     p.news__see-more Узнайте ещё больше новостей барбершопов oldboy
 
             section.services
-                header.section-header
-                    h2.section-header__title Услуги <br>барбершопа
-                    p.section-header__subtitle Стрижем&nbsp;и&nbsp;бреем
+                .services__header
+                    header.section-header
+                        h2.section-header__title Услуги <br>барбершопа
+                        p.section-header__subtitle Стрижем&nbsp;и&nbsp;бреем
 
                 .services__content
-                    article.service-main
-                        img(src="/img/service-photo1.jpg", alt="Мужские стрижки в Oldboy Барбершоп")
-                        header.service-main__header
-                            h3.service-main__title Мужские<br><span>стрижки</span>
-                            p.service-main__description Лучшее качество
+                    .services__main
+                        article.service-main
+                            header.service-main__header
+                                h3.service-main__title Мужские<br><strong>стрижки</strong>
+                                p.service-main__subtitle Лучшее качество
+                            a.service-main__button(href="#") Все о стрижках
 
-                        a.service-main__button(href="#") Все о стрижках
+                        article.service-main
+                            header.service-main__header
+                                h3.service-main__title Стрижка<br> <strong>усов и бороды</strong>
+                                p.service-main__subtitle Наша специализация
+                            a.service-main__button(href="#") Усы и борода
 
-                    article.service-main
-                        img(src="/img/service-photo2.jpg", alt="Стрижка усов и бороды в Oldboy Барбершоп")
-                        header.service-main__header
-                            h3.service-main__title Стрижка<br> <span>усов и бороды</span>
-                            p.service-main__description Наша специализация
+                    .services__secondary
+                        article.service-item
+                            header.service-item__header
+                                p.service-item__subtitle Стиль и профессионализм
+                                h3.service-item__title <strong>Бритьё</strong><br>бороды и головы
+                            a.service-item__button(href="#") Услуги бритья
 
-                        a.service-main__button(href="#") Усы и борода
+                        article.service-item
+                            .service-item__header
+                                p.service-item__subtitle Для настоящих ценителей
+                                h3.service-item__title <strong>Королевское</strong><br> бритьё
+                            a.service-item__button(href="#") Для ценителей
 
-                    article.service-item
-                        header.service-item__header
-                            p.service-item__description Стиль и профессионализм
-                            h3.service-item__title <span>Бритьё</span><br>бороды и головы
+                        article.service-item
+                            .service-item__header
+                                p.service-item__subtitle Лучшие мастера
+                                h3.service-item__title <strong>Нанесение</strong><br>татуировок
+                            a.service-item__button(href="#") Услуги тату салона
 
-                        a.service-item__button(href="#") Услуги бритья
 
-                    article.service-item
-                        .service-item__header
-                            p.service-item__description Для настоящих ценителей
-                            h3.service-item__title <span>Королевское</span><br> бритьё
-
-                        a.service-item__button(href="#") Для ценителей
-
-                    article.service-item
-                        .service-item__header
-                            p.service-item__description Лучшие мастера
-                            h3.service-item__title <span>Нанесение</span><br>татуировок
-
-                        a.service-item__button(href="#") Услуги тату салона
-
-                    a.button(href="#") Показать все услуги
+                    //- a.button(href="#") Показать все услуги
 
             section.academy-banner
                 header.academy-banner__header

@@ -1,29 +1,22 @@
+.services {
+
+}
+
+.services__header {
+    // box model
+    padding-bottom: 20px;
+}
+
 .services__content {
     // box model
-    padding: 0 20px;
-    margin-top: 15px;
-    margin-bottom: 75px;
-    
-    // typography
-    text-align: center;
+    padding: 20px;
+}
 
-    // visual
-    background-image: url("/img/razors.svg");
-    background-position: 50% 85%;
-    background-repeat: no-repeat;
-    background-size: 50% 42%;
+.services__main {
+    // box model
+    margin-bottom: 40px;
+}
 
-    .button {
-        // box model
-        width: 295px;
-        margin: 0;
-        margin-top: 65px;
+.services__secondary {
 
-        // typography
-        color: $dark;
-        font-family: $mainFont;
-
-        // visual
-        background-color: transparent;
-    }
 }
