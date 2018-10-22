@@ -2802,8 +2802,9 @@ body {
 .button {
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  min-width: 200px;
   margin-bottom: 20px;
+  padding: 0 20px;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
