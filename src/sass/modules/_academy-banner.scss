@@ -1,17 +1,20 @@
 .academy-banner {
     // box model
-    margin: 30px;
-    padding: 30px;
+    margin: 25px;
+    padding: 25px;
     
     // visual
     background-color: $light;
-    box-shadow: 0 20px 30px -10px rgba($dark, 0.25);
+    box-shadow: 0 10px 30px -10px rgba($dark, 0.25), 
+                0 0 2px -1px rgba($dark, 0.5);
+    background-image: url('./img/bgs/academy-m.jpg');
+    overflow: hidden;
 
-    @include atFullHD {
-        // box model
-        display: flex;
-        justify-content: space-around;
-    }
+    // @include atFullHD {
+    //     // box model
+    //     display: flex;
+    //     justify-content: space-around;
+    // }
 }
 
 .academy-banner__header {
@@ -28,18 +31,23 @@
 .academy-banner__title {
     // box model
     max-width: 320px;
-    margin: 10px -30px;
-    margin-right: 0;
-    padding: 10px 30px;
+    margin: 10px -25px;
+    padding: 10px 25px;
     
     // typography
     color: $dark;
     font-family: $titleFont;
-    font-size: 3rem;
+    font-size: 1.5rem;
 
     // visual
+    background-color: $light;
     border-bottom: 4px solid $golden;
     border-top: 4px solid $golden;
+}
+
+.academy-banner__title strong {
+    // typography
+    font-size: 2em;
 }
 
 .academy-banner__subtitle {
@@ -53,27 +61,28 @@
 }
 
 .academy-banner__content {
-
+    // box model
+    margin-bottom: 20px;
 }
 
 .academy-banner__motto {
     // typography
     font-family: $mainFont;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
     line-height: 1.5;
     text-transform: uppercase;
 
-    @include atFullHD {
-        // typography
-        font-size: 1.3rem;
-    }
+    // @include atFullHD {
+    //     // typography
+    //     font-size: 1.3rem;
+    // }
 }
 
 .academy-banner__text {
     // typography
     font-family: $mainFont;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -94,7 +103,5 @@
 }
 
 .academy-banner__cta {
-    // typography
-    color: $golden;
-    text-decoration: none;
+
 }

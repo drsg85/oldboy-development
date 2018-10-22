@@ -2378,18 +2378,13 @@ body {
   object-fit: cover; }
 
 .academy-banner {
-  margin: 30px;
-  padding: 30px;
+  margin: 25px;
+  padding: 25px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 20px 30px -10px rgba(19, 19, 19, 0.25);
-  box-shadow: 0 20px 30px -10px rgba(19, 19, 19, 0.25); }
-  @media (min-width: 1900px) {
-    .academy-banner {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: distribute;
-      justify-content: space-around; } }
+  -webkit-box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
+  background-image: url("./img/bgs/academy-m.jpg");
+  overflow: hidden; }
 
 .academy-banner__header {
   -webkit-transform: skewY(-15deg);
@@ -2402,14 +2397,17 @@ body {
 
 .academy-banner__title {
   max-width: 320px;
-  margin: 10px -30px;
-  margin-right: 0;
-  padding: 10px 30px;
+  margin: 10px -25px;
+  padding: 10px 25px;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 3rem;
+  font-size: 1.5rem;
+  background-color: #ffffff;
   border-bottom: 4px solid #d6a354;
   border-top: 4px solid #d6a354; }
+
+.academy-banner__title strong {
+  font-size: 2em; }
 
 .academy-banner__subtitle {
   margin: 0;
@@ -2417,19 +2415,19 @@ body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
 
+.academy-banner__content {
+  margin-bottom: 20px; }
+
 .academy-banner__motto {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase; }
-  @media (min-width: 1900px) {
-    .academy-banner__motto {
-      font-size: 1.3rem; } }
 
 .academy-banner__text {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.5; }
 
@@ -2441,10 +2439,6 @@ body {
   text-transform: uppercase; }
 
 .academy-banner__phone {
-  color: #d6a354;
-  text-decoration: none; }
-
-.academy-banner__cta {
   color: #d6a354;
   text-decoration: none; }
 
