@@ -308,6 +308,11 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
 *,
 *::before,
 *::after {
@@ -2378,13 +2383,22 @@ body {
   object-fit: cover; }
 
 .academy-banner {
+  position: relative;
   margin: 25px;
   padding: 25px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
   box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
-  background-image: url("./img/bgs/academy-m.jpg");
-  overflow: hidden; }
+  background-image: url("./img/bgs/academy-m.jpg"); }
+
+.academy-banner::before {
+  content: '';
+  position: absolute;
+  right: -200px;
+  top: 150px;
+  width: 342px;
+  height: 492px;
+  background-image: url("./img/scissors.png"); }
 
 .academy-banner__header {
   -webkit-transform: skewY(-15deg);
@@ -2402,7 +2416,6 @@ body {
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
-  background-color: #ffffff;
   border-bottom: 4px solid #d6a354;
   border-top: 4px solid #d6a354; }
 

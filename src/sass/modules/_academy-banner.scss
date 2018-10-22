@@ -1,4 +1,7 @@
 .academy-banner {
+    // positioning
+    position: relative;
+
     // box model
     margin: 25px;
     padding: 25px;
@@ -8,13 +11,30 @@
     box-shadow: 0 10px 30px -10px rgba($dark, 0.25), 
                 0 0 2px -1px rgba($dark, 0.5);
     background-image: url('./img/bgs/academy-m.jpg');
-    overflow: hidden;
+    // overflow: hidden;
 
     // @include atFullHD {
     //     // box model
     //     display: flex;
     //     justify-content: space-around;
     // }
+}
+
+.academy-banner::before {
+    content: '';
+
+    // positioning
+    position: absolute;
+    right: -200px;
+    top: 150px;
+
+    // box model
+    width: 342px;
+    height: 492px;
+
+    // visual
+    // border: 1px solid red;
+    background-image: url('./img/scissors.png');
 }
 
 .academy-banner__header {
@@ -40,7 +60,7 @@
     font-size: 1.5rem;
 
     // visual
-    background-color: $light;
+    // background-color: $light;
     border-bottom: 4px solid $golden;
     border-top: 4px solid $golden;
 }
