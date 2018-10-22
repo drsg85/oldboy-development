@@ -1,0 +1,28 @@
+.date {
+    // box model
+    display: flex;
+    align-items: center;
+    
+    // typography
+    color: $lightGrey;
+    font-family: $titleFont;
+    text-transform: uppercase;
+}
+
+.date__day {
+    // typography
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.date__m-n-y {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0.5em;
+
+    // typography
+    font-size: 1.125em;
+    line-height: 1.22;
+}

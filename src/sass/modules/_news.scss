@@ -1,54 +1,50 @@
 .news {
     // box model
     margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.news__header {
+    // box model
+    padding-bottom: 20px;
+
+    // visual
+    background-image: linear-gradient(to bottom, $light, $bianca);
+}
+
+.news__editorial {
+    // box model
+    padding: 20px;
+
+    // visual
+    background-color: $bianca;
 }
 
 .news__feed {
     // box model
-    padding: 0 20px;
-    margin-bottom: 50px;
+    padding: 20px;
 
-    @include atFullHD {
-        // box model
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
-        margin-left: 80px;
-        margin-top: -200px;
-        padding: 120px 140px;
+    // @include atFullHD {
+    //     // box model
+    //     display: flex;
+    //     justify-content: space-between;
+    //     margin-bottom: 30px;
+    //     margin-left: 80px;
+    //     margin-top: -200px;
+    //     padding: 120px 140px;
 
-        // visual
-        background-color: #fdf6ee;
-    }
+    //     // visual
+    //     background-color: #fdf6ee;
+    // }
 }
 
-.news__feed__cta {
+.news__more {
     // box model
     text-align: center;
-    margin-top: 40px;
-
-    .button {
-    // box model
-    display: inline-block;
-    margin: 0;
-    margin-bottom: 30px;
-    vertical-align: top;
-    width: 290px;
-
-    // typography
-    color: $dark;
-    font-family: $mainFont;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    
-    // visual
-    background-color: transparent;
-    border: 2px solid $golden;
-    }
 }
 
-.news__feed__see-more {
+// TODO: remove this
+.news__see-more {
     // box model
     margin: 0;
 
@@ -56,5 +52,6 @@
     color: $dark;
     font-family: $mainFont;
     font-weight: 600;
+    line-height: 1.5;
     text-transform: uppercase;
 }

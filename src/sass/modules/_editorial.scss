@@ -1,10 +1,5 @@
 .editorial {
-    // box model
-    padding: 0 20px;
-    margin-bottom: 20px;
 
-    // visual
-    background-color: #fbf6ee;
 }
 
 .editorial__photo {
@@ -16,15 +11,28 @@
     // box model
     width: 100%;
 
+    // TODO: maybe add object-fit
+
     // visual
     border-radius: 5px;
     box-shadow: 0 10px 15px 0 rgba(19, 19, 19, 0.25);
 }
 
-.editorial__description {
+.editorial__content {
+    // box model
+    margin-top: -55px;
+}
+
+.editorial__caption {
     // box model
     margin: 0;
-    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.editorial__category {
+    // box model
+    margin: 0;
+    margin-bottom: 25px;
     margin-left: 15px;
 
     // typography
@@ -33,15 +41,10 @@
     font-size: 0.85rem;
 }
 
-.editorial__caption {
-    // box model
-    margin: 0;
-}
-
 .editorial__title {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 
     // typography
     color: $dark;
@@ -69,46 +72,23 @@
     // box model
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .editorial__date {
-    // box model
-    display: flex;
-
     // typography
-    color: $lightGrey;
-    font-family: $titleFont;
-    text-transform: uppercase;
-
-    strong {
-        // box model
-        display: block;
-
-        // typography
-        font-size: 3rem;
-        font-weight: 600;
-    }
-
-    span {
-        // box model
-        display: block;
-        margin-top: 5px;
-        margin-left: 10px;
-
-        // typography
-        line-height: 23px;
-    }
+    font-size: 1rem;
 }
 
 .editorial__cta {
     // box model
-    margin-top: 30px;
     padding: 0 10px;
 
     // typography
     color: $golden;
     font-family: $mainFont;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
+    text-transform: uppercase;
 }

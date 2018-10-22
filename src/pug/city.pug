@@ -47,66 +47,81 @@ html(lang="en")
 
         main
             section.news
-                header.section-header
-                    h2.section-header__title Новости<br>в городе
-                    p.section-header__subtitle Калининград
+                .news__header
+                    header.section-header
+                        h2.section-header__title Наши <br>новости
+                        p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
-                .editorial
-                    .editorial__photo
-                        img(src="/img/news/opening.jpg", alt="Barbershop main news photo")
-                        p.editorial__description Новости франшизы
+                .news__editorial
+                    .editorial
+                        .editorial__photo
+                            img(src="/img/news/opening.jpg", alt="Barbershop main news photo")
 
-                    .editorial__caption
-                        h3.editorial__title Открытие нового барбершопа Oldboy в барселоне
-                        p.editorial__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
+                        .editorial__content
+                            .editorial__caption
+                                p.editorial__category Новости франшизы
+                                h3.editorial__title Открытие нового барбершопа Oldboy в барселоне
+                                p.editorial__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в&nbsp;конце августа
 
-                    footer.editorial__footer
-                        p.editorial__date <strong>27</strong> <span>июля<br>2018</span>
-                        a.editorial__cta(href="#") Читать полностью
+                            footer.editorial__footer
+                                .editorial__date
+                                    .date
+                                        span.date__day 27
+                                        span.date__m-n-y <span>июля</span> <span>2018</span>
+                                a.editorial__cta(href="#") Читать полностью
 
-            section.news-feed
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                .news__feed
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
                         
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Косметика и аксессуары
-                            h3.news-item__title Старт продаж новой косметики Barber Wild
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Косметика и аксессуары
+                                h3.news-item__title Старт продаж новой косметики Barber Wild
 
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                .news-item__date
+                                    .date
+                                        span.date__day 27
+                                        span.date__m-n-y <span>июля</span> <span>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
                         
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Новости регионов
-                            h3.news-item__title Новые акции для выпускников
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новости регионов
+                                h3.news-item__title Новые акции для выпускников
 
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                .news-item__date
+                                    .date
+                                        span.date__day 27
+                                        span.date__m-n-y <span>июля</span> <span>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
 
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Новинки
-                            p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новинки
+                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
 
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                .news-item__date
+                                    .date
+                                        span.date__day 27
+                                        span.date__m-n-y <span>июля</span> <span>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                .news-feed__cta
+                .news__more
                     a.button(href="#") Смотреть все новости
-                    p.news-feed__see-more Узнайте ещё больше новостей барбершопов oldboy
+                    p.news__see-more Узнайте ещё больше новостей барбершопов oldboy
 
             section.promos
                 .promos__header
