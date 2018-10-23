@@ -626,7 +626,7 @@ html, body {
 
 .menu-button {
   position: fixed;
-  right: 15px;
+  right: 25px;
   top: 15px;
   z-index: 9;
   height: 48px;
@@ -1656,7 +1656,13 @@ html, body {
   margin: 0;
   margin-bottom: 25px;
   background-color: #896322;
-  border-radius: 5px; }
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center; }
+  .service-main--haircut {
+    background-image: url("./img/bgs/haircut.jpg"); }
+  .service-main--beard {
+    background-image: url("./img/bgs/beard.jpg"); }
 
 .service-main__header {
   margin: 0;
@@ -1708,8 +1714,19 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 40px;
-  padding: 0 3px; }
+  margin-bottom: 30px;
+  padding: 15px 3px;
+  background-size: contain;
+  background-position: left 90px center;
+  background-repeat: no-repeat; }
+  .service-item--shaving {
+    background-image: url("./img/icons/razor.svg"); }
+  .service-item--royal {
+    background-image: url("./img/icons/shavette.svg"); }
+  .service-item--tattoo {
+    background-image: url("./img/icons/tattoo.svg"); }
+  .service-item--spa {
+    background-image: url("./img/icons/spa.png"); }
 
 .service-item__header {
   -ms-flex-preferred-size: 50%;

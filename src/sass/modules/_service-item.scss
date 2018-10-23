@@ -1,9 +1,35 @@
 .service-item {
+    // box model
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
-    padding: 0 3px;
+    margin-bottom: 30px;
+    padding: 15px 3px;
+
+    // visual
+    background-size: contain;
+    background-position: left 90px center;
+    background-repeat: no-repeat;
+
+    &--shaving {
+        // visual
+        background-image: url('./img/icons/razor.svg');
+    }
+    
+    &--royal {
+        // visual
+        background-image: url('./img/icons/shavette.svg');
+    }
+    
+    &--tattoo {
+        // visual
+        background-image: url('./img/icons/tattoo.svg');
+    }
+    
+    &--spa {
+        // visual
+        background-image: url('./img/icons/spa.png');
+    }
 }
 
 .service-item__header {
