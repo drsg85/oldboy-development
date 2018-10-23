@@ -22,9 +22,11 @@
         background-image: url('./img/bgs/hero-t.jpg');
         background-size: cover;
     }
-
+    
     &--city {
-
+        // visual
+        background-image: url('./img/bgs/map.jpg');
+        background-position: top left;
     }
 
     &--branch {
