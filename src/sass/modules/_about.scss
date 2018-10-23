@@ -1,0 +1,48 @@
+.about {
+
+}
+
+.about__header {
+
+}
+
+.about__content {
+    // box model
+    padding: 20px;
+    margin-top: -30px;
+}
+
+.about__headline {
+    // box model
+    width: 220px;
+    margin: 0;
+    margin-left: auto;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.about__subtitle {
+    // box model
+    margin-bottom: 40px;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    line-height: 1.75;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.about__text {
+    // typography
+    font-family: $mainFont;
+    line-height: 1.75;
+}
+
+.about__features {
+
+}
