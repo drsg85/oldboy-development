@@ -2669,7 +2669,12 @@ html, body {
 
 .footer {
   padding: 40px 20px;
-  background-color: #131313; }
+  padding-top: 60px;
+  background-color: #131313;
+  background-image: url("./img/white-grunge-180.svg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: top -170px center; }
   @media (min-width: 700px) {
     .footer {
       padding: 80px 40px;
