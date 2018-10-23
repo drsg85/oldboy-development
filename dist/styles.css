@@ -1290,11 +1290,8 @@ html, body {
   -o-object-fit: cover;
   object-fit: cover; }
 
-.promos {
-  margin-top: -50px; }
-
 .promos__content {
-  padding: 20px; }
+  padding: 40px 20px; }
   @media (min-width: 700px) {
     .promos__content {
       display: -webkit-box;
@@ -2258,17 +2255,20 @@ html, body {
   .quote-404__text span {
     font-size: 0.65rem; }
 
-@media (min-width: 700px) {
-  .price-list {
-    padding-bottom: 400px;
-    background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
-    background-size: contain, contain;
-    background-position: top center, bottom center;
-    background-repeat: no-repeat, no-repeat; } }
+.price-list {
+  margin-bottom: -25px; }
+  @media (min-width: 700px) {
+    .price-list {
+      padding-bottom: 400px;
+      background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
+      background-size: contain, contain;
+      background-position: top center, bottom center;
+      background-repeat: no-repeat, no-repeat; } }
 
 .price-list__content {
   position: relative;
-  padding: 120px 20px;
+  padding: 60px 20px;
+  padding-bottom: 30px;
   background-color: #131313; }
   @media (min-width: 700px) {
     .price-list__content {
