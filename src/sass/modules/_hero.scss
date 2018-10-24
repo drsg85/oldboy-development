@@ -30,7 +30,8 @@
     }
 
     &--branch {
-
+        // visual
+        background-image: none;
     }
 }
 
@@ -126,13 +127,19 @@
 }
 
 .hero__caption {
-        // box model
-        display: block;
-        width: 200px;
-        margin-bottom: 80px;
+    // box model
+    display: block;
+    width: 200px;
+    margin-bottom: 80px;
 
-        // visual
-        transform: skewY(-15deg);
+    // visual
+    transform: skewY(-15deg);
+
+    &--branch {
+        // box model
+        opacity: 0;
+        margin-bottom: -160px;
+    }
 }
 
 .hero__title {
@@ -186,6 +193,7 @@
 
 .hero__contacts {
     // box model
+    margin-top: -80px;
     padding-bottom: 30px;
     padding-top: 15px;
 
@@ -206,7 +214,7 @@
     // box model
     width: 220px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     
     // typography
     // to align items on browsers without flex support

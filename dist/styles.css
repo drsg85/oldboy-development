@@ -408,6 +408,8 @@ html, body {
   .hero--city {
     background-image: url("./img/bgs/map.jpg");
     background-position: top left; }
+  .hero--branch {
+    background-image: none; }
 
 .hero::after {
   content: '';
@@ -472,6 +474,9 @@ html, body {
   margin-bottom: 80px;
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg); }
+  .hero__caption--branch {
+    opacity: 0;
+    margin-bottom: -160px; }
 
 .hero__title {
   margin: 0;
@@ -505,6 +510,7 @@ html, body {
   font-size: 1.25rem; }
 
 .hero__contacts {
+  margin-top: -80px;
   padding-bottom: 30px;
   padding-top: 15px; }
   @media (min-width: 700px) {
@@ -522,7 +528,7 @@ html, body {
 .hero__buttons {
   width: 220px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center; }
   @media (min-width: 700px) {
     .hero__buttons {
