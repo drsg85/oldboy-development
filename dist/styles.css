@@ -509,8 +509,11 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
 
+.hero__opening {
+  margin-left: -20px;
+  margin-top: -60px; }
+
 .hero__contacts {
-  margin-top: -80px;
   padding-bottom: 30px;
   padding-top: 15px; }
   @media (min-width: 700px) {
