@@ -128,7 +128,7 @@
 .hero__caption {
         // box model
         display: block;
-        width: 260px;
+        width: 200px;
         margin-bottom: 80px;
 
         // visual
@@ -154,7 +154,7 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .hero__oldboy {
@@ -162,16 +162,16 @@
     display: block;
     margin-bottom: 7px;
     margin-top:7px;
-    padding: 10px 0;
+    padding: 5px 0;
 
     // typography
     font-family: $titleFont;
-    font-size: 3.2rem;
+    font-size: 2rem;
     line-height: 1;
 
     // visual
-    border-bottom: 4px solid $golden;
-    border-top: 4px solid $golden;
+    border-bottom: 3px solid $golden;
+    border-top: 3px solid $golden;
 }
 
 .hero__location {
