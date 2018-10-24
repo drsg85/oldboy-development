@@ -2641,11 +2641,7 @@ html, body {
 .testimonials {
   position: relative;
   padding-top: 40px;
-  background-color: #ffffff;
-  background-image: url("./img/dark-o-h-grunge.svg");
-  background-position: bottom -150px center;
-  background-repeat: repeat-x;
-  background-size: 800px; }
+  background-color: #ffffff; }
   @media (min-width: 700px) {
     .testimonials {
       background-image: none; } }
