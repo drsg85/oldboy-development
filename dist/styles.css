@@ -477,7 +477,7 @@ html, body {
   margin: 0;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.5; }
 
@@ -502,7 +502,7 @@ html, body {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5em; }
+  font-size: 1.25rem; }
 
 .hero__contacts {
   padding-bottom: 30px;
@@ -2169,20 +2169,6 @@ html, body {
     margin-top: 5px;
     color: #d6a354;
     line-height: 20px; }
-
-.show-locations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 30px;
-  text-align: center; }
-
-.show-locations__text {
-  margin: 0 auto;
-  color: #ffffff;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase; }
 
 .four-o-four {
   display: -webkit-box;
