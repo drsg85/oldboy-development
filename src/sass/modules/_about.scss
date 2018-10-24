@@ -38,6 +38,9 @@
 }
 
 .about__text {
+    // box model
+    margin-bottom: 40px;
+
     // typography
     font-family: $mainFont;
     line-height: 1.75;

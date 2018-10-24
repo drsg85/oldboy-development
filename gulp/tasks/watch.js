@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
+import watch from 'gulp-watch';
 // import { start } from 'repl';
 
 const dirs = {
