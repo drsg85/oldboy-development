@@ -1,0 +1,37 @@
+.branch-link {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 15px;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    letter-spacing: 0.05em;
+    line-height: 42px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // visual
+    border: 2px solid $golden;
+    border-radius: 23px;
+}
+
+.branch-link::after {
+    content: '';
+
+    // positioning
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+
+    // box model
+    height: 12px;
+    width: 12px;
+
+    // visual
+    background-color: $golden;
+    border-radius: 50%;
+}

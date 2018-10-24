@@ -1,0 +1,79 @@
+.branch-list {
+    // box model
+    padding-top: 20px;
+
+    // typography
+    text-align: center;
+}
+
+.branch-list__button {
+    // positioning
+    position: relative;
+
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 25px;
+    // border: 1px solid red;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    // visual
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.branch-list__button::before,
+.branch-list__button::after {
+    content: '';
+}
+
+.branch-list__button::before,
+.branch-list__button-mid,
+.branch-list__button::after {
+    // positioning
+    position: absolute;
+    left: 0;
+
+    // box model
+    height: 2px;
+    width: 18px;
+
+    // visual
+    background-color: $golden;
+}
+
+.branch-list__button::before {
+    // positioning
+    top: 0;
+}
+
+.branch-list__button-mid {
+    // positioning
+    top: 7px;
+}
+
+.branch-list__button::after {
+    // positioning
+    top: 14px;
+}
+
+.branch-list__content {
+    // box model
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    padding-bottom: 60px;
+    margin: 0 -20px;
+    margin-bottom: -60px;
+
+    // visual
+    background-image: linear-gradient(to bottom, transparent, $dark);
+}
