@@ -4,6 +4,7 @@
 
     // box model
     margin-bottom: 15px;
+    padding-left: 10px;
 
     // typography
     color: $light;
@@ -12,19 +13,20 @@
     line-height: 42px;
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
 
     // visual
     border: 2px solid $golden;
     border-radius: 23px;
 }
 
-.branch-link::after {
+.branch-link::before {
     content: '';
 
     // positioning
     position: absolute;
     top: 50%;
-    right: 13px;
+    left: 14px;
     transform: translateY(-50%);
 
     // box model

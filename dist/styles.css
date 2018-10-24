@@ -896,20 +896,22 @@ html, body {
 .branch-link {
   position: relative;
   margin-bottom: 15px;
+  padding-left: 10px;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   letter-spacing: 0.05em;
   line-height: 42px;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
   border: 2px solid #d6a354;
   border-radius: 23px; }
 
-.branch-link::after {
+.branch-link::before {
   content: '';
   position: absolute;
   top: 50%;
-  right: 13px;
+  left: 14px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 12px;
