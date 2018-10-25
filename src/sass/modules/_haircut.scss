@@ -2,11 +2,6 @@
     // box model
 }
 
-.haircut:last-child {
-    // box model
-    display: none;
-}
-
 .haircut__header {
     // box model
     margin-bottom: 20px;
@@ -18,15 +13,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: -75px;
-    padding: 0 25px;
+    padding: 0 20px;
 }
 
 .haircut__image {
     // box model
     width: 100%;
-    margin-bottom: 2%;
+
+    // typography
+    font-size: 0;
     
     // visual
+    background-color: $golden;
     border-radius: 5px;
     overflow: hidden;
     
@@ -40,42 +38,46 @@
     }
 }
 
-.haircut__image:last-of-type {
+.haircut__image--zero {
     // box model
     display: none;
 }
 
-.haircut__image:nth-of-type(2) {
+.haircut__image--main {
     // box model
-    flex-basis: 49%;
+    flex-basis: 100%;
+    height: calc(100vw - 40px);
+    width: calc(100vw - 40px);
+    margin-bottom: 20px;
 }
 
-.haircut__image:nth-of-type(3) {
+.haircut__image--secondary {
     // box model
-    flex-basis: 49%;
+    flex-basis: 48%;
+    flex-basis: calc((100% - 20px) / 2);
+    height: calc((100vw - 60px) / 2);
+    width: calc((100vw - 60px) / 2);
 }
 
 .haircut__content {
     // box model
-    padding: 0 25px;
+    padding: 20px;
 }
 
 .haircut__headline {
     // box model
     margin: 0;
-    margin-left: -25px;
-    margin-bottom: 35px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    width: 80%;
+    margin-left: -20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    width: 260px;
 
     // typography
     color: $dark;
-    font-size: 1rem;
+    font-family: $titleFont;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 25px;
+    line-height: 1.5;
     text-align-last: left;
     text-transform: uppercase;
 
@@ -85,15 +87,12 @@
 }
 
 .haircut__text h3 {
-    // box model
-    margin: 0;
-    margin-bottom: 30px;
-
     // typography
     color: $dark;
-    font-size: 1.3rem;
+    font-family: $titleFont;
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
 }
@@ -104,7 +103,7 @@
     margin-bottom: 30px;
 
     // typography
-    color: $dark;
-    font-size: 1.2rem;
-    line-height: 24px;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.75;
 }

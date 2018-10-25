@@ -2452,9 +2452,6 @@ html, body {
   .quote-404__text span {
     font-size: 0.65rem; }
 
-.haircut:last-child {
-  display: none; }
-
 .haircut__header {
   margin-bottom: 20px; }
 
@@ -2468,11 +2465,12 @@ html, body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: -75px;
-  padding: 0 25px; }
+  padding: 0 20px; }
 
 .haircut__image {
   width: 100%;
-  margin-bottom: 2%;
+  font-size: 0;
+  background-color: #d6a354;
   border-radius: 5px;
   overflow: hidden; }
   .haircut__image img {
@@ -2481,54 +2479,58 @@ html, body {
     -o-object-fit: cover;
     object-fit: cover; }
 
-.haircut__image:last-of-type {
+.haircut__image--zero {
   display: none; }
 
-.haircut__image:nth-of-type(2) {
-  -ms-flex-preferred-size: 49%;
-  flex-basis: 49%; }
+.haircut__image--main {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  height: calc(100vw - 40px);
+  width: calc(100vw - 40px);
+  margin-bottom: 20px; }
 
-.haircut__image:nth-of-type(3) {
-  -ms-flex-preferred-size: 49%;
-  flex-basis: 49%; }
+.haircut__image--secondary {
+  -ms-flex-preferred-size: 48%;
+  flex-basis: 48%;
+  -ms-flex-preferred-size: calc((100% - 20px) / 2);
+  flex-basis: calc((100% - 20px) / 2);
+  height: calc((100vw - 60px) / 2);
+  width: calc((100vw - 60px) / 2); }
 
 .haircut__content {
-  padding: 0 25px; }
+  padding: 20px; }
 
 .haircut__headline {
   margin: 0;
-  margin-left: -25px;
-  margin-bottom: 35px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  width: 80%;
+  margin-left: -20px;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  width: 260px;
   color: #131313;
-  font-size: 1rem;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 25px;
+  line-height: 1.5;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
   border-top: 2px solid #d6a354; }
 
 .haircut__text h3 {
-  margin: 0;
-  margin-bottom: 30px;
   color: #131313;
-  font-size: 1.3rem;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.5;
   text-align: center;
   text-transform: uppercase; }
 
 .haircut__text p {
   margin: 0;
   margin-bottom: 30px;
-  color: #131313;
-  font-size: 1.2rem;
-  line-height: 24px; }
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75; }
 
 .price-list {
   margin-bottom: -25px; }
