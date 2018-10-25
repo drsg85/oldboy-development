@@ -28,19 +28,20 @@
 
     // visual
     background-color: $golden;
+    box-shadow: -15px 10px 40px -10px rgba($dark, 0.5);
     text-shadow: -3px 2px 0 $darkGold;
     
-    @include atTablet {
-        // box model
-        padding: 20px 40px;
+    // @include atTablet {
+    //     // box model
+    //     padding: 20px 40px;
         
-        // typography
-        font-size: 3rem;
+    //     // typography
+    //     font-size: 3rem;
         
-        // visual
-        box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
-        text-shadow: -4px 3px 0 $darkGold;
-    }
+    //     // visual
+    //     box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
+    //     text-shadow: -4px 3px 0 $darkGold;
+    // }
 }
 
 .section-header__title::after {
@@ -162,9 +163,9 @@
     font-size: 2rem;
 
     &::before {
-    // visual
-    background-color: $darkGold;
-            }
+        // visual
+        background-color: $darkGold;
+    }
 
     @include atTablet {
         // typography
