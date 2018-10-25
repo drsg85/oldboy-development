@@ -1,9 +1,14 @@
 .footer {
     // box model
     padding: 40px 20px;
+    padding-top: 60px;
 
     // visual
     background-color: $dark;
+    background-image: url('./img/white-grunge-180.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: top -170px center;
 
     @include atTablet {
         // box model

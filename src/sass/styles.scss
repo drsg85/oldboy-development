@@ -11,12 +11,16 @@
 @import 'fonts/icons';
 
 // modules
+
+// hero blocks
 @import 'modules/hero';
 @import 'modules/contact';
 @import 'modules/city-select';
 @import 'modules/menu-button';
 @import 'modules/app-promo';
 @import 'modules/app-button';
+@import 'modules/branch-list';
+@import 'modules/branch-link';
 
 // location selector
 @import 'modules/all-locations';
@@ -37,12 +41,17 @@
 @import 'modules/news';
 @import 'modules/editorial';
 @import 'modules/date';
-
 @import 'modules/news-item';
-@import 'modules/news-feed';
+
 @import 'modules/services';
 @import 'modules/service-main';
 @import 'modules/service-item';
+
+@import 'modules/about';
+@import 'modules/thing';
+
+
+@import 'modules/news-feed';
 @import 'modules/franchise';
 @import 'modules/top-news';
 @import 'modules/news-categories';
@@ -50,7 +59,6 @@
 @import 'modules/current-news';
 @import 'modules/news-photo';
 @import 'modules/news-quote';
-@import 'modules/show-locations';
 @import 'modules/four-o-four';
 @import 'modules/info-404';
 @import 'modules/message-404';

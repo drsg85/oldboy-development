@@ -1,4 +1,7 @@
 .price-list {
+    // box model
+    margin-bottom: -25px;
+
     @include atTablet {
         // box model
         padding-bottom: 400px;
@@ -28,7 +31,8 @@
     position: relative;
 
     // box model
-    padding: 120px 20px;
+    padding: 60px 20px;
+    padding-bottom: 30px;
 
     // visual
     background-color: $dark;

@@ -22,13 +22,16 @@
         background-image: url('./img/bgs/hero-t.jpg');
         background-size: cover;
     }
-
+    
     &--city {
-
+        // visual
+        background-image: url('./img/bgs/map.jpg');
+        background-position: top left;
     }
 
     &--branch {
-
+        // visual
+        background-image: none;
     }
 }
 
@@ -124,13 +127,19 @@
 }
 
 .hero__caption {
-        // box model
-        display: block;
-        width: 260px;
-        margin-bottom: 80px;
+    // box model
+    display: block;
+    width: 200px;
+    margin-bottom: 80px;
 
-        // visual
-        transform: skewY(-15deg);
+    // visual
+    transform: skewY(-15deg);
+
+    &--branch {
+        // box model
+        opacity: 0;
+        margin-bottom: -160px;
+    }
 }
 
 .hero__title {
@@ -140,7 +149,7 @@
     // typography
     color: $light;
     font-family: $mainFont;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
     line-height: 1.5;
 }
@@ -152,7 +161,7 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .hero__oldboy {
@@ -160,16 +169,16 @@
     display: block;
     margin-bottom: 7px;
     margin-top:7px;
-    padding: 10px 0;
+    padding: 5px 0;
 
     // typography
     font-family: $titleFont;
-    font-size: 3.2rem;
+    font-size: 2rem;
     line-height: 1;
 
     // visual
-    border-bottom: 4px solid $golden;
-    border-top: 4px solid $golden;
+    border-bottom: 3px solid $golden;
+    border-top: 3px solid $golden;
 }
 
 .hero__location {
@@ -179,11 +188,12 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.5em;
+    font-size: 1.25rem;
 }
 
 .hero__contacts {
     // box model
+    margin-top: -80px;
     padding-bottom: 30px;
     padding-top: 15px;
 
@@ -204,6 +214,7 @@
     // box model
     width: 220px;
     margin: 0 auto;
+    margin-bottom: 40px;
     
     // typography
     // to align items on browsers without flex support

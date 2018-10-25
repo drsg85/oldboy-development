@@ -10,7 +10,7 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--city
             .hero__top
                 .hero__logo
                     a(href="index.html")
@@ -38,19 +38,23 @@ html(lang="en")
                     h1.hero__title Крупнейшая международная сеть мужских парикмахерских <span class="hero__oldboy">OLDBOY <br>BARBERSHOP</span>
                     p.hero__location Калининград
 
-                //- .show-locations
-                    .show-locations__menu
-                    p.show-locations__text Посмотреть филиалы списком
-
                 .hero__buttons
                     a.button(href="#") Запись онлайн<br>
+
+                .hero__branches
+                    .branch-list
+                        button.branch-list__button Посмотреть филиалы списком
+                            .branch-list__button-mid
+                        .branch-list__content
+                            a.branch-link(href="#") ул. Театральная, 30
+                            a.branch-link(href="#") ул. Артиллерийская, 22
 
         main
             section.news
                 .news__header
                     header.section-header
-                        h2.section-header__title Наши <br>новости
-                        p.section-header__subtitle О&nbsp;самом&nbsp;главном
+                        h2.section-header__title Новости <br>в городе
+                        p.section-header__subtitle Калининград
 
                 .news__editorial
                     .editorial
@@ -153,7 +157,7 @@ html(lang="en")
                             p.promo__service Комплексная услуга
                             .promo__bottom
                                 p.promo__price 1800
-                                p.promo__name Друг + Друг
+                                p.promo__name Королевское бритьё
 
                         .promo__description
                             p.promo__tip Описание услуги
@@ -168,8 +172,8 @@ html(lang="en")
                         header.promo__header
                             p.promo__service Комплексная услуга
                             .promo__bottom
-                                p.promo__price 2500
-                                p.promo__name Королевское бритьё
+                                p.promo__price -30%
+                                p.promo__name Друг + Друг
 
                         .promo__description
                             p.promo__tip Описание услуги
@@ -257,7 +261,7 @@ html(lang="en")
                     p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
 
                 .academy-banner__content
-                    p.academy-banner__motto Академия барберинга Oldboy — место, где рождаются настоящие мужские парикмахеры
+                    p.academy-banner__motto Академия барберинга Oldboy —&nbsp;место, где рождаются настоящие мужские парикмахеры
                     p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и ведущим специалистом барбершопа
 
                     p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>

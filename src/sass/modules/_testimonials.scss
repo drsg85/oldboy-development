@@ -7,10 +7,6 @@
 
     // visual
     background-color: $light;
-    background-image: url('./img/dark-o-h-grunge.svg');
-    background-position: bottom -150px center;
-    background-repeat: repeat-x;
-    background-size: 800px;
 
     @include atTablet {
         // visual

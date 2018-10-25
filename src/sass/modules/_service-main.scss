@@ -11,6 +11,18 @@
     // visual
     background-color: $darkGold;
     border-radius: 5px;
+    background-size: cover;
+    background-position: center center;
+
+    &--haircut {
+        // visual
+        background-image: url('./img/bgs/haircut.jpg');
+    }
+    
+    &--beard {
+        // visual
+        background-image: url('./img/bgs/beard.jpg');
+    }
 }
 
 .service-main__header {
