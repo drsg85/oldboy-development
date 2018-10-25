@@ -509,8 +509,11 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
 
+.hero__opening {
+  margin-left: -20px;
+  margin-top: -60px; }
+
 .hero__contacts {
-  margin-top: -80px;
   padding-bottom: 30px;
   padding-top: 15px; }
   @media (min-width: 700px) {
@@ -2478,16 +2481,15 @@ html, body {
   font-size: 1.2rem;
   line-height: 24px; }
 
-@media (min-width: 700px) {
-  .price-list {
-    padding-bottom: 400px;
-    background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
-    background-size: contain,
- contain;
-    background-position: top center,
- bottom center;
-    background-repeat: no-repeat,
- no-repeat; } }
+.price-list {
+  margin-bottom: -25px; }
+  @media (min-width: 700px) {
+    .price-list {
+      padding-bottom: 400px;
+      background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
+      background-size: contain, contain;
+      background-position: top center, bottom center;
+      background-repeat: no-repeat, no-repeat; } }
 
 .price-list__content {
   position: relative;
@@ -2917,12 +2919,9 @@ html, body {
       padding: 80px 40px;
       padding-bottom: 40px;
       background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
-      background-position: top -170px center,
- center left;
-      background-size: 800px,
- cover;
-      background-repeat: repeat-x,
- no-repeat; } }
+      background-position: top -170px center, center left;
+      background-size: 800px, cover;
+      background-repeat: repeat-x, no-repeat; } }
 
 @media (min-width: 700px) {
   .footer__info-n-contacts {

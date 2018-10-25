@@ -10,7 +10,7 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--branch
             .hero__top
                 .hero__logo
                     a(href="index.html")
@@ -34,7 +34,32 @@ html(lang="en")
                     .menu-button__middle
 
             .hero__content
+                .hero__caption
+                    h1.hero__title Крупнейшая международная сеть мужских парикмахерских <span class="hero__oldboy">OLDBOY <br>BARBERSHOP</span>
+                    p.hero__location Калининград
 
+                .hero__opening
+                    .section-header
+                        h2.section-header__title Открытие <br>21 октября
+
+                .hero__contacts
+                    .contact
+                        h2.contact__title Адрес
+                        p.contact__value ул. Театральная, 30
+                    .contact
+                        h2.contact__title Телефон
+                        p.contact__value 52–57–90
+
+                .hero__buttons
+                    a.button.button--ghost(href="#") Оставь заявку
+
+                    ul.social
+                        li.social__item
+                            a.social__icon.icon--vk(href="#") ВКонтакте
+                        li.social__item
+                            a.social__icon.icon--facebook(href="#") Facebook
+                        li.social__item
+                            a.social__icon.icon--instagram(href="#") Instagram
 
         footer.footer
             .footer__info-n-contacts

@@ -191,9 +191,15 @@
     font-size: 1.25rem;
 }
 
+.hero__opening {
+    // box model
+    margin-left: -20px;
+    margin-top: -60px;
+}
+
 .hero__contacts {
     // box model
-    margin-top: -80px;
+    // margin-top: -80px;
     padding-bottom: 30px;
     padding-top: 15px;
 

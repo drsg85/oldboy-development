@@ -5,7 +5,7 @@
 | Main            | index.pug        |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |   ❌   |
 | Choose City     | choose-city.pug  |   ✔️  |  ✔️ | ✔️ |  ✔️  |  ✔️ |   ❌   |
 | City            | city.pug         |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |   ❌   |
-| Branch          | branch.pug       |   🆗  |  🚧 | 🚧 |  ❌  |  ❌ |   ❌   |
+| Branch          | branch.pug       |   🆗  |  🆗 | 🚧 |  ❌  |  ❌ |   ❌   |
 | Branch Dummy    | branch-dummy.pug |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. Royal  | royal.pug        |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. Hair   | haricut.pug      |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
