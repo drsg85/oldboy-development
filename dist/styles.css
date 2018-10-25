@@ -1349,10 +1349,44 @@ html, body {
   margin-right: 5px;
   background-color: #896322; }
 
+.section-header__subtitle--light::before {
+  content: "";
+  position: relative;
+  left: -10px;
+  top: 17px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 10;
+  flex-shrink: 10;
+  height: 3px;
+  width: 100%;
+  margin-right: 5px;
+  background-color: #896322; }
+
 .section-header__subtitle--light {
-  color: #ffffff; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 10;
+  -ms-flex-positive: 10;
+  flex-grow: 10;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2rem; }
   .section-header__subtitle--light::before {
-    background-color: #ffffff; }
+    background-color: #896322; }
+  @media (min-width: 700px) {
+    .section-header__subtitle--light {
+      font-size: 2.25rem; } }
 
 .section-header__image {
   position: relative;
@@ -2366,15 +2400,94 @@ html, body {
   .quote-404__text span {
     font-size: 0.65rem; }
 
-.price-list {
-  margin-bottom: -25px; }
-  @media (min-width: 700px) {
-    .price-list {
-      padding-bottom: 400px;
-      background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
-      background-size: contain, contain;
-      background-position: top center, bottom center;
-      background-repeat: no-repeat, no-repeat; } }
+.haircut:last-child {
+  display: none; }
+
+.haircut__header {
+  margin-bottom: 20px; }
+
+.haircut__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: -75px;
+  padding: 0 25px; }
+
+.haircut__image {
+  width: 100%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  overflow: hidden; }
+  .haircut__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.haircut__image:last-of-type {
+  display: none; }
+
+.haircut__image:nth-of-type(2) {
+  -ms-flex-preferred-size: 49%;
+  flex-basis: 49%; }
+
+.haircut__image:nth-of-type(3) {
+  -ms-flex-preferred-size: 49%;
+  flex-basis: 49%; }
+
+.haircut__content {
+  padding: 0 25px; }
+
+.haircut__headline {
+  margin: 0;
+  margin-left: -25px;
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 80%;
+  color: #131313;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 25px;
+  text-align-last: left;
+  text-transform: uppercase;
+  border-bottom: 2px solid #d6a354;
+  border-top: 2px solid #d6a354; }
+
+.haircut__text h3 {
+  margin: 0;
+  margin-bottom: 30px;
+  color: #131313;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.haircut__text p {
+  margin: 0;
+  margin-bottom: 30px;
+  color: #131313;
+  font-size: 1.2rem;
+  line-height: 24px; }
+
+@media (min-width: 700px) {
+  .price-list {
+    padding-bottom: 400px;
+    background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
+    background-size: contain,
+ contain;
+    background-position: top center,
+ bottom center;
+    background-repeat: no-repeat,
+ no-repeat; } }
 
 .price-list__content {
   position: relative;
@@ -2804,9 +2917,12 @@ html, body {
       padding: 80px 40px;
       padding-bottom: 40px;
       background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
-      background-position: top -170px center, center left;
-      background-size: 800px, cover;
-      background-repeat: repeat-x, no-repeat; } }
+      background-position: top -170px center,
+ center left;
+      background-size: 800px,
+ cover;
+      background-repeat: repeat-x,
+ no-repeat; } }
 
 @media (min-width: 700px) {
   .footer__info-n-contacts {
