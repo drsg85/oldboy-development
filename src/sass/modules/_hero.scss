@@ -164,9 +164,13 @@
     font-size: 1rem;
 }
 
-.hero__oldboy {
+.hero__big {
+    // positioning
+    position: relative;
+
     // box model
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     margin-bottom: 7px;
     margin-top:7px;
     padding: 5px 0;
@@ -179,6 +183,22 @@
     // visual
     border-bottom: 3px solid $golden;
     border-top: 3px solid $golden;
+
+    &--haircut {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+            border: 1px solid red;
+        }
+    }
 }
 
 .hero__location {
