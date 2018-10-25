@@ -10,12 +10,11 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--404
             .hero__top
                 .hero__logo
-                    a(href="#")
-                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
-                
+                    img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
                 .hero__nav
                     nav.main-nav
                         ul.main-nav__list
@@ -34,21 +33,27 @@ html(lang="en")
                     .menu-button__middle
 
             .four-o-four
-                article.info-404
-                    h2.info-404__title 129 филиалов<br>в 5 странах и в 5 столицах
-                    p.info-404__subtitle Крупнейшая международная сеть мужских парикмахерских
-                    p.info-404__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+                .four-o-four__message
+                    .message-404
+                        header.message-404__header
+                            p.message-404__subtitle &nbsp;&nbsp;Что&#8209;то&nbsp;пошло&nbsp;не&nbsp;так
+                            h1.message-404__title Страница не найдена
 
-                .message-404
-                    header.message-404__404
-                        p.message-404__subtitle Что-то пошло не так
-                        h1.message-404__title Страница не найдена
+                        .message-404__image
+                            img(src="/img/404/404.png", alt="")
 
-                    .message-404__logo
-                        img(src="/img/404/404.png", alt="")
+                        p.message-404__desc Страница устарела,<br> была удалена или<br> не существовала вовсе
 
-                    .message-404__desc
-                        p.message-404__text Страница устарела, была удалена или не существовала вовсе
+                        .message-404__button
+                            a.button(href="#") Вернуться на главную
 
-                .quote-404 
-                    p.quote-404__text For all those who seek will find<br><span>Luke 11:10</span>
+                .four-o-four__info
+                    article.info-404
+                        h2.info-404__title 129 филиалов<br>в 5 странах и в 5 столицах
+                        p.info-404__subtitle Крупнейшая международная сеть мужских парикмахерских
+                        p.info-404__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+
+                .four-o-four__quote
+                    blockquote
+                        p For all those who seek will find
+                        cite Luke 11:10

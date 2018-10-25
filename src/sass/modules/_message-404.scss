@@ -1,33 +1,40 @@
 .message-404 {
     // box model
-    margin-top: -60px;
-
-    // positioning
-    position: relative;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    max-width: 400px;
 }
 
 .message-404__subtitle {
+    // positioning
+    position: relative;
+
     // box model
+    display: flex;
+    flex-direction: row;
+    flex-grow: 10;
+    flex-shrink: 1;
     margin: 0;
 
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 2rem;
-    text-align: right;
+    font-size: 1.25rem;
 }
 
 .message-404__subtitle::before {
     content: "";
-    // box model
-    display: block;
-    width: 205px;
-    height: 3px;
 
     // positioning
     position: relative;
-    left: 20px;
-    top: 20px;
+    left: -10px;
+    left: 0;
+    top: 0.5rem;
+
+    // box model
+    flex-grow: 1;
+    flex-shrink: 10;
+    height: 2px;
 
     // visual
     background: linear-gradient(to right, rgba(144, 125, 74, 1), rgba(229, 195, 124, 1));
@@ -40,50 +47,39 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 3.5rem;
+    font-size: 2rem;
+    line-height: 1.5;
     text-align: right;
     text-transform: uppercase;
 }
 
-.message-404__logo {
+.message-404__image {
+    // box model
+    width: 100%;
+}
 
+.message-404__image img {
+    // box model
+    width: 100%;
 }
 
 .message-404__desc {
-    // box model
-    
-}
+    // positioning
+    transform: translateY(-60px);
 
-.message-404__text {
     // box model
     margin: 0;
-    width: 180px;
-
-    // positioning
-    position: absolute;
-    right: 20px;
-    bottom: 90px; 
-
+    
     // typography
-    color: $lightGrey;
+    color: $light;
     font-family: $titleFont;
     font-size: 1rem;
+    line-height: 1.5;
     text-align: right;
     text-transform: uppercase;
 }
 
-.message-404__text::before {
-    content: "";
-    // box model
-    display: block;
-    position: absolute;
-    width: 480px;
-    height: 3px;
-
-    // positioning
-    right: 0;
-    top: -10px;
-
-    // visual
-    background: linear-gradient(to right, rgba(229, 195, 124, 1), rgba(65, 55, 27, 1), rgba(144, 125, 74, 1));
+.message-404__button {
+    // typography
+    text-align: center;
 }

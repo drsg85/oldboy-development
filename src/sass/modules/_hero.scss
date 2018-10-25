@@ -40,6 +40,16 @@
         background-size: cover;
         background-position: top center;
     }
+
+    &--404 {
+        // visual
+        background-image: none;
+
+        &::after {
+            // box model
+            display: none;
+        }
+    }
 }
 
 .hero::after {
