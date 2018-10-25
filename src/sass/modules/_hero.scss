@@ -33,6 +33,13 @@
         // visual
         background-image: none;
     }
+
+    &--haircut {
+        // visual
+        background-image: url('./img/bgs/haircut-m.jpg');
+        background-size: cover;
+        background-position: top center;
+    }
 }
 
 .hero::after {
@@ -196,7 +203,12 @@
             // box model
             height: 100%;
             width: 100%;
-            border: 1px solid red;
+
+            // visual
+            background-image: url('./img/icons/scissors.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
         }
     }
 }
