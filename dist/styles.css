@@ -1912,6 +1912,32 @@ html, body {
   border-radius: 20px;
   text-decoration: none; }
 
+.about__header {
+  position: relative;
+  padding: 20px; }
+
+.about__image {
+  width: 50%;
+  width: 160px;
+  margin-bottom: -200px;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  font-size: 0;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.about__image img {
+  width: 100%; }
+
+.about__haircut-deco {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  height: 232px;
+  width: 297px;
+  background-image: url("./img/haircut/scissors-m.png");
+  background-size: cover; }
+
 .about__content {
   padding: 20px;
   margin-top: -30px; }
@@ -1920,10 +1946,14 @@ html, body {
   width: 220px;
   margin: 0;
   margin-left: auto;
+  color: #131313;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: right; }
+  .about__headline--service {
+    width: 50%;
+    padding-bottom: 6rem; }
 
 .about__subtitle {
   margin-bottom: 20px;

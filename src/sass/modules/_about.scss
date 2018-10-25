@@ -3,15 +3,47 @@
 }
 
 .about__header {
+    // positioning
+    position: relative;
 
+    // box model
+    padding: 20px;
 }
 
 .about__image {
+    // box model
+    width: 50%;
+    width: 160px;
+    margin-bottom: -200px;
+    transform: translateY(10px);
 
+    // typography
+    font-size: 0;
+
+    // visual
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .about__image img {
-    
+    // box model
+    width: 100%;
+}
+
+.about__haircut-deco {
+    // positioning
+    position: absolute;
+    top: 10px;
+    left: 60px;
+
+    // box model
+    // border: 1px solid red;
+    height: 232px;
+    width: 297px;
+
+    // visual
+    background-image: url('./img/haircut/scissors-m.png');
+    background-size: cover;
 }
 
 .about__content {
@@ -27,10 +59,17 @@
     margin-left: auto;
 
     // typography
+    color: $dark;
     font-family: $titleFont;
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: right;
+
+    &--service {
+        // box model
+        width: 50%;
+        padding-bottom: 6rem;
+    }
 }
 
 .about__subtitle {

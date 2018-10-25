@@ -12,11 +12,11 @@
 | 404             | 404.pug          |   🚧  |  🚧 | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. Tattoo | tattoo.pug       |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. SPA    | barber-spa.pug   |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
+| Terms           | terms.pug        |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
+| Privacy         | privacy          |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Franchise       | franchise.pug    |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | News            | news.pug         |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | News. Article   | article.pug      |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
-| Terms           | terms.pug        |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
-| Privacy         | privacy          |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 
 ❌ not started
 🚧 under construction
