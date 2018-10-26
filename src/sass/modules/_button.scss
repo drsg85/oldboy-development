@@ -20,6 +20,11 @@
     border: 2px solid $golden;
     border-radius: 20px; // 1/2 of line-height + 2px border-width
 
+    @include atTablet {
+        // box model
+        padding: 0 30px;
+    }
+
     &--ghost {
         // typography
         // color: $dark;

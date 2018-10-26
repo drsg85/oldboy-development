@@ -44,9 +44,38 @@
     &--404 {
         // box model
         padding-bottom: 60px;
-        
+
         // visual
         background-image: none;
+
+        @include atTablet {
+            // box model
+            min-height: 100vh;
+
+            // visual
+            background-image: url('./img/bgs/404.jpg');
+            background-size: cover;
+            background-position: bottom right;
+        }
+
+        @include atDesktopS {
+            // box model
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .hero__top {
+                // box model
+                // border: 1px solid red;
+                flex-grow: 3;
+            }
+
+            .four-o-four {
+                // box model
+                // border: 1px solid red;
+                flex-grow: 7;
+            }
+        }
 
         &::after {
             // box model

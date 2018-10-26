@@ -1,7 +1,11 @@
 .info-404 {
-    // box model
-    margin: 0 auto;
-    max-width: 400px;
+    // typography
+    font-size: 1rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.125rem;
+    }
 }
 
 .info-404__title {
@@ -11,7 +15,7 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.5;
     text-transform: uppercase;
 
@@ -23,7 +27,7 @@
     // typography
     color: $light;
     font-family: $mainFont;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     letter-spacing: 0.05em;
     line-height: 1.5;
     text-transform: uppercase;
@@ -36,7 +40,7 @@
     // typography
     color: $lightGrey;
     font-family: $mainFont;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     font-weight: 600;
     line-height: 1.5;
 }
