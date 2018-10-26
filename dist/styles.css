@@ -414,6 +414,9 @@ html, body {
     background-image: url("./img/bgs/haircut-m.jpg");
     background-size: cover;
     background-position: top center; }
+  .hero--royal {
+    background-image: url("./img/bgs/royal-m.jpg");
+    background-size: cover; }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
@@ -547,6 +550,17 @@ html, body {
     height: 100%;
     width: 100%;
     background-image: url("./img/icons/scissors.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left; }
+  .hero__big--royal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/icons/shavette2.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center left; }

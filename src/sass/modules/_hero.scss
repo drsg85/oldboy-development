@@ -41,6 +41,12 @@
         background-position: top center;
     }
 
+    &--royal {
+        // visual
+        background-image: url('./img/bgs/royal-m.jpg');
+        background-size: cover;
+    }
+
     &--404 {
         // box model
         padding-bottom: 60px;
@@ -246,6 +252,27 @@
 
             // visual
             background-image: url('./img/icons/scissors.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+    }
+
+    &--royal {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-image: url('./img/icons/shavette2.svg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center left;
