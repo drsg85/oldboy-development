@@ -1,9 +1,14 @@
 .four-o-four {
+    // positioning
+    position: relative;
+
     @include atDesktopS {
         // box model
         display: flex;
         align-items: flex-end;
+        align-items: stretch;
         justify-content: space-between;
+        // border: 1px solid red;
     }
 }
 
@@ -17,9 +22,8 @@
         // box model
         order: 2;
         flex-basis: 33%;
-        margin-top: -80px;
+        margin-top: -60px;
         max-width: 300px;
-        // border: 1px solid red;
         display: flex;
         height: 100%;
     }
@@ -28,7 +32,13 @@
         // box model
         max-width: inherit;
         margin: 0 auto;
+        margin-top: -40px;
         padding-left: 30px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-top: 0;
     }
 }
  
@@ -48,7 +58,9 @@
         flex-basis: 33%;
         margin-bottom: 0;
         max-width: 300px;
-        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 }
 
@@ -64,6 +76,9 @@
         flex-basis: 33%;
         margin: 0;
         max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 }
 

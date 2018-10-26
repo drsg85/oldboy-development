@@ -2372,17 +2372,22 @@ html, body {
     color: #d6a354;
     line-height: 20px; }
 
-@media (min-width: 1000px) {
-  .four-o-four {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; } }
+.four-o-four {
+  position: relative; }
+  @media (min-width: 1000px) {
+    .four-o-four {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
 
 .four-o-four__message {
   margin: 0 auto;
@@ -2395,7 +2400,7 @@ html, body {
       order: 2;
       -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
-      margin-top: -80px;
+      margin-top: -60px;
       max-width: 300px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2405,7 +2410,11 @@ html, body {
     .four-o-four__message {
       max-width: inherit;
       margin: 0 auto;
+      margin-top: -40px;
       padding-left: 30px; } }
+  @media (min-width: 1500px) {
+    .four-o-four__message {
+      margin-top: 0; } }
 
 .four-o-four__info {
   margin-bottom: 60px; }
@@ -2421,7 +2430,17 @@ html, body {
       -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
       margin-bottom: 0;
-      max-width: 300px; } }
+      max-width: 300px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
 
 @media (min-width: 700px) {
   .four-o-four__quote {
@@ -2435,7 +2454,17 @@ html, body {
     -ms-flex-preferred-size: 33%;
     flex-basis: 33%;
     margin: 0;
-    max-width: 300px; } }
+    max-width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; } }
 
 .four-o-four__quote blockquote {
   margin: 0;
