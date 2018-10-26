@@ -2357,7 +2357,7 @@ html, body {
   width: 180px;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   letter-spacing: 0.05em;
   line-height: 1.5;
   text-align: right;
@@ -2387,6 +2387,7 @@ html, body {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.85rem;
+  letter-spacing: 0.05em;
   line-height: 1.5;
   text-transform: uppercase; }
 
