@@ -415,6 +415,7 @@ html, body {
     background-size: cover;
     background-position: top center; }
   .hero--404 {
+    padding-bottom: 60px;
     background-image: none; }
     .hero--404::after {
       display: none; }
@@ -660,7 +661,7 @@ html, body {
 
 .menu-button {
   position: fixed;
-  right: 25px;
+  right: 20px;
   top: 15px;
   z-index: 9;
   height: 48px;
@@ -2344,6 +2345,31 @@ html, body {
     color: #d6a354;
     line-height: 20px; }
 
+.four-o-four__message {
+  margin-bottom: 60px; }
+
+.four-o-four__info {
+  margin-bottom: 60px; }
+
+.four-o-four__quote blockquote {
+  margin: 0;
+  margin-left: auto;
+  width: 180px;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-align: right;
+  text-transform: uppercase; }
+
+.four-o-four__quote p {
+  margin: 0; }
+
+.four-o-four__quote cite {
+  margin: 0;
+  font-size: 0.75em; }
+
 .info-404 {
   margin: 0 auto;
   max-width: 400px; }
@@ -2374,7 +2400,6 @@ html, body {
 
 .message-404 {
   margin: 0 auto;
-  margin-bottom: 60px;
   max-width: 400px; }
 
 .message-404__subtitle {
@@ -2394,7 +2419,7 @@ html, body {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 1rem; }
 
 .message-404__subtitle::before {
   content: "";
@@ -2408,14 +2433,15 @@ html, body {
   -ms-flex-negative: 10;
   flex-shrink: 10;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(#907d4a), to(#e5c37c));
-  background: linear-gradient(to right, #907d4a, #e5c37c); }
+  background: -webkit-gradient(linear, left top, right top, from(rgba(214, 163, 84, 0)), color-stop(23%, rgba(214, 163, 84, 0)), to(rgba(214, 163, 84, 0.75)));
+  background: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0) 23%, rgba(214, 163, 84, 0.75)); }
 
 .message-404__title {
   margin: 0;
+  margin-bottom: 0.5em;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   text-align: right;
   text-transform: uppercase; }
@@ -2427,8 +2453,8 @@ html, body {
   width: 100%; }
 
 .message-404__desc {
-  -webkit-transform: translateY(-60px);
-  transform: translateY(-60px);
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;

@@ -3,11 +3,13 @@
 }
 
 .four-o-four__message {
-
+    // box model
+    margin-bottom: 60px;
 }
 
 .four-o-four__info {
-
+    // box model
+    margin-bottom: 60px;
 }
 
 .four-o-four__quote {
@@ -15,11 +17,33 @@
 }
 
 .four-o-four__quote blockquote {
+    // box model
+    margin: 0;
+    margin-left: auto;
+    width: 180px;
 
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.four-o-four__quote p {
+    // box model
+    margin: 0;
+    // margin-bottom: 0.25em;
 }
 
 .four-o-four__quote cite {
-
+    // box model
+    margin: 0;
+    
+    // typography
+    font-size: 0.75em;
 }
 
 // .quote-404__text {
