@@ -1,0 +1,42 @@
+.stage {
+    // box model
+    margin-bottom: 40px;
+}
+
+.stage__header {
+
+}
+
+.stage__content {
+    // box model
+    margin-top: -40px;
+    padding: 20px;
+}
+
+.stage__headline {
+    // box model
+    width: 220px;
+    margin: 0;
+    margin-left: auto;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.stage__text {
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.75;
+
+    &--gold {
+        // typography
+        color: $darkGold;
+        font-weight: 700;
+    }
+}

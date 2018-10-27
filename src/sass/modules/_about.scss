@@ -1,5 +1,12 @@
 .about {
+    &--royal {
+        // box model
+        margin-bottom: 120px;
+        padding-bottom: 20px;
 
+        // visual
+        // background-image: linear-gradient(to bottom, $light, $bianca);
+    }
 }
 
 .about__header {
@@ -37,7 +44,6 @@
     left: 60px;
 
     // box model
-    // border: 1px solid red;
     height: 232px;
     width: 297px;
 
@@ -46,7 +52,28 @@
     background-size: cover;
 }
 
+.about__royal-deco {
+    // positioning
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(75%);
+
+    // box model
+    height: 156px;
+    width: 192px;
+
+    // visual
+    background-image: url('./img/royal/razor.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
 .about__content {
+    // positioning
+    position: relative;
+
     // box model
     padding: 20px;
     margin-top: -30px;
@@ -77,17 +104,26 @@
     margin-bottom: 20px;
 
     // typography
-    color: $golden;
+    color: $darkGold;
     font-family: $mainFont;
     line-height: 1.75;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-weight: 700;
+    // text-transform: uppercase;
 }
 
 .about__text {
     // typography
+    color: $dark;
     font-family: $mainFont;
+    font-size: 1rem;
     line-height: 1.75;
+
+    &--gold {
+        // typography
+        color: $darkGold;
+        font-weight: 700;
+    }
 }
 
 .about__features {

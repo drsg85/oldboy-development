@@ -8,7 +8,7 @@
 | Branch          | branch.pug       |   🆗  |  🆗 | 🚧 |  ❌  |  ❌ |   ❌   |
 | Branch Dummy    | branch-dummy.pug |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. Hair   | haricut.pug      |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |   ❌   |
-| Service. Royal  | royal.pug        |   🚧  |  🚧 | ❌ |  ❌  |  ❌ |   ❌   |
+| Service. Royal  | royal.pug        |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |   ❌   |
 | 404             | 404.pug          |   🆗  |  🆗 | 🆗 |  🆗  |  🆗 |   ❌   |
 | Service. Tattoo | tattoo.pug       |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |
 | Service. SPA    | barber-spa.pug   |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |   ❌   |

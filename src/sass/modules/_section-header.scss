@@ -12,8 +12,34 @@
     // margin-left: -20px;
 }
 
-.section-header--flip {
-    
+.section-header--flipped {
+    // box model
+    margin-right: 0;
+    margin-left: auto;
+
+    .section-header__title {
+        // typography
+        // text-align: right;
+
+        &::after {
+            // positioning
+            right: auto;
+            left: -20px;
+            transform: rotate(180deg);
+        }
+    }
+
+    .section-header__image {
+        // positioning
+        left: -40px;
+
+        &::before {
+            // positioning
+            right: auto;
+            left: 0;
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .section-header__title {
@@ -90,7 +116,6 @@
         // typography
         font-size: 2.25rem;
     }
-
 }
 
 .section-header__subtitle::before {
@@ -117,64 +142,13 @@
     }
 }
 
-// .section-header__subtitle--light {
-//     // typography
-//     color: $light;
-
-//     &::before {
-//         // visual
-//         background-color: $light;
-//     }
-// }
-
-.section-header__subtitle--light::before {
-    content: "";
-
-    // positioning
-    position: relative;
-    left: -10px;
-    top: 17px;
-
-    // box model
-    flex-grow: 1;
-    flex-shrink: 10;
-    height: 3px;
-    width: 100%;
-    margin-right: 5px;
-
-    // visual
-    background-color: $darkGold;
-
-    @include atTablet {
-        // box model
-        // padding-right: 200px;
-    }
-}
-
 .section-header__subtitle--light {
-    // positioning
-    position: relative;
-
-    // box model
-    display: flex;
-    flex-direction: row;
-    flex-grow: 10;
-    flex-shrink: 1;
-    margin: 0;
-    
     // typography
     color: $light;
-    font-family: $titleFont;
-    font-size: 2rem;
-
+    
     &::before {
         // visual
         background-color: $darkGold;
-    }
-
-    @include atTablet {
-        // typography
-        font-size: 2.25rem;
     }
 }
 
@@ -184,7 +158,7 @@
     z-index: 1;
 
     // box model
-    margin-top: -5rem;
+    margin-top: -3rem;
     width: 110%;
     width: calc(100% + 40px);
     max-width: 100vw;
@@ -192,7 +166,6 @@
 
     // visual
     overflow: hidden;
-    // border: 1px solid red;
 }
 
 .section-header__image::before {
