@@ -3412,7 +3412,7 @@ html, body {
 .policy__hidden-title {
   display: none; }
 
-.policy__subtitle {
+.policy__desc {
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
@@ -3427,7 +3427,7 @@ html, body {
   font-size: 1rem;
   line-height: 1.5; }
 
-p.policy__note {
+.policy__title {
   border-top: 2px solid #d6a354;
   border-bottom: 2px solid #d6a354;
   margin-left: -20px;
@@ -3437,8 +3437,7 @@ p.policy__note {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
 
-.policy__title {
-  margin-top: 3em;
+.policy__subtitle {
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
