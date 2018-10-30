@@ -40,11 +40,18 @@
         background-size: cover;
         background-position: top center;
     }
-
+    
     &--royal {
         // visual
         background-image: url('./img/bgs/royal-m.jpg');
         background-size: cover;
+    }
+    
+    &--tattoo {
+        // visual
+        background-image: url('./img/bgs/tattoo-m.jpg');
+        background-size: cover;
+        background-position: bottom center;
     }
 
     &--404 {
@@ -273,6 +280,27 @@
 
             // visual
             background-image: url('./img/icons/shavette2.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+    }
+
+    &--tattoo {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-image: url('./img/icons/tattoo-machine.svg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center left;

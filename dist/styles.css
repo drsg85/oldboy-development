@@ -417,6 +417,10 @@ html, body {
   .hero--royal {
     background-image: url("./img/bgs/royal-m.jpg");
     background-size: cover; }
+  .hero--tattoo {
+    background-image: url("./img/bgs/tattoo-m.jpg");
+    background-size: cover;
+    background-position: bottom center; }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
@@ -561,6 +565,17 @@ html, body {
     height: 100%;
     width: 100%;
     background-image: url("./img/icons/shavette2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left; }
+  .hero__big--tattoo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/icons/tattoo-machine.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center left; }
