@@ -53,6 +53,13 @@
         background-size: cover;
         background-position: bottom center;
     }
+    
+    &--policy {
+        // visual
+        background-image: url('./img/bgs/policy-m.jpg');
+        background-size: cover;
+        background-position: bottom center;
+    }
 
     &--404 {
         // box model
@@ -417,4 +424,23 @@
 .hero__aside {
     // box model
     display: none;
+}
+
+.hero__subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 0.5em;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+}
+
+.hero__inner-title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
 }

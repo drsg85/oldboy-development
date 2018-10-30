@@ -421,6 +421,10 @@ html, body {
     background-image: url("./img/bgs/tattoo-m.jpg");
     background-size: cover;
     background-position: bottom center; }
+  .hero--policy {
+    background-image: url("./img/bgs/policy-m.jpg");
+    background-size: cover;
+    background-position: bottom center; }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
@@ -649,6 +653,17 @@ html, body {
 
 .hero__aside {
   display: none; }
+
+.hero__subtitle {
+  margin: 0;
+  margin-bottom: 0.5em;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif; }
+
+.hero__inner-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif; }
 
 .contact {
   margin-bottom: 20px;
