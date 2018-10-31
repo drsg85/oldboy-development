@@ -10,7 +10,7 @@
     color: $light;
     font-family: $mainFont;
     font-weight: 600;
-    line-height: 36px;
+    line-height: 46px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -18,7 +18,7 @@
     // visual
     background-color: $golden;
     border: 2px solid $golden;
-    border-radius: 20px; // 1/2 of line-height + 2px border-width
+    border-radius: 25px; // 1/2 of line-height + 2px border-width
 
     @include atTablet {
         // box model
@@ -30,7 +30,7 @@
         // color: $dark;
 
         // visual
-        background-color: transparent;
+        background-color: rgba($dark, 0.5);
     }
 
     &--ghost-dark {
