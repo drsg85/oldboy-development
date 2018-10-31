@@ -38,6 +38,11 @@
     border-bottom: 3px solid $golden;
     border-top: 3px solid $golden;
 
+    @include atTablet {
+        // typography
+        font-size: 3.5rem;
+    }
+
     &--haircut {
         &::after {
             content: '';

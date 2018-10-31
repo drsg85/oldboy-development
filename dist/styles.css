@@ -623,6 +623,9 @@ html, body {
   line-height: 1;
   border-bottom: 3px solid #d6a354;
   border-top: 3px solid #d6a354; }
+  @media (min-width: 700px) {
+    .hero-caption__big {
+      font-size: 3.5rem; } }
   .hero-caption__big--haircut::after {
     content: '';
     position: absolute;
