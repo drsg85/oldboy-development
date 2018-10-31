@@ -4,7 +4,7 @@
 
     // box model
     padding: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 
     // visual
     background-color: $dark;
@@ -195,134 +195,14 @@
 
 .hero__caption {
     // box model
-    display: block;
     width: 200px;
     margin-bottom: 80px;
-
-    // visual
-    transform: skewY(-15deg);
 
     &--branch {
         // box model
         opacity: 0;
         margin-bottom: -160px;
     }
-}
-
-.hero__title {
-    // box model
-    margin: 0;
-
-    // typography
-    color: $light;
-    font-family: $mainFont;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1.5;
-}
-
-.hero__motto {
-    // box model
-    margin: 0;
-
-    // typography
-    color: $light;
-    font-family: $titleFont;
-    font-size: 1rem;
-}
-
-.hero__big {
-    // positioning
-    position: relative;
-
-    // box model
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 7px;
-    margin-top:7px;
-    padding: 5px 0;
-
-    // typography
-    font-family: $titleFont;
-    font-size: 2rem;
-    line-height: 1;
-
-    // visual
-    border-bottom: 3px solid $golden;
-    border-top: 3px solid $golden;
-
-    &--haircut {
-        &::after {
-            content: '';
-
-            // positioning
-            position: absolute;
-            top: 0;
-            right: -100%;
-
-            // box model
-            height: 100%;
-            width: 100%;
-
-            // visual
-            background-image: url('./img/icons/scissors.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center left;
-        }
-    }
-
-    &--royal {
-        &::after {
-            content: '';
-
-            // positioning
-            position: absolute;
-            top: 0;
-            right: -100%;
-
-            // box model
-            height: 100%;
-            width: 100%;
-
-            // visual
-            background-image: url('./img/icons/shavette2.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center left;
-        }
-    }
-
-    &--tattoo {
-        &::after {
-            content: '';
-
-            // positioning
-            position: absolute;
-            top: 0;
-            right: -100%;
-
-            // box model
-            height: 100%;
-            width: 100%;
-
-            // visual
-            background-image: url('./img/icons/tattoo-machine.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center left;
-        }
-    }
-}
-
-.hero__location {
-    // box model
-    margin: 0;
-
-    // typography
-    color: $light;
-    font-family: $titleFont;
-    font-size: 1.25rem;
 }
 
 .hero__opening {
@@ -354,7 +234,7 @@
     // box model
     width: 220px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     
     // typography
     // to align items on browsers without flex support
@@ -374,6 +254,7 @@
 .hero__app {
     // box model
     margin: 0 -20px;
+    margin-top: 60px;
 
     @include atTablet {
         // positioning

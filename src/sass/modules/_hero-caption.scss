@@ -1,0 +1,123 @@
+.hero-caption {
+    // typography
+    // font-size: 1rem;
+
+    // visual
+    transform: skewY(-15deg);
+}
+
+.hero-caption__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5
+}
+
+.hero-caption__big {
+    // positioning
+    position: relative;
+
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 7px;
+    margin-top:7px;
+    padding: 5px 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 2.25rem;
+    line-height: 1;
+
+    // visual
+    border-bottom: 3px solid $golden;
+    border-top: 3px solid $golden;
+
+    &--haircut {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-image: url('./img/icons/scissors.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+    }
+
+    &--royal {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-image: url('./img/icons/shavette2.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+    }
+
+    &--tattoo {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-image: url('./img/icons/tattoo-machine.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+    }
+}
+
+.hero-caption__motto {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+}
+
+.hero-caption__location {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+}

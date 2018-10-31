@@ -394,7 +394,7 @@ html, body {
 .hero {
   position: relative;
   padding: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   background-color: #131313;
   overflow: hidden;
   background-image: url("./img/bgs/hero-m.jpg");
@@ -515,80 +515,11 @@ html, body {
   position: relative; }
 
 .hero__caption {
-  display: block;
   width: 200px;
-  margin-bottom: 80px;
-  -webkit-transform: skewY(-15deg);
-  transform: skewY(-15deg); }
+  margin-bottom: 80px; }
   .hero__caption--branch {
     opacity: 0;
     margin-bottom: -160px; }
-
-.hero__title {
-  margin: 0;
-  color: #ffffff;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.5; }
-
-.hero__motto {
-  margin: 0;
-  color: #ffffff;
-  font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem; }
-
-.hero__big {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 7px;
-  margin-top: 7px;
-  padding: 5px 0;
-  font-family: "Rex", Arial, sans-serif;
-  font-size: 2rem;
-  line-height: 1;
-  border-bottom: 3px solid #d6a354;
-  border-top: 3px solid #d6a354; }
-  .hero__big--haircut::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -100%;
-    height: 100%;
-    width: 100%;
-    background-image: url("./img/icons/scissors.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center left; }
-  .hero__big--royal::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -100%;
-    height: 100%;
-    width: 100%;
-    background-image: url("./img/icons/shavette2.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center left; }
-  .hero__big--tattoo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -100%;
-    height: 100%;
-    width: 100%;
-    background-image: url("./img/icons/tattoo-machine.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center left; }
-
-.hero__location {
-  margin: 0;
-  color: #ffffff;
-  font-family: "Rex", Arial, sans-serif;
-  font-size: 1.25rem; }
 
 .hero__opening {
   margin-left: -20px;
@@ -612,7 +543,7 @@ html, body {
 .hero__buttons {
   width: 220px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center; }
   @media (min-width: 700px) {
     .hero__buttons {
@@ -622,7 +553,8 @@ html, body {
       padding-bottom: 60px; } }
 
 .hero__app {
-  margin: 0 -20px; }
+  margin: 0 -20px;
+  margin-top: 60px; }
   @media (min-width: 700px) {
     .hero__app {
       position: absolute;
@@ -666,6 +598,76 @@ html, body {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 2rem; }
+
+.hero-caption {
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg); }
+
+.hero-caption__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5; }
+
+.hero-caption__big {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: 5px 0;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2.25rem;
+  line-height: 1;
+  border-bottom: 3px solid #d6a354;
+  border-top: 3px solid #d6a354; }
+  .hero-caption__big--haircut::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/icons/scissors.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left; }
+  .hero-caption__big--royal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/icons/shavette2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left; }
+  .hero-caption__big--tattoo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/icons/tattoo-machine.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left; }
+
+.hero-caption__motto {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem; }
+
+.hero-caption__location {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.25rem; }
 
 .contact {
   margin-bottom: 20px;
@@ -1636,7 +1638,7 @@ html, body {
   display: none; }
 
 .news {
-  margin-top: -50px;
+  margin-top: -20px;
   margin-bottom: 50px; }
 
 .news__header {
@@ -2636,7 +2638,7 @@ html, body {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 0 55px; }
+  padding: 0 65px; }
 
 .message-404__image img {
   width: 100%; }
@@ -3451,18 +3453,18 @@ html, body {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 46px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #d6a354;
   border: 2px solid #d6a354;
-  border-radius: 20px; }
+  border-radius: 25px; }
   @media (min-width: 700px) {
     .button {
       padding: 0 30px; } }
   .button--ghost {
-    background-color: transparent; }
+    background-color: rgba(19, 19, 19, 0.5); }
   .button--ghost-dark {
     color: #131313;
     background-color: transparent; }
