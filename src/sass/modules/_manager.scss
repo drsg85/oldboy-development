@@ -1,23 +1,74 @@
 .manager {
-
+    // box model
+    margin-bottom: 80px;
 }
 
 .manager__photo {
+    // box model
+    position: relative;
 
+    // typography
+    font-size: 0;
+
+    // visual
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.manager__photo img {
+    // box model
+    width: 100%;
+    height: 100%;
+
+    // visual
+    object-fit: cover;
 }
 
 .manager__place {
+    // box model
+    position: absolute;
+    margin: 0;
 
+    // positioning
+    left: 0;
+    bottom: -85px;
+    
+    // visual
+    transform: skewY(-15deg);
 }
 
 .manager__header {
-
+    // box model
+    padding: 0 15px;
 }
 
 .manager__position {
+    // box model
+    margin: 0;
 
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .manager__name {
-    
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    span {
+        // box model
+        display: block;
+
+        // typography
+        font-size: 2rem;
+    }
 }

@@ -1,0 +1,49 @@
+.family {
+    // box model
+    padding: 20px;
+}
+
+.family__header {
+    // box model
+    margin-bottom: 55px;
+}
+
+.family__caption {
+
+}
+
+.family__subtitle {
+    // box model
+    margin: 0;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+        // typography
+        color: $dark;
+        font-size: 1.5rem;
+    }
+}
+
+.family__logo {
+    // typography
+    text-align: center;
+}
+
+.family__logo img {
+    // box model
+    width: 100%;
+}
+
+.family__content {
+
+}

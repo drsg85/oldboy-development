@@ -2676,6 +2676,77 @@ html, body {
 .message-404__button {
   text-align: center; }
 
+.family {
+  padding: 20px; }
+
+.family__header {
+  margin-bottom: 55px; }
+
+.family__subtitle {
+  margin: 0;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase; }
+  .family__subtitle span {
+    color: #131313;
+    font-size: 1.5rem; }
+
+.family__logo {
+  text-align: center; }
+
+.family__logo img {
+  width: 100%; }
+
+.manager {
+  margin-bottom: 80px; }
+
+.manager__photo {
+  position: relative;
+  font-size: 0;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.manager__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.manager__place {
+  position: absolute;
+  margin: 0;
+  left: 0;
+  bottom: -85px;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg); }
+
+.manager__header {
+  padding: 0 15px; }
+
+.manager__position {
+  margin: 0;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+.manager__name {
+  margin: 0;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .manager__name span {
+    display: block;
+    font-size: 2rem; }
+
 .haircut__header {
   margin-bottom: 20px; }
 
