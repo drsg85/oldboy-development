@@ -21,6 +21,16 @@
     // visual
     border-radius: 5px;
     overflow: hidden;
+
+    @include atDesktopM {
+        // box model
+        max-width: 220px;
+    }
+
+    @include atFullHD {
+        // box model
+        max-width: 340px;
+    }
 }
 
 .manager__photo img {

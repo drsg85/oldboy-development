@@ -2736,6 +2736,12 @@ html, body {
       -ms-flex-pack: justify;
       justify-content: space-between;
       max-width: 768px; } }
+  @media (min-width: 1200px) {
+    .family__content {
+      max-width: 1090px; } }
+  @media (min-width: 1900px) {
+    .family__content {
+      max-width: 1650px; } }
 
 .manager {
   margin-bottom: 50px; }
@@ -2749,6 +2755,12 @@ html, body {
   font-size: 0;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 1200px) {
+    .manager__photo {
+      max-width: 220px; } }
+  @media (min-width: 1900px) {
+    .manager__photo {
+      max-width: 340px; } }
 
 .manager__photo img {
   width: 100%;

@@ -82,4 +82,14 @@
         justify-content: space-between;
         max-width: 768px;
     }
+
+    @include atDesktopM {
+        // box model
+        max-width: 1090px;
+    }
+
+    @include atFullHD {
+        // box model
+        max-width: 1650px;
+    }
 }
