@@ -1,11 +1,14 @@
 .manager {
     // box model
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .manager__photo {
-    // box model
+    // positioning
     position: relative;
+
+    // box model
+    width: 100%;
 
     // typography
     font-size: 0;
@@ -25,21 +28,38 @@
 }
 
 .manager__place {
-    // box model
-    position: absolute;
-    margin: 0;
-
     // positioning
+    position: absolute;
+    bottom: -50px;
     left: 0;
-    bottom: -85px;
-    
-    // visual
     transform: skewY(-15deg);
+
+    // box model
+    margin: 0;
+    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 100%;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.125rem;
+    text-align: right;
+    text-transform: uppercase;
+
+    // visual
+    background-image: url('./img/dark-h-grunge.svg');
+    background-size: cover;
 }
 
 .manager__header {
     // box model
     padding: 0 15px;
+    margin-top: 20px; //- подумать о margin-top
+
+    // typography
+    text-align: left;
 }
 
 .manager__position {
@@ -67,6 +87,7 @@
     span {
         // box model
         display: block;
+        margin-top: -5px;
 
         // typography
         font-size: 2rem;

@@ -2677,14 +2677,17 @@ html, body {
   text-align: center; }
 
 .family {
-  padding: 20px; }
+  padding: 20px;
+  text-align: center; }
 
 .family__header {
+  display: inline-block;
+  vertical-align: top;
   margin-bottom: 55px; }
 
 .family__subtitle {
   margin: 0;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   margin-bottom: 50px;
   color: #d6a354;
@@ -2698,16 +2701,22 @@ html, body {
     font-size: 1.5rem; }
 
 .family__logo {
+  max-width: 310px;
   text-align: center; }
 
 .family__logo img {
   width: 100%; }
 
+.family__content {
+  max-width: 300px;
+  margin: 0 auto; }
+
 .manager {
-  margin-bottom: 80px; }
+  margin-bottom: 50px; }
 
 .manager__photo {
   position: relative;
+  width: 100%;
   font-size: 0;
   border-radius: 5px;
   overflow: hidden; }
@@ -2720,14 +2729,27 @@ html, body {
 
 .manager__place {
   position: absolute;
-  margin: 0;
+  bottom: -50px;
   left: 0;
-  bottom: -85px;
   -webkit-transform: skewY(-15deg);
-  transform: skewY(-15deg); }
+  transform: skewY(-15deg);
+  margin: 0;
+  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-right: 20px;
+  width: 100%;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.125rem;
+  text-align: right;
+  text-transform: uppercase;
+  background-image: url("./img/dark-h-grunge.svg");
+  background-size: cover; }
 
 .manager__header {
-  padding: 0 15px; }
+  padding: 0 15px;
+  margin-top: 20px;
+  text-align: left; }
 
 .manager__position {
   margin: 0;
@@ -2745,6 +2767,7 @@ html, body {
   text-transform: uppercase; }
   .manager__name span {
     display: block;
+    margin-top: -5px;
     font-size: 2rem; }
 
 .haircut__header {
