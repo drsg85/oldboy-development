@@ -2732,9 +2732,8 @@ html, body {
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
       max-width: 768px; } }
   @media (min-width: 1200px) {
     .family__content {
@@ -2755,6 +2754,9 @@ html, body {
   font-size: 0;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 700px) {
+    .manager__photo {
+      max-width: 300px; } }
   @media (min-width: 1200px) {
     .manager__photo {
       max-width: 220px; } }

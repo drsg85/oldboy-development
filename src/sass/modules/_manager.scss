@@ -22,6 +22,11 @@
     border-radius: 5px;
     overflow: hidden;
 
+    @include atTablet {
+        // box model
+        max-width: 300px;
+    }
+
     @include atDesktopM {
         // box model
         max-width: 220px;
