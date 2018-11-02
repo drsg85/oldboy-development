@@ -11,6 +11,16 @@
     display: inline-block;
     vertical-align: top;
     margin-bottom: 55px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-around;
+        max-width: 768px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .family__caption {
@@ -37,6 +47,14 @@
         color: $dark;
         font-size: 1.5rem;
     }
+
+    @include atTablet {
+        // box model
+        margin-top: 35px;
+
+        // typography
+        text-align: right;
+    }
 }
 
 .family__logo {
@@ -56,4 +74,12 @@
     // box model
     max-width: 300px;
     margin: 0 auto;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 768px;
+    }
 }

@@ -2684,6 +2684,17 @@ html, body {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 55px; }
+  @media (min-width: 700px) {
+    .family__header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      max-width: 768px;
+      margin-bottom: 60px;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .family__subtitle {
   margin: 0;
@@ -2699,6 +2710,10 @@ html, body {
   .family__subtitle span {
     color: #131313;
     font-size: 1.5rem; }
+  @media (min-width: 700px) {
+    .family__subtitle {
+      margin-top: 35px;
+      text-align: right; } }
 
 .family__logo {
   max-width: 310px;
@@ -2710,9 +2725,23 @@ html, body {
 .family__content {
   max-width: 300px;
   margin: 0 auto; }
+  @media (min-width: 700px) {
+    .family__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      max-width: 768px; } }
 
 .manager {
   margin-bottom: 50px; }
+  @media (min-width: 700px) {
+    .manager {
+      margin-bottom: 80px; } }
 
 .manager__photo {
   position: relative;
