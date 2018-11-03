@@ -1,0 +1,115 @@
+.manager {
+    // box model
+    margin-bottom: 50px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 80px;
+    }
+}
+
+.manager__photo {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    border-radius: 5px;
+    overflow: hidden;
+
+    @include atTablet {
+        // box model
+        max-width: 300px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 220px;
+    }
+
+    @include atFullHD {
+        // box model
+        max-width: 340px;
+    }
+}
+
+.manager__photo img {
+    // box model
+    width: 100%;
+    height: 100%;
+
+    // visual
+    object-fit: cover;
+}
+
+.manager__place {
+    // positioning
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    transform: skewY(-15deg);
+
+    // box model
+    margin: 0;
+    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 100%;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.125rem;
+    text-align: right;
+    text-transform: uppercase;
+
+    // visual
+    background-image: url('./img/dark-h-grunge.svg');
+    background-size: cover;
+}
+
+.manager__header {
+    // box model
+    padding: 0 15px;
+    margin-top: 20px; //- подумать о margin-top
+
+    // typography
+    text-align: left;
+}
+
+.manager__position {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.manager__name {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    span {
+        // box model
+        display: block;
+        margin-top: -5px;
+
+        // typography
+        font-size: 2rem;
+    }
+}
