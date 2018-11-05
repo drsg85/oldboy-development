@@ -10,6 +10,11 @@
     width: 90%;
     max-width: 325px;
     // margin-left: -20px;
+
+    @include atTablet {
+        // box model
+        min-width: 350px;
+    }
 }
 
 .section-header--flipped {
@@ -56,23 +61,24 @@
     color: $light;
     font-family: $titleFont;
     font-size: 2.5rem;
+    line-height: 1.25;
 
     // visual
     background-color: $golden;
     box-shadow: -15px 10px 40px -10px rgba($dark, 0.5);
     text-shadow: -3px 2px 0 $darkGold;
     
-    // @include atTablet {
-    //     // box model
-    //     padding: 20px 40px;
+    @include atTablet {
+        // box model
+        padding: 20px 40px;
         
-    //     // typography
-    //     font-size: 3rem;
+        // typography
+        font-size: 3rem;
         
-    //     // visual
-    //     box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
-    //     text-shadow: -4px 3px 0 $darkGold;
-    // }
+        // visual
+        box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
+        text-shadow: -4px 3px 0 $darkGold;
+    }
 }
 
 .section-header__title::after {
@@ -86,7 +92,6 @@
     // box model
     height: 100%;
     width: 40px;
-    // border: 1px solid red;
 
     // visual
     background-image: url('./img/gold-v-grunge.svg');
@@ -179,7 +184,6 @@
     // box model
     height: 100%;
     width: 50px;
-    // border: 1px solid red;
 
     // visual
     background-image: url('./img/white-grunge-90.svg');
@@ -190,12 +194,7 @@
 }
 
 .section-header__image img {
-    // positioning
-    // transform: skewY(15deg);
-
     // // box model
-    // height: 150%;
     width: 100%;
     object-fit: cover;
-    // object-position: bottom center;
 }
