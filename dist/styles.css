@@ -1975,6 +1975,9 @@ html, body {
 
 .services__content {
   padding: 20px; }
+  @media (min-width: 700px) {
+    .services__content {
+      padding: 40px; } }
 
 .services__main {
   margin-bottom: 40px; }
@@ -1982,13 +1985,17 @@ html, body {
 .service-main {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: calc(56.25vw - 40px);
+  min-height: 180px;
   margin: 0;
   margin-bottom: 25px;
   background-color: #896322;
   border-radius: 5px;
   background-size: cover;
   background-position: center center; }
+  @media (min-width: 700px) {
+    .service-main {
+      margin-bottom: 40px; } }
   .service-main--haircut {
     background-image: url("./img/bgs/haircut.jpg"); }
   .service-main--beard {
@@ -1997,6 +2004,13 @@ html, body {
 .service-main__header {
   margin: 0;
   padding: 25px 23px; }
+  @media (min-width: 700px) {
+    .service-main__header {
+      position: absolute;
+      bottom: 0;
+      display: inline-block;
+      vertical-align: top;
+      padding: 40px; } }
 
 .service-main__title {
   margin: 0;
@@ -2005,9 +2019,15 @@ html, body {
   font-size: 1rem;
   text-align: left;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .service-main__title {
+      font-size: 1.9rem; } }
 
 .service-main__title strong {
   font-size: 1.5em; }
+  @media (min-width: 700px) {
+    .service-main__title strong {
+      font-size: 1.75em; } }
 
 .service-main__subtitle {
   margin: 0;
@@ -2016,6 +2036,10 @@ html, body {
   text-align: left;
   font-size: 0.85rem;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .service-main__subtitle {
+      font-size: 1.25rem;
+      text-align: right; } }
 
 .service-main__button {
   position: absolute;
@@ -2033,6 +2057,14 @@ html, body {
   text-transform: uppercase;
   border: 2px solid #d6a354;
   border-radius: 20px; }
+  @media (min-width: 700px) {
+    .service-main__button {
+      bottom: 40px;
+      right: 40px;
+      width: 210px;
+      line-height: 50px;
+      font-size: 1rem;
+      border-radius: 27px; } }
 
 .service-item {
   display: -webkit-box;

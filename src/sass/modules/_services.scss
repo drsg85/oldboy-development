@@ -10,6 +10,11 @@
 .services__content {
     // box model
     padding: 20px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
 }
 
 .services__main {

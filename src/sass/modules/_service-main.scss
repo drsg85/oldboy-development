@@ -4,7 +4,8 @@
 
     // box model
     width: 100%;
-    height: 180px;
+    height: calc(56.25vw - 40px);
+    min-height: 180px;
     margin: 0;
     margin-bottom: 25px;
 
@@ -13,6 +14,11 @@
     border-radius: 5px;
     background-size: cover;
     background-position: center center;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 40px;
+    }
 
     &--haircut {
         // visual
@@ -29,6 +35,17 @@
     // box model
     margin: 0;
     padding: 25px 23px;
+
+    @include atTablet {
+        // positioning
+        position: absolute;
+        bottom: 0;
+
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        padding: 40px;
+    }
 }
 
 .service-main__title {
@@ -41,11 +58,21 @@
     font-size: 1rem;
     text-align: left;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1.9rem;
+    }
 }
 
 .service-main__title strong {
     // typography
     font-size: 1.5em;
+
+    @include atTablet {
+        // typography
+        font-size: 1.75em;
+    }
 }
 
 .service-main__subtitle {
@@ -58,6 +85,12 @@
     text-align: left;
     font-size: 0.85rem;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1.25rem;
+        text-align: right;
+    }
 }
 
 .service-main__button {
@@ -84,4 +117,20 @@
     border: 2px solid $golden;
     // background-color: transparent;
     border-radius: 20px;
+
+    @include atTablet {
+        // positioning
+        bottom: 40px;
+        right: 40px;
+
+        // box model
+        width: 210px;
+
+        // typography
+        line-height: 50px;
+        font-size: 1rem;
+
+        // visual
+        border-radius: 27px;
+    }
 }
