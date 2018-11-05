@@ -1,26 +1,53 @@
 .editorial {
-
+    @include atTablet {
+        // box model
+        display: flex;
+        align-items: stretch;
+    }
 }
 
 .editorial__photo {
     // box model
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+
+    // typography
+    font-size: 0;
+    
+    // visual
+    border-radius: 5px;
+    box-shadow: 0 10px 15px 0 rgba(19, 19, 19, 0.25);
+    overflow: hidden;
+
+    @include atTablet {
+        // box model
+        flex-basis: 55%;
+        margin: 0;
+    }
 }
 
 .editorial__photo img {
     // box model
     width: 100%;
-
-    // TODO: maybe add object-fit
+    height: 100%;
 
     // visual
-    border-radius: 5px;
-    box-shadow: 0 10px 15px 0 rgba(19, 19, 19, 0.25);
+    object-fit: cover;
 }
 
 .editorial__content {
     // box model
-    margin-top: -55px;
+    margin-top: -60px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 45%;
+        
+        margin: 0;
+        padding-left: 30px;
+    }
 }
 
 .editorial__caption {
@@ -32,13 +59,24 @@
 .editorial__category {
     // box model
     margin: 0;
-    margin-bottom: 25px;
-    margin-left: 15px;
+    margin-bottom: 30px;
+    margin-left: 18px;
 
     // typography
     color: $light;
     font-family: $titleFont;
     font-size: 0.85rem;
+
+    @include atTablet {
+        // box model
+        margin: 0;
+        margin-bottom: 1em;
+
+        // typography
+        color: $golden;
+        font-size: 1.25rem;
+        text-align: left;
+    }
 }
 
 .editorial__title {
@@ -52,6 +90,12 @@
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1.75rem;
+        text-align: left;
+    }
 }
 
 .editorial__subtitle {
@@ -66,6 +110,12 @@
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 0.85rem;
+        text-align: left;
+    }
 }
 
 .editorial__footer {
@@ -91,4 +141,10 @@
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1rem;
+        text-align: right;
+    }
 }

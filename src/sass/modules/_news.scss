@@ -18,6 +18,11 @@
 
     // visual
     background-color: $bianca;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
 }
 
 .news__feed {
