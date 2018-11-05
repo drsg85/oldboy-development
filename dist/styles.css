@@ -1658,6 +1658,9 @@ html, body {
 
 .news__feed {
   padding: 20px; }
+  @media (min-width: 700px) {
+    .news__feed {
+      padding: 40px; } }
 
 .news__more {
   text-align: center; }
@@ -1755,7 +1758,7 @@ html, body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.675rem;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 1.5;
   text-align: center;
   text-transform: uppercase; }
   @media (min-width: 700px) {
@@ -1860,6 +1863,9 @@ html, body {
   padding: 5px 0;
   padding-left: 20px;
   font-size: 4vw; }
+  @media (min-width: 700px) {
+    .news-item__content {
+      font-size: 1rem; } }
 
 .news-item__category {
   margin: 0;
@@ -1868,12 +1874,34 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75em;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .news-item__category {
+      margin-bottom: 1em;
+      font-size: 1.25em; } }
 
 .news-item__title {
   margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1em; }
+  @media (min-width: 700px) {
+    .news-item__title {
+      margin-bottom: 5px;
+      font-size: 1.75em; } }
+
+.news-item__subtitle {
+  display: none; }
+  @media (min-width: 700px) {
+    .news-item__subtitle {
+      display: block;
+      margin: 0;
+      margin-bottom: 5px;
+      color: #131313;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+      font-weight: 600; } }
 
 .news-item__footer {
   display: -webkit-box;
@@ -1885,9 +1913,17 @@ html, body {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end; }
+  @media (min-width: 700px) {
+    .news-item__footer {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .news-item__date {
   font-size: 0.75rem; }
+  @media (min-width: 700px) {
+    .news-item__date {
+      font-size: 1rem; } }
 
 .news-item__cta {
   padding-bottom: 0.3em;
@@ -1898,6 +1934,10 @@ html, body {
   text-align: right;
   text-decoration: none;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .news-item__cta {
+      font-size: 1rem;
+      text-align: right; } }
 
 .services__header {
   padding-bottom: 20px; }

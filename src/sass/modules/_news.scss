@@ -29,6 +29,11 @@
     // box model
     padding: 20px;
 
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
+
     // @include atFullHD {
     //     // box model
     //     display: flex;
