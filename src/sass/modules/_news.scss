@@ -21,6 +21,7 @@
 
     @include atTablet {
         // box model
+        margin-top: -60px;
         padding: 40px;
     }
 }
@@ -32,6 +33,7 @@
     @include atTablet {
         // box model
         padding: 40px;
+        padding-bottom: 0;
     }
 
     // @include atFullHD {
@@ -51,6 +53,14 @@
 .news__more {
     // box model
     text-align: center;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 // TODO: remove this
@@ -64,4 +74,13 @@
     font-weight: 600;
     line-height: 1.5;
     text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        flex-basis: 300px;
+        margin-left: 40px;
+
+        // typography
+        text-align: left;
+    }
 }

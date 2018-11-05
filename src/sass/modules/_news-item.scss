@@ -4,6 +4,11 @@
     justify-content: space-between;
     margin-bottom: 20px;
     height: 30vw;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 40px;
+    }
 }
 
 .news-item__photo {
