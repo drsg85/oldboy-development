@@ -2020,25 +2020,27 @@ html, body {
 
 .service-main__header {
   margin: 0;
-  padding: 25px 23px; }
+  padding: 25px 23px;
+  font-size: 4vw; }
   @media (min-width: 700px) {
     .service-main__header {
       position: absolute;
       bottom: 0;
       display: inline-block;
       vertical-align: top;
-      padding: 40px; } }
+      padding: 40px;
+      font-size: 1rem; } }
 
 .service-main__title {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   text-align: left;
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .service-main__title {
-      font-size: 1.9rem; } }
+      font-size: 1.9em; } }
 
 .service-main__title strong {
   font-size: 1.5em; }
@@ -2051,11 +2053,11 @@ html, body {
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   text-align: left;
-  font-size: 0.85rem;
+  font-size: 0.85em;
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .service-main__subtitle {
-      font-size: 1.25rem;
+      font-size: 1.25em;
       text-align: right; } }
 
 .service-main__button {
