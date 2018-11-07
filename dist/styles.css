@@ -1436,7 +1436,7 @@ html, body {
   background-position: center center; }
 
 .section-header__subtitle {
-  position: relative;
+  position: absolute;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1451,6 +1451,7 @@ html, body {
   -ms-flex-negative: 1;
   flex-shrink: 1;
   margin: 0;
+  width: 100%;
   color: #896322;
   font-family: "Rex", Arial, sans-serif;
   font-size: 2rem; }

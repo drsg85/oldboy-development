@@ -4,12 +4,9 @@
     transform: skewY(-15deg);
     z-index: 2;
 
-    // TODO: fix this lately
     // box model
-    // margin-right: 40px;
     width: 90%;
     max-width: 325px;
-    // margin-left: -20px;
 
     @include atTablet {
         // box model
@@ -102,7 +99,7 @@
 
 .section-header__subtitle {
     // positioning
-    position: relative;
+    position: absolute;
     z-index: 2;
 
     // box model
@@ -111,6 +108,7 @@
     flex-grow: 10;
     flex-shrink: 1;
     margin: 0;
+    width: 100%;
     
     // typography
     color: $darkGold;
