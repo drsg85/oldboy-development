@@ -36,6 +36,9 @@
     margin: 0;
     padding: 25px 23px;
 
+    // typography
+    font-size: 4vw;
+
     @include atTablet {
         // positioning
         position: absolute;
@@ -45,6 +48,9 @@
         display: inline-block;
         vertical-align: top;
         padding: 40px;
+
+        // typography
+        font-size: 1rem;
     }
 }
 
@@ -55,13 +61,13 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1rem;
+    font-size: 1em;
     text-align: left;
     text-transform: uppercase;
 
     @include atTablet {
         // typography
-        font-size: 1.9rem;
+        font-size: 1.9em;
     }
 }
 
@@ -83,12 +89,12 @@
     color: $golden;
     font-family: $titleFont;
     text-align: left;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     text-transform: uppercase;
 
     @include atTablet {
         // typography
-        font-size: 1.25rem;
+        font-size: 1.25em;
         text-align: right;
     }
 }
