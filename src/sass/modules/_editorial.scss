@@ -37,7 +37,11 @@
 .editorial__content {
     // box model
     margin-top: -60px;
-    font-size: calc(0.9375rem + ((1vw - 3.75px) * 4.0123));
+    
+    // typography
+    font-size: calc(1rem + ((1vw - 3.75px) * 4));
+    font-size: 4vw;
+
     @include atTablet {
         // box model
         display: flex;
@@ -57,18 +61,20 @@
     // box model
     margin: 0;
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 .editorial__category {
     // box model
     margin: 0;
-    margin-bottom: 30px;
-    margin-left: 18px;
+    margin-bottom: 2em;
+    margin-left: 8px;
 
     // typography
     color: $light;
     font-family: $titleFont;
     font-size: 0.85em;
+    line-height: 1rem;
 
     @include atTablet {
         // box model
@@ -130,13 +136,15 @@
 
 .editorial__date {
     // typography
-    font-size: 1em;
+    font-size: 0.75em;
+
+    @include atTablet {
+        // typography
+        font-size: 1em;
+    }
 }
 
 .editorial__cta {
-    // box model
-    padding: 0 10px;
-
     // typography
     color: $golden;
     font-family: $mainFont;
