@@ -1730,7 +1730,8 @@ html, body {
   object-fit: cover; }
 
 .editorial__content {
-  margin-top: -60px; }
+  margin-top: -60px;
+  font-size: calc(0.9375rem + ((1vw - 3.75px) * 4.0123)); }
   @media (min-width: 700px) {
     .editorial__content {
       display: -webkit-box;
@@ -1746,7 +1747,8 @@ html, body {
       -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
       margin: 0;
-      padding-left: 30px; } }
+      padding-left: 30px;
+      font-size: 1rem; } }
 
 .editorial__caption {
   margin: 0;
@@ -1758,13 +1760,13 @@ html, body {
   margin-left: 18px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 0.85rem; }
+  font-size: 0.85em; }
   @media (min-width: 700px) {
     .editorial__category {
       margin: 0;
       margin-bottom: 1em;
       color: #d6a354;
-      font-size: 1.25rem;
+      font-size: 1.25em;
       text-align: left; } }
 
 .editorial__title {
@@ -1772,26 +1774,26 @@ html, body {
   margin-bottom: 5px;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   text-align: center;
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .editorial__title {
-      font-size: 1.75rem;
+      font-size: 1.75em;
       text-align: left; } }
 
 .editorial__subtitle {
   margin: 0;
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 0.675rem;
+  font-size: 0.675em;
   font-weight: 600;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .editorial__subtitle {
-      font-size: 0.85rem;
+      font-size: 0.85em;
       text-align: left; } }
 
 .editorial__footer {
@@ -1806,19 +1808,19 @@ html, body {
   align-items: center; }
 
 .editorial__date {
-  font-size: 1rem; }
+  font-size: 1em; }
 
 .editorial__cta {
   padding: 0 10px;
   color: #d6a354;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.75em;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .editorial__cta {
-      font-size: 1rem;
+      font-size: 1em;
       text-align: right; } }
 
 .date {
