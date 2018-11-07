@@ -23,5 +23,10 @@
 }
 
 .services__secondary {
-
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }

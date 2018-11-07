@@ -11,6 +11,17 @@
     background-position: left 90px center;
     background-repeat: no-repeat;
 
+    @include atTablet {
+        // box model
+        flex-basis: 45%;
+        flex-direction: column;
+        align-items: flex-start;
+
+        // visual
+        background-position: right center;
+        background-size: auto 120px;
+    }
+
     &--shaving {
         // visual
         background-image: url('./img/icons/razor.svg');
@@ -48,6 +59,11 @@
     font-size: 0.75rem;
     text-align: left;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1.25rem;
+    }
 }
 
 .service-item__title {
@@ -60,10 +76,17 @@
     font-size: 1rem;
     text-align: left;
 
+    @include atTablet {
+        // box model
+        margin-bottom: 1rem;
+
+        // typography
+        font-size: 1.75rem;
+    }
 }
 
 .service-item__title strong {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .service-item__button {
@@ -71,7 +94,6 @@
     display: block;
     flex-basis: 50%;
     width: 165px;
-    height: 100%;
 
     // typography
     color: $dark;

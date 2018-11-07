@@ -1731,7 +1731,6 @@ html, body {
 
 .editorial__content {
   margin-top: -60px;
-  font-size: calc(1rem + ((1vw - 3.75px) * 4));
   font-size: 4vw; }
   @media (min-width: 700px) {
     .editorial__content {
@@ -1989,6 +1988,17 @@ html, body {
 .services__main {
   margin-bottom: 40px; }
 
+@media (min-width: 700px) {
+  .services__secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
 .service-main {
   position: relative;
   width: 100%;
@@ -2088,6 +2098,19 @@ html, body {
   background-size: contain;
   background-position: left 90px center;
   background-repeat: no-repeat; }
+  @media (min-width: 700px) {
+    .service-item {
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      background-position: right center;
+      background-size: auto 120px; } }
   .service-item--shaving {
     background-image: url("./img/icons/razor.svg"); }
   .service-item--royal {
@@ -2109,6 +2132,9 @@ html, body {
   font-size: 0.75rem;
   text-align: left;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .service-item__subtitle {
+      font-size: 1.25rem; } }
 
 .service-item__title {
   margin: 0;
@@ -2116,16 +2142,19 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem;
   text-align: left; }
+  @media (min-width: 700px) {
+    .service-item__title {
+      margin-bottom: 1rem;
+      font-size: 1.75rem; } }
 
 .service-item__title strong {
-  font-size: 1.5rem; }
+  font-size: 1.5em; }
 
 .service-item__button {
   display: block;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   width: 165px;
-  height: 100%;
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.75rem;
