@@ -7,6 +7,21 @@
         // visual
         // background-image: linear-gradient(to bottom, $light, $bianca);
     }
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+
+        // box model
+        display: block;
+    }
 }
 
 .about__header {
@@ -15,6 +30,18 @@
 
     // box model
     padding: 20px 0;
+
+    @include atTablet {
+        // box model
+        flex-basis: 390px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 .about__image {
@@ -70,6 +97,26 @@
     background-position: center right;
 }
 
+.about__caption {
+    // box model
+    padding: 0 20px;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+        top: 1rem;
+
+        // box model
+        flex-basis: calc(100% - 391px);
+        padding-right: 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 450px;
+    }
+}
+
 .about__content {
     // positioning
     position: relative;
@@ -77,6 +124,17 @@
     // box model
     padding: 20px;
     margin-top: -30px;
+
+    @include atTablet {
+        // box model
+        margin-top: 0;
+        padding: 20px 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 450px;
+    }
 }
 
 .about__headline {
@@ -91,6 +149,12 @@
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: right;
+
+    @include atTablet {
+        // box model
+        font-size: 2rem;
+        width: auto;
+    }
 
     &--service {
         // box model
@@ -111,16 +175,20 @@
 }
 
 .about__subtitle {
-    // box model
-    margin-bottom: 20px;
-
     // typography
     color: $darkGold;
     font-family: $mainFont;
+    font-size: 0.85rem;
     line-height: 1.75;
+    line-height: 2;
+    font-weight: 600;
     letter-spacing: 0.05em;
-    font-weight: 700;
-    // text-transform: uppercase;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .about__text {
@@ -140,4 +208,9 @@
 .about__features {
     // box model
     padding-top: 20px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+    }
 }

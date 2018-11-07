@@ -4,14 +4,22 @@
     align-items: center;
     justify-content: space-around;
     margin-bottom: 40px;
+
+    @include atTablet {
+        // box model
+        flex-direction: column;
+        flex-basis: 33%;
+
+        // typography
+        text-align: center;
+        justify-content: flex-start;
+    }
 }
 
 .thing__icon {
     // box model
     width: 80px;
     flex-basis: 80px;
-
-    // visual
 }
 
 .thing__icon img {
@@ -26,11 +34,16 @@
     padding-left: 20px;
 
     // typography
-    color: rgba($dark, 0.75);
+    color: rgba($darkGold, 1);
     font-family: $mainFont;
     font-size: 0.85rem;
     font-weight: 600;
-    line-height: 1.75;
+    line-height: 2;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        padding: 20px;
+    }
 }
