@@ -77,7 +77,7 @@
 ## Структура сайта
 ![Структура сайта](/spec/img/structure.png)
 
-Схема для редактирования в прижожении [draw.io](https://www.draw.io/) — [scheme.xml]
+Схема для редактирования в прижожении [draw.io](https://www.draw.io/) — [scheme.xml](/spec/scheme.xml)
 
 ## Описание страниц сайта.
 1. [Главная страница (main)](#main)
