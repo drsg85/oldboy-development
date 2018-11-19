@@ -31,10 +31,27 @@
     }
 }
 
+.footer__content {
+    @include atDesktopS {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
 .footer__info-n-contacts {
     @include atTablet {
+        // box model
         display: flex;
         justify-content: space-between;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 300px;
     }
 }
 
@@ -51,6 +68,11 @@
         justify-content: space-between;
         padding-bottom: 40px;
         width: 320px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 0;
     }
 }
 
@@ -125,9 +147,9 @@
     // typography
     text-align: center;
 
-    @include atTablet {
-        // typography
-        // text-align: left;
+    @include atDesktopS {
+        // box model
+        display: none;
     }
 }
 
@@ -155,6 +177,20 @@
         padding: 40px 20px;
         padding-top: 20px;
     }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        // box model
+        padding: 40px 20px;
+        padding-bottom: 20px;
+        flex-direction: row;
+        align-items: flex-start;
+        width: calc(100% - 320px);
+    }
 }
 
 .footer__city {
@@ -171,6 +207,17 @@
         font-size: 3rem;
         text-align: center;
     }
+
+    @include atDesktopS {
+        // box model
+        display: none;
+    }
+
+    @include atDesktopM {
+        // box model
+        display: block;
+        order: 0;
+    }
 }
 
 .footer__menues {
@@ -185,7 +232,13 @@
         // box model
         display: flex;
         justify-content: space-around;
-        padding: 40px 0;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: calc(100% - 300px);
     }
 }
 
@@ -196,21 +249,27 @@
     @include atTablet {
         // box model
         display: block;
+        flex-basis: 25%;
     }
 }
 
 .footer__services-nav {
     // box model
     display: none;
-
+    
     @include atTablet {
         // box model
         display: block;
+        flex-basis: 40%;
     }
 }
 
 .footer__info-nav {
-    
+    @include atTablet {
+        // box model
+        display: block;
+        flex-basis: 270px;
+    }
 }
 
 .footer__copyrights {
