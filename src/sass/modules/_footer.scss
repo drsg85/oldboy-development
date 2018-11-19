@@ -21,7 +21,7 @@
             url('./img/bgs/footer-t.jpg');
         background-position:
             top -170px center,
-            center left;
+            center center;
         background-size:
             800px,
             cover;
@@ -46,6 +46,9 @@
 
     @include atTablet {
         // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding-bottom: 40px;
         width: 320px;
     }
@@ -91,6 +94,11 @@
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .footer__text {
@@ -98,11 +106,13 @@
     color: $lightGrey;
     font-family: $mainFont;
     font-size: 0.85rem;
-    // font-weight: 600;
     line-height: 1.5;
     text-align: center;
 
     @include atTablet {
+        // box model
+        margin-bottom: 0.5em;
+
         // typography
         text-align: left;
     }
@@ -117,7 +127,7 @@
 
     @include atTablet {
         // typography
-        text-align: left;
+        // text-align: left;
     }
 }
 
@@ -141,7 +151,9 @@
         // box model
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-around;
+        padding: 40px 20px;
+        padding-top: 20px;
     }
 }
 
