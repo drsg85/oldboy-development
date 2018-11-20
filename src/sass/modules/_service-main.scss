@@ -59,6 +59,11 @@
         // typography
         font-size: 1rem;
     }
+
+    @include atDesktopS {
+        // box model
+        padding: 30px;
+    }
 }
 
 .service-main__title {
@@ -75,6 +80,11 @@
     @include atTablet {
         // typography
         font-size: 1.9em;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.25em;
     }
 }
 
@@ -111,11 +121,11 @@
     position: absolute;
     right: 20px;
     bottom: 25px;
-
+    
     // box model
     display: block;
     width: 170px;
-
+    
     // typography
     color: $light;
     font-family: $mainFont;
@@ -125,25 +135,41 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-
+    
     // visual
     border: 2px solid $golden;
     // background-color: transparent;
     border-radius: 20px;
-
+    
     @include atTablet {
         // positioning
         bottom: 40px;
         right: 40px;
-
+        
         // box model
         width: 210px;
-
+        
         // typography
         line-height: 50px;
         font-size: 1rem;
-
+        
         // visual
         border-radius: 27px;
+    }
+    
+    @include atDesktopS {
+        // positioning
+        bottom: 30px;
+        right: 30px;
+        
+        // box model
+        width: 170px;
+        
+        // typography
+        font-size: 0.75rem;
+        line-height: 36px;
+
+        // visual
+        border-radius: 20px;
     }
 }

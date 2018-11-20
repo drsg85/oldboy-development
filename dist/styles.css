@@ -2125,7 +2125,8 @@ html, body {
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      margin-bottom: 0; } }
 
 @media (min-width: 700px) {
   .services__secondary {
@@ -2175,6 +2176,9 @@ html, body {
       vertical-align: top;
       padding: 40px;
       font-size: 1rem; } }
+  @media (min-width: 1000px) {
+    .service-main__header {
+      padding: 30px; } }
 
 .service-main__title {
   margin: 0;
@@ -2186,6 +2190,9 @@ html, body {
   @media (min-width: 700px) {
     .service-main__title {
       font-size: 1.9em; } }
+  @media (min-width: 1000px) {
+    .service-main__title {
+      font-size: 1.25em; } }
 
 .service-main__title strong {
   font-size: 1.5em; }
@@ -2229,6 +2236,14 @@ html, body {
       line-height: 50px;
       font-size: 1rem;
       border-radius: 27px; } }
+  @media (min-width: 1000px) {
+    .service-main__button {
+      bottom: 30px;
+      right: 30px;
+      width: 170px;
+      font-size: 0.75rem;
+      line-height: 36px;
+      border-radius: 20px; } }
 
 .service-item {
   display: -webkit-box;
@@ -2243,7 +2258,7 @@ html, body {
   margin-bottom: 30px;
   padding: 15px 3px;
   background-size: contain;
-  background-position: left 90px center;
+  background-position: center left 90px;
   background-repeat: no-repeat; }
   @media (min-width: 700px) {
     .service-item {
@@ -2256,8 +2271,12 @@ html, body {
       -webkit-box-align: start;
       -ms-flex-align: start;
       align-items: flex-start;
-      background-position: right center;
-      background-size: auto 120px; } }
+      background-position: center right;
+      background-size: 120px; } }
+  @media (min-width: 1000px) {
+    .service-item {
+      background-position: bottom 30px right 10px;
+      background-size: 80px; } }
   @media (min-width: 1000px) {
     .service-item {
       -ms-flex-preferred-size: 25%;
@@ -2286,6 +2305,9 @@ html, body {
   @media (min-width: 700px) {
     .service-item__subtitle {
       font-size: 1.25rem; } }
+  @media (min-width: 1000px) {
+    .service-item__subtitle {
+      font-size: 1rem; } }
 
 .service-item__title {
   margin: 0;
@@ -2297,6 +2319,9 @@ html, body {
     .service-item__title {
       margin-bottom: 1rem;
       font-size: 1.75rem; } }
+  @media (min-width: 1000px) {
+    .service-item__title {
+      font-size: 1.35rem; } }
 
 .service-item__title strong {
   font-size: 1.5em; }
