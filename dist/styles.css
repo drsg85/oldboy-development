@@ -2118,6 +2118,14 @@ html, body {
 
 .services__main {
   margin-bottom: 40px; }
+  @media (min-width: 1000px) {
+    .services__main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
 
 @media (min-width: 700px) {
   .services__secondary {
@@ -2144,6 +2152,12 @@ html, body {
   @media (min-width: 700px) {
     .service-main {
       margin-bottom: 40px; } }
+  @media (min-width: 1000px) {
+    .service-main {
+      -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px);
+      height: calc(31.25vw - 60px);
+      width: auto; } }
   .service-main--haircut {
     background-image: url("./img/bgs/haircut.jpg"); }
   .service-main--beard {
@@ -2244,6 +2258,10 @@ html, body {
       align-items: flex-start;
       background-position: right center;
       background-size: auto 120px; } }
+  @media (min-width: 1000px) {
+    .service-item {
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%; } }
   .service-item--shaving {
     background-image: url("./img/icons/razor.svg"); }
   .service-item--royal {

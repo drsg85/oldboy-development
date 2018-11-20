@@ -22,6 +22,11 @@
         background-size: auto 120px;
     }
 
+    @include atDesktopS {
+        // box model
+        flex-basis: 25%;
+    }
+
     &--shaving {
         // visual
         background-image: url('./img/icons/razor.svg');

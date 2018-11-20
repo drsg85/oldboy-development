@@ -20,6 +20,13 @@
         margin-bottom: 40px;
     }
 
+    @include atDesktopS {
+        // box model
+        flex-basis: calc(50% - 20px);
+        height: calc(31.25vw - 60px);
+        width: auto;
+    }
+
     &--haircut {
         // visual
         background-image: url('./img/bgs/haircut.jpg');
