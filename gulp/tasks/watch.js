@@ -24,10 +24,14 @@ gulp.task('watch', () => {
     });
 
     // pug
-    gulp.watch(dirs.pug, ['pugChanged']);
+    watch(dirs.pug, () => {
+        gulp.start('pugChanged');
+    });
 
     // style
-    gulp.watch(dirs.sass, ['cssInject'])
+    watch(dirs.sass, () => {
+        gulp.start('cssInject');
+    })
 });
 
 gulp.task('pugChanged', ['pugRender'], () => {

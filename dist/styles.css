@@ -396,15 +396,18 @@ html, body {
   padding: 20px;
   padding-bottom: 60px;
   background-color: #131313;
-  overflow: hidden;
   background-image: url("./img/bgs/hero-m.jpg");
-  background-position: bottom center; }
+  background-position: bottom center;
+  overflow: hidden; }
   @media (min-width: 700px) {
     .hero {
       padding: 40px;
       padding-bottom: 60px;
       background-image: url("./img/bgs/hero-t.jpg");
       background-size: cover; } }
+  @media (min-width: 1000px) {
+    .hero {
+      background-image: url("./img/bgs/hero.jpg"); } }
   .hero--city {
     background-image: url("./img/bgs/map.jpg");
     background-position: top left; }
@@ -558,6 +561,10 @@ html, body {
     .hero__buttons--main {
       margin: 0 auto;
       padding-bottom: 0; } }
+  @media (min-width: 1000px) {
+    .hero__buttons--main {
+      margin: 0;
+      text-align: left; } }
 
 .hero__app {
   margin: 0 -20px;
@@ -591,12 +598,23 @@ html, body {
       right: -100px;
       display: block;
       width: 640px; } }
+  @media (min-width: 1000px) {
+    .hero__deco {
+      right: 50%;
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%); } }
 
 .hero__deco img {
   width: 100%; }
 
 .hero__aside {
   display: none; }
+  @media (min-width: 1000px) {
+    .hero__aside {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block; } }
 
 .hero__subtitle {
   margin: 0;

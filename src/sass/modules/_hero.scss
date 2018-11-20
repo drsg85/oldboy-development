@@ -8,10 +8,9 @@
 
     // visual
     background-color: $dark;
-    overflow: hidden;
-
     background-image: url('./img/bgs/hero-m.jpg');
     background-position: bottom center;
+    overflow: hidden;
     
     @include atTablet {
         // box model
@@ -21,6 +20,11 @@
         // visual
         background-image: url('./img/bgs/hero-t.jpg');
         background-size: cover;
+    }
+
+    @include atDesktopS {
+        // visual
+        background-image: url('./img/bgs/hero.jpg');
     }
     
     &--city {
@@ -261,6 +265,14 @@
             margin: 0 auto;
             padding-bottom: 0;
         }
+
+        @include atDesktopS {
+            // box model
+            margin: 0;
+
+            // typography
+            text-align: left;
+        }
     }
 }
 
@@ -315,6 +327,12 @@
         display: block;
         width: 640px;
     }
+
+    @include atDesktopS {
+        // positioning
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
 
 .hero__deco img {
@@ -325,6 +343,16 @@
 .hero__aside {
     // box model
     display: none;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        
+        // box model
+        display: block;
+    }
 }
 
 .hero__subtitle {
