@@ -190,6 +190,14 @@
         // box model
         padding-right: 70px;
     }
+
+    @include atDesktopS {
+        // positioning
+        right: -1rem;
+
+        // box model
+        padding-right: 0;
+    }
 }
 
 .hero__content {
@@ -330,8 +338,16 @@
 
     @include atDesktopS {
         // positioning
+        z-index: 2;
         right: 50%;
+        bottom: 10px;
         transform: translateX(50%);
+
+        // box model
+        width: 550px;
+
+        // visual
+        pointer-events: none;
     }
 }
 
@@ -349,10 +365,17 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        
+
         // box model
         display: block;
+        padding: 40px;
     }
+}
+
+.hero__franchise {
+    // positioning
+    position: relative;
+    z-index: 1;
 }
 
 .hero__subtitle {

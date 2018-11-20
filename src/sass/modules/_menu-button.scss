@@ -20,6 +20,11 @@
         right: 33px;
         top: 37px;
     }
+
+    @include atDesktopS {
+        // box model
+        display: none;
+    }
 }
 
 .menu-button::before,
