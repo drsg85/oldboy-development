@@ -481,7 +481,7 @@ html, body {
   width: 85px; }
   @media (min-width: 700px) {
     .hero__logo {
-      width: 180px; } }
+      width: 190px; } }
 
 .hero__logo img {
   width: 100%; }
@@ -520,6 +520,9 @@ html, body {
   .hero__caption--branch {
     opacity: 0;
     margin-bottom: -160px; }
+  @media (min-width: 700px) {
+    .hero__caption {
+      width: 260px; } }
 
 .hero__opening {
   margin-left: -20px;
@@ -551,6 +554,10 @@ html, body {
       z-index: 2;
       margin: 0;
       padding-bottom: 60px; } }
+  @media (min-width: 700px) {
+    .hero__buttons--main {
+      margin: 0 auto;
+      padding-bottom: 0; } }
 
 .hero__app {
   margin: 0 -20px;
@@ -575,12 +582,17 @@ html, body {
         -webkit-transform: skewX(-15deg);
         transform: skewX(-15deg); } }
 
-.hero__image {
-  position: absolute;
-  bottom: 0;
+.hero__deco {
   display: none; }
+  @media (min-width: 700px) {
+    .hero__deco {
+      position: absolute;
+      bottom: 0;
+      right: -100px;
+      display: block;
+      width: 640px; } }
 
-.hero__image img {
+.hero__deco img {
   width: 100%; }
 
 .hero__aside {
@@ -664,7 +676,11 @@ html, body {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.5; }
+  @media (min-width: 700px) {
+    .hero-caption__motto {
+      font-size: 1.125rem; } }
 
 .hero-caption__location {
   margin: 0;
@@ -1665,7 +1681,6 @@ html, body {
   background-color: #fbf6ee; }
   @media (min-width: 700px) {
     .news__editorial {
-      margin-top: -60px;
       padding: 40px; } }
 
 .news__feed {

@@ -7,6 +7,7 @@
 | City            | city.pug         |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
 | Branch          | branch.pug       |   🆗  |  🆗 | 🚧 |  ❌  |  ❌ |  ❌  |
 | Branch Dummy    | branch-dummy.pug |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
+| Family          | family.pug       |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
 | Service. Hair   | haricut.pug      |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
 | Service. Royal  | royal.pug        |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
 | Service. Tattoo | tattoo.pug       |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
@@ -14,7 +15,6 @@
 | Terms           | terms.pug        |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
 | Privacy         | privacy.pug      |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
 | Franchise       | franchise.pug    |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
-| Family          | family.pug       |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
 | News            | news.pug         |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
 | News. Article   | article.pug      |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
 | Service. SPA    | barber-spa.pug   |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |

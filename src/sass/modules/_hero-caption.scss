@@ -15,7 +15,7 @@
     font-family: $mainFont;
     font-size: 0.75rem;
     font-weight: 600;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .hero-caption__big {
@@ -115,6 +115,12 @@
     color: $light;
     font-family: $titleFont;
     font-size: 1rem;
+    line-height: 1.5;
+
+    @include atTablet {
+        // typography
+        font-size: 1.125rem;
+    }
 }
 
 .hero-caption__location {
