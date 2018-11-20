@@ -11,6 +11,13 @@
         // box model
         padding-bottom: 20px;
     }
+
+    @include atDesktopS {
+        // box model
+        padding-top: 10px;
+        order: 1;
+    }
+
     .contact__title {
         // typography
         color: $light;

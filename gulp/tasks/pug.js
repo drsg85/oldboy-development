@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import pug from 'gulp-pug';
+import beautify from 'gulp-html-beautify';
 import { onError } from 'gulp-notify';
 
 const dirs = {
@@ -20,5 +21,6 @@ gulp.task('pugRender', function() {
             console.log(error.toString());
             this.emit('end');
         })
+        .pipe(beautify())
         .pipe(gulp.dest(dirs.dest));
 });
