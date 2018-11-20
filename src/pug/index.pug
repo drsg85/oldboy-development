@@ -226,27 +226,26 @@ html(lang="en")
 
             //- TODO: not sure about this section
             section.franchise
-                header.section-header
-                    h2.section-header__title Карта <br>филиалов
-                    p.section-header__subtitle Сеть&nbsp;Oldboy
+                .franchise__header
+                    header.section-header
+                        h2.section-header__title Карта <br>филиалов
+                        p.section-header__subtitle Сеть&nbsp;Oldboy
 
                 .franchise__map
                     img(src="/img/franchise-map.svg", alt="Oldboy barbershop locations map")
 
-                .franchise__header
-                    h3.franchise__title <span>Франшиза</span><br>Oldboy&nbsp;Barbershop 
-                    .franchise__logo
-                        a(href="#")
-                            img(src="/img/franch.svg", alt="Franchise logo")
+                .franchise__content
+                    .franchise__caption
+                        h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
+                        .franchise__button
+                            a.button(href="#") Открой свой барбершоп
 
-                .franchise__button
-                    a.button(href="#") Открой свой барбершоп
+                    a.franchise__logo(href="#")
+                        img(src="/img/franch.svg", alt="Oldboy Franchise logo")
 
-                .franchise__summary
-                    p.franchise__count 129
-                    .franchise__details
-                        p.franchise__top Филиалов
-                        p.franchise__bottom В 5 странах и в 5 столицах
+                    .franchise__summary
+                        p.franchise__count 129
+                        p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
 
         footer.footer
             .footer__info-n-contacts
