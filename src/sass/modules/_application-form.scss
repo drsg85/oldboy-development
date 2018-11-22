@@ -1,0 +1,24 @@
+.application-form {
+    // box model
+    padding-bottom: 55px;
+    
+    // visual
+    background-color: rgba($golden, 0.1);
+}
+.application-form__form {
+    // box model
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.application-form__policy {
+    // box model
+    display: inline-block;
+
+    // typography
+    color: #a37b3e;
+
+    // visual
+    text-decoration: none;
+}

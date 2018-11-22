@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="hero">
+    <header class="hero hero--franchise">
         <div class="hero__top">
             <div class="hero__logo"><a href="index.html"><img src="/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
             <div class="hero__nav">
@@ -33,8 +33,108 @@
                 <div class="menu-button__middle"></div>
             </div>
         </div>
-        <div class="hero__content"></div>
+        <div class="hero__map"><img src="./img/map.svg" alt="Map of branches" /></div>
+        <div class="hero__content">
+            <header class="hero__content-header">
+                <h1 class="hero__content-title">Франшиза</h1>
+                <p class="hero__content-subtitle">Oldboy Barbershop</p><button class="hero__content-more button button--ghost-dark">Узнать подробнее</button>
+            </header>
+            <div class="hero__content-quantity">
+                <header class="hero__content-quantity-header">
+                    <h2 class="hero__content-quantity-title">Нас уже</h2>
+                    <div class="hero__content-quantity-counter branches-counter"></div>
+                    <h2 class="hero__content-quantity-title">Филиалов</h2>
+                    <p class="hero__content-quantity-subtitle">В 5 странах и в 5 столицах</p>
+                </header>
+            </div>
+        </div>
     </header>
+    <main class="main">
+        <section class="application-form">
+            <header class="section-header">
+                <h2 class="section-header__title">Форма<br>заявки</h2>
+                <p class="section-header__subtitle">Oldboy&nbsp;Франшиза</p>
+            </header>
+            <form class="application-form__form form" id="application-form" action="">
+                <legend class="form__legend">
+                    <p class="form__title">Открой собственный барбершоп oldboy у себя в городе</p>
+                    <p class="form__subtitle">Заполни форму и наш менеджер с вами свяжется</p>
+                </legend>
+                <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /></div>
+                <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /></div>
+                <div class="form__input-group"><input class="form__input" type="text" name="city" placeholder="Желаемый город" /></div>
+                <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /></div>
+                <div class="form__input-group form__input-group--policy"><input class="form__checkbox" id="application-form__checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="form__label-checkbox" for="application-form__checkbox">Я соглашаюсь с<br> <a class="application-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
+                <div class="form__input-group"><input class="form__submit-btn button button--ghost-dark" type="submit" value="Отправить заявку" /></div>
+            </form>
+        </section>
+        <section class="benefits">
+            <header class="benefits__header">
+                <p class="benefits__subtitle">наши преимущества</p>
+                <h2 class="benefits__title">Выбирая нас вы получаете</h2>
+            </header>
+            <ol class="benefits__list">
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Узнаваемый бренд</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Брутальный фирменный стиль</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Пожизненное использование бренда</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Модель проекта раскрутки вашего Oldboy у вас в городе</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Lorem ipsum dolor sit amet consectetur.</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Мобильное приложение</p>
+                    <p class="benefits__list-descr">Онлайн запись к вам через мобильное приложение (Apple store, Google market), онлайн запись через сетевой сайт, где у вас будет собственная страничка, а так же онлайн запись через приложение вконтакте</p>
+                </li>
+                <li class="benefits__list-item">
+                    <p class="benefits__list-text">Премиум услуги</p>
+                    <p class="benefits__list-descr">Только у нас есть статусная услуга для состоятельных» клиентов «Королевское бритье от Trueffit&Hill» — это легендарная марка мужской косметики, обслуживающая Королевский Двор в Англии. Мы обучаем ее технологии ваших мастеров</p>
+                </li>
+            </ol>
+            <section class="benefits__conclusion">
+                <header class="benefits__conclusion-header">
+                    <p class="benefits__conclusion-subtitle">Oldboy family</p>
+                    <h3 class="benefits__conclusion-title">Это были лишь 15 самых очевидных причин "войти в семью"</h3>
+                    <div class="benefits__conclusion-logo"><img src="img/family/OldBoyFamily.svg" alt="OldBoyFamily Logo" /></div>
+                </header>
+                <div class="benefits__conclusion-more">
+                    <p class="benefits__conclusion-text">Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу</p><a class="benefits__conclusion-submit button button--ghost-dark" href="#">Свяжитесь с нами</a>
+                    <p class="benefits__conclusion-rest">И мы ответим на ваши вопросы</p><a class="benefits__conclusion-bibos" href="#">Франшиза Oldboy Barbershop на Бибос</a>
+                </div>
+            </section>
+        </section>
+    </main>
     <footer class="footer">
         <div class="footer__info-n-contacts">
             <div class="footer__info">
