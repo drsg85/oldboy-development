@@ -199,6 +199,16 @@
 .hero__content {
     // positioning
     position: relative;
+    
+    // box model
+    display: flex;
+    flex-direction: column;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        align-items: flex-end;
+    }
 }
 
 .hero__content-header {
@@ -228,6 +238,12 @@
     font-size: 1.5rem;
 }
 
+.hero__content-more {
+    @include atTablet {
+        // box model
+        margin-bottom: 0 !important;
+    }
+}
 
 .hero__content-quantity {
     // box model
