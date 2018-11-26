@@ -11,15 +11,9 @@
     box-shadow: 0 10px 30px -10px rgba($dark, 0.25), 
                 0 0 2px -1px rgba($dark, 0.5);
     background-image: url('./img/bgs/academy-m.jpg');
-    // overflow: hidden;
-
-    // @include atFullHD {
-    //     // box model
-    //     display: flex;
-    //     justify-content: space-around;
-    // }
 }
 
+// decoration (scissors and comb)
 .academy-banner::before {
     content: '';
 
@@ -31,21 +25,28 @@
     // box model
     width: 342px;
     height: 492px;
-
+    
     // visual
-    // border: 1px solid red;
-    background-image: url('./img/scissors.png');
+    background-image: url('./img/deco/scissors.png');
+    
+    @include atTablet{
+        // positioning
+        right: -40px;
+        top: 75px;
+
+        // box model
+        width: 378px;
+        height: 488px;
+
+        // visual
+        background-image: url('./img/deco/scissors-n-comb.png');
+    }
 }
 
 .academy-banner__header {
     // positioning
     transform: skewY(-15deg);
     transform-origin: center left;
-
-    @include atFullHD {
-        // box model
-        margin-top: 30px;
-    }
 }
 
 .academy-banner__title {
@@ -83,6 +84,11 @@
 .academy-banner__content {
     // box model
     margin-bottom: 20px;
+
+    @include atTablet {
+        // box model
+        max-width: 320px;
+    }
 }
 
 .academy-banner__motto {
@@ -93,10 +99,10 @@
     line-height: 1.5;
     text-transform: uppercase;
 
-    // @include atFullHD {
-    //     // typography
-    //     font-size: 1.3rem;
-    // }
+    @include atTablet {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .academy-banner__text {
@@ -105,6 +111,11 @@
     font-size: 0.85rem;
     font-weight: 400;
     line-height: 1.5;
+
+    @include atTablet {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .academy-banner__address {
@@ -114,6 +125,11 @@
     font-weight: 600;
     line-height: 1.5;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .academy-banner__phone {

@@ -3601,16 +3601,20 @@ html, body {
   top: 150px;
   width: 342px;
   height: 492px;
-  background-image: url("./img/scissors.png"); }
+  background-image: url("./img/deco/scissors.png"); }
+  @media (min-width: 700px) {
+    .academy-banner::before {
+      right: -40px;
+      top: 75px;
+      width: 378px;
+      height: 488px;
+      background-image: url("./img/deco/scissors-n-comb.png"); } }
 
 .academy-banner__header {
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
   -webkit-transform-origin: center left;
   transform-origin: center left; }
-  @media (min-width: 1900px) {
-    .academy-banner__header {
-      margin-top: 30px; } }
 
 .academy-banner__title {
   max-width: 320px;
@@ -3633,6 +3637,9 @@ html, body {
 
 .academy-banner__content {
   margin-bottom: 20px; }
+  @media (min-width: 700px) {
+    .academy-banner__content {
+      max-width: 320px; } }
 
 .academy-banner__motto {
   font-family: "Open Sans", Arial, sans-serif;
@@ -3640,12 +3647,18 @@ html, body {
   font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .academy-banner__motto {
+      font-size: 1rem; } }
 
 .academy-banner__text {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.5; }
+  @media (min-width: 700px) {
+    .academy-banner__text {
+      font-size: 1rem; } }
 
 .academy-banner__address {
   font-family: "Open Sans", Arial, sans-serif;
@@ -3653,6 +3666,9 @@ html, body {
   font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .academy-banner__address {
+      font-size: 1rem; } }
 
 .academy-banner__phone {
   color: #d6a354;
