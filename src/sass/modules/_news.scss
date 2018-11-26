@@ -5,6 +5,7 @@
     @include atDesktopS {
         // box model
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 }
@@ -40,6 +41,7 @@
     @include atDesktopS {
         // box model
         flex-basis: calc(100% - 400px);
+        max-width: calc(60% + 40px);
         margin-right: 50px;
 
         // visual

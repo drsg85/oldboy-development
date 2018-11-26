@@ -23,6 +23,11 @@
         flex-basis: 55%;
         margin: 0;
     }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 65%;
+    }
 }
 
 .editorial__photo img {
@@ -54,6 +59,11 @@
         // typography
         font-size: 1rem;
     }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 35%;
+    }
 }
 
 .editorial__caption {
@@ -61,6 +71,11 @@
     margin: 0;
     margin-bottom: 20px;
     padding: 0 10px;
+
+    @include atTablet {
+        // box model
+        padding: 0;
+    }
 }
 
 .editorial__category {
@@ -104,6 +119,11 @@
         font-size: 1.75em;
         text-align: left;
     }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.25rem;
+    }
 }
 
 .editorial__subtitle {
@@ -124,6 +144,11 @@
         font-size: 0.85em;
         text-align: left;
     }
+
+    @include atDesktopS {
+        // typography
+        font-size: 0.75rem;
+    }
 }
 
 .editorial__footer {
@@ -135,11 +160,16 @@
 
 .editorial__date {
     // typography
-    font-size: 0.75em;
+    font-size: 0.75rem;
 
     @include atTablet {
         // typography
-        font-size: 1em;
+        font-size: 1rem;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 0.75rem;
     }
 }
 
