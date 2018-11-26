@@ -1,6 +1,5 @@
 .news {
     // box model
-    // margin-top: -20px;
     margin-bottom: 50px;
 }
 
@@ -51,6 +50,10 @@
 
 .news__more {
     // box model
+    padding: 40px;
+    padding-top: 20px;
+
+    // typography
     text-align: center;
 
     @include atTablet {
@@ -62,8 +65,7 @@
     }
 }
 
-// TODO: remove this
-.news__see-more {
+.news__more-text {
     // box model
     margin: 0;
 
