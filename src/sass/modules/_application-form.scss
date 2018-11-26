@@ -1,0 +1,62 @@
+.application-form {
+    // box model
+    padding-bottom: 55px;
+    
+    // visual
+    background-color: rgba($golden, 0.1);
+
+    @include atTablet {
+        // box model
+        margin-bottom: 150px;
+    }
+}
+.application-form__form {
+    // box model
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+
+        // box model
+        max-width: 380px;
+        width: 100%;
+        margin-left: calc((100% - 700px)/2);
+        &:after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            right: -450px;
+            bottom: -170px;
+
+            // box model
+            display: block;
+            width: 540px;
+            height: 100%;
+
+            // visual
+            background-image: url('img/chair.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 42% 0;
+        }
+    }
+
+    @include atDesktopM {
+        margin-left: calc((100% - 380px)/2);
+    }
+}
+
+.application-form__policy {
+    // box model
+    display: inline-block;
+
+    // typography
+    color: #a37b3e;
+
+    // visual
+    text-decoration: none;
+}
