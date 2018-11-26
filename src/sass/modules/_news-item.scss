@@ -9,6 +9,15 @@
         // box model
         margin-bottom: 40px;
     }
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+
+        // box model
+        flex-basis: 30%;
+        height: auto;
+    }
 }
 
 .news-item__photo {
@@ -21,6 +30,16 @@
     // visual
     border-radius: 5px;
     overflow: hidden;
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 100%;
+        height: 0;
+        width: 100%;
+        margin-bottom: 100%;
+        padding-top: 100%;
+        border: 1px solid red;
+    }
 }
 
 .news-item__photo img {
@@ -31,6 +50,15 @@
     
     // visual
     object-fit: cover;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 .news-item__content {
@@ -46,10 +74,15 @@
 
     // typography
     font-size: 4vw;
-    //font-size: calc(1rem + ((1vw - 3.75px) * 3.7037));
+
     @include atTablet {
         // typography
         font-size: 1rem;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
     }
 }
 
