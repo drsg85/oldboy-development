@@ -3723,6 +3723,12 @@ html, body {
   -webkit-box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
   box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
   background-image: url("./img/bgs/academy-m.jpg"); }
+  @media (min-width: 1000px) {
+    .academy-banner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 40px; } }
 
 .academy-banner::before {
   content: '';
@@ -3739,12 +3745,20 @@ html, body {
       width: 378px;
       height: 488px;
       background-image: url("./img/deco/scissors-n-comb.png"); } }
+  @media (min-width: 1000px) {
+    .academy-banner::before {
+      top: -60px; } }
 
 .academy-banner__header {
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
   -webkit-transform-origin: center left;
   transform-origin: center left; }
+  @media (min-width: 1000px) {
+    .academy-banner__header {
+      -ms-flex-preferred-size: 320px;
+      flex-basis: 320px;
+      margin-right: 30px; } }
 
 .academy-banner__title {
   max-width: 320px;
@@ -3755,6 +3769,12 @@ html, body {
   font-size: 1.5rem;
   border-bottom: 4px solid #d6a354;
   border-top: 4px solid #d6a354; }
+  @media (min-width: 1000px) {
+    .academy-banner__title {
+      max-width: 360px;
+      margin-left: -65px;
+      padding-left: 65px;
+      font-size: 2rem; } }
 
 .academy-banner__title strong {
   font-size: 2em; }
@@ -3764,12 +3784,21 @@ html, body {
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
+  @media (min-width: 1000px) {
+    .academy-banner__subtitle {
+      font-size: 1.5rem; } }
 
 .academy-banner__content {
   margin-bottom: 20px; }
   @media (min-width: 700px) {
     .academy-banner__content {
       max-width: 320px; } }
+  @media (min-width: 1000px) {
+    .academy-banner__content {
+      margin-bottom: 0;
+      max-width: 400px;
+      -ms-flex-preferred-size: 33%;
+      flex-basis: 33%; } }
 
 .academy-banner__motto {
   font-family: "Open Sans", Arial, sans-serif;
@@ -3803,6 +3832,12 @@ html, body {
 .academy-banner__phone {
   color: #d6a354;
   text-decoration: none; }
+
+@media (min-width: 1000px) {
+  .academy-banner__cta {
+    position: absolute;
+    bottom: 10px;
+    left: 30px; } }
 
 .testimonials {
   position: relative;
