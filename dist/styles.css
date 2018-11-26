@@ -2665,6 +2665,9 @@ html, body {
   @media (min-width: 700px) {
     .thing__text {
       padding: 20px; } }
+  @media (min-width: 1000px) {
+    .thing__text {
+      font-size: 0.75rem; } }
 
 .franchise {
   margin-top: 70px;
