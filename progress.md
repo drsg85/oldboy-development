@@ -13,7 +13,7 @@
 | 404             | 404.pug          |   🆗  |  🆗 | 🆗 |  🆗  |  🆗 |  ❌  |
 | Terms           | terms.pug        |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
 | Privacy         | privacy.pug      |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  ❌  |
-| Franchise       | franchise.pug    |   🆗  |  🆗 | 🚧 |  ❌  |  ❌ |  ❌  |
+| Franchise       | franchise.pug    |   🆗  |  🆗 | 🆗 |  ❌  |  ❌ |  ❌  |
 | Family          | family.pug       |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
 | News            | news.pug         |   🚧  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |
 | News. Article   | article.pug      |   ❌  |  ❌ | ❌ |  ❌  |  ❌ |  ❌  |

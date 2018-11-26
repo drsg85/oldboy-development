@@ -65,15 +65,19 @@ html(lang="en")
                     
                     .form__input-group
                         input.form__input.form__input--validated(type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван")
+                        button.form__input-clear +
 
                     .form__input-group
                         input.form__input.form__input--errored(type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format")
+                        button.form__input-clear +
 
                     .form__input-group
-                        input.form__input(type="text" name="city" placeholder="Желаемый город")
+                        input.form__input.form__input--active(type="text" name="city" placeholder="Желаемый город")
+                        button.form__input-clear +
 
                     .form__input-group
                         input.form__input(type="email" name="email" placeholder="E-mail")
+                        button.form__input-clear +
 
                     .form__input-group.form__input-group--policy
                         input.form__checkbox#application-form__checkbox(type="checkbox" name="policy" required checked)
@@ -125,8 +129,9 @@ html(lang="en")
                 
                 section.benefits__conclusion
                     header.benefits__conclusion-header
-                        p.benefits__conclusion-subtitle Oldboy family
-                        h3.benefits__conclusion-title Это были лишь 15 самых очевидных причин "войти в семью"
+                        .benefits__conclusion-header-info
+                            p.benefits__conclusion-subtitle Oldboy family
+                            h3.benefits__conclusion-title Это были лишь 15 самых очевидных причин "войти в семью"
                         .benefits__conclusion-logo
                             img(src="img/family/OldBoyFamily.svg", alt="OldBoyFamily Logo")
                     .benefits__conclusion-more

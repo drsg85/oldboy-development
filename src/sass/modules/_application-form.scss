@@ -44,6 +44,10 @@
             background-position: 42% 0;
         }
     }
+
+    @include atDesktopM {
+        margin-left: calc((100% - 380px)/2);
+    }
 }
 
 .application-form__policy {

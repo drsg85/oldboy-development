@@ -204,16 +204,31 @@
     display: flex;
     flex-direction: column;
 
+    // typography
+    text-align: center;
+
     @include atTablet {
         // box model
         flex-direction: row;
         align-items: flex-end;
+    }
+
+    @include atDesktopS {
+        // box model
+        justify-content: center;
+        margin-top: -100px;
     }
 }
 
 .hero__content-header {
     // typography
     text-align: center;
+
+    @include atDesktopS {
+        // box model
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .hero__content-title {
@@ -225,6 +240,11 @@
     font-size: 3.75rem;
     font-family: $titleFont;
     text-align: center;
+
+    @include atDesktopS {
+        // typography
+        font-size: 2.25rem;
+    }
 }
 
 .hero__content-subtitle {
@@ -242,6 +262,12 @@
     @include atTablet {
         // box model
         margin-bottom: 0 !important;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: block;
+        width: 100%;
     }
 }
 
@@ -270,6 +296,12 @@
        border-image: linear-gradient(to right, #a8955d, #f7dc93);
        border-image-slice: 2;
     }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        right: 50px;
+    }
 }
 
 .hero__content-quantity-header {
@@ -287,6 +319,11 @@
     font-size: 3.75rem;
     font-family: $titleFont;
     text-align: center;
+
+    @include atDesktopS {
+        // typography
+        font-size: 3rem;
+    }
 }
 
 .hero__content-quantity-subtitle {

@@ -12,6 +12,11 @@
         // typography
         text-align: center;
     }
+
+    @include atDesktopS {
+        // box model
+        padding: 0;
+    }
 }
 
 .benefits__header {
@@ -104,6 +109,19 @@
         // typography
         text-align: left;
     }
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 calc((100% - 1200px)/2);
+    }
+
+    @include atDesktopL {
+        // box model
+        justify-content: space-between;
+    }
 }
 
 .benefits__list-item {
@@ -122,6 +140,15 @@
 
         // typography
         font-size: 1.125rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        width: 100%;
+        max-width: 333px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     &:before {
@@ -151,24 +178,43 @@
             line-height: 54px;
             letter-spacing: 14.4px;
         }
+
+        @include atDesktopS {
+            // positioning
+            position: relative;
+
+            // box model
+            display: block;
+            width: 100%;
+            margin-bottom: 30px;
+
+            // typography
+            text-align: center;
+        }
     }
 }
 
 .benefits__list-text {
     // box model
     margin: 0;
-    //margin-left: 60px;
     margin-left: 3.750em;
 
     // typography
     font-family: $mainFont;
     font-size: 1em;
+    line-height: 24px;
     letter-spacing: 4.8px;
     text-transform: uppercase;
 
     @include atTablet {
         // box model
         margin-left: 6.75em;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+        margin-bottom: 15px;
     }
 }
 
@@ -183,10 +229,16 @@
         // box model
         margin-left:7.5em;
     }
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+    }
 }
 
 .benefits__conclusion {
-
+    // box model
+    padding: 0 calc((100% - 1100px)/2);
 }
 
 .benefits__conclusion-header {
@@ -197,6 +249,12 @@
     @include atTablet {
         // box model
         padding: 0 70px;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        flex: row;
     }
 }
 
@@ -248,6 +306,10 @@
     color: #2b2a29;
     text-transform: uppercase;
     text-align: center;
+    
+    @include atDesktopS {
+        padding: 0 calc((100% - 560px)/2);
+    }
 }
 
 .benefits__conclusion-submit {

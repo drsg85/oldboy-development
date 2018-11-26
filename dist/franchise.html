@@ -60,10 +60,10 @@
                     <p class="form__title">Открой собственный барбершоп oldboy у себя в городе</p>
                     <p class="form__subtitle">Заполни форму и наш менеджер с вами свяжется</p>
                 </legend>
-                <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /></div>
-                <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /></div>
-                <div class="form__input-group"><input class="form__input" type="text" name="city" placeholder="Желаемый город" /></div>
-                <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /></div>
+                <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /><button class="form__input-clear">+</button></div>
+                <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /><button class="form__input-clear">+</button></div>
+                <div class="form__input-group"><input class="form__input form__input--active" type="text" name="city" placeholder="Желаемый город" /><button class="form__input-clear">+</button></div>
+                <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /><button class="form__input-clear">+</button></div>
                 <div class="form__input-group form__input-group--policy"><input class="form__checkbox" id="application-form__checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="form__label-checkbox" for="application-form__checkbox">Я соглашаюсь с<br> <a class="application-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
                 <div class="form__input-group"><input class="form__submit-btn button button--ghost-dark" type="submit" value="Отправить заявку" /></div>
             </form>
@@ -71,7 +71,7 @@
         <section class="benefits">
             <header class="benefits__header">
                 <p class="benefits__subtitle">наши преимущества</p>
-                <h2 class="benefits__title">Выбирая нас<br> вы получаете</h2>
+                <h2 class="benefits__title">Выбирая нас<br>вы получаете</h2>
             </header>
             <ol class="benefits__list">
                 <li class="benefits__list-item">
@@ -128,8 +128,10 @@
             </ol>
             <section class="benefits__conclusion">
                 <header class="benefits__conclusion-header">
-                    <p class="benefits__conclusion-subtitle">Oldboy family</p>
-                    <h3 class="benefits__conclusion-title">Это были лишь 15 самых очевидных причин "войти в семью"</h3>
+                    <div class="benefits__conclusion-header-info">
+                        <p class="benefits__conclusion-subtitle">Oldboy family</p>
+                        <h3 class="benefits__conclusion-title">Это были лишь 15 самых очевидных причин "войти в семью"</h3>
+                    </div>
                     <div class="benefits__conclusion-logo"><img src="img/family/OldBoyFamily.svg" alt="OldBoyFamily Logo" /></div>
                 </header>
                 <div class="benefits__conclusion-more">

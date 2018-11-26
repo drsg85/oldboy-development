@@ -31,6 +31,9 @@
 }
 
 .form__input-group {
+    // positioning
+    position: relative;
+
     // box model
     width: 100%;
     margin: 20px 0;
@@ -45,6 +48,9 @@
 }
 
 .form__input {
+    // positioning
+    position: relative;
+
     // box model
     width: 100%;
     padding: 13px;
@@ -60,7 +66,8 @@
     border-radius: 5px;
     background-color: #ffffff;
     
-    &:focus {
+    &:focus,
+    &--active {
         // typography
         color: #000000;
 
@@ -89,6 +96,10 @@
     }
 
     &--errored {
+        // typography
+        color: #000000;
+        font-weight: 700;
+        
         // visual
         border: 2px solid red;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='32' fill='%23ffffff'%3E%3Cpath d='M0 16.352q0 1.12.768 1.92L8.64 25.92q.768.8 1.92.8t1.92-.8l16.16-15.84q.8-.768.8-1.888t-.8-1.856q-.8-.8-1.92-.8t-1.92.8l-14.24 13.92-5.92-5.792q-.8-.768-1.92-.768t-1.952.768Q0 15.232 0 16.352z'/%3E%3C/svg%3E");
@@ -96,6 +107,31 @@
         background-position: 97% 40%;
         background-size: 14px;
     }
+}
+
+.form__input-clear {
+    // positioning
+    position: absolute;
+    top: 13px;
+    right: 13px;
+
+    // box model
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    
+    // typography
+    text-align: center;
+    color: #ffffff;
+
+    // visual
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
 
 .form__checkbox {
