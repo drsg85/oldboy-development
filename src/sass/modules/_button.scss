@@ -10,10 +10,12 @@
     color: $light;
     font-family: $mainFont;
     font-weight: 600;
+    font-size: 1rem;
     line-height: 46px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
 
     // visual
     background-color: $golden;

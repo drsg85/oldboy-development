@@ -20,6 +20,13 @@
 .services__main {
     // box model
     margin-bottom: 40px;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
 }
 
 .services__secondary {

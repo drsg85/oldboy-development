@@ -8,7 +8,7 @@
 
     // visual
     background-size: contain;
-    background-position: left 90px center;
+    background-position: center left 90px;
     background-repeat: no-repeat;
 
     @include atTablet {
@@ -18,8 +18,19 @@
         align-items: flex-start;
 
         // visual
-        background-position: right center;
-        background-size: auto 120px;
+        background-position: center right;
+        background-size: 120px;
+    }
+
+    @include atDesktopS {
+        // visual
+        background-position: bottom 30px right 10px;
+        background-size: 80px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 25%;
     }
 
     &--shaving {
@@ -64,6 +75,11 @@
         // typography
         font-size: 1.25rem;
     }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .service-item__title {
@@ -82,6 +98,11 @@
 
         // typography
         font-size: 1.75rem;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.35rem;
     }
 }
 

@@ -38,22 +38,22 @@ html(lang="en")
                         h1.hero-caption__title <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span>
                         p.hero-caption__motto Намного больше, чем просто мужская&nbsp;парикмахерская
 
-                .hero__buttons
+                .hero__buttons.hero__buttons--main
                     a.button(href="#") Запись онлайн<br>
                     a.button.button--ghost(href="#") О барбершопе
 
-            .hero__image
+            .hero__deco
                 img(src="./img/bgs/oleg.png", alt="Стрижка в Oldboy barbershop")
 
             aside.hero__aside
                 .hero__counter
                     .branch-counter
-                        h2.branch-counter__title Крупнейшая сеть барбершопов
-                        p.branch-counter__amt 130
+                        h2.branch-counter__title Крупнейшая сеть <strong>барбершопов</strong>
+                        p.branch-counter__amount 130
 
                 .hero__franchise
                     .franch-promo
-                        h2.franch-promo__title Франшиза Oldboy Barbershop
+                        h2.franch-promo__title <strong>ФРАНШИЗА</strong> Oldboy Barbershop
                         .franch-promo__cta
                             a.button.button--ghost(href="#") Открыть барбершоп
 
@@ -84,59 +84,62 @@ html(lang="en")
 
                 .news__feed
                     article.news-item
-                        .news-item__photo
-                            img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
-                        
-                        .news-item__content
-                            header.news-item__header
-                                p.news-item__category Косметика и аксессуары
-                                h3.news-item__title Старт продаж новой косметики Barber Wild
-                                p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
+                        .news-item__container
+                            .news-item__photo
+                                img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                            
+                            .news-item__content
+                                header.news-item__header
+                                    p.news-item__category Косметика и аксессуары
+                                    h3.news-item__title Старт продаж новой косметики Barber Wild
+                                    p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
 
-                            footer.news-item__footer
-                                .news-item__date
-                                    .date
-                                        span.date__day 27
-                                        span.date__m-n-y <span>июля</span> <span>2018</span>
-                                a.news-item__cta(href="#") Читать полностью
-
-                    article.news-item
-                        .news-item__photo
-                            img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
-                        
-                        .news-item__content
-                            header.news-item__header
-                                p.news-item__category Новости регионов
-                                h3.news-item__title Новые акции для выпускников
-                                p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
-
-                            footer.news-item__footer
-                                .news-item__date
-                                    .date
-                                        span.date__day 27
-                                        span.date__m-n-y <span>июля</span> <span>2018</span>
-                                a.news-item__cta(href="#") Читать полностью
+                                footer.news-item__footer
+                                    .news-item__date
+                                        .date
+                                            span.date__day 27
+                                            span.date__m-n-y <span>июля</span> <span>2018</span>
+                                    a.news-item__cta(href="#") Читать полностью
 
                     article.news-item
-                        .news-item__photo
-                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                        .news-item__container
+                            .news-item__photo
+                                img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                            
+                            .news-item__content
+                                header.news-item__header
+                                    p.news-item__category Новости регионов
+                                    h3.news-item__title Новые акции для выпускников
+                                    p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
 
-                        .news-item__content
-                            header.news-item__header
-                                p.news-item__category Новинки
-                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
-                                p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
+                                footer.news-item__footer
+                                    .news-item__date
+                                        .date
+                                            span.date__day 27
+                                            span.date__m-n-y <span>июля</span> <span>2018</span>
+                                    a.news-item__cta(href="#") Читать полностью
 
-                            footer.news-item__footer
-                                .news-item__date
-                                    .date
-                                        span.date__day 27
-                                        span.date__m-n-y <span>июля</span> <span>2018</span>
-                                a.news-item__cta(href="#") Читать полностью
+                    article.news-item
+                        .news-item__container
+                            .news-item__photo
+                                img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+
+                            .news-item__content
+                                header.news-item__header
+                                    p.news-item__category Новинки
+                                    p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                                    p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
+
+                                footer.news-item__footer
+                                    .news-item__date
+                                        .date
+                                            span.date__day 27
+                                            span.date__m-n-y <span>июля</span> <span>2018</span>
+                                    a.news-item__cta(href="#") Читать полностью
 
                 .news__more
                     a.button(href="#") Смотреть все новости
-                    p.news__see-more Узнайте ещё больше новостей барбершопов oldboy
+                    p.news__more-text Узнайте ещё больше новостей барбершопов oldboy
 
             section.services
                 .services__header
@@ -217,36 +220,34 @@ html(lang="en")
                     p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
 
                 .academy-banner__content
-                    p.academy-banner__motto Академия барберинга Oldboy —&nbsp;место, где рождаются настоящие мужские парикмахеры
-                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и ведущим специалистом барбершопа
+                    p.academy-banner__motto Академия барберинга Oldboy —&nbsp;место, где&nbsp;рождаются настоящие мужские парикмахеры
+                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и&nbsp;ведущим специалистом барбершопа
                     p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
                     
                 .academy-banner__cta
                     a.button(href="#") Узнать подробнее
 
-            //- TODO: not sure about this section
             section.franchise
-                header.section-header
-                    h2.section-header__title Карта <br>филиалов
-                    p.section-header__subtitle Сеть&nbsp;Oldboy
+                .franchise__header
+                    header.section-header
+                        h2.section-header__title Карта <br>филиалов
+                        p.section-header__subtitle Сеть&nbsp;Oldboy
 
                 .franchise__map
                     img(src="/img/franchise-map.svg", alt="Oldboy barbershop locations map")
 
-                .franchise__header
-                    h3.franchise__title <span>Франшиза</span><br>Oldboy&nbsp;Barbershop 
-                    .franchise__logo
-                        a(href="#")
-                            img(src="/img/franch.svg", alt="Franchise logo")
+                .franchise__content
+                    .franchise__caption
+                        h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
+                        .franchise__button
+                            a.button(href="#") Открой свой барбершоп
 
-                .franchise__button
-                    a.button(href="#") Открой свой барбершоп
+                    a.franchise__logo(href="#")
+                        img(src="/img/franch.svg", alt="Oldboy Franchise logo")
 
-                .franchise__summary
-                    p.franchise__count 129
-                    .franchise__details
-                        p.franchise__top Филиалов
-                        p.franchise__bottom В 5 странах и в 5 столицах
+                    .franchise__summary
+                        p.franchise__count 129
+                        p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
 
         footer.footer
             .footer__content

@@ -46,4 +46,9 @@
         // box model
         padding: 20px;
     }
+
+    @include atDesktopS {
+        // typography
+        font-size: 0.75rem;
+    }
 }

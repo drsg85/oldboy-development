@@ -22,6 +22,12 @@
         font-size: 1.125rem;
         line-height: 1.25;
     }
+
+    @include atDesktopS {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 .city-select__city {
@@ -31,11 +37,17 @@
     // typography
     font-family: $titleFont;
     font-size: 1rem;
-
+    
     @include atTablet {
         // typography
         font-size: 1.125rem;
         line-height: 1.25;
+    }
+    
+    @include atDesktopS {
+        // box model
+        display: inline-block;
+        vertical-align: top;
     }
 
     @include atFullHD {

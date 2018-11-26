@@ -1,0 +1,39 @@
+.franch-promo {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 100px;
+    padding-right: 20px;
+
+    // visual
+    background-color: $golden;
+}
+
+.franch-promo__title {
+    // positioning
+    transform: skewY(-15deg);
+
+    // box model
+    margin: 0;
+    margin-top: -25px;
+    margin-bottom: 40px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+}
+
+.franch-promo__title strong {
+    // box model
+    display: block;
+
+    // typography
+    font-size: 2.5em;
+}
+
+.franch-promo__cta {
+
+}

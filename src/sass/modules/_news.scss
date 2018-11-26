@@ -1,7 +1,13 @@
 .news {
     // box model
-    // margin-top: -20px;
     margin-bottom: 50px;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .news__header {
@@ -10,6 +16,14 @@
 
     // visual
     background-image: linear-gradient(to bottom, $light, $bianca);
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 350px;
+
+        // visual
+        background-image: none;
+    }
 }
 
 .news__editorial {
@@ -21,8 +35,17 @@
 
     @include atTablet {
         // box model
-        margin-top: -60px;
         padding: 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: calc(100% - 400px);
+        max-width: calc(60% + 40px);
+        margin-right: 50px;
+
+        // visual
+        background-color: transparent;
     }
 }
 
@@ -36,22 +59,21 @@
         padding-bottom: 0;
     }
 
-    // @include atFullHD {
-    //     // box model
-    //     display: flex;
-    //     justify-content: space-between;
-    //     margin-bottom: 30px;
-    //     margin-left: 80px;
-    //     margin-top: -200px;
-    //     padding: 120px 140px;
-
-    //     // visual
-    //     background-color: #fdf6ee;
-    // }
+    @include atDesktopS {
+        // box model
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .news__more {
     // box model
+    padding: 40px;
+    padding-top: 20px;
+
+    // typography
     text-align: center;
 
     @include atTablet {
@@ -63,8 +85,7 @@
     }
 }
 
-// TODO: remove this
-.news__see-more {
+.news__more-text {
     // box model
     margin: 0;
 
