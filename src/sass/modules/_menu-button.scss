@@ -2,7 +2,7 @@
     // positioning
     position: fixed;
     right: 20px;
-    top: 15px;
+    top: 20px;
     z-index: 9;
 
     // box model
@@ -18,7 +18,7 @@
     @include atTablet {
         // positioning
         right: 33px;
-        top: 37px;
+        top: 45px;
     }
 
     @include atDesktopS {

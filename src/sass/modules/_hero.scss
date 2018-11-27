@@ -184,7 +184,7 @@
 
     // positioning
     position: absolute;
-    left: 105px;
+    right: 0;
     top: 0;
 
     // box model
@@ -199,7 +199,7 @@
         z-index: 2;
 
         // box model
-        padding-right: 70px;
+        padding-right: 60px;
     }
 
     @include atDesktopS {
