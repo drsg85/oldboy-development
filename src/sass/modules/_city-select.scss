@@ -2,10 +2,8 @@
     // box model
     margin-top: -2px;
 
-    @include atFullHD {
-        // box model
-        display: flex;
-    }
+    // typography
+    text-align: right;
 }
 
 .city-select__title {
@@ -21,12 +19,6 @@
         // typography
         font-size: 1.125rem;
         line-height: 1.25;
-    }
-
-    @include atDesktopS {
-        // box model
-        display: inline-block;
-        vertical-align: top;
     }
 }
 

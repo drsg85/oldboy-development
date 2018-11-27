@@ -492,6 +492,13 @@ html, body {
 .hero__nav {
   visibility: hidden;
   opacity: 0; }
+  @media (min-width: 1000px) {
+    .hero__nav {
+      position: absolute;
+      top: 0;
+      left: 190px;
+      visibility: visible;
+      opacity: 1; } }
   @media (min-width: 1900px) {
     .hero__nav {
       position: absolute;
@@ -515,7 +522,6 @@ html, body {
       padding-right: 70px; } }
   @media (min-width: 1000px) {
     .hero__city-select {
-      right: -1rem;
       padding-right: 0; } }
 
 .hero__content {
@@ -754,12 +760,8 @@ html, body {
   font-weight: 600; }
 
 .city-select {
-  margin-top: -2px; }
-  @media (min-width: 1900px) {
-    .city-select {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
+  margin-top: -2px;
+  text-align: right; }
 
 .city-select__title {
   margin: 0;
@@ -770,10 +772,6 @@ html, body {
     .city-select__title {
       font-size: 1.125rem;
       line-height: 1.25; } }
-  @media (min-width: 1000px) {
-    .city-select__title {
-      display: inline-block;
-      vertical-align: top; } }
 
 .city-select__city {
   margin: 0;

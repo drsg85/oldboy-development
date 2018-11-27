@@ -157,14 +157,25 @@
     visibility: hidden;
     opacity: 0;
 
-    @include atFullHD {
-    // positioning
-    position: absolute;
-    right: 40%;
-    top: 0;
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 190px;
+        
+        // visual
+        visibility: visible;
+        opacity: 1;
+    }
 
-    visibility: visible;
-    opacity: 1;
+    @include atFullHD {
+        // positioning
+        position: absolute;
+        right: 40%;
+        top: 0;
+
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -192,9 +203,6 @@
     }
 
     @include atDesktopS {
-        // positioning
-        right: -1rem;
-
         // box model
         padding-right: 0;
     }
