@@ -92,6 +92,12 @@
         display: block;
         height: 140px;
     }
+
+    @include atDesktopS {
+        // positioning
+        top: -90px;
+        right: 50px;
+    }
 }
 
 .franchise__logo img {
@@ -112,6 +118,16 @@
     @include atTablet {
         // typography
         font-size: 1.5rem;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        bottom: 10px;
+        right: 30px;
+
+        // typography
+        font-size: 0.8rem;
     }
 }
 

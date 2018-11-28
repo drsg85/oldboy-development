@@ -2751,6 +2751,10 @@ html, body {
       top: -40px;
       display: block;
       height: 140px; } }
+  @media (min-width: 1000px) {
+    .franchise__logo {
+      top: -90px;
+      right: 50px; } }
 
 .franchise__logo img {
   height: 100%; }
@@ -2770,6 +2774,12 @@ html, body {
   @media (min-width: 700px) {
     .franchise__summary {
       font-size: 1.5rem; } }
+  @media (min-width: 1000px) {
+    .franchise__summary {
+      position: absolute;
+      bottom: 10px;
+      right: 30px;
+      font-size: 0.8rem; } }
 
 .franchise__count {
   margin: 0;
