@@ -105,7 +105,7 @@
     // box model
     display: flex;
     flex-direction: row;
-    flex-grow: 10;
+    flex-grow: 20;
     flex-shrink: 1;
     margin: 0;
     width: 100%;
@@ -113,11 +113,22 @@
     // typography
     color: $darkGold;
     font-family: $titleFont;
-    font-size: 2rem;
+    font-size: 1.75rem;
 
     @include atTablet {
+        // box model
+        padding-right: 20px;
+
         // typography
-        font-size: 2.25rem;
+        font-size: 2rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-right: 40px;
+        
+        // typography
+        font-size: 1.5rem;
     }
 }
 
@@ -127,21 +138,28 @@
     // positioning
     position: relative;
     left: -10px;
-    top: 17px;
+    top: 0.75rem;
 
     // box model
     flex-grow: 1;
-    flex-shrink: 10;
-    height: 3px;
-    width: 100%;
+    flex-shrink: 20;
+    height: 2px;
     margin-right: 5px;
 
     // visual
     background-color: $darkGold;
 
     @include atTablet {
+        // positioning
+        top: 1rem;
+
         // box model
-        // padding-right: 200px;
+        height: 3px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: 0.75rem;
     }
 }
 
@@ -152,6 +170,13 @@
     &::before {
         // visual
         background-color: $darkGold;
+    }
+}
+
+.section-header__subtitle--light-t {
+    @include atTablet {
+        // typography
+        color: $light;
     }
 }
 

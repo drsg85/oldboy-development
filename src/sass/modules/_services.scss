@@ -5,6 +5,17 @@
 .services__header {
     // box model
     padding-bottom: 20px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: -110px;
+        padding-bottom: 0;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: -90px;
+    }
 }
 
 .services__content {
