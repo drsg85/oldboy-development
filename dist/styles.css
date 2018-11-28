@@ -2317,6 +2317,7 @@ html, body {
 .service-main__header {
   margin: 0;
   padding: 25px 23px;
+  padding: 5vw;
   font-size: 4vw; }
   @media (min-width: 700px) {
     .service-main__header {
@@ -2325,6 +2326,7 @@ html, body {
       display: inline-block;
       vertical-align: top;
       padding: 40px;
+      width: 60%;
       font-size: 1rem; } }
   @media (min-width: 1000px) {
     .service-main__header {
@@ -2334,7 +2336,7 @@ html, body {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
   text-align: left;
   text-transform: uppercase; }
   @media (min-width: 700px) {
@@ -2359,8 +2361,7 @@ html, body {
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .service-main__subtitle {
-      font-size: 1.25em;
-      text-align: right; } }
+      font-size: 1.25em; } }
 
 .service-main__button {
   position: absolute;
@@ -2371,12 +2372,13 @@ html, body {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.75rem;
+  font-weight: 600;
   letter-spacing: 0.05em;
   line-height: 36px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid #d6a354;
+  background-color: #d6a354;
   border-radius: 20px; }
   @media (min-width: 700px) {
     .service-main__button {

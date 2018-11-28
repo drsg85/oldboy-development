@@ -42,6 +42,7 @@
     // box model
     margin: 0;
     padding: 25px 23px;
+    padding: 5vw;
 
     // typography
     font-size: 4vw;
@@ -55,6 +56,7 @@
         display: inline-block;
         vertical-align: top;
         padding: 40px;
+        width: 60%;
 
         // typography
         font-size: 1rem;
@@ -73,7 +75,7 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1em;
+    font-size: 1.25em;
     text-align: left;
     text-transform: uppercase;
 
@@ -110,9 +112,11 @@
     text-transform: uppercase;
 
     @include atTablet {
+        // box model
+        // padding-left: 40px;
+
         // typography
         font-size: 1.25em;
-        text-align: right;
     }
 }
 
@@ -130,15 +134,16 @@
     color: $light;
     font-family: $mainFont;
     font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 0.05em;
     line-height: 36px;
     text-align: center;
     text-decoration: none;
+    // text-shadow: 1px 1px 1px $darkGold;
     text-transform: uppercase;
     
     // visual
-    border: 2px solid $golden;
-    // background-color: transparent;
+    background-color: $golden;
     border-radius: 20px;
     
     @include atTablet {
