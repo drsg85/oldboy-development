@@ -18,6 +18,9 @@
         // box model
         display: flex;
         margin: 40px;
+
+        // visual
+        background-position: center center;
     }
 }
 
@@ -64,7 +67,7 @@
     @include atDesktopS {
         // box model
         flex-basis: 320px;
-        margin-right: 30px;
+        margin-right: 10px;
     }
 }
 
