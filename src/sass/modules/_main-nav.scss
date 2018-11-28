@@ -21,4 +21,9 @@
     font-family: $titleFont;
     font-size: 1.125rem;
     text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.25rem;
+    }
 }

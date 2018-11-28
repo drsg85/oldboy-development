@@ -396,18 +396,38 @@ html, body {
   padding: 20px;
   padding-bottom: 60px;
   background-color: #131313;
-  background-image: url("./img/bgs/hero-m.jpg");
-  background-position: bottom center;
   overflow: hidden; }
   @media (min-width: 700px) {
     .hero {
       padding: 40px;
-      padding-bottom: 60px;
-      background-image: url("./img/bgs/hero-t.jpg");
-      background-size: cover; } }
-  @media (min-width: 1000px) {
-    .hero {
-      background-image: url("./img/bgs/hero.jpg"); } }
+      padding-bottom: 60px; } }
+  .hero--main {
+    background-image: url("./img/bgs/hero-m.jpg");
+    background-position: bottom center; }
+    @media (min-width: 700px) {
+      .hero--main {
+        background-image: url("./img/bgs/hero-t.jpg");
+        background-size: cover; } }
+    @media (min-width: 1000px) {
+      .hero--main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 100vh;
+        min-height: 620px;
+        max-height: 700px;
+        background-image: url("./img/bgs/hero.jpg"); } }
+    @media (min-width: 1200px) {
+      .hero--main {
+        min-height: 680px;
+        max-height: 740px; } }
   .hero--city {
     background-image: url("./img/bgs/map.jpg");
     background-position: top left; }
@@ -485,6 +505,9 @@ html, body {
   @media (min-width: 700px) {
     .hero__logo {
       width: 190px; } }
+  @media (min-width: 1200px) {
+    .hero__logo {
+      width: 230px; } }
 
 .hero__logo img {
   width: 100%; }
@@ -499,13 +522,9 @@ html, body {
       left: 190px;
       visibility: visible;
       opacity: 1; } }
-  @media (min-width: 1900px) {
+  @media (min-width: 1200px) {
     .hero__nav {
-      position: absolute;
-      right: 40%;
-      top: 0;
-      visibility: visible;
-      opacity: 1; } }
+      left: 260px; } }
 
 .hero__city-select {
   position: absolute;
@@ -526,6 +545,22 @@ html, body {
 
 .hero__content {
   position: relative; }
+  @media (min-width: 1000px) {
+    .hero__content {
+      -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+      flex-grow: 2;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-top: 20px; } }
 
 .hero__caption {
   width: 200px;
@@ -617,6 +652,9 @@ html, body {
       transform: translateX(50%);
       width: 550px;
       pointer-events: none; } }
+  @media (min-width: 1200px) {
+    .hero__deco {
+      width: 700px; } }
 
 .hero__deco img {
   width: 100%; }
@@ -675,6 +713,9 @@ html, body {
   @media (min-width: 700px) {
     .hero-caption__big {
       font-size: 3.5rem; } }
+  @media (min-width: 1200px) {
+    .hero-caption__big {
+      font-size: 4rem; } }
   .hero-caption__big--haircut::after {
     content: '';
     position: absolute;
@@ -772,6 +813,9 @@ html, body {
     .city-select__title {
       font-size: 1.125rem;
       line-height: 1.25; } }
+  @media (min-width: 1200px) {
+    .city-select__title {
+      font-size: 1.25rem; } }
 
 .city-select__city {
   margin: 0;
@@ -4304,6 +4348,9 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.125rem;
   text-transform: uppercase; }
+  @media (min-width: 1200px) {
+    .main-nav__link {
+      font-size: 1.25rem; } }
 
 .policy {
   padding: 20px; }

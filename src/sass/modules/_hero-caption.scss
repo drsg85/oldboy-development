@@ -43,6 +43,11 @@
         font-size: 3.5rem;
     }
 
+    @include atDesktopM {
+        // typography
+        font-size: 4rem;
+    }
+
     &--haircut {
         &::after {
             content: '';

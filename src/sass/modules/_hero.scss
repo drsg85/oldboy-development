@@ -5,26 +5,46 @@
     // box model
     padding: 20px;
     padding-bottom: 60px;
-
+    
     // visual
     background-color: $dark;
-    background-image: url('./img/bgs/hero-m.jpg');
-    background-position: bottom center;
     overflow: hidden;
     
     @include atTablet {
         // box model
         padding: 40px;
         padding-bottom: 60px;
-        
-        // visual
-        background-image: url('./img/bgs/hero-t.jpg');
-        background-size: cover;
     }
-
-    @include atDesktopS {
+    
+    &--main {
         // visual
-        background-image: url('./img/bgs/hero.jpg');
+        background-image: url('./img/bgs/hero-m.jpg');
+        background-position: bottom center;
+        
+        @include atTablet {
+            // visual
+            background-image: url('./img/bgs/hero-t.jpg');
+            background-size: cover;
+        }
+        
+        @include atDesktopS {
+            // box model
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            min-height: 620px;
+            max-height: 700px;
+
+            // visual
+            background-image: url('./img/bgs/hero.jpg');
+        }
+
+        @include atDesktopM {
+            // box model
+            min-height: 680px;
+            max-height: 740px;
+        }
     }
     
     &--city {
@@ -32,7 +52,7 @@
         background-image: url('./img/bgs/map.jpg');
         background-position: top left;
     }
-
+    
     &--branch {
         // visual
         background-image: none;
@@ -145,6 +165,11 @@
         // box model
         width: 190px;
     }
+
+    @include atDesktopM {
+        // box model
+        width: 230px;
+    }
 }
 
 .hero__logo img {
@@ -168,14 +193,9 @@
         opacity: 1;
     }
 
-    @include atFullHD {
+    @include atDesktopM {
         // positioning
-        position: absolute;
-        right: 40%;
-        top: 0;
-
-        visibility: visible;
-        opacity: 1;
+        left: 260px;
     }
 }
 
@@ -211,6 +231,15 @@
 .hero__content {
     // positioning
     position: relative;
+
+    @include atDesktopS {
+        // box model
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
 }
 
 .hero__caption {
@@ -356,6 +385,11 @@
 
         // visual
         pointer-events: none;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 700px;
     }
 }
 

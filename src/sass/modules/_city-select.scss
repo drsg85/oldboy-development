@@ -20,6 +20,11 @@
         font-size: 1.125rem;
         line-height: 1.25;
     }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.25rem;
+    }
 }
 
 .city-select__city {
