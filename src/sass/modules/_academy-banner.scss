@@ -117,7 +117,7 @@
 
 .academy-banner__content {
     // box model
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     @include atTablet {
         // box model
@@ -137,7 +137,7 @@
     font-family: $mainFont;
     font-size: 0.85rem;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.75;
     text-transform: uppercase;
 
     @include atTablet {
@@ -151,7 +151,7 @@
     font-family: $mainFont;
     font-size: 0.85rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.75;
 
     @include atTablet {
         // typography
@@ -164,7 +164,7 @@
     font-family: $mainFont;
     font-size: 0.85rem;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.75;
     text-transform: uppercase;
 
     @include atTablet {
