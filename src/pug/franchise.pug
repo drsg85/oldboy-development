@@ -34,25 +34,24 @@ html(lang="en")
                 .menu-button.menu-button--close
                     .menu-button__middle
 
-            .hero__map
-                img(src="./img/franchise-map.svg", alt="Map of branches")
-
-            .hero__content
-                header.hero__content-header
-                    h1.hero__content-title Франшиза
-                    p.hero__content-subtitle Oldboy Barbershop
-                    button.hero__content-more.button.button--ghost-dark Узнать подробнее
-
-                .hero__content-quantity
-                    header.hero__content-quantity-header
-                        h2.hero__content-quantity-title Нас уже
-
-                        .hero__content-quantity-counter.branches-counter
-
-                        h2.hero__content-quantity-title Филиалов
-                        p.hero__content-quantity-subtitle В 5 странах и в 5 столицах
-
         main.main
+            section.franchise
+                .franchise__map
+                    img(src="/img/franchise-map.svg", alt="Oldboy barbershop locations map")
+
+                .franchise__content
+                    .franchise__caption
+                        h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
+                        .franchise__button
+                            a.button(href="#") Открой свой барбершоп
+
+                    a.franchise__logo(href="#")
+                        img(src="/img/franch.svg", alt="Oldboy Franchise logo")
+
+                    .franchise__summary
+                        p.franchise__count 129
+                        p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
+
             section.application-form
                 header.section-header
                     h2.section-header__title Форма<br>заявки
