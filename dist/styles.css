@@ -2641,6 +2641,10 @@ html, body {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
+  @media (min-width: 1000px) {
+    .about__features {
+      margin-left: -400px;
+      padding: 30px; } }
 
 .thing {
   display: -webkit-box;

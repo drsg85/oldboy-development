@@ -213,4 +213,10 @@
         // box model
         display: flex;
     }
+
+    @include atDesktopS {
+        // box model
+        margin-left: -400px;
+        padding: 30px;
+    }
 }
