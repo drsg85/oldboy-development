@@ -35,8 +35,9 @@ html(lang="en")
 
             .hero__content
                 .hero__caption
-                    h1.hero__title Крупнейшая международная сеть мужских парикмахерских <span class="hero__big">OLDBOY <br>BARBERSHOP</span>
-                    p.hero__location Калининград
+                    .hero-caption
+                        h1.hero-caption__title Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span>
+                        p.hero-caption__location Калининград
 
                 .hero__opening
                     .section-header
@@ -49,10 +50,25 @@ html(lang="en")
                     .contact
                         h2.contact__title Телефон
                         p.contact__value 52–57–90
-
+                
+                .hero__countdown.countdown
+                    .countdown__block
+                        .countdown__date
+                            span.countdown__number 0
+                            span.countdown__number 3
+                        p.countdown__text дней
+                    .countdown__block
+                        .countdown__date
+                            span.countdown__number 1
+                            span.countdown__number 8
+                        p.countdown__text часов
+                    .countdown__block
+                        .countdown__date
+                            span.countdown__number 2
+                            span.countdown__number 7
+                        p.countdown__text минут
+                
                 .hero__buttons
-                    a.button.button--ghost(href="#") Оставь заявку
-
                     ul.social
                         li.social__item
                             a.social__icon.icon--vk(href="#") ВКонтакте
@@ -60,6 +76,14 @@ html(lang="en")
                             a.social__icon.icon--facebook(href="#") Facebook
                         li.social__item
                             a.social__icon.icon--instagram(href="#") Instagram
+            
+            aside.hero__vacancy
+                header.hero__vacancy-header
+                    p.hero__vacancy-subtitle Наши вакансии
+                    h2.hero__vacancy-title Стань частью команды OldBoy&nbsp;BarberShop
+                    .hero__vacancy-subtitle Хочешь работать в нашем Барбершопе?
+                
+                a.button.button--ghost(href="#") Оставь заявку
 
         footer.footer
             .footer__info-n-contacts

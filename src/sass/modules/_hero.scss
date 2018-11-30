@@ -234,6 +234,11 @@
     // box model
     margin-left: -20px;
     margin-top: -60px;
+
+    @include atTablet {
+        // box model
+        margin-left: -40px;
+    }
 }
 
 .hero__contacts {
@@ -253,6 +258,11 @@
         padding-top: 140px;
         padding-bottom: 60px;
     }
+}
+
+.hero__countdown {
+    // box model
+    margin-bottom: 40px;
 }
 
 .hero__buttons {
@@ -290,6 +300,137 @@
             text-align: left;
         }
     }
+}
+
+.hero__vacancy {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include atTablet {
+        // box model
+        max-width: 336px;
+        width: 100%;
+
+        // typography
+        text-align: right;
+
+        &:after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            right: 100%;
+
+            // box model
+            display: block;
+            width: 400px;
+            height: 600px;
+
+            // visual
+            background-image: url('img/deco/barber/barber.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        top: 174px;
+        right: 40px;
+        bottom: 0;
+
+        // box model
+        display: flex;
+        max-width: 250px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.hero__vacancy-header {
+    // box model
+    margin-bottom: 40px;
+}
+
+.hero__vacancy-title {
+    // box model
+    margin: 20px 0;
+
+    // positioning
+    position: relative;
+
+    // typography
+    color: #ffffff;
+    font-family: $titleFont;
+    font-size: calc(2.25rem + ((1vw - 3.75px) * -1.92));
+    font-weight: 700;
+    line-height: calc(3rem + ((1vw - 3.75px) * -2.88));
+
+    &:before,
+    &:after{
+        content: '';
+
+        // positioning
+        position: absolute;
+
+        // box model
+        display: block;
+        width: 100%;
+        height: 4px;
+
+        // visual
+        background-color: $golden;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    &:before {
+        // positioning
+        top: -10px;
+        left: -20px;
+
+        @include atTablet {
+            // positioning
+            left: auto;
+            right: -15px;
+        }
+    }
+
+    &:after {
+        // positioning
+        bottom: -10px;
+        left: -20px;
+
+        @include atTablet {
+            // positioning
+            left: auto;
+            right: -15px;
+        }
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+}
+
+.hero__vacancy-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
 }
 
 .hero__app {

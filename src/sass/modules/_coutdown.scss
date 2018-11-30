@@ -1,0 +1,91 @@
+.countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //max-width: 325px;
+    width: 100%;
+
+    // visual
+    border-radius: 5px;
+
+    @include atTablet {
+        // box model
+        max-width: 100%;
+    }
+    
+    @include atDesktopS {
+        // box model
+        justify-content: flex-start;
+    }
+}
+
+.countdown__date {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.countdown__block {
+    // positioning
+    position: relative;
+
+    // box model
+    display: inline-block;
+    margin: 0 9px;
+
+    // typography
+    color: #ffffff;
+    font-family: $titleFont;
+    font-weight: 700;
+    //font-size: 2.5rem;
+    
+    &:after {
+        content: ':';
+
+        // positioning
+        position: absolute;
+        top: -4px;
+        right: -12px;
+
+        // typography
+        font-family: $titleFont;
+        font-size: calc(2.5rem + ((1vw - 3.75px) * 7.1111));
+        
+        @include atTablet {
+            font-size: 56px;
+        }
+    }
+
+    &:last-child {
+        &:after {
+            content: none;
+        }
+    }
+}
+
+.countdown__number {
+    // box model
+    display: inline-block;
+    margin: 0 1px;
+    padding: 0 0.25em;
+
+    // typography
+    font-size: calc(2.5rem + ((1vw - 3.75px) * 7.1111));
+    
+    // visual
+    background-color: #000000;
+    border-radius: 5px;
+
+    @include atTablet {
+        font-size: 56px;
+    }
+}
+
+.countdown__text {
+    // box model
+    margin: 0;
+    margin-top: 5px;
+
+    // typography
+    text-align: center;
+}
