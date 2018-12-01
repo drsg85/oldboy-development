@@ -394,13 +394,12 @@ html, body {
 .hero {
   position: relative;
   padding: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   background-color: #131313;
   overflow: hidden; }
   @media (min-width: 700px) {
     .hero {
-      padding: 40px;
-      padding-bottom: 60px; } }
+      padding: 40px; } }
   .hero--main {
     background-image: url("./img/bgs/hero-m.jpg");
     background-position: bottom center; }
@@ -428,6 +427,11 @@ html, body {
       .hero--main {
         min-height: 680px;
         max-height: 740px; } }
+    @media (min-width: 1500px) {
+      .hero--main {
+        min-height: 720px;
+        height: 100vh;
+        max-height: 900px; } }
   .hero--city {
     background-image: url("./img/bgs/map.jpg");
     background-position: top left; }
@@ -639,7 +643,7 @@ html, body {
   @media (min-width: 700px) {
     .hero__deco {
       position: absolute;
-      bottom: 0;
+      bottom: -30px;
       right: -100px;
       display: block;
       width: 640px; } }
@@ -647,7 +651,6 @@ html, body {
     .hero__deco {
       z-index: 2;
       right: 50%;
-      bottom: 10px;
       -webkit-transform: translateX(50%);
       transform: translateX(50%);
       width: 550px;
@@ -667,11 +670,13 @@ html, body {
       right: 0;
       bottom: 0;
       display: block;
-      padding: 40px; } }
+      width: 50%;
+      padding-bottom: 20px; } }
 
 .hero__franchise {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  width: 100%; }
 
 .hero__subtitle {
   margin: 0;

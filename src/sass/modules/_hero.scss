@@ -4,7 +4,7 @@
 
     // box model
     padding: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     
     // visual
     background-color: $dark;
@@ -13,7 +13,6 @@
     @include atTablet {
         // box model
         padding: 40px;
-        padding-bottom: 60px;
     }
     
     &--main {
@@ -44,6 +43,13 @@
             // box model
             min-height: 680px;
             max-height: 740px;
+        }
+
+        @include atDesktopL {
+            // box model
+            min-height: 720px;
+            height: 100vh;
+            max-height: 900px;
         }
     }
     
@@ -365,7 +371,7 @@
     @include atTablet {
         // positioning
         position: absolute;
-        bottom: 0;
+        bottom: -30px;
         right: -100px;
 
         // box model
@@ -377,7 +383,6 @@
         // positioning
         z-index: 2;
         right: 50%;
-        bottom: 10px;
         transform: translateX(50%);
 
         // box model
@@ -410,7 +415,8 @@
 
         // box model
         display: block;
-        padding: 40px;
+        width: 50%;
+        padding-bottom: 20px;
     }
 }
 
@@ -418,6 +424,9 @@
     // positioning
     position: relative;
     z-index: 1;
+
+    // box model
+    width: 100%;
 }
 
 .hero__subtitle {
