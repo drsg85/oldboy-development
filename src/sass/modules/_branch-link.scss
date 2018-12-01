@@ -3,15 +3,17 @@
     position: relative;
 
     // box model
+    display: block;
     margin-bottom: 15px;
     padding-left: 10px;
 
     // typography
     color: $light;
     font-family: $mainFont;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 0.05em;
     line-height: 42px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
@@ -19,6 +21,31 @@
     // visual
     border: 1px solid rgba($golden, 0.25);
     border-radius: 23px;
+
+    @include atTablet {
+        // box model
+        flex-basis: 45%;
+        flex-basis: calc(50% - 20px);
+        padding-left: 48px;
+
+        // typography
+        text-align: left;
+    }
+
+    @include atDesktopS {
+        // box model
+        border: none;
+
+        // typography
+        line-height: 1.5;
+    }
+    
+    @include atDesktopM {
+        // box model
+        width: 250px;
+        flex-basis: 33%;
+        flex-basis: calc(33% - 15px);
+    }
 }
 
 .branch-link--metro::before {
@@ -37,6 +64,7 @@
     // typography
     font-size: 0.75em;
     line-height: 19px;
+    text-align: center;
 
     // visual
     // background-color: $golden;

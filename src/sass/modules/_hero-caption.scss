@@ -1,9 +1,18 @@
 .hero-caption {
+    // box model
+    width: 200px;
+
     // typography
+    // TODO: change to adaptive
     // font-size: 1rem;
 
     // visual
     transform: skewY(-15deg);
+
+    @include atTablet {
+        // box model
+        width: 260px;
+    }
 }
 
 .hero-caption__title {

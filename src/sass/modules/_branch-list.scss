@@ -4,6 +4,11 @@
 
     // typography
     text-align: center;
+
+    @include atDesktopS {
+        // box model
+        padding-top: 0;
+    }
 }
 
 .branch-list__button {
@@ -28,6 +33,11 @@
     background-color: transparent;
     border: none;
     outline: none;
+
+    @include atDesktopS {
+        // box model
+        display: none;
+    }
 }
 
 .branch-list__button::before,
@@ -69,11 +79,21 @@
     // box model
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
-    padding-bottom: 60px;
-    margin: 0 -20px;
-    margin-bottom: -60px;
+    padding: 40px 0;
 
     // visual
     background-image: linear-gradient(to bottom, transparent, $dark);
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 0;
+    }
 }

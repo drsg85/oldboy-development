@@ -14,8 +14,22 @@
         // box model
         padding: 40px;
     }
+
+    @include atDesktopM {
+        // box model
+        padding: 50px;
+        padding-bottom: 70px;
+    }
     
     &--main {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        min-height: 520px;
+        max-height: 700px;
+
         // visual
         background-image: url('./img/bgs/hero-m.jpg');
         background-position: bottom center;
@@ -27,11 +41,6 @@
         }
         
         @include atDesktopS {
-            // box model
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
             min-height: 620px;
             max-height: 700px;
 
@@ -55,7 +64,7 @@
     
     &--city {
         // visual
-        // background-image: url('./img/bgs/map.jpg');
+        background-image: url('./img/bgs/map.jpg');
         background-position: top left;
     }
     
@@ -155,6 +164,7 @@
 .hero__top {
     // positioning
     position: relative;
+    
 
     // box model
     margin-bottom: 20px;
@@ -238,30 +248,33 @@
     // positioning
     position: relative;
 
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+    
     @include atDesktopS {
         // box model
-        flex-grow: 2;
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        flex-grow: 2;
         padding-top: 20px;
+        flex-direction: row;
     }
 }
 
 .hero__caption {
     // box model
-    width: 200px;
-    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 
     &--branch {
         // box model
         opacity: 0;
         margin-bottom: -160px;
-    }
-
-    @include atTablet {
-        // box model
-        width: 260px;
     }
 }
 
@@ -295,6 +308,7 @@
     width: 220px;
     margin: 0 auto;
     margin-bottom: 20px;
+    margin-top: 80px;
     
     // typography
     // to align items on browsers without flex support
@@ -304,26 +318,15 @@
         // positioning
         position: relative;
         z-index: 2;
-        
-        // box model
-        margin: 0;
-        padding-bottom: 60px;
     }
 
-    &--main {
-        @include atTablet {
-            // box model
-            margin: 0 auto;
-            padding-bottom: 0;
-        }
+    @include atDesktopS {
+        // box model
+        margin: 0;
+        margin-top: 80px;
 
-        @include atDesktopS {
-            // box model
-            margin: 0;
-
-            // typography
-            text-align: left;
-        }
+        // typography
+        text-align: left;
     }
 }
 
@@ -339,7 +342,6 @@
         right: 0;
         top: 0;
         z-index: 1;
-        // border: 1px solid red;
 
         // box model
         width: 55%;
@@ -448,4 +450,17 @@
     color: $light;
     font-family: $titleFont;
     font-size: 2rem;
+}
+
+.hero__branches {
+    @include atDesktopS {
+        // box model
+        margin-top: -40px;
+        margin-left: 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 920px;
+    }
 }
