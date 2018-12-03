@@ -4,7 +4,7 @@
 
     // box model
     padding: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     
     // visual
     background-color: $dark;
@@ -13,6 +13,7 @@
     @include atTablet {
         // box model
         padding: 40px;
+        padding-bottom: 80px;
     }
 
     @include atDesktopM {
@@ -297,9 +298,38 @@
     }
 }
 
+.hero__contacts-n-buttons {
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.hero__buttons-n-social {
+    // box model
+    width: 220px;
+    margin: 0 auto;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        margin: 0;
+        // width: 300px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        // typography
+        text-align: left;
+    }
+}
+
 .hero__contacts {
     // box model
-    // margin-top: -80px;
     padding-bottom: 30px;
     padding-top: 15px;
 
@@ -313,6 +343,7 @@
         justify-content: space-around;
         padding-top: 140px;
         padding-bottom: 60px;
+        width: 100%;
     }
 }
 
@@ -325,7 +356,6 @@
     // box model
     width: 220px;
     margin: 0 auto;
-    margin-bottom: 20px;
     margin-top: 80px;
     
     // typography
@@ -483,7 +513,6 @@
     // box model
     margin: 0 -20px;
     margin-top: 60px;
-    border: 1px solid red;
 
     @include atTablet {
         // positioning
@@ -496,23 +525,24 @@
         // box model
         width: 55%;
 
-        &::before {
-            content: "";
+        // TODO: remove this later maybe
+        // &::before {
+        //     content: "";
 
-            // positioning
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            top: 0;
+        //     // positioning
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     top: 0;
 
-            // box model
-            width: 130%;
+        //     // box model
+        //     width: 130%;
 
-            // visual
-            background-image: url('./img/dark-v-grunge.svg');
-            background-size: cover;
-            transform: skewX(-15deg);
-        }
+        //     // visual
+        //     background-image: url('./img/dark-v-grunge.svg');
+        //     background-size: cover;
+        //     transform: skewX(-15deg);
+        // }
     }
 }
 
@@ -523,7 +553,7 @@
     @include atTablet {
         // positioning
         position: absolute;
-        bottom: -30px;
+        bottom: -70px;
         right: -100px;
 
         // box model
