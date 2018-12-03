@@ -575,6 +575,7 @@ html, body {
   flex-grow: 1; }
   @media (min-width: 1000px) {
     .hero__content {
+      border: 1px solid red;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
