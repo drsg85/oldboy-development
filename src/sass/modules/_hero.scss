@@ -545,6 +545,9 @@
     }
 
     @include atDesktopM {
+        // positioning
+        bottom: -60px;
+
         // box model
         width: 700px;
     }
@@ -607,10 +610,12 @@
         // box model
         margin-top: -40px;
         margin-left: 40px;
+        margin-bottom: 20px;
     }
 
     @include atDesktopM {
         // box model
         max-width: 920px;
+        margin-bottom: 0;
     }
 }
