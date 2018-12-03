@@ -219,4 +219,9 @@
         margin-left: -400px;
         padding: 30px;
     }
+    
+    @include atDesktopM {
+        // box model
+        margin-left: 0;
+    }
 }
