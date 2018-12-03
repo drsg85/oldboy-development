@@ -273,8 +273,16 @@
 
     &--branch {
         // box model
-        opacity: 0;
         margin-bottom: -160px;
+
+        // visual
+        opacity: 0;
+
+        @include atTablet {
+            // visual
+            opacity: 1;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -475,6 +483,7 @@
     // box model
     margin: 0 -20px;
     margin-top: 60px;
+    border: 1px solid red;
 
     @include atTablet {
         // positioning

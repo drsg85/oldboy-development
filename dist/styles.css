@@ -600,8 +600,12 @@ html, body {
   -ms-flex-positive: 1;
   flex-grow: 1; }
   .hero__caption--branch {
-    opacity: 0;
-    margin-bottom: -160px; }
+    margin-bottom: -160px;
+    opacity: 0; }
+    @media (min-width: 700px) {
+      .hero__caption--branch {
+        opacity: 1;
+        margin-bottom: 0; } }
 
 .hero__opening {
   margin-left: -20px;
@@ -738,7 +742,8 @@ html, body {
 
 .hero__app {
   margin: 0 -20px;
-  margin-top: 60px; }
+  margin-top: 60px;
+  border: 1px solid red; }
   @media (min-width: 700px) {
     .hero__app {
       position: absolute;
