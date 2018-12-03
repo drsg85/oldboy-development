@@ -72,6 +72,7 @@
     &--branch {
         // visual
         background-image: none;
+        background-image: url('./img/bgs/hero-t.jpg');
     }
 
     &--haircut {
@@ -515,10 +516,13 @@
     margin-top: 60px;
 
     @include atTablet {
+        // box model
+        margin: 0;
+
         // positioning
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 40px;
+        right: -40px;
         top: 0;
         z-index: 1;
 

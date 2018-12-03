@@ -443,7 +443,8 @@ html, body {
     background-image: url("./img/bgs/map.jpg");
     background-position: top left; }
   .hero--branch {
-    background-image: none; }
+    background-image: none;
+    background-image: url("./img/bgs/hero-t.jpg"); }
   .hero--haircut {
     background-image: url("./img/bgs/haircut-m.jpg");
     background-size: cover;
@@ -775,9 +776,10 @@ html, body {
   margin-top: 60px; }
   @media (min-width: 700px) {
     .hero__app {
+      margin: 0;
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: 40px;
+      right: -40px;
       top: 0;
       z-index: 1;
       width: 55%; } }
@@ -1081,6 +1083,7 @@ html, body {
     .app-promo {
       position: absolute;
       bottom: 130px;
+      bottom: 0;
       right: 0;
       padding: 20px;
       min-width: 330px; } }
