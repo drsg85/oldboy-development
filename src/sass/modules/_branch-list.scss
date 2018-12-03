@@ -81,11 +81,16 @@
     flex-direction: column;
     padding: 0;
     padding-top: 40px;
-
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -47px;
+    padding-bottom: 47px;
+    padding-left: 20px;
+    padding-right: 20px;
     // visual
     //background-image: linear-gradient(to bottom, transparent, $dark);
     // TODO: use $dark color
-    background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.54) 65%, rgba(0,0,0,0) 82%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(0deg, rgba($dark,1) 0%, rgba($dark,1) 65%, rgba($dark,0), 78%, rgba($dark,0) 82%, rgba($dark,0) 92%, rgba($dark,0) 100%);
 
     @include atTablet {
         // box model
@@ -93,11 +98,23 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-left: -40px;
+        margin-right: -40px;
+        margin-bottom: -60px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     @include atDesktopS {
         // box model
         margin-bottom: 10px;
         // padding-bottom: 20px;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        // visual
+        background-image: none;
     }
 }
