@@ -22,6 +22,11 @@
         // box model
         display: block;
     }
+
+    @include atDesktopM {
+        // box model
+        padding-right: calc((100% - 1400px)/2);
+    }
 }
 
 .about__header {

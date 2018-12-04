@@ -2580,7 +2580,8 @@ html, body {
   background-position: center center; }
   @media (min-width: 700px) {
     .service-main {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      max-height: 340px; } }
   @media (min-width: 1000px) {
     .service-main {
       -ms-flex-preferred-size: calc(50% - 20px);
@@ -2609,6 +2610,10 @@ html, body {
   @media (min-width: 1000px) {
     .service-main__header {
       padding: 30px; } }
+  @media (min-width: 1200px) {
+    .service-main__header {
+      padding: 40px;
+      font-size: 1.25rem; } }
 
 .service-main__title {
   margin: 0;
@@ -2674,6 +2679,13 @@ html, body {
       font-size: 0.75rem;
       line-height: 36px;
       border-radius: 20px; } }
+  @media (min-width: 1200px) {
+    .service-main__button {
+      bottom: 40px;
+      right: 40px;
+      width: 200px;
+      font-size: 0.85rem;
+      line-height: 42px; } }
 
 .service-item {
   display: -webkit-box;
@@ -2793,6 +2805,10 @@ html, body {
     position: relative;
     display: block; } }
 
+@media (min-width: 1200px) {
+  .about {
+    padding-right: calc((100% - 1400px)/2); } }
+
 .about__header {
   position: relative;
   padding: 20px 0; }
@@ -2878,6 +2894,7 @@ html, body {
   @media (min-width: 700px) {
     .about__headline {
       font-size: 2rem;
+      text-align: left;
       width: auto; } }
   .about__headline--service {
     width: 50%;
