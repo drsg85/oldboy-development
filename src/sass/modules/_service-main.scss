@@ -18,6 +18,7 @@
     @include atTablet {
         // box model
         margin-bottom: 40px;
+        max-height: 340px;
     }
 
     @include atDesktopS {
@@ -65,6 +66,14 @@
     @include atDesktopS {
         // box model
         padding: 30px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 40px;
+
+        // typography
+        font-size: 1.25rem;
     }
 }
 
@@ -176,5 +185,18 @@
 
         // visual
         border-radius: 20px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        bottom: 40px;
+        right: 40px;
+
+        // box model
+        width: 200px;
+
+        // typography
+        font-size: 0.85rem;
+        line-height: 42px;
     }
 }
