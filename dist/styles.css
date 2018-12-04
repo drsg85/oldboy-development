@@ -980,9 +980,13 @@ html, body {
 
 .city-select__title {
   margin: 0;
+  width: 100px;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem; }
+  @media (min-width: 340px) {
+    .city-select__title {
+      width: auto; } }
   @media (min-width: 700px) {
     .city-select__title {
       font-size: 1.125rem;
@@ -3880,12 +3884,9 @@ html, body {
     .price-list {
       padding-bottom: 200px;
       background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
-      background-size: contain,
- contain;
-      background-position: top center,
- bottom center;
-      background-repeat: no-repeat,
- no-repeat; } }
+      background-size: contain, contain;
+      background-position: top center, bottom center;
+      background-repeat: no-repeat, no-repeat; } }
 
 .price-list__content {
   position: relative;
@@ -4369,12 +4370,9 @@ html, body {
       padding: 80px 40px;
       padding-bottom: 40px;
       background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
-      background-position: top -170px center,
- center center;
-      background-size: 800px,
- cover;
-      background-repeat: repeat-x,
- no-repeat; } }
+      background-position: top -170px center, center center;
+      background-size: 800px, cover;
+      background-repeat: repeat-x, no-repeat; } }
 
 @media (min-width: 1000px) {
   .footer__content {

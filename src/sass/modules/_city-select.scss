@@ -9,11 +9,17 @@
 .city-select__title {
     // box model
     margin: 0;
+    width: 100px;
 
     // typography
     color: $golden;
     font-family: $titleFont;
     font-size: 1rem;
+
+    @media (min-width: 340px) {
+        // box model
+        width: auto;
+    }
 
     @include atTablet {
         // typography
