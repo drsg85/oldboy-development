@@ -7,6 +7,8 @@ html {
 body {
     // box model
     box-sizing: border-box;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 html, body {
@@ -14,6 +16,11 @@ html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+
+    @include atDesktopL {
+        // box model
+        overflow-x: inherit;
+    }
 }
 
 *,
