@@ -2828,6 +2828,10 @@ html, body {
     position: relative;
     display: block; } }
 
+@media (min-width: 1200px) {
+  .about {
+    padding-right: calc((100% - 1400px)/2); } }
+
 .about__header {
   position: relative;
   padding: 20px 0; }
@@ -3876,9 +3880,12 @@ html, body {
     .price-list {
       padding-bottom: 200px;
       background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
-      background-size: contain, contain;
-      background-position: top center, bottom center;
-      background-repeat: no-repeat, no-repeat; } }
+      background-size: contain,
+ contain;
+      background-position: top center,
+ bottom center;
+      background-repeat: no-repeat,
+ no-repeat; } }
 
 .price-list__content {
   position: relative;
@@ -4362,9 +4369,12 @@ html, body {
       padding: 80px 40px;
       padding-bottom: 40px;
       background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
-      background-position: top -170px center, center center;
-      background-size: 800px, cover;
-      background-repeat: repeat-x, no-repeat; } }
+      background-position: top -170px center,
+ center center;
+      background-size: 800px,
+ cover;
+      background-repeat: repeat-x,
+ no-repeat; } }
 
 @media (min-width: 1000px) {
   .footer__content {
