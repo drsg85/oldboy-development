@@ -16,6 +16,7 @@
         flex-basis: 45%;
         flex-direction: column;
         align-items: flex-start;
+        max-width: 340px;
 
         // visual
         background-position: center right;
@@ -23,14 +24,22 @@
     }
 
     @include atDesktopS {
+        // box model
+        flex-basis: 23%;
+        max-width: 240px;
+
         // visual
-        background-position: bottom 30px right 10px;
+        // background-position: bottom 30px right 10px;
+        background-position: center right 10px;
         background-size: 80px;
     }
 
-    @include atDesktopS {
+    @include atDesktopM {
         // box model
-        flex-basis: 25%;
+        max-width: 280px;
+
+        // visual
+        background-size: 100px;
     }
 
     &--shaving {
@@ -57,6 +66,29 @@
 .service-item__header {
     // box model
     flex-basis: 50%;
+
+    // typography
+    font-size: 1rem;
+
+    @include atTablet {
+        // typography
+        font-size: 1.5rem;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.25rem;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.5em;
+    }
 }
 
 .service-item__subtitle {
@@ -67,42 +99,24 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     text-align: left;
     text-transform: uppercase;
-
-    @include atTablet {
-        // typography
-        font-size: 1.25rem;
-    }
-
-    @include atDesktopS {
-        // typography
-        font-size: 1rem;
-    }
 }
 
 .service-item__title {
     // box model
     margin: 0;
-
+    
     // typography
     color: $dark;
     font-family: $titleFont;
-    font-size: 1rem;
+    font-size: 1.25em;
     text-align: left;
-
+    
     @include atTablet {
         // box model
-        margin-bottom: 1rem;
-
-        // typography
-        font-size: 1.75rem;
-    }
-
-    @include atDesktopS {
-        // typography
-        font-size: 1.35rem;
+        margin-bottom: 0.5em;
     }
 }
 

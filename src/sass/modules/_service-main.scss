@@ -28,6 +28,11 @@
         width: auto;
     }
 
+    @include atDesktopL {
+        // box model
+        max-height: 360px;
+    }
+
     &--haircut {
         // visual
         background-image: url('./img/bgs/haircut.jpg');
@@ -75,6 +80,11 @@
         // typography
         font-size: 1.25rem;
     }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.5rem;
+    }
 }
 
 .service-main__title {
@@ -121,9 +131,6 @@
     text-transform: uppercase;
 
     @include atTablet {
-        // box model
-        // padding-left: 40px;
-
         // typography
         font-size: 1.25em;
     }
@@ -148,7 +155,6 @@
     line-height: 36px;
     text-align: center;
     text-decoration: none;
-    // text-shadow: 1px 1px 1px $darkGold;
     text-transform: uppercase;
     
     // visual

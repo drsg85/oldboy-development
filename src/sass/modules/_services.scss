@@ -52,4 +52,9 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    @include atDesktopL {
+        // box model
+        padding: 0 40px;
+    }
 }
