@@ -15,7 +15,7 @@
     @include atTablet {
         // box model
         margin-top: -80px;
-        margin-bottom: -40px;
+        margin-bottom: -30px;
         padding: 0 40px;
     }
 }
@@ -28,6 +28,12 @@
     @include atTablet {
         // positioning
         position: relative;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 1400px;
+        margin: 0 auto;
     }
 }
 
@@ -86,17 +92,30 @@
         // positioning
         position: absolute;
         right: 45px;
-        top: -40px;
+        top: -20px;
     
         // box model
         display: block;
-        height: 140px;
+        height: 120px;
     }
 
     @include atDesktopS {
         // positioning
-        top: -90px;
+        top: 0;
         right: 50px;
+
+        // box model
+        height: 140px;
+    }
+
+    @include atDesktopM {
+        // box model
+        height: 150px;
+    }
+
+    @include atDesktopL {
+        // box model
+        height: 160px;
     }
 }
 

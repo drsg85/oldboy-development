@@ -22,6 +22,12 @@
         // visual
         background-position: center center;
     }
+
+    @include atDesktopL {
+        // box model
+        width: 1400px;
+        margin: 0 auto;
+    }
 }
 
 // decoration (scissors and comb)

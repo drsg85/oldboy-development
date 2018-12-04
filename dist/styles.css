@@ -306,12 +306,17 @@ html {
 
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 1920px;
+  margin: 0 auto; }
 
 html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden; }
+  @media (min-width: 1500px) {
+    html, body {
+      overflow-x: inherit; } }
 
 *,
 *::before,
@@ -2552,7 +2557,8 @@ html, body {
       padding: 40px; } }
   @media (min-width: 1500px) {
     .services__content {
-      padding: 40px calc((100% - 1500px)/2); } }
+      width: 1400px;
+      margin: 0 auto; } }
 
 .services__main {
   margin-bottom: 40px; }
@@ -3030,7 +3036,7 @@ html, body {
   @media (min-width: 700px) {
     .franchise__map {
       margin-top: -80px;
-      margin-bottom: -40px;
+      margin-bottom: -30px;
       padding: 0 40px; } }
 
 .franchise__map img {
@@ -3039,6 +3045,11 @@ html, body {
 @media (min-width: 700px) {
   .franchise__content {
     position: relative; } }
+
+@media (min-width: 1500px) {
+  .franchise__content {
+    width: 1400px;
+    margin: 0 auto; } }
 
 .franchise__caption {
   font-size: 1.25rem;
@@ -3073,13 +3084,20 @@ html, body {
     .franchise__logo {
       position: absolute;
       right: 45px;
-      top: -40px;
+      top: -20px;
       display: block;
-      height: 140px; } }
+      height: 120px; } }
   @media (min-width: 1000px) {
     .franchise__logo {
-      top: -90px;
-      right: 50px; } }
+      top: 0;
+      right: 50px;
+      height: 140px; } }
+  @media (min-width: 1200px) {
+    .franchise__logo {
+      height: 150px; } }
+  @media (min-width: 1500px) {
+    .franchise__logo {
+      height: 160px; } }
 
 .franchise__logo img {
   height: 100%; }
@@ -4094,6 +4112,10 @@ html, body {
       display: flex;
       margin: 40px;
       background-position: center center; } }
+  @media (min-width: 1500px) {
+    .academy-banner {
+      width: 1400px;
+      margin: 0 auto; } }
 
 .academy-banner::before {
   content: '';
