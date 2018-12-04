@@ -12,6 +12,11 @@
         // box model
         min-width: 350px;
     }
+
+    @include atDesktopL {
+        // box model
+        min-width: 500px;
+    }
 }
 
 .section-header--flipped {
@@ -76,6 +81,15 @@
         box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
         text-shadow: -4px 3px 0 $darkGold;
     }
+
+    @include atDesktopL {
+        // box model
+        padding: 25px 50px;
+        padding-left: 120px;
+
+        // typography
+        font-size: 3.5rem;
+    }
 }
 
 .section-header__title::after {
@@ -130,6 +144,14 @@
         // typography
         font-size: 1.5rem;
     }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 100px;
+
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .section-header__subtitle::before {
@@ -173,10 +195,10 @@
     }
 }
 
-.section-header__subtitle--light-t {
+.section-header__subtitle--golden-t {
     @include atTablet {
         // typography
-        color: $light;
+        color: $golden;
     }
 }
 

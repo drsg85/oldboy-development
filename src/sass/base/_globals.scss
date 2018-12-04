@@ -17,7 +17,7 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 
-    @include atDesktopL {
+    @include atFullHD {
         // box model
         overflow-x: inherit;
     }
