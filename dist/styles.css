@@ -4762,6 +4762,12 @@ html, body {
   @media (min-width: 700px) {
     .button {
       padding: 0 30px; } }
+  @media (min-width: 1000px) {
+    .button {
+      width: 100px;
+      min-width: 180px;
+      line-height: 32px;
+      font-size: 0.75rem; } }
   .button--ghost {
     background-color: rgba(19, 19, 19, 0.5); }
   .button--ghost-dark {
