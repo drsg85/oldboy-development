@@ -120,6 +120,11 @@
         // box model
         padding-left: 430px;
     }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 580px;
+    }
 }
 
 .about__content {
@@ -139,6 +144,11 @@
     @include atDesktopS {
         // box model
         padding-left: 430px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 580px;
     }
 }
 

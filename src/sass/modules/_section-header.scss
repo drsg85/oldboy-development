@@ -216,6 +216,11 @@
 
     // visual
     overflow: hidden;
+
+    @include atDesktopL {
+        // box model
+        height: 400px;
+    }
 }
 
 .section-header__image::before {

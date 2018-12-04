@@ -1934,6 +1934,9 @@ html, body {
   max-width: 100vw;
   height: 300px;
   overflow: hidden; }
+  @media (min-width: 1500px) {
+    .section-header__image {
+      height: 400px; } }
 
 .section-header__image::before {
   content: '';
@@ -2914,6 +2917,9 @@ html, body {
   @media (min-width: 1000px) {
     .about__caption {
       padding-left: 430px; } }
+  @media (min-width: 1500px) {
+    .about__caption {
+      padding-left: 580px; } }
 
 .about__content {
   position: relative;
@@ -2926,6 +2932,9 @@ html, body {
   @media (min-width: 1000px) {
     .about__content {
       padding-left: 430px; } }
+  @media (min-width: 1500px) {
+    .about__content {
+      padding-left: 580px; } }
 
 .about__headline {
   width: 220px;
