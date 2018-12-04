@@ -405,7 +405,7 @@ html, body {
   @media (min-width: 700px) {
     .hero {
       padding: 40px;
-      padding-bottom: 80px; } }
+      padding-bottom: 60px; } }
   @media (min-width: 1200px) {
     .hero {
       padding: 50px;
@@ -638,7 +638,17 @@ html, body {
 
 @media (min-width: 1000px) {
   .hero__contacts-n-buttons {
-    width: 100%; } }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; } }
 
 .hero__buttons-n-social {
   width: 220px;
@@ -655,6 +665,13 @@ html, body {
       -ms-flex-direction: column;
       flex-direction: column;
       text-align: left; } }
+  @media (min-width: 1000px) {
+    .hero__buttons-n-social {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      bottom: 100px; } }
 
 .hero__contacts {
   padding-bottom: 30px;
@@ -671,6 +688,14 @@ html, body {
       padding-top: 140px;
       padding-bottom: 60px;
       width: 100%; } }
+  @media (min-width: 1000px) {
+    .hero__contacts {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      padding: 0;
+      padding-top: 100px;
+      padding-right: 35%; } }
 
 .hero__countdown {
   margin-bottom: 40px; }
@@ -948,6 +973,10 @@ html, body {
 .contact {
   margin-bottom: 20px;
   text-align: center; }
+  @media (min-width: 1000px) {
+    .contact {
+      margin-right: 40px;
+      text-align: left; } }
 
 @media (min-width: 700px) {
   .contact--footer {

@@ -4,6 +4,15 @@
 
     // typography
     text-align: center;
+
+    @include atDesktopS {
+        // box model
+        margin-right: 40px;
+        // flex-basis: 30%;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .contact--footer {
