@@ -575,7 +575,6 @@ html, body {
   flex-grow: 1; }
   @media (min-width: 1000px) {
     .hero__content {
-      border: 1px solid red;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
@@ -586,7 +585,9 @@ html, body {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
-      flex-direction: row; } }
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .hero__caption {
   display: -webkit-box;
@@ -629,6 +630,10 @@ html, body {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch; } }
+
+@media (min-width: 1000px) {
+  .hero__contacts-n-buttons {
+    width: 100%; } }
 
 .hero__buttons-n-social {
   width: 220px;
@@ -843,7 +848,8 @@ html, body {
   .hero__branches {
     margin-top: -40px;
     margin-left: 40px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px;
+    width: calc(100% - 300px); } }
 
 @media (min-width: 1200px) {
   .hero__branches {
@@ -2567,6 +2573,10 @@ html, body {
     -ms-flex-pack: justify;
     justify-content: space-between; } }
 
+@media (min-width: 1500px) {
+  .services__secondary {
+    padding: 0 40px; } }
+
 .service-main {
   position: relative;
   width: 100%;
@@ -2580,13 +2590,17 @@ html, body {
   background-position: center center; }
   @media (min-width: 700px) {
     .service-main {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      max-height: 340px; } }
   @media (min-width: 1000px) {
     .service-main {
       -ms-flex-preferred-size: calc(50% - 20px);
       flex-basis: calc(50% - 20px);
       height: calc(31.25vw - 60px);
       width: auto; } }
+  @media (min-width: 1500px) {
+    .service-main {
+      max-height: 360px; } }
   .service-main--haircut {
     background-image: url("./img/bgs/haircut.jpg"); }
   .service-main--beard {
@@ -2609,6 +2623,13 @@ html, body {
   @media (min-width: 1000px) {
     .service-main__header {
       padding: 30px; } }
+  @media (min-width: 1200px) {
+    .service-main__header {
+      padding: 40px;
+      font-size: 1.25rem; } }
+  @media (min-width: 1500px) {
+    .service-main__header {
+      font-size: 1.5rem; } }
 
 .service-main__title {
   margin: 0;
@@ -2674,6 +2695,13 @@ html, body {
       font-size: 0.75rem;
       line-height: 36px;
       border-radius: 20px; } }
+  @media (min-width: 1200px) {
+    .service-main__button {
+      bottom: 40px;
+      right: 40px;
+      width: 200px;
+      font-size: 0.85rem;
+      line-height: 42px; } }
 
 .service-item {
   display: -webkit-box;
@@ -2701,16 +2729,20 @@ html, body {
       -webkit-box-align: start;
       -ms-flex-align: start;
       align-items: flex-start;
+      max-width: 340px;
       background-position: center right;
       background-size: 120px; } }
   @media (min-width: 1000px) {
     .service-item {
-      background-position: bottom 30px right 10px;
+      -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+      max-width: 240px;
+      background-position: center right 10px;
       background-size: 80px; } }
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     .service-item {
-      -ms-flex-preferred-size: 25%;
-      flex-basis: 25%; } }
+      max-width: 280px;
+      background-size: 100px; } }
   .service-item--shaving {
     background-image: url("./img/icons/razor.svg"); }
   .service-item--royal {
@@ -2722,36 +2754,39 @@ html, body {
 
 .service-item__header {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%; }
+  flex-basis: 50%;
+  font-size: 1rem; }
+  @media (min-width: 700px) {
+    .service-item__header {
+      font-size: 1.5rem; } }
+  @media (min-width: 1000px) {
+    .service-item__header {
+      font-size: 1rem; } }
+  @media (min-width: 1200px) {
+    .service-item__header {
+      font-size: 1.25rem; } }
+  @media (min-width: 1500px) {
+    .service-item__header {
+      font-size: 1.5em; } }
 
 .service-item__subtitle {
   margin: 0;
   margin-bottom: 0.1em;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   text-align: left;
   text-transform: uppercase; }
-  @media (min-width: 700px) {
-    .service-item__subtitle {
-      font-size: 1.25rem; } }
-  @media (min-width: 1000px) {
-    .service-item__subtitle {
-      font-size: 1rem; } }
 
 .service-item__title {
   margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.25em;
   text-align: left; }
   @media (min-width: 700px) {
     .service-item__title {
-      margin-bottom: 1rem;
-      font-size: 1.75rem; } }
-  @media (min-width: 1000px) {
-    .service-item__title {
-      font-size: 1.35rem; } }
+      margin-bottom: 0.5em; } }
 
 .service-item__title strong {
   font-size: 1.5em; }
@@ -2878,6 +2913,7 @@ html, body {
   @media (min-width: 700px) {
     .about__headline {
       font-size: 2rem;
+      text-align: left;
       width: auto; } }
   .about__headline--service {
     width: 50%;
