@@ -10,6 +10,14 @@
         margin-bottom: 150px;
     }
 }
+.application-form__form__wrap {
+    // box model
+    width: 100%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .application-form__form {
     // box model
     margin-top: 80px;
@@ -42,11 +50,17 @@
             background-size: auto;
             background-repeat: no-repeat;
             background-position: 42% 0;
+
+            @include atDesktopM {
+                // positioning
+                right: -550px;
+            }
         }
+        
     }
 
     @include atDesktopM {
-        margin-left: calc((100% - 380px)/2);
+        margin-left: calc((100% - 800px)/2);
     }
 }
 
