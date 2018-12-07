@@ -496,6 +496,8 @@ html, body {
           flex-grow: 7; } }
     .hero--404::after {
       display: none; }
+  .hero--franchise {
+    background-color: #ffffff; }
 
 .hero::after {
   content: '';
