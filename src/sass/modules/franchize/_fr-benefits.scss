@@ -1,4 +1,4 @@
-.benefits {
+.fr-benefits {
     // box model
     padding-top: 45px;
     padding-bottom: 35px;
@@ -19,7 +19,7 @@
     }
 }
 
-.benefits__header {
+.fr-benefits__header {
     // box model
     display: inline-block;
     vertical-align: top;
@@ -49,7 +49,7 @@
     }
 }
 
-.benefits__title {
+.fr-benefits__title {
     // box model
     margin: 0;
     margin-bottom: 10px;
@@ -60,7 +60,7 @@
     text-align: center;
 }
 
-.benefits__subtitle {
+.fr-benefits__subtitle {
     // box model
     margin: 0;
     margin-bottom: 5px;
@@ -92,7 +92,7 @@
     }
 }
 
-.benefits__list {
+.fr-benefits__list {
     // box model
     margin: 0;
     margin-bottom: 70px;
@@ -124,176 +124,12 @@
     }
 }
 
-.benefits__list-item {
-    // positioning
-    position: relative;
-    
-    // box model
-    margin-bottom: 35px;
-
-    // typography
-    font-size: 1rem;
-
-    @include atTablet {
-        // box model
-        margin-bottom: 75px;
-
-        // typography
-        font-size: 1.125rem;
-    }
-
-    @include atDesktopS {
-        // box model
-        width: 100%;
-        max-width: 333px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    &:before {
-        content: counter(li-counter, decimal-leading-zero);
-        counter-increment: li-counter;
-
-        // positioning
-        position: absolute;
-        top: 0;
-        left: 0;
-        
-        // box model
-        width: 0.8em;
-        
-        // typography
-        font-size: 1.875em;
-        font-family: $mainFont;
-        font-weight: 100;
-        line-height: 1;
-        letter-spacing: 4.8px;
-        text-align: right;
-        color: $golden;
-
-        @include atTablet {
-            // typography
-            font-size: 4em;
-            line-height: 54px;
-            letter-spacing: 14.4px;
-        }
-
-        @include atDesktopS {
-            // positioning
-            position: relative;
-
-            // box model
-            display: block;
-            width: 100%;
-            margin-bottom: 30px;
-
-            // typography
-            text-align: center;
-        }
-    }
-}
-
-.benefits__list-text {
-    // box model
-    margin: 0;
-    margin-left: 3.750em;
-
-    // typography
-    font-family: $mainFont;
-    font-size: 1em;
-    line-height: 24px;
-    letter-spacing: 4.8px;
-    text-transform: uppercase;
-
-    @include atTablet {
-        // box model
-        margin-left: 6.75em;
-    }
-
-    @include atDesktopS {
-        // box model
-        margin: 0;
-        margin-bottom: 15px;
-    }
-}
-
-.benefits__list-descr {
-    // typography
-    font-size: 1rem;
-    line-height: 24px;
-    font-family: $mainFont;
-    color: #898989;
-
-    @include atTablet {
-        // box model
-        margin-left:7.5em;
-    }
-
-    @include atDesktopS {
-        // box model
-        margin: 0;
-    }
-}
-
-.benefits__conclusion {
+.fr-benefits__conclusion {
     // box model
     padding: 0 calc((100% - 1100px)/2);
 }
 
-.benefits__conclusion-header {
-    // box model
-    display: inline-block;
-    vertical-align: top;
-    
-    @include atTablet {
-        // box model
-        padding: 0 70px;
-    }
-
-    @include atDesktopS {
-        // box model
-        display: flex;
-        flex: row;
-    }
-}
-
-.benefits__conclusion-title {
-    // box model
-    margin: 0;
-    margin-bottom: 20px;
-
-    // typography
-    font-size: 1.875rem;
-    font-family: $titleFont;
-    color: #000000;
-    text-transform: uppercase;
-}
-
-.benefits__conclusion-subtitle {
-    // box model
-    margin: 0;
-
-    // typography
-    font-size: 1.125rem;
-    font-family: $titleFont;
-    text-transform: uppercase;
-    color: $golden;
-}
-
-.benefits__conclusion-logo {
-    // box model
-    width: 100%;
-    margin-bottom: 22px;
-
-    img {
-        // box model
-        display: block;
-        width: 100%;
-    }
-}
-
-.benefits__conclusion-text {
+.fr-benefits__conclusion-text {
     // box model
     padding: 0 10px;
     margin-top: 0;
@@ -312,7 +148,7 @@
     }
 }
 
-.benefits__conclusion-submit {
+.fr-benefits__conclusion-submit {
     // box model
     display: block;
     margin-left: 10px;
@@ -324,7 +160,7 @@
     }
 }
 
-.benefits__conclusion-rest {
+.fr-benefits__conclusion-rest {
     margin: 0;
     padding: 0 calc((100% - 185px) / 2);
     margin-bottom: 47px;
@@ -343,7 +179,7 @@
     }
 }
 
-.benefits__conclusion-bibos {
+.fr-benefits__conclusion-bibos {
     // box model
     display: block;
 
