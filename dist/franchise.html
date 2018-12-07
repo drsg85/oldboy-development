@@ -36,12 +36,12 @@
     </header>
     <main class="main">
         <section class="franchise">
-            <div class="franchise__map"><img src="/img/franchise-map.svg" alt="Oldboy barbershop locations map" /></div>
             <div class="franchise__content">
+                <div class="franchise__map"><img src="/img/franchise-map.svg" alt="Oldboy barbershop locations map" /></div>
                 <div class="franchise__caption">
                     <h3 class="franchise__title"><strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop</h3>
                     <div class="franchise__button"><a class="button" href="#">Открой свой барбершоп</a></div>
-                </div><a class="franchise__logo" href="#"><img src="/img/franch.svg" alt="Oldboy Franchise logo" /></a>
+                </div>
                 <div class="franchise__summary">
                     <p class="franchise__count">129</p>
                     <p class="franchise__details"><strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах</p>
@@ -53,18 +53,20 @@
                 <h2 class="section-header__title">Форма<br>заявки</h2>
                 <p class="section-header__subtitle">Oldboy&nbsp;Франшиза</p>
             </header>
-            <form class="application-form__form form" id="application-form" action="">
-                <legend class="form__legend">
-                    <p class="form__title">Открой собственный барбершоп oldboy у себя в городе</p>
-                    <p class="form__subtitle">Заполни форму и наш менеджер с вами свяжется</p>
-                </legend>
-                <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /><button class="form__input-clear">+</button></div>
-                <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /><button class="form__input-clear">+</button></div>
-                <div class="form__input-group"><input class="form__input form__input--active" type="text" name="city" placeholder="Желаемый город" /><button class="form__input-clear">+</button></div>
-                <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /><button class="form__input-clear">+</button></div>
-                <div class="form__input-group form__input-group--policy"><input class="form__checkbox" id="application-form__checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="form__label-checkbox" for="application-form__checkbox">Я соглашаюсь с<br> <a class="application-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
-                <div class="form__input-group"><input class="form__submit-btn button button--ghost-dark" type="submit" value="Отправить заявку" /></div>
-            </form>
+            <div class="application-form__wrap">
+                <form class="application-form__form form" id="application-form" action="">
+                    <legend class="form__legend">
+                        <p class="form__title">Открой собственный барбершоп oldboy у себя в городе</p>
+                        <p class="form__subtitle">Заполни форму и наш менеджер с вами свяжется</p>
+                    </legend>
+                    <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /><button class="form__input-clear">+</button></div>
+                    <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /><button class="form__input-clear">+</button></div>
+                    <div class="form__input-group"><input class="form__input form__input--active" type="text" name="city" placeholder="Желаемый город" /><button class="form__input-clear">+</button></div>
+                    <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /><button class="form__input-clear">+</button></div>
+                    <div class="form__input-group form__input-group--policy"><input class="form__checkbox" id="application-form__checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="form__label-checkbox" for="application-form__checkbox">Я соглашаюсь с<br> <a class="application-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
+                    <div class="form__input-group"><input class="form__submit-btn button button--ghost-dark" type="submit" value="Отправить заявку" /></div>
+                </form>
+            </div>
         </section>
         <section class="benefits">
             <header class="benefits__header">
