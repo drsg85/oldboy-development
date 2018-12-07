@@ -166,8 +166,12 @@
         height: 20px;
 
         // visual
+        border: 2px solid $golden;
+        border-radius: 3px;
+    }
+
+    &:checked + .form__label-checkbox:before {
         background-color: $golden;
-        border: none;
     }
 
     &:not(:checked) + .form__label-checkbox:after,
@@ -190,6 +194,10 @@
         background-position: 50% 50%;
         background-size: 10px;
     }
+
+/*     &:checked + .form__label-checkbox:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='32' fill='%23d6a354'%3E%3Cpath d='M0 16.352q0 1.12.768 1.92L8.64 25.92q.768.8 1.92.8t1.92-.8l16.16-15.84q.8-.768.8-1.888t-.8-1.856q-.8-.8-1.92-.8t-1.92.8l-14.24 13.92-5.92-5.792q-.8-.768-1.92-.768t-1.952.768Q0 15.232 0 16.352z'/%3E%3C/svg%3E");
+    } */
 
     &:not(:checked) + .form__label-checkbox:after {
         // positioning
@@ -219,7 +227,7 @@
     }
 
     &:disabled + .form__label-checkbox {
-        color: #aaaaaa;
+        color: #000000;
     }
 }
 
