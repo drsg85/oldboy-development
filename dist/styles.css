@@ -5129,6 +5129,12 @@ html, body {
     .application-form {
       margin-bottom: 150px; } }
 
+.application-form__form__wrap {
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .application-form__form {
   margin-top: 80px;
   padding-left: 20px;
@@ -5151,9 +5157,12 @@ html, body {
         background-size: auto;
         background-repeat: no-repeat;
         background-position: 42% 0; } }
+    @media (min-width: 700px) and (min-width: 1200px) {
+      .application-form__form:after {
+        right: -550px; } }
   @media (min-width: 1200px) {
     .application-form__form {
-      margin-left: calc((100% - 380px)/2); } }
+      margin-left: calc((100% - 800px)/2); } }
 
 .application-form__policy {
   display: inline-block;
