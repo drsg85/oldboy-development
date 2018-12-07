@@ -4764,7 +4764,6 @@ html, body {
       padding: 0 30px; } }
   @media (min-width: 1000px) {
     .button {
-      width: 100px;
       min-width: 180px;
       line-height: 32px;
       font-size: 0.75rem; } }
@@ -5044,23 +5043,20 @@ html, body {
   position: absolute;
   top: 13px;
   right: 13px;
-  display: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 20px;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
   height: 20px;
-  text-align: center;
+  width: 20px;
   color: #ffffff;
+  text-align: center;
   background-color: #ccc;
   border: none;
   border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
   cursor: pointer; }
+  .form__input-clear--hidden {
+    display: none; }
 
 .form__checkbox {
   position: absolute;
@@ -5280,13 +5276,13 @@ html, body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      text-align: center; } }
+      text-align: left; } }
   .benefits__list-item:before {
     content: counter(li-counter, decimal-leading-zero);
     counter-increment: li-counter;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -0.1em;
     width: 0.8em;
     font-size: 1.875em;
     font-family: "Open Sans", Arial, sans-serif;
@@ -5306,7 +5302,7 @@ html, body {
         display: block;
         width: 100%;
         margin-bottom: 30px;
-        text-align: center; } }
+        text-align: left; } }
 
 .benefits__list-text {
   margin: 0;

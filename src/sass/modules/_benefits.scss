@@ -148,7 +148,7 @@
         max-width: 333px;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
 
     &:before {
@@ -158,7 +158,7 @@
         // positioning
         position: absolute;
         top: 0;
-        left: 0;
+        left: -0.1em;
         
         // box model
         width: 0.8em;
@@ -189,7 +189,7 @@
             margin-bottom: 30px;
 
             // typography
-            text-align: center;
+            text-align: left;
         }
     }
 }
