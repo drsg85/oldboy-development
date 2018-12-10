@@ -2,7 +2,7 @@
     // box model
     display: inline-block;
     vertical-align: top;
-    min-width: 200px;
+    //min-width: 200px;
     margin-bottom: 20px;
     padding: 0 20px;
 
@@ -29,8 +29,8 @@
 
     @include atDesktopS {
         // box model
-        // width: 100px;
-        min-width: 180px;
+        //width: 100px;
+        //min-width: 180px;
 
         // typography
         line-height: 32px;

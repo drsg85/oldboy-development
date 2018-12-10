@@ -1,0 +1,51 @@
+.fr-oldboy-why {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    
+    @include atTablet {
+        // box model
+        padding: 0 70px;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        flex: row;
+    }
+}
+
+.fr-oldboy-why__title {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    font-size: 1.875rem;
+    font-family: $titleFont;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.fr-oldboy-why__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    font-size: 1.125rem;
+    font-family: $titleFont;
+    text-transform: uppercase;
+    color: $golden;
+}
+
+.fr-oldboy-why__logo {
+    // box model
+    width: 100%;
+    margin-bottom: 22px;
+
+    img {
+        // box model
+        display: block;
+        width: 100%;
+    }
+}

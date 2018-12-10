@@ -45,37 +45,44 @@ html(lang="en")
                         .franchise__button
                             a.button(href="#") Открой свой барбершоп
 
-                    .franchise__summary
+                    //.franchise__summary
                         p.franchise__count 129
+                        p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
+
+                    .franchise__summary.franchise__summary--countdown
+                        .countdown
+                            .countdown__block
+                                .countdown__number 1
+                            .countdown__block
+                                .countdown__number 2
+                            .countdown__block
+                                .countdown__number 9
                         p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
 
             section.application-form
                 header.section-header
                     h2.section-header__title Форма<br>заявки
                     p.section-header__subtitle Oldboy&nbsp;Франшиза
-                .application-form__wrap
-                    form#application-form.application-form__form.form(action="")
+                .application-form__content
+                    form#application-form.form(action="")
                         legend.form__legend
                             p.form__title Открой собственный барбершоп oldboy у себя в&nbsp;городе
                             p.form__subtitle Заполни форму и наш менеджер с&nbsp;вами свяжется
                         
                         .form__input-group
                             input.form__input.form__input--validated(type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван")
-                            button.form__input-clear +
 
                         .form__input-group
                             input.form__input.form__input--errored(type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format")
-                            button.form__input-clear +
 
                         .form__input-group
-                            input.form__input.form__input--active(type="text" name="city" placeholder="Желаемый город")
-                            button.form__input-clear +
+                            input.form__input(type="text" name="city" placeholder="Желаемый город")
 
                         .form__input-group
                             input.form__input(type="email" name="email" placeholder="E-mail")
-                            button.form__input-clear +
 
                         .form__input-group.form__input-group--policy
+<<<<<<< HEAD
                             input.form__checkbox#application-form__checkbox(type="checkbox" name="policy" required checked)
                             label(for="application-form__checkbox").form__label-checkbox Я соглашаюсь <br>с <a class="application-form__policy" href="#">политикой конфиденциальности</a>
                         .form__input-group
@@ -122,62 +129,114 @@ html(lang="en")
                     li.benefits__list-item
                         p.benefits__list-text Бесплатная поддержка
                         p.benefits__list-descr Наша поддержка — это поддержка во всем — это специальный штат профессионалов, состоящий из дизайнеров, юристов, маркетологов, IT-программистов, которые работают 5 дней в неделю СПЕЦИАЛЬНО ДЛЯ ВАС
+=======
+                            input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
+                            label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
+                        
+                        .form__input-group
+                            input.form__submit-btn.button.button--ghost-dark(type="submit" value="Отправить заявку")
+
+            section.fr-benefits
+                header.fr-benefits__header
+                    p.fr-benefits__subtitle наши преимущества
+                    h2.fr-benefits__title Выбирая нас<br>вы получаете
+>>>>>>> 9968604a10db9e27cf6c9d4ce748450059172383
                 
-                section.benefits__conclusion
-                    header.benefits__conclusion-header
-                        .benefits__conclusion-header-info
-                            p.benefits__conclusion-subtitle Oldboy family
-                            h3.benefits__conclusion-title Это были лишь 15 самых очевидных причин "войти в семью"
-                        .benefits__conclusion-logo
+                ol.fr-benefits__list
+                    li.fr-benefit
+                        p.fr-benefit__text Узнаваемый бренд
+                    li.fr-benefit
+                        p.fr-benefit__text Брутальный фирменный стиль Oldboy
+                    li.fr-benefit
+                        p.fr-benefit__text Пожизненное использование бренда
+                    li.fr-benefit
+                        p.fr-benefit__text Безплатный дизайн-проект помещения
+                    li.fr-benefit
+                        p.fr-benefit__text Мастер класс от ведущего мастера
+                    li.fr-benefit
+                        p.fr-benefit__text Помощь в поиске мастеров
+                    li.fr-benefit
+                        p.fr-benefit__text Выезд профессионалов в ваш город за наш счет
+                    li.fr-benefit
+                        p.fr-benefit__text Модель проекта раскрутки вашего Oldboy у вас в городе
+                    li.fr-benefit
+                        p.fr-benefit__text Весь рекламный и мультимедийный проект
+                    li.fr-benefit
+                        p.fr-benefit__text Мобильное приложение
+                        p.fr-benefit__descr Онлайн запись к вам через мобильное приложение (Apple store, Google market), онлайн запись через сетевой сайт, где у вас будет собственная страничка, а так же онлайн запись через приложение вконтакте
+                    li.fr-benefit
+                        p.fr-benefit__text Премиум услуги
+                        p.fr-benefit__descr Только у нас есть статусная услуга для состоятельных» клиентов «Королевское бритье от Trueffit&Hill» — это легендарная марка мужской косметики, обслуживающая Королевский Двор в Англии. Мы обучаем ее технологии ваших мастеров
+                    li.fr-benefit
+                        p.fr-benefit__text Скидки для партенеров
+                        p.fr-benefit__descr Ваш барбершоп станет официальным представителем в вашем городе нашей собственной линейки косметики, так же вы получаете скидку на товар 60%. Вы будуте экономить около 40 000 руб. в месяц только на товаре.
+                    li.fr-benefit
+                        p.fr-benefit__text Все прозрачно
+                        p.fr-benefit__descr Мы не являемся посредниками между вами и продавцами инструментов и оборудования, мы не стремимся заработать на этом, накрутив комиссионые, мы вместе с вами будем закупать инструменты и оборудование.
+                    li.fr-benefit
+                        p.fr-benefit__text Без просредников
+                        p.fr-benefit__descr Скидки в покупке оборудования от производителей, который сохраняет вам более 200 000 руб.
+                    li.fr-benefit
+                        p.fr-benefit__text Безплатная поддержка
+                        p.fr-benefit__descr Наша поддержка — это поддержка во всем — это специальный штат профессионалов, состоящий из дизайнеров, юристов, маркетологов, IT-программистов, которые работают 5 дней в неделю СПЕЦИАЛЬНО ДЛЯ ВАС
+                
+                section.fr-benefits__conclusion
+                    header.fr-oldboy-why
+                        .fr-oldboy-why__info
+                            p.fr-oldboy-why__subtitle Oldboy family
+                            h3.fr-oldboy-why__title Это были лишь 15 самых очевидных причин "войти в семью"
+                        .fr-oldboy-why__logo
                             img(src="img/family/OldBoyFamily.svg", alt="OldBoyFamily Logo")
-                    .benefits__conclusion-more
-                        p.benefits__conclusion-text Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу
-                        a.benefits__conclusion-submit.button.button--ghost-dark(href="#") Свяжитесь с нами
-                        p.benefits__conclusion-rest И мы ответим на ваши вопросы
-                        a.benefits__conclusion-bibos(href="#") Франшиза Oldboy Barbershop на Бибос
+                    
+                    .fr-benefits__conclusion-more
+                        p.fr-benefits__conclusion-text Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу
+                        a.fr-benefits__conclusion-submit.button.button--ghost-dark(href="#") Свяжитесь с нами
+                        p.fr-benefits__conclusion-rest И мы ответим на ваши вопросы
+                        a.fr-benefits__conclusion-bibos(href="https://www.beboss.ru/franchise/2484-franshiza-oldboy") Франшиза Oldboy Barbershop на Бибосс
                         
         footer.footer
-            .footer__info-n-contacts
-                .footer__info
-                    .footer__logo
-                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                    h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
-                    p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
-                    p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+            .footer__content
+                .footer__info-n-contacts
+                    .footer__info
+                        .footer__logo
+                            img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                        .footer__caption
+                            h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
+                            p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
+                            p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
 
-            .footer__menues
-                .footer__main-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Меню
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ГЛАВНАЯ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") НОВОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛУГИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ФРАНШИЗА
+                .footer__menues
+                    .footer__main-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Меню
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ГЛАВНАЯ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") НОВОСТИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") УСЛУГИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ФРАНШИЗА
 
-                .footer__services-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Услуги
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") СТРИЖКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БРИТЬЁ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ТАТУИРОВКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БАРБЕР-СПА
+                    .footer__services-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Услуги
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") СТРИЖКИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") БРИТЬЁ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ТАТУИРОВКИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") БАРБЕР-СПА
 
-                .footer__info-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Информация
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
-
+                    .footer__info-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Информация
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
             .footer__copyrights
                 p © 2014–2019 Oldboy Barbershop

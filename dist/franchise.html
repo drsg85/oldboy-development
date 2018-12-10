@@ -42,8 +42,21 @@
                     <h3 class="franchise__title"><strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop</h3>
                     <div class="franchise__button"><a class="button" href="#">Открой свой барбершоп</a></div>
                 </div>
-                <div class="franchise__summary">
-                    <p class="franchise__count">129</p>
+                <!--.franchise__summaryp.franchise__count 129
+p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
+-->
+                <div class="franchise__summary franchise__summary--countdown">
+                    <div class="countdown">
+                        <div class="countdown__block">
+                            <div class="countdown__number">1</div>
+                        </div>
+                        <div class="countdown__block">
+                            <div class="countdown__number">2</div>
+                        </div>
+                        <div class="countdown__block">
+                            <div class="countdown__number">9</div>
+                        </div>
+                    </div>
                     <p class="franchise__details"><strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах</p>
                 </div>
             </div>
@@ -53,128 +66,132 @@
                 <h2 class="section-header__title">Форма<br>заявки</h2>
                 <p class="section-header__subtitle">Oldboy&nbsp;Франшиза</p>
             </header>
-            <div class="application-form__wrap">
-                <form class="application-form__form form" id="application-form" action="">
+            <div class="application-form__content">
+                <form class="form" id="application-form" action="">
                     <legend class="form__legend">
                         <p class="form__title">Открой собственный барбершоп oldboy у себя в&nbsp;городе</p>
                         <p class="form__subtitle">Заполни форму и наш менеджер с&nbsp;вами свяжется</p>
                     </legend>
-                    <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /><button class="form__input-clear">+</button></div>
-                    <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /><button class="form__input-clear">+</button></div>
-                    <div class="form__input-group"><input class="form__input form__input--active" type="text" name="city" placeholder="Желаемый город" /><button class="form__input-clear">+</button></div>
-                    <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /><button class="form__input-clear">+</button></div>
-                    <div class="form__input-group form__input-group--policy"><input class="form__checkbox" id="application-form__checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="form__label-checkbox" for="application-form__checkbox">Я соглашаюсь <br>с <a class="application-form__policy" href="#">политикой конфиденциальности</a></label></div>
+                    <div class="form__input-group"><input class="form__input form__input--validated" type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван" /></div>
+                    <div class="form__input-group"><input class="form__input form__input--errored" type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format" /></div>
+                    <div class="form__input-group"><input class="form__input" type="text" name="city" placeholder="Желаемый город" /></div>
+                    <div class="form__input-group"><input class="form__input" type="email" name="email" placeholder="E-mail" /></div>
+                    <div class="form__input-group form__input-group--policy"><input class="form__checkbox" id="form__checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="form__label-checkbox" for="form__checkbox">Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
                     <div class="form__input-group"><input class="form__submit-btn button button--ghost-dark" type="submit" value="Отправить заявку" /></div>
                 </form>
             </div>
         </section>
-        <section class="benefits">
-            <header class="benefits__header">
-                <p class="benefits__subtitle">наши преимущества</p>
-                <h2 class="benefits__title">Выбирая нас<br>вы получаете</h2>
+        <section class="fr-benefits">
+            <header class="fr-benefits__header">
+                <p class="fr-benefits__subtitle">наши преимущества</p>
+                <h2 class="fr-benefits__title">Выбирая нас<br>вы получаете</h2>
             </header>
-            <ol class="benefits__list">
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Узнаваемый бренд</p>
+            <ol class="fr-benefits__list">
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Узнаваемый бренд</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Брутальный фирменный стиль Oldboy</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Брутальный фирменный стиль Oldboy</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Пожизненное использование бренда</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Пожизненное использование бренда</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Безплатный дизайн-проект помещения</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Безплатный дизайн-проект помещения</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Мастер класс от ведущего мастера</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Мастер класс от ведущего мастера</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Помощь в поиске мастеров</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Помощь в поиске мастеров</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Выезд профессионалов в ваш город за наш счет</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Выезд профессионалов в ваш город за наш счет</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Модель проекта раскрутки вашего Oldboy у вас в городе</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Модель проекта раскрутки вашего Oldboy у вас в городе</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Весь рекламный и мультимедийный проект</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Весь рекламный и мультимедийный проект</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Мобильное приложение</p>
-                    <p class="benefits__list-descr">Онлайн запись к вам через мобильное приложение (Apple store, Google market), онлайн запись через сетевой сайт, где у вас будет собственная страничка, а так же онлайн запись через приложение вконтакте</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Мобильное приложение</p>
+                    <p class="fr-benefit__descr">Онлайн запись к вам через мобильное приложение (Apple store, Google market), онлайн запись через сетевой сайт, где у вас будет собственная страничка, а так же онлайн запись через приложение вконтакте</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Премиум услуги</p>
-                    <p class="benefits__list-descr">Только у нас есть статусная услуга для состоятельных» клиентов «Королевское бритье от Trueffit&Hill» — это легендарная марка мужской косметики, обслуживающая Королевский Двор в Англии. Мы обучаем ее технологии ваших мастеров</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Премиум услуги</p>
+                    <p class="fr-benefit__descr">Только у нас есть статусная услуга для состоятельных» клиентов «Королевское бритье от Trueffit&Hill» — это легендарная марка мужской косметики, обслуживающая Королевский Двор в Англии. Мы обучаем ее технологии ваших мастеров</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Скидки для партенеров</p>
-                    <p class="benefits__list-descr">Ваш барбершоп станет официальным представителем в вашем городе нашей собственной линейки косметики, так же вы получаете скидку на товар 60%. Вы будуте экономить около 40 000 руб. в месяц только на товаре.</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Скидки для партенеров</p>
+                    <p class="fr-benefit__descr">Ваш барбершоп станет официальным представителем в вашем городе нашей собственной линейки косметики, так же вы получаете скидку на товар 60%. Вы будуте экономить около 40 000 руб. в месяц только на товаре.</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Все прозрачно</p>
-                    <p class="benefits__list-descr">Мы не являемся посредниками между вами и продавцами инструментов и оборудования, мы не стремимся заработать на этом, накрутив комиссионые, мы вместе с вами будем закупать инструменты и оборудование.</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Все прозрачно</p>
+                    <p class="fr-benefit__descr">Мы не являемся посредниками между вами и продавцами инструментов и оборудования, мы не стремимся заработать на этом, накрутив комиссионые, мы вместе с вами будем закупать инструменты и оборудование.</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Без просредников</p>
-                    <p class="benefits__list-descr">Скидки в покупке оборудования от производителей, который сохраняет вам более 200 000 руб.</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Без просредников</p>
+                    <p class="fr-benefit__descr">Скидки в покупке оборудования от производителей, который сохраняет вам более 200 000 руб.</p>
                 </li>
-                <li class="benefits__list-item">
-                    <p class="benefits__list-text">Бесплатная поддержка</p>
-                    <p class="benefits__list-descr">Наша поддержка — это поддержка во всем — это специальный штат профессионалов, состоящий из дизайнеров, юристов, маркетологов, IT-программистов, которые работают 5 дней в неделю СПЕЦИАЛЬНО ДЛЯ ВАС</p>
+                <li class="fr-benefit">
+                    <p class="fr-benefit__text">Безплатная поддержка</p>
+                    <p class="fr-benefit__descr">Наша поддержка — это поддержка во всем — это специальный штат профессионалов, состоящий из дизайнеров, юристов, маркетологов, IT-программистов, которые работают 5 дней в неделю СПЕЦИАЛЬНО ДЛЯ ВАС</p>
                 </li>
             </ol>
-            <section class="benefits__conclusion">
-                <header class="benefits__conclusion-header">
-                    <div class="benefits__conclusion-header-info">
-                        <p class="benefits__conclusion-subtitle">Oldboy family</p>
-                        <h3 class="benefits__conclusion-title">Это были лишь 15 самых очевидных причин "войти в семью"</h3>
+            <section class="fr-benefits__conclusion">
+                <header class="fr-oldboy-why">
+                    <div class="fr-oldboy-why__info">
+                        <p class="fr-oldboy-why__subtitle">Oldboy family</p>
+                        <h3 class="fr-oldboy-why__title">Это были лишь 15 самых очевидных причин "войти в семью"</h3>
                     </div>
-                    <div class="benefits__conclusion-logo"><img src="img/family/OldBoyFamily.svg" alt="OldBoyFamily Logo" /></div>
+                    <div class="fr-oldboy-why__logo"><img src="img/family/OldBoyFamily.svg" alt="OldBoyFamily Logo" /></div>
                 </header>
-                <div class="benefits__conclusion-more">
-                    <p class="benefits__conclusion-text">Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу</p><a class="benefits__conclusion-submit button button--ghost-dark" href="#">Свяжитесь с нами</a>
-                    <p class="benefits__conclusion-rest">И мы ответим на ваши вопросы</p><a class="benefits__conclusion-bibos" href="#">Франшиза Oldboy Barbershop на Бибос</a>
+                <div class="fr-benefits__conclusion-more">
+                    <p class="fr-benefits__conclusion-text">Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу</p><a class="fr-benefits__conclusion-submit button button--ghost-dark" href="#">Свяжитесь с нами</a>
+                    <p class="fr-benefits__conclusion-rest">И мы ответим на ваши вопросы</p><a class="fr-benefits__conclusion-bibos" href="https://www.beboss.ru/franchise/2484-franshiza-oldboy">Франшиза Oldboy Barbershop на Бибосс</a>
                 </div>
             </section>
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__info-n-contacts">
-            <div class="footer__info">
-                <div class="footer__logo"><img src="./img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
-                <h2 class="footer__title">129 филиалов <br>в 5 странах и в 5 столицах</h2>
-                <p class="footer__subtitle">Крупнейшая международная сеть мужских парикмахерских</p>
-                <p class="footer__text">Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.</p>
+        <div class="footer__content">
+            <div class="footer__info-n-contacts">
+                <div class="footer__info">
+                    <div class="footer__logo"><img src="./img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
+                    <div class="footer__caption">
+                        <h2 class="footer__title">129 филиалов <br>в 5 странах и в 5 столицах</h2>
+                        <p class="footer__subtitle">Крупнейшая международная сеть мужских парикмахерских</p>
+                        <p class="footer__text">Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer__menues">
-            <div class="footer__main-nav">
-                <ul class="footer-menu">
-                    <h3 class="footer-menu__title">Меню</h3>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">ГЛАВНАЯ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">НОВОСТИ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛУГИ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">ФРАНШИЗА</a></li>
-                </ul>
-            </div>
-            <div class="footer__services-nav">
-                <ul class="footer-menu">
-                    <h3 class="footer-menu__title">Услуги</h3>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">СТРИЖКИ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">БРИТЬЁ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">ТАТУИРОВКИ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">БАРБЕР-СПА</a></li>
-                </ul>
-            </div>
-            <div class="footer__info-nav">
-                <ul class="footer-menu">
-                    <h3 class="footer-menu__title">Информация</h3>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
-                    <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a></li>
-                </ul>
+            <div class="footer__menues">
+                <div class="footer__main-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Меню</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ГЛАВНАЯ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">НОВОСТИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛУГИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ФРАНШИЗА</a></li>
+                    </ul>
+                </div>
+                <div class="footer__services-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Услуги</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">СТРИЖКИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">БРИТЬЁ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ТАТУИРОВКИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">БАРБЕР-СПА</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Информация</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer__copyrights">
