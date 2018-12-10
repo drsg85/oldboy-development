@@ -21,6 +21,11 @@
         padding: 50px;
         padding-bottom: 70px;
     }
+
+    @include atDesktopL {
+        // box model
+        padding: 50px 80px;
+    }
     
     &--main {
         // box model
@@ -193,6 +198,11 @@
         // box model
         width: 230px;
     }
+
+    @include atDesktopL {
+        // box model
+        width: 300px;
+    }
 }
 
 .hero__logo img {
@@ -219,6 +229,11 @@
     @include atDesktopM {
         // positioning
         left: 260px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        left: 320px;
     }
 }
 
@@ -623,6 +638,11 @@
         // box model
         width: 700px;
     }
+
+    @include atDesktopL {
+        // box model
+        width: 800px;
+    }
 }
 
 .hero__deco img {
@@ -644,6 +664,16 @@
         display: block;
         width: 50%;
         padding-bottom: 20px;
+    }
+}
+
+.hero__counter {
+    // box model
+    margin-bottom: 90px;
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 120px;
     }
 }
 

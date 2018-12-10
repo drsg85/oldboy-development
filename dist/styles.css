@@ -410,6 +410,9 @@ html, body {
     .hero {
       padding: 50px;
       padding-bottom: 70px; } }
+  @media (min-width: 1500px) {
+    .hero {
+      padding: 50px 80px; } }
   .hero--main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -527,6 +530,9 @@ html, body {
   @media (min-width: 1200px) {
     .hero__logo {
       width: 230px; } }
+  @media (min-width: 1500px) {
+    .hero__logo {
+      width: 300px; } }
 
 .hero__logo img {
   width: 100%; }
@@ -544,6 +550,9 @@ html, body {
   @media (min-width: 1200px) {
     .hero__nav {
       left: 260px; } }
+  @media (min-width: 1500px) {
+    .hero__nav {
+      left: 320px; } }
 
 .hero__city-select {
   position: absolute;
@@ -843,6 +852,9 @@ html, body {
     .hero__deco {
       bottom: -60px;
       width: 700px; } }
+  @media (min-width: 1500px) {
+    .hero__deco {
+      width: 800px; } }
 
 .hero__deco img {
   width: 100%; }
@@ -857,6 +869,12 @@ html, body {
       display: block;
       width: 50%;
       padding-bottom: 20px; } }
+
+.hero__counter {
+  margin-bottom: 90px; }
+  @media (min-width: 1500px) {
+    .hero__counter {
+      margin-bottom: 120px; } }
 
 .hero__franchise {
   position: relative;
@@ -922,6 +940,9 @@ html, body {
   @media (min-width: 1200px) {
     .hero-caption__big {
       font-size: 4rem; } }
+  @media (min-width: 1500px) {
+    .hero-caption__big {
+      font-size: 5rem; } }
   .hero-caption__big--haircut::after {
     content: '';
     position: absolute;
@@ -965,6 +986,9 @@ html, body {
   @media (min-width: 700px) {
     .hero-caption__motto {
       font-size: 1.125rem; } }
+  @media (min-width: 1500px) {
+    .hero-caption__motto {
+      font-size: 1.25rem; } }
 
 .hero-caption__location {
   margin: 0;
@@ -1030,6 +1054,9 @@ html, body {
   @media (min-width: 1200px) {
     .city-select__title {
       font-size: 1.25rem; } }
+  @media (min-width: 1500px) {
+    .city-select__title {
+      font-size: 1.5rem; } }
 
 .city-select__city {
   margin: 0;
@@ -1043,6 +1070,9 @@ html, body {
     .city-select__city {
       display: inline-block;
       vertical-align: top; } }
+  @media (min-width: 1500px) {
+    .city-select__city {
+      font-size: 1.5rem; } }
   @media (min-width: 1920px) {
     .city-select__city {
       margin-left: 10px; } }
@@ -1425,10 +1455,12 @@ html, body {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  margin-bottom: 90px;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem;
   text-align: right; }
+  @media (min-width: 1500px) {
+    .branch-counter {
+      font-size: 1.25rem; } }
 
 .branch-counter__title {
   color: #ffffff;
@@ -1461,7 +1493,11 @@ html, body {
   align-items: flex-end;
   padding-left: 100px;
   padding-right: 20px;
-  background-color: #d6a354; }
+  border-radius: 5px;
+  background-color: #000000;
+  background-image: url("./img/bgs/franchise-btn.jpg");
+  background-position: center right;
+  background-repeat: no-repeat; }
 
 .franch-promo__title {
   -webkit-transform: skewY(-15deg);
@@ -1472,6 +1508,11 @@ html, body {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem; }
+  @media (min-width: 1500px) {
+    .franch-promo__title {
+      -webkit-transform: skewY(-15deg) translate(-50px, -10px);
+      transform: skewY(-15deg) translate(-50px, -10px);
+      font-size: 1.3rem; } }
 
 .franch-promo__title strong {
   display: block;
@@ -4711,6 +4752,9 @@ html, body {
   @media (min-width: 1200px) {
     .main-nav__link {
       font-size: 1.25rem; } }
+  @media (min-width: 1500px) {
+    .main-nav__link {
+      font-size: 1.5rem; } }
 
 .policy {
   padding: 20px; }
@@ -5041,23 +5085,20 @@ html, body {
   position: absolute;
   top: 13px;
   right: 13px;
-  display: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 20px;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
   height: 20px;
-  text-align: center;
+  width: 20px;
   color: #ffffff;
+  text-align: center;
   background-color: #ccc;
   border: none;
   border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
   cursor: pointer; }
+  .form__input-clear--hidden {
+    display: none; }
 
 .form__checkbox {
   position: absolute;

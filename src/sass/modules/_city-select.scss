@@ -31,6 +31,11 @@
         // typography
         font-size: 1.25rem;
     }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.5rem;
+    }
 }
 
 .city-select__city {
@@ -51,6 +56,11 @@
         // box model
         display: inline-block;
         vertical-align: top;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.5rem;
     }
 
     @include atFullHD {

@@ -57,6 +57,11 @@
         font-size: 4rem;
     }
 
+    @include atDesktopL {
+        // typography
+        font-size: 5rem;
+    }
+
     &--haircut {
         &::after {
             content: '';
@@ -134,6 +139,11 @@
     @include atTablet {
         // typography
         font-size: 1.125rem;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.25rem;
     }
 }
 

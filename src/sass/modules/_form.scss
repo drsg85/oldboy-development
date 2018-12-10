@@ -117,24 +117,27 @@
     position: absolute;
     top: 13px;
     right: 13px;
+    transform-origin: center center;
+    transform: rotate(45deg);
 
     // box model
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
     height: 20px;
+    width: 20px;
     
     // typography
-    text-align: center;
     color: #ffffff;
-
+    text-align: center;
+    
     // visual
     background-color: #ccc;
     border: none;
     border-radius: 50%;
-    transform: rotate(45deg);
     cursor: pointer;
+    
+    &--hidden {
+        // box model
+        display: none;
+    }
 }
 
 .form__checkbox {

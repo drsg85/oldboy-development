@@ -8,7 +8,11 @@
     padding-right: 20px;
 
     // visual
-    background-color: $golden;
+    border-radius: 5px;
+    background-color: $black;
+    background-image: url('./img/bgs/franchise-btn.jpg');
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
 .franch-promo__title {
@@ -24,6 +28,14 @@
     color: $light;
     font-family: $titleFont;
     font-size: 1rem;
+
+    @include atDesktopL {
+        // positioning
+        transform: skewY(-15deg) translate(-50px, -10px);
+
+        // typography
+        font-size: 1.3rem;
+    }
 }
 
 .franch-promo__title strong {
