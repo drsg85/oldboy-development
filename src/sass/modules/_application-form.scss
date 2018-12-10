@@ -11,17 +11,14 @@
         margin-bottom: 150px;
     }
 }
-.application-form__form__wrap {
+
+.application-form__content {
     // box model
     width: 100%;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.application-form__form {
-    // box model
-    margin-top: 80px;
+    padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -59,19 +56,4 @@
         }
         
     }
-
-    @include atDesktopM {
-        margin-left: calc((100% - 800px)/2);
-    }
-}
-
-.application-form__policy {
-    // box model
-    display: inline-block;
-
-    // typography
-    color: #a37b3e;
-
-    // visual
-    text-decoration: none;
 }

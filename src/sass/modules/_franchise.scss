@@ -134,6 +134,11 @@
     // typography
     font-size: 1rem;
 
+    &--countdown {
+        // box model
+        flex-direction: column;
+    }
+
     @include atTablet {
         // typography
         font-size: 1.5rem;
@@ -149,6 +154,7 @@
         font-size: 0.8rem;
     }
 }
+
 
 .franchise__count {
     // box model

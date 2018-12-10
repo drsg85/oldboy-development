@@ -3166,6 +3166,11 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   font-size: 1rem; }
+  .franchise__summary--countdown {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   @media (min-width: 700px) {
     .franchise__summary {
       font-size: 1.5rem; } }
@@ -4808,10 +4813,10 @@ html, body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 2px solid #d6a354;
   border-radius: 5px; }
   @media (min-width: 700px) {
     .countdown {
@@ -4822,23 +4827,10 @@ html, body {
       -ms-flex-pack: start;
       justify-content: flex-start; } }
 
-.countdown__date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
 .countdown__block {
   position: relative;
   display: inline-block;
-  margin: 0 9px;
-  color: #ffffff;
+  color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-weight: 700; }
   .countdown__block:after {
@@ -5127,6 +5119,11 @@ html, body {
   font-size: 0.625rem;
   text-transform: uppercase; }
 
+.form__policy {
+  display: inline-block;
+  color: #a37b3e;
+  text-decoration: none; }
+
 .form__submit-btn {
   display: block;
   width: 100%;
@@ -5140,23 +5137,21 @@ html, body {
     .application-form {
       margin-bottom: 150px; } }
 
-.application-form__form__wrap {
+.application-form__content {
   width: 100%;
   max-width: 1500px;
   margin-left: auto;
-  margin-right: auto; }
-
-.application-form__form {
-  margin-top: 80px;
+  margin-right: auto;
+  padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px; }
   @media (min-width: 700px) {
-    .application-form__form {
+    .application-form__content {
       position: relative;
       max-width: 380px;
       width: 100%;
       margin-left: calc((100% - 700px)/2); }
-      .application-form__form:after {
+      .application-form__content:after {
         content: '';
         position: absolute;
         right: -450px;
@@ -5169,16 +5164,8 @@ html, body {
         background-repeat: no-repeat;
         background-position: 42% 0; } }
     @media (min-width: 700px) and (min-width: 1200px) {
-      .application-form__form:after {
+      .application-form__content:after {
         right: -550px; } }
-  @media (min-width: 1200px) {
-    .application-form__form {
-      margin-left: calc((100% - 800px)/2); } }
-
-.application-form__policy {
-  display: inline-block;
-  color: #a37b3e;
-  text-decoration: none; }
 
 .fr-benefits {
   padding-top: 45px;

@@ -242,6 +242,18 @@
     text-transform: uppercase;
 }
 
+
+.form__policy {
+    // box model
+    display: inline-block;
+
+    // typography
+    color: #a37b3e;
+
+    // visual
+    text-decoration: none;  
+}
+
 .form__submit-btn {
     // box model
     display: block;
