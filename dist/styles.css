@@ -343,6 +343,12 @@ html, body {
   font-style: normal; }
 
 @font-face {
+  font-family: 'Rex Bold Inline';
+  src: url("./fonts/subset-RexBoldInline.woff2") format("woff2"), url("./fonts/subset-RexBoldInline.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
   font-family: 'icomoon';
   src: url("./fonts/icomoon.eot?zezhlj");
   src: url("./fonts/icomoon.eot?zezhlj#iefix") format("embedded-opentype"), url("./fonts/icomoon.ttf?zezhlj") format("truetype"), url("./fonts/icomoon.woff?zezhlj") format("woff"), url("./fonts/icomoon.svg?zezhlj#icomoon") format("svg");
@@ -533,6 +539,9 @@ html, body {
   @media (min-width: 1500px) {
     .hero__logo {
       width: 300px; } }
+  @media (min-width: 1920px) {
+    .hero__logo {
+      width: 360px; } }
 
 .hero__logo img {
   width: 100%; }
@@ -563,6 +572,9 @@ html, body {
   @media (min-width: 1500px) {
     .hero__nav {
       left: 320px; } }
+  @media (min-width: 1920px) {
+    .hero__nav {
+      left: 400px; } }
 
 .hero__city-select {
   position: absolute;
@@ -865,6 +877,9 @@ html, body {
   @media (min-width: 1500px) {
     .hero__deco {
       width: 800px; } }
+  @media (min-width: 1920px) {
+    .hero__deco {
+      width: 900px; } }
 
 .hero__deco img {
   width: 100%; }
@@ -1490,6 +1505,8 @@ html, body {
   margin-top: -0.2em;
   margin-bottom: -0.2em;
   color: #d6a354;
+  mix-blend-mode: difference;
+  font-family: "Rex Bold Inline", Arial, sans-serif;
   font-size: 12em; }
 
 .franch-promo {
@@ -1513,13 +1530,16 @@ html, body {
   background-color: #000000;
   background-image: url("./img/bgs/franchise-btn.jpg");
   background-position: center right;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 20px rgba(214, 163, 84, 0.5);
+  box-shadow: 0 0 20px rgba(214, 163, 84, 0.5); }
   @media (min-width: 1200px) {
     .franch-promo {
       height: 130px; } }
   @media (min-width: 1500px) {
     .franch-promo {
-      height: 140px; } }
+      height: 150px; } }
 
 .franch-promo__title {
   -webkit-transform: skewY(-15deg);
@@ -1540,6 +1560,11 @@ html, body {
       top: -20px;
       left: 400px;
       font-size: 1.5rem; } }
+  @media (min-width: 1920px) {
+    .franch-promo__title {
+      top: 20px;
+      left: 380px;
+      font-size: 2rem; } }
 
 .franch-promo__title strong {
   display: block;

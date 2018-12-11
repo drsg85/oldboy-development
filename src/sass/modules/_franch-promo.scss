@@ -16,6 +16,8 @@
     background-image: url('./img/bgs/franchise-btn.jpg');
     background-position: center right;
     background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 20px rgba($golden, 0.5);
 
     @include atDesktopM {
         // box model
@@ -24,7 +26,7 @@
 
     @include atDesktopL {
         // box model
-        height: 140px;
+        height: 150px;
     }
 }
 
@@ -56,6 +58,15 @@
 
         // typography
         font-size: 1.5rem;
+    }
+
+    @include atFullHD {
+        // positioning
+        top: 20px;
+        left: 380px;
+
+        // typography
+        font-size: 2rem;
     }
 }
 

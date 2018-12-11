@@ -35,6 +35,9 @@
     margin-bottom: -0.2em;
 
     // typography
+    // color: rgba($golden, 0.95);
     color: $golden;
+    mix-blend-mode: difference;
+    font-family: $displayFont;
     font-size: 12em;
 }

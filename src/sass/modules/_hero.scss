@@ -203,6 +203,11 @@
         // box model
         width: 300px;
     }
+
+    @include atFullHD {
+        // box model
+        width: 360px;
+    }
 }
 
 .hero__logo img {
@@ -250,6 +255,11 @@
     @include atDesktopL {
         // positioning
         left: 320px;
+    }
+
+    @include atFullHD {
+        // positioning
+        left: 400px;
     }
 }
 
@@ -658,6 +668,11 @@
     @include atDesktopL {
         // box model
         width: 800px;
+    }
+
+    @include atFullHD {
+        // box model
+        width: 900px;
     }
 }
 
