@@ -1493,6 +1493,7 @@ html, body {
   font-size: 12em; }
 
 .franch-promo {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1513,6 +1514,12 @@ html, body {
   background-image: url("./img/bgs/franchise-btn.jpg");
   background-position: center right;
   background-repeat: no-repeat; }
+  @media (min-width: 1200px) {
+    .franch-promo {
+      height: 130px; } }
+  @media (min-width: 1500px) {
+    .franch-promo {
+      height: 140px; } }
 
 .franch-promo__title {
   -webkit-transform: skewY(-15deg);
@@ -1523,11 +1530,16 @@ html, body {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem; }
+  @media (min-width: 1200px) {
+    .franch-promo__title {
+      position: absolute;
+      top: 0;
+      left: 350px; } }
   @media (min-width: 1500px) {
     .franch-promo__title {
-      -webkit-transform: skewY(-15deg) translate(-50px, -10px);
-      transform: skewY(-15deg) translate(-50px, -10px);
-      font-size: 1.3rem; } }
+      top: -20px;
+      left: 400px;
+      font-size: 1.5rem; } }
 
 .franch-promo__title strong {
   display: block;

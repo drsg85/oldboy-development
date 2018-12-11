@@ -1,4 +1,7 @@
 .franch-promo {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: column;
@@ -13,6 +16,16 @@
     background-image: url('./img/bgs/franchise-btn.jpg');
     background-position: center right;
     background-repeat: no-repeat;
+
+    @include atDesktopM {
+        // box model
+        height: 130px;
+    }
+
+    @include atDesktopL {
+        // box model
+        height: 140px;
+    }
 }
 
 .franch-promo__title {
@@ -29,12 +42,20 @@
     font-family: $titleFont;
     font-size: 1rem;
 
+    @include atDesktopM {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 350px;
+    }
+    
     @include atDesktopL {
         // positioning
-        transform: skewY(-15deg) translate(-50px, -10px);
+        top: -20px;
+        left: 400px;
 
         // typography
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 
