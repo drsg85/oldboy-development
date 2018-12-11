@@ -554,7 +554,7 @@ html, body {
     .hero__nav {
       position: absolute;
       top: 0;
-      left: 190px;
+      left: 210px;
       visibility: visible;
       opacity: 1; } }
   @media (min-width: 1200px) {
@@ -4783,6 +4783,13 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   background-color: #131313; }
+  @media (min-width: 1000px) {
+    .main-nav {
+      position: relative;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      background-color: transparent; } }
 
 .main-nav__list {
   display: -webkit-box;
@@ -4793,11 +4800,23 @@ html, body {
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0; }
+  @media (min-width: 1000px) {
+    .main-nav__list {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
 
 .main-nav__item {
   margin: 20px;
   text-align: center;
   list-style-type: none; }
+  @media (min-width: 1000px) {
+    .main-nav__item {
+      margin: 0; } }
 
 .main-nav__link {
   margin-right: 50px;
@@ -4806,6 +4825,9 @@ html, body {
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase; }
+  @media (min-width: 1000px) {
+    .main-nav__link {
+      font-size: 1.125rem; } }
   @media (min-width: 1200px) {
     .main-nav__link {
       font-size: 1.25rem; } }

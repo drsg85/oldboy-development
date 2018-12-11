@@ -13,6 +13,17 @@
 
     // visual
     background-color: $dark;
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+        
+        // box model
+        justify-content: flex-start;
+
+        // visual
+        background-color: transparent;
+    }
 }
 
 .main-nav__list {
@@ -20,6 +31,12 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        justify-content: flex-start;
+    }
 }
 
 .main-nav__item {
@@ -31,6 +48,11 @@
 
     // visual
     list-style-type: none;
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+    }
 }
 
 .main-nav__link {
@@ -43,6 +65,11 @@
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.125rem;
+    }
 
     @include atDesktopM {
         // typography
