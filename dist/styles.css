@@ -542,7 +542,7 @@ html, body {
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 7777;
+  z-index: 777;
   width: 100%;
   max-width: 400px;
   opacity: 0.9;
@@ -1098,7 +1098,7 @@ html, body {
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 9999;
+  z-index: 888;
   height: 48px;
   width: 48px;
   background-color: rgba(19, 19, 19, 0.5);
@@ -1540,12 +1540,21 @@ html, body {
       padding: 25px 50px; } }
 
 .location-selector {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
   width: 100%;
   background-color: #ffffff;
-  overflow: hidden; }
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 .location-selector--hidden {
-  display: none; }
+  left: -110%;
+  visibility: hidden; }
 
 .location-selector__header {
   padding: 25px;
@@ -1614,7 +1623,14 @@ html, body {
 .location-selector__close {
   position: fixed;
   top: 25px;
-  right: 25px; }
+  right: 20px;
+  z-index: 1000;
+  -webkit-transition-delay: all 0.3s;
+  transition-delay: all 0.3s; }
+  .location-selector__close--hidden {
+    position: absolute;
+    -webkit-transition-delay: all 0;
+    transition-delay: all 0; }
   @media (min-width: 1920px) {
     .location-selector__close {
       top: 50px;

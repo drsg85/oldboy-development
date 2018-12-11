@@ -1,15 +1,27 @@
 .location-selector {
+    // positioning
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+
     // box model
     width: 100%;
 
     // visual
     background-color: $light;
-    overflow: hidden;
+    transition: all 0.3s ease-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .location-selector--hidden {
+    // positioning
+    left: -110%;
+
     // box model
-    display: none;
+    visibility: hidden;
 }
 
 .location-selector__header {
@@ -112,7 +124,19 @@
 
     // positioning
     top: 25px;
-    right: 25px;
+    right: 20px;
+    z-index: 1000;
+
+    // visual
+    transition-delay: all 0.3s;
+
+    &--hidden {
+        // positioning
+        position: absolute;
+
+        // visual
+        transition-delay: all 0;
+    }
 
     @include atFullHD {
         // positioning
