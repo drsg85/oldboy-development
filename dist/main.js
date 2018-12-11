@@ -90,10 +90,23 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\r\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./src/js/modules/MobileMenu.js\");\n\r\n\r\nvar mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/MobileMenu.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/MobileMenu.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass MobileMenu {\r\n  constructor () {\r\n    this.menuButton = document.querySelector('.menu-button');\r\n    this.menu = document.querySelector('.hero__nav');\r\n\r\n    this.reset();\r\n    this.events();\r\n  }\r\n\r\n  events () {\r\n    this.menuButton.addEventListener('click', (event) => {\r\n      this.toggleMenu(event);\r\n    });\r\n  }\r\n\r\n  reset () {\r\n    this.menuButton.classList.remove('menu-button--close');\r\n    this.menu.classList.add('hero__nav--hidden');\r\n  }\r\n\r\n  toggleMenu (event) {\r\n    event.preventDefault();\r\n\r\n    this.menuButton.classList.toggle('menu-button--close');\r\n    this.menu.classList.toggle('hero__nav--hidden');\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (MobileMenu);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/MobileMenu.js?");
 
 /***/ })
 

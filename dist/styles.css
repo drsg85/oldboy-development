@@ -538,8 +538,18 @@ html, body {
   width: 100%; }
 
 .hero__nav {
-  visibility: hidden;
-  opacity: 0; }
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 7777;
+  width: 100%;
+  max-width: 400px;
+  opacity: 0.9;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .hero__nav--hidden {
+    right: -110%; }
   @media (min-width: 1000px) {
     .hero__nav {
       position: absolute;
@@ -1088,12 +1098,13 @@ html, body {
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 9;
+  z-index: 9999;
   height: 48px;
   width: 48px;
   background-color: rgba(19, 19, 19, 0.5);
   border: 2px solid #d6a354;
   border-radius: 50%;
+  cursor: pointer;
   -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out; }
   @media (min-width: 700px) {
@@ -1111,7 +1122,11 @@ html, body {
   left: 11px;
   height: 3px;
   width: 22px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform-origin: center left;
+  transform-origin: center left; }
 
 .menu-button::before {
   content: "";
@@ -1528,6 +1543,9 @@ html, body {
   width: 100%;
   background-color: #ffffff;
   overflow: hidden; }
+
+.location-selector--hidden {
+  display: none; }
 
 .location-selector__header {
   padding: 25px;
@@ -4733,21 +4751,44 @@ html, body {
     .footer-menu__link {
       font-size: 1.125rem; } }
 
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #131313; }
+
 .main-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 0; }
 
 .main-nav__item {
+  margin: 20px;
+  text-align: center;
   list-style-type: none; }
 
 .main-nav__link {
   margin-right: 50px;
-  text-decoration: none;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+  text-decoration: none;
   text-transform: uppercase; }
   @media (min-width: 1200px) {
     .main-nav__link {

@@ -3,7 +3,7 @@
     position: fixed;
     right: 20px;
     top: 20px;
-    z-index: 9;
+    z-index: 9999;
 
     // box model
     height: 48px;
@@ -13,6 +13,7 @@
     background-color: rgba($dark, 0.5);
     border: 2px solid $golden;
     border-radius: 50%;
+    cursor: pointer;
     transition: all 0.25s ease-out;
 
     @include atTablet {
@@ -40,6 +41,8 @@
 
     // visual
     background-color: $light;
+    transition: all 0.3s ease-out;
+    transform-origin: center left;
 }
 
 .menu-button::before {
