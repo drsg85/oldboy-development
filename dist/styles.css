@@ -1329,10 +1329,19 @@ html, body {
 
 .branch-list {
   padding-top: 20px;
+  font-size: 0;
   text-align: center; }
   @media (min-width: 1000px) {
     .branch-list {
       padding-top: 0; } }
+
+.branch-list--hidden .branch-list__content {
+  max-height: 0;
+  padding: 0 20px; }
+  @media (min-width: 1000px) {
+    .branch-list--hidden .branch-list__content {
+      max-height: inherit;
+      padding: 0; } }
 
 .branch-list__button {
   position: relative;
@@ -1351,6 +1360,10 @@ html, body {
   @media (min-width: 1000px) {
     .branch-list__button {
       display: none; } }
+
+.branch-list__button:hover {
+  color: #d6a354;
+  cursor: pointer; }
 
 .branch-list__button::before,
 .branch-list__button::after {
@@ -1382,16 +1395,14 @@ html, body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0;
-  padding-top: 40px;
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: -47px;
-  padding-bottom: 47px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 40px 20px;
+  margin: 0 -20px;
+  max-height: 3000px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#131313), color-stop(65%, #131313), color-stop(rgba(19, 19, 19, 0)), color-stop(78%), color-stop(82%, rgba(19, 19, 19, 0)), color-stop(92%, rgba(19, 19, 19, 0)), to(rgba(19, 19, 19, 0)));
-  background-image: linear-gradient(0deg, #131313 0%, #131313 65%, rgba(19, 19, 19, 0), 78%, rgba(19, 19, 19, 0) 82%, rgba(19, 19, 19, 0) 92%, rgba(19, 19, 19, 0) 100%); }
+  background-image: linear-gradient(0deg, #131313 0%, #131313 65%, rgba(19, 19, 19, 0), 78%, rgba(19, 19, 19, 0) 82%, rgba(19, 19, 19, 0) 92%, rgba(19, 19, 19, 0) 100%);
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
   @media (min-width: 700px) {
     .branch-list__content {
       display: -webkit-box;
@@ -1406,12 +1417,8 @@ html, body {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-left: -40px;
-      margin-right: -40px;
-      margin-bottom: -60px;
-      padding-bottom: 60px;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      padding: 60px 20px;
+      margin: 0 -40px; } }
   @media (min-width: 1000px) {
     .branch-list__content {
       margin-bottom: 10px;

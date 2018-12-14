@@ -5,9 +5,10 @@ import webpack from 'webpack-stream';
 const config = {
   entry: {
     main: './src/js/main.js',
-    branch: './src/js/branch.js',
     city: './src/js/city.js',
-    dummy: './src/js/dummy.js'
+    branch: './src/js/branch.js',
+    dummy: './src/js/dummy.js',
+    scripts: './src/js/scripts.js'
   },
 
   output: {

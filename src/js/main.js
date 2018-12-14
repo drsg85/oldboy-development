@@ -1,3 +1,5 @@
+'use strict';
+
 import MobileMenu from './modules/MobileMenu';
 import LocationSelector from './modules/LocationSelector';
 

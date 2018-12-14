@@ -57,48 +57,7 @@ html(lang="en")
                     p.about__text В нашем барбершопе существует огромная база эскизов и всевозможных шрифтов, позволяющая выбрать любую привлекающую вас стилистику. Мастер поможет вам определиться со стилистическим направлением, надписью и размером татуировки, а также изготовит индивидуальный и уникальный эскиз. В OldBoy вам предложат то, чем вы будете гордиться!
 
 
-        footer.footer
-            .footer__info-n-contacts
-                .footer__info
-                    .footer__logo
-                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                    h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
-                    p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
-                    p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+        include modules/_choose-city.pug
+        include modules/_footer.pug
 
-            .footer__menues
-                .footer__main-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Меню
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ГЛАВНАЯ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") НОВОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛУГИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ФРАНШИЗА
-
-                .footer__services-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Услуги
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") СТРИЖКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БРИТЬЁ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ТАТУИРОВКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БАРБЕР-СПА
-
-                .footer__info-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Информация
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
-
-
-            .footer__copyrights
-                p © 2014–2019 Oldboy Barbershop
+        script(src="scripts.js")
