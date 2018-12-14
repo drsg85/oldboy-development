@@ -17,7 +17,7 @@ html(lang="en")
                     a(href="index.html")
                         img(src="/img/logo-dark.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
-                .hero__nav
+                .hero__nav.hero__nav--hidden
                     nav.main-nav
                         ul.main-nav__list
                             li.main-nav__item: a(href="#").main-nav__link Главная
@@ -87,11 +87,11 @@ html(lang="en")
                         
                         .form__input-group
                             input.form__submit-btn.button.button--ghost-dark(type="submit" value="Отправить заявку")
-                            input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
-                            label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
+                        //-     input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
+                        //-     label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
                         
-                        .form__input-group
-                            input.form__submit-btn.button.button--ghost-dark(type="submit" value="Отправить заявку")
+                        //- .form__input-group
+                        //-     input.form__submit-btn.button.button--ghost-dark(type="submit" value="Отправить заявку")
 
 
             section.fr-benefits
@@ -102,6 +102,7 @@ html(lang="en")
                 ol.fr-benefits__list
                     li.fr-benefit
                         p.fr-benefit__text Узнаваемый бренд
+                        p.fr-benefit__descr Oldboy Barbershop – это не просто мужская парикмахерская или бренд. Это место, где клиенты находят себя и свой стиль. Наши барберы не просто мужские парихмахеры - они профессионалы своего дела. Наши партнеры Jack Daniels, Truefitt&Hill и другие известные во всем мире бренды. Мы уже имеем филиалы в 7 странах и 6 столицах, а за последний год мы открыли более 60 филиалов, и это не предел.
                     li.fr-benefit
                         p.fr-benefit__text Брутальный фирменный стиль Oldboy
                     li.fr-benefit
