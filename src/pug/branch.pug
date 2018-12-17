@@ -84,7 +84,7 @@ html(lang="en")
             section.promos
                 .promos__header
                     header.section-header
-                        h2.section-header__title Акции <br>барбершопа
+                        h2.section-header__title Акции <br>в городе
                         p.section-header__subtitle Режем&nbsp;цены
 
                 .promos__content
@@ -96,6 +96,9 @@ html(lang="en")
                             .promo__bottom
                                 p.promo__price 2500
                                 p.promo__name Отец + Сын
+
+                        .promo__image
+                            img(src="./img/promos/dad-n-son.jpg", alt="Отец и сын, комплексная услуга Oldboy Barbershop")
 
                         .promo__description
                             p.promo__tip Описание услуги
@@ -111,7 +114,10 @@ html(lang="en")
                             p.promo__service Комплексная услуга
                             .promo__bottom
                                 p.promo__price 1800
-                                p.promo__name Друг + Друг
+                                p.promo__name Королевское бритьё
+
+                        .promo__image
+                            img(src="./img/promos/royal-shaving.jpg", alt="Королевское бритьё, комплексная услуга Oldboy Barbershop")
 
                         .promo__description
                             p.promo__tip Описание услуги
@@ -126,8 +132,11 @@ html(lang="en")
                         header.promo__header
                             p.promo__service Комплексная услуга
                             .promo__bottom
-                                p.promo__price 2500
-                                p.promo__name Королевское бритьё
+                                p.promo__price -30%
+                                p.promo__name Друг + Друг
+
+                        .promo__image
+                            img(src="./img/promos/friend-n-friend.jpg", alt="Друг + друг, комплексная услуга Oldboy Barbershop")
 
                         .promo__description
                             p.promo__tip Описание услуги
@@ -320,7 +329,7 @@ html(lang="en")
                     
                     .academy-banner__cta: a.button(href="#") Узнать подробнее
 
-            section.testimonials
+            //- section.testimonials
                 .testimonials__header
                     header.section-header
                         h2.section-header__title Ваши <br>отзывы
@@ -390,4 +399,5 @@ html(lang="en")
         include modules/_choose-city.pug
         include modules/_footer-branch.pug
 
+        script(src="scripts.js")
         script(src="branch.js")
