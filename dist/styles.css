@@ -641,7 +641,8 @@ html, body {
   justify-content: space-between;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding-top: 20px; }
   .hero__caption--branch {
     margin-bottom: -160px;
     opacity: 0; }
@@ -2111,41 +2112,54 @@ html, body {
   object-fit: cover; }
 
 .promos__content {
-  padding: 40px 20px; }
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   @media (min-width: 700px) {
     .promos__content {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
       padding: 40px; } }
 
 .promo {
   position: relative;
   height: 160px;
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 350px;
   background-color: #896322;
   border-radius: 5px;
   overflow: hidden; }
   @media (min-width: 700px) {
     .promo {
-      height: 420px;
-      width: 45%;
-      margin-bottom: 40px; } }
+      height: 380px;
+      max-width: 280px;
+      margin-bottom: 40px;
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%; } }
 
 .promo--open {
-  height: 390px; }
-  @media (min-width: 700px) {
-    .promo--open {
-      height: 420px; } }
+  height: 380px; }
   .promo--open .promo__close-button {
     display: block; }
   .promo--open .promo__info-button {
@@ -2160,7 +2174,25 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  top: 0; }
+  top: 0;
+  z-index: 3; }
+
+.promo__image {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  z-index: 1; }
+
+.promo__image img {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center; }
 
 .promo__description {
   position: absolute;
@@ -2168,8 +2200,10 @@ html, body {
   left: 0;
   right: 0;
   top: 0;
+  z-index: 2;
   padding: 20px;
   padding-top: 40px;
+  background-color: rgba(19, 19, 19, 0.75);
   opacity: 0;
   visibility: hidden; }
 
@@ -2179,12 +2213,12 @@ html, body {
 
 .promo__bottom {
   position: absolute;
-  bottom: -50px;
+  bottom: -70px;
   left: 0;
   right: 0;
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
-  height: 155px;
+  height: 180px;
   background-image: url("./img/dark-h-grunge.svg");
   background-size: cover; }
 
@@ -2204,11 +2238,12 @@ html, body {
       text-shadow: -3px 3px 0 #896322; } }
 
 .promo__name {
-  padding-left: 40px;
+  padding-top: 5px;
+  padding-left: 20px;
   padding-right: 120px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-align: right; }
   @media (min-width: 700px) {
     .promo__name {
@@ -2221,17 +2256,18 @@ html, body {
 .promo__title {
   margin: 0;
   margin-bottom: 2rem;
+  padding-left: 60px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.75rem;
-  line-height: 1;
+  font-size: 1.25rem;
+  line-height: 1.5;
   text-align: right; }
 
 .promo__text {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5; }
+  font-size: 0.85rem;
+  line-height: 1.75; }
 
 .promo__text p {
   margin: 0;
@@ -2242,6 +2278,7 @@ html, body {
   position: absolute;
   left: 15px;
   top: 15px;
+  z-index: 4;
   height: 32px;
   width: 32px;
   color: #ffffff;

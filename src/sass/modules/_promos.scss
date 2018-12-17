@@ -10,13 +10,17 @@
 .promos__content {
     // box model
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     @include atTablet {
         // box model
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: flex-start;
         padding: 40px;
     }
 }
