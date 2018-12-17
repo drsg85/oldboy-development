@@ -4118,10 +4118,10 @@ html, body {
   @media (min-width: 700px) {
     .price-list {
       padding-bottom: 200px;
-      background-image: url("./img/bgs/price-top-t.jpg"), url("./img/bgs/price-bottom-t.jpg");
-      background-size: contain, contain;
-      background-position: top center, bottom center;
-      background-repeat: no-repeat, no-repeat; } }
+      background-image: url("./img/bgs/price-bottom-t.jpg");
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat; } }
 
 .price-list__content {
   position: relative;
