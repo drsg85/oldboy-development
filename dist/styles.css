@@ -1777,11 +1777,12 @@ html, body {
 .location-list {
   padding: 0;
   margin: 0;
+  margin-bottom: 30px;
   list-style-type: none; }
 
 .location-list__city {
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.85em;
   padding: 0;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
@@ -1790,18 +1791,12 @@ html, body {
     color: #d6a354; }
 
 .location-list__item {
-  padding-left: 30px;
-  margin-bottom: 1em;
+  padding-left: 15px;
+  margin-bottom: 0.25em;
   position: relative;
   z-index: 1;
-  color: #131313;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-  list-style: none;
-  -webkit-transition: all 0.35s linear;
-  transition: all 0.35s linear; }
+  font-size: 0.85rem;
+  list-style: none; }
   @media (min-width: 700px) {
     .location-list__item {
       margin-right: 40px; } }
@@ -1817,34 +1812,28 @@ html, body {
     width: 8px;
     background-color: #d6a354;
     border-radius: 50%; }
-  .location-list__item::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 325px;
-    height: 40px;
-    left: -8px;
-    top: -12px;
-    background-color: #d6a354;
-    border-radius: 23px;
-    opacity: 0; }
 
-.location-list__item em {
-  color: #d6a354;
-  font-family: "Rex", Arial, sans-serif; }
+.location-list__item a {
+  display: inline-block;
+  padding: 7px 12px;
+  color: #896322;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 20px;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear; }
 
-.location-list__item:hover {
-  color: #ffffff; }
-  .location-list__item:hover::after {
-    z-index: -1;
-    opacity: 1;
-    -webkit-transition: all 0.35s linear;
-    transition: all 0.35s linear; }
-  .location-list__item:hover em {
-    opacity: 0; }
+.location-list__item a:hover {
+  color: #ffffff;
+  background-color: #d6a354; }
 
 .branch-addresses {
-  padding: 25px; }
+  padding: 25px;
+  padding-left: 30px; }
   @media (min-width: 700px) {
     .branch-addresses {
       display: -webkit-box;
@@ -1867,6 +1856,7 @@ html, body {
       padding-left: 255px; } }
 
 .branch-addresses__index {
+  position: relative;
   -ms-flex-preferred-size: 45%;
   flex-basis: 45%;
   margin-bottom: 40px;
@@ -1880,14 +1870,15 @@ html, body {
       margin-right: 50px; } }
 
 .branch-addresses__letter {
-  -webkit-transform: translateX(-3px);
-  transform: translateX(-3px);
-  width: 40px;
+  position: absolute;
+  left: -41px;
+  top: -5px;
+  width: 32px;
   margin-bottom: 15px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 2rem;
-  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 32px;
   text-align: center;
   background-color: #d6a354;
   border-radius: 50%; }

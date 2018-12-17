@@ -2,6 +2,7 @@
     // box model
     padding: 0;
     margin: 0;
+    margin-bottom: 30px;
 
     // visual
     list-style-type: none;
@@ -10,7 +11,7 @@
 .location-list__city {
     // box model
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.85em;
     padding: 0;
 
     // typography
@@ -26,23 +27,16 @@
 
 .location-list__item {
     // box model
-    padding-left: 30px;
-    margin-bottom: 1em;
+    padding-left: 15px;
+    margin-bottom: 0.25em;
 
     // positioning
     position: relative;
     z-index: 1;
 
     // typography
-    color: $dark;
-    font-family: $mainFont;
-    font-size: 1rem;
-    text-transform: uppercase;
-    white-space: nowrap;
+    font-size: 0.85rem;
     list-style: none;
-
-    // visual
-    transition: all 0.35s linear;
 
     @include atTablet {
         // box model
@@ -67,47 +61,57 @@
         background-color: $golden;
         border-radius: 50%;
     }
-    
-    &::after {
-        content: "";
-        // box model
-        display: block;
-        position: absolute;
-        width: 325px;
-        height: 40px;
-        
-        // positioning
-        left: -8px;
-        top: -12px;
-        
-        // visual
-        background-color: $golden;
-        border-radius: 23px;
-        opacity: 0;
-    }
 }
 
-.location-list__item em {
+.location-list__item a {
+    // box model
+    display: inline-block;
+    padding: 7px 12px;
+
+    // typography
+    color: $darkGold;
+    font-family: $mainFont;
+    // font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
     // visual
-    color: $golden;
-    font-family: $titleFont;
+    border-radius: 20px;
+    transition: all 0.25s linear;
 }
 
-.location-list__item:hover {
+.location-list__item a:hover {
     // typography
     color: $light;
-
-    &::after {
-    // positioning
-    z-index: -1;
-
+    
     // visual
-    opacity: 1;
-    transition: all 0.35s linear;
-    }
-
-    em {
-        // box model
-        opacity: 0;
-    }
+    background-color: $golden;
 }
+
+// .location-list__item em {
+//     // visual
+//     color: $golden;
+//     font-family: $titleFont;
+// }
+
+// .location-list__item:hover {
+//     // typography
+//     color: $light;
+
+//     &::after {
+//     // positioning
+//     z-index: -1;
+
+//     // visual
+//     opacity: 1;
+//     transition: all 0.35s linear;
+//     }
+
+//     em {
+//         // box model
+//         opacity: 0;
+//     }
+// }
