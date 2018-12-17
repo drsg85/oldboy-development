@@ -6,15 +6,23 @@
     @include atTablet {
         // box model
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+        height: 7600px;
+        max-width: 800px;
+        margin: 0 auto;
+        // height: 8000px;
+        // border: 1px solid red;
+        padding-left: 40px;
     }
     
     @include atDesktopS {
         // box model
-        justify-content: flex-start;
-        padding-left: 255px;
+        max-width: 900px;
+        height: 5000px;
+        // justify-content: flex-start;
+        // padding-left: 255px;
     }
 }
 
@@ -23,13 +31,20 @@
     position: relative;
 
     // box model
-    flex-basis: 45%;
+    // flex-basis: 45%;
     margin-bottom: 40px;
     margin-right: 25px;
+
+    @include atTablet {
+        // box model
+        width: 50%;
+        max-width: 300px;
+    }
     
     @include atDesktopS {
         // box model
-        flex-basis: 275px;
+        width: 33%;
+        // flex-basis: 275px;
     }
 
     @include atDesktopM {

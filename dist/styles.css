@@ -1821,11 +1821,16 @@ html, body {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-decoration: none;
+  text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
   border-radius: 20px;
+  overflow: hidden;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear; }
+  @media (min-width: 700px) {
+    .location-list__item a {
+      max-width: 95%; } }
 
 .location-list__item a:hover {
   color: #ffffff;
@@ -1839,32 +1844,35 @@ html, body {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; } }
-  @media (min-width: 1000px) {
-    .branch-addresses {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      padding-left: 255px; } }
+      height: 7600px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 40px; } }
+  @media (min-width: 1000px) {
+    .branch-addresses {
+      max-width: 900px;
+      height: 5000px; } }
 
 .branch-addresses__index {
   position: relative;
-  -ms-flex-preferred-size: 45%;
-  flex-basis: 45%;
   margin-bottom: 40px;
   margin-right: 25px; }
+  @media (min-width: 700px) {
+    .branch-addresses__index {
+      width: 50%;
+      max-width: 300px; } }
   @media (min-width: 1000px) {
     .branch-addresses__index {
-      -ms-flex-preferred-size: 275px;
-      flex-basis: 275px; } }
+      width: 33%; } }
   @media (min-width: 1200px) {
     .branch-addresses__index {
       margin-right: 50px; } }
@@ -1913,28 +1921,30 @@ html, body {
   .close-button::before {
     content: "";
     position: absolute;
-    left: 10px;
-    top: 10px;
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    -webkit-transform: skewY(45deg);
-    transform: skewY(45deg);
-    height: 2px;
-    width: 20px;
+    left: 11px;
+    top: 19px;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 1px;
+    width: 18px;
+    border-radius: 1px;
     background-color: #131313;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
   .close-button::after {
     content: "";
     position: absolute;
-    left: 10px;
-    top: 20px;
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-transform: skewY(-45deg);
-    transform: skewY(-45deg);
-    height: 2px;
-    width: 19px;
+    left: 11px;
+    top: 19px;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: 1px;
+    width: 18px;
+    border-radius: 1px;
     background-color: #131313;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }

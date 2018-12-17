@@ -75,18 +75,26 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     text-decoration: none;
+    text-overflow: ellipsis;
     text-transform: uppercase;
     white-space: nowrap;
-
+    
     // visual
     border-radius: 20px;
+    overflow: hidden;
     transition: all 0.25s linear;
+
+    @include atTablet {
+        // box model
+        // max-width: 240px;
+        max-width: 95%;
+    }
 }
 
 .location-list__item a:hover {
     // typography
     color: $light;
-    
+
     // visual
     background-color: $golden;
 }
