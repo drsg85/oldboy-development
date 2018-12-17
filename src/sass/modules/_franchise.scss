@@ -14,7 +14,7 @@
 
     @include atTablet {
         // box model
-        margin-top: -80px;
+        margin-top: 40px;
         margin-bottom: -30px;
         padding: 0 40px;
     }
@@ -92,8 +92,8 @@
         // positioning
         position: absolute;
         right: 45px;
-        top: -20px;
-    
+        top: -50px;
+
         // box model
         display: block;
         height: 120px;
