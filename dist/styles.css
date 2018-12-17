@@ -437,6 +437,7 @@ html, body {
     background-position: bottom center; }
     @media (min-width: 700px) {
       .hero--main {
+        min-height: 640px;
         background-image: url("./img/bgs/hero-t.jpg");
         background-size: cover; } }
     @media (min-width: 1000px) {
@@ -1493,8 +1494,11 @@ html, body {
   -ms-flex-align: end;
   align-items: flex-end;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: right; }
+  @media (min-width: 1200px) {
+    .branch-counter {
+      font-size: 1rem; } }
   @media (min-width: 1500px) {
     .branch-counter {
       font-size: 1.25rem; } }
