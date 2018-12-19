@@ -9,17 +9,30 @@ class MobileMenu {
     this.events();
   }
 
+
+  /**
+   * Add event listeners
+   */
   events () {
     this.menuButton.addEventListener('click', (event) => {
       this.toggleMenu(event);
     });
   }
 
+
+  /**
+   * Reset initial menu state
+   */
   reset () {
     this.menuButton.classList.remove('menu-button--close');
     this.menu.classList.add('hero__nav--hidden');
   }
 
+
+  /**
+   * Toggle menu state
+   * @param {MouseEvent} event
+   */
   toggleMenu (event) {
     event.preventDefault();
 

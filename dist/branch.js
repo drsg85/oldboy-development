@@ -91,9 +91,10 @@
   !*** ./src/js/branch.js ***!
   \**************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/js/branch.js?");
+"use strict";
+eval("\r\n\n\n//# sourceURL=webpack:///./src/js/branch.js?");
 
 /***/ })
 

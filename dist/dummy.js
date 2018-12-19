@@ -91,9 +91,10 @@
   !*** ./src/js/dummy.js ***!
   \*************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/js/dummy.js?");
+"use strict";
+eval("\r\n\n\n//# sourceURL=webpack:///./src/js/dummy.js?");
 
 /***/ })
 

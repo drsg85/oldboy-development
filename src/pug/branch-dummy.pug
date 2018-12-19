@@ -16,7 +16,7 @@ html(lang="en")
                     a(href="index.html")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
-                .hero__nav
+                .hero__nav.hero__nav--hidden
                     nav.main-nav
                         ul.main-nav__list
                             li.main-nav__item: a(href="#").main-nav__link Главная
@@ -156,3 +156,8 @@ html(lang="en")
 
             .footer__copyrights
                 p © 2014–2019 Oldboy Barbershop
+
+        include modules/_choose-city.pug
+
+        script(src="scripts.js")
+        script(src="dummy.js")

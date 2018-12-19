@@ -5,6 +5,8 @@
     // box model
     height: 160px;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;
     
     // visual
     background-color: $darkGold;
@@ -13,19 +15,16 @@
 
     @include atTablet {
         // box model
-        height: 420px;
-        width: 45%;
+        height: 380px;
+        max-width: 280px;
         margin-bottom: 40px;
+        flex-basis: 45%;
     }
 }
 
 .promo--open {
     // box model
-    height: 390px;
-
-    @include atTablet {
-        height: 420px;
-    }
+    height: 380px;
 
     .promo__close-button {
         // box model
@@ -51,9 +50,26 @@
     left: 0;
     right: 0;
     top: 0;
-    
+    z-index: 3;
+}
+
+.promo__image {
+    // positioning
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    z-index: 1;
+}
+
+.promo__image img {
     // box model
-    // border: 1px solid red;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .promo__description {
@@ -63,12 +79,14 @@
     left: 0;
     right: 0;
     top: 0;
+    z-index: 2;
 
     // box model
     padding: 20px;
     padding-top: 40px;
 
     // visual
+    background-color: rgba($dark, 0.75);
     opacity: 0;
     visibility: hidden;
 }
@@ -82,13 +100,13 @@
 .promo__bottom {
     // positioning
     position: absolute;
-    bottom: -50px;
+    bottom: -70px;
     left: 0;
     right: 0;
     transform: skewY(-15deg);
 
     // box model
-    height: 155px;
+    height: 180px;
 
     // visual
     background-image: url('./img/dark-h-grunge.svg');
@@ -124,13 +142,14 @@
 
 .promo__name {
     // box model
-    padding-left: 40px;
+    padding-top: 5px;
+    padding-left: 20px;
     padding-right: 120px;
 
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-align: right;
 
     @include atTablet {
@@ -151,12 +170,13 @@
     // box model
     margin: 0;
     margin-bottom: 2rem;
+    padding-left: 60px;
 
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.75rem;
-    line-height: 1;
+    font-size: 1.25rem;
+    line-height: 1.5;
     text-align: right;
 }
 
@@ -164,9 +184,8 @@
     // typography
     color: $light;
     font-family: $mainFont;
-    font-size: 1rem;
-    line-height: 1.5;
-
+    font-size: 0.85rem;
+    line-height: 1.75;
 }
 
 .promo__text p {
@@ -181,6 +200,7 @@
     position: absolute;
     left: 15px;
     top: 15px;
+    z-index: 4;
     
     // box model
     height: 32px;

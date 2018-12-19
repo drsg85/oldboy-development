@@ -81,32 +81,44 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/city.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/scripts.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/city.js":
-/*!************************!*\
-  !*** ./src/js/city.js ***!
-  \************************/
-/*! no exports provided */
+/***/ "./src/js/modules/LocationSelector.js":
+/*!********************************************!*\
+  !*** ./src/js/modules/LocationSelector.js ***!
+  \********************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_BranchList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/BranchList */ \"./src/js/modules/BranchList.js\");\n\r\n\r\n\r\n\r\nvar branchList = new _modules_BranchList__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n\n\n//# sourceURL=webpack:///./src/js/city.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass LocationSelector {\r\n  constructor () {\r\n    this.city = document.querySelector('.city-select__city');\r\n    this.citySelector = document.querySelector('.location-selector');\r\n    this.citySelectorClose = document.querySelector('.location-selector__close');\r\n\r\n    this.reset();\r\n    this.events();\r\n  }\r\n\r\n  events () {\r\n    this.city.addEventListener('click', (event) => {\r\n      event.preventDefault();\r\n\r\n      this.toggleSelector();\r\n    });\r\n\r\n    this.citySelectorClose.addEventListener('click', () => {\r\n      event.preventDefault();\r\n\r\n      this.toggleSelector();\r\n    });\r\n  }\r\n\r\n  reset () {\r\n    this.citySelector.classList.add('location-selector--hidden');\r\n    this.citySelectorClose.classList.add('location-selector__close--hidden');\r\n  }\r\n  \r\n  toggleSelector () {\r\n    this.citySelector.classList.toggle('location-selector--hidden');\r\n    this.citySelectorClose.classList.toggle('location-selector__close--hidden');\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (LocationSelector);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/LocationSelector.js?");
 
 /***/ }),
 
-/***/ "./src/js/modules/BranchList.js":
+/***/ "./src/js/modules/MobileMenu.js":
 /*!**************************************!*\
-  !*** ./src/js/modules/BranchList.js ***!
+  !*** ./src/js/modules/MobileMenu.js ***!
   \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass BranchList {\r\n  constructor () {\r\n    this.button = document.querySelector('.branch-list__button');\r\n    this.list = document.querySelector('.branch-list');\r\n\r\n    console.dir(this.button);\r\n\r\n    this.events();\r\n    this.reset();\r\n  }\r\n\r\n\r\n  /**\r\n   * Add event listeners\r\n   */\r\n  events () {\r\n    this.button.addEventListener('click', (event) => {\r\n      console.log('toggle list');\r\n      this.toggleList(event);\r\n    });\r\n  }\r\n\r\n\r\n  /**\r\n   * Reset initial menu state\r\n   */\r\n  reset () {\r\n    this.isHidden = true;\r\n    this.list.classList.add('branch-list--hidden');\r\n    this.setButtonText(this.isHidden);\r\n  }\r\n\r\n\r\n  toggleList (event) {\r\n    event.preventDefault();\r\n\r\n    this.isHidden = !this.isHidden;\r\n    this.list.classList.toggle('branch-list--hidden');\r\n    this.setButtonText(this.isHidden);\r\n  }\r\n  \r\n  setButtonText (isHidden) {\r\n    let buttonText = this.button.textContent;\r\n    let newText = '<div class=\"branch-list__button-mid\"></div>';\r\n    console.log(isHidden);\r\n\r\n    if (isHidden) {\r\n      newText = 'Посмотреть филиалы списком' + newText;\r\n    } else {\r\n      newText = 'Скрыть список филиалов'+ newText;\r\n    }\r\n\r\n    this.button.innerHTML = newText;\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (BranchList);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/BranchList.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass MobileMenu {\r\n  constructor () {\r\n    this.menuButton = document.querySelector('.menu-button');\r\n    this.menu = document.querySelector('.hero__nav');\r\n\r\n    this.reset();\r\n    this.events();\r\n  }\r\n\r\n\r\n  /**\r\n   * Add event listeners\r\n   */\r\n  events () {\r\n    this.menuButton.addEventListener('click', (event) => {\r\n      this.toggleMenu(event);\r\n    });\r\n  }\r\n\r\n\r\n  /**\r\n   * Reset initial menu state\r\n   */\r\n  reset () {\r\n    this.menuButton.classList.remove('menu-button--close');\r\n    this.menu.classList.add('hero__nav--hidden');\r\n  }\r\n\r\n\r\n  /**\r\n   * Toggle menu state\r\n   * @param {MouseEvent} event\r\n   */\r\n  toggleMenu (event) {\r\n    event.preventDefault();\r\n\r\n    this.menuButton.classList.toggle('menu-button--close');\r\n    this.menu.classList.toggle('hero__nav--hidden');\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (MobileMenu);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/MobileMenu.js?");
+
+/***/ }),
+
+/***/ "./src/js/scripts.js":
+/*!***************************!*\
+  !*** ./src/js/scripts.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./src/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/LocationSelector */ \"./src/js/modules/LocationSelector.js\");\n\r\n\r\n\r\n\r\n\r\nvar mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nvar locationSelector = new _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
 
 /***/ })
 
