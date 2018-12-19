@@ -72,9 +72,12 @@
 
 .family__content {
     // box model
-    max-width: 300px;
+    //max-width: 300px;
     margin: 0 auto;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     @include atTablet {
         // box model
         display: flex;
