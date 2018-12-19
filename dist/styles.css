@@ -3245,10 +3245,10 @@ html, body {
   margin-bottom: 60px; }
 
 .franchise__map {
-  padding: 5px; }
+  padding: 5px;
+  margin-top: 40px; }
   @media (min-width: 700px) {
     .franchise__map {
-      margin-top: 40px;
       margin-bottom: -30px;
       padding: 0 40px; } }
 
