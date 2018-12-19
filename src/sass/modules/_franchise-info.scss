@@ -1,0 +1,46 @@
+.franchise-info {
+    // typography
+    font-size: 1rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.125rem;
+    }
+}
+
+.franchise-info__title {
+    // box model
+    padding-bottom: 0.5em;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.25em;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    // visual
+    border-bottom: 2px solid $golden;
+}
+
+.franchise-info__subtitle {
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.franchise-info__text {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1.5;
+}

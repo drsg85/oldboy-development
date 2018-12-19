@@ -1,0 +1,173 @@
+.single-screen {
+    // positioning
+    position: relative;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        align-items: flex-end;
+        align-items: stretch;
+        justify-content: space-between;
+        // border: 1px solid red;
+    }
+}
+
+.single-screen__message {
+    // box model
+    margin: 0 auto;
+    margin-bottom: 60px;
+    max-width: 400px;
+
+    @include atDesktopS {
+        // box model
+        order: 2;
+        flex-basis: 33%;
+        margin-top: -60px;
+        max-width: 300px;
+        display: flex;
+        height: 100%;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: inherit;
+        margin: 0 auto;
+        margin-top: -40px;
+        padding-left: 30px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-top: 0;
+    }
+}
+ 
+.single-screen__info {
+    // box model
+    margin-bottom: 60px;
+
+    @include atTablet {
+        // box model
+        width: 300px;
+        padding-right: 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        order: 1;
+        flex-basis: 33%;
+        margin-bottom: 0;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.single-screen__quote {
+    @include atTablet {
+        // box model
+        margin-top: -120px;
+    }
+
+    @include atDesktopS {
+        // box model
+        order: 3;
+        flex-basis: 33%;
+        margin: 0;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.single-screen__quote blockquote {
+    // box model
+    margin: 0;
+    margin-left: auto;
+    width: 180px;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
+}
+
+.single-screen__quote p {
+    // box model
+    margin: 0;
+}
+
+.single-screen__quote cite {
+    // box model
+    margin: 0;
+    
+    // typography
+    font-size: 0.75em;
+}
+
+.single-screen__link {
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
+    @include atTablet {
+        // box model
+        margin-top: -120px;
+    }
+
+    @include atDesktopS {
+        // box model
+        order: 3;
+        flex-basis: 33%;
+        margin: 0;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.single-screen__link p {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single-screen__link a {
+    // box model
+    align-self: flex-end;
+    margin: 0;
+    
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+}

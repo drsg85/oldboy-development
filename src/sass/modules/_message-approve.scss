@@ -1,0 +1,132 @@
+.message-approve {
+    // positioning
+    position: relative;
+}
+
+.message-approve__subtitle {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-grow: 10;
+    flex-shrink: 1;
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.5rem;
+    }
+}
+
+.message-approve__subtitle::before {
+    content: "";
+
+    // positioning
+    position: relative;
+    left: -10px;
+    left: 0;
+    top: 0.5rem;
+
+    // box model
+    flex-grow: 1;
+    flex-shrink: 10;
+    height: 2px;
+
+    // visual
+    background: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
+
+    @include atDesktopM {
+        // box model
+        height: 3px;
+    }
+}
+
+.message-approve__title {
+    // box model
+    margin: 0;
+    margin-bottom: 0.5em;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 2.25rem;
+    }
+}
+
+.message-approve__image {
+    // positioning
+    position: relative;
+    z-index: 2;
+
+    // box model
+    width: 100%;
+    padding: 0 65px;
+}
+
+.message-approve__image img {
+    // box model
+    width: 100%;
+}
+
+.message-approve__desc {
+    // positioning
+    position: relative;
+    transform: translateY(-50px);
+    z-index: 1;
+
+    // box model
+    margin: 0;
+    padding-top: 10px;
+    
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+
+
+    @include atDesktopM {
+        // positioning
+        transform: translateY(-50px);
+
+        // typography
+        font-size: 1.25rem;
+    }
+}
+
+.message-approve__desc::before {
+    content: '';
+
+    // positioning
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // box model
+    width: 100%;
+    height: 2px;
+
+    // visual
+    background: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75), rgba($golden, 0));
+
+    @include atDesktopM {
+        // box model
+        height: 3px;
+    }
+}

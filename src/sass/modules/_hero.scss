@@ -151,6 +151,46 @@
         }
     }
 
+    &--form-success {
+        // box model
+        padding-bottom: 60px;
+
+        // visual
+        background-image: none;
+
+        @include atTablet {
+            // box model
+            min-height: 100vh;
+
+            // visual
+            background-image: url('./img/bgs/404.jpg');
+            background-size: cover;
+            background-position: bottom right;
+        }
+
+        @include atDesktopS {
+            // box model
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .hero__top {
+                // box model
+                flex-grow: 3;
+            }
+
+            .four-o-four {
+                // box model
+                flex-grow: 7;
+            }
+        }
+
+        &::after {
+            // box model
+            display: none;
+        }
+    }
+
     &--franchise {
         // visual
         background-color: #ffffff;
