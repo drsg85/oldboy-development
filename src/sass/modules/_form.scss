@@ -85,7 +85,7 @@
         color: $golden;
     }
 
-    &--validated,
+    &--valid,
     &-webkit-autofill {
         // typography
         color: #ffffff;
@@ -98,7 +98,7 @@
         background-size: 14px;
     }
 
-    &--errored {
+    &--error {
         // typography
         color: #000000;
         font-weight: 700;

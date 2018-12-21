@@ -539,6 +539,11 @@ html, body {
       display: none; }
   .hero--franchise {
     background-color: #ffffff; }
+  .hero--family {
+    background-image: url("./img/bgs/family-m.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
 
 .hero::after {
   content: '';
@@ -4201,6 +4206,9 @@ html, body {
 .family {
   padding: 20px;
   text-align: center; }
+  @media (min-width: 700px) {
+    .family {
+      padding: 40px; } }
 
 .family__header {
   display: inline-block;
@@ -4255,8 +4263,9 @@ html, body {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   @media (min-width: 700px) {
     .family__content {
       display: -webkit-box;
@@ -4264,8 +4273,9 @@ html, body {
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
       max-width: 768px; } }
   @media (min-width: 1200px) {
     .family__content {
@@ -4275,8 +4285,8 @@ html, body {
       max-width: 1650px; } }
 
 .manager {
-  max-width: 40%;
-  margin-bottom: 50px; }
+  max-width: 47%;
+  margin-bottom: 40px; }
   @media (min-width: 700px) {
     .manager {
       max-width: 30%;
@@ -4314,6 +4324,7 @@ html, body {
   padding-bottom: 80px;
   padding-top: 20px;
   padding-right: 20px;
+  padding-left: 20px;
   width: 100%;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
@@ -4328,7 +4339,7 @@ html, body {
   text-align: left; }
   @media (min-width: 700px) {
     .manager__header {
-      padding: 0 15px; } }
+      padding: 0 12px; } }
 
 .manager__position {
   margin: 0;
@@ -5582,14 +5593,14 @@ html, body {
     color: #d6a354; }
   .form__input::placeholder {
     color: #d6a354; }
-  .form__input--validated, .form__input-webkit-autofill {
+  .form__input--valid, .form__input-webkit-autofill {
     color: #ffffff;
     background-color: #d6a354;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='32' fill='%23ffffff'%3E%3Cpath d='M0 16.352q0 1.12.768 1.92L8.64 25.92q.768.8 1.92.8t1.92-.8l16.16-15.84q.8-.768.8-1.888t-.8-1.856q-.8-.8-1.92-.8t-1.92.8l-14.24 13.92-5.92-5.792q-.8-.768-1.92-.768t-1.952.768Q0 15.232 0 16.352z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: 95% 50%;
     background-size: 14px; }
-  .form__input--errored {
+  .form__input--error {
     color: #000000;
     font-weight: 700;
     border: 2px solid red;
@@ -5938,7 +5949,8 @@ html, body {
       margin-left: 7.5em; } }
   @media (min-width: 1000px) {
     .fr-benefit__descr {
-      margin: 0; } }
+      margin: 0;
+      text-align: left; } }
 
 .fr-oldboy-why {
   display: inline-block;

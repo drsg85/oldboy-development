@@ -10,7 +10,7 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--family
             .hero__top
                 .hero__logo
                     img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
@@ -34,8 +34,9 @@ html(lang="en")
 
             .hero__content
                 .hero__caption
-                    h1.hero__title <span class="hero__big">OLDBOY <br>Family</span>
-                    p.hero__motto Добро пожаловать в семью Oldboy
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big">OLDBOY <br>Family</span>
+                        p.hero-caption__motto Добро пожаловать в семью Oldboy
 
         main 
             section.family
