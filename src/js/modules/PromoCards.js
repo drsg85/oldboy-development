@@ -8,6 +8,9 @@ class PromoCards {
   }
 
 
+  /**
+   * Add event listeners
+   */
   events () {
     for (let i = 0; i < this.cards.length; i++) {
       let card = this.cards[i];
@@ -25,6 +28,10 @@ class PromoCards {
   }
 
 
+  /**
+   * Toggle card state
+   * @param {HTMLElement} card
+   */
   toggleCard (card) {
     card.classList.toggle('promo--open');
   }
