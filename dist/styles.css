@@ -2186,6 +2186,8 @@ html, body {
   max-width: 350px;
   background-color: #896322;
   border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   overflow: hidden; }
   @media (min-width: 700px) {
     .promo {
@@ -2203,6 +2205,8 @@ html, body {
     display: none; }
 
 .promo--open .promo__description {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   opacity: 1;
   visibility: visible; }
 
