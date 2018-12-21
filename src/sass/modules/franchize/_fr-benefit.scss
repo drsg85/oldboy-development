@@ -107,5 +107,8 @@
     @include atDesktopS {
         // box model
         margin: 0;
+        
+        // typography
+        text-align: left;
     }
 }
