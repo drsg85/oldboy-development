@@ -17,12 +17,7 @@ html(lang="en")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+                    include modules/_menu.pug
 
                 .hero__city-select
                     .city-select
@@ -101,18 +96,7 @@ html(lang="en")
                         p В переводе с английского языка слово «executive» значит «исполнительный, начальник». Это классическая английская прическа, главным акцентом которой является ярко выраженный пробор сбоку. Его подчеркивают слегка выбритой полоской с помощью машинки для стрижки с тонкой насадкой. Область висков стригут коротко, а верхней части волос и челке придают объемную укладку с применением специальных фиксирующих средств: воска или геля, – чтобы подчеркнуть классический контур.
                         p Экзекьютив подходит как для коротких, так и для длинных волос. Подобная стрижка пойдет тем, кто всегда носит прическу на один бок. Таким образом, если вы являетесь поклонником классического ретро, и ищете прическу, актуальную во все времена, то экзекьютив именно для вас.
 
-            section.academy-banner
-                header.academy-banner__header
-                    h2.academy-banner__title Академия <br>Oldboy
-                    p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
-
-                .academy-banner__content
-                    p.academy-banner__motto Академия барберинга Oldboy — место, где рождаются настоящие мужские парикмахеры
-                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и ведущим специалистом барбершопа
-
-                    p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
-                    
-                    .academy-banner__cta: a.button(href="#") Узнать подробнее
+            include modules/_banner.pug
 
             section.haircut
                 .haircut__header
