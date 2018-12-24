@@ -1141,7 +1141,12 @@ html, body {
 
 .city-select__city a {
   color: #ffffff;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+
+.city-select__city a:hover {
+  color: #d6a354; }
 
 .city-select__triangle {
   font-size: 0.75em; }
@@ -1537,7 +1542,7 @@ html, body {
       font-size: 1rem; } }
   @media (min-width: 1500px) {
     .branch-counter {
-      font-size: 1.25rem; } }
+      font-size: 1.0625rem; } }
 
 .branch-counter__title {
   color: #ffffff;
@@ -2938,7 +2943,7 @@ html, body {
       border-radius: 20px; } }
   @media (min-width: 1200px) {
     .service-main__button {
-      bottom: 40px;
+      bottom: 20px;
       right: 40px;
       width: 200px;
       font-size: 0.85rem;
@@ -3344,6 +3349,9 @@ html, body {
       bottom: 10px;
       right: 30px;
       font-size: 0.8rem; } }
+  @media (min-width: 1200px) {
+    .franchise__summary {
+      font-size: 1rem; } }
 
 .franchise__count {
   margin: 0;
@@ -4766,6 +4774,9 @@ html, body {
   color: #d6a354;
   text-decoration: none; }
 
+.academy-banner__phone:hover {
+  text-decoration: underline; }
+
 @media (min-width: 1000px) {
   .academy-banner__cta {
     position: absolute;
@@ -5176,10 +5187,15 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem;
   line-height: 2;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
   @media (min-width: 700px) {
     .footer-menu__link {
       font-size: 1.125rem; } }
+
+.footer-menu__link:hover {
+  color: #d6a354; }
 
 .main-nav {
   position: absolute;
@@ -5238,7 +5254,9 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
   @media (min-width: 1000px) {
     .main-nav__link {
       font-size: 1.125rem; } }
@@ -5248,6 +5266,9 @@ html, body {
   @media (min-width: 1500px) {
     .main-nav__link {
       font-size: 1.5rem; } }
+
+.main-nav__link:hover {
+  color: #d6a354; }
 
 .policy {
   padding: 20px; }

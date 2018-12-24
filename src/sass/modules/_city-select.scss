@@ -73,6 +73,14 @@
     // typography
     color: $light;
     text-decoration: none;
+
+    // visual
+    transition: all 0.25s ease-out;
+}
+
+.city-select__city a:hover {
+    // typography
+    color: $golden;
 }
 
 .city-select__triangle {

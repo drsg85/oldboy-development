@@ -42,8 +42,16 @@
     line-height: 2;
     text-decoration: none;
 
+    // visual
+    transition: all 0.25s ease-out;
+
     @include atTablet {
         // typography
         font-size: 1.125rem;
     }
+}
+
+.footer-menu__link:hover {
+    // typography
+    color: $golden;
 }

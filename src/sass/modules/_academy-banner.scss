@@ -188,6 +188,11 @@
     text-decoration: none;
 }
 
+.academy-banner__phone:hover {
+    // typography
+    text-decoration: underline;
+}
+
 .academy-banner__cta {
     @include atDesktopS {
         // positioning
