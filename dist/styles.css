@@ -937,6 +937,9 @@ html, body {
   @media (min-width: 1500px) {
     .hero__counter {
       margin-bottom: 120px; } }
+  @media (min-width: 1500px) {
+    .hero__counter {
+      margin-bottom: 150px; } }
 
 .hero__franchise {
   position: relative;
@@ -1543,6 +1546,9 @@ html, body {
   @media (min-width: 1500px) {
     .branch-counter {
       font-size: 1.0625rem; } }
+  @media (min-width: 1920px) {
+    .branch-counter {
+      font-size: 1.25rem; } }
 
 .branch-counter__title {
   color: #ffffff;
@@ -5005,7 +5011,11 @@ html, body {
       width: 320px; } }
   @media (min-width: 1000px) {
     .footer__info {
-      padding-left: 0; } }
+      padding-left: 0;
+      padding-right: 40px; } }
+  @media (min-width: 1500px) {
+    .footer__info {
+      padding-right: 60px; } }
 
 .footer__logo {
   padding: 10px 40px; }

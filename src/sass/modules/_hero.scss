@@ -753,6 +753,11 @@
         // box model
         margin-bottom: 120px;
     }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 150px;
+    }
 }
 
 .hero__franchise {
