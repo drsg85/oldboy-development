@@ -29,6 +29,18 @@
             repeat-x,
             no-repeat;
     }
+
+    @include atDesktopM {
+        // box model
+        padding: 80px 50px;
+        padding-bottom: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 100px 80px;
+        padding-bottom: 60px;
+    }
 }
 
 .footer__content {

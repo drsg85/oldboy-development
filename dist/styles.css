@@ -2834,10 +2834,6 @@ html, body {
     -ms-flex-pack: justify;
     justify-content: space-between; } }
 
-@media (min-width: 1500px) {
-  .services__secondary {
-    padding: 0 40px; } }
-
 .service-main {
   position: relative;
   width: 100%;
@@ -3352,6 +3348,9 @@ html, body {
   @media (min-width: 1200px) {
     .franchise__summary {
       font-size: 1rem; } }
+  @media (min-width: 1500px) {
+    .franchise__summary {
+      font-size: 1.125rem; } }
 
 .franchise__count {
   margin: 0;
@@ -4665,11 +4664,13 @@ html, body {
       display: -ms-flexbox;
       display: flex;
       margin: 40px;
+      margin-bottom: 120px;
       background-position: center center; } }
   @media (min-width: 1500px) {
     .academy-banner {
       width: 1400px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      margin-bottom: 120px; } }
 
 .academy-banner::before {
   content: '';
@@ -4952,6 +4953,14 @@ html, body {
       background-position: top -170px center, center center;
       background-size: 800px, cover;
       background-repeat: repeat-x, no-repeat; } }
+  @media (min-width: 1200px) {
+    .footer {
+      padding: 80px 50px;
+      padding-bottom: 50px; } }
+  @media (min-width: 1500px) {
+    .footer {
+      padding: 100px 80px;
+      padding-bottom: 60px; } }
 
 @media (min-width: 1000px) {
   .footer__content {
