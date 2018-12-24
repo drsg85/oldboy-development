@@ -144,4 +144,13 @@
     background-color: transparent;
     border-radius: 20px;
     text-decoration: none;
+
+    &--request {
+        // box model
+        position: relative;
+        z-index: 5;
+
+        // positioning
+        top: 44px;
+    }
 }

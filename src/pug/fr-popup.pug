@@ -11,18 +11,20 @@ html(lang="en")
 
     body
         section.request-popup
-            .request-caption
-                header.request-caption__header
-                    h3.request-caption__title Добро <br>пожаловать
-                    p.request-caption__subtitle в семью oldboy barbershop
+            .request-popup__caption
+                header.request-popup__header
+                    h3.request-popup__title Добро <br>пожаловать
+                    p.request-popup__subtitle В семью oldboy barbershop
 
-            .request-approval
+            .request-popup__approval
                 .message-approve
                     header.message-approve__header
                         p.message-approve__subtitle.message-approve__subtitle--request &nbsp;&nbsp;Спасибо&#8209;за&nbsp;ваше&nbsp;обращение
                         h1.message-approve__title.message-approve__title--request Ваша заявка принята
 
                     .message-approve__image
-                        img(src="/img/family/oldboyfamily.svg", alt="")
+                        img(src="/img/family/oldboyfamily.svg", alt="Oldboy Barbershop Family logo")
 
-                    p.message-approve__desc.message-approve__desc--request Наш менеджер<br> свяжется с вами<br> в ближайшее время
+                    footer.message-approve__footer
+                        a.service-item__button.service-item__button--request(href="#") На главную
+                        p.message-approve__desc.message-approve__desc--request Наш менеджер<br> свяжется с вами<br> в ближайшее время

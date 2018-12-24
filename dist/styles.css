@@ -3055,6 +3055,10 @@ html, body {
   background-color: transparent;
   border-radius: 20px;
   text-decoration: none; }
+  .service-item__button--request {
+    position: relative;
+    z-index: 5;
+    top: 44px; }
 
 .about--royal {
   margin-bottom: 120px;
@@ -4369,10 +4373,11 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   max-width: 1000px;
+  max-height: 550px;
   border-radius: 5px;
   overflow: hidden; }
 
-.request-caption {
+.request-popup__caption {
   padding-left: 25px;
   position: relative;
   width: 40%;
@@ -4380,11 +4385,11 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.request-caption__header {
+.request-popup__header {
   position: absolute;
   bottom: 40px; }
 
-.request-caption__title {
+.request-popup__title {
   margin: 0;
   margin-bottom: 20px;
   color: #ffffff;
@@ -4392,7 +4397,7 @@ html, body {
   font-size: 2em;
   text-transform: uppercase; }
 
-.request-caption__subtitle {
+.request-popup__subtitle {
   margin: 0;
   color: #d6a354;
   font-family: "Open Sans", Arial, sans-serif;
@@ -4400,7 +4405,7 @@ html, body {
   font-weight: 700;
   text-transform: uppercase; }
 
-.request-approval {
+.request-popup__approval {
   padding: 40px;
   width: 60%; }
 
