@@ -7,7 +7,7 @@
 | City            | city.pug         |   🆗  |  🆗 | 🆗 |  🚧  |  ❌ |  🚧  |
 | Branch          | branch.pug       |   🆗  |  🆗 | 🆗 |  🚧  |  ❌ |  🚧  |
 | Branch Dummy    | branch-dummy.pug |   🚧  |  🚧 | 🚧 |  🚧  |  ❌ |  🚧  |
-| Service. Hair   | haricut.pug      |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  🚧  |
+| Service. Hair   | haricut.pug      |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  🆗  |
 | Service. Royal  | royal.pug        |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  🚧  |
 | Service. Tattoo | tattoo.pug       |   🆗  |  🆗 | ❌ |  ❌  |  ❌ |  🚧  |
 | 404             | 404.pug          |   🆗  |  🆗 | 🆗 |  🆗  |  🆗 |  ❌  |
