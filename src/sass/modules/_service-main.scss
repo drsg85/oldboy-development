@@ -140,41 +140,18 @@
     // positioning
     position: absolute;
     right: 20px;
-    bottom: 25px;
-    
+    bottom: 0;
+
+    // typography
+    text-align: right;
+
     // box model
     display: block;
-    width: 170px;
-    
-    // typography
-    color: $light;
-    font-family: $mainFont;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    line-height: 36px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    
-    // visual
-    background-color: $golden;
-    border-radius: 20px;
-    
+
     @include atTablet {
         // positioning
-        bottom: 40px;
+        bottom: 20px;
         right: 40px;
-        
-        // box model
-        width: 210px;
-        
-        // typography
-        line-height: 50px;
-        font-size: 1rem;
-        
-        // visual
-        border-radius: 27px;
     }
     
     @include atDesktopS {

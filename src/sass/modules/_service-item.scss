@@ -1,15 +1,13 @@
 .service-item {
     // box model
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 30px;
     padding: 15px 3px;
 
     // visual
     background-size: contain;
-    background-position: center left 90px;
+    background-position: bottom 40px right 160px;
     background-repeat: no-repeat;
+    background-size: 100px;
 
     @include atTablet {
         // box model
@@ -127,21 +125,7 @@
 .service-item__button {
     // box model
     display: block;
-    flex-basis: 50%;
-    width: 165px;
 
     // typography
-    color: $dark;
-    font-family: $mainFont;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
-
-    // visual
-    border: 2px solid $golden;
-    background-color: transparent;
-    border-radius: 20px;
-    text-decoration: none;
+    text-align: right;
 }

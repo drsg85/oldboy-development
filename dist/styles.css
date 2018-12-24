@@ -2922,28 +2922,13 @@ html, body {
 .service-main__button {
   position: absolute;
   right: 20px;
-  bottom: 25px;
-  display: block;
-  width: 170px;
-  color: #ffffff;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  line-height: 36px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #d6a354;
-  border-radius: 20px; }
+  bottom: 0;
+  text-align: right;
+  display: block; }
   @media (min-width: 700px) {
     .service-main__button {
-      bottom: 40px;
-      right: 40px;
-      width: 210px;
-      line-height: 50px;
-      font-size: 1rem;
-      border-radius: 27px; } }
+      bottom: 20px;
+      right: 40px; } }
   @media (min-width: 1000px) {
     .service-main__button {
       bottom: 30px;
@@ -2961,20 +2946,12 @@ html, body {
       line-height: 42px; } }
 
 .service-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   margin-bottom: 30px;
   padding: 15px 3px;
   background-size: contain;
-  background-position: center left 90px;
-  background-repeat: no-repeat; }
+  background-position: bottom 40px right 160px;
+  background-repeat: no-repeat;
+  background-size: 100px; }
   @media (min-width: 700px) {
     .service-item {
       -ms-flex-preferred-size: 45%;
@@ -3050,20 +3027,7 @@ html, body {
 
 .service-item__button {
   display: block;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  width: 165px;
-  color: #131313;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  border: 2px solid #d6a354;
-  background-color: transparent;
-  border-radius: 20px;
-  text-decoration: none; }
+  text-align: right; }
 
 .about--royal {
   margin-bottom: 120px;
@@ -5331,15 +5295,17 @@ html, body {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 46px;
+  font-size: 0.85rem;
+  line-height: 44px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
   background-color: #d6a354;
   border: 2px solid #d6a354;
-  border-radius: 25px; }
+  border-radius: 25px;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
   @media (min-width: 700px) {
     .button {
       padding: 0 30px; } }
@@ -5348,11 +5314,31 @@ html, body {
       min-width: 180px;
       line-height: 32px;
       font-size: 0.75rem; } }
+  @media (min-width: 1500px) {
+    .button {
+      min-width: 200px;
+      font-size: 0.85rem;
+      line-height: 44px; } }
   .button--ghost {
     background-color: rgba(19, 19, 19, 0.5); }
   .button--ghost-dark {
     color: #131313;
     background-color: transparent; }
+    .button--ghost-dark:hover {
+      color: #ffffff !important;
+      background-color: #d6a354 !important;
+      border-color: #d6a354 !important; }
+  .button--disabled {
+    color: #131313;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, #ffffff 10px, #ffffff 20px);
+    background-repeat: repeat-x;
+    opacity: 0.5;
+    pointer-events: none; }
+
+.button:hover {
+  color: #131313;
+  background-color: #ffffff;
+  border-color: #ffffff; }
 
 .social {
   display: inline-block;

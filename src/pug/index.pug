@@ -34,7 +34,7 @@ html(lang="en")
                         p.hero-caption__motto Намного больше, чем просто мужская&nbsp;парикмахерская
 
                     .hero__buttons
-                        a.button(href="#") Запись онлайн<br>
+                        a.button.ms_booking(href="#") Запись онлайн<br>
                         a.button.button--ghost(href="#about") О барбершопе
 
                 .hero__deco
@@ -148,38 +148,44 @@ html(lang="en")
                             header.service-main__header
                                 h3.service-main__title Мужские<br><strong>стрижки</strong>
                                 p.service-main__subtitle Лучшее качество
-                            a.service-main__button(href="#") Все о стрижках
+                            .service-main__button
+                                a.button.button--ghost(href="haircut.html") Всё о стрижках
 
                         article.service-main.service-main--beard
                             header.service-main__header
                                 h3.service-main__title Стрижка<br> <strong>усов и&nbsp;бороды</strong>
                                 p.service-main__subtitle Наша специализация
-                            a.service-main__button(href="#") Усы и борода
+                            .service-main__button
+                                a.button.button--ghost(href="haircut.html") Усы и борода
 
                     .services__secondary
                         article.service-item.service-item--shaving
                             header.service-item__header
                                 p.service-item__subtitle Стиль и профессионализм
                                 h3.service-item__title <strong>Бритьё</strong><br>бороды и головы
-                            a.service-item__button(href="#") Услуги бритья
+                            .service-item__button
+                                a.button.button--ghost-dark(href="#") Услуги бритья
 
                         article.service-item.service-item--royal
                             .service-item__header
                                 p.service-item__subtitle Для настоящих ценителей
                                 h3.service-item__title <strong>Королевское</strong><br> бритьё
-                            a.service-item__button(href="#") Для ценителей
+                            .service-item__button
+                                a.button.button--ghost-dark(href="#") Для ценителей
 
                         article.service-item.service-item--tattoo
                             .service-item__header
                                 p.service-item__subtitle Лучшие мастера
                                 h3.service-item__title <strong>Нанесение</strong><br>татуировок
-                            a.service-item__button(href="#") Услуги тату салона
+                            .service-item__button
+                                a.button.button--ghost-dark(href="#") Услуги тату салона
 
                         article.service-item.service-item--spa
                             .service-item__header
                                 p.service-item__subtitle Комплексный уход
                                 h3.service-item__title <strong>Барбер–SPA</strong><br>Услуги
-                            a.service-item__button(href="#") Скоро открытие
+                            .service-item__button
+                                a.button.button--disabled(href="#") Скоро открытие
 
 
                     //- a.button(href="#") Показать все услуги
@@ -224,7 +230,7 @@ html(lang="en")
                     .franchise__caption
                         h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
                         .franchise__button
-                            a.button(href="#") Открой свой барбершоп
+                            a.button(href="franchise.html") Открой свой барбершоп
 
                     a.franchise__logo(href="#")
                         img(src="/img/franch.svg", alt="Oldboy Franchise logo")
