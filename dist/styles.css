@@ -442,7 +442,6 @@ html, body {
         background-size: cover; } }
     @media (min-width: 1000px) {
       .hero--main {
-        min-height: 620px;
         max-height: 700px;
         background-image: url("./img/bgs/hero.jpg"); } }
     @media (min-width: 1200px) {
@@ -783,7 +782,7 @@ html, body {
   @media (min-width: 1000px) {
     .hero__buttons {
       margin: 0;
-      margin-top: 80px;
+      margin-top: 60px;
       text-align: left; } }
 
 .hero__vacancy {
@@ -2931,7 +2930,7 @@ html, body {
       right: 40px; } }
   @media (min-width: 1000px) {
     .service-main__button {
-      bottom: 30px;
+      bottom: 10px;
       right: 30px;
       width: 170px;
       font-size: 0.75rem;
@@ -5312,7 +5311,7 @@ html, body {
   @media (min-width: 1000px) {
     .button {
       min-width: 180px;
-      line-height: 32px;
+      line-height: 36px;
       font-size: 0.75rem; } }
   @media (min-width: 1500px) {
     .button {
@@ -5337,8 +5336,7 @@ html, body {
 
 .button:hover {
   color: #131313;
-  background-color: #ffffff;
-  border-color: #ffffff; }
+  background-color: #ffffff; }
 
 .social {
   display: inline-block;
