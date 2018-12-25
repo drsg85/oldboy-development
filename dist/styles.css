@@ -5522,6 +5522,252 @@ html, body {
   background-color: #d6a354;
   border-radius: 50%; }
 
+.country-header {
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg);
+  display: inline-block;
+  vertical-align: top; }
+
+.country-header__title {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+  .country-header__title:before {
+    content: '';
+    display: block;
+    height: 3px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    background-color: #d6a354; }
+  @media (min-width: 700px) {
+    .country-header__title {
+      color: #ffffff;
+      font-size: calc(1.5rem + ((1vw - 7px) * 2.6667)); } }
+
+.country-header__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  text-transform: uppercase; }
+  .country-header__subtitle:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    margin-right: 10px;
+    background-color: #d6a354; }
+  @media (min-width: 700px) {
+    .country-header__subtitle {
+      font-size: calc(1rem + ((1vw - 7px) * 0.8889)); } }
+
+.choose-country {
+  position: relative;
+  padding-top: 10px; }
+  @media (min-width: 700px) {
+    .choose-country {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      padding-top: 65px;
+      padding-bottom: 50px; }
+      .choose-country:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        display: block;
+        height: 100%;
+        padding-left: 100%;
+        padding-right: 200%;
+        background-image: url("img/minsk.png");
+        background-position: center;
+        background-repeat: no-repeat; }
+      .choose-country:after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: -100%;
+        display: block;
+        width: 100%;
+        height: 2px;
+        padding: 0 200%;
+        background-color: #f6f6f6; } }
+
+.choose-country__content {
+  position: relative;
+  margin: 0;
+  margin-left: 15px;
+  padding: 25px;
+  padding-left: 30px;
+  list-style: none; }
+  @media (min-width: 700px) {
+    .choose-country__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: calc(100% - 100px);
+      margin: 0;
+      padding: 0; } }
+  @media (min-width: 1000px) {
+    .choose-country__content {
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; } }
+  @media (min-width: 1500px) {
+    .choose-country__content {
+      width: calc(100% - 200px); } }
+
+.chosen-city {
+  margin-bottom: 40px; }
+  @media (min-width: 700px) {
+    .chosen-city {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 0;
+      text-align: center; } }
+
+.chosen-city__el {
+  margin: 10px 0; }
+
+.chosen-city__header {
+  margin-bottom: 10px;
+  text-align: left; }
+  @media (min-width: 700px) {
+    .chosen-city__header {
+      text-align: center; } }
+
+.chosen-city__title {
+  margin: 0;
+  padding: 0;
+  color: #d6a354;
+  font-family: "Open Sans", Arial, sans-serif;
+  text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .chosen-city__title {
+      color: #ffffff;
+      font-family: "Rex", Arial, sans-serif;
+      font-size: calc(1.5rem + ((1vw - 7px) * 1.3333)); } }
+
+.chosen-city__info {
+  text-align: left; }
+  @media (min-width: 700px) {
+    .chosen-city__info {
+      text-align: center; } }
+
+.chosen-city__info-title {
+  margin: 0;
+  padding: 0;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+.chosen-city__info-subtitle {
+  position: relative;
+  margin: 0;
+  padding: 7px 12px;
+  color: #000000;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .chosen-city__info-subtitle:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    height: 8px;
+    width: 8px;
+    margin-left: -15px;
+    background-color: #d6a354;
+    border-radius: 50%; }
+  .chosen-city__info-subtitle:hover {
+    color: #ffffff;
+    background-color: #d6a354; }
+  @media (min-width: 700px) {
+    .chosen-city__info-subtitle {
+      padding: 0;
+      color: #ffffff;
+      pointer-events: none; }
+      .chosen-city__info-subtitle:before {
+        content: none; } }
+
+.chosen-city__button {
+  display: block;
+  margin-top: 30px;
+  padding: 7px 12px;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 2px solid #d6a354;
+  border-radius: 20px;
+  cursor: pointer; }
+
+.chosen-city__phone,
+.chosen-city__workday,
+.chosen-city__address .chosen-city__info-title,
+.chosen-city .chosen-city__button {
+  display: none; }
+  @media (min-width: 700px) {
+    .chosen-city__phone,
+    .chosen-city__workday,
+    .chosen-city__address .chosen-city__info-title,
+    .chosen-city .chosen-city__button {
+      display: block; } }
+
 .coming-soon {
   font-family: "Rex", Arial, sans-serif;
   color: #d6a354; }

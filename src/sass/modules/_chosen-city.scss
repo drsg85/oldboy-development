@@ -1,0 +1,167 @@
+.chosen-city {
+    // box model
+    margin-bottom: 40px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        // typography
+        text-align: center;
+    }
+}
+
+.chosen-city__el {
+    // box model
+    margin: 10px 0;
+}
+
+.chosen-city__header {
+    // box model
+    margin-bottom: 10px;
+
+    // typography
+    text-align: left;
+
+    @include atTablet {
+        // typography
+        text-align: center;
+    }
+}
+
+.chosen-city__title {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        color: #ffffff;
+        font-family: $titleFont;
+        font-size: calc(1.5rem + ((1vw - 7px) * 1.3333));
+    }
+}
+
+.chosen-city__info {
+    // typography
+    text-align: left;
+
+    @include atTablet {
+        // typography
+        text-align: center;
+    }
+}
+
+.chosen-city__info-title {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.chosen-city__info-subtitle {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+    padding: 7px 12px;
+
+    // typography
+    color: #000000;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // visual
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+
+    &:before {
+        content: '';
+
+        // positioning
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        // box model
+        display: block;
+        height: 8px;
+        width: 8px;
+        margin-left: -15px;
+
+        // visual
+        background-color: $golden;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        // typography
+        color: #ffffff;
+
+        // visual
+        background-color: $golden;
+    }
+
+    @include atTablet {
+        // box model
+        padding: 0;
+
+        // typography
+        color: #ffffff;
+
+        // visual
+        pointer-events: none;
+        &:before {
+            content: none;
+        }
+    }
+}
+
+.chosen-city__button {
+    // box model
+    display: block;
+    margin-top: 30px;
+    padding: 7px 12px;
+
+    // typography
+    color: #ffffff;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    // visual
+    border: 2px solid $golden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.chosen-city__phone,
+.chosen-city__workday,
+.chosen-city__address .chosen-city__info-title,
+.chosen-city .chosen-city__button {
+    // box model
+    display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+    }
+}
