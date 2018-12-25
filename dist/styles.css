@@ -4572,12 +4572,18 @@ html, body {
       margin-left: 0;
       -ms-flex-preferred-size: 450px;
       flex-basis: 450px;
+      margin-right: 50px;
       font-size: 2rem; } }
 
 @media (min-width: 1000px) {
   .haircut__text {
     -ms-flex-preferred-size: calc(100% - 330px);
     flex-basis: calc(100% - 330px); } }
+
+@media (min-width: 1500px) {
+  .haircut__text {
+    -ms-flex-preferred-size: calc(100% - 500px);
+    flex-basis: calc(100% - 500px); } }
 
 .haircut__text h3 {
   color: #131313;
