@@ -12,6 +12,13 @@
         // box model
         display: flex;
     }
+
+    @include atDesktopL {
+        // box model
+        max-width: 1500px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
 }
 
 .service__header {

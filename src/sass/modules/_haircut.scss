@@ -1,10 +1,18 @@
 .haircut {
-    // box model
+    @include atDesktopL {
+        // box model
+        margin-bottom: 60px;
+    }
 }
 
 .haircut__header {
     // box model
     margin-bottom: 20px;
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 40px;
+    }
 }
 
 .haircut__images {
@@ -28,6 +36,13 @@
         // box model
         flex-direction: row;
         height: auto;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 1500px;
+        margin: 0 auto;
+        margin-top: -100px;
     }
 }
 
@@ -124,6 +139,12 @@
         display: flex;
         align-items: flex-start;
     }
+
+    @include atDesktopL {
+        // box model
+        max-width: 1500px;
+        margin: 0 auto;
+    }
 }
 
 .haircut__headline {
@@ -165,6 +186,15 @@
         // typography
         font-size: 1.5rem;
     }
+
+    @include atDesktopL {
+        // box model
+        margin-left: 0;
+        flex-basis: 450px;
+
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .haircut__text {
@@ -197,6 +227,11 @@
         // typography
         font-size: 1.5rem;
     }
+
+    @include atDesktopL {
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .haircut__text p {
@@ -208,4 +243,9 @@
     font-family: $mainFont;
     font-size: 1rem;
     line-height: 1.75;
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.125rem;
+    }
 }
