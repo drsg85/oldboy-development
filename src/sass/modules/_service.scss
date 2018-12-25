@@ -99,9 +99,8 @@
 .service__royal-deco {
     // positioning
     position: absolute;
-    right: 0;
-    bottom: 0;
-    transform: translateY(75%);
+    left: 100px;
+    top: 40px;
 
     // box model
     height: 156px;
@@ -112,6 +111,26 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
+
+    @include atTablet {
+        // positioning
+        left: 160px;
+        top: 60px;
+
+        // box model
+        height: 234px;
+        width: 288px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        left: -30px;
+        top: 120px;
+
+        // box model
+        height: 312px;
+        width: 394px;
+    }
 }
 
 .service__content {

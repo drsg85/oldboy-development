@@ -465,7 +465,8 @@ html, body {
     background-position: center center; }
   .hero--royal {
     background-image: url("./img/bgs/royal-m.jpg");
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
   .hero--tattoo {
     background-image: url("./img/bgs/tattoo-m.jpg");
     background-size: cover;
@@ -3228,16 +3229,26 @@ html, body {
 
 .service__royal-deco {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  -webkit-transform: translateY(75%);
-  transform: translateY(75%);
+  left: 100px;
+  top: 40px;
   height: 156px;
   width: 192px;
   background-image: url("./img/royal/razor.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center right; }
+  @media (min-width: 700px) {
+    .service__royal-deco {
+      left: 160px;
+      top: 60px;
+      height: 234px;
+      width: 288px; } }
+  @media (min-width: 1000px) {
+    .service__royal-deco {
+      left: -30px;
+      top: 120px;
+      height: 312px;
+      width: 394px; } }
 
 .service__headline {
   color: #131313;
@@ -4618,9 +4629,106 @@ html, body {
 .stage {
   margin-bottom: 40px; }
 
+.stage__header {
+  position: relative;
+  -webkit-transform: skewY(-15deg);
+  transform: skewY(-15deg);
+  z-index: 2;
+  width: 90%;
+  margin-bottom: 40px; }
+
+.stage__header--flipped {
+  margin-right: 0;
+  margin-left: auto; }
+  @media (min-width: 700px) {
+    .stage__header--flipped .stage__title {
+      margin-right: 0;
+      margin-left: auto; } }
+  .stage__header--flipped .stage__title::after {
+    right: auto;
+    left: -20px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .stage__header--flipped .stage__image {
+    left: -40px; }
+    .stage__header--flipped .stage__image::before {
+      right: auto;
+      left: 0;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
+
+.stage__title {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  background-color: #d6a354;
+  -webkit-box-shadow: -15px 10px 40px -10px rgba(19, 19, 19, 0.5);
+  box-shadow: -15px 10px 40px -10px rgba(19, 19, 19, 0.5);
+  text-shadow: -3px 2px 0 #896322; }
+  @media (min-width: 700px) {
+    .stage__title {
+      padding: 20px 40px;
+      max-width: 70%;
+      font-size: 3rem;
+      -webkit-box-shadow: -5px 10px 15px 0 rgba(19, 19, 19, 0.25);
+      box-shadow: -5px 10px 15px 0 rgba(19, 19, 19, 0.25);
+      text-shadow: -4px 3px 0 #896322; } }
+
+.stage__title::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background-image: url("./img/gold-v-grunge.svg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center center; }
+
+.stage__image {
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+  width: 110%;
+  width: calc(100% + 40px);
+  max-height: 400px;
+  overflow: hidden; }
+  @media (min-width: 700px) {
+    .stage__image {
+      margin-top: -60px;
+      max-height: 440px; } }
+
+.stage__image::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-image: url("./img/white-grunge-90.svg");
+  background-position: center left 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 150px; }
+
+.stage__image img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
 .stage__content {
   margin-top: -40px;
   padding: 20px; }
+  @media (min-width: 700px) {
+    .stage__content {
+      padding: 40px; } }
 
 .stage__headline {
   width: 220px;
@@ -4631,6 +4739,10 @@ html, body {
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: right; }
+  @media (min-width: 700px) {
+    .stage__headline {
+      width: 400px;
+      font-size: 2rem; } }
 
 .stage__text {
   color: #131313;
