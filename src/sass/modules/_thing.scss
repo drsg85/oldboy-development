@@ -51,4 +51,9 @@
         // typography
         font-size: 0.75rem;
     }
+
+    @include atDesktopM {
+        // typography
+        font-size: 0.85rem;
+    }
 }

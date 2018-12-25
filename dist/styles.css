@@ -3063,7 +3063,7 @@ html, body {
 
 @media (min-width: 1200px) {
   .about {
-    padding-right: calc((100% - 1400px)/2); } }
+    padding-right: calc((100% - 1400px) / 2); } }
 
 .about__header {
   position: relative;
@@ -3142,6 +3142,9 @@ html, body {
   @media (min-width: 700px) {
     .about__subtitle {
       margin-bottom: 0; } }
+  @media (min-width: 1200px) {
+    .about__subtitle {
+      font-size: 1rem; } }
 
 .about__text {
   color: #131313;
@@ -3151,6 +3154,9 @@ html, body {
   .about__text--gold {
     color: #896322;
     font-weight: 700; }
+  @media (min-width: 1500px) {
+    .about__text {
+      font-size: 1.125rem; } }
 
 .about__features {
   padding-top: 20px; }
@@ -3333,6 +3339,9 @@ html, body {
   @media (min-width: 1000px) {
     .thing__text {
       font-size: 0.75rem; } }
+  @media (min-width: 1200px) {
+    .thing__text {
+      font-size: 0.85rem; } }
 
 .franchise {
   margin-top: 70px;

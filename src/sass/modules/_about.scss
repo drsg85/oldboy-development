@@ -25,7 +25,7 @@
 
     @include atDesktopM {
         // box model
-        padding-right: calc((100% - 1400px)/2);
+        padding-right: calc((100% - 1400px) / 2);
     }
 }
 
@@ -145,6 +145,11 @@
         // box model
         margin-bottom: 0;
     }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .about__text {
@@ -158,6 +163,11 @@
         // typography
         color: $darkGold;
         font-weight: 700;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.125rem;
     }
 }
 
