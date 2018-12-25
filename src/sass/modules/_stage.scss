@@ -1,6 +1,11 @@
 .stage {
     // box model
     margin-bottom: 40px;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+    }
 }
 
 .stage__header {
@@ -12,12 +17,40 @@
     // box model
     width: 90%;
     margin-bottom: 40px;
+    max-width: 600px;
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 33%;
+        margin-right: 40px;
+    }
 }
 
-.stage__header--flipped {
-    // box model
-    margin-right: 0;
-    margin-left: auto;
+.stage--flipped {
+    @include atDesktopS {
+        // box model
+        margin-bottom: 100px;
+    }
+
+    .stage__header {
+        // box model
+        margin-right: 0;
+        margin-left: auto;
+
+        @include atDesktopS {
+            // box model
+            order: 2;
+            margin-left: 40px;
+        }
+    }
+
+    .stage__content {
+        @include atDesktopS {
+            // box model
+            order: 1;
+            padding-top: 140px;
+        }
+    }
 
     .stage__title {
         @include atTablet {
@@ -43,6 +76,13 @@
             right: auto;
             left: 0;
             transform: rotate(180deg);
+        }
+    }
+
+    .stage__headline {
+        @include atDesktopS {
+            // typography
+            text-align: left;
         }
     }
 }
@@ -79,6 +119,14 @@
         // visual
         box-shadow: -5px 10px 15px 0 rgba($dark, 0.25);
         text-shadow: -4px 3px 0 $darkGold;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 90%;
+
+        // typography
+        font-size: 1.75rem;
     }
 }
 
@@ -157,6 +205,11 @@
         // box model
         padding: 40px;
     }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 66%;
+    }
 }
 
 .stage__headline {
@@ -178,6 +231,12 @@
 
         // typography
         font-size: 2rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        width: auto;
+        font-size: 1.75rem;
     }
 }
 

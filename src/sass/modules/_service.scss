@@ -11,8 +11,9 @@
     @include atDesktopS {
         // box model
         display: flex;
+        margin-bottom: 60px;
     }
-
+    
     @include atDesktopL {
         // box model
         max-width: 1500px;
