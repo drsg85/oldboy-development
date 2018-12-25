@@ -1,0 +1,94 @@
+.service {
+    // box model
+    padding: 20px;
+}
+
+.service__header {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-bottom: 20px;
+}
+
+.service__image {
+    // box model
+    width: 160px;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.service__image img {
+    // box model
+    width: 100%;
+}
+
+.service__haircut-deco {
+    // positioning
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    z-index: 3;
+
+    // box model
+    height: 232px;
+    width: 297px;
+
+    // visual
+    background-image: url('./img/haircut/scissors-m.png');
+    background-size: cover;
+}
+
+.service__royal-deco {
+    // positioning
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(75%);
+
+    // box model
+    height: 156px;
+    width: 192px;
+
+    // visual
+    background-image: url('./img/royal/razor.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.service__content {
+
+}
+
+.service__headline {
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.service__subtitle {
+    // typography
+    color: $darkGold;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 2;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.service__text {
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.75;
+}

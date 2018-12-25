@@ -61,10 +61,10 @@
 
     @include atTablet {
         // box model
-        height: calc(60vw - 20px);
-        width: calc(60vw - 20px);
+        height: calc(63vw - 40px);
+        width: calc(63vw - 40px);
         margin-bottom: 0;
-        margin-right: 20px;
+        margin-right: 15px;
     }
 }
 
@@ -77,8 +77,8 @@
 
     @include atTablet {
         // box model
-        width: calc(30vw - 20px);
-        height: calc(30vw - 20px);
+        width: calc(30vw - 30px);
+        height: calc(30vw - 30px);
         flex-basis: calc(30vw - 30px);
     }
 }
