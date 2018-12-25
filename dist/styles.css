@@ -3166,7 +3166,11 @@ html, body {
       margin-left: 0; } }
 
 .service {
-  padding: 20px; }
+  padding: 20px;
+  padding-bottom: 40px; }
+  @media (min-width: 700px) {
+    .service {
+      padding: 40px; } }
 
 .service__header {
   position: relative;
@@ -3177,6 +3181,9 @@ html, body {
   font-size: 0;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 700px) {
+    .service__image {
+      width: 240px; } }
 
 .service__image img {
   width: 100%; }
@@ -3190,6 +3197,13 @@ html, body {
   width: 297px;
   background-image: url("./img/haircut/scissors-m.png");
   background-size: cover; }
+  @media (min-width: 700px) {
+    .service__haircut-deco {
+      top: -40px;
+      left: 70px;
+      height: 309px;
+      width: 401px;
+      background-image: url("./img/haircut/scissors-l.png"); } }
 
 .service__royal-deco {
   position: absolute;
@@ -3209,6 +3223,9 @@ html, body {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
   line-height: 1.5; }
+  @media (min-width: 700px) {
+    .service__headline {
+      font-size: 2rem; } }
 
 .service__subtitle {
   color: #896322;

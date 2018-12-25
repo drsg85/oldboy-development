@@ -1,6 +1,12 @@
 .service {
     // box model
     padding: 20px;
+    padding-bottom: 40px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
 }
 
 .service__header {
@@ -21,6 +27,11 @@
     // visual
     border-radius: 5px;
     overflow: hidden;
+
+    @include atTablet {
+        // box model
+        width: 240px;
+    }
 }
 
 .service__image img {
@@ -42,6 +53,19 @@
     // visual
     background-image: url('./img/haircut/scissors-m.png');
     background-size: cover;
+
+    @include atTablet {
+        // positioning
+        top: -40px;
+        left: 70px;
+
+        // box model
+        height: 309px;
+        width: 401px;
+
+        // visual
+        background-image: url('./img/haircut/scissors-l.png');
+    }
 }
 
 .service__royal-deco {
@@ -72,6 +96,11 @@
     font-family: $titleFont;
     font-size: 1.5rem;
     line-height: 1.5;
+
+    @include atTablet {
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .service__subtitle {
