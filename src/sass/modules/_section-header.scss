@@ -128,6 +128,7 @@
     color: $darkGold;
     font-family: $titleFont;
     font-size: 1.75rem;
+    text-shadow: 0 0 20px $darkGold;
 
     @include atTablet {
         // box model
