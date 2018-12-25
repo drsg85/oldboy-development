@@ -3271,12 +3271,18 @@ html, body {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase; }
+  @media (min-width: 1200px) {
+    .service__subtitle {
+      font-size: 1rem; } }
 
 .service__text {
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.75; }
+  @media (min-width: 1200px) {
+    .service__text {
+      font-size: 1.125rem; } }
 
 .thing {
   display: -webkit-box;
@@ -4623,7 +4629,7 @@ html, body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.75; }
-  @media (min-width: 1500px) {
+  @media (min-width: 1200px) {
     .haircut__text p {
       font-size: 1.125rem; } }
 
@@ -4669,6 +4675,11 @@ html, body {
     -ms-flex-order: 1;
     order: 1;
     padding-top: 140px; } }
+
+@media (min-width: 1500px) {
+  .stage--flipped .stage__content {
+    padding-right: 40px;
+    padding-left: calc((100% - 1400px) / 2); } }
 
 @media (min-width: 700px) {
   .stage--flipped .stage__title {
@@ -4719,6 +4730,12 @@ html, body {
     .stage__title {
       max-width: 90%;
       font-size: 1.75rem; } }
+  @media (min-width: 1200px) {
+    .stage__title {
+      font-size: 2rem; } }
+  @media (min-width: 1500px) {
+    .stage__title {
+      font-size: 3rem; } }
 
 .stage__title::after {
   content: '';
@@ -4773,6 +4790,9 @@ html, body {
     .stage__content {
       -ms-flex-preferred-size: 66%;
       flex-basis: 66%; } }
+  @media (min-width: 1500px) {
+    .stage__content {
+      padding-right: calc((100% - 1400px) / 2); } }
 
 .stage__headline {
   width: 220px;
@@ -4791,6 +4811,9 @@ html, body {
     .stage__headline {
       width: auto;
       font-size: 1.75rem; } }
+  @media (min-width: 1200px) {
+    .stage__headline {
+      font-size: 2rem; } }
 
 .stage__text {
   color: #131313;
@@ -4800,6 +4823,12 @@ html, body {
   .stage__text--gold {
     color: #896322;
     font-weight: 700; }
+  @media (min-width: 1200px) {
+    .stage__text {
+      font-size: 1.125rem; } }
+  @media (min-width: 1500px) {
+    .stage__text {
+      font-size: 1.25rem; } }
 
 .price-list {
   margin-bottom: -25px; }

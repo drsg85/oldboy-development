@@ -165,6 +165,11 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .service__text {
@@ -173,4 +178,9 @@
     font-family: $mainFont;
     font-size: 1rem;
     line-height: 1.75;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.125rem;
+    }
 }

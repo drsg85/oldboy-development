@@ -50,6 +50,12 @@
             order: 1;
             padding-top: 140px;
         }
+
+        @include atDesktopL {
+            // box model
+            padding-right: 40px;
+            padding-left: calc((100% - 1400px) / 2);
+        }
     }
 
     .stage__title {
@@ -127,6 +133,16 @@
 
         // typography
         font-size: 1.75rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 2rem;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 3rem;
     }
 }
 
@@ -210,6 +226,11 @@
         // box model
         flex-basis: 66%;
     }
+
+    @include atDesktopL {
+        // box model
+        padding-right: calc((100% - 1400px) / 2);
+    }
 }
 
 .stage__headline {
@@ -238,6 +259,11 @@
         width: auto;
         font-size: 1.75rem;
     }
+
+    @include atDesktopM {
+        // box model
+        font-size: 2rem;
+    }
 }
 
 .stage__text {
@@ -251,5 +277,15 @@
         // typography
         color: $darkGold;
         font-weight: 700;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.125rem;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.25rem;
     }
 }
