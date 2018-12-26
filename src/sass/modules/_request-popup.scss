@@ -1,0 +1,58 @@
+.request-popup {
+    // box model
+    display: flex;
+    max-width: 1000px;
+    max-height: 550px;
+
+    // visual
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.request-popup__caption {
+    // box model
+    padding-left: 25px;
+    position: relative;
+    width: 40%;
+
+    // visual
+    background-image: url("/img/bgs/hero-t.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.request-popup__header {
+    // box model
+    position: absolute;
+    bottom: 40px;
+}
+
+.request-popup__title {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.request-popup__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.request-popup__approval {
+    // box model
+    padding: 40px;
+    width: 60%;
+}
