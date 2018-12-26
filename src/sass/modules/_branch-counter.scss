@@ -17,6 +17,11 @@
 
     @include atDesktopL {
         // typography
+        font-size: 1.0625rem;
+    }
+
+    @include atFullHD {
+        // typography
         font-size: 1.25rem;
     }
 }

@@ -4,6 +4,7 @@ class MobileMenu {
   constructor () {
     this.menuButton = document.querySelector('.menu-button');
     this.menu = document.querySelector('.hero__nav');
+    this.menuLinks = document.querySelectorAll('.main-nav__link');
 
     this.reset();
     this.events();
@@ -14,9 +15,15 @@ class MobileMenu {
    * Add event listeners
    */
   events () {
-    this.menuButton.addEventListener('click', (event) => {
-      this.toggleMenu(event);
+    this.menuButton.addEventListener('click', () => {
+      this.toggleMenu();
     });
+
+    for (let i = 0; i < this.menuLinks.length; i++) {
+      this.menuLinks[i].addEventListener('click', () => {
+        this.toggleMenu();
+      });
+    }
   }
 
 
@@ -31,11 +38,8 @@ class MobileMenu {
 
   /**
    * Toggle menu state
-   * @param {MouseEvent} event
    */
-  toggleMenu (event) {
-    event.preventDefault();
-
+  toggleMenu () {
     this.menuButton.classList.toggle('menu-button--close');
     this.menu.classList.toggle('hero__nav--hidden');
   }

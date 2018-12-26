@@ -10,8 +10,8 @@
     color: $light;
     font-family: $mainFont;
     font-weight: 600;
-    font-size: 1rem;
-    line-height: 46px;
+    font-size: 0.85rem;
+    line-height: 44px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -21,6 +21,7 @@
     background-color: $golden;
     border: 2px solid $golden;
     border-radius: 25px; // 1/2 of line-height + 2px border-width
+    transition: all 0.25s ease-out;
 
     @include atTablet {
         // box model
@@ -29,18 +30,23 @@
 
     @include atDesktopS {
         // box model
-        //width: 100px;
         min-width: 180px;
 
         // typography
-        line-height: 32px;
+        line-height: 36px;
         font-size: 0.75rem;
     }
 
-    &--ghost {
-        // typography
-        // color: $dark;
+    @include atDesktopL {
+        // box model
+        min-width: 200px;
 
+        // typography
+        font-size: 0.85rem;
+        line-height: 44px;
+    }
+
+    &--ghost {
         // visual
         background-color: rgba($dark, 0.5);
     }
@@ -51,5 +57,33 @@
 
         // visual
         background-color: transparent;
+
+        &:hover {
+            // typography
+            color: $light !important;
+
+            // visual
+            background-color: $golden !important;
+            border-color: $golden !important;
+        }
     }
+
+    &--disabled {
+        // typography
+        color: $dark;
+
+        // visual
+        background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, $light 10px, $light 20px);
+        background-repeat: repeat-x;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.button:hover {
+    // typography
+    color: $dark;
+
+    // visual
+    background-color: $light;
 }

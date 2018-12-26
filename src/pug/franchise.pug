@@ -18,12 +18,7 @@ html(lang="en")
                         img(src="/img/logo-dark.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+                    include modules/_menu.pug
 
                 .hero__city-select
                     .city-select
@@ -43,20 +38,14 @@ html(lang="en")
                     .franchise__caption
                         h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
                         .franchise__button
-                            a.button(href="#") Открой свой барбершоп
+                            a.button(href="#application-form") Открой свой барбершоп
 
                     //.franchise__summary
                         p.franchise__count 129
                         p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
 
-                    .franchise__summary.franchise__summary--countdown
-                        .countdown
-                            .countdown__block
-                                .countdown__number 1
-                            .countdown__block
-                                .countdown__number 2
-                            .countdown__block
-                                .countdown__number 9
+                    .franchise__summary
+                        p.franchise__count 129
                         p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
 
             section.application-form
@@ -70,10 +59,10 @@ html(lang="en")
                             p.form__subtitle Заполни форму и наш менеджер с&nbsp;вами свяжется
                         
                         .form__input-group
-                            input.form__input.form__input--validated(type="text" name="fullname" placeholder="Фамилия Имя Отчество" value="Иванов Иван")
+                            input.form__input(type="text" name="fullname" placeholder="Фамилия Имя Отчество")
 
                         .form__input-group
-                            input.form__input.form__input--errored(type="text" name="phone" placeholder="Номер телефона" value="wrong phone number format")
+                            input.form__input(type="text" name="phone" placeholder="Номер телефона")
 
                         .form__input-group
                             input.form__input(type="text" name="city" placeholder="Желаемый город")
@@ -156,7 +145,7 @@ html(lang="en")
                     
                     .fr-benefits__conclusion-more
                         p.fr-benefits__conclusion-text Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу
-                        a.fr-benefits__conclusion-submit.button.button--ghost-dark(href="#") Свяжитесь с нами
+                        a.fr-benefits__conclusion-submit.button.button--ghost-dark(href="#application-form") Свяжитесь с нами
                         p.fr-benefits__conclusion-rest И мы ответим на ваши вопросы
                         a.fr-benefits__conclusion-bibos(href="https://www.beboss.ru/franchise/2484-franshiza-oldboy") Франшиза Oldboy Barbershop на Бибосс
                         

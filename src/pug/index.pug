@@ -16,12 +16,7 @@ html(lang="en")
                     img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+                    include modules/_menu.pug
 
                 .hero__city-select
                     .city-select
@@ -39,8 +34,8 @@ html(lang="en")
                         p.hero-caption__motto Намного больше, чем просто мужская&nbsp;парикмахерская
 
                     .hero__buttons
-                        a.button(href="#") Запись онлайн<br>
-                        a.button.button--ghost(href="#") О барбершопе
+                        a.button.ms_booking(href="#") Запись онлайн<br>
+                        a.button.button--ghost(href="#about") О барбершопе
 
                 .hero__deco
                     img(src="./img/bgs/oleg.png", alt="Стрижка в Oldboy barbershop")
@@ -153,43 +148,49 @@ html(lang="en")
                             header.service-main__header
                                 h3.service-main__title Мужские<br><strong>стрижки</strong>
                                 p.service-main__subtitle Лучшее качество
-                            a.service-main__button(href="#") Все о стрижках
+                            .service-main__button
+                                a.button.button--ghost(href="haircut.html") Всё о стрижках
 
                         article.service-main.service-main--beard
                             header.service-main__header
                                 h3.service-main__title Стрижка<br> <strong>усов и&nbsp;бороды</strong>
                                 p.service-main__subtitle Наша специализация
-                            a.service-main__button(href="#") Усы и борода
+                            .service-main__button
+                                a.button.button--ghost(href="beard.html") Усы и борода
 
                     .services__secondary
                         article.service-item.service-item--shaving
                             header.service-item__header
                                 p.service-item__subtitle Стиль и профессионализм
                                 h3.service-item__title <strong>Бритьё</strong><br>бороды и головы
-                            a.service-item__button(href="#") Услуги бритья
+                            .service-item__button
+                                a.button.button--ghost-dark(href="shaving.html") Услуги бритья
 
                         article.service-item.service-item--royal
                             .service-item__header
                                 p.service-item__subtitle Для настоящих ценителей
                                 h3.service-item__title <strong>Королевское</strong><br> бритьё
-                            a.service-item__button(href="#") Для ценителей
+                            .service-item__button
+                                a.button.button--ghost-dark(href="royal.html") Для ценителей
 
                         article.service-item.service-item--tattoo
                             .service-item__header
                                 p.service-item__subtitle Лучшие мастера
                                 h3.service-item__title <strong>Нанесение</strong><br>татуировок
-                            a.service-item__button(href="#") Услуги тату салона
+                            .service-item__button
+                                a.button.button--ghost-dark(href="tattoo.html") Услуги тату салона
 
                         article.service-item.service-item--spa
                             .service-item__header
                                 p.service-item__subtitle Комплексный уход
                                 h3.service-item__title <strong>Барбер–SPA</strong><br>Услуги
-                            a.service-item__button(href="#") Скоро открытие
+                            .service-item__button
+                                a.button.button--disabled(href="#") Скоро открытие
 
 
                     //- a.button(href="#") Показать все услуги
 
-            section.about
+            section.about#about
                 .about__header
                     header.section-header
                         h2.section-header__title О нашем <br>барбершопе
@@ -202,7 +203,7 @@ html(lang="en")
                     p.about__subtitle Здесь нет женщин, нет праздных разговоров ни о чём, здесь царит атмосфера брутальности и&nbsp;мужского духа, вдохновлённая европейскими стандартами качества и стиля
 
                 .about__content
-                    p.about__text OldBoy Barbershop – намного больше чем просто мужская парикмахерская, это даже больше чем мужской клуб по интересам, это именно то место, где ты найдешь себя и свой стиль. Поверь нам на слово. Мужские стрижки и опасное бритье — это именно наш профиль, и мы уверены, что мы стрижем и бреем лучше всех. Даже не обсуждается! Как говорил Фрэнк Синатра «Костюм, шляпа, хорошая работа и одинокое пьянство по выходным – вот что украшает мужчину». Обещать что мы сделаем из тебя Кэри Гранта мы не будем, но ты можешь быть уверен в 3 вещах:
+                    p.about__text OldBoy Barbershop — намного больше чем просто мужская парикмахерская, это даже больше чем мужской клуб по интересам, это именно то место, где ты найдешь себя и свой стиль. Поверь нам на слово. Мужские стрижки и опасное бритье — это именно наш профиль, и мы уверены, что мы стрижем и бреем лучше всех. Даже не обсуждается! Как говорил Фрэнк Синатра «Костюм, шляпа, хорошая работа и одинокое пьянство по выходным — вот что украшает мужчину». Обещать что мы сделаем из тебя Кэри Гранта мы не будем, но ты можешь быть уверен в 3 вещах:
                     .about__features
                         article.thing
                             .thing__icon: img(src="./img/icons/whiskey.svg", alt="Oldboy Барбершоп угощает")
@@ -214,18 +215,7 @@ html(lang="en")
                             .thing__icon: img(src="./img/icons/best-friend.svg", alt="Навсегда с Oldboy Барбершоп")
                             p.thing__text Когда ты уйдёшь, ты&nbsp;обязательно вернёшься
 
-            section.academy-banner
-                header.academy-banner__header
-                    h2.academy-banner__title Академия <br><strong>Oldboy</strong>
-                    p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
-
-                .academy-banner__content
-                    p.academy-banner__motto Академия барберинга Oldboy —&nbsp;место, где&nbsp;рождаются настоящие мужские парикмахеры
-                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и&nbsp;ведущим специалистом барбершопа
-                    p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
-                    
-                .academy-banner__cta
-                    a.button(href="#") Узнать подробнее
+            include modules/_banner.pug
 
             section.franchise
                 .franchise__header
@@ -240,9 +230,9 @@ html(lang="en")
                     .franchise__caption
                         h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
                         .franchise__button
-                            a.button(href="#") Открой свой барбершоп
+                            a.button(href="franchise.html") Открой свой барбершоп
 
-                    a.franchise__logo(href="#")
+                    a.franchise__logo(href="franchise.html")
                         img(src="/img/franch.svg", alt="Oldboy Franchise logo")
 
                     .franchise__summary

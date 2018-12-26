@@ -17,12 +17,7 @@ html(lang="en")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+                    include modules/_menu.pug
 
                 .hero__city-select
                     .city-select
@@ -218,7 +213,7 @@ html(lang="en")
                                 p Две мужские стрижки, подряд, у одного мастера со скидкой 17%.
                                 p Более подробные условия уточняйте у администратора.
 
-                    article.promo.promo--open
+                    article.promo
                         a.promo__info-button(href="#"): span.icon--info
                         a.promo__close-button(href="#"): span.icon--close
                         header.promo__header
@@ -310,18 +305,7 @@ html(lang="en")
                             td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
                             td.price-table__price 1000
 
-            section.academy-banner
-                header.academy-banner__header
-                    h2.academy-banner__title Академия <br>Oldboy
-                    p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
-
-                .academy-banner__content
-                    p.academy-banner__motto Академия барберинга Oldboy —&nbsp;место, где рождаются настоящие мужские парикмахеры
-                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и ведущим специалистом барбершопа
-
-                    p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
-                    
-                    .academy-banner__cta: a.button(href="#") Узнать подробнее
+            include modules/_banner.pug
 
         include modules/_choose-city.pug
         include modules/_footer.pug

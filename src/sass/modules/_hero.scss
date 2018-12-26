@@ -51,7 +51,6 @@
         
         @include atDesktopS {
             // box model
-            min-height: 620px;
             max-height: 700px;
 
             // visual
@@ -88,13 +87,14 @@
         // visual
         background-image: url('./img/bgs/haircut-m.jpg');
         background-size: cover;
-        background-position: top center;
+        background-position: center center;
     }
     
     &--royal {
         // visual
         background-image: url('./img/bgs/royal-m.jpg');
         background-size: cover;
+        background-position: center center;
     }
     
     &--tattoo {
@@ -194,6 +194,14 @@
     &--franchise {
         // visual
         background-color: #ffffff;
+    }
+
+    &--family {
+        // visual
+        background-image: url('./img/bgs/family-m.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 }
 
@@ -364,6 +372,12 @@
     justify-content: space-between;
     flex-grow: 1;
     padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include atTablet {
+        // box model
+        padding-bottom: 40px;
+    }
 
     &--branch {
         // box model
@@ -405,7 +419,6 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        // border: 1px solid red;
     }
 }
 
@@ -420,10 +433,8 @@
     @include atTablet {
         // box model
         margin: 0;
-        // width: 300px;
         display: flex;
         flex-direction: column;
-        // align-items: center;
 
         // typography
         text-align: left;
@@ -435,8 +446,6 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: 100px;
-
-        // typography
     }
 }
 
@@ -491,7 +500,7 @@
     @include atDesktopS {
         // box model
         margin: 0;
-        margin-top: 80px;
+        margin-top: 60px;
 
         // typography
         text-align: left;
@@ -750,6 +759,11 @@
     @include atDesktopL {
         // box model
         margin-bottom: 120px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 150px;
     }
 }
 

@@ -17,12 +17,7 @@ html(lang="en")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+                    include modules/_menu.pug
 
                 .hero__city-select
                     .city-select

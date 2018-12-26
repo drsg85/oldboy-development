@@ -17,12 +17,7 @@ html(lang="en")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+                    include modules/_menu.pug
 
                 .hero__city-select
                     .city-select
@@ -40,26 +35,25 @@ html(lang="en")
                         p.hero-caption__motto Oldboy barbershop <br>только качество
 
         main
-            section.about.about--royal
-                .about__header
-                    .about__image
+            section.service.service--royal
+                .service__header
+                    .service__image
                         img(src="./img/royal/tnh.jpg", alt="Королевское бритьё в Oldboy Barbershop")
+                    .service__royal-deco
 
-                .about__content
-                    h2.about__headline.about__headline--service Бритьё, достойное королей
-                    p.about__subtitle Термин «королевское бритьё» непосредственно связан с именем Уильяма Труфита, открывшего свою первую цирюльню в 1805 году в Лондоне, и впоследствии ставшего основателем марки Truefitt &amp; Hill. Заведение заслужило высочайшую репутацию у английской аристократии и получило признание монархов Великобритании — именно продукция Труфита получила эксклюзивные привилегии королевского двора. Тогда же были заложены основы этой статусной процедуры.
-                    p.about__text Что же необходимо для того, чтобы бритьё стало «королевским»?
-                    p.about__text Во-первых, это правильная опасная бритва и барбер, умеющий с ней обращаться. Наши опытные мастера прошли специальное обучение и повышение квалификации по стандартам и правилам Truefitt &amp; Hill.
-                    p.about__text Во-вторых, мужская косметика премиум-класса от Truefitt &amp; Hill. Это по-настоящему элитные средства для бритья и ухода за кожей. Масла, мыло и бальзамы высочайшего качества на основе проверенных за два века рецептов, и с применением самых современных технологий.
-                    p.about__text.about__text--gold Королевское бритьё — это настоящий ритуал, состоящий из нескольких этапов:
-                    .about__royal-deco
+                .service__content
+                    h2.service__headline.service__headline--service Бритьё, достойное королей
+                    p.service__subtitle Термин «королевское бритьё» непосредственно связан с именем Уильяма Труфита, открывшего свою первую цирюльню в 1805 году в Лондоне, и впоследствии ставшего основателем марки Truefitt & Hill. Заведение заслужило высочайшую репутацию у английской аристократии и получило признание монархов Великобритании — именно продукция Труфита получила эксклюзивные привилегии королевского двора. Тогда же были заложены основы этой статусной процедуры.
+                    p.service__text Что же необходимо для того, чтобы бритьё стало «королевским»?
+                    p.service__text Во-первых, это правильная опасная бритва и барбер, умеющий с ней обращаться. Наши опытные мастера прошли специальное обучение и повышение квалификации по стандартам и правилам Truefitt & Hill.
+                    p.service__text Во-вторых, мужская косметика премиум-класса от Truefitt & Hill. Это по-настоящему элитные средства для бритья и ухода за кожей. Масла, мыло и бальзамы высочайшего качества на основе проверенных за два века рецептов, и с применением самых современных технологий.
+                    p.service__text.service__text--gold Королевское бритьё — это настоящий ритуал, состоящий из нескольких этапов:
 
             section.stage
-                .stage__header
-                    header.section-header
-                        h2.section-header__title 1. Нанесение<br>масла
-                        .section-header__image
-                            img(src="./img/royal/royal1.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение масла")
+                header.stage__header
+                    h2.stage__title 1. Нанесение<br>масла
+                    .stage__image
+                        img(src="./img/royal/royal1.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение масла")
 
                 .stage__content
                     h3.stage__headline Первый этап: нанесение масла
@@ -67,12 +61,11 @@ html(lang="en")
                     p.stage__text.stage__text--gold Остающаяся на коже тонкая пленка масла обладает гидрофильными свойствами и способствует плавному скольжению лезвия опасной бритвы.
                     p.stage__text Кроме того, активные компоненты масла (среди которых масла авокадо, семян сафлора, кокоса и цитрусовых, экстракты огурца и алоэ) улучшают состояние кожи: выравнивают текстуру и уменьшают чувствительность за счет усиленного увлажнения клеток эпидермиса. Исчезает ощущение стянутости сухой кожи. Масло Truefitt &amp; Hill обладает обеззараживающими и антиокислительными свойствами.
 
-            section.stage
-                .stage__header
-                    header.section-header.section-header--flipped
-                        h2.section-header__title 2. Распаривание<br>кожи
-                        .section-header__image
-                            img(src="./img/royal/royal2.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Распаривание кожи")
+            section.stage.stage--flipped
+                header.stage__header
+                    h2.stage__title 2. Распаривание<br>кожи
+                    .stage__image
+                        img(src="./img/royal/royal2.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Распаривание кожи")
 
                 .stage__content
                     h3.stage__headline Второй этап: распаривание кожи полотенцем
@@ -81,11 +74,10 @@ html(lang="en")
                     p.stage__text.stage__text--gold В работе используются два полотенца: спустя некоторое время барбер сменяет остывающий компресс новым.
 
             section.stage
-                .stage__header
-                    header.section-header
-                        h2.section-header__title 3. Нанесение<br>пены
-                        .section-header__image
-                            img(src="./img/royal/royal3.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение пены")
+                header.stage__header
+                    h2.stage__title 3. Нанесение<br>пены
+                    .stage__image
+                        img(src="./img/royal/royal3.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение пены")
 
                 .stage__content
                     h3.stage__headline Третий этап: нанесение пены
@@ -93,12 +85,11 @@ html(lang="en")
                     p.stage__text.stage__text--gold Для взбивания пены и её нанесения на лицо применяется особая чаша и помазок из уникальной шерсти барсука класса Silvertip. Её нежнейшие волоски, собираемые с небольшого участка в области шеи животного, отлично удерживают влагу и создают пену необходимой консистенции.
                     p.stage__text Барбер покрывает обриваемые участки кожи теплой пеной.
 
-            section.stage
-                .stage__header
-                    header.section-header.section-header--flipped
-                        h2.section-header__title 4. Бритьё<br>опасной бритвой
-                        .section-header__image
-                            img(src="./img/royal/royal4.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Бритьё опасной бритвой")
+            section.stage.stage--flipped
+                header.stage__header
+                    h2.stage__title 4. Бритьё<br>опасной бритвой
+                    .stage__image
+                        img(src="./img/royal/royal4.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Бритьё опасной бритвой")
 
                 .stage__content
                     h3.stage__headline Четвёртый этап: бритьё опасной бритвой
@@ -107,33 +98,30 @@ html(lang="en")
                     p.stage__text Барбер натягивает кожу там, где это необходимо и именно с тем усилием, которое требуется на каждом участке лица. Максимально острое лезвие бритвы, подчиняясь ювелирным движениям руки мастера, под необходимым углом скользит по коже, гладко и начисто срезая волоски.
 
             section.stage
-                .stage__header
-                    header.section-header
-                        h2.section-header__title 5. Холодный<br>компресс
-                        .section-header__image
-                            img(src="./img/royal/royal5.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Холодный компресс")
+                header.stage__header
+                    h2.stage__title 5. Холодный<br>компресс
+                    .stage__image
+                        img(src="./img/royal/royal5.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Холодный компресс")
 
                 .stage__content
                     h3.stage__headline Пятый этап: холодный компресс
                     p.stage__text После бритья кожу следует правильно успокоить. Для этого барбер накладывает на лицо холодный компресс, который стягивает поры и снимает раздражение. 
 
-            section.stage
-                .stage__header
-                    header.section-header.section-header--flipped
-                        h2.section-header__title 6. Нанесение<br>средства после бритья
-                        .section-header__image
-                            img(src="./img/royal/royal6.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение средства после бритья")
+            section.stage.stage--flipped
+                header.stage__header
+                    h2.stage__title 6. Средство после бритья
+                    .stage__image
+                        img(src="./img/royal/royal6.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение средства после бритья")
 
                 .stage__content
                     h3.stage__headline Шестой этап: нанесение средства после бритья
                     p.stage__text После снятия охлаждающего компресса, барбер легкими, массириющими движениям и наносит на обритые участки специальный бальзам от Truefitt &amp; Hill на основе лечебного экстракта алое и аллантоина, повышающего регенерацию клеток кожи.
 
             section.stage
-                .stage__header
-                    header.section-header
-                        h2.section-header__title 7. Нанесения<br>одеколона
-                        .section-header__image
-                            img(src="./img/royal/royal7.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение одеколона")
+                header.stage__header
+                    h2.stage__title 7. Нанесения<br>одеколона
+                    .stage__image
+                        img(src="./img/royal/royal7.jpg", alt="Королевское Бритьё в Oldboy Barbershop: Нанесение одеколона")
 
                 .stage__content
                     h3.stage__headline Седьмой этап: нанесение масла

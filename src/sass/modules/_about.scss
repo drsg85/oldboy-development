@@ -25,7 +25,7 @@
 
     @include atDesktopM {
         // box model
-        padding-right: calc((100% - 1400px)/2);
+        padding-right: calc((100% - 1400px) / 2);
     }
 }
 
@@ -47,59 +47,6 @@
         top: 0;
         left: 0;
     }
-}
-
-.about__image {
-    // box model
-    width: 50%;
-    width: 160px;
-    margin-bottom: -200px;
-    transform: translate(20px, 10px);
-
-    // typography
-    font-size: 0;
-
-    // visual
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.about__image img {
-    // box model
-    width: 100%;
-}
-
-.about__haircut-deco {
-    // positioning
-    position: absolute;
-    top: 10px;
-    left: 60px;
-
-    // box model
-    height: 232px;
-    width: 297px;
-
-    // visual
-    background-image: url('./img/haircut/scissors-m.png');
-    background-size: cover;
-}
-
-.about__royal-deco {
-    // positioning
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    transform: translateY(75%);
-
-    // box model
-    height: 156px;
-    width: 192px;
-
-    // visual
-    background-image: url('./img/royal/razor.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center right;
 }
 
 .about__caption {
@@ -154,7 +101,7 @@
 
 .about__headline {
     // box model
-    width: 220px;
+    width: 160px;
     margin: 0;
     margin-left: auto;
 
@@ -170,12 +117,6 @@
         font-size: 2rem;
         text-align: left;
         width: auto;
-    }
-
-    &--service {
-        // box model
-        width: 50%;
-        padding-bottom: 6rem;
     }
 }
 
@@ -195,7 +136,6 @@
     color: $darkGold;
     font-family: $mainFont;
     font-size: 0.85rem;
-    line-height: 1.75;
     line-height: 2;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -204,6 +144,11 @@
     @include atTablet {
         // box model
         margin-bottom: 0;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
     }
 }
 
@@ -218,6 +163,11 @@
         // typography
         color: $darkGold;
         font-weight: 700;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.125rem;
     }
 }
 
