@@ -3055,10 +3055,6 @@ html, body {
   background-color: transparent;
   border-radius: 20px;
   text-decoration: none; }
-  .service-item__button--request {
-    position: relative;
-    z-index: 5;
-    top: 44px; }
 
 .about--royal {
   margin-bottom: 120px;
@@ -4207,6 +4203,24 @@ html, body {
   @media (min-width: 1200px) {
     .message-approve__desc::before {
       height: 3px; } }
+
+.messagage-approve__button {
+  top: 44px;
+  display: block;
+  position: relative;
+  width: 165px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #d6a354;
+  background-color: transparent;
+  border-radius: 20px;
+  text-decoration: none;
+  z-index: 2; }
 
 .family {
   padding: 20px;
