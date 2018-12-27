@@ -3276,6 +3276,23 @@ html, body {
       height: 312px;
       width: 394px; } }
 
+.service__tattoo-deco {
+  position: absolute;
+  left: 50px;
+  top: -80px;
+  height: 430px;
+  width: 333px;
+  background-image: url("./img/tattoo/tattoo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right; }
+  @media (min-width: 1000px) {
+    .service__tattoo-deco {
+      left: -60px;
+      top: 0;
+      height: 560px;
+      width: 444px; } }
+
 .service__headline {
   color: #131313;
   font-family: "Rex", Arial, sans-serif;

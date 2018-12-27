@@ -134,6 +134,33 @@
     }
 }
 
+.service__tattoo-deco {
+    // positioning
+    position: absolute;
+    left: 50px;
+    top: -80px;
+
+    // box model
+    height: 430px;
+    width: 333px;
+
+    // visual
+    background-image: url('./img/tattoo/tattoo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+
+    @include atDesktopS {
+        // positioning
+        left: -60px;
+        top: 0;
+
+        // box model
+        height: 560px;
+        width: 444px;
+    }
+}
+
 .service__content {
 
 }
