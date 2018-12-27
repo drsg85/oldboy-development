@@ -85,25 +85,64 @@
 
     &--haircut {
         // visual
-        background-image: url('./img/bgs/haircut-m.jpg');
+        background-image: url('./img/haircut/haircut-m.jpg');
         background-size: cover;
         background-position: center center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/haircut/haircut-d.jpg');
+        }
     }
-    
+
     &--royal {
         // visual
-        background-image: url('./img/bgs/royal-m.jpg');
+        background-image: url('./img/royal/royal-m.jpg');
         background-size: cover;
         background-position: center center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/royal/royal-d.jpg');
+        }
     }
-    
+
     &--tattoo {
         // visual
-        background-image: url('./img/bgs/tattoo-m.jpg');
+        background-image: url('./img/tattoo/tattoo-m.jpg');
         background-size: cover;
         background-position: bottom center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/tattoo/tattoo-d.jpg');
+        }
     }
-    
+
+    &--beard {
+        // visual
+        background-image: url('./img/beard/beard-m.jpg');
+        background-size: cover;
+        background-position: bottom center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/beard/beard-d.jpg');
+        }
+    }
+
+    &--shaving {
+        // visual
+        background-image: url('./img/shaving/shaving-m.jpg');
+        background-size: cover;
+        background-position: bottom center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/shaving/shaving-d.jpg');
+        }
+    }
+
     &--policy {
         // visual
         background-image: url('./img/bgs/policy-m.jpg');

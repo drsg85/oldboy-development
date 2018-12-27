@@ -460,17 +460,40 @@ html, body {
     background-image: none;
     background-image: url("./img/bgs/hero-t.jpg"); }
   .hero--haircut {
-    background-image: url("./img/bgs/haircut-m.jpg");
+    background-image: url("./img/haircut/haircut-m.jpg");
     background-size: cover;
     background-position: center center; }
+    @media (min-width: 1000px) {
+      .hero--haircut {
+        background-image: url("./img/haircut/haircut-d.jpg"); } }
   .hero--royal {
-    background-image: url("./img/bgs/royal-m.jpg");
+    background-image: url("./img/royal/royal-m.jpg");
     background-size: cover;
     background-position: center center; }
+    @media (min-width: 1000px) {
+      .hero--royal {
+        background-image: url("./img/royal/royal-d.jpg"); } }
   .hero--tattoo {
-    background-image: url("./img/bgs/tattoo-m.jpg");
+    background-image: url("./img/tattoo/tattoo-m.jpg");
     background-size: cover;
     background-position: bottom center; }
+    @media (min-width: 1000px) {
+      .hero--tattoo {
+        background-image: url("./img/tattoo/tattoo-d.jpg"); } }
+  .hero--beard {
+    background-image: url("./img/beard/beard-m.jpg");
+    background-size: cover;
+    background-position: bottom center; }
+    @media (min-width: 1000px) {
+      .hero--beard {
+        background-image: url("./img/beard/beard-d.jpg"); } }
+  .hero--shaving {
+    background-image: url("./img/shaving/shaving-m.jpg");
+    background-size: cover;
+    background-position: bottom center; }
+    @media (min-width: 1000px) {
+      .hero--shaving {
+        background-image: url("./img/shaving/shaving-d.jpg"); } }
   .hero--policy {
     background-image: url("./img/bgs/policy-m.jpg");
     background-size: cover;
@@ -3041,10 +3064,6 @@ html, body {
   display: block;
   text-align: right; }
 
-.about--royal {
-  margin-bottom: 120px;
-  padding-bottom: 20px; }
-
 @media (min-width: 700px) {
   .about {
     display: -webkit-box;
@@ -4505,6 +4524,11 @@ html, body {
 
 .request-popup__approval {
   padding: 40px;
+  width: 60%; }
+
+@media (min-width: 1500px) {
+  .haircut {
+    margin-bottom: 60px; } }
 
 .haircut__header {
   margin-bottom: 20px; }
@@ -5400,12 +5424,9 @@ html, body {
       padding: 80px 40px;
       padding-bottom: 40px;
       background-image: url("./img/white-grunge-180.svg"), url("./img/bgs/footer-t.jpg");
-      background-position: top -170px center,
- center center;
-      background-size: 800px,
- cover;
-      background-repeat: repeat-x,
- no-repeat; } }
+      background-position: top -170px center, center center;
+      background-size: 800px, cover;
+      background-repeat: repeat-x, no-repeat; } }
   @media (min-width: 1200px) {
     .footer {
       padding: 80px 50px;
