@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--shaving
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    .city-select
+                        p.city-select__title Выбери свой город: 
+                        p.city-select__city
+                            a(href="choose-city.html") Калининград <span class="city-select__triangle">▼</span>
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--shaving">Бритье<br>бороды и&nbsp;головы</span>
+                        p.hero-caption__motto Oldboy barbershop <br>только качество
+        main
+            section.service.service--royal
+                .service__header
+                    .service__image
+                        img(src="", alt="Бритьё бороды и головы в Oldboy Barbershop")
+
+                .service__content
+                    h2.service__headline Бритьё.
+                    p.service__subtitle Бритье в Oldboy – это самый настоящий ритуал с сохранением традиций наших предков.
+                    p.service__text Этот процесс не быстрый, но именно неспешность и аккуратность делает его настоящим релаксом для эстетов. Осуществляется классическое бритье двумя инструментами в два приёма: машинкой для бритья или опасной бритвой; сначала по направлению, а затем против направления роста волос, обеспечивая таким образом максимально гладкую кожу.
+
+                    p.service__text Наши барберы филигранно владеют искусством бритья: отбор мастеров очень строгий, обучение каждого барбера проводит ведущий барбер, имеющий сертификат «American Crew», брэнд менеджер сети Oldboy Barbershop. А после, владельцы наших филиалов работают над прокачиванием скилла своих сотрудников. Мастера Oldboy хранят традиции классического бритья бороды и головы, тщательно подходят к выбору инструментов и косметики для данной процедуры.
+                    
+        include modules/_choose-city.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")
