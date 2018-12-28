@@ -560,8 +560,6 @@ html, body {
           flex-grow: 7; } }
     .hero--form-success::after {
       display: none; }
-  .hero--franchise {
-    background-color: #ffffff; }
   .hero--family {
     background-image: url("./img/bgs/family-m.jpg");
     background-size: cover;
