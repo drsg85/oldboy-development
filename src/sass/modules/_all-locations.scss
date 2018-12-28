@@ -1,9 +1,3 @@
 .all-locations {
-    // box model
-    padding: 0 25px;
 
-    @include atDesktopS {
-        // box model
-        padding: 25px 50px;
-    }
 }

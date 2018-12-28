@@ -1,9 +1,6 @@
 .choose-country {
-    // positioning
-    position: relative;
-
     // box model
-    padding-top: 10px;
+    padding: 25px;
 
     @include atTablet {
         // box model
@@ -11,61 +8,24 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        width: 100%;
-        max-width: 1600px;
-        margin: 0 auto;
+        padding: 55px;
+        padding-left: 30px;
         margin-bottom: 60px;
-        padding-top: 65px;
-        padding-bottom: 50px;
 
-        &:before {
-            content: '';
+        // visual
+        background-image: url('img/minsk.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-            // positioning
-            position: absolute;
-            top: 0;
-            left: -100%;
-
-            // box model
-            display: block;
-            height: 100%;
-            padding-left: 100%;
-            padding-right: 200%;
-
-            // visual
-            background-image: url('img/minsk.png');
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-/*         &:after {
-            content: '';
-            // positioning
-            position: absolute;
-            bottom: -30px;
-            left: -100%;
-    
-            // box model
-            display: block;
-            width: 100%;
-            height: 2px;
-            padding: 0 200%;
-    
-            // visual
-            background-color: #f6f6f6;
-        } */
+    @include atDesktopL {
+        padding: 60px calc((100% - 1400px) / 2);
     }
 }
 
 .choose-country__content {
-    // positioning
-    position: relative;
-
     // box model
-    margin: 0;
-    margin-left: 15px;
-    padding: 25px;
-    padding-left: 30px;
+    padding-top: 30px;
 
     // visual
     list-style: none;
@@ -75,18 +35,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: calc(100% - 100px);
+        flex-grow: 1;
         margin: 0;
         padding: 0;
+        padding-left: 20px;
     }
 
     @include atDesktopS {
         // box model
         justify-content: space-evenly;
-    }
-
-    @include atDesktopL {
-        // box model
-        width: calc(100% - 200px);
     }
 }

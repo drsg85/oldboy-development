@@ -1656,12 +1656,6 @@ html, body {
   display: block;
   font-size: 2.5em; }
 
-.all-locations {
-  padding: 0 25px; }
-  @media (min-width: 1000px) {
-    .all-locations {
-      padding: 25px 50px; } }
-
 .location-selector {
   position: fixed;
   top: 0;
@@ -1915,7 +1909,7 @@ html, body {
 
 .branch-addresses {
   padding: 25px;
-  padding-left: 30px; }
+  padding-left: 55px; }
   @media (min-width: 700px) {
     .branch-addresses {
       display: -webkit-box;
@@ -1933,15 +1927,16 @@ html, body {
       height: 7600px;
       max-width: 800px;
       margin: 0 auto;
-      padding-left: 40px; } }
+      padding-left: 65px; } }
   @media (min-width: 1000px) {
     .branch-addresses {
+      padding-left: 0;
       max-width: 900px;
       height: 5000px; } }
   @media (min-width: 1500px) {
     .branch-addresses {
       max-width: 1270px;
-      height: 4500px; } }
+      height: 4400px; } }
 
 .branch-addresses__index {
   position: relative;
@@ -6137,8 +6132,7 @@ html, body {
       font-size: calc(1rem + ((1vw - 7px) * 0.8889)); } }
 
 .choose-country {
-  position: relative;
-  padding-top: 10px; }
+  padding: 25px; }
   @media (min-width: 700px) {
     .choose-country {
       display: -webkit-box;
@@ -6154,47 +6148,18 @@ html, body {
       -webkit-box-align: start;
       -ms-flex-align: start;
       align-items: flex-start;
-      width: 100%;
-      max-width: 1600px;
-      margin: 0 auto;
+      padding: 55px;
+      padding-left: 30px;
       margin-bottom: 60px;
-      padding-top: 65px;
-      padding-bottom: 50px;
-      /*         &:after {
-            content: '';
-            // positioning
-            position: absolute;
-            bottom: -30px;
-            left: -100%;
-    
-            // box model
-            display: block;
-            width: 100%;
-            height: 2px;
-            padding: 0 200%;
-    
-            // visual
-            background-color: #f6f6f6;
-        } */ }
-      .choose-country:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        display: block;
-        height: 100%;
-        padding-left: 100%;
-        padding-right: 200%;
-        background-image: url("img/minsk.png");
-        background-position: center;
-        background-repeat: no-repeat; } }
+      background-image: url("img/minsk.png");
+      background-position: center;
+      background-repeat: no-repeat; } }
+  @media (min-width: 1500px) {
+    .choose-country {
+      padding: 60px calc((100% - 1400px) / 2); } }
 
 .choose-country__content {
-  position: relative;
-  margin: 0;
-  margin-left: 15px;
-  padding: 25px;
-  padding-left: 30px;
+  padding-top: 30px;
   list-style: none; }
   @media (min-width: 700px) {
     .choose-country__content {
@@ -6208,17 +6173,17 @@ html, body {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      width: calc(100% - 100px);
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
       margin: 0;
-      padding: 0; } }
+      padding: 0;
+      padding-left: 20px; } }
   @media (min-width: 1000px) {
     .choose-country__content {
       -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
       justify-content: space-evenly; } }
-  @media (min-width: 1500px) {
-    .choose-country__content {
-      width: calc(100% - 200px); } }
 
 .chosen-city {
   margin-bottom: 40px; }
