@@ -81,6 +81,19 @@
         // visual
         background-image: none;
         background-image: url('./img/bgs/hero-t.jpg');
+
+        @include atDesktopS {
+            // box model
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            min-height: 580px;
+            max-height: 700px;
+
+            // visual
+            background-image: url('./img/bgs/hero.jpg');
+            background-position: center center;
+        }
     }
 
     &--haircut {
@@ -429,6 +442,11 @@
             opacity: 1;
             margin-bottom: 0;
         }
+
+        @include atDesktopS {
+            // box model
+            margin-top: -50px;
+        }
     }
 }
 
@@ -482,8 +500,9 @@
         // positioning
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
-        bottom: 100px;
+        bottom: 50%;
+        transform: translate(-50%, 50px);
+        z-index: 6;
     }
 }
 
@@ -509,7 +528,7 @@
         // box model
         justify-content: flex-start;
         padding: 0;
-        padding-top: 100px;
+        padding-top: 30px;
         padding-right: 35%;
     }
 }
@@ -694,30 +713,16 @@
 
         // box model
         width: 55%;
-
-        // TODO: remove this later maybe
-        // &::before {
-        //     content: "";
-
-        //     // positioning
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     top: 0;
-
-        //     // box model
-        //     width: 130%;
-
-        //     // visual
-        //     background-image: url('./img/dark-v-grunge.svg');
-        //     background-size: cover;
-        //     transform: skewX(-15deg);
-        // }
     }
 
     @include atDesktopS {
+        // positioning
+        bottom: -10px;
+        z-index: 4;
+
         // box model
-        // display: none;
+        width: 50%;
+        padding-left: 40px;
     }
 }
 

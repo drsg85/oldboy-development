@@ -459,6 +459,20 @@ html, body {
   .hero--branch {
     background-image: none;
     background-image: url("./img/bgs/hero-t.jpg"); }
+    @media (min-width: 1000px) {
+      .hero--branch {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 100vh;
+        min-height: 580px;
+        max-height: 700px;
+        background-image: url("./img/bgs/hero.jpg");
+        background-position: center center; } }
   .hero--haircut {
     background-image: url("./img/haircut/haircut-m.jpg");
     background-size: cover;
@@ -711,6 +725,9 @@ html, body {
       .hero__caption--branch {
         opacity: 1;
         margin-bottom: 0; } }
+    @media (min-width: 1000px) {
+      .hero__caption--branch {
+        margin-top: -50px; } }
 
 .hero__opening {
   margin-left: -20px;
@@ -765,9 +782,10 @@ html, body {
     .hero__buttons-n-social {
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-      bottom: 100px; } }
+      bottom: 50%;
+      -webkit-transform: translate(-50%, 50px);
+      transform: translate(-50%, 50px);
+      z-index: 6; } }
 
 .hero__contacts {
   padding-bottom: 30px;
@@ -790,7 +808,7 @@ html, body {
       -ms-flex-pack: start;
       justify-content: flex-start;
       padding: 0;
-      padding-top: 100px;
+      padding-top: 30px;
       padding-right: 35%; } }
 
 .hero__countdown {
@@ -915,6 +933,12 @@ html, body {
       top: 0;
       z-index: 1;
       width: 55%; } }
+  @media (min-width: 1000px) {
+    .hero__app {
+      bottom: -10px;
+      z-index: 4;
+      width: 50%;
+      padding-left: 40px; } }
 
 .hero__deco {
   display: none; }
@@ -1118,12 +1142,19 @@ html, body {
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.125rem; }
+  @media (min-width: 1000px) {
+    .contact__title {
+      font-size: 1rem; } }
 
 .contact__value {
   margin: 0;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 1rem; }
+  @media (min-width: 1000px) {
+    .contact__value {
+      font-size: 0.85rem; } }
 
 .city-select {
   margin-top: -2px;
@@ -1265,6 +1296,12 @@ html, body {
       right: 0;
       padding: 20px;
       min-width: 330px; } }
+  @media (min-width: 1000px) {
+    .app-promo {
+      padding: 20px 40px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .app-promo::before {
   content: '';
@@ -1316,6 +1353,10 @@ html, body {
       flex-basis: auto;
       margin-right: 40px;
       margin-left: auto; } }
+  @media (min-width: 1000px) {
+    .app-promo__header {
+      margin: 0;
+      margin-right: 30px; } }
 
 .app-promo__title {
   margin: 0;
@@ -1339,13 +1380,14 @@ html, body {
 
 .app-promo__image {
   display: none; }
-  @media (min-width: 700px) {
+  @media (min-width: 1000px) {
     .app-promo__image {
       position: absolute;
-      bottom: -70px;
+      bottom: -30px;
       right: -20px;
       z-index: 1;
-      height: 350px; } }
+      height: 370px;
+      pointer-events: none; } }
 
 .app-promo__image img {
   height: 100%; }
@@ -1372,6 +1414,9 @@ html, body {
       flex-basis: auto;
       margin-right: 40px;
       margin-left: auto; } }
+  @media (min-width: 1000px) {
+    .app-promo__buttons {
+      margin: 0; } }
 
 .app-button {
   display: block;
