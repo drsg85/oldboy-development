@@ -6,7 +6,8 @@
     // visual
     background-color: #e6e6e6;
     border-radius: 50%;
-
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
     &::before {
         content: "";
 
@@ -45,5 +46,16 @@
         border-radius: 1px;
         background-color: $dark;
         transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+        // visual
+        background-color: $golden;
+
+        &:before,
+        &:after {
+            // visual
+            background-color: #ffffff;
+        }
     }
 }

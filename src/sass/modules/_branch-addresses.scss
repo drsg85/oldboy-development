@@ -24,6 +24,12 @@
         // justify-content: flex-start;
         // padding-left: 255px;
     }
+
+    @include atDesktopL {
+        // box model
+        max-width: 1270px;
+        height: 4500px;
+    }
 }
 
 .branch-addresses__index {

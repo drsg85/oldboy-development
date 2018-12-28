@@ -45,8 +45,11 @@
     @include atDesktopS {
         // box model
         display: flex;
-        flex-direction: column;
-        padding-right: 30px;
+        //flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 385px;
+        //padding-right: 30px;
     }
 }
 
