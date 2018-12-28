@@ -1,16 +1,47 @@
 .policy {
     // box model
     padding: 20px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        padding: 40px calc((100% - 800px) / 2);
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 50px calc((100% - 800px) / 2);
+    }
+    
+    @include atDesktopL {
+        // box model
+        padding: 60px calc((100% - 800px) / 2);
+    }
 }
 
 .policy__header {
 
 }
 
-.policy__hidden-title {
-    // box model
-    // TODO: hide this seo friendly
-    display: none;
+.policy__main-title {
+    // typography
+    color: $darkGold;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+
+    @include atTablet {
+        // typography
+        font-size: 2rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 3rem;
+    }
 }
 
 .policy__desc {
@@ -33,7 +64,7 @@
     color: $dark;
     font-family: $mainFont;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .policy__title {
@@ -48,6 +79,25 @@
     color: $dark;
     font-family: $titleFont;
     font-size: 1.25rem;
+
+    @include atTablet {
+        // box model
+        margin-left: -40px;
+        padding: 20px 40px;
+        max-width: 300px;
+
+        // typography
+        font-size: 1.5rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-left: -50px;
+        max-width: 500px;
+
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .policy__subtitle {
