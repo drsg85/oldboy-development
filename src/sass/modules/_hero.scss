@@ -170,9 +170,15 @@
 
     &--policy {
         // visual
-        background-image: url('./img/bgs/policy-m.jpg');
+        background-image: url('./img/policy/policy-m.jpg');
         background-size: cover;
-        background-position: bottom center;
+        background-position: center center;
+        
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/policy/policy-d.jpg');
+            background-position: bottom center;
+        }
     }
 
     &--404 {

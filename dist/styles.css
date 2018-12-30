@@ -517,9 +517,13 @@ html, body {
       .hero--shaving {
         background-image: url("./img/shaving/shaving-d.jpg"); } }
   .hero--policy {
-    background-image: url("./img/bgs/policy-m.jpg");
+    background-image: url("./img/policy/policy-m.jpg");
     background-size: cover;
-    background-position: bottom center; }
+    background-position: center center; }
+    @media (min-width: 1000px) {
+      .hero--policy {
+        background-image: url("./img/policy/policy-d.jpg");
+        background-position: bottom center; } }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
