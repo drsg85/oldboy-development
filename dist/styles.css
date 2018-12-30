@@ -5045,7 +5045,6 @@ html, body {
   margin-bottom: -25px; }
   @media (min-width: 700px) {
     .price-list {
-      padding-bottom: 200px;
       background-image: url("./img/bgs/price-bottom-t.jpg");
       background-size: contain;
       background-position: bottom center;
@@ -5165,7 +5164,6 @@ html, body {
   @media (min-width: 700px) {
     .team {
       display: block;
-      margin-top: -400px;
       padding-bottom: 300px;
       background-image: url("./img/bgs/team-t.jpg");
       background-size: contain;
