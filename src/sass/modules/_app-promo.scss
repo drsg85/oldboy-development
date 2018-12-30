@@ -25,6 +25,12 @@
         padding: 20px 40px;
         align-items: center;
     }
+
+    @include atDesktopM {
+        // box model
+        padding: 30px 40px;
+        width: 100%;
+    }
 }
 
 // Golden gradient stripe on top
@@ -100,12 +106,16 @@
 .app-promo__title {
     // box model
     margin: 0;
-    
+
     // typography
     color: $golden;
     font-family: $titleFont;
     font-size: 0.75rem;
-    
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .app-promo__title strong {
@@ -117,17 +127,27 @@
     // typography
     color: $light;
     font-size: 1.5rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .app-promo__subtitle {
     // box model
     margin: 0;
     padding: 0;
-    
+
     // typography
     color: $light;
     font-family: $titleFont;
     font-size: 0.75rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .app-promo__image {
@@ -145,6 +165,14 @@
         display: block;
         height: 370px;
         pointer-events: none;
+    }
+
+    @include atDesktopM {
+        // positioning
+        bottom: -100px;
+
+        // box model
+        height: 500px;
     }
 }
 

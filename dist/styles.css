@@ -954,10 +954,16 @@ html, body {
       width: 55%; } }
   @media (min-width: 1000px) {
     .hero__app {
-      bottom: -10px;
+      bottom: 0;
       z-index: 4;
       width: 50%;
       padding-left: 40px; } }
+  @media (min-width: 1200px) {
+    .hero__app {
+      width: 500px; } }
+  @media (min-width: 1500px) {
+    .hero__app {
+      bottom: 40px; } }
 
 .hero__deco {
   display: none; }
@@ -1164,6 +1170,9 @@ html, body {
   @media (min-width: 1000px) {
     .contact__title {
       font-size: 1rem; } }
+  @media (min-width: 1200px) {
+    .contact__title {
+      font-size: 1.125rem; } }
 
 .contact__value {
   margin: 0;
@@ -1174,6 +1183,9 @@ html, body {
   @media (min-width: 1000px) {
     .contact__value {
       font-size: 0.85rem; } }
+  @media (min-width: 1200px) {
+    .contact__value {
+      font-size: 1rem; } }
 
 .city-select {
   margin-top: -2px;
@@ -1321,6 +1333,10 @@ html, body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
+  @media (min-width: 1200px) {
+    .app-promo {
+      padding: 30px 40px;
+      width: 100%; } }
 
 .app-promo::before {
   content: '';
@@ -1382,6 +1398,9 @@ html, body {
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75rem; }
+  @media (min-width: 1200px) {
+    .app-promo__title {
+      font-size: 1rem; } }
 
 .app-promo__title strong {
   display: inline-block;
@@ -1389,6 +1408,9 @@ html, body {
   margin-top: 3px;
   color: #ffffff;
   font-size: 1.5rem; }
+  @media (min-width: 1200px) {
+    .app-promo__title strong {
+      font-size: 2rem; } }
 
 .app-promo__subtitle {
   margin: 0;
@@ -1396,6 +1418,9 @@ html, body {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75rem; }
+  @media (min-width: 1200px) {
+    .app-promo__subtitle {
+      font-size: 1rem; } }
 
 .app-promo__image {
   display: none; }
@@ -1408,6 +1433,10 @@ html, body {
       display: block;
       height: 370px;
       pointer-events: none; } }
+  @media (min-width: 1200px) {
+    .app-promo__image {
+      bottom: -100px;
+      height: 500px; } }
 
 .app-promo__image img {
   height: 100%; }

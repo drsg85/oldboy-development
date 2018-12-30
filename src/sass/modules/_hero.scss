@@ -743,12 +743,22 @@
 
     @include atDesktopS {
         // positioning
-        bottom: -10px;
+        bottom: 0;
         z-index: 4;
 
         // box model
         width: 50%;
         padding-left: 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 500px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        bottom: 40px;
     }
 }
 
