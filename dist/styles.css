@@ -604,7 +604,7 @@ html, body {
   position: absolute;
   bottom: -40px;
   left: 0;
-  z-index: 2;
+  z-index: 7;
   width: 100%;
   height: 80px;
   background-image: url("./img/white-grunge.svg");
@@ -1402,9 +1402,10 @@ html, body {
   @media (min-width: 1000px) {
     .app-promo__image {
       position: absolute;
-      bottom: -30px;
-      right: -20px;
-      z-index: 1;
+      bottom: -60px;
+      right: 60px;
+      z-index: -1;
+      display: block;
       height: 370px;
       pointer-events: none; } }
 
@@ -2098,7 +2099,7 @@ html, body {
   position: relative;
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
-  z-index: 2;
+  z-index: 8;
   width: 90%;
   max-width: 325px; }
   @media (min-width: 700px) {
