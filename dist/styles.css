@@ -473,6 +473,14 @@ html, body {
         max-height: 700px;
         background-image: url("./img/bgs/hero.jpg");
         background-position: center center; } }
+    @media (min-width: 1200px) {
+      .hero--branch {
+        min-height: 680px;
+        max-height: 740px; } }
+    @media (min-width: 1500px) {
+      .hero--branch {
+        min-height: 720px;
+        max-height: 900px; } }
   .hero--haircut {
     background-image: url("./img/haircut/haircut-m.jpg");
     background-size: cover;
@@ -574,6 +582,13 @@ html, body {
           flex-grow: 7; } }
     .hero--form-success::after {
       display: none; }
+  .hero--franchise {
+    background-image: url("./img/franchise/franchise-m.jpg");
+    background-size: cover;
+    background-position: bottom center; }
+    @media (min-width: 1000px) {
+      .hero--franchise {
+        background-image: url("./img/franchise/franchise-d.jpg"); } }
   .hero--family {
     background-image: url("./img/bgs/family-m.jpg");
     background-size: cover;

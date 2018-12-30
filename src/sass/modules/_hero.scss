@@ -94,6 +94,18 @@
             background-image: url('./img/bgs/hero.jpg');
             background-position: center center;
         }
+
+        @include atDesktopM {
+            // box model
+            min-height: 680px;
+            max-height: 740px;
+        }
+
+        @include atDesktopL {
+            // box model
+            min-height: 720px;
+            max-height: 900px;
+        }
     }
 
     &--haircut {
@@ -245,6 +257,14 @@
 
     &--franchise {
         // visual
+        background-image: url('./img/franchise/franchise-m.jpg');
+        background-size: cover;
+        background-position: bottom center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/franchise/franchise-d.jpg');
+        }
     }
 
     &--family {
