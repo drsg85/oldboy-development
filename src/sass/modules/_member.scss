@@ -10,6 +10,12 @@
     // visual
     border-radius: 5px;
     overflow: hidden;
+
+    @include atDesktopS {
+        // box model
+        max-width: 250px;
+        margin: 20px;
+    }
 }
 
 .member__header {
@@ -71,6 +77,12 @@
 .member__photo {
     // box model
     height: 100%;
+
+    // visual
+    background-color: $darkGold;
+    background-image: url('./img/team/placeholder.jpg');
+    background-size: cover;
+    background-position: center center;
 }
 
 .member__photo img {

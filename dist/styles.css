@@ -5049,6 +5049,20 @@ html, body {
       background-size: contain;
       background-position: bottom center;
       background-repeat: no-repeat; } }
+  @media (min-width: 1000px) {
+    .price-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      background-image: url("./img/bgs/price-bottom-d.jpg");
+      background-position: top right;
+      background-size: 1920px; } }
 
 .price-list__content {
   position: relative;
@@ -5059,6 +5073,15 @@ html, body {
     .price-list__content {
       padding: 80px 40px;
       background-color: transparent; } }
+  @media (min-width: 1000px) {
+    .price-list__content {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      padding-left: 60px; } }
+  @media (min-width: 1200px) {
+    .price-list__content {
+      max-width: 800px; } }
 
 .price-list__content::before {
   content: "";
@@ -5165,10 +5188,24 @@ html, body {
     .team {
       display: block;
       padding-bottom: 300px;
-      background-image: url("./img/bgs/team-t.jpg");
+      background-image: url("./img/team/team-t.jpg");
       background-size: contain;
       background-position: bottom center;
       background-repeat: no-repeat; } }
+  @media (min-width: 1000px) {
+    .team {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-bottom: 60px; } }
+  @media (min-width: 1200px) {
+    .team {
+      background-image: none;
+      background-position: center center; } }
 
 @media (min-width: 700px) {
   .team__content {
@@ -5186,6 +5223,18 @@ html, body {
     justify-content: space-between;
     padding: 40px; } }
 
+@media (min-width: 1000px) {
+  .team__content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; } }
+
 .member {
   position: relative;
   width: 30%;
@@ -5193,6 +5242,10 @@ html, body {
   margin-bottom: 30px;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 1000px) {
+    .member {
+      max-width: 250px;
+      margin: 20px; } }
 
 .member__header {
   position: absolute;
@@ -5230,7 +5283,11 @@ html, body {
   font-size: 0.85rem; }
 
 .member__photo {
-  height: 100%; }
+  height: 100%;
+  background-color: #896322;
+  background-image: url("./img/team/placeholder.jpg");
+  background-size: cover;
+  background-position: center center; }
 
 .member__photo img {
   height: 100%;
