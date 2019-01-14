@@ -7,12 +7,44 @@ const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const sassImporter = require('sass-module-importer');
 const autoprefixer = require('gulp-autoprefixer');
+const webpack = require('webpack-stream');
 
+// No need yet
+// "babel": "^6.23.0",
+// "babel-core": "^6.26.3",
+// "babel-preset-env": "^1.7.0",
+// "babel-register": "^6.26.0",
+// "gulp-notify": "^3.2.0",
+// "gulp-wait": "0.0.2",
+// "gulp-watch": "^5.0.1",
+
+
+// Paths
 const dirs = {
   pug: './src/pug/**/*.pug',
   scss: './src/scss/**/*.scss',
   styles: './src/scss/styles.scss',
+  js: './src/js/**/*.js',
   dist: './dist'
+};
+
+
+// Webpack config
+const webpackConfig = {
+  entry: {
+    main: './src/js/main.js',
+    city: './src/js/city.js',
+    branch: './src/js/branch.js',
+    dummy: './src/js/dummy.js',
+    scripts: './src/js/scripts.js'
+  },
+
+  output: {
+    filename: '[name].js'
+  },
+
+  // mode: 'production'
+  mode: 'development'
 };
 
 
@@ -39,6 +71,16 @@ let styles = () => (
     }))
     .pipe(gulp.dest(dirs.dist))
     .pipe(browserSync.stream())
+);
+
+
+/**
+ * Compiles js files
+ */
+let scripts = () => (
+  gulp.src(dirs.js)
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest(dirs.dist))
 );
 
 
@@ -73,6 +115,7 @@ let browserSyncReload = (done) => {
 let watchFiles = () => {
   gulp.watch(dirs.pug, gulp.series(pugRender, browserSyncReload));
   gulp.watch(dirs.scss, gulp.series(styles));
+  gulp.watch(dirs.js, gulp.series(scripts, browserSyncReload));
 };
 
 
@@ -80,3 +123,5 @@ const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 exports.pugRender = pugRender;
 exports.styles = styles;
+exports.scripts = scripts;
+exports.watch = watch;
