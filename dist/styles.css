@@ -157,6 +157,14 @@ html, body {
         max-height: 700px;
         background-image: url("./img/bgs/hero.jpg");
         background-position: center center; } }
+    @media (min-width: 1200px) {
+      .hero--branch {
+        min-height: 680px;
+        max-height: 740px; } }
+    @media (min-width: 1500px) {
+      .hero--branch {
+        min-height: 720px;
+        max-height: 900px; } }
   .hero--haircut {
     background-image: url("./img/haircut/haircut-m.jpg");
     background-size: cover;
@@ -193,9 +201,13 @@ html, body {
       .hero--shaving {
         background-image: url("./img/shaving/shaving-d.jpg"); } }
   .hero--policy {
-    background-image: url("./img/bgs/policy-m.jpg");
+    background-image: url("./img/policy/policy-m.jpg");
     background-size: cover;
-    background-position: bottom center; }
+    background-position: center center; }
+    @media (min-width: 1000px) {
+      .hero--policy {
+        background-image: url("./img/policy/policy-d.jpg");
+        background-position: bottom center; } }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
@@ -236,6 +248,13 @@ html, body {
           flex-grow: 7; } }
     .hero--form-success::after {
       display: none; }
+  .hero--franchise {
+    background-image: url("./img/franchise/franchise-m.jpg");
+    background-size: cover;
+    background-position: bottom center; }
+    @media (min-width: 1000px) {
+      .hero--franchise {
+        background-image: url("./img/franchise/franchise-d.jpg"); } }
   .hero--family {
     background-image: url("./img/bgs/family-m.jpg");
     background-size: cover;
@@ -247,7 +266,7 @@ html, body {
   position: absolute;
   bottom: -40px;
   left: 0;
-  z-index: 2;
+  z-index: 7;
   width: 100%;
   height: 80px;
   background-image: url("./img/white-grunge.svg");
@@ -529,10 +548,16 @@ html, body {
       width: 55%; } }
   @media (min-width: 1000px) {
     .hero__app {
-      bottom: -10px;
+      bottom: 0;
       z-index: 4;
       width: 50%;
       padding-left: 40px; } }
+  @media (min-width: 1200px) {
+    .hero__app {
+      width: 500px; } }
+  @media (min-width: 1500px) {
+    .hero__app {
+      bottom: 40px; } }
 
 .hero__deco {
   display: none; }
@@ -735,6 +760,9 @@ html, body {
   @media (min-width: 1000px) {
     .contact__title {
       font-size: 1rem; } }
+  @media (min-width: 1200px) {
+    .contact__title {
+      font-size: 1.125rem; } }
 
 .contact__value {
   margin: 0;
@@ -745,6 +773,9 @@ html, body {
   @media (min-width: 1000px) {
     .contact__value {
       font-size: 0.85rem; } }
+  @media (min-width: 1200px) {
+    .contact__value {
+      font-size: 1rem; } }
 
 .city-select {
   margin-top: -2px;
@@ -877,6 +908,10 @@ html, body {
     .app-promo {
       padding: 20px 40px;
       align-items: center; } }
+  @media (min-width: 1200px) {
+    .app-promo {
+      padding: 30px 40px;
+      width: 100%; } }
 
 .app-promo::before {
   content: '';
@@ -925,6 +960,9 @@ html, body {
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75rem; }
+  @media (min-width: 1200px) {
+    .app-promo__title {
+      font-size: 1rem; } }
 
 .app-promo__title strong {
   display: inline-block;
@@ -932,6 +970,9 @@ html, body {
   margin-top: 3px;
   color: #ffffff;
   font-size: 1.5rem; }
+  @media (min-width: 1200px) {
+    .app-promo__title strong {
+      font-size: 2rem; } }
 
 .app-promo__subtitle {
   margin: 0;
@@ -939,17 +980,25 @@ html, body {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75rem; }
+  @media (min-width: 1200px) {
+    .app-promo__subtitle {
+      font-size: 1rem; } }
 
 .app-promo__image {
   display: none; }
   @media (min-width: 1000px) {
     .app-promo__image {
       position: absolute;
-      bottom: -30px;
-      right: -20px;
-      z-index: 1;
+      bottom: -60px;
+      right: 60px;
+      z-index: -1;
+      display: block;
       height: 370px;
       pointer-events: none; } }
+  @media (min-width: 1200px) {
+    .app-promo__image {
+      bottom: -100px;
+      height: 500px; } }
 
 .app-promo__image img {
   height: 100%; }
@@ -1550,7 +1599,7 @@ html, body {
 .section-header {
   position: relative;
   transform: skewY(-15deg);
-  z-index: 2;
+  z-index: 8;
   width: 90%;
   max-width: 325px; }
   @media (min-width: 700px) {
@@ -4116,11 +4165,24 @@ html, body {
   margin-bottom: -25px; }
   @media (min-width: 700px) {
     .price-list {
-      padding-bottom: 200px;
       background-image: url("./img/bgs/price-bottom-t.jpg");
       background-size: contain;
       background-position: bottom center;
       background-repeat: no-repeat; } }
+  @media (min-width: 1000px) {
+    .price-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      background-image: url("./img/bgs/price-bottom-d.jpg");
+      background-position: top right;
+      background-size: 1920px; } }
 
 .price-list__content {
   position: relative;
@@ -4131,6 +4193,15 @@ html, body {
     .price-list__content {
       padding: 80px 40px;
       background-color: transparent; } }
+  @media (min-width: 1000px) {
+    .price-list__content {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      padding-left: 60px; } }
+  @media (min-width: 1200px) {
+    .price-list__content {
+      max-width: 800px; } }
 
 .price-list__content::before {
   content: "";
@@ -4234,12 +4305,25 @@ html, body {
   @media (min-width: 700px) {
     .team {
       display: block;
-      margin-top: -400px;
       padding-bottom: 300px;
-      background-image: url("./img/bgs/team-t.jpg");
+      background-image: url("./img/team/team-t.jpg");
       background-size: contain;
       background-position: bottom center;
       background-repeat: no-repeat; } }
+  @media (min-width: 1000px) {
+    .team {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-bottom: 60px; } }
+  @media (min-width: 1200px) {
+    .team {
+      background-image: none;
+      background-position: center center; } }
 
 @media (min-width: 700px) {
   .team__content {
@@ -4249,6 +4333,18 @@ html, body {
     justify-content: space-between;
     padding: 40px; } }
 
+@media (min-width: 1000px) {
+  .team__content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; } }
+
 .member {
   position: relative;
   width: 30%;
@@ -4256,6 +4352,10 @@ html, body {
   margin-bottom: 30px;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 1000px) {
+    .member {
+      max-width: 250px;
+      margin: 20px; } }
 
 .member__header {
   position: absolute;
@@ -4292,7 +4392,11 @@ html, body {
   font-size: 0.85rem; }
 
 .member__photo {
-  height: 100%; }
+  height: 100%;
+  background-color: #896322;
+  background-image: url("./img/team/placeholder.jpg");
+  background-size: cover;
+  background-position: center center; }
 
 .member__photo img {
   height: 100%;
@@ -5539,10 +5643,7 @@ html, body {
         right: -550px; } }
 
 .fr-benefits {
-  padding-top: 45px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 45px 20px;
   margin-bottom: 30px; }
   @media (min-width: 700px) {
     .fr-benefits {
@@ -5570,6 +5671,9 @@ html, body {
     .fr-benefits__header {
       max-width: 480px;
       width: 100%; } }
+  @media (min-width: 1000px) {
+    .fr-benefits__header {
+      margin-bottom: 120px; } }
 
 .fr-benefits__title {
   margin: 0;
@@ -5703,10 +5807,16 @@ html, body {
         letter-spacing: 14.4px; } }
     @media (min-width: 1000px) {
       .fr-benefit:before {
-        position: relative;
+        position: absolute;
+        left: auto;
+        right: 40px;
+        top: -40px;
+        z-index: -1;
         display: block;
-        width: 100%;
         margin-bottom: 30px;
+        color: rgba(214, 163, 84, 0.5);
+        font-size: 10rem;
+        font-weight: 600;
         text-align: center; } }
 
 .fr-benefit__text {
@@ -5723,7 +5833,8 @@ html, body {
   @media (min-width: 1000px) {
     .fr-benefit__text {
       margin: 0;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      text-align: left; } }
 
 .fr-benefit__descr {
   font-size: 1rem;

@@ -5,14 +5,26 @@
     @include atTablet {
         // box model
         display: block;
-        margin-top: -400px;
         padding-bottom: 300px;
 
         // visual
-        background-image: url('./img/bgs/team-t.jpg');
+        background-image: url('./img/team/team-t.jpg');
         background-size: contain;
         background-position: bottom center;
         background-repeat: no-repeat;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    @include atDesktopM {
+        // visual
+        background-image: none;
+        background-position: center center;
     }
 }
 
@@ -28,5 +40,16 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    @include atDesktopL {
+        // box model
     }
 }

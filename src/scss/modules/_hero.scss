@@ -94,6 +94,18 @@
             background-image: url('./img/bgs/hero.jpg');
             background-position: center center;
         }
+
+        @include atDesktopM {
+            // box model
+            min-height: 680px;
+            max-height: 740px;
+        }
+
+        @include atDesktopL {
+            // box model
+            min-height: 720px;
+            max-height: 900px;
+        }
     }
 
     &--haircut {
@@ -158,9 +170,15 @@
 
     &--policy {
         // visual
-        background-image: url('./img/bgs/policy-m.jpg');
+        background-image: url('./img/policy/policy-m.jpg');
         background-size: cover;
-        background-position: bottom center;
+        background-position: center center;
+        
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/policy/policy-d.jpg');
+            background-position: bottom center;
+        }
     }
 
     &--404 {
@@ -245,6 +263,14 @@
 
     &--franchise {
         // visual
+        background-image: url('./img/franchise/franchise-m.jpg');
+        background-size: cover;
+        background-position: bottom center;
+
+        @include atDesktopS {
+            // visual
+            background-image: url('./img/franchise/franchise-d.jpg');
+        }
     }
 
     &--family {
@@ -263,7 +289,7 @@
     position: absolute;
     bottom: -40px;
     left: 0;
-    z-index: 2;
+    z-index: 7;
     
     // box model
     width: 100%;
@@ -717,12 +743,22 @@
 
     @include atDesktopS {
         // positioning
-        bottom: -10px;
+        bottom: 0;
         z-index: 4;
 
         // box model
         width: 50%;
         padding-left: 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 500px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        bottom: 40px;
     }
 }
 

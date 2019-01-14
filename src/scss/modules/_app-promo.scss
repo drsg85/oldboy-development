@@ -23,10 +23,13 @@
     @include atDesktopS {
         // box model
         padding: 20px 40px;
-        // padding-left: 65px;
         align-items: center;
-        // flex-direction: column;
-        // align-items: flex-start;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 30px 40px;
+        width: 100%;
     }
 }
 
@@ -103,12 +106,16 @@
 .app-promo__title {
     // box model
     margin: 0;
-    
+
     // typography
     color: $golden;
     font-family: $titleFont;
     font-size: 0.75rem;
-    
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .app-promo__title strong {
@@ -120,17 +127,27 @@
     // typography
     color: $light;
     font-size: 1.5rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .app-promo__subtitle {
     // box model
     margin: 0;
     padding: 0;
-    
+
     // typography
     color: $light;
     font-family: $titleFont;
     font-size: 0.75rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .app-promo__image {
@@ -140,14 +157,22 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        bottom: -30px;
-        right: -20px;
-        z-index: 1;
+        bottom: -60px;
+        right: 60px;
+        z-index: -1;
         
         // box model
-        // display: block;
+        display: block;
         height: 370px;
         pointer-events: none;
+    }
+
+    @include atDesktopM {
+        // positioning
+        bottom: -100px;
+
+        // box model
+        height: 500px;
     }
 }
 

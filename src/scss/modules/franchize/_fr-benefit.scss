@@ -55,14 +55,20 @@
 
         @include atDesktopS {
             // positioning
-            position: relative;
+            position: absolute;
+            left: auto;
+            right: 40px;
+            top: -40px;
+            z-index: -1;
 
             // box model
             display: block;
-            width: 100%;
             margin-bottom: 30px;
 
             // typography
+            color: rgba($golden, 0.5);
+            font-size: 10rem;
+            font-weight: 600;
             text-align: center;
         }
     }
@@ -89,6 +95,9 @@
         // box model
         margin: 0;
         margin-bottom: 15px;
+
+        // typography
+        text-align: left;
     }
 }
 

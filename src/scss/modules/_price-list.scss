@@ -3,19 +3,28 @@
     margin-bottom: -25px;
 
     @include atTablet {
-        // box model
-        padding-bottom: 200px;
-
         // visual
         background-image: url('./img/bgs/price-bottom-t.jpg');
         background-size: contain;
         background-position: bottom center;
         background-repeat: no-repeat;
     }
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        justify-content: flex-start;
+
+        // visual
+        background-image: url('./img/bgs/price-bottom-d.jpg');
+        background-position: top right;
+        background-size: 1920px;
+    }
 }
 
 .price-list__header {
-
+    
 }
 
 .price-list__content {
@@ -35,6 +44,17 @@
 
         // visual
         background-color: transparent;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-grow: 1;
+        padding-left: 60px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 800px;
     }
 }
 

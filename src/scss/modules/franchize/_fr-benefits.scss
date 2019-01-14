@@ -1,10 +1,8 @@
 .fr-benefits {
     // box model
-    padding-top: 45px;
-    padding-bottom: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 45px 20px;
     margin-bottom: 30px;
+
     @include atTablet {
         // box model
         padding: 0 calc((100% - 657px)/2);
@@ -27,6 +25,7 @@
 
     // visual
     overflow: hidden;
+
     &:after {
         content: '';
 
@@ -46,6 +45,11 @@
         // box model
         max-width: 480px;
         width: 100%;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 120px;
     }
 }
 
