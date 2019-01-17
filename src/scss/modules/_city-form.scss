@@ -13,11 +13,6 @@
 
     // typography
     font-family: $titleFont;
-
-    @include atFullHD {
-        // box model
-        display: block;
-    }
 }
 
 .city-form {

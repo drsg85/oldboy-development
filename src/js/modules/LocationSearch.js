@@ -8,6 +8,7 @@ class LocationSearch {
 
     this.branches = this.generateBranches();
     this.events();
+    this.hideResults();
   }
 
   events () {
@@ -16,10 +17,13 @@ class LocationSearch {
     });
 
     this.locationInput.addEventListener('keyup', (evt) => {
-      console.clear();
       let searchPhrase = this.locationInput.value;
-      let filteredBranches = this.filterBranches(this.branches, searchPhrase);
-      console.log(filteredBranches);
+      if (searchPhrase.length > 0) {
+        let filteredBranches = this.filterBranches(this.branches, searchPhrase);
+        this.showFound(filteredBranches);
+      } else {
+        this.hideResults();
+      }
     });
   }
 
@@ -60,14 +64,56 @@ class LocationSearch {
     searchText = searchText.toLocaleLowerCase();
     // console.log(branchList);
     let filteredBranches = branchList.filter((branch) => {
-      if (branch.city.toLowerCase().includes(searchText) ||
-          branch.address.toLowerCase().includes(searchText)) {
-            return true;
-          }
-      return false;
+      return branch.city.toLowerCase().startsWith(searchText);
     });
 
     return filteredBranches;
+  }
+
+
+  /**
+   * Renders found branches
+   * @param {Array} foundBranches
+   */
+  showFound (foundBranches) {
+    let resultsList = this.locationSelector.querySelector('.search-results');
+    resultsList.style.display= 'block';
+
+    while (resultsList.firstChild) {
+      resultsList.removeChild(resultsList.firstChild);
+    }
+
+    if (foundBranches.length > 0) {
+      let docFragment = document.createDocumentFragment();
+
+      // Adding title
+      // TODO: refactor this for i11n
+      let title = document.createElement('h2');
+      title.classList.add('search-results__title');
+      title.textContent = 'Результаты поиска:';
+      docFragment.appendChild(title);
+
+      // Adding branches
+      foundBranches.forEach((branch) => {
+        let item = document.createElement('li');
+        item.classList.add('search-results__item');
+        let link = document.createElement('a');
+        link.classList.add('search-results__link');
+        link.textContent = branch.city + ', ' + branch.address;
+        link.href = branch.link;
+        item.appendChild(link);
+        docFragment.appendChild(item);
+      });
+  
+      resultsList.appendChild(docFragment);
+    }
+
+  }
+
+
+  hideResults () {
+    let resultsList = this.locationSelector.querySelector('.search-results');
+    resultsList.style.display = 'none';
   }
 }
 

@@ -1919,9 +1919,6 @@ html, body {
   margin-right: 40px;
   margin-top: 10px;
   font-family: "Rex", Arial, sans-serif; }
-  @media (min-width: 1920px) {
-    .city-form__title {
-      display: block; } }
 
 @media (min-width: 1920px) {
   .city-form {
@@ -2012,7 +2009,8 @@ html, body {
 
 .branch-addresses {
   padding: 25px;
-  padding-left: 55px; }
+  padding-left: 55px;
+  border-top: 1px solid rgba(174, 174, 174, 0.5); }
   @media (min-width: 700px) {
     .branch-addresses {
       display: -webkit-box;
@@ -2033,7 +2031,8 @@ html, body {
       padding-left: 65px; } }
   @media (min-width: 1000px) {
     .branch-addresses {
-      padding-left: 0;
+      padding-top: 40px;
+      padding-left: 20px;
       max-width: 900px;
       height: 6000px; } }
   @media (min-width: 1500px) {
@@ -6475,6 +6474,66 @@ html, body {
 .coming-soon {
   font-family: "Rex", Arial, sans-serif;
   color: #d6a354; }
+
+.search-results {
+  margin: 0;
+  padding: 0;
+  padding: 40px;
+  border-bottom: 1px solid rgba(174, 174, 174, 0.5);
+  border-top: 1px solid rgba(174, 174, 174, 0.5); }
+
+.search-results__title {
+  margin-top: 0;
+  margin-right: 40px;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif; }
+
+.search-results__item {
+  padding-left: 15px;
+  margin-bottom: 0.25em;
+  position: relative;
+  z-index: 1;
+  font-size: 0.85rem;
+  list-style: none; }
+  @media (min-width: 700px) {
+    .search-results__item {
+      margin-right: 40px; } }
+  .search-results__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    height: 8px;
+    width: 8px;
+    background-color: #d6a354;
+    border-radius: 50%; }
+
+.search-results__link {
+  display: inline-block;
+  padding: 7px 12px;
+  max-width: 100%;
+  color: #896322;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear; }
+  @media (min-width: 700px) {
+    .search-results__link {
+      max-width: 95%; } }
+
+.search-results__link:hover {
+  color: #ffffff;
+  background-color: #d6a354; }
 
 .branches-counter {
   border: 4px solid #d6a354;
