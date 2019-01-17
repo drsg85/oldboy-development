@@ -2009,8 +2009,7 @@ html, body {
 
 .branch-addresses {
   padding: 25px;
-  padding-left: 55px;
-  border-top: 1px solid rgba(174, 174, 174, 0.5); }
+  padding-left: 55px; }
   @media (min-width: 700px) {
     .branch-addresses {
       display: -webkit-box;
