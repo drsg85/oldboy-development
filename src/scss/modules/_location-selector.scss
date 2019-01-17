@@ -33,6 +33,7 @@
         // box model
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 50px;
         padding-bottom: 30px;
     }
@@ -100,7 +101,8 @@
 
     @include atDesktopS {
         // box model
-        padding-right: 25px;
+        padding-right: 65px;
+        width: 400px;
     }
 }
 
@@ -137,14 +139,8 @@
         transition-delay: all 0;
     }
 
-    @include atFullHD {
-        // positioning
-        top: 50px;
-        right: 55px;
-    }
-
     @include atDesktopS {
-        top: 50px;
-        right: 55px;
+        top: 65px;
+        right: 40px;
     }
 }

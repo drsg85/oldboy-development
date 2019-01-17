@@ -9,7 +9,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: flex-start;
-        height: 7600px;
+        height: 8300px;
         max-width: 800px;
         margin: 0 auto;
         padding-left: 65px;
@@ -19,13 +19,13 @@
         // box model
         padding-left: 0;
         max-width: 900px;
-        height: 5000px;
+        height: 6000px;
     }
 
     @include atDesktopL {
         // box model
         max-width: 1270px;
-        height: 4450px;
+        height: 5000px;
     }
 }
 

@@ -1474,6 +1474,9 @@ html, body {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       padding: 50px;
       padding-bottom: 30px; } }
 
@@ -1519,7 +1522,8 @@ html, body {
   padding-right: 45px; }
   @media (min-width: 1000px) {
     .location-selector__fast-nav {
-      padding-right: 25px; } }
+      padding-right: 65px;
+      width: 400px; } }
 
 .location-selector__places {
   margin: 0 -25px;
@@ -1541,14 +1545,10 @@ html, body {
     position: absolute;
     -webkit-transition-delay: all 0;
     transition-delay: all 0; }
-  @media (min-width: 1920px) {
-    .location-selector__close {
-      top: 50px;
-      right: 55px; } }
   @media (min-width: 1000px) {
     .location-selector__close {
-      top: 50px;
-      right: 55px; } }
+      top: 65px;
+      right: 40px; } }
 
 .place-groups {
   display: -webkit-box;
@@ -1602,7 +1602,8 @@ html, body {
   cursor: pointer; }
 
 .city-form {
-  max-width: 600px; }
+  max-width: 600px;
+  width: 100%; }
 
 .city-form__title {
   display: none;
@@ -1631,9 +1632,6 @@ html, body {
   border: 2px solid #d6a354;
   border-radius: 20px;
   outline: none; }
-  @media (min-width: 1920px) {
-    .city-form__input {
-      width: 600px; } }
 
 .location-list {
   padding: 0;
@@ -1714,7 +1712,7 @@ html, body {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      height: 7600px;
+      height: 8300px;
       max-width: 800px;
       margin: 0 auto;
       padding-left: 65px; } }
@@ -1722,11 +1720,11 @@ html, body {
     .branch-addresses {
       padding-left: 0;
       max-width: 900px;
-      height: 5000px; } }
+      height: 6000px; } }
   @media (min-width: 1500px) {
     .branch-addresses {
       max-width: 1270px;
-      height: 4450px; } }
+      height: 5000px; } }
 
 .branch-addresses__index {
   position: relative;

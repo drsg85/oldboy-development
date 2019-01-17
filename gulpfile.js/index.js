@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const htmlBeautify = require('gulp-html-beautify');
-const browserSync = require('browser-sync');
+const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const sassImporter = require('sass-module-importer');
 const autoprefixer = require('gulp-autoprefixer');
@@ -70,7 +70,7 @@ let styles = () => (
       cascade: false
     }))
     .pipe(gulp.dest(dirs.dist))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.reload({stream: true}))
 );
 
 
@@ -114,7 +114,7 @@ let browserSyncReload = (done) => {
  */
 let watchFiles = () => {
   gulp.watch(dirs.pug, gulp.series(pugRender, browserSyncReload));
-  gulp.watch(dirs.scss, gulp.series(styles));
+  gulp.watch(dirs.scss, gulp.parallel(styles));
   gulp.watch(dirs.js, gulp.series(scripts, browserSyncReload));
 };
 

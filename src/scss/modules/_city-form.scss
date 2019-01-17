@@ -1,6 +1,7 @@
 .city-form {
     // box model
     max-width: 600px;
+    width: 100%;
 }
 
 .city-form__title {
@@ -42,9 +43,8 @@
     border: 2px solid $golden;
     border-radius: 20px;
     outline: none;
+}
 
-    @include atFullHD {
-        // box model
-        width: 600px;
-    }
+.city-form__input:focus {
+
 }
