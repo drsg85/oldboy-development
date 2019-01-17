@@ -2,6 +2,8 @@
 
 import MobileMenu from './modules/MobileMenu';
 import LocationSelector from './modules/LocationSelector';
+import LocationSearch from './modules/LocationSearch';
 
-var mobileMenu = new MobileMenu();
-var locationSelector = new LocationSelector();
+const mobileMenu = new MobileMenu();
+const locationSelector = new LocationSelector();
+const locationSearch = new LocationSearch();

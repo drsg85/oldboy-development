@@ -43,8 +43,11 @@
     border: 2px solid $golden;
     border-radius: 20px;
     outline: none;
+    transition: all 0.25s ease-out;
 }
 
 .city-form__input:focus {
-
+    // visual
+    border: 2px solid $darkGold;
+    box-shadow: 0 0 15px rgba($golden, 0.5);
 }

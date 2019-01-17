@@ -9,7 +9,7 @@ section.location-selector.location-selector--hidden
         .location-selector__fast-nav
             .city-form
                 h3.city-form__title Выбери свой город
-                form.city-form__form
+                form.city-form__form()
                     input.city-form__input(type="search" name="search" placeholder="Введите название города" autofocus)
             
             //- .location-selector__places
@@ -63,7 +63,7 @@ section.location-selector.location-selector--hidden
             .featured-location__content
                 ul.location-list
 
-        //- include _choose-belarus.pug
+        include _choose-belarus.pug
         .branch-addresses
             .branch-addresses__index
                 .branch-addresses__letter А

@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/modules/LocationSearch.js":
+/*!******************************************!*\
+  !*** ./src/js/modules/LocationSearch.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass LocationSearch {\r\n  constructor () {\r\n    this.locationSelector = document.querySelector('.location-selector');\r\n    this.locationForm = this.locationSelector.querySelector('.city-form__form');\r\n    this.locationInput = this.locationSelector.querySelector('.city-form__input');\r\n\r\n    this.branches = this.generateBranches();\r\n    this.events();\r\n  }\r\n\r\n  events () {\r\n    this.locationForm.addEventListener('submit', (evt) => {\r\n      evt.preventDefault();\r\n    });\r\n\r\n    this.locationInput.addEventListener('keyup', (evt) => {\r\n      console.clear();\r\n      let searchPhrase = this.locationInput.value;\r\n      let filteredBranches = this.filterBranches(this.branches, searchPhrase);\r\n      console.log(filteredBranches);\r\n    });\r\n  }\r\n\r\n\r\n  /**\r\n   * Returns an array of objects representing branches\r\n   * @return {Array}\r\n   */\r\n  generateBranches () {\r\n    let branches = [];\r\n    let locationLists = this.locationSelector.querySelectorAll('.location-list');\r\n\r\n    for (let i = 0; i < locationLists.length; i++) {\r\n      let city = locationLists[i].querySelector('.location-list__city').textContent;\r\n      let items = locationLists[i].querySelectorAll('.location-list__item a');\r\n\r\n      for (let j = 0; j < items.length; j++) {\r\n        branches.push({\r\n          city: city,\r\n          address: items[j].textContent,\r\n          link: items[j].href\r\n        });\r\n      }\r\n    }\r\n\r\n    return branches;\r\n  }\r\n\r\n\r\n  /**\r\n   * Filters an array of branches and returns an array\r\n   * of branches that include searchText\r\n   * @param {Array} branchList\r\n   * @param {string} searchText\r\n   * @return {Array}\r\n   */\r\n  filterBranches (branchList, searchText) {\r\n    searchText = searchText.toLocaleLowerCase();\r\n    // console.log(branchList);\r\n    let filteredBranches = branchList.filter((branch) => {\r\n      if (branch.city.toLowerCase().includes(searchText) ||\r\n          branch.address.toLowerCase().includes(searchText)) {\r\n            return true;\r\n          }\r\n      return false;\r\n    });\r\n\r\n    return filteredBranches;\r\n  }\r\n}\r\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (LocationSearch);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/LocationSearch.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/LocationSelector.js":
 /*!********************************************!*\
   !*** ./src/js/modules/LocationSelector.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass MobileMenu {\r\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./src/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/LocationSelector */ \"./src/js/modules/LocationSelector.js\");\n\r\n\r\n\r\n\r\n\r\nvar mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nvar locationSelector = new _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./src/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/LocationSelector */ \"./src/js/modules/LocationSelector.js\");\n/* harmony import */ var _modules_LocationSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/LocationSearch */ \"./src/js/modules/LocationSearch.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nconst locationSelector = new _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nconst locationSearch = new _modules_LocationSearch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\n\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
 
 /***/ })
 
