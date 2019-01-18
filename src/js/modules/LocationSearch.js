@@ -2,15 +2,26 @@
 
 class LocationSearch {
   constructor () {
+    // Location selector (for faster search)
     this.locationSelector = document.querySelector('.location-selector');
+
+    // Search form elements
     this.locationForm = this.locationSelector.querySelector('.city-form__form');
     this.locationInput = this.locationSelector.querySelector('.city-form__input');
+
+    // Search results elements
+    this.resultsSection = this.locationSelector.querySelector('.search-results');
+    this.resultsList = this.locationSelector.querySelector('.search-results__list');
 
     this.branches = this.generateBranches();
     this.events();
     this.hideResults();
   }
 
+
+  /**
+   * Adds events listeners
+   */
   events () {
     this.locationForm.addEventListener('submit', (evt) => {
       evt.preventDefault();
@@ -62,7 +73,7 @@ class LocationSearch {
    */
   filterBranches (branchList, searchText) {
     searchText = searchText.toLocaleLowerCase();
-    // console.log(branchList);
+
     let filteredBranches = branchList.filter((branch) => {
       return branch.city.toLowerCase().startsWith(searchText);
     });
@@ -76,22 +87,16 @@ class LocationSearch {
    * @param {Array} foundBranches
    */
   showFound (foundBranches) {
-    let resultsList = this.locationSelector.querySelector('.search-results');
-    resultsList.style.display= 'block';
+    // Showing results wrapper
+    this.resultsSection.style.display= 'block';
 
-    while (resultsList.firstChild) {
-      resultsList.removeChild(resultsList.firstChild);
+    // Cleaning results list
+    while (this.resultsList.firstChild) {
+      this.resultsList.removeChild(this.resultsList.firstChild);
     }
 
     if (foundBranches.length > 0) {
       let docFragment = document.createDocumentFragment();
-
-      // Adding title
-      // TODO: refactor this for i11n
-      let title = document.createElement('h2');
-      title.classList.add('search-results__title');
-      title.textContent = 'Результаты поиска:';
-      docFragment.appendChild(title);
 
       // Adding branches
       foundBranches.forEach((branch) => {
@@ -105,15 +110,13 @@ class LocationSearch {
         docFragment.appendChild(item);
       });
   
-      resultsList.appendChild(docFragment);
+      this.resultsList.appendChild(docFragment);
     }
-
   }
 
 
   hideResults () {
-    let resultsList = this.locationSelector.querySelector('.search-results');
-    resultsList.style.display = 'none';
+    this.resultsSection.style.display = 'none';
   }
 }
 

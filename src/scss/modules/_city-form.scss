@@ -16,10 +16,7 @@
 }
 
 .city-form {
-    @include atFullHD {
-        // box model
-        display: flex;
-    }
+    
 }
 
 .city-form__input {

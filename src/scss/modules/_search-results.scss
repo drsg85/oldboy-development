@@ -1,7 +1,5 @@
 .search-results {
     // box model
-    margin: 0;
-    padding: 0;
     padding: 40px;
 
     // visual
@@ -9,15 +7,24 @@
     border-top: 1px solid rgba($lightGrey, 0.5);
 }
 
+.search-results__list {
+    // box model
+    margin: 0;
+    padding: 0;
+}
+
 .search-results__title {
     // box model
-    // margin: 0;
     margin-top: 0;
     margin-right: 40px;
 
     // typography
     color: $dark;
     font-family: $titleFont;
+}
+
+.search-results__not-found {
+
 }
 
 .search-results__item {

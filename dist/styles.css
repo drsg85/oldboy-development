@@ -1920,12 +1920,6 @@ html, body {
   margin-top: 10px;
   font-family: "Rex", Arial, sans-serif; }
 
-@media (min-width: 1920px) {
-  .city-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
-
 .city-form__input {
   display: block;
   width: 100%;
@@ -2037,7 +2031,7 @@ html, body {
   @media (min-width: 1500px) {
     .branch-addresses {
       max-width: 1270px;
-      height: 5000px; } }
+      height: 4500px; } }
 
 .branch-addresses__index {
   position: relative;
@@ -6475,11 +6469,13 @@ html, body {
   color: #d6a354; }
 
 .search-results {
-  margin: 0;
-  padding: 0;
   padding: 40px;
   border-bottom: 1px solid rgba(174, 174, 174, 0.5);
   border-top: 1px solid rgba(174, 174, 174, 0.5); }
+
+.search-results__list {
+  margin: 0;
+  padding: 0; }
 
 .search-results__title {
   margin-top: 0;
