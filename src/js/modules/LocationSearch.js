@@ -12,6 +12,7 @@ class LocationSearch {
     // Search results elements
     this.resultsSection = this.locationSelector.querySelector('.search-results');
     this.resultsList = this.locationSelector.querySelector('.search-results__list');
+    this.notFoundLabel = this.locationSelector.querySelector('.search-results__not-found');
 
     this.branches = this.generateBranches();
     this.events();
@@ -111,6 +112,9 @@ class LocationSearch {
       });
   
       this.resultsList.appendChild(docFragment);
+      this.notFoundLabel.style.display = 'none';
+    } else {
+      this.notFoundLabel.style.display = 'block';
     }
   }
 

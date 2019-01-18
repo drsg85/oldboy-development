@@ -5,18 +5,29 @@
     // visual
     border-bottom: 1px solid rgba($lightGrey, 0.5);
     border-top: 1px solid rgba($lightGrey, 0.5);
+
+    @include atDesktopS {
+        // box model
+        padding: 40px calc((100% - 900px) / 2);
+    }
 }
 
 .search-results__list {
     // box model
     margin: 0;
     padding: 0;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .search-results__title {
     // box model
     margin-top: 0;
-    margin-right: 40px;
 
     // typography
     color: $dark;
@@ -24,7 +35,12 @@
 }
 
 .search-results__not-found {
+    // box model
+    margin: 0;
 
+    // typography
+    color: $golden;
+    font-family: $titleFont;
 }
 
 .search-results__item {
@@ -42,7 +58,8 @@
 
     @include atTablet {
         // box model
-        margin-right: 40px;
+        flex-basis: 50%;
+        width: 45%;
     }
 
     &::before {

@@ -6472,15 +6472,33 @@ html, body {
   padding: 40px;
   border-bottom: 1px solid rgba(174, 174, 174, 0.5);
   border-top: 1px solid rgba(174, 174, 174, 0.5); }
+  @media (min-width: 1000px) {
+    .search-results {
+      padding: 40px calc((100% - 900px) / 2); } }
 
 .search-results__list {
   margin: 0;
   padding: 0; }
+  @media (min-width: 700px) {
+    .search-results__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .search-results__title {
   margin-top: 0;
-  margin-right: 40px;
   color: #131313;
+  font-family: "Rex", Arial, sans-serif; }
+
+.search-results__not-found {
+  margin: 0;
+  color: #d6a354;
   font-family: "Rex", Arial, sans-serif; }
 
 .search-results__item {
@@ -6492,7 +6510,9 @@ html, body {
   list-style: none; }
   @media (min-width: 700px) {
     .search-results__item {
-      margin-right: 40px; } }
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      width: 45%; } }
   .search-results__item::before {
     content: "";
     position: absolute;
