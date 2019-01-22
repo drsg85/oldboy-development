@@ -1,4 +1,8 @@
 .city-form {
+    // positioning
+    position: relative;
+    z-index: 3;
+
     // box model
     max-width: 600px;
     width: 100%;

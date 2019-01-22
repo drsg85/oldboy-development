@@ -10,7 +10,12 @@ section.location-selector.location-selector--hidden
             .city-form
                 //- h3.city-form__title Выбери свой город
                 form.city-form__form(autocomplete="off")
-                    input.city-form__input(type="search" name="search" placeholder="Введите название города" autofocus)
+                    input.city-form__input(type="search" name="search" placeholder="Город, улица или метро" autofocus)
+
+            section.search-results
+                h2.search-results__title Результаты поиска:
+                p.search-results__not-found такого города не найдено
+                ul.search-results__list
             
             //- .location-selector__places
                 .place-groups
@@ -64,10 +69,6 @@ section.location-selector.location-selector--hidden
                 ul.location-list
 
         //- include _choose-belarus.pug
-        section.search-results
-            h2.search-results__title Результаты поиска:
-            p.search-results__not-found такого города не найдено
-            ul.search-results__list
 
         .branch-addresses
             .branch-addresses__index

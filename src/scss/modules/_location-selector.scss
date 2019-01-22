@@ -96,6 +96,9 @@
 }
 
 .location-selector__fast-nav {
+    // positioning
+    position: relative;
+
     // box model
     padding-right: 45px;
 
@@ -129,14 +132,14 @@
     z-index: 1000;
 
     // visual
-    transition-delay: all 0.3s;
+    transition-delay: all 0s;
 
     &--hidden {
         // positioning
         position: absolute;
 
         // visual
-        transition-delay: all 0;
+        transition-delay: all 0.3s;
     }
 
     @include atDesktopS {

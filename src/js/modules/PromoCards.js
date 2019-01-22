@@ -17,11 +17,13 @@ class PromoCards {
       let infoButton = card.querySelector('.promo__info-button');
       let closeButton = card.querySelector('.promo__close-button');
 
-      infoButton.addEventListener('click', () => {
+      infoButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
         this.toggleCard(card);
       });
 
-      closeButton.addEventListener('click', () => {
+      closeButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
         this.toggleCard(card);
       });
     }

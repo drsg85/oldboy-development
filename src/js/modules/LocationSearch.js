@@ -28,6 +28,13 @@ class LocationSearch {
       evt.preventDefault();
     });
 
+    this.locationForm.addEventListener('input', (evt) => {
+      let searchPhrase = this.locationInput.value;
+      if (searchPhrase.length <= 0) {
+        this.hideResults();
+      }
+    });
+
     this.locationInput.addEventListener('keyup', (evt) => {
       let searchPhrase = this.locationInput.value;
       if (searchPhrase.length > 0) {
@@ -76,7 +83,7 @@ class LocationSearch {
     searchText = searchText.toLocaleLowerCase();
 
     let filteredBranches = branchList.filter((branch) => {
-      return branch.city.toLowerCase().startsWith(searchText);
+      return branch.city.toLowerCase().includes(searchText);
     });
 
     return filteredBranches;
