@@ -1848,8 +1848,8 @@ html, body {
   top: 25px;
   right: 20px;
   z-index: 1000;
-  -webkit-transition-delay: all 0s;
-  transition-delay: all 0s; }
+  -webkit-transition-delay: all 0.3s;
+  transition-delay: all 0.3s; }
   .location-selector__close--hidden {
     position: absolute;
     -webkit-transition-delay: all 0.3s;
