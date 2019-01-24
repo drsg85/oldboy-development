@@ -49,8 +49,9 @@
         // positioning
         position: absolute;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 10px;
+        // top: 50%;
+        // transform: translateY(-50%);
     
         // box model
         display: block;
@@ -97,6 +98,70 @@
 
     // visual
     background-color: $golden;
+}
+
+.location-list__metro span{
+    // positioning
+    position: relative;
+    left: 2px;
+    top: -4px;
+
+    // box model
+    display: inline-block;
+    vertical-align: middle;
+    padding: 3px 10px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    &::before {
+        content: 'м';
+
+        // positioning
+        position: relative;
+        top: -1px;
+
+        // box model
+        display: inline-block;
+        vertical-align: middle;
+        height: 14px;
+        width: 14px;
+        margin-right: 4px;
+        padding: 2px;
+        padding-top: 1px;
+
+        // typography
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        text-transform: none;
+
+        border-radius: 50%;
+    }
+}
+
+.location-list__metro.piter span {
+    // typography
+    color: $blue;
+    
+    &::before {
+        // visual
+        border: 1px solid rgba($blue, 0.5);
+    }
+}
+
+.location-list__metro.moscow span {
+    // typography
+    color: $red;
+
+    &::before {
+        // visual
+        border: 1px solid rgba($red, 0.5);
+    }
 }
 
 // .location-list__item em {

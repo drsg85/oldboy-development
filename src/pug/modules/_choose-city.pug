@@ -8,7 +8,6 @@ section.location-selector.location-selector--hidden
 
         .location-selector__fast-nav
             .city-form
-                //- h3.city-form__title Выбери свой город
                 form.city-form__form(autocomplete="off")
                     input.city-form__input(type="search" name="search" placeholder="Город, улица или метро" autofocus)
 
@@ -312,92 +311,136 @@ section.location-selector.location-selector--hidden
                         h4.location-list__city Москва
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/perovo').location-list__link 3-Я Владимирская, 20
+                            .location-list__metro.moscow: span Перово
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/caricino').location-list__link 6-Я Радиальная, 5 К.4
+                            .location-list__metro.moscow: span Царицино
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/avtozavodskaya').location-list__link Автозаводская, 18
+                            .location-list__metro.moscow: span Автозаводская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/altufyevo').location-list__link Алтуфьевское Шоссе, 70К.1
+                            .location-list__metro.moscow: span Алтуфьево
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/fili').location-list__link Береговой Проезд, 5 К2
+                            .location-list__metro.moscow: span Шелепиха
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/vdnh').location-list__link Бориса Галушкина, 17
+                            .location-list__metro.moscow: span ВДНХ
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/novoperedelkino').location-list__link Боровское Шоссе, 36
+                            .location-list__metro.moscow: span Новопеределкино
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/nekrasovka').location-list__link Вертолётчиков, 9/1
+                            .location-list__metro.moscow: span 
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/veshnyaki').location-list__link Вешняковская, 2
+                            .location-list__metro.moscow: span Вешняки
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/tushino').location-list__link Вишневая, 9К.1
+                            .location-list__metro.moscow: span Тушинская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/volgogradka').location-list__link Волгоградский Проспект, 26А
+                            .location-list__metro.moscow: span Волгоградский проспект
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/kuzminki').location-list__link Волжский Бульвар, КВ 114А, К1
+                            .location-list__metro.moscow: span Кузьминки
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/sokol').location-list__link Волоколамское Шоссе 15/22
+                            .location-list__metro.moscow: span Стрешнево
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/garibaldi').location-list__link Гарибальди, 7
+                            .location-list__metro.moscow: span Новые Черемушки
                         li.location-list__item
                             a(href='#').location-list__link Генерала Белова, 28 К1
+                            .location-list__metro.moscow: span Домодедовская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/zhulebino').location-list__link Генерала Кузнецова, 11К.1
+                            .location-list__metro.moscow: span Жулебино
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/glavmosstroya').location-list__link Главмосстроя, 12
+                            .location-list__metro.moscow: span Говорово
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/taganka').location-list__link Гончарная Набережная, 9/16 С2
+                            .location-list__metro.moscow: span Марксистская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/dobrolybova').location-list__link Добролюбова, 20
+                            .location-list__metro.moscow: span Фонвизинская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/rumyancevo').location-list__link Киевское Шоссе, 6 СТР.1
+                            .location-list__metro.moscow: span 
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/uznaya').location-list__link Кировоградская, 9К1
+                            .location-list__metro.moscow: span Южная
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/aviamotornaya').location-list__link Красноказарменная, 19
+                            .location-list__metro.moscow: span Авиамоторная
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/botsad').location-list__link Лазоревый Проезд, 5 К3
+                            .location-list__metro.moscow: span Свиблово
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/leningradka').location-list__link Ленинградское Шоссе, 120 К3
+                            .location-list__metro.moscow: span Беломорская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/vershinina').location-list__link Маршала Вершинина, 8К1
+                            .location-list__metro.moscow: span Октябрьское поле
                         li.location-list__item
-                            a(href='https://oldboybarbershop.com/moscow/mashkova').location-list__link Машкова, 24 (М. Курская)
+                            a(href='https://oldboybarbershop.com/moscow/mashkova').location-list__link Машкова, 24
+                            .location-list__metro.moscow: span Курская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/michurinskiy').location-list__link Мичуринский Проспект, 26
+                            .location-list__metro.moscow: span Раменки
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/shabolovka').location-list__link Мытная, 52
+                            .location-list__metro.moscow: span Шаболовская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/nagatinskaya').location-list__link Нагатинская, 16
+                            .location-list__metro.moscow: span Нагатинская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/nahimovsky').location-list__link Нахимовский Проспект, 9К1
+                            .location-list__metro.moscow: span Нахимовский проспект
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/novoslobodskaya').location-list__link Новослободская, 52
+                            .location-list__metro.moscow: span Менделеевская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/krylatskoe').location-list__link Осенний Бульвар, 7К1
+                            .location-list__metro.moscow: span Крылатское
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/marino').location-list__link Поречная, 10 (ТЦ Мари)
+                            .location-list__metro.moscow: span 
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/academicheskaya').location-list__link Пр. 60-Летия Октября, 14
+                            .location-list__metro.moscow: span Академическая
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/presnenskiy').location-list__link Пресненский Вал, 14 К2
+                            .location-list__metro.moscow: span Улица 1905 года
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/belyaevo').location-list__link Профсоюзная, 102А
+                            .location-list__metro.moscow: span Беляево
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/central').location-list__link Пятницкая, 6/1
+                            .location-list__metro.moscow: span Новокузнецкая
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/rublevka').location-list__link Рублёвское Шоссе, 62
+                            .location-list__metro.moscow: span 
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/svetmsk').location-list__link Святоозерская, 16
+                            .location-list__metro.moscow: span 
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/degunino').location-list__link Софьи Ковалевской, 6
+                            .location-list__metro.moscow: span Селигерская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/kutuza').location-list__link Студенческая, 26
+                            .location-list__metro.moscow: span 
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/vernad').location-list__link Удальцова, 71 К2
+                            .location-list__metro.moscow: span Проспект Вернадского
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/newbutovo').location-list__link Чечерский проезд, 122 К1
+                            .location-list__metro.moscow: span Бунинская аллея
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/moscow/sheremetevskaya').location-list__link Шереметьевская, 20А
+                            .location-list__metro.moscow: span Марьина роща
                             
                     ul.location-list
                         h4.location-list__city Московская область
@@ -597,44 +640,66 @@ section.location-selector.location-selector--hidden
                         h4.location-list__city Санкт–Петербург
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/tehnolozhka').location-list__link 8-Я Красноармейская, 4/5
+                            .location-list__metro.piter: span Технологический институт
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/petrograd').location-list__link Воскова, 16
+                            .location-list__metro.piter: span Горьковская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/ozerki').location-list__link Выборгское шоссе, 13А
+                            .location-list__metro.piter: span Проспект Просвещения
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/gatchina').location-list__link Гатчина, пр. 25-го октября, 34
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/gjatskaya').location-list__link Гжатская, 22 К1
+                            .location-list__metro.piter: span Академическая
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/nevsky').location-list__link Грибоедова, 10
+                            .location-list__metro.piter: span Невский проспект
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/kirochnaya').location-list__link Кирочная, 9
+                            .location-list__metro.piter: span Чернышевская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/kudrovo').location-list__link Кудрово, Венская 4/1
+                            .location-list__metro.piter: span Дыбенко
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/leninskiy').location-list__link Ленинский проспект, 78 К1
+                            .location-list__metro.piter: span Ленинский проспект
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/parnas').location-list__link М. Дудина, 23 К1
+                            .location-list__metro.piter: span Парнас
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/sadovaya').location-list__link Московский проспект, 6
+                            .location-list__metro.piter
+                                span Садовая
+                                span Спасская
+                                span Сенная площадь
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/ostrov').location-list__link Нахимова, 20
+                            .location-list__metro.piter: span Приморская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/optikov').location-list__link Оптиков, 34/1
+                            .location-list__metro.piter: span Береговая
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/obuhov').location-list__link Пр. Обуховской обороны, 271А
+                            .location-list__metro.piter: span Пролетарская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/ozerki-toreza').location-list__link Проспект Тореза, 95
+                            .location-list__metro.piter: span Озерки
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/pionerskaya').location-list__link Проспект Королёва, 2
+                            .location-list__metro.piter: span Пионерская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/slava').location-list__link Проспект Славы, 43/49
+                            .location-list__metro.piter: span Международная
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/mayakovskaya').location-list__link Пушкинская, 12
+                            .location-list__metro.piter: span Площадь Восстания
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/tipanova').location-list__link Типанова, 21, Лит. А
+                            .location-list__metro.piter: span Московская
                         li.location-list__item
                             a(href='https://oldboybarbershop.com/spb/ladozhsky').location-list__link Проспект Энтузиастов, 33 К1
+                            .location-list__metro.piter: span Ладожская
 
                     ul.location-list
                         h4.location-list__city Сочи
