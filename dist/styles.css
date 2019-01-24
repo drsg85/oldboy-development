@@ -2032,15 +2032,13 @@ html, body {
     text-transform: none;
     border-radius: 50%; }
 
-.location-list__metro.piter span {
-  color: #0065a8; }
-  .location-list__metro.piter span::before {
-    border: 1px solid rgba(0, 101, 168, 0.5); }
+.location-list__metro.piter span::before {
+  color: #0065a8;
+  border: 1px solid rgba(0, 101, 168, 0.5); }
 
-.location-list__metro.moscow span {
-  color: #af212e; }
-  .location-list__metro.moscow span::before {
-    border: 1px solid rgba(175, 33, 46, 0.5); }
+.location-list__metro.moscow span::before {
+  color: #af212e;
+  border: 1px solid rgba(175, 33, 46, 0.5); }
 
 .branch-addresses {
   padding: 25px;

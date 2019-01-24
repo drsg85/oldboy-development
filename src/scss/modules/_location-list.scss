@@ -145,20 +145,20 @@
 }
 
 .location-list__metro.piter span {
-    // typography
-    color: $blue;
-    
     &::before {
+        // typography
+        color: $blue;
+
         // visual
         border: 1px solid rgba($blue, 0.5);
     }
 }
 
 .location-list__metro.moscow span {
-    // typography
-    color: $red;
-
     &::before {
+        // typography
+        color: $red;
+
         // visual
         border: 1px solid rgba($red, 0.5);
     }
