@@ -97,9 +97,15 @@ class LocationSearch {
         return true;
       } else if (branch.address.toLowerCase().includes(searchText)) {
         return true;
-      }
+      } else {
+        for (let i = 0; i < branch.stations.length; i++) {
+          if (branch.stations[i].toLowerCase().includes(searchText)) {
+            return true;
+          }
+        }
 
-      return false;
+        return false;
+      }
     });
 
     return filteredBranches;
@@ -126,11 +132,26 @@ class LocationSearch {
       foundBranches.forEach((branch) => {
         let item = document.createElement('li');
         item.classList.add('search-results__item');
+
         let link = document.createElement('a');
         link.classList.add('search-results__link');
         link.textContent = branch.city + ', ' + branch.address;
         link.href = branch.link;
         item.appendChild(link);
+
+        if (branch.stations.length > 0) {
+          let metro = document.createElement('div');
+          metro.classList.add('search-results__metro');
+
+          branch.stations.forEach((station) => {
+            let stationElement = document.createElement('span');
+            stationElement.textContent = station;
+            metro.appendChild(stationElement);
+          });
+
+          item.appendChild(metro);
+        }
+
         docFragment.appendChild(item);
       });
   

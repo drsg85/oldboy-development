@@ -132,3 +132,51 @@
     // visual
     background-color: $golden;
 }
+
+.search-results__metro span{
+    // positioning
+    position: relative;
+    left: 2px;
+    top: -4px;
+
+    // box model
+    display: inline-block;
+    vertical-align: middle;
+    padding: 3px 10px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    &::before {
+        content: 'м';
+
+        // positioning
+        position: relative;
+        top: -1px;
+
+        // box model
+        display: inline-block;
+        vertical-align: middle;
+        height: 14px;
+        width: 14px;
+        margin-right: 4px;
+        padding: 2px;
+        padding-top: 1px;
+
+        // typography
+        color: $light;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        text-transform: none;
+
+        // visual
+        border: 1px solid rgba($red, 0.5);
+        border-radius: 50%;
+        background-color: $red;
+    }
+}
