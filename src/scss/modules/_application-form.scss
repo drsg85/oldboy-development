@@ -3,9 +3,10 @@
     padding-bottom: 55px;
     
     // visual
-    //background-color: rgba($golden, 0.1);
+    background-color: rgba($golden, 0.1);
     //background: linear-gradient(180deg, rgba(214,163,84,0) 0%, rgba(214,163,84,0.1) 100%);
     background: linear-gradient(180deg, rgba(214,163,84,0) 0%, rgba(214,163,84,0.1) 37%, rgba(214,163,84,0.1) 38%, rgba(214,163,84,0.2) 52%);
+
     @include atTablet {
         // box model
         margin-bottom: 150px;
@@ -29,14 +30,15 @@
         // box model
         max-width: 380px;
         width: 100%;
-        margin-left: calc((100% - 700px)/2);
+        margin-left: calc((100% - 700px) / 2);
+
         &:after {
             content: '';
 
             // positioning
             position: absolute;
             right: -450px;
-            bottom: -170px;
+            bottom: -220px;
 
             // box model
             display: block;
@@ -44,7 +46,7 @@
             height: 100%;
 
             // visual
-            background-image: url('img/chair.png');
+            background-image: url('./img/chair.png');
             background-size: auto;
             background-repeat: no-repeat;
             background-position: 42% 0;
@@ -54,6 +56,5 @@
                 right: -550px;
             }
         }
-        
     }
 }

@@ -6756,6 +6756,7 @@ html, body {
 
 .application-form {
   padding-bottom: 55px;
+  background-color: rgba(214, 163, 84, 0.1);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(214, 163, 84, 0)), color-stop(37%, rgba(214, 163, 84, 0.1)), color-stop(38%, rgba(214, 163, 84, 0.1)), color-stop(52%, rgba(214, 163, 84, 0.2)));
   background: linear-gradient(180deg, rgba(214, 163, 84, 0) 0%, rgba(214, 163, 84, 0.1) 37%, rgba(214, 163, 84, 0.1) 38%, rgba(214, 163, 84, 0.2) 52%); }
   @media (min-width: 700px) {
@@ -6775,16 +6776,16 @@ html, body {
       position: relative;
       max-width: 380px;
       width: 100%;
-      margin-left: calc((100% - 700px)/2); }
+      margin-left: calc((100% - 700px) / 2); }
       .application-form__content:after {
         content: '';
         position: absolute;
         right: -450px;
-        bottom: -170px;
+        bottom: -220px;
         display: block;
         width: 540px;
         height: 100%;
-        background-image: url("img/chair.png");
+        background-image: url("./img/chair.png");
         background-size: auto;
         background-repeat: no-repeat;
         background-position: 42% 0; } }
@@ -6951,6 +6952,7 @@ html, body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      margin-bottom: 120px;
       text-align: center; } }
   .fr-benefit:before {
     content: counter(li-counter, decimal-leading-zero);
