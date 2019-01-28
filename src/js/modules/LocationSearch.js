@@ -15,7 +15,6 @@ class LocationSearch {
     this.notFoundLabel = this.locationSelector.querySelector('.search-results__not-found');
 
     this.branches = this.generateBranches();
-    console.log(this.branches);
     this.events();
     this.hideResults();
   }

@@ -5243,7 +5243,8 @@ html, body {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding-bottom: 60px; } }
+      padding-bottom: 60px;
+      background-image: none; } }
   @media (min-width: 1200px) {
     .team {
       background-image: none;
