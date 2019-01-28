@@ -83,7 +83,7 @@
     // visual
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.25s linear;
+    // transition: all 0.25s linear;
 
     @include atTablet {
         // box model
@@ -93,8 +93,16 @@
 }
 
 .location-list__item a:hover {
+    // positioning
+    position: relative;
+    z-index: 9;
+
+    // box model
+    max-width: unset;
+
     // typography
     color: $light;
+    text-overflow: unset;
 
     // visual
     background-color: $golden;
