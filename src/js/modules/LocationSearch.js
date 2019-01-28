@@ -15,6 +15,7 @@ class LocationSearch {
     this.notFoundLabel = this.locationSelector.querySelector('.search-results__not-found');
 
     this.branches = this.generateBranches();
+    console.log(this.branches);
     this.events();
     this.hideResults();
   }
@@ -57,14 +58,24 @@ class LocationSearch {
 
     for (let i = 0; i < locationLists.length; i++) {
       let city = locationLists[i].querySelector('.location-list__city').textContent;
-      let items = locationLists[i].querySelectorAll('.location-list__item a');
+      let items = locationLists[i].querySelectorAll('.location-list__item');
 
       for (let j = 0; j < items.length; j++) {
-        branches.push({
+        let itemLink = items[j].querySelector('a');
+        let stations = items[j].querySelectorAll('.location-list__metro span');
+
+        let branch = {
           city: city,
-          address: items[j].textContent,
-          link: items[j].href
-        });
+          address: itemLink.textContent,
+          link: itemLink.href,
+          stations: []
+        };
+
+        for (let k = 0; k < stations.length; k++) {
+          branch.stations.push(stations[k].textContent);
+        }
+
+        branches.push(branch);
       }
     }
 
@@ -83,7 +94,13 @@ class LocationSearch {
     searchText = searchText.toLocaleLowerCase();
 
     let filteredBranches = branchList.filter((branch) => {
-      return branch.city.toLowerCase().includes(searchText);
+      if (branch.city.toLowerCase().includes(searchText)) {
+        return true;
+      } else if (branch.address.toLowerCase().includes(searchText)) {
+        return true;
+      }
+
+      return false;
     });
 
     return filteredBranches;
