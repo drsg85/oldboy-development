@@ -803,6 +803,7 @@ html, body {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
+      min-height: 150px;
       text-align: left; } }
   @media (min-width: 1000px) {
     .hero__buttons-n-social {
@@ -954,7 +955,7 @@ html, body {
     .hero__app {
       margin: 0;
       position: absolute;
-      bottom: 40px;
+      bottom: 20px;
       right: -40px;
       top: 0;
       z-index: 1;
