@@ -11,14 +11,14 @@ class LocationSelector {
   }
 
   events () {
-    this.city.addEventListener('click', (event) => {
-      event.preventDefault();
+    this.city.addEventListener('click', (evt) => {
+      evt.preventDefault();
 
       this.toggleSelector();
     });
 
-    this.citySelectorClose.addEventListener('click', () => {
-      event.preventDefault();
+    this.citySelectorClose.addEventListener('click', (evt) => {
+      evt.preventDefault();
 
       this.toggleSelector();
     });
