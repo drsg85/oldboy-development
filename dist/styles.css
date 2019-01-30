@@ -318,9 +318,10 @@ body {
   margin: 0 auto; }
 
 html {
-  overflow-x: hidden;
   position: relative;
-  height: 100%; }
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch; }
 
 *,
 *::before,
@@ -1765,9 +1766,15 @@ html {
   z-index: 999;
   width: 100%;
   background-color: #ffffff;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  overflow: auto; }
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+  @media (min-width: 1000px) {
+    .location-selector {
+      overflow-x: hidden;
+      overflow-y: scroll; } }
 
 .location-selector--hidden {
   left: -110%;
@@ -1849,13 +1856,7 @@ html {
   position: fixed;
   top: 25px;
   right: 20px;
-  z-index: 1000;
-  -webkit-transition-delay: all 0.3s;
-  transition-delay: all 0.3s; }
-  .location-selector__close--hidden {
-    position: absolute;
-    -webkit-transition-delay: all 0.3s;
-    transition-delay: all 0.3s; }
+  z-index: 1000; }
   @media (min-width: 1000px) {
     .location-selector__close {
       top: 65px;

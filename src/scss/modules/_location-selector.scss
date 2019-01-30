@@ -11,10 +11,16 @@
 
     // visual
     background-color: $light;
-    transition: all 0.3s ease-out;
-    // overflow-x: hidden;
-    // overflow-y: auto;
-    overflow: auto;
+    transition: all 0.15s ease-out;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch;
+    
+    @include atDesktopS {
+        // visual
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 }
 
 .location-selector--hidden {
@@ -89,11 +95,6 @@
         color: $golden;
         font-style: normal;
     }
-
-    @include atDesktopS {
-        // box model
-        // display: none;
-    }
 }
 
 .location-selector__fast-nav {
@@ -131,17 +132,6 @@
     top: 25px;
     right: 20px;
     z-index: 1000;
-
-    // visual
-    transition-delay: all 0.3s;
-
-    &--hidden {
-        // positioning
-        position: absolute;
-
-        // visual
-        transition-delay: all 0.3s;
-    }
 
     @include atDesktopS {
         top: 65px;

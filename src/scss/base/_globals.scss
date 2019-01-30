@@ -28,9 +28,10 @@ body {
 // }
 
 html {
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
     height: 100%;
+    -webkit-overflow-scrolling:touch;
 }
 
 *,
