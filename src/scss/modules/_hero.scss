@@ -461,10 +461,12 @@
         margin-bottom: -160px;
 
         // visual
+        visibility: hidden;
         opacity: 0;
 
         @include atTablet {
             // visual
+            visibility: visible;
             opacity: 1;
             margin-bottom: 0;
         }

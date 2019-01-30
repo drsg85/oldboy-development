@@ -744,9 +744,11 @@ html {
       padding-bottom: 40px; } }
   .hero__caption--branch {
     margin-bottom: -160px;
+    visibility: hidden;
     opacity: 0; }
     @media (min-width: 700px) {
       .hero__caption--branch {
+        visibility: visible;
         opacity: 1;
         margin-bottom: 0; } }
     @media (min-width: 1000px) {
