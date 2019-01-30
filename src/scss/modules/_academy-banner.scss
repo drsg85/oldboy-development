@@ -13,6 +13,7 @@
     background-image: url('./img/bgs/academy-m.jpg');
     background-size: cover;
     background-position: top center;
+    overflow: hidden;
 
     @include atDesktopS {
         // box model
@@ -22,6 +23,7 @@
 
         // visual
         background-position: center center;
+        overflow: unset;
     }
 
     @include atDesktopL {

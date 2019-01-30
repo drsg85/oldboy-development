@@ -12,8 +12,9 @@
     // visual
     background-color: $light;
     transition: all 0.3s ease-out;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    overflow: auto;
 }
 
 .location-selector--hidden {

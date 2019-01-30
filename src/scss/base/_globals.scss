@@ -11,16 +11,26 @@ body {
     margin: 0 auto;
 }
 
-html, body {
-    // box model
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+// html, body {
+//     // box model
+//     width: 100%;
+//     height: 100%;
+//     overflow-x: hidden;
 
-    @include atFullHD {
-        // box model
-        overflow-x: inherit;
-    }
+//     @include atFullHD {
+//         // box model
+//         overflow-x: inherit;
+//     }
+// }
+
+// body {
+//     overflow-y: scroll;
+// }
+
+html {
+    overflow-x: hidden;
+    position: relative;
+    height: 100%;
 }
 
 *,

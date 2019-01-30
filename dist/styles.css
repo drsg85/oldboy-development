@@ -317,13 +317,10 @@ body {
   max-width: 1920px;
   margin: 0 auto; }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; }
-  @media (min-width: 1920px) {
-    html, body {
-      overflow-x: inherit; } }
+html {
+  overflow-x: hidden;
+  position: relative;
+  height: 100%; }
 
 *,
 *::before,
@@ -1195,6 +1192,10 @@ html, body {
     .contact__value {
       font-size: 1rem; } }
 
+.contact__value a {
+  color: #ffffff;
+  text-decoration: none; }
+
 .city-select {
   margin-top: -2px;
   text-align: right; }
@@ -1766,8 +1767,7 @@ html, body {
   background-color: #ffffff;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow: auto; }
 
 .location-selector--hidden {
   left: -110%;
@@ -5350,7 +5350,8 @@ html, body {
   box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
   background-image: url("./img/bgs/academy-m.jpg");
   background-size: cover;
-  background-position: top center; }
+  background-position: top center;
+  overflow: hidden; }
   @media (min-width: 1000px) {
     .academy-banner {
       display: -webkit-box;
@@ -5358,7 +5359,8 @@ html, body {
       display: flex;
       margin: 40px;
       margin-bottom: 120px;
-      background-position: center center; } }
+      background-position: center center;
+      overflow: unset; } }
   @media (min-width: 1500px) {
     .academy-banner {
       width: 1400px;
