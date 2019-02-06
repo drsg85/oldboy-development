@@ -1,4 +1,7 @@
 .price-list {
+    // positioning
+    position: relative;
+
     // box model
     margin-bottom: -25px;
 
@@ -11,11 +14,6 @@
     }
 
     @include atDesktopS {
-        // box model
-        display: flex;
-        justify-content: space-between;
-        justify-content: flex-start;
-
         // visual
         background-image: url('./img/bgs/price-bottom-d.jpg');
         background-position: top right;
@@ -24,7 +22,10 @@
 }
 
 .price-list__header {
-    
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+    }
 }
 
 .price-list__content {
@@ -48,13 +49,23 @@
 
     @include atDesktopS {
         // box model
-        flex-grow: 1;
-        padding-left: 60px;
+        padding-left: 400px;
+        min-width: 900px;
     }
 
     @include atDesktopM {
         // box model
-        max-width: 800px;
+        width: 1100px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 0;
+        padding-top: 250px;
+        padding-bottom: 100px;
+        min-width: 800px;
+        width: 800px;
+        margin: 0 auto;
     }
 }
 

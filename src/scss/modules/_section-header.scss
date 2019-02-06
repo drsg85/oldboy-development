@@ -10,12 +10,13 @@
 
     @include atTablet {
         // box model
-        min-width: 350px;
+        max-width: inherit;
+        width: 350px;
     }
 
     @include atDesktopL {
         // box model
-        min-width: 500px;
+        width: 500px;
     }
 }
 
