@@ -2260,12 +2260,12 @@ html {
   width: 100%;
   color: #896322;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.75rem;
-  text-shadow: 0 0 20px #896322; }
+  font-size: 1.75rem; }
   @media (min-width: 700px) {
     .section-header__subtitle {
       padding-right: 20px;
-      font-size: 2rem; } }
+      font-size: 2rem;
+      text-shadow: 0 0 20px #896322; } }
   @media (min-width: 1000px) {
     .section-header__subtitle {
       padding-right: 40px;

@@ -25,9 +25,6 @@
     margin-left: auto;
 
     .section-header__title {
-        // typography
-        // text-align: right;
-
         &::after {
             // positioning
             right: auto;
@@ -128,14 +125,16 @@
     color: $darkGold;
     font-family: $titleFont;
     font-size: 1.75rem;
-    text-shadow: 0 0 20px $darkGold;
-
+    
     @include atTablet {
         // box model
         padding-right: 20px;
-
+        
         // typography
         font-size: 2rem;
+
+        // visual
+        text-shadow: 0 0 20px $darkGold;
     }
 
     @include atDesktopS {
