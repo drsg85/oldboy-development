@@ -17,12 +17,21 @@
     // visual
     border: 2px solid $light;
     border-radius: 23px;        // 1/2 of line-height + 2px border-width
+    transition: all 0.25s ease-in-out;
 
     &--thin {
         // typography
         letter-spacing: 2px;
         font-size: 0.7rem;
         font-weight: 400;
+    }
+
+    &:hover {
+        // typography
+        color: $dark;
+
+        // visual
+        background-color: $light;
     }
 }
 

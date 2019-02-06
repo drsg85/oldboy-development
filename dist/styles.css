@@ -1492,11 +1492,16 @@ html {
   text-align: center;
   text-decoration: none;
   border: 2px solid #ffffff;
-  border-radius: 23px; }
+  border-radius: 23px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
   .app-button--thin {
     letter-spacing: 2px;
     font-size: 0.7rem;
     font-weight: 400; }
+  .app-button:hover {
+    color: #131313;
+    background-color: #ffffff; }
 
 .app-button i::before {
   display: inline-block;
@@ -6127,9 +6132,14 @@ html {
   line-height: 34px;
   text-decoration: none;
   border: 2px solid #ffffff;
-  border-radius: 50%; }
+  border-radius: 50%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
   .social__icon::before {
     font-size: 1rem; }
+  .social__icon:hover {
+    color: #131313;
+    background-color: #ffffff; }
 
 .countdown {
   display: -webkit-box;
