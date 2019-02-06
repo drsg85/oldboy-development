@@ -16,11 +16,11 @@
     font-family: $titleFont;
     font-size: 1rem;
 
-    @media (min-width: 340px) {
+    @media (min-width: 395px) {
         // box model
         width: auto;
     }
-
+    
     @include atTablet {
         // typography
         font-size: 1.125rem;

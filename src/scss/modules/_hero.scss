@@ -8,6 +8,7 @@
 
     // visual
     background-color: $dark;
+    background-repeat: no-repeat;
     overflow: hidden;
     
     @include atTablet {
@@ -73,8 +74,14 @@
     
     &--city {
         // visual
-        background-image: url('./img/bgs/map.jpg');
+        background-image: url('./img/bgs/city-d.jpg');
+        background-size: 100%;
         background-position: top left;
+
+        @include atDesktopS {
+            // visual
+            background-size: cover;
+        }
     }
     
     &--branch {
@@ -309,7 +316,12 @@
 
     // box model
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+
+    @include atTablet {
+        // box model
+        margin-top: 10px;
+    }
 }
 
 .hero__logo {
@@ -882,15 +894,33 @@
 .hero__branches {
     @include atDesktopS {
         // box model
-        margin-top: -40px;
-        margin-left: 40px;
-        margin-bottom: 20px;
+        padding: 0 40px;
         width: calc(100% - 300px);
-    }
-
-    @include atDesktopM {
-        // box model
         max-width: 920px;
-        margin-bottom: 0;
+    }
+}
+
+.hero__branches-content {
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+
+.hero__branches-title {
+    // box model
+    margin-bottom: 40px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    text-align: center;
+
+    & em {
+        // typography
+        color: $golden;
+        font-style: normal;
     }
 }
