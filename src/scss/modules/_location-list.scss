@@ -172,27 +172,25 @@
     }
 }
 
-// .location-list__item em {
-//     // visual
-//     color: $golden;
-//     font-family: $titleFont;
-// }
+.location-list--city {
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-// .location-list__item:hover {
-//     // typography
-//     color: $light;
+    .location-list__item {
+        @include atTablet {
+            // box model
+            flex-basis: 40%;
+            width: 40%;
+        }
 
-//     &::after {
-//     // positioning
-//     z-index: -1;
-
-//     // visual
-//     opacity: 1;
-//     transition: all 0.35s linear;
-//     }
-
-//     em {
-//         // box model
-//         opacity: 0;
-//     }
-// }
+        @include atDesktopS {
+            // box model
+            flex-basis: 280px;
+            width: 280px;
+        }
+    }
+}
