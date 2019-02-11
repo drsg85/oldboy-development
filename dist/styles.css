@@ -456,7 +456,7 @@ html {
         max-height: 740px; } }
     @media (min-width: 1500px) {
       .hero--main {
-        min-height: 720px;
+        min-height: 780px;
         height: 100vh;
         max-height: 900px; } }
   .hero--city {
