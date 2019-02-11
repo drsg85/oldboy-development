@@ -2015,6 +2015,7 @@ html {
 .location-list__item a {
   display: inline-block;
   padding: 7px 12px;
+  max-width: 100%;
   color: #896322;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
@@ -2109,7 +2110,7 @@ html {
 .branch-addresses__index {
   position: relative;
   margin-bottom: 40px;
-  margin-right: 25px; }
+  margin-right: -20px; }
   @media (min-width: 700px) {
     .branch-addresses__index {
       width: 50%;

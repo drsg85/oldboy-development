@@ -68,6 +68,7 @@
     // box model
     display: inline-block;
     padding: 7px 12px;
+    max-width: 100%;
 
     // typography
     color: $darkGold;
@@ -83,11 +84,9 @@
     // visual
     border-radius: 20px;
     overflow: hidden;
-    // transition: all 0.25s linear;
 
     @include atTablet {
         // box model
-        // max-width: 240px;
         max-width: 95%;
     }
 }
@@ -171,28 +170,3 @@
         border: 1px solid rgba($red, 0.5);
     }
 }
-
-// .location-list__item em {
-//     // visual
-//     color: $golden;
-//     font-family: $titleFont;
-// }
-
-// .location-list__item:hover {
-//     // typography
-//     color: $light;
-
-//     &::after {
-//     // positioning
-//     z-index: -1;
-
-//     // visual
-//     opacity: 1;
-//     transition: all 0.35s linear;
-//     }
-
-//     em {
-//         // box model
-//         opacity: 0;
-//     }
-// }
