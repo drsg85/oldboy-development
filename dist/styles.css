@@ -461,7 +461,6 @@ html {
         max-height: 900px; } }
   .hero--city {
     background-image: url("./img/bgs/city-d.jpg");
-    background-size: cover;
     background-position: top left; }
     @media (min-width: 1000px) {
       .hero--city {
@@ -1064,9 +1063,8 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch; } }
