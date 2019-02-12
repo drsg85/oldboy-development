@@ -75,7 +75,7 @@
     &--city {
         // visual
         background-image: url('./img/bgs/city-d.jpg');
-        // background-size: cover;
+        background-size: cover;
         background-position: top left;
 
         @include atDesktopS {

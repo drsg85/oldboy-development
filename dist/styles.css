@@ -461,6 +461,7 @@ html {
         max-height: 900px; } }
   .hero--city {
     background-image: url("./img/bgs/city-d.jpg");
+    background-size: cover;
     background-position: top left; }
     @media (min-width: 1000px) {
       .hero--city {
@@ -6231,7 +6232,14 @@ a.chosen-branch__value {
   font-size: 1rem;
   line-height: 1.75; }
 
-.policy__title {
+.policy__content li {
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75; }
+
+.policy__title,
+.policy__content h2 {
   border-top: 2px solid #d6a354;
   border-bottom: 2px solid #d6a354;
   margin-left: -20px;
@@ -6241,13 +6249,15 @@ a.chosen-branch__value {
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.25rem; }
   @media (min-width: 700px) {
-    .policy__title {
+    .policy__title,
+    .policy__content h2 {
       margin-left: -40px;
       padding: 20px 40px;
       max-width: 300px;
       font-size: 1.5rem; } }
   @media (min-width: 1200px) {
-    .policy__title {
+    .policy__title,
+    .policy__content h2 {
       margin-left: -50px;
       max-width: 500px;
       font-size: 2rem; } }
