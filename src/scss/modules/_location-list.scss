@@ -176,7 +176,7 @@
         // box model
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     .location-list__item {
@@ -188,8 +188,20 @@
 
         @include atDesktopS {
             // box model
-            flex-basis: 280px;
-            width: 280px;
+            flex-basis: 270px;
+            width: 270px;
+        }
+
+        @include atDesktopM {
+            // box model
+            flex-basis: 320px;
+            width: 320px;
+        }
+
+        @include atDesktopL {
+            // box model
+            flex-basis: 300px;
+            width: 300px;
         }
     }
 }

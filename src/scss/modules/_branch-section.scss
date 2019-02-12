@@ -6,6 +6,21 @@
         // box model
         padding: 40px;
     }
+
+    @include atDesktopS {
+        // box model
+        padding-right: 0;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 30px 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 40px 80px;
+    }
 }
 
 .branch-section__title {

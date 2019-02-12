@@ -461,7 +461,7 @@ html {
         max-height: 900px; } }
   .hero--city {
     background-image: url("./img/bgs/city-d.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-position: top left; }
     @media (min-width: 1000px) {
       .hero--city {
@@ -863,6 +863,9 @@ html {
       margin: 0;
       margin-top: 60px;
       text-align: left; } }
+  @media (min-width: 1000px) {
+    .hero__buttons--center {
+      margin: 0 auto; } }
 
 .hero__vacancy {
   position: relative;
@@ -1092,6 +1095,20 @@ html {
     .hero-caption {
       width: 260px; } }
 
+.hero-caption--city {
+  margin-top: -60px;
+  margin-bottom: 100px; }
+  @media (min-width: 1000px) {
+    .hero-caption--city {
+      margin-top: -85px;
+      margin-bottom: 50px; } }
+  @media (min-width: 1200px) {
+    .hero-caption--city {
+      margin-top: -80px; } }
+  @media (min-width: 1500px) {
+    .hero-caption--city {
+      margin-top: -75px; } }
+
 .hero-caption__title {
   margin: 0;
   color: #ffffff;
@@ -1099,6 +1116,12 @@ html {
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.5; }
+
+.hero-caption__title--hidden {
+  display: none;
+  font-size: 0; }
+  .hero-caption__title--hidden .hero-caption__big {
+    font-size: 0; }
 
 .hero-caption__big {
   position: relative;
@@ -1170,9 +1193,18 @@ html {
 
 .hero-caption__location {
   margin: 0;
-  color: #ffffff;
+  color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.25rem; }
+  font-size: 1rem; }
+  @media (min-width: 700px) {
+    .hero-caption__location {
+      font-size: 2rem; } }
+  @media (min-width: 1000px) {
+    .hero-caption__location {
+      font-size: 1.75rem; } }
+  @media (min-width: 1500px) {
+    .hero-caption__location {
+      font-size: 2rem; } }
 
 .contact {
   margin-bottom: 20px;
@@ -2089,9 +2121,9 @@ html {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; } }
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
 
 @media (min-width: 700px) {
   .location-list--city .location-list__item {
@@ -2101,9 +2133,21 @@ html {
 
 @media (min-width: 1000px) {
   .location-list--city .location-list__item {
-    -ms-flex-preferred-size: 280px;
-    flex-basis: 280px;
-    width: 280px; } }
+    -ms-flex-preferred-size: 270px;
+    flex-basis: 270px;
+    width: 270px; } }
+
+@media (min-width: 1200px) {
+  .location-list--city .location-list__item {
+    -ms-flex-preferred-size: 320px;
+    flex-basis: 320px;
+    width: 320px; } }
+
+@media (min-width: 1500px) {
+  .location-list--city .location-list__item {
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+    width: 300px; } }
 
 .branch-addresses {
   padding: 25px;
@@ -5671,6 +5715,15 @@ a.chosen-branch__value {
   @media (min-width: 700px) {
     .branch-section {
       padding: 40px; } }
+  @media (min-width: 1000px) {
+    .branch-section {
+      padding-right: 0; } }
+  @media (min-width: 1200px) {
+    .branch-section {
+      padding: 30px 50px; } }
+  @media (min-width: 1500px) {
+    .branch-section {
+      padding: 40px 80px; } }
 
 .branch-section__title {
   margin: 0;

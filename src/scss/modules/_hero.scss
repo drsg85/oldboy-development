@@ -27,7 +27,7 @@
         // box model
         padding: 50px 80px;
     }
-    
+
     &--main {
         // box model
         display: flex;
@@ -75,7 +75,7 @@
     &--city {
         // visual
         background-image: url('./img/bgs/city-d.jpg');
-        background-size: 100%;
+        background-size: cover;
         background-position: top left;
 
         @include atDesktopS {
@@ -602,6 +602,13 @@
 
         // typography
         text-align: left;
+    }
+
+    &--center {
+        @include atDesktopS {
+            // box model
+            margin: 0 auto;
+        }
     }
 }
 

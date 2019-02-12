@@ -15,6 +15,28 @@
     }
 }
 
+.hero-caption--city {
+    // box model
+    margin-top: -60px;
+    margin-bottom: 100px;
+
+    @include atDesktopS {
+        // box model
+        margin-top: -85px;
+        margin-bottom: 50px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin-top: -80px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-top: -75px;
+    }
+}
+
 .hero-caption__title {
     // box model
     margin: 0;
@@ -25,6 +47,19 @@
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1.5;
+}
+
+.hero-caption__title--hidden {
+    // box model
+    display: none;
+
+    // typography
+    font-size: 0;
+
+    .hero-caption__big {
+        // typography
+        font-size: 0;
+    }
 }
 
 .hero-caption__big {
@@ -152,7 +187,24 @@
     margin: 0;
 
     // typography
-    color: $light;
+    color: $golden;
     font-family: $titleFont;
-    font-size: 1.25rem;
+    font-size: 1rem;
+
+    // border-top: 3px solid $golden;
+
+    @include atTablet {
+        // typography
+        font-size: 2rem;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.75rem;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 2rem;
+    }
 }
