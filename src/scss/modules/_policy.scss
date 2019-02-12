@@ -67,7 +67,16 @@
     line-height: 1.75;
 }
 
-.policy__title {
+.policy__content li {
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.policy__title,
+.policy__content h2 {
     // box model
     border-top: 2px solid $golden;
     border-bottom: 2px solid $golden;
