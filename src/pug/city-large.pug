@@ -37,55 +37,165 @@ html(lang="en")
                     .hero__buttons
                         a.button(href="#") Запись онлайн<br>
 
-                .hero__branches
-                    .branch-list.branch-list--hidden
-                        button.branch-list__button Посмотреть филиалы списком
-                            .branch-list__button-mid
-                        .branch-list__content
-                            a.branch-link(href="#") ул. Театральная, 30
-                            a.branch-link.branch-link--metro(href="#") ул. Артиллерийская, 22
-                            a.branch-link.branch-link--metro(href="#") 3-я Владимирская, 20
-                            a.branch-link.branch-link--metro(href="#") 6-я Радиальная, 5 к.4
-                            a.branch-link(href="#") Автозаводская, 18
-                            a.branch-link(href="#") Алтуфьевское шоссе, 70к.1
-                            a.branch-link(href="#") Бориса Галушкина, 17
-                            a.branch-link(href="#") Боровское шоссе, 36
-                            a.branch-link(href="#") Вертолетчиков, 9/1
-                            a.branch-link.branch-link--metro(href="#") Вешняковская, 2
-                            a.branch-link.branch-link--metro(href="#") Осенний бульвар, 7к1.
-                            a.branch-link(href="#") Поречная, 10 (ТЦ Мари)
-                            a.branch-link.branch-link--metro(href="#") Вишневая, 9к.1
-                            a.branch-link(href="#") Волгоградский пр-кт, 26а
-                            a.branch-link.branch-link--metro(href="#") Волоколамское ш. 15/22
-                            a.branch-link(href="#") Гарибальди, 7
-                            a.branch-link(href="#") Генерала Кузнецова, 11к.1
-                            a.branch-link.branch-link--metro(href="#") Главмосстроя, 12
-                            a.branch-link(href="#") Гончарная набережная, 9/16 с2
-                            a.branch-link(href="#") Дмитровское шоссе, 62с5
-                            a.branch-link(href="#") Добролюбова, 20
-                            a.branch-link(href="#") Новослободская, 52
-                            a.branch-link(href="#") Киевское шоссе, 6 стр.1
-                            a.branch-link(href="#") Кировоградская, 9к1
-                            a.branch-link(href="#") Красноказарменная, 19
-                            a.branch-link(href="#") Ленинградское шоссе, 120 к3
-                            a.branch-link(href="#") Маршала Вершинина, 8к.1
-                            a.branch-link(href="#") Машкова, 24 (м. Курская)
-                            a.branch-link(href="#") Мичуринский проспект, 26
-                            a.branch-link(href="#") Мытная, 52
-                            a.branch-link(href="#") Нагатинская, 16
-                            a.branch-link(href="#") Нахимовский проспект, 9к1
-                            a.branch-link(href="#") Пр. 60-летия октября, 14
-                            a.branch-link(href="#") Пресненский вал, 14 к.2
-                            a.branch-link(href="#") Профсоюзная 102А
-                            a.branch-link(href="#") Пятницкая, 6/1
-                            a.branch-link(href="#") Святоозерская, 16
-                            a.branch-link(href="#") Студенческая, 26
-                            a.branch-link(href="#") Удальцова, 71 к2
-                            a.branch-link(href="#") Шереметьевская, 20а
-
-
 
         main
+            section.branch-section
+                header.branch-section__header
+                    h2.branch-section__title Выбери <em>свой</em> барбершоп
+
+                .branch-section__content
+                    ul.location-list.location-list--city
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/perovo">3-Я Владимирская, 20</a>
+                            <div class="location-list__metro moscow"><span>Перово</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/caricino">6-Я Радиальная, 5 К.4</a>
+                            <div class="location-list__metro moscow"><span>Царицино</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/avtozavodskaya">Автозаводская, 18</a>
+                            <div class="location-list__metro moscow"><span>Автозаводская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/altufyevo">Алтуфьевское Шоссе, 70К.1</a>
+                            <div class="location-list__metro moscow"><span>Алтуфьево</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/fili">Береговой Проезд, 5 К2</a>
+                            <div class="location-list__metro moscow"><span>Шелепиха</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vdnh">Бориса Галушкина, 17</a>
+                            <div class="location-list__metro moscow"><span>ВДНХ</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/borisa-pasternaka-d-19">Бориса Пастернака, 19</a>
+                            <div class="location-list__metro moscow"><span>Рассказовка</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/novoperedelkino">Боровское Шоссе, 36</a>
+                            <div class="location-list__metro moscow"><span>Новопеределкино</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/aerobus">Варшавское шоссе, 95, К1 (ТЦ Аэробус)</a>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nekrasovka">Вертолётчиков, 9/1</a>
+                            <div class="location-list__metro moscow"><span>Люберцы</span><span>Некрасовка</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/veshnyaki">Вешняковская, 2</a>
+                            <div class="location-list__metro moscow"><span>Вешняки</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/tushino">Вишневая, 9К.1</a>
+                            <div class="location-list__metro moscow"><span>Тушинская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/volgogradka">Волгоградский Проспект, 26А</a>
+                            <div class="location-list__metro moscow"><span>Волгоградский проспект</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kuzminki">Волжский Бульвар, КВ 114А, К1</a>
+                            <div class="location-list__metro moscow"><span>Кузьминки</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/sokol">Волоколамское Шоссе 15/22</a>
+                            <div class="location-list__metro moscow"><span>Стрешнево</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/garibaldi">Гарибальди, 7</a>
+                            <div class="location-list__metro moscow"><span>Новые Черемушки</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/dmd">Генерала Белова, 28 К1</a>
+                            <div class="location-list__metro moscow"><span>Домодедовская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/zhulebino">Генерала Кузнецова, 11К.1</a>
+                            <div class="location-list__metro moscow"><span>Жулебино</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/glavmosstroya">Главмосстроя, 12</a>
+                            <div class="location-list__metro moscow"><span>Говорово</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/taganka">Гончарная Набережная, 9/16 С2</a>
+                            <div class="location-list__metro moscow"><span>Марксистская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/dobrolybova">Добролюбова, 20</a>
+                            <div class="location-list__metro moscow"><span>Фонвизинская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/rumyancevo">Киевское Шоссе, 6 СТР.1</a>
+                            <div class="location-list__metro moscow"><span>Румянцево</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/uznaya">Кировоградская, 9К1</a>
+                            <div class="location-list__metro moscow"><span>Южная</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/aviamotornaya">Красноказарменная, 19</a>
+                            <div class="location-list__metro moscow"><span>Авиамоторная</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/botsad">Лазоревый Проезд, 5 К3</a>
+                            <div class="location-list__metro moscow"><span>Ботанический сад</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/leningradka">Ленинградское Шоссе, 120 К3</a>
+                            <div class="location-list__metro moscow"><span>Беломорская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vershinina">Маршала Вершинина, 8К1</a>
+                            <div class="location-list__metro moscow"><span>Октябрьское поле</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/mashkova">Машкова, 24</a>
+                            <div class="location-list__metro moscow"><span>Курская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/michurinskiy">Мичуринский Проспект, 26</a>
+                            <div class="location-list__metro moscow"><span>Раменки</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/shabolovka">Мытная, 52</a>
+                            <div class="location-list__metro moscow"><span>Шаболовская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nagatinskaya">Нагатинская, 16</a>
+                            <div class="location-list__metro moscow"><span>Нагатинская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nahimovsky">Нахимовский Проспект, 9К1</a>
+                            <div class="location-list__metro moscow"><span>Нахимовский проспект</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/novoslobodskaya">Новослободская, 52</a>
+                            <div class="location-list__metro moscow"><span>Менделеевская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/krylatskoe">Осенний Бульвар, 7К1</a>
+                            <div class="location-list__metro moscow"><span>Крылатское</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/europe-square">Площадь Европы, 2 (Рэдиссон)</a>
+                            <div class="location-list__metro moscow"><span>Киевская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/marino">Поречная, 24 (ТЦ Мари)</a>
+                            <div class="location-list__metro moscow"><span>Марьино</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/academicheskaya">Пр. 60-Летия Октября, 14</a>
+                            <div class="location-list__metro moscow"><span>Академическая</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/presnenskiy">Пресненский Вал, 14 К2</a>
+                            <div class="location-list__metro moscow"><span>Улица 1905 года</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/belyaevo">Профсоюзная, 102А</a>
+                            <div class="location-list__metro moscow"><span>Беляево</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/central">Пятницкая, 6/1</a>
+                            <div class="location-list__metro moscow"><span>Новокузнецкая</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/rublevka">Рублёвское Шоссе, 62</a>
+                            <div class="location-list__metro moscow"><span>Крылатское</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/svetmsk">Святоозерская, 16</a>
+                            <div class="location-list__metro moscow"> <span>Лухмановская</span><span>улица Дмитриевского</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/degunino">Софьи Ковалевской, 6</a>
+                            <div class="location-list__metro moscow"><span>Селигерская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kutuza">Студенческая, 26</a>
+                            <div class="location-list__metro moscow"><span>Студенческая</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kaleidoscop">Сходненская, 56 (ТРЦ Калейдоскоп)</a>
+                            <div class="location-list__metro moscow"><span>Сходненская</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vernad">Удальцова, 71 К2</a>
+                            <div class="location-list__metro moscow"><span>Проспект Вернадского</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/hodinka">Ходынский бульвар 20А (ЖК Лайнер)</a>
+                            <div class="location-list__metro moscow"><span>ЦСКА</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/you-butovo">Чечерский проезд, 56 К1 (Бутово)</a>
+                            <div class="location-list__metro moscow"><span>Бунинская аллея</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/newbutovo">Чечерский проезд, 122 К1 (Бутово Молл)</a>
+                            <div class="location-list__metro moscow"><span>Бунинская аллея</span></div>
+                        </li>
+                        <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/sheremetevskaya">Шереметьевская, 20А</a>
+                            <div class="location-list__metro moscow"><span>Марьина роща</span></div>
+                        </li>
+
+
             //- section.news
                 .news__header
                     header.section-header

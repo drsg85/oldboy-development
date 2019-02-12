@@ -1073,6 +1073,13 @@ html {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   text-align: center; }
+  @media (min-width: 1000px) {
+    .hero__branches-title {
+      font-size: 2rem; } }
+  @media (min-width: 1500px) {
+    .hero__branches-title {
+      margin-bottom: 60px;
+      font-size: 2.5rem; } }
   .hero__branches-title em {
     color: #d6a354;
     font-style: normal; }
@@ -2074,6 +2081,29 @@ html {
 .location-list__metro.moscow span::before {
   color: #af212e;
   border: 1px solid rgba(175, 33, 46, 0.5); }
+
+@media (min-width: 700px) {
+  .location-list--city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+@media (min-width: 700px) {
+  .location-list--city .location-list__item {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    width: 40%; } }
+
+@media (min-width: 1000px) {
+  .location-list--city .location-list__item {
+    -ms-flex-preferred-size: 280px;
+    flex-basis: 280px;
+    width: 280px; } }
 
 .branch-addresses {
   padding: 25px;
@@ -5635,6 +5665,28 @@ a.chosen-branch__value {
   .chosen-branch__button:hover {
     color: #131313;
     background-color: #d6a354; }
+
+.branch-section {
+  padding: 40px 20px; }
+  @media (min-width: 700px) {
+    .branch-section {
+      padding: 40px; } }
+
+.branch-section__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif; }
+  @media (min-width: 1000px) {
+    .branch-section__title {
+      font-size: 2rem; } }
+  @media (min-width: 1500px) {
+    .branch-section__title {
+      margin-bottom: 30px;
+      font-size: 2.5rem; } }
+  .branch-section__title em {
+    color: #d6a354;
+    font-style: normal; }
 
 .vip-item {
   width: 350px; }

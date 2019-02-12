@@ -1,0 +1,38 @@
+.branch-section {
+    // box model
+    padding: 40px 20px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
+}
+
+.branch-section__title {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+
+    @include atDesktopS {
+        // typography
+        font-size: 2rem;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 30px;
+
+        // typography
+        font-size: 2.5rem;
+    }
+
+    & em {
+        // typography
+        color: $golden;
+        font-style: normal;
+    }
+}

@@ -170,3 +170,26 @@
         border: 1px solid rgba($red, 0.5);
     }
 }
+
+.location-list--city {
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .location-list__item {
+        @include atTablet {
+            // box model
+            flex-basis: 40%;
+            width: 40%;
+        }
+
+        @include atDesktopS {
+            // box model
+            flex-basis: 280px;
+            width: 280px;
+        }
+    }
+}
