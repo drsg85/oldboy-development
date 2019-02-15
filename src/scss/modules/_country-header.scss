@@ -5,6 +5,7 @@
     // box model
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 60px;
 }
 
 .country-header__title {
@@ -13,7 +14,7 @@
     padding: 0;
 
     // typography
-    color: #000000;
+    color: $light;
     font-family: $titleFont;
     font-size: 1.5rem;
     text-transform: uppercase;

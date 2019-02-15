@@ -1,6 +1,9 @@
 .choose-country {
     // box model
-    padding: 25px;
+    padding: 40px 25px;
+
+    // visual
+    background-color: $dark;
 
     @include atTablet {
         // box model
@@ -13,8 +16,7 @@
         margin-bottom: 60px;
 
         // visual
-        background-color: $dark;
-        background-image: url('img/minsk.png');
+        background-image: url('./img/minsk.png');
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -24,9 +26,19 @@
     }
 }
 
+.choose-country--europe {
+    @include atTablet {
+        // visual
+        background-image: url('./img/city/europe-l.jpg');
+        background-size: cover;
+        background-position: center left;
+    }
+}
+
 .choose-country__content {
     // box model
-    padding-top: 30px;
+    margin: 0;
+    padding: 0;
 
     // visual
     list-style: none;
@@ -35,7 +47,8 @@
         // box model
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-around;
         align-items: stretch;
         flex-grow: 1;
         margin: 0;

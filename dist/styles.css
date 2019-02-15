@@ -6501,12 +6501,13 @@ a.chosen-branch__value {
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  margin-bottom: 60px; }
 
 .country-header__title {
   margin: 0;
   padding: 0;
-  color: #000000;
+  color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase; }
@@ -6554,7 +6555,8 @@ a.chosen-branch__value {
       font-size: calc(1rem + ((1vw - 7px) * 0.8889)); } }
 
 .choose-country {
-  padding: 25px; }
+  padding: 40px 25px;
+  background-color: #131313; }
   @media (min-width: 700px) {
     .choose-country {
       display: -webkit-box;
@@ -6573,16 +6575,22 @@ a.chosen-branch__value {
       padding: 55px;
       padding-left: 30px;
       margin-bottom: 60px;
-      background-color: #131313;
-      background-image: url("img/minsk.png");
+      background-image: url("./img/minsk.png");
       background-position: center;
       background-repeat: no-repeat; } }
   @media (min-width: 1500px) {
     .choose-country {
       padding: 60px calc((100% - 1400px) / 2); } }
 
+@media (min-width: 700px) {
+  .choose-country--europe {
+    background-image: url("./img/city/europe-l.jpg");
+    background-size: cover;
+    background-position: center left; } }
+
 .choose-country__content {
-  padding-top: 30px;
+  margin: 0;
+  padding: 0;
   list-style: none; }
   @media (min-width: 700px) {
     .choose-country__content {
@@ -6593,9 +6601,10 @@ a.chosen-branch__value {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
       -webkit-box-align: stretch;
       -ms-flex-align: stretch;
       align-items: stretch;
@@ -6625,8 +6634,18 @@ a.chosen-branch__value {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-bottom: 0;
+      -ms-flex-preferred-size: 240px;
+      flex-basis: 240px;
+      margin: 30px 10px;
       text-align: center; } }
+  @media (min-width: 1200px) {
+    .chosen-city {
+      -ms-flex-preferred-size: 300px;
+      flex-basis: 300px; } }
+  @media (min-width: 1500px) {
+    .chosen-city {
+      -ms-flex-preferred-size: 220px;
+      flex-basis: 220px; } }
 
 .chosen-city__el {
   margin: 10px 0; }
@@ -6642,12 +6661,12 @@ a.chosen-branch__value {
   margin: 0;
   padding: 0;
   color: #d6a354;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.25rem;
+  font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
   @media (min-width: 700px) {
     .chosen-city__title {
       color: #ffffff;
-      font-family: "Rex", Arial, sans-serif;
       font-size: calc(1.5rem + ((1vw - 7px) * 1.3333)); } }
 
 .chosen-city__info {
@@ -6667,45 +6686,21 @@ a.chosen-branch__value {
 .chosen-city__info-subtitle {
   position: relative;
   margin: 0;
-  padding: 7px 12px;
-  color: #000000;
+  color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
+  line-height: 1.5;
   text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-  .chosen-city__info-subtitle:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    display: block;
-    height: 8px;
-    width: 8px;
-    margin-left: -15px;
-    background-color: #d6a354;
-    border-radius: 50%; }
-  .chosen-city__info-subtitle:hover {
-    color: #ffffff;
-    background-color: #d6a354; }
+  text-transform: uppercase; }
   @media (min-width: 700px) {
     .chosen-city__info-subtitle {
-      padding: 0;
-      color: #ffffff;
-      pointer-events: none; }
-      .chosen-city__info-subtitle:before {
-        content: none; } }
+      padding: 0; } }
 
 .chosen-city__button {
   display: block;
   width: 160px;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 15px;
   padding: 7px 12px;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
@@ -6721,19 +6716,22 @@ a.chosen-branch__value {
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
+  @media (min-width: 700px) {
+    .chosen-city__button {
+      margin: 0 auto;
+      margin-top: 30px; } }
   .chosen-city__button:hover {
+    color: #ffffff;
     background-color: #d6a354; }
 
 .chosen-city__phone,
 .chosen-city__workday,
-.chosen-city__address .chosen-city__info-title,
-.chosen-city .chosen-city__button {
+.chosen-city__address .chosen-city__info-title {
   display: none; }
   @media (min-width: 700px) {
     .chosen-city__phone,
     .chosen-city__workday,
-    .chosen-city__address .chosen-city__info-title,
-    .chosen-city .chosen-city__button {
+    .chosen-city__address .chosen-city__info-title {
       display: block; } }
 
 .coming-soon {
