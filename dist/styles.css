@@ -758,7 +758,9 @@ html {
       .hero__caption--branch {
         visibility: visible;
         opacity: 1;
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
+        .hero__caption--branch .hero-caption__title {
+          display: none; } }
     @media (min-width: 1000px) {
       .hero__caption--branch {
         margin-top: -50px; } }
@@ -799,31 +801,6 @@ html {
     -ms-flex-align: end;
     align-items: flex-end; } }
 
-.hero__buttons-n-social {
-  width: 220px;
-  margin: 0 auto;
-  text-align: center; }
-  @media (min-width: 700px) {
-    .hero__buttons-n-social {
-      margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      min-height: 150px;
-      text-align: left; } }
-  @media (min-width: 1000px) {
-    .hero__buttons-n-social {
-      position: absolute;
-      left: 50%;
-      bottom: 50%;
-      -webkit-transform: translate(-50%, 50px);
-      transform: translate(-50%, 50px);
-      z-index: 6; } }
-
 .hero__contacts {
   padding-bottom: 30px;
   padding-top: 15px; }
@@ -841,6 +818,10 @@ html {
       width: 100%; } }
   @media (min-width: 1000px) {
     .hero__contacts {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
@@ -854,12 +835,12 @@ html {
 .hero__buttons {
   width: 220px;
   margin: 0 auto;
-  margin-top: 80px;
   text-align: center; }
   @media (min-width: 700px) {
     .hero__buttons {
       position: relative;
-      z-index: 2; } }
+      z-index: 2;
+      margin-left: 0; } }
   @media (min-width: 1000px) {
     .hero__buttons {
       margin: 0;

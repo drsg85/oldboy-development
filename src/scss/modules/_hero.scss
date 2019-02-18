@@ -481,6 +481,11 @@
             visibility: visible;
             opacity: 1;
             margin-bottom: 0;
+
+            .hero-caption__title {
+                // box model
+                display: none;
+            }
         }
 
         @include atDesktopS {
@@ -523,34 +528,34 @@
     }
 }
 
-.hero__buttons-n-social {
-    // box model
-    width: 220px;
-    margin: 0 auto;
+// .hero__buttons-n-social {
+//     // box model
+//     width: 220px;
+//     margin: 0 auto;
 
-    // typography
-    text-align: center;
+//     // typography
+//     text-align: center;
 
-    @include atTablet {
-        // box model
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 150px;
+//     @include atTablet {
+//         // box model
+//         margin: 0;
+//         display: flex;
+//         flex-direction: column;
+//         min-height: 150px;
 
-        // typography
-        text-align: left;
-    }
+//         // typography
+//         text-align: left;
+//     }
 
-    @include atDesktopS {
-        // positioning
-        position: absolute;
-        left: 50%;
-        bottom: 50%;
-        transform: translate(-50%, 50px);
-        z-index: 6;
-    }
-}
+//     @include atDesktopS {
+//         // positioning
+//         position: absolute;
+//         left: 50%;
+//         bottom: 50%;
+//         transform: translate(-50%, 50px);
+//         z-index: 6;
+//     }
+// }
 
 .hero__contacts {
     // box model
@@ -572,6 +577,7 @@
 
     @include atDesktopS {
         // box model
+        flex-direction: column;
         justify-content: flex-start;
         padding: 0;
         padding-top: 30px;
@@ -588,7 +594,6 @@
     // box model
     width: 220px;
     margin: 0 auto;
-    margin-top: 80px;
     
     // typography
     // to align items on browsers without flex support
@@ -597,7 +602,11 @@
     @include atTablet {
         // positioning
         position: relative;
+        // Needed to allow user clicks through
         z-index: 2;
+
+        // box model
+        margin-left: 0;
     }
 
     @include atDesktopS {
