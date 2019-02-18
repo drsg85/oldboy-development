@@ -765,10 +765,12 @@ html {
 
 .hero__opening {
   margin-left: -20px;
-  margin-top: -60px; }
+  margin-top: 0; }
   @media (min-width: 700px) {
     .hero__opening {
       margin-left: -40px; } }
+  .hero__opening h2 {
+    font-size: 2rem; }
 
 @media (min-width: 700px) {
   .hero__contacts-n-buttons {
@@ -878,7 +880,8 @@ html {
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 40px; }
   @media (min-width: 700px) {
     .hero__vacancy {
       max-width: 336px;
@@ -911,9 +914,6 @@ html {
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end; } }
-
-.hero__vacancy-header {
-  margin-bottom: 40px; }
 
 .hero__vacancy-title {
   margin: 20px 0;
