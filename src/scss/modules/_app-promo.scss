@@ -22,8 +22,9 @@
 
     @include atDesktopS {
         // box model
+        flex-direction: column;
         padding: 20px 40px;
-        align-items: center;
+        align-items: flex-end;
     }
 
     @include atDesktopM {
@@ -52,6 +53,11 @@
     @include atTablet {
         // visual
         background-image: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
+    }
+
+    @include atDesktopS {
+        // box model
+        display: none;
     }
 }
 
@@ -83,7 +89,7 @@
     flex-direction: column;
     justify-content: center;
     flex-basis: 50%;
-    width: 50%;
+    // width: 50%;
 
     @include atTablet {
         // positioning
@@ -94,12 +100,15 @@
         flex-basis: auto;
         margin-right: 40px;
         margin-left: auto;
-    }
 
+    }
+    
     @include atDesktopS {
         // box model
         margin: 0;
-        margin-right: 30px;
+        // margin-right: 50px;
+        margin-bottom: 20px;
+        text-align: right;
     }
 }
 
@@ -158,7 +167,7 @@
         // positioning
         position: absolute;
         bottom: -60px;
-        right: 60px;
+        right: 150px;
         z-index: -1;
         
         // box model
@@ -167,13 +176,13 @@
         pointer-events: none;
     }
 
-    @include atDesktopM {
-        // positioning
-        bottom: -100px;
+    // @include atDesktopM {
+    //     // positioning
+    //     bottom: -100px;
 
-        // box model
-        height: 500px;
-    }
+    //     // box model
+    //     height: 500px;
+    // }
 }
 
 .app-promo__image img {
@@ -203,5 +212,7 @@
     @include atDesktopS {
         // box model
         margin: 0;
+        margin-right: -5px;
+        width: auto;
     }
 }

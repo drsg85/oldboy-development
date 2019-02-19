@@ -447,6 +447,7 @@
     @include atDesktopS {
         // box model
         justify-content: space-between;
+        align-items: stretch;
         flex-grow: 2;
         padding-top: 20px;
         flex-direction: row;
@@ -466,32 +467,6 @@
     @include atTablet {
         // box model
         padding-bottom: 40px;
-    }
-
-    &--branch {
-        // box model
-        margin-bottom: -160px;
-
-        // visual
-        visibility: hidden;
-        opacity: 0;
-
-        @include atTablet {
-            // visual
-            visibility: visible;
-            opacity: 1;
-            margin-bottom: 0;
-
-            .hero-caption__title {
-                // box model
-                display: none;
-            }
-        }
-
-        @include atDesktopS {
-            // box model
-            margin-top: -50px;
-        }
     }
 }
 
@@ -528,35 +503,6 @@
     }
 }
 
-// .hero__buttons-n-social {
-//     // box model
-//     width: 220px;
-//     margin: 0 auto;
-
-//     // typography
-//     text-align: center;
-
-//     @include atTablet {
-//         // box model
-//         margin: 0;
-//         display: flex;
-//         flex-direction: column;
-//         min-height: 150px;
-
-//         // typography
-//         text-align: left;
-//     }
-
-//     @include atDesktopS {
-//         // positioning
-//         position: absolute;
-//         left: 50%;
-//         bottom: 50%;
-//         transform: translate(-50%, 50px);
-//         z-index: 6;
-//     }
-// }
-
 .hero__contacts {
     // box model
     padding-bottom: 30px;
@@ -576,12 +522,30 @@
     }
 
     @include atDesktopS {
+        // positioning
+        position: relative;
+
         // box model
         flex-direction: column;
         justify-content: flex-start;
-        padding: 0;
-        padding-top: 30px;
+        padding: 10px 0;
         padding-right: 35%;
+
+        &::before {
+            content: '';
+        
+            // positioning
+            position: absolute;
+            left: -50px;
+            bottom: 0;
+        
+            // box model
+            width: 380px;
+            height: 4px;
+        
+            // visual
+            background-image: linear-gradient(to left, rgba($golden, 0), rgba($golden, 0.75));
+        }
     }
 }
 
@@ -622,6 +586,23 @@
         @include atDesktopS {
             // box model
             margin: 0 auto;
+        }
+    }
+
+    &--branch {
+        @include atDesktopS {
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 11;
+
+            // typography
+            text-align: center;
+
+            // box model
+            // border: 1px solid red;
         }
     }
 }
