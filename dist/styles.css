@@ -1236,7 +1236,11 @@ html {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
-  font-size: 1rem; }
+  font-weight: 400;
+  font-size: 1rem;
+  font-size: 0.85rem;
+  left: 0.0;
+  text-transform: uppercase; }
   @media (min-width: 1000px) {
     .contact__value {
       font-size: 0.85rem; } }
