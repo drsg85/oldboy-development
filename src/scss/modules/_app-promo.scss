@@ -162,27 +162,31 @@
 .app-promo__image {
     // box model
     display: none;
+
+    // visual
+    pointer-events: none;
     
     @include atDesktopS {
         // positioning
         position: absolute;
-        bottom: -60px;
-        right: 150px;
-        z-index: -1;
+        bottom: -40px;
+        right: 170px;
+        z-index: 2;
         
         // box model
         display: block;
-        height: 370px;
+        height: 300px;
         pointer-events: none;
     }
 
-    // @include atDesktopM {
-    //     // positioning
-    //     bottom: -100px;
+    @include atDesktopM {
+        // positioning
+        bottom: -50px;
+        right: 185px;
 
-    //     // box model
-    //     height: 500px;
-    // }
+        // box model
+        height: 420px;
+    }
 }
 
 .app-promo__image img {

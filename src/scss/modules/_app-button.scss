@@ -19,6 +19,12 @@
     border-radius: 23px;        // 1/2 of line-height + 2px border-width
     transition: all 0.25s ease-in-out;
 
+    @include atDesktopM {
+        // box model
+        max-width: 195px;
+        width: 195px;
+    }
+
     &--thin {
         // typography
         letter-spacing: 2px;
