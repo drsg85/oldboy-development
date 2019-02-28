@@ -91,3 +91,17 @@
     width: 100%;
     object-fit: cover;
 }
+
+.member__top {
+    // positioning
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    // box model
+    height: 72px;
+    width: 72px;
+
+    // visual
+    background-image: url('./img/icons/top-barber.svg');
+}

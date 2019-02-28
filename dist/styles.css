@@ -5574,6 +5574,14 @@ html {
   -o-object-fit: cover;
   object-fit: cover; }
 
+.member__top {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  height: 72px;
+  width: 72px;
+  background-image: url("./img/icons/top-barber.svg"); }
+
 .academy-banner {
   position: relative;
   margin: 25px;
