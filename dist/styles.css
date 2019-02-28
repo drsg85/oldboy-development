@@ -686,7 +686,8 @@ html {
   top: 0;
   display: inline-block;
   vertical-align: top;
-  padding-right: 70px; }
+  padding-right: 70px;
+  padding-left: 85px; }
   @media (min-width: 700px) {
     .hero__city-select {
       left: auto;
@@ -970,7 +971,11 @@ html {
       bottom: 40px; } }
 
 .hero__deco {
-  display: none; }
+  display: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   @media (min-width: 700px) {
     .hero__deco {
       position: absolute;
@@ -1074,7 +1079,11 @@ html {
 .hero-caption {
   width: 200px;
   -webkit-transform: skewY(-15deg);
-  transform: skewY(-15deg); }
+  transform: skewY(-15deg);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   @media (min-width: 700px) {
     .hero-caption {
       width: 260px; } }
@@ -1177,11 +1186,13 @@ html {
 
 .hero-caption__location {
   margin: 0;
+  display: none;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem; }
   @media (min-width: 700px) {
     .hero-caption__location {
+      display: block;
       font-size: 2rem; } }
   @media (min-width: 1000px) {
     .hero-caption__location {
@@ -1323,7 +1334,6 @@ html {
 
 .city-select__title {
   margin: 0;
-  width: 100px;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem; }
@@ -1809,7 +1819,11 @@ html {
   align-items: flex-end;
   font-family: "Rex", Arial, sans-serif;
   font-size: 0.75rem;
-  text-align: right; }
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   @media (min-width: 1200px) {
     .branch-counter {
       font-size: 1rem; } }
@@ -1877,7 +1891,11 @@ html {
   margin-bottom: 40px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   @media (min-width: 1200px) {
     .franch-promo__title {
       position: absolute;

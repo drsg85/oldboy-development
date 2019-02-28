@@ -416,6 +416,7 @@
     display: inline-block;
     vertical-align: top;
     padding-right: 70px;
+    padding-left: 85px;
 
     @include atTablet {
         // positioning
@@ -779,6 +780,9 @@
 .hero__deco {
     // box model
     display: none;
+
+    // visual
+    user-select: none;
     
     @include atTablet {
         // positioning

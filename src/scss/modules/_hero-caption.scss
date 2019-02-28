@@ -8,6 +8,7 @@
 
     // visual
     transform: skewY(-15deg);
+    user-select: none;
 
     @include atTablet {
         // box model
@@ -185,6 +186,7 @@
 .hero-caption__location {
     // box model
     margin: 0;
+    display: none;
 
     // typography
     color: $golden;
@@ -194,6 +196,9 @@
     // border-top: 3px solid $golden;
 
     @include atTablet {
+        // box model
+        display: block;
+
         // typography
         font-size: 2rem;
     }

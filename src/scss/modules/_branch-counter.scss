@@ -10,6 +10,9 @@
     font-size: 0.75rem;
     text-align: right;
 
+    // visual
+    user-select: none;
+
     @include atDesktopM {
         // typography
         font-size: 1rem;
