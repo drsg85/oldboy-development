@@ -684,6 +684,7 @@ html {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 3;
   display: inline-block;
   vertical-align: top;
   padding-right: 70px;
@@ -692,7 +693,7 @@ html {
     .hero__city-select {
       left: auto;
       right: 0;
-      z-index: 2;
+      z-index: 3;
       padding-right: 60px; } }
   @media (min-width: 1000px) {
     .hero__city-select {

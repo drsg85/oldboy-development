@@ -411,6 +411,7 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 3;
 
     // box model
     display: inline-block;
@@ -422,7 +423,7 @@
         // positioning
         left: auto;
         right: 0;
-        z-index: 2;
+        z-index: 3;
 
         // box model
         padding-right: 60px;
