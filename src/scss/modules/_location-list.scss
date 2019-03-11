@@ -14,9 +14,21 @@
     margin-bottom: 0.85em;
     padding: 0;
 
-    // typography
-    font-family: $titleFont;
-    font-size: 1.25rem;
+    
+    & a {
+        // typography
+        color: $darkGold;
+        color: $dark;
+        font-family: $titleFont;
+        font-size: 1.25rem;
+        text-decoration: none;
+
+        &:hover {
+            // typography
+            color: $darkGold;
+            text-decoration: underline;
+        }
+    }
 
     & em {
         // visual
