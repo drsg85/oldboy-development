@@ -2021,6 +2021,9 @@ html {
       top: 65px;
       right: 40px; } }
 
+.location-selector__close--hidden {
+  position: absolute; }
+
 .place-groups {
   display: -webkit-box;
   display: -ms-flexbox;
