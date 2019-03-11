@@ -3,7 +3,7 @@
     position: relative;
 
     // box model
-    height: 160px;
+    height: 380px;
     margin-bottom: 20px;
     width: 100%;
     max-width: 350px;
@@ -17,32 +17,10 @@
     @include atTablet {
         // box model
         height: 380px;
-        max-width: 280px;
+        max-width: inherit;
         margin-bottom: 40px;
         flex-basis: 45%;
     }
-}
-
-.promo--open {
-    // box model
-    height: 380px;
-
-    .promo__close-button {
-        // box model
-        display: block;
-    }
-
-    .promo__info-button {
-        // box model
-        display: none;
-    }
-}
-
-.promo--open .promo__description {
-    // visual
-    transition: all 0.5s ease-out;
-    opacity: 1;
-    visibility: visible;
 }
 
 .promo__header {
@@ -53,6 +31,43 @@
     right: 0;
     top: 0;
     z-index: 3;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+
+    // visual
+    background-image: linear-gradient(to top, $dark, transparent);
+}
+
+
+.promo__title {
+    // box model
+    margin: 0;
+    margin-bottom: 1em;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.promo__text {
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 1.75;
+}
+
+.promo__text p {
+    // box model
+    margin: 0;
+    margin-bottom: 1em;
+    // margin-bottom: 1rem;
 }
 
 .promo__image {
@@ -72,47 +87,6 @@
     min-height: 100%;
     object-fit: cover;
     object-position: center center;
-}
-
-.promo__description {
-    // positioning
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 2;
-
-    // box model
-    padding: 20px;
-    padding-top: 40px;
-
-    // visual
-    background-color: rgba($dark, 0.75);
-    opacity: 0;
-    visibility: hidden;
-}
-
-.promo__service {
-    // visual
-    opacity: 0;
-    visibility: hidden;
-}
-
-.promo__bottom {
-    // positioning
-    position: absolute;
-    bottom: -70px;
-    left: 0;
-    right: 0;
-    transform: skewY(-15deg);
-
-    // box model
-    height: 180px;
-
-    // visual
-    background-image: url('./img/dark-h-grunge.svg');
-    background-size: cover;
 }
 
 .promo__price {
@@ -140,87 +114,4 @@
         // visual
         text-shadow: -3px 3px 0 $darkGold;
     }
-}
-
-.promo__name {
-    // box model
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 120px;
-
-    // typography
-    color: $light;
-    font-family: $titleFont;
-    font-size: 1.5rem;
-    text-align: right;
-
-    @include atTablet {
-        // box model
-        padding-top: 10px;
-
-        // typography
-        font-size: 1.3rem;
-    }
-}
-
-.promo__tip {
-    // box model
-    display: none;
-}
-
-.promo__title {
-    // box model
-    margin: 0;
-    margin-bottom: 2rem;
-    padding-left: 60px;
-
-    // typography
-    color: $light;
-    font-family: $titleFont;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    text-align: right;
-}
-
-.promo__text {
-    // typography
-    color: $light;
-    font-family: $mainFont;
-    font-size: 0.85rem;
-    line-height: 1.75;
-}
-
-.promo__text p {
-    // box model
-    margin: 0;
-    margin-bottom: 1rem;
-}
-
-.promo__close-button,
-.promo__info-button {
-    // positioning
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    z-index: 4;
-    
-    // box model
-    height: 32px;
-    width: 32px;
-
-    // typography
-    color: $light;
-    font-size: 1.25rem;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
-
-    // visual
-    border: 3px solid $light;
-    border-radius: 50%;
-}
-
-.promo__close-button {
-    // box model
-    display: none;
 }

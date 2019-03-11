@@ -19,8 +19,12 @@
         // box model
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
         align-items: flex-start;
         padding: 40px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 40px calc((100% - 1400px) / 2);
     }
 }
