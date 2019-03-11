@@ -5543,22 +5543,21 @@ html {
   left: 0;
   right: 0;
   z-index: 2;
-  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 120px;
   padding: 20px;
-  text-align: right; }
-
-.member__header::before {
-  content: '';
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  -webkit-transform: skewY(-15deg);
-  transform: skewY(-15deg);
-  z-index: -1;
-  height: 135px;
-  background-image: url("./img/dark-h-grunge.svg");
-  background-size: cover; }
+  text-align: left;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#131313), to(transparent));
+  background-image: linear-gradient(to top, #131313, transparent); }
 
 .member__name {
   margin: 0;
@@ -5588,7 +5587,7 @@ html {
 .member__top {
   position: absolute;
   bottom: 15px;
-  left: 15px;
+  right: 15px;
   height: 72px;
   width: 72px;
   background-image: url("./img/icons/top-barber.svg"); }

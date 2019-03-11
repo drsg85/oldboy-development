@@ -27,31 +27,38 @@
     z-index: 2;
 
     // box model
-    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 120px;
     padding: 20px;
     
     // typography
-    text-align: right;
-}
-
-.member__header::before {
-    content: '';
-
-    // positioning
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    transform: skewY(-15deg);
-    z-index: -1;
-
-    // box model
-    height: 135px;
+    text-align: left;
 
     // visual
-    background-image: url('./img/dark-h-grunge.svg');
-    background-size: cover;
+    background-image: linear-gradient(to top, $dark, transparent);
+    // border: 1px solid red;
 }
+
+// .member__header::before {
+//     content: '';
+
+//     // positioning
+//     position: absolute;
+//     bottom: -50px;
+//     left: 0;
+//     right: 0;
+//     transform: skewY(-15deg);
+//     z-index: -1;
+
+//     // box model
+//     height: 135px;
+
+//     // visual
+//     background-image: url('./img/dark-h-grunge.svg');
+//     background-size: cover;
+// }
 
 .member__name {
     // box model
@@ -96,7 +103,7 @@
     // positioning
     position: absolute;
     bottom: 15px;
-    left: 15px;
+    right: 15px;
 
     // box model
     height: 72px;
