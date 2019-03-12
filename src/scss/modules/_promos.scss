@@ -1,11 +1,16 @@
 .promos {
-    
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+    }
 }
 
 .promos__header {
-
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+    }
 }
-
 
 .promos__content {
     // box model
@@ -14,13 +19,19 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-items: stretch;
 
     @include atTablet {
         // box model
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-start;
-        padding: 40px;
+        // align-items: flex-start;
+        padding: 20px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 32px;
     }
 
     @include atDesktopL {

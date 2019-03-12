@@ -5,21 +5,24 @@
     // box model
     height: 380px;
     margin-bottom: 20px;
-    width: 100%;
-    max-width: 350px;
-    
+    flex-grow: 1;
+
     // visual
     background-color: $darkGold;
     border-radius: 5px;
-    transition: all 0.3s ease-out;
     overflow: hidden;
 
     @include atTablet {
         // box model
-        height: 380px;
-        max-width: inherit;
+        margin: 0 20px;
         margin-bottom: 40px;
-        flex-basis: 45%;
+        flex-basis: 40%;
+        flex-shrink: 1;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 25%;
     }
 }
 
@@ -46,28 +49,40 @@
 .promo__title {
     // box model
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
 
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.5;
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.75rem;
+    }
 }
 
 .promo__text {
+    // box model
+    max-width: 300px;
+
     // typography
     color: $light;
     font-family: $mainFont;
     font-size: 0.85rem;
     line-height: 1.75;
+
+    @include atDesktopL {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .promo__text p {
     // box model
     margin: 0;
     margin-bottom: 1em;
-    // margin-bottom: 1rem;
 }
 
 .promo__image {
@@ -93,7 +108,8 @@
     // positioning
     position: absolute;
     right: 0;
-    top: -40px;
+    top: 0;
+    transform: skewY(-15deg);
 
     // box model
     padding: 10px 15px;
@@ -101,7 +117,7 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 2rem;
+    font-size: 2.5rem;
 
     // visual
     background-color: $golden;
@@ -109,9 +125,29 @@
 
     @include atTablet {
         // typography
-        font-size: 2.5rem;
+        font-size: 3rem;
 
         // visual
         text-shadow: -3px 3px 0 $darkGold;
     }
+}
+
+.promo__price::after {
+    content: '';
+
+    // positioning
+    position: absolute;
+    left: -20px;
+    top: 0;
+    transform: rotate(180deg);
+
+    // box model
+    height: 100%;
+    width: 20px;
+
+    // visual
+    background-image: url('./img/gold-v-grunge.svg');
+    background-size: 400%;
+    background-repeat: repeat-y;
+    background-position: center right;
 }
