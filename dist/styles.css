@@ -329,6 +329,12 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
+.yButton {
+  display: none; }
+  @media (min-width: 1000px) {
+    .yButton {
+      display: block; } }
+
 @font-face {
   font-family: 'Open Sans';
   src: url("./fonts/OpenSans-Regular.woff2") format("woff2"), url("./fonts/OpenSans-Regular.woff") format("woff");

@@ -40,3 +40,13 @@ html {
     // box model
     box-sizing: inherit;
 }
+
+.yButton {
+    // box model
+    display: none;
+
+    @include atDesktopS {
+        // box model
+        display: block;
+    }
+}
