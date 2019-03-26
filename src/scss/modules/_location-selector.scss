@@ -131,6 +131,9 @@
     right: 20px;
     z-index: 1000;
 
+    // visual
+    visibility: visible;
+
     @include atDesktopS {
         top: 65px;
         right: 40px;
@@ -140,4 +143,7 @@
 .location-selector__close--hidden {
     // positioning
     position: absolute;
+
+    // visual
+    visibility: hidden;
 }

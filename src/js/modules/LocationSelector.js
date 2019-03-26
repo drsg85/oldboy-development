@@ -6,7 +6,7 @@ class LocationSelector {
     this.citySelector = document.querySelector('.location-selector');
     this.citySelectorClose = document.querySelector('.location-selector__close');
 
-    // this.reset();
+    this.reset();
     this.events();
   }
 

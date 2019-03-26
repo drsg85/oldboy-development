@@ -2015,14 +2015,16 @@ html {
   position: fixed;
   top: 25px;
   right: 20px;
-  z-index: 1000; }
+  z-index: 1000;
+  visibility: visible; }
   @media (min-width: 1000px) {
     .location-selector__close {
       top: 65px;
       right: 40px; } }
 
 .location-selector__close--hidden {
-  position: absolute; }
+  position: absolute;
+  visibility: hidden; }
 
 .place-groups {
   display: -webkit-box;
