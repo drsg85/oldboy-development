@@ -1,0 +1,35 @@
+.yButton {
+    // box model
+    display: none;
+
+    @include atDesktopS {
+        // box model
+        display: block;
+    }
+
+    .yButtonBackground {
+        // visual
+        background-color: $dark !important;
+        background-image: url('./img/logo-gold.svg');
+        background-repeat: no-repeat;
+        background-size: 40px;
+        background-position: bottom 17px center;
+        opacity: 1 !important;
+    }
+
+    .yButtonText {
+        // positioning
+        top: 20px !important;
+
+        // typography
+        font-family: $titleFont !important;
+        font-size: 20px !important;
+        letter-spacing: normal !important;
+        line-height: 1 !important;
+    }
+
+    .yButtonWave {
+        // visual
+        border-color: $golden !important;
+    }
+}

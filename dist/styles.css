@@ -329,12 +329,6 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-.yButton {
-  display: none; }
-  @media (min-width: 1000px) {
-    .yButton {
-      display: block; } }
-
 @font-face {
   font-family: 'Open Sans';
   src: url("./fonts/OpenSans-Regular.woff2") format("woff2"), url("./fonts/OpenSans-Regular.woff") format("woff");
@@ -6501,6 +6495,27 @@ a.chosen-branch__value {
   margin: 0;
   margin-top: 5px;
   text-align: center; }
+
+.yButton {
+  display: none; }
+  @media (min-width: 1000px) {
+    .yButton {
+      display: block; } }
+  .yButton .yButtonBackground {
+    background-color: #131313 !important;
+    background-image: url("./img/logo-gold.svg");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: bottom 17px center;
+    opacity: 1 !important; }
+  .yButton .yButtonText {
+    top: 20px !important;
+    font-family: "Rex", Arial, sans-serif !important;
+    font-size: 20px !important;
+    letter-spacing: normal !important;
+    line-height: 1 !important; }
+  .yButton .yButtonWave {
+    border-color: #d6a354 !important; }
 
 .city-catalogue {
   padding-left: 100px;
