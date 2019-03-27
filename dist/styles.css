@@ -6683,9 +6683,12 @@ a.chosen-branch__value {
       padding: 55px;
       padding-left: 30px;
       margin-bottom: 60px;
-      background-image: url("./img/minsk.png");
       background-position: center;
-      background-repeat: no-repeat; } }
+      background-repeat: no-repeat;
+      background-size: cover; } }
+  @media (min-width: 1000px) {
+    .choose-country {
+      background-image: url("./img/minsk.png"); } }
   @media (min-width: 1500px) {
     .choose-country {
       padding: 60px calc((100% - 1400px) / 2); } }
@@ -6746,14 +6749,22 @@ a.chosen-branch__value {
       flex-basis: 240px;
       margin: 30px 10px;
       text-align: center; } }
-  @media (min-width: 1200px) {
-    .chosen-city {
-      -ms-flex-preferred-size: 300px;
-      flex-basis: 300px; } }
-  @media (min-width: 1500px) {
+  @media (min-width: 1000px) {
     .chosen-city {
       -ms-flex-preferred-size: 220px;
       flex-basis: 220px; } }
+  @media (min-width: 1200px) {
+    .chosen-city {
+      -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%; } }
+  @media (min-width: 1500px) {
+    .chosen-city {
+      -ms-flex-preferred-size: 220px;
+      flex-basis: 220px;
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%; } }
 
 .chosen-city__el {
   margin: 10px 0; }

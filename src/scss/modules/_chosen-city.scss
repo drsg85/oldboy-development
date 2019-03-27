@@ -14,14 +14,21 @@
         text-align: center;
     }
 
+    @include atDesktopS {
+        // box model
+        flex-basis: 220px;
+    }
+
     @include atDesktopM {
         // box model
-        flex-basis: 300px;
+        flex-basis: 250px;
+        flex-basis: 25%;
     }
 
     @include atDesktopL {
         // box model
         flex-basis: 220px;
+        flex-basis: 25%;
     }
 }
 

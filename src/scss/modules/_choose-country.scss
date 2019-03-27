@@ -16,9 +16,15 @@
         margin-bottom: 60px;
 
         // visual
-        background-image: url('./img/minsk.png');
+        // background-image: url('./img/minsk.png');
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    @include atDesktopS {
+        // visual
+        background-image: url('./img/minsk.png');
     }
 
     @include atDesktopL {
