@@ -5,23 +5,29 @@
     // box model
     margin: 25px;
     padding: 25px;
-    
+
     // visual
     background-color: $light;
     box-shadow: 0 10px 30px -10px rgba($dark, 0.25), 
                 0 0 2px -1px rgba($dark, 0.5);
-    background-image: url('./img/bgs/academy-m.jpg');
-    background-size: cover;
-    background-position: top center;
+    background-image: url('./img/banners/academy-s.jpg');
+    background-position: bottom left;
     overflow: hidden;
 
+    @include atTablet {
+        // visual
+        background-size: cover;
+    }
+    
     @include atDesktopS {
         // box model
         display: flex;
         margin: 40px;
         margin-bottom: 120px;
-
+        padding: 30px 40px;
+        
         // visual
+        background-image: url('./img/banners/academy-l.jpg');
         background-position: center center;
         overflow: unset;
     }
@@ -34,50 +40,23 @@
     }
 }
 
-// decoration (scissors and comb)
-.academy-banner::before {
-    content: '';
-
-    // positioning
-    position: absolute;
-    right: -200px;
-    top: 150px;
-
-    // box model
-    width: 342px;
-    height: 492px;
-    
-    // visual
-    background-image: url('./img/deco/scissors.png');
-    
-    @include atTablet{
-        // positioning
-        right: -40px;
-        top: 75px;
-
-        // box model
-        width: 378px;
-        height: 488px;
-
-        // visual
-        background-image: url('./img/deco/scissors-n-comb.png');
-    }
-
-    @include atDesktopS {
-        // positioning
-        top: -60px;
-    }
-}
-
 .academy-banner__header {
     // positioning
     transform: skewY(-15deg);
     transform-origin: center left;
 
+    // box model
+    margin-bottom: 30px;
+
     @include atDesktopS {
         // box model
         flex-basis: 320px;
         margin-right: 10px;
+    }
+
+    @include atDesktopL {
+        // box model
+        flex-basis: 400px;
     }
 }
 
@@ -88,12 +67,11 @@
     padding: 10px 25px;
     
     // typography
-    color: $dark;
+    color: $light;
     font-family: $titleFont;
     font-size: 1.5rem;
 
     // visual
-    // background-color: $light;
     border-bottom: 4px solid $golden;
     border-top: 4px solid $golden;
 
@@ -131,17 +109,17 @@
 .academy-banner__content {
     // box model
     margin-bottom: 30px;
+    max-width: 320px;
 
-    @include atTablet {
-        // box model
-        max-width: 320px;
-    }
+    // typography
+    color: $light;
+    text-align: center;
 
     @include atDesktopS {
         // box model
         margin-bottom: 0;
         max-width: 400px;
-        flex-basis: 33%;
+        flex-basis: 37%;
     }
 }
 
@@ -157,9 +135,19 @@
         // typography
         font-size: 1rem;
     }
+
+    em {
+        // typography
+        color: $golden;
+        font-size: 1.25rem;
+        font-style: normal;
+    }
 }
 
 .academy-banner__text {
+    // box model
+    margin-bottom: 30px;
+
     // typography
     font-family: $mainFont;
     font-size: 0.85rem;
@@ -178,7 +166,11 @@
     font-size: 0.85rem;
     font-weight: 600;
     line-height: 1.75;
+    text-align: center;
     text-transform: uppercase;
+
+    // visual
+    text-shadow: 0 0 2px $dark;
 
     @include atTablet {
         // typography
@@ -198,10 +190,18 @@
 }
 
 .academy-banner__cta {
+    // box model
+    max-width: 320px;
+
+    // typography
+    text-align: center;
+
     @include atDesktopS {
         // positioning
         position: absolute;
-        bottom: 10px;
-        left: 30px;
+        bottom: 20px;
+        left: 40px;
+        
+        // box model
     }
 }

@@ -5578,10 +5578,12 @@ html {
   background-color: #ffffff;
   -webkit-box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
   box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.25), 0 0 2px -1px rgba(19, 19, 19, 0.5);
-  background-image: url("./img/bgs/academy-m.jpg");
-  background-size: cover;
-  background-position: top center;
+  background-image: url("./img/banners/academy-s.jpg");
+  background-position: bottom left;
   overflow: hidden; }
+  @media (min-width: 700px) {
+    .academy-banner {
+      background-size: cover; } }
   @media (min-width: 1000px) {
     .academy-banner {
       display: -webkit-box;
@@ -5589,6 +5591,8 @@ html {
       display: flex;
       margin: 40px;
       margin-bottom: 120px;
+      padding: 30px 40px;
+      background-image: url("./img/banners/academy-l.jpg");
       background-position: center center;
       overflow: unset; } }
   @media (min-width: 1500px) {
@@ -5597,41 +5601,27 @@ html {
       margin: 0 auto;
       margin-bottom: 120px; } }
 
-.academy-banner::before {
-  content: '';
-  position: absolute;
-  right: -200px;
-  top: 150px;
-  width: 342px;
-  height: 492px;
-  background-image: url("./img/deco/scissors.png"); }
-  @media (min-width: 700px) {
-    .academy-banner::before {
-      right: -40px;
-      top: 75px;
-      width: 378px;
-      height: 488px;
-      background-image: url("./img/deco/scissors-n-comb.png"); } }
-  @media (min-width: 1000px) {
-    .academy-banner::before {
-      top: -60px; } }
-
 .academy-banner__header {
   -webkit-transform: skewY(-15deg);
   transform: skewY(-15deg);
   -webkit-transform-origin: center left;
-  transform-origin: center left; }
+  transform-origin: center left;
+  margin-bottom: 30px; }
   @media (min-width: 1000px) {
     .academy-banner__header {
       -ms-flex-preferred-size: 320px;
       flex-basis: 320px;
       margin-right: 10px; } }
+  @media (min-width: 1500px) {
+    .academy-banner__header {
+      -ms-flex-preferred-size: 400px;
+      flex-basis: 400px; } }
 
 .academy-banner__title {
   max-width: 320px;
   margin: 10px -25px;
   padding: 10px 25px;
-  color: #131313;
+  color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
   border-bottom: 4px solid #d6a354;
@@ -5656,16 +5646,16 @@ html {
       font-size: 1.5rem; } }
 
 .academy-banner__content {
-  margin-bottom: 30px; }
-  @media (min-width: 700px) {
-    .academy-banner__content {
-      max-width: 320px; } }
+  margin-bottom: 30px;
+  max-width: 320px;
+  color: #ffffff;
+  text-align: center; }
   @media (min-width: 1000px) {
     .academy-banner__content {
       margin-bottom: 0;
       max-width: 400px;
-      -ms-flex-preferred-size: 33%;
-      flex-basis: 33%; } }
+      -ms-flex-preferred-size: 37%;
+      flex-basis: 37%; } }
 
 .academy-banner__motto {
   font-family: "Open Sans", Arial, sans-serif;
@@ -5676,8 +5666,13 @@ html {
   @media (min-width: 700px) {
     .academy-banner__motto {
       font-size: 1rem; } }
+  .academy-banner__motto em {
+    color: #d6a354;
+    font-size: 1.25rem;
+    font-style: normal; }
 
 .academy-banner__text {
+  margin-bottom: 30px;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 400;
@@ -5691,7 +5686,9 @@ html {
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.75;
-  text-transform: uppercase; }
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 2px #131313; }
   @media (min-width: 700px) {
     .academy-banner__address {
       font-size: 1rem; } }
@@ -5703,11 +5700,14 @@ html {
 .academy-banner__phone:hover {
   text-decoration: underline; }
 
-@media (min-width: 1000px) {
-  .academy-banner__cta {
-    position: absolute;
-    bottom: 10px;
-    left: 30px; } }
+.academy-banner__cta {
+  max-width: 320px;
+  text-align: center; }
+  @media (min-width: 1000px) {
+    .academy-banner__cta {
+      position: absolute;
+      bottom: 20px;
+      left: 40px; } }
 
 .testimonials {
   position: relative;
