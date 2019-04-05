@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--royal
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    .city-select
+                        p.city-select__title Выбери свой город: 
+                        p.city-select__city
+                            a(href="choose-city.html") Калининград <span class="city-select__triangle">▼</span>
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--royal">Королевское <br>бритьё</span>
+                        p.hero-caption__motto Oldboy barbershop <br>только качество
+
+        main
+            section.fr-benefits
+                header.fr-benefits__header
+                    p.fr-benefits__subtitle наши преимущества
+                    h2.fr-benefits__title Выбирая нас<br>вы получаете
+                
+                ol.fr-benefits__list
+                    li.fr-benefit
+                        p.fr-benefit__text Индивидуальный подход.
+                        p.fr-benefit__descr Ритм обучения у каждого свой, мы не объединяем в группы чтобы сэкономить время, а занимаемся с каждым один на один, выводя на максимум навык каждого студента.
+                    li.fr-benefit
+                        p.fr-benefit__text Только практика.
+                        p.fr-benefit__descr Невозможно научиться стричь, разговаривая о стрижках. Никаких скучных лекций и болванок, работа на живых моделях с первого занятия. 
+                    li.fr-benefit
+                        p.fr-benefit__text Инструмент.
+                        p.fr-benefit__descr Мы поможем найти и купить качественные инструменты по разумной цене, которые не будет необходимости менять в будущем. Объясним, расскажем и покажем какие инструменты покупать можно, а какие нет. Предоставим скидки наших партнеров, чтобы получилось купить по максимально низкой цене.
+                    li.fr-benefit
+                        p.fr-benefit__text Опытные преподаватели.
+                        p.fr-benefit__descr В нашем филиале обучают только опытные практикующие барберы. Мы даем в процессе обучения возможность поработать в разными мастера, потому что у всех разные техники и свой подход.
+                    li.fr-benefit
+                        p.fr-benefit__text Трудоустройство.
+                        p.fr-benefit__descr После окончания курса, сдачи экзамена и получения сертификата мы оказываем полное содействие в трудоустройстве.
+                    li.fr-benefit
+                        p.fr-benefit__text Скидки.
+                        p.fr-benefit__descr Предоставим скидки наших партнёров, чтобы получилось купить необходимые инструменты по максимально низкой цене.
+
+            section.about#about
+                .about__header
+                    header.section-header
+                        h2.section-header__title Программа <br>курса
+                        p.section-header__subtitle.section-header__subtitle--light Oldboy&nbsp;Barbershop
+                        .section-header__image
+                            img(src="./img/about.jpg", alt="Барбершоп Oldboy")
+
+                .about__caption
+                    h3.about__headline Программа курса включает в себя все аспекты и навыки работы профессионального мужского мастера
+                    p.about__subtitle После прохождения обучения, вы сможете начать работу в любом действующем барбершопе
+
+                .about__content
+                    .about__includes
+                        article.include-item
+                            .include-item__icon: img(src="", alt="")
+                            p.include-item__title 01. Мужские стрижки:
+                            p.include-item__text Короткие, классические, длинные волосы. Изучение формы.
+                        article.include-item
+                            .include-item__icon: img(src="", alt="")
+                            p.include-item__title 02. Фэйдинг:
+                            p.include-item__text Работа машинкой, сведение, работа по градиенту
+                        article.include-item
+                            .include-item__icon: img(src="", alt="")
+                            p.include-item__title 03. Опасное бритьё
+                            p.include-item__text Техника и правила использования инструментов
+                        article.include-item
+                            .include-item__icon: img(src="", alt="")
+                            p.include-item__title 04. Моделирование бороды
+                            p.include-item__text Основные подходы и техники выполнения работ
+                        article.include-item
+                            .include-item__icon: img(src="", alt="")
+                            p.include-item__title 05. Работа с мужской косметикой
+                            p.include-item__text Укладки и бритьё, камуфляж
+                        article.include-item
+                            .include-item__icon: img(src="", alt="")
+                            p.include-item__title 06. Работа с клиентом
+                            p.include-item__text Обучение правильному взаимодействию с клиентом для получения лояльной базы в работе
+
+            section.haircut
+                .haircut__images
+                    .haircut__image.haircut__image--zero
+                        img(src="/img/haircut/crop1.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                    .haircut__image.haircut__image--main
+                        img(src="/img/haircut/crop2.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                    .haircut__image.haircut__image--secondary
+                        img(src="/img/haircut/crop3.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                    .haircut__image.haircut__image--secondary
+                        img(src="/img/haircut/crop4.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+
+                .haircut__content
+                    p.haircut__headline Мы не ставим жёстких рамок по сроку обучения
+
+                    .haircut__text
+                        h3 Средняя длительность полного обучения – один месяц
+                        p Но мы понимаем, что некоторым потребуется больше времени, мы всегда рады и готовы пойти вам на встречу и поэтому не ставим ограничений на срок обучения
+
+            section.academy-banner
+                header.academy-banner__header
+                    h2.academy-banner__title Обучение <br><strong>барберов</strong>
+                    p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
+
+                .academy-banner__content
+                    p.academy-banner__motto Всё ещё не можете решиться? —&nbsp;мы дарим первое ознакомительное занятие!
+                    p.academy-banner__text Приходите в гости, почувствуйте атмосферу барбершопа, познакомьтесь с преподавателем и теоретическими основами профессии
+                    p.academy-banner__address Санкт-Петербург <br>пр-т Тореза, 95 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 699-69-91</a>
+                    
+                .academy-banner__cta
+                    a.button(href="#") Узнать подробнее
+
+            section.fr-benefits
+                .fr-benefits__conclusion-more
+                    p.fr-benefits__conclusion-text Чтобы узнать остальные и убрать последние сомения на пути к собственному успешному бизнесу
+                    p.fr-benefits__cta Свяжитесь с нами по телефону <a href="tel:+">+7 926 699-69-91</a>
+                    p.fr-benefits__conclusion-rest И мы ответим на ваши вопросы
+
+        include modules/_choose-city.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")
