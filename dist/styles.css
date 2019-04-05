@@ -7433,3 +7433,27 @@ a.chosen-branch__value {
   .fr-oldboy-why__logo img {
     display: block;
     width: 100%; }
+
+.landing-info {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fbf6ee));
+  background-image: linear-gradient(to bottom, #ffffff, #fbf6ee); }
+
+.landing-info__content {
+  padding: 20px; }
+
+.landing-info__title {
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5; }
+
+.landing-info__subtitle {
+  color: #896322;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5; }
+
+.landing-info__text {
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5; }

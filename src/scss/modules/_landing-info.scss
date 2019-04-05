@@ -1,0 +1,38 @@
+.landing-info {
+    // visual
+    background-image: linear-gradient(to bottom, $light, $bianca);
+}
+
+.landing-info__header {
+
+}
+
+.landing-info__content {
+    // box model
+    padding: 20px;
+}
+
+.landing-info__title {
+    // box model
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.landing-info__subtitle {
+    // typography
+    color: $darkGold;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.landing-info__text {
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    line-height: 1.5;
+}
