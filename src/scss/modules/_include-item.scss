@@ -1,0 +1,46 @@
+.include-item {
+    // box model
+    width: 100%;
+    max-width: 330px;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    // typography
+    align-items: center;
+}
+
+.include-item__icon {
+    // box model
+    width: 80px;
+}
+
+.include-item__icon img {
+    // box model
+    width: 100%;
+}
+
+.include-item__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $darkGold;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 2;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.include-item__text {
+    // box model
+    margin: 0;
+    max-width: 250px;
+
+    // typography
+    font-size: 1rem;
+    line-height: 24px;
+    font-family: $mainFont;
+    color: #898989;
+}

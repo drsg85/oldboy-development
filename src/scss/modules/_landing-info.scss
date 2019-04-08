@@ -1,4 +1,8 @@
 .landing-info {
+    // box model
+    display: flex;
+    margin-bottom: 50px;
+
     // visual
     background-image: linear-gradient(to bottom, $light, $bianca);
 }
@@ -10,10 +14,13 @@
 .landing-info__content {
     // box model
     padding: 20px;
+    padding-left: 150px;
+    padding-right: calc(100% - 1250px);
 }
 
 .landing-info__title {
     // box model
+    margin: 0;
 
     // typography
     color: $dark;
@@ -34,5 +41,11 @@
     // typography
     color: $dark;
     font-family: $mainFont;
+    font-weight: 600;
     line-height: 1.5;
+}
+
+.landing-info__text span {
+    // typography
+    text-transform: uppercase;
 }
