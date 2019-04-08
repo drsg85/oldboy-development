@@ -3559,6 +3559,18 @@ html {
     .about__features {
       margin-left: 0; } }
 
+.about__includes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  margin-top: 30px; }
+
 .service {
   padding: 20px;
   padding-bottom: 40px; }
@@ -7313,6 +7325,21 @@ a.chosen-branch__value {
   text-decoration: underline;
   text-align: center; }
 
+.fr-benefits__cta {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 36px;
+  color: #2b2a29;
+  text-transform: uppercase;
+  text-align: center; }
+
+.fr-benefits__cta a {
+  color: #2b2a29;
+  text-decoration: none; }
+
 .fr-benefit {
   position: relative;
   margin-bottom: 35px;
@@ -7435,13 +7462,20 @@ a.chosen-branch__value {
     width: 100%; }
 
 .landing-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fbf6ee));
   background-image: linear-gradient(to bottom, #ffffff, #fbf6ee); }
 
 .landing-info__content {
-  padding: 20px; }
+  padding: 20px;
+  padding-left: 150px;
+  padding-right: calc(100% - 1250px); }
 
 .landing-info__title {
+  margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.5rem;
@@ -7456,4 +7490,44 @@ a.chosen-branch__value {
 .landing-info__text {
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
   line-height: 1.5; }
+
+.landing-info__text span {
+  text-transform: uppercase; }
+
+.include-item {
+  width: 100%;
+  max-width: 330px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 70px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.include-item__icon {
+  width: 80px; }
+
+.include-item__icon img {
+  width: 100%; }
+
+.include-item__title {
+  margin: 0;
+  color: #896322;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.85rem;
+  line-height: 2;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
+.include-item__text {
+  margin: 0;
+  max-width: 250px;
+  font-size: 1rem;
+  line-height: 24px;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #898989; }

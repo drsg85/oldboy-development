@@ -196,3 +196,24 @@
     text-align: center;
     
 }
+
+.fr-benefits__cta {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 36px;
+    color: #2b2a29;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.fr-benefits__cta a {
+    // typography
+    color: #2b2a29;
+    text-decoration: none;
+}
