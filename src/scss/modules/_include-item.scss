@@ -2,16 +2,36 @@
     // box model
     width: 100%;
     max-width: 330px;
+    display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
 
     // typography
-    align-items: center;
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        flex-basis: 45%;
+    }
+
+    @include atDesktopM {
+        // box model
+        flex-basis: 32%;
+    }
 }
 
 .include-item__icon {
     // box model
-    width: 80px;
+    width: 64px;
+    margin-bottom: 10px;
+
+    @include atTablet {
+        // box model
+        width: 80px;
+    }
 }
 
 .include-item__icon img {

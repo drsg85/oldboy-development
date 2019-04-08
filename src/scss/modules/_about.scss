@@ -4,6 +4,12 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
+
+        // visual
+        background-image: url('./img/bgs/price-bottom-d.jpg');
+        background-position: top left 100px;
+        background-size: 1000px;
+        background-repeat: no-repeat;
     }
 
     @include atDesktopS {
@@ -12,11 +18,23 @@
 
         // box model
         display: block;
+
+        // visual
+        background-position: top right;
+        background-size: 900px;
     }
 
     @include atDesktopM {
         // box model
         padding-right: calc((100% - 1400px) / 2);
+
+        // visual
+        background-size: 1200px;
+    }
+
+    @include atDesktopL {
+        // visual
+        background-size: 1400px;
     }
 }
 
@@ -26,10 +44,11 @@
 
     // box model
     padding: 20px 0;
+    margin-bottom: 30px;
 
     @include atTablet {
         // box model
-        flex-basis: 390px;
+        flex-basis: 380px;
     }
 
     @include atDesktopS {
@@ -50,8 +69,8 @@
         top: 1rem;
 
         // box model
-        flex-basis: calc(100% - 391px);
-        padding-right: 40px;
+        // flex-basis: calc(100% - 391px);
+        padding: 20px 40px;
     }
 
     @include atDesktopS {
@@ -92,7 +111,6 @@
 
 .about__headline {
     // box model
-    width: 250px;
     margin: 0;
     margin-left: auto;
 
@@ -101,7 +119,7 @@
     font-family: $titleFont;
     font-size: 1.5rem;
     line-height: 1.5;
-    text-align: right;
+    // text-align: right;
 
     @include atTablet {
         // box model
@@ -189,5 +207,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 150px;
-    margin-top: 30px;
+    margin-top: 60px;
+
+    @include atTablet {
+        // box model
+        align-items: flex-start;
+    }
 }

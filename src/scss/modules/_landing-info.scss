@@ -1,21 +1,30 @@
 .landing-info {
     // box model
-    display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
     // visual
     background-image: linear-gradient(to bottom, $light, $bianca);
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+    }
 }
 
 .landing-info__header {
-
+    // box model
+    margin-bottom: 90px;
 }
 
 .landing-info__content {
     // box model
     padding: 20px;
-    padding-left: 150px;
-    padding-right: calc(100% - 1250px);
+    
+    @include atDesktopS {
+        // box model
+        padding-left: 150px;
+        padding-right: calc(100% - 1250px);
+    }
 }
 
 .landing-info__title {
