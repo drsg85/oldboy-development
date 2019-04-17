@@ -7577,3 +7577,16 @@ a.chosen-branch__value {
   line-height: 24px;
   font-family: "Open Sans", Arial, sans-serif;
   color: #898989; }
+
+.up-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  z-index: 100; }
+
+.up-button img {
+  width: 100%;
+  height: 100%; }
