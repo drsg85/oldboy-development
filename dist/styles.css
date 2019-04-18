@@ -7579,14 +7579,61 @@ a.chosen-branch__value {
   color: #898989; }
 
 .up-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+  position: relative;
   display: block;
   width: 100px;
   height: 100px;
+  margin: 0 auto;
+  background-image: url("./img/icons/up-button.svg");
+  background-repeat: no-repeat;
   z-index: 100; }
 
-.up-button img {
-  width: 100%;
-  height: 100%; }
+.up-button__arrow::after {
+  content: "";
+  position: absolute;
+  top: -27px;
+  left: 41px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: move 1.5s infinite;
+  animation: move 1.5s infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background-image: url("./img/icons/up-arrow.svg");
+  background-repeat: no-repeat; }
+
+@-webkit-keyframes move {
+  from {
+    top: -20px; }
+  to {
+    top: -30px; } }
+
+@keyframes move {
+  from {
+    top: -20px; }
+  to {
+    top: -30px; } }
+
+.up-button__arrow::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 36px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0.8)), to(#ffffff));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), #ffffff);
+  z-index: 101; }
+
+.up-button__text {
+  position: absolute;
+  bottom: 12px;
+  left: 27px;
+  margin: 0;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase; }
