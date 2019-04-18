@@ -4,9 +4,10 @@
 
     // box model
     display: block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    margin: 30px auto;
+    margin-top: 90px;
 
     // visual
     background-image: url('./img/icons/up-button.svg');
@@ -16,71 +17,76 @@
 
 
 .up-button__arrow {
+  // positioning
+  position: relative;
 
-    &::after {
-        content: "";
+  &::after {
+      content: "";
 
-        // positioning
-        position: absolute;
-        top: -27px;
-        left: 41px;
+      // positioning
+      position: absolute;
+      left: 0;
+      right: 0;
 
-        // box model
-        display: block;
-        width: 30px;
-        height: 30px;
+      // box model
+      display: block;
+      height: 40px;
 
-        // visual
-        animation: move 1.5s infinite;
-        animation-timing-function: linear;
-        background-image: url('./img/icons/up-arrow.svg');
-        background-repeat: no-repeat;
-    }
+      // visual
+      animation: move 1.5s infinite;
+      animation-timing-function: linear;
+      background-image: url('./img/icons/up-arrow.svg');
+      background-position: top center;
+      background-repeat: no-repeat;
+  }
 }
 
-@keyframes move {
-    from {
-      top: -20px;
-    }
-    to {
-      top: -30px;
-    }
+
+.up-button__arrow {
+  &::before {
+      content: "";
+
+      // positioning
+      position: absolute;
+      top: -40px;
+      left: 0;
+      right: 0;
+
+      // box model
+      display: block;
+      height: 50px;
+      // border: 1px solid red;
+
+      // visual
+      background: linear-gradient(to top, transparent, $light);
+      z-index: 101;
   }
-
-  .up-button__arrow {
-
-    &::before {
-        content: "";
-
-        // positioning
-        position: absolute;
-        top: -32px;
-        left: 36px;
-
-        // box model
-        display: block;
-        width: 30px;
-        height: 30px;
-
-        // visual
-        background: linear-gradient(to top, rgba(255,255,255, 0), rgba(255,255,255, 0.8), $light);
-        z-index: 101;
-    }
-  }
+}
 
 .up-button__text {
     // positioning
     position: absolute;
-    bottom: 12px;
-    left: 27px;
+    bottom: 18px;
+    left: 0;
+    right: 0;
 
     // box model
     margin: 0;
 
-    // visual
+    // typography
     color: $dark;
     font-family: $titleFont;
     font-weight: 600;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+@keyframes move {
+  from {
+    top: -26px;
+  }
+  to {
+    top: -40px;
+  }
 }

@@ -7581,59 +7581,64 @@ a.chosen-branch__value {
 .up-button {
   position: relative;
   display: block;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  margin: 30px auto;
+  margin-top: 90px;
   background-image: url("./img/icons/up-button.svg");
   background-repeat: no-repeat;
   z-index: 100; }
 
-.up-button__arrow::after {
-  content: "";
-  position: absolute;
-  top: -27px;
-  left: 41px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  -webkit-animation: move 1.5s infinite;
-  animation: move 1.5s infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  background-image: url("./img/icons/up-arrow.svg");
-  background-repeat: no-repeat; }
-
-@-webkit-keyframes move {
-  from {
-    top: -20px; }
-  to {
-    top: -30px; } }
-
-@keyframes move {
-  from {
-    top: -20px; }
-  to {
-    top: -30px; } }
+.up-button__arrow {
+  position: relative; }
+  .up-button__arrow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 40px;
+    -webkit-animation: move 1.5s infinite;
+    animation: move 1.5s infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background-image: url("./img/icons/up-arrow.svg");
+    background-position: top center;
+    background-repeat: no-repeat; }
 
 .up-button__arrow::before {
   content: "";
   position: absolute;
-  top: -32px;
-  left: 36px;
+  top: -40px;
+  left: 0;
+  right: 0;
   display: block;
-  width: 30px;
-  height: 30px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0.8)), to(#ffffff));
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), #ffffff);
+  height: 50px;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#ffffff));
+  background: linear-gradient(to top, transparent, #ffffff);
   z-index: 101; }
 
 .up-button__text {
   position: absolute;
-  bottom: 12px;
-  left: 27px;
+  bottom: 18px;
+  left: 0;
+  right: 0;
   margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   font-weight: 600;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase; }
+
+@-webkit-keyframes move {
+  from {
+    top: -26px; }
+  to {
+    top: -40px; } }
+
+@keyframes move {
+  from {
+    top: -26px; }
+  to {
+    top: -40px; } }
