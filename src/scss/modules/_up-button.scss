@@ -1,0 +1,20 @@
+.up-button {
+    // positioning
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    // box model
+    display: block;
+    width: 100px;
+    height: 100px;
+
+    // visual
+    z-index: 100;
+}
+
+.up-button img {
+    // box model
+    width: 100%;
+    height: 100%;
+}
