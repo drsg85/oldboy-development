@@ -27,5 +27,7 @@
     "sass-module-importer": "^1.4.0",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4"
+  }
 }
