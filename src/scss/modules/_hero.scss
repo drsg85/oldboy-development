@@ -240,16 +240,19 @@
             min-height: 100vh;
 
             // visual
-            background-image: url('./img/bgs/404.jpg');
+            background-image: url('./img/bgs/hero-t.jpg');
             background-size: cover;
             background-position: bottom right;
         }
-
+        
         @include atDesktopS {
             // box model
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            // visual
+            background-image: url('./img/bgs/generic.jpg');
 
             .hero__top {
                 // box model
