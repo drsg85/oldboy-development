@@ -333,6 +333,11 @@
     vertical-align: top;
     width: 85px;
 
+    @media (max-width: 360px) {
+        // box model
+        opacity: 0;
+    }
+
     @include atTablet {
         // box model
         width: 190px;
@@ -417,7 +422,7 @@
     z-index: 3;
 
     // box model
-    display: inline-block;
+    display: flex;
     vertical-align: top;
     padding-right: 70px;
     padding-left: 85px;

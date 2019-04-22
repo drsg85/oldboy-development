@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--main
+            .hero__top
+                .hero__logo
+                    img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    .language-select
+                        .language-select__current EN
+                        .language-select__popup.language-select__popup--hidden
+                            ul
+                                li
+                                    a(href="#") Русский
+                                li
+                                    a(href="#") English
+                                li
+                                    a(href="#") Serbski
+                                li
+                                    a(href="#") Polski
+                                li
+                                    a(href="#") Español
+
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        //- p.city-select__city Комсомольск-на-Амуре
+                        p.city-select__city Barcelona
+                        //- p.city-select__city Санкт-Перербург
+
+                .menu-button
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span>
+                        p.hero-caption__motto Намного больше, чем просто мужская&nbsp;парикмахерская
+
+                    .hero__buttons
+                        a.button.ms_booking(href="#") Запись онлайн<br>
+                        a.button.button--ghost(href="#about") О барбершопе
+
+                .hero__deco
+                    img(src="./img/bgs/oleg.png", alt="Стрижка в Oldboy barbershop")
+
+                aside.hero__aside
+                    .hero__counter
+                        .branch-counter
+                            h2.branch-counter__title КРУПНЕЙШАЯ СЕТЬ <strong>БАРБЕРШОПОВ</strong>
+                            p.branch-counter__amount 243
+
+                    .hero__franchise
+                        .franch-promo
+                            h2.franch-promo__title <strong>ФРАНШИЗА</strong> Oldboy Barbershop
+                            .franch-promo__cta
+                                a.button.button--ghost(href="franchise.html") Открыть барбершоп
+
+        main
+            //- section.news
+                .news__header
+                    header.section-header
+                        h2.section-header__title Наши <br>новости
+                        p.section-header__subtitle О&nbsp;самом&nbsp;главном
+
+                .news__editorial
+                    .editorial
+                        .editorial__photo
+                            img(src="/img/news/opening.jpg", alt="Barbershop main news photo")
+
+                        .editorial__content
+                            .editorial__caption
+                                p.editorial__category Новости франшизы
+                                h3.editorial__title Открытие нового барбершопа Oldboy в&nbsp;барселоне
+                                p.editorial__subtitle Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в&nbsp;конце августа
+
+                            footer.editorial__footer
+                                .editorial__date
+                                    .date
+                                        span.date__day 27
+                                        span.date__m-n-y <span>июля</span> <span>2018</span>
+                                a.editorial__cta(href="#") Читать полностью
+
+                .news__feed
+                    article.news-item
+                        .news-item__container
+                            .news-item__photo
+                                img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                            
+                            .news-item__content
+                                header.news-item__header
+                                    p.news-item__category Косметика и аксессуары
+                                    h3.news-item__title Старт продаж новой косметики Barber Wild
+                                    p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
+
+                                footer.news-item__footer
+                                    .news-item__date
+                                        .date
+                                            span.date__day 27
+                                            span.date__m-n-y <span>июля</span> <span>2018</span>
+                                    a.news-item__cta(href="#") Читать полностью
+
+                    article.news-item
+                        .news-item__container
+                            .news-item__photo
+                                img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                            
+                            .news-item__content
+                                header.news-item__header
+                                    p.news-item__category Новости регионов
+                                    h3.news-item__title Новые акции для выпускников
+                                    p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
+
+                                footer.news-item__footer
+                                    .news-item__date
+                                        .date
+                                            span.date__day 27
+                                            span.date__m-n-y <span>июля</span> <span>2018</span>
+                                    a.news-item__cta(href="#") Читать полностью
+
+                    article.news-item
+                        .news-item__container
+                            .news-item__photo
+                                img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+
+                            .news-item__content
+                                header.news-item__header
+                                    p.news-item__category Новинки
+                                    p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                                    p.news-item__subtitle Самый ожидаемый старт сезона уже в эти выходные
+
+                                footer.news-item__footer
+                                    .news-item__date
+                                        .date
+                                            span.date__day 27
+                                            span.date__m-n-y <span>июля</span> <span>2018</span>
+                                    a.news-item__cta(href="#") Читать полностью
+
+                .news__more
+                    a.button(href="#") Смотреть все новости
+                    p.news__more-text Узнайте ещё больше новостей барбершопов oldboy
+
+            section.services#services
+                .services__header
+                    header.section-header
+                        h2.section-header__title Услуги <br>барбершопа
+                        p.section-header__subtitle.section-header__subtitle--golden-t Стрижем&nbsp;и&nbsp;бреем
+
+                .services__content
+                    .services__main
+                        article.service-main.service-main--haircut
+                            header.service-main__header
+                                h3.service-main__title Мужские <br><strong>стрижки</strong>
+                                p.service-main__subtitle Лучшее качество
+                            .service-main__button
+                                a.button.button--ghost(href="haircut.html") Всё о стрижках
+
+                        article.service-main.service-main--beard
+                            header.service-main__header
+                                h3.service-main__title Стрижка <br><strong>усов и&nbsp;бороды</strong>
+                                p.service-main__subtitle Наша специализация
+                            .service-main__button
+                                a.button.button--ghost(href="beard.html") Усы и борода
+
+                    .services__secondary
+                        article.service-item.service-item--shaving
+                            header.service-item__header
+                                p.service-item__subtitle Стиль и профессионализм
+                                h3.service-item__title <strong>Бритьё</strong> <br>бороды и головы
+                            .service-item__button
+                                a.button.button--ghost-dark(href="shaving.html") Услуги бритья
+
+                        article.service-item.service-item--royal
+                            .service-item__header
+                                p.service-item__subtitle Для настоящих ценителей
+                                h3.service-item__title <strong>Королевское</strong><br> бритьё
+                            .service-item__button
+                                a.button.button--ghost-dark(href="royal.html") Для ценителей
+
+                        article.service-item.service-item--tattoo
+                            .service-item__header
+                                p.service-item__subtitle Лучшие мастера
+                                h3.service-item__title <strong>Нанесение</strong> <br>татуировок
+                            .service-item__button
+                                a.button.button--ghost-dark(href="tattoo.html") Услуги тату салона
+
+                        article.service-item.service-item--spa
+                            .service-item__header
+                                p.service-item__subtitle Комплексный уход
+                                h3.service-item__title <strong>Барбер–SPA</strong> <br>Услуги
+                            .service-item__button
+                                a.button.button--disabled(href="#") Скоро открытие
+
+
+                    //- a.button(href="#") Показать все услуги
+
+            section.about#about
+                .about__header
+                    header.section-header
+                        h2.section-header__title О нашем <br>барбершопе
+                        p.section-header__subtitle.section-header__subtitle--light Oldboy&nbsp;Barbershop
+                        .section-header__image
+                            img(src="./img/about.jpg", alt="Барбершоп Oldboy")
+
+                .about__caption
+                    h3.about__headline Oldboy — Барбершоп с&nbsp;твоим&nbsp;характером
+                    p.about__subtitle Здесь нет праздных разговоров ни о чём, здесь царит атмосфера брутальности и&nbsp;мужского духа, вдохновлённая европейскими стандартами качества и стиля
+
+                .about__content
+                    p.about__text OldBoy Barbershop — намного больше чем просто мужская парикмахерская, это даже больше чем мужской клуб по интересам, это именно то место, где ты найдешь себя и свой стиль. Поверь нам на слово. Мужские стрижки и опасное бритье — это именно наш профиль, и мы уверены, что мы стрижем и бреем лучше всех. Даже не обсуждается! Как говорил Фрэнк Синатра «Костюм, шляпа, хорошая работа и одинокое пьянство по выходным — вот что украшает мужчину». Обещать что мы сделаем из тебя Кэри Гранта мы не будем, но ты можешь быть уверен в 3 вещах:
+                    .about__features
+                        article.thing
+                            .thing__icon: img(src="./img/icons/whiskey.svg", alt="Oldboy Барбершоп угощает")
+                            p.thing__text Тебе обязательно предложат чашечку кофе или бокал отличного бурбона
+                        article.thing
+                            .thing__icon: img(src="./img/icons/medal.svg", alt="Oldboy Барбершоп угощает")
+                            p.thing__text Мы пострижем и&nbsp;побреем тебя на высшем уровне
+                        article.thing
+                            .thing__icon: img(src="./img/icons/best-friend.svg", alt="Навсегда с Oldboy Барбершоп")
+                            p.thing__text Когда ты уйдёшь, ты&nbsp;обязательно вернёшься
+
+            include modules/_banner.pug
+
+            section.franchise
+                .franchise__header
+                    header.section-header
+                        h2.section-header__title Карта <br>филиалов
+                        p.section-header__subtitle Сеть&nbsp;Oldboy
+
+
+                .franchise__content
+                    .franchise__map
+                        img(src="/img/franchise-map.svg", alt="Oldboy barbershop locations map")
+                    .franchise__caption
+                        h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
+                        .franchise__button
+                            a.button(href="franchise.html") Открой свой барбершоп
+
+                    a.franchise__logo(href="franchise.html")
+                        img(src="/img/franch.svg", alt="Oldboy Franchise logo")
+
+                    .franchise__summary
+                        p.franchise__count 243
+                        p.franchise__details <strong>ФИЛИАЛA</strong> в 13 странах и в 8 столицах
+
+            a(href="#").up-button#up-button
+                .up-button__arrow
+                p.up-button__text Наверх
+
+        include modules/_choose-city.eu.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")
+        script(src="main.js")

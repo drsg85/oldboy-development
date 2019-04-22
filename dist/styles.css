@@ -635,6 +635,9 @@ html {
   display: inline-block;
   vertical-align: top;
   width: 85px; }
+  @media (max-width: 360px) {
+    .hero__logo {
+      opacity: 0; } }
   @media (min-width: 700px) {
     .hero__logo {
       width: 190px; } }
@@ -686,7 +689,9 @@ html {
   right: 0;
   top: 0;
   z-index: 3;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   vertical-align: top;
   padding-right: 70px;
   padding-left: 85px; }
@@ -1330,28 +1335,108 @@ html {
     background-color: rgba(175, 33, 46, 0.5);
     border-radius: 50%; }
 
+.language-select {
+  position: relative;
+  z-index: 2;
+  width: 32px; }
+
+.language-select:hover .language-select__current {
+  background-color: #d6a354; }
+
+.language-select__current {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  text-align: center;
+  border: 2px solid #d6a354;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+
+.language-select__popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 30px 40px;
+  background-color: #896322;
+  border-radius: 16px; }
+
+.language-select__popup--hidden {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden; }
+
+.language-select ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.language-select li {
+  padding: 5px 0; }
+
+.language-select a {
+  color: #ffffff;
+  font-family: "Rex", Arial, sans-serif;
+  text-decoration: none; }
+
 .city-select {
-  margin-top: -2px;
-  text-align: right; }
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding-left: 48px;
+  color: #ffffff;
+  text-align: left;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  cursor: pointer; }
+
+.city-select:hover {
+  color: #d6a354; }
+
+.city-select::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateX(-110%);
+  transform: translateX(-110%);
+  height: 100%;
+  width: 32px;
+  background-image: url("./img/icons/place.svg");
+  background-repeat: no-repeat;
+  background-position: top right; }
 
 .city-select__title {
   margin: 0;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem; }
+  font-size: 0.5rem; }
   @media (min-width: 395px) {
     .city-select__title {
       width: auto; } }
   @media (min-width: 700px) {
     .city-select__title {
-      font-size: 1.125rem;
+      font-size: 0.65rem;
       line-height: 1.25; } }
   @media (min-width: 1200px) {
     .city-select__title {
-      font-size: 1.25rem; } }
+      font-size: 0.75rem; } }
   @media (min-width: 1500px) {
     .city-select__title {
-      font-size: 1.5rem; } }
+      font-size: 0.8rem; } }
 
 .city-select__city {
   margin: 0;
@@ -1364,22 +1449,14 @@ html {
   @media (min-width: 1000px) {
     .city-select__city {
       display: inline-block;
-      vertical-align: top; } }
+      vertical-align: top;
+      text-align: right; } }
   @media (min-width: 1500px) {
     .city-select__city {
       font-size: 1.5rem; } }
   @media (min-width: 1920px) {
     .city-select__city {
       margin-left: 10px; } }
-
-.city-select__city a {
-  color: #ffffff;
-  text-decoration: none;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out; }
-
-.city-select__city a:hover {
-  color: #d6a354; }
 
 .city-select__triangle {
   font-size: 0.75em; }

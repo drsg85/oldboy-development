@@ -2,7 +2,7 @@
 
 class LocationSelector {
   constructor () {
-    this.city = document.querySelector('.city-select__city');
+    this.city = document.querySelector('.city-select');
     this.citySelector = document.querySelector('.location-selector');
     this.citySelectorClose = document.querySelector('.location-selector__close');
     this.cityInput = document.querySelector('.city-form__input');

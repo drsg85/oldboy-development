@@ -1,9 +1,42 @@
 .city-select {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
-    margin-top: -2px;
+    display: block;
+    padding-left: 48px;
 
     // typography
-    text-align: right;
+    color: $light;
+    text-align: left;
+    text-decoration: none;
+
+    // visual
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+}
+
+.city-select:hover {
+    // typography
+    color: $golden;
+}
+
+.city-select::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    transform: translateX(-110%);
+
+    // box model
+    height: 100%;
+    width: 32px;
+
+    // visual
+    background-image: url('./img/icons/place.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 .city-select__title {
@@ -14,7 +47,7 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1rem;
+    font-size: 0.5rem;
 
     @media (min-width: 395px) {
         // box model
@@ -23,18 +56,18 @@
     
     @include atTablet {
         // typography
-        font-size: 1.125rem;
+        font-size: 0.65rem;
         line-height: 1.25;
     }
 
     @include atDesktopM {
         // typography
-        font-size: 1.25rem;
+        font-size: 0.75rem;
     }
 
     @include atDesktopL {
         // typography
-        font-size: 1.5rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -56,6 +89,9 @@
         // box model
         display: inline-block;
         vertical-align: top;
+
+        // typography
+        text-align: right;
     }
 
     @include atDesktopL {
@@ -67,20 +103,6 @@
         // box model
         margin-left: 10px;
     }
-}
-
-.city-select__city a {
-    // typography
-    color: $light;
-    text-decoration: none;
-
-    // visual
-    transition: all 0.25s ease-out;
-}
-
-.city-select__city a:hover {
-    // typography
-    color: $golden;
 }
 
 .city-select__triangle {
