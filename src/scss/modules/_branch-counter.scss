@@ -1,4 +1,7 @@
 .branch-counter {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: column;
@@ -26,6 +29,55 @@
     @include atFullHD {
         // typography
         font-size: 1.25rem;
+    }
+}
+
+.branch-counter::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    top: 0;
+
+    // box model
+    height: 4px;
+    width: 200px;
+
+    // visual
+    background: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75), rgba($golden, 0));
+
+    @include atDesktopM {
+        // positioning
+        right: -5px;
+
+        // box model
+        height: 6px;
+        width: 300px;
+    }
+}
+
+.branch-counter::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: -20px;
+
+    // box model
+    height: 4px;
+    width: 200px;
+
+    // visual
+    background: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75), rgba($golden, 0));
+
+    @include atDesktopM {
+        // positioning
+        bottom: -30px;
+        right: -5px;
+
+        // box model
+        height: 6px;
+        width: 300px;
     }
 }
 

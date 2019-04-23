@@ -1883,6 +1883,7 @@ html {
   border: 1px solid rgba(214, 163, 84, 0.5); }
 
 .branch-counter {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1912,6 +1913,35 @@ html {
   @media (min-width: 1920px) {
     .branch-counter {
       font-size: 1.25rem; } }
+
+.branch-counter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 4px;
+  width: 200px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(214, 163, 84, 0)), color-stop(rgba(214, 163, 84, 0.75)), to(rgba(214, 163, 84, 0)));
+  background: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75), rgba(214, 163, 84, 0)); }
+  @media (min-width: 1200px) {
+    .branch-counter::before {
+      right: -5px;
+      height: 6px;
+      width: 300px; } }
+
+.branch-counter::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  height: 4px;
+  width: 200px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(214, 163, 84, 0)), color-stop(rgba(214, 163, 84, 0.75)), to(rgba(214, 163, 84, 0)));
+  background: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75), rgba(214, 163, 84, 0)); }
+  @media (min-width: 1200px) {
+    .branch-counter::after {
+      bottom: -30px;
+      right: -5px;
+      height: 6px;
+      width: 300px; } }
 
 .branch-counter__title {
   color: #ffffff;
