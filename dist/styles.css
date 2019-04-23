@@ -7461,10 +7461,10 @@ a.chosen-branch__value {
 
 .fr-benefits__conclusion-bibos {
   display: block;
-  font-family: "Rex", Arial, sans-serif;
   color: #000000;
-  line-height: 24px;
+  font-family: "Rex", Arial, sans-serif;
   font-weight: 700;
+  line-height: 24px;
   text-decoration: underline;
   text-align: center; }
 
