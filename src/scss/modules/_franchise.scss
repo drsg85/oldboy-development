@@ -172,8 +172,8 @@
     
     // typography
     color: $golden;
-    font-family: $titleFont;
-    font-size: 6em;
+    font-family: $displayFont;
+    font-size: 6.25em;
 }
 
 .franchise__details {
@@ -187,9 +187,9 @@
     white-space: nowrap;
 
     // visual
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid $golden;
-    border-image: linear-gradient(to right, rgba(168, 149, 93, 1), rgba(247, 220, 147, 1));
+    border-top: 3px solid $golden;
+    border-bottom: 3px solid $golden;
+    // border-image: linear-gradient(to right, rgba($darkGold, 0), rgba($golden, 1), rgba($darkGold, 0));
     border-image-slice: 2; 
 }
 
