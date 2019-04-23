@@ -89,19 +89,6 @@
         // box model
         display: inline-block;
         vertical-align: top;
-
-        // typography
-        text-align: right;
-    }
-
-    @include atDesktopL {
-        // typography
-        font-size: 1.5rem;
-    }
-
-    @include atFullHD {
-        // box model
-        margin-left: 10px;
     }
 }
 

@@ -1,7 +1,7 @@
 .language-select {
     // positioning
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     // box model
     width: 32px;
@@ -34,6 +34,7 @@
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.25s ease-out;
+    user-select: none;
 }
 
 .language-select__popup {
@@ -50,11 +51,12 @@
     // visual
     background-color: $darkGold;
     border-radius: 16px;
+    // transition: all 0.25s ease-out;
+    overflow: hidden;
 }
 
 .language-select__popup--hidden {
     // box model
-    height: 0px;
     opacity: 0;
     visibility: hidden;
 }
@@ -78,4 +80,9 @@
     color: $light;
     font-family: $titleFont;
     text-decoration: none;
+}
+
+.language-select a:hover {
+    // typography
+    color: $dark;
 }

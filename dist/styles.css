@@ -1337,7 +1337,7 @@ html {
 
 .language-select {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 32px; }
 
 .language-select:hover .language-select__current {
@@ -1364,7 +1364,11 @@ html {
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out; }
+  transition: all 0.25s ease-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .language-select__popup {
   position: absolute;
@@ -1373,10 +1377,10 @@ html {
   z-index: 1;
   padding: 30px 40px;
   background-color: #896322;
-  border-radius: 16px; }
+  border-radius: 16px;
+  overflow: hidden; }
 
 .language-select__popup--hidden {
-  height: 0px;
   opacity: 0;
   visibility: hidden; }
 
@@ -1392,6 +1396,9 @@ html {
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   text-decoration: none; }
+
+.language-select a:hover {
+  color: #131313; }
 
 .city-select {
   position: relative;
@@ -1449,14 +1456,7 @@ html {
   @media (min-width: 1000px) {
     .city-select__city {
       display: inline-block;
-      vertical-align: top;
-      text-align: right; } }
-  @media (min-width: 1500px) {
-    .city-select__city {
-      font-size: 1.5rem; } }
-  @media (min-width: 1920px) {
-    .city-select__city {
-      margin-left: 10px; } }
+      vertical-align: top; } }
 
 .city-select__triangle {
   font-size: 0.75em; }

@@ -97,6 +97,18 @@ eval("/* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT L
 
 /***/ }),
 
+/***/ "./src/js/modules/LanguageSelector.js":
+/*!********************************************!*\
+  !*** ./src/js/modules/LanguageSelector.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nclass LanguageSelector {\r\n  constructor() {\r\n    this.langSelect = document.querySelector('.language-select');\r\n    this.langButton = this.langSelect.querySelector('.language-select__current');\r\n    this.langPopup = this.langSelect.querySelector('.language-select__popup');\r\n\r\n    if (this.langSelect) {\r\n      this.reset();\r\n      this.addEvents();\r\n    }\r\n  }\r\n\r\n  addEvents() {\r\n    this.langButton.addEventListener('click', () => {\r\n      this.togglePopup();\r\n    });\r\n\r\n    document.addEventListener('click', (evt) => {\r\n      if(evt.target != this.langButton && evt.target != this.langPopup) {\r\n        this.reset();\r\n      }\r\n    });\r\n  }\r\n\r\n  reset() {\r\n    this.langPopup.classList.add('language-select__popup--hidden');\r\n  }\r\n\r\n  togglePopup() {\r\n    this.langPopup.classList.toggle('language-select__popup--hidden');\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (LanguageSelector);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/LanguageSelector.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/LocationSearch.js":
 /*!******************************************!*\
   !*** ./src/js/modules/LocationSearch.js ***!
@@ -153,7 +165,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass UpButton {\r\n  constru
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./src/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/LocationSelector */ \"./src/js/modules/LocationSelector.js\");\n/* harmony import */ var _modules_LocationSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/LocationSearch */ \"./src/js/modules/LocationSearch.js\");\n/* harmony import */ var _modules_UpButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/UpButton */ \"./src/js/modules/UpButton.js\");\n/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! smoothscroll-polyfill */ \"./node_modules/smoothscroll-polyfill/dist/smoothscroll.js\");\n/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nconst locationSelector = new _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nconst locationSearch = new _modules_LocationSearch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\nconst upButton = new _modules_UpButton__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\r\nsmoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default.a.polyfill();\r\n// window.__forceSmoothScrollPolyfill__ = true;\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./src/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/LocationSelector */ \"./src/js/modules/LocationSelector.js\");\n/* harmony import */ var _modules_LocationSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/LocationSearch */ \"./src/js/modules/LocationSearch.js\");\n/* harmony import */ var _modules_UpButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/UpButton */ \"./src/js/modules/UpButton.js\");\n/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! smoothscroll-polyfill */ \"./node_modules/smoothscroll-polyfill/dist/smoothscroll.js\");\n/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _modules_LanguageSelector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/LanguageSelector */ \"./src/js/modules/LanguageSelector.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nconst locationSelector = new _modules_LocationSelector__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nconst locationSearch = new _modules_LocationSearch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\r\nconst upButton = new _modules_UpButton__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\r\nsmoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default.a.polyfill();\r\n// window.__forceSmoothScrollPolyfill__ = true;\r\nconst langSelector = new _modules_LanguageSelector__WEBPACK_IMPORTED_MODULE_5__[\"default\"]();\r\n\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
 
 /***/ })
 
