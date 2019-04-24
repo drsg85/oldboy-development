@@ -1,10 +1,10 @@
 class LanguageSelector {
   constructor() {
     this.langSelect = document.querySelector('.language-select');
-    this.langButton = this.langSelect.querySelector('.language-select__current');
-    this.langPopup = this.langSelect.querySelector('.language-select__popup');
-
+    
     if (this.langSelect) {
+      this.langButton = this.langSelect.querySelector('.language-select__current');
+      this.langPopup = this.langSelect.querySelector('.language-select__popup');
       this.reset();
       this.addEvents();
     }
