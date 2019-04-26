@@ -1,5 +1,5 @@
 'use strict';
 
-import PromoCards from './modules/PromoCards';
+// import PromoCards from './modules/PromoCards';
 
-var promoCards = new PromoCards();
+// var promoCards = new PromoCards();
