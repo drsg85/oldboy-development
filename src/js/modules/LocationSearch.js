@@ -14,16 +14,19 @@ class LocationSearch {
     this.resultsList = this.locationSelector.querySelector('.search-results__list');
     this.notFoundLabel = this.locationSelector.querySelector('.search-results__not-found');
 
-    this.branches = this.generateBranches();
-    this.events();
-    this.hideResults();
+    // Check if not European version
+    if (this.locationForm) {
+      this.branches = this.generateBranches();
+      this.addEvents();
+      this.hideResults();
+    }
   }
 
 
   /**
    * Adds events listeners
    */
-  events () {
+  addEvents () {
     this.locationForm.addEventListener('submit', (evt) => {
       evt.preventDefault();
     });
