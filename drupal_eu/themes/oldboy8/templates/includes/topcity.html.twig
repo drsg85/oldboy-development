@@ -17,10 +17,10 @@
 
             <div class="hero__city-select">
 				{{ langswitcher }}
-                <div class="city-select">
-                    <p class="city-select__title">{{ 'Choose your Barbershop:'|trans }} </p>
-			<p class="city-select__city"><a href="choose-city.html">{{city}} <span class="city-select__triangle">▼</span></a></p>
-                </div>
+                <a class="city-select" href="#">
+                    <p class="city-select__title">{{ 'Choose&nbsp;Barbershop'|trans }}<span class="city-select__triangle">▼</span></p>
+			        <p class="city-select__city">{{city}}</p>
+                </a>
             </div>
             <div class="menu-button">
                 <div class="menu-button__middle"></div>
