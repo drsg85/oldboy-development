@@ -1,0 +1,9 @@
+name: OldBoy Support Module
+type: module
+description: 'Module for custom functionality'
+dependencies:
+package: OldBoy
+core: 8.x
+dependencies:
+  - field
+  - token

@@ -1,0 +1,49 @@
+<?php
+
+//https://www.drupal.org/docs/8/theming-drupal-8/modifying-attributes-in-a-theme-file
+
+function oldboy8_preprocess_page(&$vars) {
+	$language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+	$vars['language'] = $language;
+}
+
+function oldboy8_preprocess_links(&$vars) {
+	$language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+	$vars['language'] = $language;
+	$langMap = array(
+		'en' => "English",
+		'ru' => "Русский",
+		"sr" => "Serbski",
+		"pl" => "Polski",
+		"es" => "Español",
+	);
+
+	foreach($vars['links'] as $id => $label) {
+		if (isset($langMap[$id])) {
+			$vars['links'][$id]['link']['#title'] = $langMap[$id];
+		}
+	}
+}
+
+
+//function mytheme_preprocess_menu(&$variables) {
+
+
+/**
+ * Implements template_preprocess_field().
+ */
+/*function oldboy8_preprocess_field(&$variables) {*/
+    //$element =& $variables['element'];
+
+	//if($element['#field_name'] == 'field_hero_content') {
+		////error_log(var_export(array_keys($variables) ,true));
+		////kint($element);
+		////$node = \Drupal::routeMatch()->getParameter('node');
+		////$vars['label'] = $token->replace($vars['label'],['node' => $node]);
+
+		//$token_service = Drupal::token();
+		//$element[0]['#text'] = 'AAA';//$token_service->replace($element[0]['#text']);
+		//error_log(var_export($element[0]['#text'], true));
+	//$variables['element'][0]['#markup'] = 'AAA';
+	//} 
+/*}*/
