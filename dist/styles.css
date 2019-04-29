@@ -2420,11 +2420,11 @@ html {
       padding-top: 40px;
       padding-left: 20px;
       max-width: 900px;
-      height: 6000px; } }
+      height: 6300px; } }
   @media (min-width: 1500px) {
     .branch-addresses {
       max-width: 1270px;
-      height: 4500px; } }
+      height: 4700px; } }
 
 .branch-addresses__index {
   position: relative;
