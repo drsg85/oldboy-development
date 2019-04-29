@@ -1,0 +1,19 @@
+	{% set site_url = url('<front>') %}
+	{% set by_version = false %}
+	{% set eu_version = false %}
+	{% if '.by' in site_url|render|render %}
+		{% set by_version = true %}
+	{% elseif 'by.' in site_url|render|render %}
+		{% set by_version = true %}
+	{% elseif 'eu.' in site_url|render|render %}
+		{% set eu_version = true %}
+	{% endif %}
+
+
+	{% if by_version %}
+		{% include '@oldboy8/includes/locations.by.html.twig' %}
+	{% elseif eu_version %}
+		{% include '@oldboy8/includes/locations.eu.html.twig' %}
+	{% else %}
+		{% include '@oldboy8/includes/locations.com.html.twig' %}
+	{% endif %}

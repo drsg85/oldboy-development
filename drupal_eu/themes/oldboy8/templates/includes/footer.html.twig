@@ -1,0 +1,48 @@
+        <div class="footer__content">
+            <div class="footer__info-n-contacts">
+                <div class="footer__info">
+                    <div class="footer__logo"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
+                    <div class="footer__caption">
+						<h2 class="footer__title">{{ drupal_entity('block_content', 2) }} {{ drupal_entity('block_content', 3) }}</h2>
+                        <p class="footer__subtitle">{{ 'The largest Barbershop network'|trans }}</p>
+                        <p class="footer__text">{{ 'Oldboy barbershop is a lot more than just a man\'s hairdresser, it is even far more than a social club for men, it is exatly the place where you will find yourself and your identity.'|trans }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__menues">
+                <div class="footer__main-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">{{ 'Menu'|trans }}</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ url('<front>')  }}">{{ 'MAIN'|trans }}</a></li>
+						{#
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">НОВОСТИ</a></li>
+						#}
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ url('<front>')  }}#services">{{ 'SERVICES'|trans }}</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 9})   }}">{{ 'FRANCHISE'|trans }}</a></li>
+                    </ul>
+                </div>
+                <div class="footer__services-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">{{ 'Services'|trans }}</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 7})   }}">{{ 'HAIRCUTS'|trans }}</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 27})   }}">{{ 'MOUSTACHE AND BEARD'|trans }}</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 28})   }}">{{ 'STRAIGHT RAZOR SHAVING'|trans }}</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 5})   }}">{{ 'ROYAL SHAVE'|trans }}</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 6})   }}">{{ 'TATTOO'|trans }}</a></li>
+						{#
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">БАРБЕР-СПА</a></li>
+						#}
+                    </ul>
+                </div>
+                <div class="footer__info-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">{{ 'Info'|trans }}</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 3})   }}">{{ 'PRIVACY POLICY'|trans }}</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="{{ path('entity.node.canonical', {'node': 4})   }}">{{ 'TERMS AND CONDITIONS'|trans }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyrights">
+            <p>© 2014–{{ 'now'|date('Y') }} Oldboy Barbershop</p>
+        </div>
