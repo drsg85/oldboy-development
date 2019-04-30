@@ -11,4 +11,4 @@
  */
 {{ children }}
 #}
-<input{{ attributes }} /><label class="form__label-checkbox" for="{{ attributes.id }}">I agree to<br> <a class="form__policy" href="/privacy">PRIVACY POLICY</a></label>
+<input{{ attributes }} /><label class="form__label-checkbox" for="{{ attributes.id }}">I agree to<br> <a class="form__policy" href="{{ path('entity.node.canonical', {'node': 3})   }}">PRIVACY POLICY</a></label>
