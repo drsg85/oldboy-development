@@ -76,8 +76,8 @@
 	{% set braberplaces = drupal_entity('block_content', 3) %}
 
 	{% set hideFooter = "Off" %}
-	{% if content.field_hide_footer %}
-		{% set hideFooter = content.field_hide_footer %}
+    {% if content.field_hide_footer.0 %}
+        {% set hideFooter = content.field_hide_footer.0['#markup'] %}
 	{% endif %}
 
 
