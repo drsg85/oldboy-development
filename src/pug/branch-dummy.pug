@@ -29,54 +29,45 @@ html(lang="en")
 
             .hero__content
                 .hero__caption
-                    .hero-caption
-                        h1.hero-caption__title <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span>
-                        p.hero-caption__location Калининград
+                    .hero-caption.hero-caption--city
+                        h1.hero-caption__title.hero-caption__title--hidden Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span>
+                        p.hero-caption__location Комсомольск-на-Амуре
 
-                .hero__opening
-                    .section-header
-                        h2.section-header__title Открытие <br>21 октября
+                .hero__contacts-n-buttons
+                    .hero__contacts
+                        .contact
+                            h2.contact__title Адрес
+                            p.contact__value ул. Театральная, 30
+                            p.contact__value--place ТЦ «ЕВРОПА»
+                            <br>
+                            p.contact__value--metro <span>Несуществующая</span> <span>Центральная</span>
+                            
+                        .contact
+                            h2.contact__title Телефон
+                            p.contact__value: a(href="tel:52–57–90") 52–57–90
 
-                .hero__contacts
-                    .contact
-                        h2.contact__title Адрес
-                        p.contact__value ул. Театральная, 30
-                    .contact
-                        h2.contact__title Телефон
-                        p.contact__value 52–57–90
-                
-                //- .hero__countdown.countdown
-                    .countdown__block
-                        .countdown__date
-                            span.countdown__number 0
-                            span.countdown__number 3
-                        p.countdown__text дней
-                    .countdown__block
-                        .countdown__date
-                            span.countdown__number 1
-                            span.countdown__number 8
-                        p.countdown__text часов
-                    .countdown__block
-                        .countdown__date
-                            span.countdown__number 2
-                            span.countdown__number 7
-                        p.countdown__text минут
-                
-                .hero__buttons
-                    ul.social
-                        li.social__item
-                            a.social__icon.icon--vk(href="#") ВКонтакте
-                        li.social__item
-                            a.social__icon.icon--facebook(href="#") Facebook
-                        li.social__item
-                            a.social__icon.icon--instagram(href="#") Instagram
-            
-            aside.hero__vacancy
-                header.hero__vacancy-header
-                    p.hero__vacancy-subtitle Хочешь работать в нашем Барбершопе?
-                    h2.hero__vacancy-title Стань частью команды OldBoy&nbsp;BarberShop
-                    .hero__vacancy-subtitle Звони: +7 911 123-34-56
-                
+                        .contact
+                            h2.contact__title Часы работы
+                            p.contact__value 10:00 — 21:00 (Вс. с 11:00)
+
+                    .hero__buttons.hero__buttons--branch
+                        a.button.ms_booking(href="#") Запись онлайн<br>
+                        a.button.button--ghost(href="#") Сертификат
+
+                        ul.social
+                            li.social__item
+                                a.social__icon.icon--vk(href="#") ВКонтакте
+                            li.social__item
+                                a.social__icon.icon--facebook(href="#") Facebook
+                            li.social__item
+                                a.social__icon.icon--instagram(href="#") Instagram
+
+                aside.hero__vacancy
+                    header.hero__vacancy-header
+                        p.hero__vacancy-subtitle Хочешь работать в нашем Барбершопе?
+                        h2.hero__vacancy-title Стань частью команды OldBoy&nbsp;BarberShop
+                        .hero__vacancy-subtitle Звони: +7 911 123-34-56
+                    
                 //- a.button.button--ghost(href="#") Оставь заявку
 
         footer.footer

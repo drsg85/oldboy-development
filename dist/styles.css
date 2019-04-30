@@ -2420,11 +2420,11 @@ html {
       padding-top: 40px;
       padding-left: 20px;
       max-width: 900px;
-      height: 6000px; } }
+      height: 6300px; } }
   @media (min-width: 1500px) {
     .branch-addresses {
       max-width: 1270px;
-      height: 4500px; } }
+      height: 4700px; } }
 
 .branch-addresses__index {
   position: relative;
@@ -6589,63 +6589,6 @@ a.chosen-branch__value {
   .social__icon:hover {
     color: #131313;
     background-color: #ffffff; }
-
-.countdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  border: 2px solid #d6a354;
-  border-radius: 5px; }
-  @media (min-width: 700px) {
-    .countdown {
-      max-width: 100%; } }
-  @media (min-width: 1000px) {
-    .countdown {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start; } }
-
-.countdown__block {
-  position: relative;
-  display: inline-block;
-  color: #d6a354;
-  font-family: "Rex", Arial, sans-serif;
-  font-weight: 700; }
-  .countdown__block:after {
-    content: ':';
-    position: absolute;
-    top: -4px;
-    right: -12px;
-    font-family: "Rex", Arial, sans-serif;
-    font-size: calc(2.5rem + ((1vw - 3.75px) * 7.1111)); }
-    @media (min-width: 700px) {
-      .countdown__block:after {
-        font-size: 56px; } }
-  .countdown__block:last-child:after {
-    content: none; }
-
-.countdown__number {
-  display: inline-block;
-  margin: 0 1px;
-  padding: 0 0.25em;
-  font-size: calc(2.5rem + ((1vw - 3.75px) * 7.1111));
-  background-color: #000000;
-  border-radius: 5px; }
-  @media (min-width: 700px) {
-    .countdown__number {
-      font-size: 56px; } }
-
-.countdown__text {
-  margin: 0;
-  margin-top: 5px;
-  text-align: center; }
 
 .yButton {
   display: none; }
