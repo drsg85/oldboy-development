@@ -149,7 +149,7 @@
             </div>
         </section>
         <section class="about" id="about">
-            {{ content|without('field_hero_content') }}
+            {{ content|without('field_hero_content')|without('field_hide_footer') }}
         </section>
 
         {{ academy }}
