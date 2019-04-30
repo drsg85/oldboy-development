@@ -53,6 +53,12 @@
     border-radius: 16px;
     // transition: all 0.25s ease-out;
     overflow: hidden;
+
+    @include atTablet {
+        // positioning
+        left: auto;
+        right: 0;
+    }
 }
 
 .language-select__popup--hidden {
