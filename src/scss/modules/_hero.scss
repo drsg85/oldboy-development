@@ -480,6 +480,19 @@
     }
 }
 
+.hero__coming {
+    // positioning
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    
+    // box model
+    margin-right: -50%;
+    
+    // visual
+    transform: translate(-50%, -50%);
+}
+
 .hero__opening {
     // box model
     margin-left: -20px;
@@ -650,7 +663,7 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        top: 174px;
+        top: 60px;
         right: 40px;
         bottom: 0;
 
