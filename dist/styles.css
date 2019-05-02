@@ -763,12 +763,18 @@ html {
       padding-bottom: 40px; } }
 
 .hero__coming {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  margin: 0 auto; }
+  @media (min-width: 700px) {
+    .hero__coming {
+      margin-top: -50px; } }
+  @media (min-width: 1000px) {
+    .hero__coming {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      margin-right: -50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); } }
 
 .hero__opening {
   margin-left: -20px;
@@ -883,7 +889,7 @@ html {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 40px; }
-  @media (min-width: 700px) {
+  @media (min-width: 1500px) {
     .hero__vacancy {
       max-width: 336px;
       width: 100%;

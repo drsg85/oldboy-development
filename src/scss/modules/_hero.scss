@@ -481,6 +481,15 @@
 }
 
 .hero__coming {
+    // box model
+    margin: 0 auto;
+
+    @include atTablet {
+        // box model
+        margin-top: -50px;
+    }
+
+    @include atDesktopS {
     // positioning
     position: absolute;
     left: 50%;
@@ -491,6 +500,7 @@
     
     // visual
     transform: translate(-50%, -50%);
+    }
 }
 
 .hero__opening {
@@ -633,7 +643,7 @@
     align-items: center;
     margin-top: 40px;
 
-    @include atTablet {
+    @include atDesktopL {
         // box model
         max-width: 336px;
         width: 100%;
