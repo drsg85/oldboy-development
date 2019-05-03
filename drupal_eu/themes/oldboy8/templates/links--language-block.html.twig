@@ -34,7 +34,7 @@
 <div class="language-select">
 	<div class="language-select__current">{{ language|upper }}</div>
 {% if links -%}
-	<div class="language-select__popup">
+	<div class="language-select__popup language-select__popup--hidden">
 	<ul>
     {%- for item in links -%}
       <li{{ item.attributes }}>

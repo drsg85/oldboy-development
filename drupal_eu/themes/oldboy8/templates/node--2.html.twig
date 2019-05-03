@@ -106,14 +106,14 @@
                             <h3 class="service-main__title">{{ 'Men\'s<br> <strong>Haircuts</strong>'|trans }}</h3>
                             <p class="service-main__subtitle">{{ 'Best quality'|trans }}</p>
                         </header>
-                        <div class="service-main__button"><a class="button button--ghost" href="/services/haircut">{{ 'All about haircuts'|trans }}</a></div>
+                        <div class="service-main__button"><a class="button button--ghost" href="{{ path('entity.node.canonical', {'node': 7})   }}">{{ 'All about haircuts'|trans }}</a></div>
                     </article>
                     <article class="service-main service-main--beard">
                         <header class="service-main__header">
                             <h3 class="service-main__title">{{ 'Moustache<br> <strong>and&nbsp;Beard Grooming'|trans }}</strong></h3>
                             <p class="service-main__subtitle">{{ 'Our specialization'|trans }}</p>
                         </header>
-                        <div class="service-main__button"><a class="button button--ghost" href="/services/beard">{{ 'Moustache and Beard'|trans }}</a></div>
+                        <div class="service-main__button"><a class="button button--ghost" href="{{ path('entity.node.canonical', {'node': 27})   }}">{{ 'Moustache and Beard'|trans }}</a></div>
                     </article>
                 </div>
                 <div class="services__secondary">
@@ -122,21 +122,21 @@
                             <p class="service-item__subtitle">{{ 'Style and Mastership'|trans }}</p>
                             <h3 class="service-item__title"><strong>{{ 'Beard and Head</strong><br>Shaving'|trans }}</h3>
                         </header>
-                        <div class="service-item__button"><a class="button button--ghost-dark" href="/services/shaving">{{ 'Shaving Services'|trans }}</a></div>
+                        <div class="service-item__button"><a class="button button--ghost-dark" href="{{ path('entity.node.canonical', {'node': 28})   }}">{{ 'Shaving Services'|trans }}</a></div>
                     </article>
                     <article class="service-item service-item--royal">
                         <div class="service-item__header">
                             <p class="service-item__subtitle">{{ 'For true Connoisseurs'|trans }}</p>
                             <h3 class="service-item__title">{{ '<strong>Royal</strong><br> Shaving'|trans }}</h3>
                         </div>
-                        <div class="service-item__button"><a class="button button--ghost-dark" href="/services/royal-shaving">{{ 'For Connoisseurs'|trans }}</a></div>
+                        <div class="service-item__button"><a class="button button--ghost-dark" href="{{ path('entity.node.canonical', {'node': 5})   }}">{{ 'For Connoisseurs'|trans }}</a></div>
                     </article>
                     <article class="service-item service-item--tattoo">
                         <div class="service-item__header">
                             <p class="service-item__subtitle">{{ 'Best Professionals'|trans }}</p>
                             <h3 class="service-item__title">{{ '<strong>Tattoo</strong><br>Services'|trans }}</h3>
                         </div>
-                        <div class="service-item__button"><a class="button button--ghost-dark" href="/services/tattoo">{{ 'Tattoo shop'|trans }}</a></div>
+                        <div class="service-item__button"><a class="button button--ghost-dark" href="{{ path('entity.node.canonical', {'node': 6})   }}">{{ 'Tattoo shop'|trans }}</a></div>
                     </article>
                     <article class="service-item service-item--spa">
                         <div class="service-item__header">
@@ -149,7 +149,7 @@
             </div>
         </section>
         <section class="about" id="about">
-            {{ content|without('field_hero_content') }}
+            {{ content|without('field_hero_content')|without('field_hide_footer') }}
         </section>
 
         {{ academy }}
@@ -165,9 +165,9 @@
             <div class="franchise__map"><img src="/{{ directory }}/dist/img/franchise-map.svg" alt="{{ 'Oldboy barbershop locations map'|trans }}" /></div>
                 <div class="franchise__caption">
                     <h3 class="franchise__title">{{ '<strong>Franchise</strong> Oldboy&nbsp;Barbershop'|trans }}</h3>
-                    <div class="franchise__button"><a class="button" href="/franchising">{{ 'Open your Barbershop'|trans }}</a></div>
+                    <div class="franchise__button"><a class="button" href="{{ path('entity.node.canonical', {'node': 9})   }}">{{ 'Open your Barbershop'|trans }}</a></div>
                 </div>
-                {# <a class="franchise__logo" href="/franchising"><img src="/{{ directory }}/dist/img/franch.svg" alt="Oldboy Franchise logo" /></a> #}
+                {# <a class="franchise__logo" href="{{ path('entity.node.canonical', {'node': 9})   }}"><img src="/{{ directory }}/dist/img/franch.svg" alt="Oldboy Franchise logo" /></a> #}
                 <div class="franchise__summary">
                     <p class="franchise__count">{{ brabercount }}</p>
                     <p class="franchise__details">{{ braberplaces }}</p>
