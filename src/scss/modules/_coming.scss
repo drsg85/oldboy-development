@@ -1,0 +1,49 @@
+.coming {
+
+}
+
+.coming__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.coming__subtitle::before {
+    content: "";
+
+    // positioning
+    position: relative;
+    left: -10px;
+    left: 0;
+    top: 0.7rem;
+
+    // box model
+    display: block;
+    width: 50%;
+    height: 2px;
+
+    // visual
+    background: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
+}
+
+.coming__subtitle span {
+    // typography
+    font-size: 3rem;
+}
+
+.coming__date {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 9rem;
+    text-transform: uppercase;
+}
