@@ -75,6 +75,18 @@
 	{% set brabercount = drupal_entity('block_content', 2) %}
 	{% set braberplaces = drupal_entity('block_content', 3) %}
 
+	{% set hideFooter = "Off" %}
+	{% if content.field_hide_footer.0 %}
+		{% set hideFooter = content.field_hide_footer.0['#markup'] %}
+	{% endif %}
+
+	{% set bgbig = content.field_bg_big|render|striptags|trim %}
+	{% set bgsmall = content.field_bg_small.0|render|striptags|trim %}
+
+	<style>
+	{% if bgsmall %} .hero { background-image: url("{{ bgsmall }}") !important; } {% endif %}
+	{% if bgbig %} @media (min-width: 1000px) { .hero { background-image: url("{{ bgbig }}") !important; } } {% endif %}
+	</style>
 
     <header class="hero {% if node.field_hero_class.value %}
 						{{ node.field_hero_class.value|raw }}
@@ -97,13 +109,18 @@
 		{% endif %}
     </header>
     <main>
-		{{ content|without('field_hero_content') }}
+		{{ content|without('field_hero_content')|without('field_hide_footer') }}
+	{% if hideFooter == "Off" %}
+		{% include '@oldboy8/includes/totop.html.twig' %}
+	{% endif %}
     </main>
 	{% include '@oldboy8/includes/locations.html.twig' %}
+	{% if hideFooter == "Off" %}
     <footer class="footer">
 		{% include '@oldboy8/includes/footer.html.twig' %}
     </footer>
-    <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
+	{% endif %}
+	<script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
 
 
 
