@@ -1,0 +1,37 @@
+<?php
+
+//https://www.drupal.org/docs/8/theming-drupal-8/modifying-attributes-in-a-theme-file
+//mytheme_preprocess_node__article
+/*function oldboy8_preprocess_page() {*/
+
+/*}*/
+//function mytheme_preprocess_menu(&$variables) {
+
+
+/**
+ * Implements template_preprocess_field().
+ */
+/*function oldboy8_preprocess_field(&$variables) {*/
+    //$element =& $variables['element'];
+
+	//if($element['#field_name'] == 'field_hero_content') {
+		////error_log(var_export(array_keys($variables) ,true));
+		////kint($element);
+		////$node = \Drupal::routeMatch()->getParameter('node');
+		////$vars['label'] = $token->replace($vars['label'],['node' => $node]);
+
+		//$token_service = Drupal::token();
+		//$element[0]['#text'] = 'AAA';//$token_service->replace($element[0]['#text']);
+		//error_log(var_export($element[0]['#text'], true));
+	//$variables['element'][0]['#markup'] = 'AAA';
+	//} 
+/*}*/
+
+/**
+ * Implements hook_preprocess().
+ */
+function oldboy8_preprocess(&$vars) {
+
+	$vars['js_ver'] = '1.2';
+
+	}

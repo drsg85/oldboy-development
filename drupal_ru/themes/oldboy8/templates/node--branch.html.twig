@@ -1,0 +1,336 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+
+	{# set academy = drupal_entity('block_content', 1) #}
+	{% set academy = content.field_banner %}
+	{% set brabercount = drupal_entity('block_content', 2) %}
+	{% set braberplaces = drupal_entity('block_content', 3) %}
+
+	{% set city = content.field_city.0 %}
+	{% set cityname = content.field_cityname.0|render|striptags|trim %}
+
+	{% if cityname|trim %}
+		{% set city = cityname %}
+	{% endif %}
+
+	{% set bgbig = content.field_bg_big|render|striptags|trim %}
+	{% set bgsmall = content.field_bg_small.0|render|striptags|trim %}
+
+	<style>
+	{% if bgsmall %} .hero--branch { background-image: url("{{ bgsmall }}"); } {% endif %}
+	{% if bgbig %} @media (min-width: 1000px) { .hero--branch { background-image: url("{{ bgbig }}"); } } {% endif %}
+	</style>
+
+    <header class="hero hero--branch">
+        <div class="hero__top">
+            <div class="hero__logo"><a href="/"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
+            <div class="hero__nav hero__nav--hidden">
+                <nav class="main-nav">
+					{% include '@oldboy8/includes/topmenu.html.twig' %}
+                </nav>
+            </div>
+			{% include '@oldboy8/includes/topcity.html.twig' %}
+        </div>
+        <div class="hero__content">
+            <div class="hero__caption hero-caption--city">
+                <div class="hero-caption">
+                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span></h1>
+					<p class="hero-caption__location">{{ city }}</p>
+                </div>
+            </div>
+            <div class="hero__contacts-n-buttons">
+                <div class="hero__contacts">
+                    <div class="contact">
+                        <h2 class="contact__title">Адрес</h2>
+						<p class="contact__value">{{ node.field_address.0.value|raw }}</p>
+	{% if node.field_place.0.value|trim %}
+		<p class="contact__value--place">{{ node.field_place.0.value|raw|trim }}</p><br> 
+	{% endif %}
+	{% if node.field_metro.0.value|trim %}
+	<p class="contact__value--metro">
+		{% set stations = node.field_metro.0.value|raw|striptags|trim|split("\n") %}
+		{% for station in stations %}
+			{% if station %}
+				<span>{{ station }}</span>
+			{% endif %}
+		{% endfor %}
+	</p>
+	{% endif %}
+
+
+
+                    </div>
+                    <div class="contact">
+                        <h2 class="contact__title">Телефон</h2>
+						{% set phonelink = content.field_phone.0 %}
+						{% if content.field_phonelink.0 %}
+							{% set phonelink = content.field_phonelink.0 %}
+						{% endif %} 
+                        <p class="contact__value">
+                            <a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a>
+                        </p>
+                    </div>
+					{% if content.field_work_hours %}
+                    <div class="contact">
+                        <h2 class="contact__title">Часы работы</h2>
+                        <p class="contact__value">{{ content.field_work_hours.0 }}</p>
+                    </div>
+					{% endif %}
+                </div>
+
+-                <div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
+                    <ul class="social">
+						{% if content.field_link_vk.0 %}
+							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}">ВКонтакте</a></li>
+						{% endif %}
+						{% if content.field_link_facebook.0 %}
+							<li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}">Facebook</a></li>
+						{% endif %}
+						{% if content.field_link_instagram.0 %}
+							<li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}">Instagram</a></li>
+						{% endif %}
+                    </ul>
+                </div>
+            </div>
+            <aside class="hero__app">
+                <article class="app-promo">
+                    <header class="app-promo__header">
+                        <h2 class="app-promo__title">Установите специальное <br><strong>мобильное<br> приложение</strong></h2>
+                        <p class="app-promo__subtitle">для удобной онлайн–записи</p>
+                    </header>
+                    <div class="app-promo__image"><img src="/{{ directory }}/dist/img/mobile-app.png" alt="Oldboy Barbershop mobile application" title="Приложение Oldboy Barbershop" /></div>
+                    <div class="app-promo__buttons"><a class="app-button" href="{{ content.field_app_google.0 }}"><i class="icon--googleplay"></i> Google Play</a><a class="app-button app-button--thin" href="{{ content.field_app_apple.0 }}"><i class="icon--apple"></i> APP STORE</a></div>
+                </article>
+            </aside>
+        </div>
+    </header>
+    <main>
+
+{% set actions_count = (drupal_view_result('actions_list', 'block_1', node.id) | length)  %}
+{% if actions_count > 0 %}
+        <section class="promos" id="promos">
+            <div class="promos__header">
+                <header class="section-header">
+                    <h2 class="section-header__title">Акции <br>барбершопа</h2>
+                    <p class="section-header__subtitle">Режем&nbsp;цены</p>
+                </header>
+            </div>
+            <div class="promos__content">
+				{{ drupal_view('actions_list', 'block_1', node.id) }}
+            </div>
+        </section>
+{% endif %}
+        <section class="price-list" id="prices">
+            <div class="price-list__header">
+                <header class="section-header">
+                    <h2 class="section-header__title">Прайс-лист на&nbsp;услуги</h2>
+                    <p class="section-header__subtitle section-header__subtitle--price">Стрижём&nbsp;и&nbsp;бреем</p>
+                </header>
+            </div>
+            <div class="price-list__content">
+				{{ content.field_services }}
+            </div>
+        </section>
+
+
+{% set masters_count = (drupal_view_result('master_list', 'block_1', node.id) | length)  %}
+{% if masters_count > 0 %}
+        <section class="team" id="team">
+            <div class="team__header">
+                <header class="section-header">
+                    <h2 class="section-header__title">Наши <br>мастера</h2>
+                    <p class="section-header__subtitle">Команда&nbsp;Oldboy</p>
+                </header>
+            </div>
+            <div class="team__content">
+				{{ drupal_view('master_list', 'block_1', node.id) }}
+            </div>
+        </section>
+{% endif %}
+
+		{#
+        <section class="team">
+            <div class="team__header">
+                <header class="section-header">
+                    <h2 class="section-header__title">Наши мастера</h2>
+                    <p class="section-header__subtitle">Команда&nbsp;Oldboy</p>
+                </header>
+            </div>
+            <div class="team__content">
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Юрий</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/1.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Олег</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/2.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Виктор</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/3.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Евгений</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/4.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Даниил</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/5.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Раф</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/6.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Валера</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/7.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Денис</h3>
+                        <p class="member__position">Барбер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/8.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+                <article class="member">
+                    <header class="member__header">
+                        <h3 class="member__name">Михаил</h3>
+                        <p class="member__position">Тату–мастер</p>
+                    </header>
+                    <div class="member__photo"><img src="/{{ directory }}/dist/img/members/9.jpg" alt="Фотография барбера" /></div><a class="register" href="#">
+                        <p class="register__text">Записаться онлайн</p>
+                        <div class="register__icon"></div>
+                    </a>
+                </article>
+            </div>
+        </section>
+		#}
+
+		{{ academy }}
+
+    </main>
+	{% include '@oldboy8/includes/locations.html.twig' %}
+    <footer class="footer">
+		{% include '@oldboy8/includes/footer-branch.html.twig' %}
+    </footer>
+	{% if content.field_subscribe_link %}
+		{{ node.field_subscribe_link.value|raw }}
+	{% endif %}
+    <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
+	<script src="/{{ directory }}/dist/branch.js"></script>
+    {{ node.body.0.value|raw }}

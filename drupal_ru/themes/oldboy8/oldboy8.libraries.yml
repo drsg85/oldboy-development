@@ -1,0 +1,7 @@
+themelook:
+  version: 1.x
+  css:
+    theme:
+      dist/styles.css: {}
+  js:
+    dist/main.js: {}

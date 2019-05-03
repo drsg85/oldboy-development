@@ -1,0 +1,69 @@
+        <div class="footer__content">
+            <div class="footer__info-n-contacts">
+                <div class="footer__info">
+                    <div class="footer__logo"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
+                    <div class="footer__caption">
+						<h2 class="footer__title">{{ drupal_entity('block_content', 2) }} {{ drupal_entity('block_content', 3) }}</h2>
+                        <p class="footer__subtitle">Крупнейшая международная сеть мужских парикмахерских</p>
+                        <p class="footer__text">Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.</p>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__social">
+                        <p class="footer__social-cta">Следите за нами в соц. сетях</p>
+                        <ul class="social social--golden">
+                            <li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}">ВКонтакте</a></li>
+                            <li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}">Facebook</a></li>
+                            <li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact contact--footer">
+                        <h3 class="contact__title">Адрес</h3>
+                        <p class="contact__value">{{ content.field_address.0 }}</p>
+                    </div>
+                    <div class="contact contact--footer">
+                        <h3 class="contact__title">Телефон</h3>
+                        <p class="contact__value">{{ content.field_phone.0 }}</p>
+                    </div>
+                    <div class="contact contact--footer">
+                        <h3 class="contact__title">Часы работы</h3>
+                        <p class="contact__value">{{ content.field_work_hours.0 }}</p>
+                    </div>
+                    <div class="footer__city">{{ content.field_city.0 }}</div>
+                </div>
+            </div>
+            <div class="footer__menues">
+                <div class="footer__main-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Меню</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/">ГЛАВНАЯ</a></li>
+						{#
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">НОВОСТИ</a></li>
+						#}
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/#services">УСЛУГИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/franchaizing">ФРАНШИЗА</a></li>
+                    </ul>
+                </div>
+                <div class="footer__services-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Услуги</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/uslugi/haircut">СТРИЖКИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/uslugi/royal-shaving">БРИТЬЁ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/uslugi/tattoo">ТАТУИРОВКИ</a></li>
+						{#
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">БАРБЕР-СПА</a></li>
+						#}
+                    </ul>
+                </div>
+                <div class="footer__info-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Информация</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="/terms">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyrights">
+            <p>© 2014–{{ 'now'|date('Y') }} Oldboy Barbershop</p>
+        </div>
