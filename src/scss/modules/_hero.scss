@@ -88,6 +88,8 @@
         // visual
         background-image: none;
         background-image: url('./img/bgs/hero-t.jpg');
+        background-position: 35% 0%;
+        background-size: cover;
 
         @include atDesktopS {
             // box model

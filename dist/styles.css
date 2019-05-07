@@ -468,7 +468,9 @@ html {
         background-size: cover; } }
   .hero--branch {
     background-image: none;
-    background-image: url("./img/bgs/hero-t.jpg"); }
+    background-image: url("./img/bgs/hero-t.jpg");
+    background-position: 35% 0%;
+    background-size: cover; }
     @media (min-width: 1000px) {
       .hero--branch {
         display: -webkit-box;
