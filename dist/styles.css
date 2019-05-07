@@ -968,6 +968,14 @@ html {
   font-weight: 700;
   line-height: 30px; }
 
+.hero__vacancy-subtitle a {
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none; }
+
 .hero__app {
   margin: 0 -20px;
   margin-top: 60px; }
