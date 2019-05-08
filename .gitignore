@@ -1,3 +1,5 @@
 node_modules
 .vs
 package-lock.json
+drupal_ru/themes/oldboy8/dist
+drupal_eu/themes/oldboy8/dist

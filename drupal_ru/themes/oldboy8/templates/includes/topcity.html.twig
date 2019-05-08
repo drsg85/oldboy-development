@@ -1,0 +1,34 @@
+{% set city="Москва" %}
+
+{% set by_version = false %}
+{% set site_url = url('<front>') %}
+{% if '.by' in site_url|render|render %}
+	{% set by_version = true %}
+{% elseif 'by.' in site_url|render|render %}
+	{% set by_version = true %}
+{% endif %}
+
+{% if by_version %}
+	{% set city="Минск" %}
+{% endif %}
+
+{% if node.type.entity.label == "Город" %}
+	{% set city=node.label %}
+{% endif %} 
+{% if node.type.entity.label == "Филиал" %}
+	{% set city=node.field_city.0.entity.label %}
+	{% set cityname = node.field_cityname.0.value %}
+	{% if cityname|trim %}
+		{% set city = cityname %}
+	{% endif %}
+{% endif %} 
+
+            <div class="hero__city-select">
+                <a class="city-select" href="#">
+                    <p class="city-select__title">Выбери свой барбершоп:<span class="city-select__triangle">▼</span></p>
+                    <p class="city-select__city">{{city}}</p>
+                </a>
+            </div>
+            <div class="menu-button">
+                <div class="menu-button__middle"></div>
+            </div>

@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Theme override for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ */
+{% if attributes -%}
+  <div{{ attributes }}>
+{% endif %}
+{% if attributes -%}
+  </div>
+{% endif %}
+#}
+
+	{% set custom_content = drupal_entity('block_content', 7) %}
+    
+
+    <header class="location-selector__header">
+        <div class="location-selector__caption"><a href="#"><img src="/{{ directory }}/dist/img/logo-dark.svg" alt="" /></a>
+            <p class="location-selector__intro"><em>192 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских</p>
+        </div>
+        <div class="location-selector__fast-nav">
+            <div class="city-form">
+                <form class="city-form__form" autocomplete="off"><input class="city-form__input" type="search" name="search" placeholder="Город, улица или метро" autofocus="autofocus" /></form>
+            </div>
+            <section class="search-results">
+                <h2 class="search-results__title">Результаты поиска:</h2>
+                <p class="search-results__not-found">такого города не найдено</p>
+                <ul class="search-results__list"></ul>
+            </section>
+        </div>
+        <div class="location-selector__close location-selector__close--hidden">
+            <div class="close-button"></div>
+        </div>
+    </header>
+
+	{% set firstLetter = true %}
+	{% set cityTagOpend = false %}
+
+    <div class="location-selector__content">
+        <div class="branch-addresses">
+
+		{% for row in rows|sortBranches|branchLetters %}
+			{% if row.letter %}
+				{% if firstLetter %}
+					{% set firstLetter = false %}
+				{% else %}
+					{% if cityTagOpend %}
+						</ul>
+						{% set cityTagOpend = false %}
+					{% endif %}
+					</div><!--letter content--!>
+				</div><!--index --!>
+				{% endif %}
+				<div class="branch-addresses__index">
+					<div class="branch-addresses__letter">{{ row.letter }}</div>
+					<div class="branch-addresses__content">
+			{% endif %}
+
+			{% if row.city %}
+				{% if cityTagOpend %}
+                    </ul>
+					{% set cityTagOpend = false %}
+				{% endif %}
+
+				<ul class="location-list">
+				<li class="location-list__city"><a href="{{ path('entity.node.canonical', {'node': row.city_nid}) }}">{{ row.city }}</a></li>
+				{% set cityTagOpend = true %}
+			{% endif %}
+				
+			{{- row.content -}}
+		{% endfor %}
+
+		{% if not firstLetter %}
+				{% if cityTagOpend %}
+                    </ul>
+					{% set cityTagOpend = false %}
+				{% endif %}
+					</div><!--letter content--!>
+				</div><!--index --!>
+		{% endif %}
+		{{ custom_content }}
+        </div>
+    </div>
+

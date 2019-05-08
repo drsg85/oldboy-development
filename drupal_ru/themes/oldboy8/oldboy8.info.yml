@@ -1,0 +1,16 @@
+name: oldboy8
+type: theme
+base theme: stable
+core: 8.x
+libraries:
+  - oldboy8/themelook
+features:
+  favicon: true
+favicon:
+  use_default: false
+regions:
+  header: 'Header'
+  topmenu: 'Top Menu'
+  cityselect: 'City Selector'
+  content: 'Content'
+  footer: 'Footer'
