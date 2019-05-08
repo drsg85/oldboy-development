@@ -468,7 +468,9 @@ html {
         background-size: cover; } }
   .hero--branch {
     background-image: none;
-    background-image: url("./img/bgs/hero-t.jpg"); }
+    background-image: url("./img/bgs/hero-t.jpg");
+    background-position: 35% 0%;
+    background-size: cover; }
     @media (min-width: 1000px) {
       .hero--branch {
         display: -webkit-box;
@@ -965,6 +967,14 @@ html {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 30px; }
+
+.hero__vacancy-subtitle a {
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none; }
 
 .hero__app {
   margin: 0 -20px;

@@ -88,6 +88,8 @@
         // visual
         background-image: none;
         background-image: url('./img/bgs/hero-t.jpg');
+        background-position: 35% 0%;
+        background-size: cover;
 
         @include atDesktopS {
             // box model
@@ -763,6 +765,16 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 30px;
+}
+
+.hero__vacancy-subtitle a {
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+    text-decoration: none;
 }
 
 .hero__app {
