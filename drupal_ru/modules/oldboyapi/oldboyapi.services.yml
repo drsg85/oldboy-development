@@ -1,0 +1,6 @@
+services:
+  oldboyapi.twig_extension:
+    arguments: ['@renderer']
+    class: Drupal\oldboyapi\TwigExtension\SortBranches
+    tags:
+      - { name: twig.extension }
