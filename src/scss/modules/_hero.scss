@@ -488,6 +488,7 @@
 
     @include atTablet {
         // box model
+        margin-bottom: 80px;
         margin-top: -50px;
     }
 
@@ -502,6 +503,7 @@
     
     // visual
     transform: translate(-50%, -50%);
+    z-index: 6;
     }
 }
 
@@ -621,6 +623,11 @@
     }
 
     &--branch {
+        @include atTablet {
+            // box model
+            margin: 0 auto;
+        }
+
         @include atDesktopS {
             // positioning
             position: absolute;
@@ -645,6 +652,19 @@
     align-items: center;
     margin-top: 40px;
 
+    @include atTablet {
+        // positioning
+        position: absolute;
+        bottom: 285px;
+        right: 0;
+
+        // box model
+        max-width: 250px;
+
+        // visual
+        z-index: 5;
+    }
+
     @include atDesktopL {
         // box model
         max-width: 336px;
@@ -658,12 +678,13 @@
 
             // positioning
             position: absolute;
-            right: 100%;
+            bottom: -75px;
+            right: 60%;
 
             // box model
             display: block;
-            width: 400px;
-            height: 600px;
+            width: 500px;
+            height: 700px;
 
             // visual
             background-image: url('img/deco/barber/barber.png');
@@ -675,8 +696,7 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        top: 60px;
-        right: 40px;
+        // right: 10px;
         bottom: 0;
 
         // box model
@@ -688,8 +708,10 @@
 }
 
 .hero__vacancy-header {
-    // box model
-    // margin-bottom: 40px;
+    @include atDesktopL {
+        // visual
+        z-index: 3;
+    }
 }
 
 .hero__vacancy-title {
@@ -702,9 +724,20 @@
     // typography
     color: #ffffff;
     font-family: $titleFont;
-    font-size: calc(2.25rem + ((1vw - 3.75px) * -1.92));
+    font-size: 2rem;
     font-weight: 700;
-    line-height: calc(3rem + ((1vw - 3.75px) * -2.88));
+    line-height: 2.5rem;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.5rem;
+        line-height: 45px;
+    }
 
     &:before,
     &:after{
@@ -719,7 +752,7 @@
         height: 4px;
 
         // visual
-        background-color: $golden;
+        background: linear-gradient(to right, rgba($golden, 0) 0%, rgba($golden, 0.5) 75%, rgba($golden, 0.75) 100%);
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
     }
@@ -747,12 +780,6 @@
             right: -15px;
         }
     }
-
-    @include atDesktopS {
-        // typography
-        font-size: 1.5rem;
-        line-height: 30px;
-    }
 }
 
 .hero__vacancy-subtitle {
@@ -765,6 +792,11 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 30px;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
 }
 
 .hero__vacancy-subtitle a {
@@ -775,6 +807,11 @@
     font-weight: 700;
     line-height: 30px;
     text-decoration: none;
+}
+
+.hero__vacancy-subtitle a:hover {
+    // visual
+    border-bottom: 1px $golden solid;
 }
 
 .hero__app {
