@@ -12,6 +12,11 @@
     font-size: 1.2rem;
     text-align: right;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1.5rem;
+    }
 }
 
 .coming__subtitle::before {
@@ -20,7 +25,6 @@
     // positioning
     position: relative;
     left: -10px;
-    left: 0;
     top: 0.7rem;
 
     // box model
@@ -34,7 +38,12 @@
 
 .coming__subtitle span {
     // typography
-    font-size: 3rem;
+    font-size: 3.1rem;
+
+    @include atTablet {
+        // typography
+        font-size: 3.5rem;
+    }
 }
 
 .coming__date {
@@ -43,7 +52,12 @@
 
     // typography
     color: $golden;
-    font-family: $titleFont;
-    font-size: 9rem;
+    font-family: $displayFont;
+    font-size: 5rem;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 7rem;
+    }
 }
