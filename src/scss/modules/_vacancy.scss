@@ -1,0 +1,92 @@
+.vacancy {
+    @include atDesktopS {
+        &:after {
+        content: '';
+
+        // positioning
+        position: absolute;
+        bottom: -55px;
+
+        // box model
+        display: block;
+        width: 380px;
+        height: 4px;
+
+        // visual
+        background-image: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
+        border-bottom-left-radius: 10px;
+        }
+    }
+
+        @include atDesktopM {
+            &::after {
+            // positioning
+            bottom: -77px;
+            }
+        }
+
+        @include atDesktopL {
+            &::after {
+            // visual
+            z-index: 3;
+            }
+        }
+}
+
+.vacancy__title {
+    // box model
+    margin: 30px 0;
+
+    // positioning
+    position: relative;
+
+    // typography
+    color: #ffffff;
+    font-family: $titleFont;
+    font-size: 2rem;
+    font-weight: 700;
+    // line-height: 2.5rem;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.5rem;
+        line-height: 45px;
+    }
+}
+
+.vacancy__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 700;
+    // line-height: 2rem;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+}
+
+.vacancy__subtitle a {
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.vacancy__subtitle a:hover {
+    // visual
+    border-bottom: 1px $golden solid;
+}
