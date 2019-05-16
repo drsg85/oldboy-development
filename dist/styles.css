@@ -329,6 +329,14 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
+body::-webkit-scrollbar {
+  width: 8px; }
+  body::-webkit-scrollbar-thumb {
+    background: #d6a354;
+    border-radius: 10px; }
+  body::-webkit-scrollbar-track {
+    background: transparent; }
+
 @font-face {
   font-family: 'Open Sans';
   src: url("./fonts/OpenSans-Regular.woff2") format("woff2"), url("./fonts/OpenSans-Regular.woff") format("woff");
@@ -3087,8 +3095,10 @@ html {
   line-height: 1.22; }
 
 .news-item {
-  margin-bottom: 20px;
-  height: 30vw; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px; }
   @media (min-width: 700px) {
     .news-item {
       margin-bottom: 40px; } }
@@ -3096,20 +3106,6 @@ html {
     .news-item {
       -ms-flex-preferred-size: 30%;
       flex-basis: 30%; } }
-
-.news-item__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 100%; }
-  @media (min-width: 1000px) {
-    .news-item__container {
-      height: 0;
-      padding-top: 100%; } }
 
 .news-item__photo {
   position: relative;
@@ -3119,7 +3115,6 @@ html {
   overflow: hidden; }
   @media (min-width: 1000px) {
     .news-item__photo {
-      position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
@@ -3147,7 +3142,6 @@ html {
   object-fit: cover; }
   @media (min-width: 1000px) {
     .news-item__photo img {
-      position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
@@ -3175,7 +3169,6 @@ html {
       font-size: 1rem; } }
   @media (min-width: 1000px) {
     .news-item__content {
-      position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
@@ -3254,13 +3247,25 @@ html {
       align-items: flex-end; } }
 
 .news-item__date {
-  font-size: 0.75rem; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  color: #aeaeae;
+  font-family: "Rex", Arial, sans-serif;
+  text-transform: uppercase; }
   @media (min-width: 700px) {
     .news-item__date {
       font-size: 1rem; } }
-  @media (min-width: 1000px) {
-    .news-item__date {
-      font-size: 0.75rem; } }
+
+.news-item__date strong {
+  display: block;
+  margin-right: 5px;
+  font-size: 2.2rem; }
+
+.news-item__date span {
+  display: block;
+  font-size: 0.85rem; }
 
 .news-item__cta {
   padding-bottom: 0.3em;
@@ -3860,6 +3865,9 @@ html {
     .thing__text {
       font-size: 0.85rem; } }
 
+.news-feed__content {
+  padding: 50px 20px; }
+
 .franchise {
   margin-top: 70px;
   margin-bottom: 60px; }
@@ -4104,7 +4112,7 @@ html {
       font-size: 1rem; } }
 
 .news-categories {
-  padding: 0 20px;
+  padding: 20px;
   margin-bottom: -15px; }
   @media (min-width: 1920px) {
     .news-categories {
@@ -4114,35 +4122,38 @@ html {
       z-index: 1; } }
 
 .news-category {
-  width: 100%;
-  min-height: 150px;
   position: relative;
-  margin-bottom: 25px; }
-  .news-category img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    border-radius: 5px;
-    -o-object-fit: none;
-    object-fit: none;
-    z-index: -1; }
-  @media (min-width: 1920px) {
-    .news-category {
-      width: 350px; } }
+  margin: 0 auto;
+  margin-bottom: 25px;
+  height: 150px;
+  max-width: 400px;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.news-category img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.news-category__header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 25%;
+  padding: 0 20px; }
 
 .news-category__title {
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 35px;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
 
-.news-category__info {
+.news-category__subtitle {
   margin: 0;
-  padding: 0 35px;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1.3rem;
@@ -6632,6 +6643,15 @@ a.chosen-branch__value {
   margin: 0;
   padding: 0;
   text-align: center; }
+
+.social__text {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #d6a354;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 0.85rem;
+  text-align: left;
+  text-transform: uppercase; }
 
 .social__item {
   display: inline-block;
