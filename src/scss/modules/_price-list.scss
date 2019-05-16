@@ -5,13 +5,11 @@
     // box model
     margin-bottom: -25px;
 
-    @include atTablet {
-        // visual
-        background-image: url('./img/bgs/price-bottom-t.jpg');
-        background-size: contain;
-        background-position: bottom center;
-        background-repeat: no-repeat;
-    }
+    // visual
+    background-image: url('./img/bgs/price-bottom-t.jpg');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
 
     @include atDesktopS {
         // visual
@@ -37,7 +35,7 @@
     padding-bottom: 30px;
 
     // visual
-    background-color: $dark;
+    // background-color: $dark;
     
     @include atTablet {
         // box model
@@ -84,7 +82,7 @@
     width: 100%;
     height: 180px;
 
-    background-color: $dark;
+    // background-color: $dark;
 
     @include atTablet {
         // box model
@@ -107,7 +105,7 @@
     width: 100%;
     height: 180px;
 
-    background-color: $dark;
+    // background-color: $dark;
 
     @include atTablet {
         // box model

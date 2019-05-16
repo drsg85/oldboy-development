@@ -11,7 +11,7 @@
     padding-bottom: 10px;
 
     // typography
-    color: $light;
+    color: $dark;
     font-family: $titleFont;
     font-size: 1.5rem;
     text-align: left;
@@ -22,7 +22,6 @@
         margin-left: -0.05em;
 
         // typography
-        color: $dark;
         font-size: 2.5rem;
     }
 }
@@ -42,7 +41,7 @@
     padding-right: 20px;
 
     // typography
-    color: $light;
+    color: $dark;
     font-family: $mainFont;
     font-size: 1rem;
     font-weight: 600;
@@ -50,14 +49,11 @@
     text-transform: uppercase;
     
     // visual
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid rgba($dark, 0.25);
 
     @include atTablet {
-        // typography
-        color: $dark;
-
         // visual
-        border-bottom: 1px solid rgba($dark, 0.25);
+        // border-bottom: 1px solid rgba($dark, 0.25);
 
         // TODO: try to make hairthin line here
         // @media (min-resolution: 2dppx) {
@@ -88,7 +84,7 @@
     text-transform: uppercase;
     
     // visual
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid rgba($dark, 0.25);
 
     @include atTablet {
         // visual
