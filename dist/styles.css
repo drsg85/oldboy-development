@@ -5537,11 +5537,13 @@ html {
 
 .price-list {
   position: relative;
-  margin-bottom: -25px;
-  background-image: url("./img/bgs/price-bottom-t.jpg");
-  background-size: contain;
-  background-position: bottom center;
-  background-repeat: no-repeat; }
+  margin-bottom: -25px; }
+  @media (min-width: 700px) {
+    .price-list {
+      background-image: url("./img/bgs/price-bottom-t.jpg");
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat; } }
   @media (min-width: 1000px) {
     .price-list {
       background-image: url("./img/bgs/price-bottom-d.jpg");
@@ -5554,7 +5556,7 @@ html {
 
 .price-list__content {
   position: relative;
-  padding: 60px 20px;
+  padding: 100px 20px;
   padding-bottom: 30px; }
   @media (min-width: 700px) {
     .price-list__content {
