@@ -1,0 +1,10 @@
+oldboyapi.seosettings:
+  path: '/admin/config/oldboyapi/seosettings'
+  defaults:
+    _form: '\Drupal\oldboyapi\Form\SeoFilesForm'
+    _title: 'SeoFilesForm'
+  requirements:
+    _role: 'administrator+seo'
+  options:
+    _admin_route: TRUE
+    no_cache: TRUE
