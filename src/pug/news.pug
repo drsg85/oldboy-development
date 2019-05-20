@@ -10,213 +10,250 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--news
             .hero__top
                 .hero__logo
-                    a(href="#")
+                    a(href="index.html")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
-                
-                .hero__nav
-                    nav.main-nav
-                        ul.main-nav__list
-                            li.main-nav__item: a(href="#").main-nav__link Главная
-                            li.main-nav__item: a(href="#").main-nav__link Новости
-                            li.main-nav__item: a(href="#").main-nav__link Услуги
-                            li.main-nav__item: a(href="#").main-nav__link Франшиза
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
 
                 .hero__city-select
                     a(href="choose-city.html").city-select
                         p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
                         p.city-select__city Калининград
 
-                .menu-button.menu-button--close
+                .menu-button
                     .menu-button__middle
 
-            article.top-news
-                header.top-news__header
-                    p.top-news__category Новости франшизы
-                    h1.top-news__title Открытие нового барбершопа Oldboy
-                    p.top-news__details Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big">Новости OLDBOY <br>BARBERSHOP</span>
+                        p.hero-caption__motto Актуальные новости сети барбершопов&nbsp;Oldboy
 
-                a.top-news__cta(href="#") Читать полностью
+                .hero__news
+                    article.top-news
+                        header.top-news__header
+                            p.top-news__category Новости франшизы
+                            h1.top-news__title Открытие нового барбершопа Oldboy
+                            p.top-news__details Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
 
-                footer.top-news__footer
-                    p.top-news__date <span>Дата:</span><br>27 июля 2018
-                    p.top-news__location <span>Регионы:</span><br>Испания
+                        a.top-news__cta(href="#") Читать полностью
 
-            .hero-social
-                p.hero-social__text Поделиться:
+                        footer.top-news__footer
+                            p.top-news__date <span>Дата:</span><br>27 июля 2018
+                            p.top-news__location <span>Регионы:</span><br>Испания
 
-                ul.social
-                    li.social__item
-                        a.social__icon.icon--vk(href="#") ВКонтакте
-                    li.social__item
-                        a.social__icon.icon--facebook(href="#") Facebook
-                    li.social__item
-                        a.social__icon.icon--instagram(href="#") Instagram
-
-            section.news-categories
-                article.news-category
-                    img(src="/img/news/news-feed1-dark.jpg", alt="Oldboy Barbershop news photo")
-                    h3.news-category__title Новости регионов
-                    p.news-category__info Новые акции для выпускников
-
-                article.news-category
-                    img(src="/img/news/news-feed2-dark.jpg", alt="Oldboy Barbershop news photo")
-                    h3.news-category__title Новинки
-                    p.news-category__info Новая услуга в линейке Oldboy Барбер-спа
-
-                article.news-category
-                    img(src="/img/news/news-feed3-dark.jpg", alt="Oldboy Barbershop news photo")
-                    h3.news-category__title Новости франшизы
-                    p.news-category__info Старт новой косметики Barber Wild
+                .hero__social
+                    ul.social
+                        p.social__text Поделиться:
+                        li.social__item
+                            a.social__icon.icon--vk(href="#") ВКонтакте
+                        li.social__item
+                            a.social__icon.icon--facebook(href="#") Facebook
+                        li.social__item
+                            a.social__icon.icon--instagram(href="#") Instagram
 
         main
-            //- TODO: move this to page header (hero)
+            section.news-categories
+                article.news-category
+                    a.news-category__item(href="#")
+                        .news-category__header
+                            h3.news-category__title Новости регионов
+                            p.news-category__subtitle Новые акции для выпускников
+                        .news-category__overlay
+                        .news-category__image: img(src="/img/news/news-feed1.jpg", alt="")
 
-            header.section-header 
-                h2.section-header__title Наши <br>новости
-                p.section-header__subtitle О&nbsp;самом&nbsp;главном
+                article.news-category
+                    a.news-category__item(href="#")
+                        .news-category__header
+                            h3.news-category__title Новинки
+                            p.news-category__subtitle Новая услуга в линейке Oldboy Barber&nbsp;-&nbsp;Spa
+                        .news-category__overlay
+                        .news-category__image: img(src="/img/news/news-feed2.jpg", alt="")
 
-            section.news-feed
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                article.news-category
+                    a.news-category__item(href="#")
+                        .news-category__header
+                            h3.news-category__title Новости франшизы
+                            p.news-category__subtitle Старт продаж новой косметики Barber&nbsp;Wild
+                        .news-category__overlay
+                        .news-category__image: img(src="/img/news/news-feed3.jpg", alt="")
 
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Косметика и аксессуары
-                            h3.news-item__title Старт продаж новой косметики Barber Wild
-
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать <br>полностью
-
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
-                        
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Новости регионов
-                            h3.news-item__title Новые акции для выпускников
-
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
-
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
-                        
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Новинки
-                            p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
-
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
-
-            section.academy-banner
-                header.academy-banner__header
-                    h2.academy-banner__title Академия <br>Oldboy
-                    p.academy-banner__subtitle Добро пожаловать в&nbsp;семью
-
-                .academy-banner__content
-                    p.academy-banner__motto Академия барберинга Oldboy — место, где рождаются настоящие мужские парикмахеры
-                    p.academy-banner__text Место, где вы станене настоящим барбером, профессионалом своего дела и ведущим специалистом барбершопа
-
-                    p.academy-banner__address Москва <br>Старокирочный переулок, 2 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 1000-266</a>
-                        
-                    .academy-banner__cta: a.button(href="#") Узнать подробнее
-
-            header.section-header
-                h2.section-header__title Новости<br>регионов
-                p.section-header__subtitle Со&nbsp;всего&nbsp;мира
+                article.news-category
+                    a.news-category__item(href="#")
+                        .news-category__header
+                            h3.news-category__title Новости регионов
+                            p.news-category__subtitle Новые акции для выпускников
+                        .news-category__overlay
+                        .news-category__image: img(src="/img/news/news-feed1.jpg", alt="")
 
             section.news-feed
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                .news-feed__header
+                    header.section-header 
+                        h2.section-header__title Наши <br>новости
+                        p.section-header__subtitle О&nbsp;самом&nbsp;главном
+
+                .news-feed__content
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Косметика и аксессуары
+                                h3.news-item__title Старт продаж новой косметики Barber Wild
+
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
+
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                            
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новости регионов
+                                h3.news-item__title Новые акции для выпускников
+
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
+
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                            
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новинки
+                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
+
+            include modules/_banner.pug
+
+            section.news-feed
+                .news-feed__header
+                    header.section-header
+                        h2.section-header__title Новости<br>регионов
+                        p.section-header__subtitle Со&nbsp;всего&nbsp;мира
                         
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Косметика и аксессуары
-                            h3.news-item__title Старт продаж новой косметики Barber Wild
+                .news-feed__content
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
+                            
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Косметика и аксессуары
+                                h3.news-item__title Старт продаж новой косметики Barber Wild
 
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
-                        
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Новости регионов
-                            h3.news-item__title Новые акции для выпускников
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                            
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новости регионов
+                                h3.news-item__title Новые акции для выпускников
 
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
-                article.news-item
-                    .news-item__photo
-                        img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
-                        
-                    .news-item__content
-                        header.news-item__header
-                            p.news-item__category Новинки
-                            p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                    article.news-item
+                        .news-item__photo
+                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                            
+                        .news-item__content
+                            header.news-item__header
+                                p.news-item__category Новинки
+                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
 
-                        footer.news-item__footer
-                            p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                            a.news-item__cta(href="#") Читать полностью
+                            footer.news-item__footer
+                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                                a.news-item__cta(href="#") Читать полностью
 
         footer.footer
-            .footer__info-n-contacts
-                .footer__info
-                    .footer__logo
-                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                    h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
-                    p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
-                    p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+            .footer__content
+                .footer__info-n-contacts
+                    .footer__info
+                        .footer__logo
+                            img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                        .footer__caption
+                            h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
+                            p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
+                            p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
 
-            .footer__menues
-                .footer__main-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Меню
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ГЛАВНАЯ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") НОВОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛУГИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ФРАНШИЗА
+                    .footer__contacts
+                        .footer__social
+                            p.footer__social-cta Следите за нами в соц. сетях
+                            ul.social.social--golden
+                                li.social__item
+                                    a.social__icon.icon--vk(href="#") ВКонтакте
+                                li.social__item
+                                    a.social__icon.icon--facebook(href="#") Facebook
+                                li.social__item
+                                    a.social__icon.icon--instagram(href="#") Instagram
 
-                .footer__services-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Услуги
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") СТРИЖКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БРИТЬЁ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ТАТУИРОВКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БАРБЕР-СПА
+                        .contact.contact--footer
+                            h3.contact__title Адрес
+                            p.contact__value ул. Театральная, 30
+                            
+                        .contact.contact--footer
+                            h3.contact__title Телефон
+                            p.contact__value 52–57–90
 
-                .footer__info-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Информация
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+                        .contact.contact--footer
+                            h3.contact__title Часы работы
+                            p.contact__value 10:00 — 21:00 (Вс. с 11:00)
 
+                        .footer__city Калининград
+
+                .footer__menues
+                    .footer__main-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Меню
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ГЛАВНАЯ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") НОВОСТИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") УСЛУГИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ФРАНШИЗА
+
+                    .footer__services-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Услуги
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") СТРИЖКИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") БРИТЬЁ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ТАТУИРОВКИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") БАРБЕР-СПА
+
+                    .footer__info-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Информация
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
             .footer__copyrights
                 p © 2014–2019 Oldboy Barbershop
+
+        script(src="scripts.js")
