@@ -2,7 +2,7 @@
     // box model
     display: flex;
     margin-bottom: 20px;
-    // height: 30vw;
+    min-height: 100px;
     
     @include atTablet {
         // box model
@@ -228,11 +228,13 @@
 
     // typography
     font-size: 2.2rem;
+    // line-height: 30px;
 }
 
 .news-item__date span {
     // box model
     display: block;
+    margin-top: 5px;
 
     // typography
     font-size: 0.85rem;
