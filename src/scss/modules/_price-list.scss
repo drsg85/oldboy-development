@@ -5,11 +5,13 @@
     // box model
     margin-bottom: -25px;
 
-    // visual
-    background-image: url('./img/bgs/price-bottom-t.jpg');
-    background-size: contain;
-    background-position: bottom center;
-    background-repeat: no-repeat;
+    @include atTablet {
+        // visual
+        background-image: url('./img/bgs/price-bottom-t.jpg');
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
 
     @include atDesktopS {
         // visual
@@ -31,7 +33,7 @@
     position: relative;
 
     // box model
-    padding: 60px 20px;
+    padding: 100px 20px;
     padding-bottom: 30px;
 
     // visual
