@@ -331,11 +331,13 @@ html {
 
 body::-webkit-scrollbar {
   width: 8px; }
+  body::-webkit-scrollbar * {
+    background: transparent; }
   body::-webkit-scrollbar-thumb {
     background: #d6a354;
     border-radius: 10px; }
   body::-webkit-scrollbar-track {
-    background: transparent; }
+    background: transparent !important; }
 
 @font-face {
   font-family: 'Open Sans';
@@ -3251,6 +3253,9 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
@@ -3262,12 +3267,12 @@ body::-webkit-scrollbar {
 .news-item__date strong {
   display: block;
   margin-right: 5px;
-  font-size: 2.2rem; }
+  font-size: 2.2em;
+  line-height: 1em; }
 
 .news-item__date span {
   display: block;
-  margin-top: 5px;
-  font-size: 0.85rem; }
+  font-size: 0.85em; }
 
 .news-item__cta {
   padding-bottom: 0.3em;

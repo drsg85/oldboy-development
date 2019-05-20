@@ -208,6 +208,7 @@
 .news-item__date {
     // box model
     display: flex;
+    align-items: center;
     margin: 0;
 
     // typography
@@ -227,17 +228,17 @@
     margin-right: 5px;
 
     // typography
-    font-size: 2.2rem;
-    // line-height: 30px;
+    font-size: 2.2em;
+    line-height: 1em;
 }
 
 .news-item__date span {
     // box model
     display: block;
-    margin-top: 5px;
+    // margin-top: 5px;
 
     // typography
-    font-size: 0.85rem;
+    font-size: 0.85em;
 }
 
 .news-item__cta {
