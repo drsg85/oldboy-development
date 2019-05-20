@@ -59,6 +59,28 @@ html(lang="en")
                     p.landing-info__subtitle Пройди обучение у&nbsp;профессионалов в&nbsp;филиале известного международного бренда Oldboy Barbershop
                     p.landing-info__text <span>КУРС ПОЛНОГО ОСВОЕНИЯ ПРОФЕССИИ БАРБЕРА</span> <br>со сдачей экзамена и&nbsp;получения сертификата от&nbsp;крупнейшей сети барбершопов.
 
+                    //- form#application-form.form(action="")
+                    form(action="")
+                        //- legend.form__legend
+                        //-     p.form__title Открой собственный барбершоп oldboy у себя в&nbsp;городе
+                        //-     p.form__subtitle Заполни форму и наш менеджер с&nbsp;вами свяжется
+                        
+                        .form__input-group
+                            input.form__input(type="text" name="fullname" placeholder="Фамилия Имя Отчество")
+
+                        .form__input-group
+                            input.form__input(type="text" name="phone" placeholder="Номер телефона")
+
+                        .form__input-group
+                            input.form__input(type="email" name="email" placeholder="E-mail")
+
+                        .form__input-group.form__input-group--policy
+                            input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
+                            label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
+                        
+                        .form__input-group
+                            input.form__submit-btn.button.button--ghost-dark(type="submit" value="Отправить заявку")
+
             section.fr-benefits
                 header.fr-benefits__header
                     p.fr-benefits__subtitle наши преимущества
@@ -150,14 +172,14 @@ html(lang="en")
                     p.academy-banner__motto Всё ещё не&nbsp;можете решиться? —&nbsp;мы дарим первое ознакомительное занятие!
                     p.academy-banner__text Приходите в&nbsp;гости, почувствуйте атмосферу барбершопа, познакомьтесь с&nbsp;преподавателем и&nbsp;теоретическими основами профессии
                     p.academy-banner__address Санкт-Петербург <br>пр-т Тореза, 95 <br>Тел.: <a href="tel:+" class="academy-banner__phone">+7 926 699-69-91</a>
-                    
-                //- .academy-banner__cta
-                    a.button(href="#") Узнать подробнее
+
+                .academy-banner__cta
+                    a.button(href="#") Оставить заявку
 
             section.fr-benefits
                 .fr-benefits__conclusion-more
-                    p.fr-benefits__conclusion-text Чтобы узнать остальные и&nbsp;убрать последние сомения на&nbsp;пути к&nbsp;собственному успешному бизнесу
-                    p.fr-benefits__cta Свяжитесь с&nbsp;нами по&nbsp;телефону <br><a href="tel:+">+7 926 699-69-91</a>
+                    p.fr-benefits__conclusion-text Чтобы узнать больше информации и&nbsp;убрать последние сомнения на&nbsp;пути к&nbsp;получению профессии своей мечты
+                    p.fr-benefits__cta Свяжитесь с&nbsp;нами по&nbsp;телефону <br><a href="tel:+">+7 926 699-69-91</a> <br>или <a href="http://"> оставьте заявку</a>
                     p.fr-benefits__conclusion-text И мы ответим на ваши вопросы
 
             a(href="#").up-button

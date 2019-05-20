@@ -5273,7 +5273,6 @@ html {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
-  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -7169,29 +7168,33 @@ a.chosen-branch__value {
   position: relative;
   width: 100%;
   padding: 13px;
+  color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
-  color: #d6a354;
   font-size: 0.875rem;
   text-transform: uppercase;
-  border: 2px solid transparent;
+  border: 1px solid rgba(214, 163, 84, 0.5);
   border-radius: 5px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 20px -19px #131c23;
+  box-shadow: 0 0 20px -19px #131c23;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-out;
+  transition: -webkit-box-shadow 0.15s ease-out;
+  transition: box-shadow 0.15s ease-out;
+  transition: box-shadow 0.15s ease-out, -webkit-box-shadow 0.15s ease-out; }
   .form__input:focus {
     color: #000000;
     outline: none;
     background-color: #ffffff;
-    -webkit-box-shadow: 0px 25px 59px -19px #131c23;
-    box-shadow: 0px 25px 59px -19px #131c23; }
+    -webkit-box-shadow: 0 0 30px -17px #131c23;
+    box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
-    color: #d6a354; }
-  .form__input::-moz-placeholder {
-    color: #d6a354; }
+    color: #896322; }
   .form__input:-ms-input-placeholder {
-    color: #d6a354; }
+    color: #896322; }
   .form__input::-ms-input-placeholder {
-    color: #d6a354; }
+    color: #896322; }
   .form__input::placeholder {
-    color: #d6a354; }
+    color: #896322; }
   .form__input--valid, .form__input-webkit-autofill {
     color: #ffffff;
     background-color: #d6a354;
@@ -7280,6 +7283,8 @@ a.chosen-branch__value {
     color: #999999; }
   .form__checkbox:disabled + .form__label-checkbox {
     color: #000000; }
+  .form__checkbox:focus + .form__label-checkbox:before {
+    border: 2px solid #896322; }
 
 .form__label-checkbox {
   font-family: "Open Sans", Arial, sans-serif;
