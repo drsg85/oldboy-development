@@ -3105,8 +3105,10 @@ body::-webkit-scrollbar {
       margin-bottom: 40px; } }
   @media (min-width: 1000px) {
     .news-item {
-      -ms-flex-preferred-size: 30%;
-      flex-basis: 30%; } }
+      position: relative;
+      display: block;
+      height: 300px;
+      width: 300px; } }
 
 .news-item__photo {
   position: relative;
@@ -3116,12 +3118,13 @@ body::-webkit-scrollbar {
   overflow: hidden; }
   @media (min-width: 1000px) {
     .news-item__photo {
+      position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
       left: 0;
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; } }
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto; } }
 
 @media (min-width: 1000px) {
   .news-item__photo::before {
@@ -3170,15 +3173,23 @@ body::-webkit-scrollbar {
       font-size: 1rem; } }
   @media (min-width: 1000px) {
     .news-item__content {
+      position: absolute;
       top: 0;
-      bottom: 0;
       right: 0;
       left: 0;
       z-index: 3;
-      padding: 15px;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: 100%;
+      padding: 20px; } }
 
 .news-item__category {
   margin: 0;
@@ -3191,6 +3202,9 @@ body::-webkit-scrollbar {
     .news-item__category {
       margin-bottom: 1em;
       font-size: 1.25em; } }
+  @media (min-width: 700px) {
+    .news-item__category {
+      text-align: center; } }
 
 .news-item__title {
   margin: 0;
@@ -3203,8 +3217,10 @@ body::-webkit-scrollbar {
       font-size: 1.75em; } }
   @media (min-width: 1000px) {
     .news-item__title {
+      margin-bottom: 15px;
       color: #ffffff;
-      font-size: 1.25rem; } }
+      font-size: 1.25rem;
+      text-align: center; } }
 
 .news-item__subtitle {
   display: none; }
@@ -3224,7 +3240,22 @@ body::-webkit-scrollbar {
       margin-bottom: 15px;
       color: #ffffff;
       font-size: 0.8rem;
-      font-weight: 400; } }
+      font-weight: 400;
+      text-align: center; } }
+
+.news-item__details {
+  display: none;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif; }
+  @media (min-width: 700px) {
+    .news-item__details {
+      display: block; } }
+  @media (min-width: 1000px) {
+    .news-item__details {
+      color: #ffffff;
+      text-align: center; } }
 
 .news-item__footer {
   display: -webkit-box;
@@ -3252,6 +3283,9 @@ body::-webkit-scrollbar {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
@@ -3262,12 +3296,12 @@ body::-webkit-scrollbar {
 .news-item__date strong {
   display: block;
   margin-right: 5px;
-  font-size: 2.2rem; }
+  font-size: 2.2em;
+  line-height: 1em; }
 
 .news-item__date span {
   display: block;
-  margin-top: 5px;
-  font-size: 0.85rem; }
+  font-size: 0.85em; }
 
 .news-item__cta {
   padding-bottom: 0.3em;
@@ -3285,6 +3319,25 @@ body::-webkit-scrollbar {
   @media (min-width: 1000px) {
     .news-item__cta {
       font-size: 0.75rem; } }
+
+.news-item__overlay {
+  display: none; }
+  @media (min-width: 1000px) {
+    .news-item__overlay {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      -webkit-transition: ease-in-out 0.2s;
+      transition: ease-in-out 0.2s; } }
+
+.news-item:hover .news-item__overlay {
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .services__header {
   padding-bottom: 20px; }
@@ -3869,6 +3922,14 @@ body::-webkit-scrollbar {
 
 .news-feed__content {
   padding: 50px 20px; }
+  @media (min-width: 1000px) {
+    .news-feed__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
 
 .franchise {
   margin-top: 70px;
