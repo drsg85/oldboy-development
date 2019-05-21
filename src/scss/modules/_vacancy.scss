@@ -22,10 +22,12 @@
     }
 
     @include atDesktopL {
-        // visual
-        z-index: 3;
-    }
+        // positioning
+        right: -80px;
 
+        // box model
+        width: 450px;
+    }
 }
 
 .vacancy__title {
@@ -44,6 +46,11 @@
         // typography
         text-align: right;
     }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.75rem;
+    }
 }
 
 .vacancy__subtitle {
@@ -58,6 +65,11 @@
     @include atTablet {
         // typography
         text-align: right;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.75rem;
     }
 }
 

@@ -26,6 +26,7 @@
     @include atDesktopL {
         // box model
         padding: 50px 80px;
+        padding-bottom: 70px;
     }
 
     &--main {
@@ -580,6 +581,19 @@
             background-image: linear-gradient(to left, rgba($golden, 0), rgba($golden, 0.75));
         }
     }
+
+    @include atDesktopL {
+        // box model
+        padding-bottom: 15px;
+
+        &::before {
+            // positioning
+            left: -80px;
+
+            // box model
+            width: 450px;
+        }
+    }
 }
 
 .hero__countdown {
@@ -677,8 +691,8 @@
 
     @include atDesktopL {
         // box model
-        max-width: 336px;
-        width: 100%;
+        max-width: 280px;
+        padding-bottom: 50px;
 
         // typography
         text-align: right;
@@ -716,13 +730,19 @@
     }
 
     @include atDesktopM {
+        // positioning
+        right: -50px;
+
         // box model
         width: 500px;
     }
 
     @include atDesktopL {
         // positioning
-        bottom: 40px;
+        right: -80px;
+
+        // box model
+        width: 540px;
     }
 }
 

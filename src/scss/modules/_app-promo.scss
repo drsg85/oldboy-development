@@ -29,8 +29,13 @@
 
     @include atDesktopM {
         // box model
-        padding: 30px 40px;
+        padding: 30px 50px;
         width: 100%;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 50px 80px;
     }
 }
 
@@ -80,6 +85,11 @@
     @include atTablet {
         // visual
         background-image: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
+    }
+
+    @include atDesktopM {
+        // positioning
+        // right: -40px;
     }
 }
 
@@ -186,6 +196,14 @@
 
         // box model
         height: 420px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        right: 220px;
+
+        // box model
+        height: 450px;
     }
 }
 

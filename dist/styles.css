@@ -434,7 +434,8 @@ body::-webkit-scrollbar {
       padding-bottom: 70px; } }
   @media (min-width: 1500px) {
     .hero {
-      padding: 50px 80px; } }
+      padding: 50px 80px;
+      padding-bottom: 70px; } }
   .hero--main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -859,6 +860,12 @@ body::-webkit-scrollbar {
         height: 4px;
         background-image: -webkit-gradient(linear, right top, left top, from(rgba(214, 163, 84, 0)), to(rgba(214, 163, 84, 0.75)));
         background-image: linear-gradient(to left, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75)); } }
+  @media (min-width: 1500px) {
+    .hero__contacts {
+      padding-bottom: 15px; }
+      .hero__contacts::before {
+        left: -80px;
+        width: 450px; } }
 
 .hero__countdown {
   margin-bottom: 40px; }
@@ -921,8 +928,8 @@ body::-webkit-scrollbar {
       padding-bottom: 35px; } }
   @media (min-width: 1500px) {
     .hero__vacancy {
-      max-width: 336px;
-      width: 100%;
+      max-width: 280px;
+      padding-bottom: 50px;
       text-align: right; } }
 
 .hero__app {
@@ -945,10 +952,12 @@ body::-webkit-scrollbar {
       padding-left: 40px; } }
   @media (min-width: 1200px) {
     .hero__app {
+      right: -50px;
       width: 500px; } }
   @media (min-width: 1500px) {
     .hero__app {
-      bottom: 40px; } }
+      right: -80px;
+      width: 540px; } }
 
 .hero__deco {
   display: none;
@@ -1535,8 +1544,11 @@ body::-webkit-scrollbar {
       align-items: flex-end; } }
   @media (min-width: 1200px) {
     .app-promo {
-      padding: 30px 40px;
+      padding: 30px 50px;
       width: 100%; } }
+  @media (min-width: 1500px) {
+    .app-promo {
+      padding: 50px 80px; } }
 
 .app-promo::before {
   content: '';
@@ -1642,6 +1654,10 @@ body::-webkit-scrollbar {
       bottom: -50px;
       right: 185px;
       height: 420px; } }
+  @media (min-width: 1500px) {
+    .app-promo__image {
+      right: 220px;
+      height: 450px; } }
 
 .app-promo__image img {
   height: 100%; }
@@ -5107,7 +5123,8 @@ body::-webkit-scrollbar {
 
 @media (min-width: 1500px) {
   .vacancy::after {
-    z-index: 3; } }
+    right: -80px;
+    width: 450px; } }
 
 .vacancy__title {
   margin: 15px 0;
@@ -5118,6 +5135,9 @@ body::-webkit-scrollbar {
   @media (min-width: 700px) {
     .vacancy__title {
       text-align: right; } }
+  @media (min-width: 1500px) {
+    .vacancy__title {
+      font-size: 1.75rem; } }
 
 .vacancy__subtitle {
   margin: 0;
@@ -5127,6 +5147,9 @@ body::-webkit-scrollbar {
   @media (min-width: 700px) {
     .vacancy__subtitle {
       text-align: right; } }
+  @media (min-width: 1500px) {
+    .vacancy__subtitle {
+      font-size: 1.75rem; } }
 
 .vacancy__subtitle a {
   color: #d6a354;
