@@ -650,12 +650,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     margin-top: 40px;
 
     @include atTablet {
         // positioning
         position: absolute;
-        top: 430px;
+        bottom: 270px;
         right: 0;
 
         // box model
@@ -668,20 +669,10 @@
     
     @include atDesktopS {
         // positioning
-        position: absolute;
-        bottom: 55px;
-        top: auto;
+        bottom: 0;
 
         // box model
-        display: flex;
-        max-width: 250px;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    @include atDesktopM {
-        // positioning
-        bottom: 77px;
+        padding-bottom: 35px;
     }
 
     @include atDesktopL {
@@ -691,25 +682,6 @@
 
         // typography
         text-align: right;
-
-        // &:after {
-        //     content: '';
-
-        //     // positioning
-        //     position: absolute;
-        //     bottom: -75px;
-        //     right: 60%;
-
-        //     // box model
-        //     display: block;
-        //     width: 500px;
-        //     height: 700px;
-
-        //     // visual
-        //     background-image: url('img/deco/barber/barber.png');
-        //     background-size: 100%;
-        //     background-repeat: no-repeat;
-        // }
     }
 }
 

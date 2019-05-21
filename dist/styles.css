@@ -905,34 +905,20 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0 auto;
   margin-top: 40px; }
   @media (min-width: 700px) {
     .hero__vacancy {
       position: absolute;
-      top: 430px;
+      bottom: 270px;
       right: 0;
       margin: 0;
       max-width: 250px;
       z-index: 5; } }
   @media (min-width: 1000px) {
     .hero__vacancy {
-      position: absolute;
-      bottom: 55px;
-      top: auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      max-width: 250px;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end; } }
-  @media (min-width: 1200px) {
-    .hero__vacancy {
-      bottom: 77px; } }
+      bottom: 0;
+      padding-bottom: 35px; } }
   @media (min-width: 1500px) {
     .hero__vacancy {
       max-width: 336px;
@@ -5104,61 +5090,50 @@ body::-webkit-scrollbar {
     .coming__date {
       font-size: 7rem; } }
 
+.vacancy {
+  text-align: center; }
+
 @media (min-width: 1000px) {
-  .vacancy:after {
+  .vacancy::after {
     content: '';
     position: absolute;
-    bottom: -55px;
+    bottom: 0;
+    right: -50px;
     display: block;
     width: 380px;
     height: 4px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(214, 163, 84, 0)), to(rgba(214, 163, 84, 0.75)));
-    background-image: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75));
-    border-bottom-left-radius: 10px; } }
-
-@media (min-width: 1200px) {
-  .vacancy::after {
-    bottom: -77px; } }
+    background-image: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 0.75)); } }
 
 @media (min-width: 1500px) {
   .vacancy::after {
     z-index: 3; } }
 
 .vacancy__title {
-  margin: 30px 0;
+  margin: 15px 0;
   position: relative;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 700; }
+  font-size: 1.5rem; }
   @media (min-width: 700px) {
     .vacancy__title {
       text-align: right; } }
-  @media (min-width: 1000px) {
-    .vacancy__title {
-      font-size: 1.5rem;
-      line-height: 45px; } }
 
 .vacancy__subtitle {
   margin: 0;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700; }
+  font-size: 1.5rem; }
   @media (min-width: 700px) {
     .vacancy__subtitle {
       text-align: right; } }
 
 .vacancy__subtitle a {
   color: #d6a354;
-  font-family: "Rex", Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 30px;
   text-decoration: none; }
 
 .vacancy__subtitle a:hover {
-  border-bottom: 1px #d6a354 solid; }
+  text-decoration: underline; }
 
 @media (min-width: 1500px) {
   .haircut {
