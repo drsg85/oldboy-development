@@ -1476,6 +1476,7 @@ body::-webkit-scrollbar {
   height: 3px;
   width: 22px;
   background-color: #ffffff;
+  border-radius: 2px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   -webkit-transform-origin: center left;
@@ -7748,66 +7749,20 @@ a.chosen-branch__value {
   color: #898989; }
 
 .up-button {
-  position: relative;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
   display: block;
-  width: 120px;
-  height: 120px;
-  margin: 30px auto;
-  margin-top: 90px;
-  background-image: url("./img/icons/up-button.svg");
+  width: 48px;
+  height: 48px;
+  border: 2px solid #d6a354;
+  border-radius: 50%;
+  background-image: url("./img/icons/scroll-up.svg");
+  background-size: 18px;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-color: rgba(19, 19, 19, 0.5);
   z-index: 100; }
 
-.up-button__arrow {
-  position: relative; }
-  .up-button__arrow::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: block;
-    height: 40px;
-    -webkit-animation: move 1.5s infinite;
-    animation: move 1.5s infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    background-image: url("./img/icons/up-arrow.svg");
-    background-position: top center;
-    background-repeat: no-repeat; }
-
-.up-button__arrow::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 0;
-  right: 0;
-  display: block;
-  height: 50px;
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#ffffff));
-  background: linear-gradient(to top, transparent, #ffffff);
-  z-index: 101; }
-
 .up-button__text {
-  position: absolute;
-  bottom: 18px;
-  left: 0;
-  right: 0;
-  margin: 0;
-  color: #131313;
-  font-family: "Rex", Arial, sans-serif;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase; }
-
-@-webkit-keyframes move {
-  from {
-    top: -26px; }
-  to {
-    top: -40px; } }
-
-@keyframes move {
-  from {
-    top: -26px; }
-  to {
-    top: -40px; } }
+  font-size: 0; }
