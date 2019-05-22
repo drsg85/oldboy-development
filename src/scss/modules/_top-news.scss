@@ -2,6 +2,11 @@
     // box model
     margin-bottom: 45px;
 
+    @include atTablet {
+        // box model
+        display: none;
+    }
+
 }
 .top-news__header {
     // box model

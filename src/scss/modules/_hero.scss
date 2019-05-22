@@ -480,6 +480,16 @@
         // box model
         padding-bottom: 40px;
     }
+
+    &--news {
+        // box model
+        display: none;
+
+        @include atTablet {
+            // box model
+            display: block;
+        }
+    }
 }
 
 .hero__coming {

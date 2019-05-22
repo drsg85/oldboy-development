@@ -9,6 +9,7 @@
     @include atDesktopS {
         // box model
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }

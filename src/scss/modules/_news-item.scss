@@ -15,7 +15,6 @@
 
         // box model
         display: block;
-        // flex-basis: 30%;
         height: 300px;
         width: 300px;
     }
@@ -141,9 +140,10 @@
         // typography
         font-size: 1.25em;
     }
-
-    @include atTablet {
-        // typography
+    
+    @include atDesktopS {
+        // visual
+        cursor: default;
         text-align: center;
     }
 }
@@ -173,6 +173,9 @@
         color: $light;
         font-size: 1.25rem;
         text-align: center;
+
+        // visual
+        cursor: default;
     }
 }
 
@@ -226,6 +229,9 @@
         // typography
         color: $light;
         text-align: center;
+
+        // visual
+        cursor: default;
     }
 }
 
