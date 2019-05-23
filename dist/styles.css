@@ -2046,6 +2046,16 @@ body::-webkit-scrollbar {
   left: -110%;
   visibility: hidden; }
 
+.location-selector::-webkit-scrollbar {
+  width: 8px; }
+  .location-selector::-webkit-scrollbar * {
+    background: transparent; }
+  .location-selector::-webkit-scrollbar-thumb {
+    background: #d6a354;
+    border-radius: 10px; }
+  .location-selector::-webkit-scrollbar-track {
+    background: transparent !important; }
+
 .location-selector__header {
   padding: 25px;
   padding-bottom: 0; }
