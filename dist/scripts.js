@@ -142,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\r\n\r\nclass MobileMenu {\r\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass UpButton {\r\n  constructor() {\r\n    this.upButton = document.querySelector('.up-button');\r\n\r\n    if (this.upButton) {\r\n      this.addEvents();\r\n    }\r\n  }\r\n\r\n\r\n  addEvents() {\r\n    this.upButton.addEventListener('click', (evt) => {\r\n      evt.preventDefault();\r\n      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});\r\n    });\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (UpButton);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/UpButton.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass UpButton {\r\n  constructor() {\r\n    this.upButton = document.querySelector('.up-button');\r\n    this.upButton.style.opacity = '0';\r\n\r\n    if (this.upButton) {\r\n      this.addEvents();\r\n    }\r\n  }\r\n\r\n\r\n  addEvents() {\r\n    this.upButton.addEventListener('click', (evt) => {\r\n      evt.preventDefault();\r\n      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});\r\n    });\r\n\r\n    document.addEventListener('scroll', (evt) => {\r\n      console.log(window.innerHeight, window, scrollY);\r\n      if(window.scrollY > window.innerHeight) {\r\n        this.upButton.style.opacity = '1';\r\n      } else {\r\n        this.upButton.style.opacity = '0';\r\n      }\r\n    })\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (UpButton);\r\n\n\n//# sourceURL=webpack:///./src/js/modules/UpButton.js?");
 
 /***/ }),
 

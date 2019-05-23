@@ -3287,8 +3287,6 @@ body::-webkit-scrollbar {
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
@@ -7837,7 +7835,9 @@ a.chosen-branch__value {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: rgba(19, 19, 19, 0.5);
-  z-index: 100; }
+  z-index: 100;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out; }
 
 .up-button__text {
   font-size: 0; }
