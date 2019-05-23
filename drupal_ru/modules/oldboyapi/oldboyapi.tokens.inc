@@ -53,7 +53,7 @@ function oldboyapi_render_webform($machine_name) {
 		$render        = $view_builder->view($webform);
 	}
 
-	$html = \Drupal::service('renderer')->renderRoot($build);
+	$html = \Drupal::service('renderer')->renderRoot($render);
 	return $html;
 }
 
