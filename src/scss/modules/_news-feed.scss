@@ -5,4 +5,11 @@
 .news-feed__content {
     // box model
     padding: 50px 20px;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }

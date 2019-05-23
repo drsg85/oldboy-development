@@ -18,6 +18,11 @@
     
 }
 
+.news-category__item:hover .news-category__overlay {
+    // visual
+    background-color: rgba(207, 101, 101, 0.3);
+}
+
 .news-category__header {
     // positioning
     position: absolute;
@@ -64,6 +69,7 @@
 
     // visual
     background-color: rgba(0, 0, 0, 0.6);
+    transition: ease-in-out 0.2s;
 }
 
 .news-category__image {
