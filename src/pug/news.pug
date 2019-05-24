@@ -97,7 +97,7 @@ html(lang="en")
                         p.section-header__subtitle О&nbsp;самом&nbsp;главном
 
                 .news-feed__content
-                    article.news-item
+                    //- article.news-item
                         .news-item__photo
                             img(src="/img/news/news-feed1.jpg", alt="Barbershop news photo")
                         .news-item__content
@@ -111,43 +111,55 @@ html(lang="en")
                         .news-item__overlay
 
                     article.news-item
-                        .news-item__photo
-                            img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
-                        .news-item__content
-                            header.news-item__header
-                                p.news-item__category Новости регионов
-                                h3.news-item__title Новые акции для выпускников
-                                p.news-item__details Скидки в предверии сезона выпусных
-                            footer.news-item__footer
-                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                                a.news-item__cta(href="#") Читать полностью
-                        .news-item__overlay
+                        a.news-item__item(href="")
+                            .news-item__image: img(src="/img/news/news-feed1.jpg", alt="")
+                            .news-item__content
+                                .news-item__header
+                                    p.news-item__category Косметика
+                                    h3.news-item__title Старт продаж новой косметики Barber Wild
+                                    p.news-item__details Самый ожидаемый старт сезона уже в эти выходные
+                                footer.news-item__footer
+                                    p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                            .news-item__overlay
 
-                    article.news-item
-                        .news-item__photo
-                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
-                        .news-item__content
-                            header.news-item__header
-                                p.news-item__category Новинки
-                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
-                                p.news-item__details Спешите попробовать первым, спрашивайте в вашем городе
-                            footer.news-item__footer
-                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                                a.news-item__cta(href="#") Читать полностью
-                        .news-item__overlay
+                    //- article.news-item
+                    //-     .news-item__photo
+                    //-         img(src="/img/news/news-feed2.jpg", alt="Barbershop news photo")
+                    //-     .news-item__content
+                    //-         header.news-item__header
+                    //-             p.news-item__category Новости регионов
+                    //-             h3.news-item__title Новые акции для выпускников
+                    //-             p.news-item__details Скидки в предверии сезона выпусных
+                    //-         footer.news-item__footer
+                    //-             p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                    //-             a.news-item__cta(href="#") Читать полностью
+                    //-     .news-item__overlay
 
-                    article.news-item
-                        .news-item__photo
-                            img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
-                        .news-item__content
-                            header.news-item__header
-                                p.news-item__category Новинки
-                                p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
-                                p.news-item__details Спешите попробовать первым, спрашивайте в вашем городе
-                            footer.news-item__footer
-                                p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
-                                a.news-item__cta(href="#") Читать полностью
-                        .news-item__overlay
+                    //- article.news-item
+                    //-     .news-item__photo
+                    //-         img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                    //-     .news-item__content
+                    //-         header.news-item__header
+                    //-             p.news-item__category Новинки
+                    //-             p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                    //-             p.news-item__details Спешите попробовать первым, спрашивайте в вашем городе
+                    //-         footer.news-item__footer
+                    //-             p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                    //-             a.news-item__cta(href="#") Читать полностью
+                    //-     .news-item__overlay
+
+                    //- article.news-item
+                    //-     .news-item__photo
+                    //-         img(src="/img/news/news-feed3.jpg", alt="Barbershop news photo")
+                    //-     .news-item__content
+                    //-         header.news-item__header
+                    //-             p.news-item__category Новинки
+                    //-             p.news-item__title Новая услуга в линейке oldboy - Барбер-Спа
+                    //-             p.news-item__details Спешите попробовать первым, спрашивайте в вашем городе
+                    //-         footer.news-item__footer
+                    //-             p.news-item__date <strong>27</strong> <span>июля<br>2018</span>
+                    //-             a.news-item__cta(href="#") Читать полностью
+                    //-     .news-item__overlay
 
             include modules/_banner.pug
 
