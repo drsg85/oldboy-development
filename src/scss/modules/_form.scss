@@ -60,15 +60,17 @@
     padding: 13px;
     
     // typography
+    color: $dark;
     font-family: $mainFont;
-    color: $golden;
     font-size: 0.875rem;
     text-transform: uppercase;
     
     // visual
-    border: 2px solid transparent;
+    border: 1px solid rgba($golden, 0.5);
     border-radius: 5px;
     background-color: #ffffff;
+    box-shadow: 0 0 20px -19px rgba(19, 28, 35, 1);
+    transition: box-shadow 0.15s ease-out;
     
     &:focus {
         // typography
@@ -77,12 +79,12 @@
         // visual
         outline: none;
         background-color: #ffffff;
-        box-shadow: 0px 25px 59px -19px rgba(19, 28, 35, 1);
+        box-shadow: 0 0 30px -17px rgba(19, 28, 35, 1);
     }
 
     &::placeholder {
         // typography
-        color: $golden;
+        color: $darkGold;
     }
 
     &--valid,
@@ -234,6 +236,11 @@
 
     &:disabled + .form__label-checkbox {
         color: #000000;
+    }
+
+    &:focus + .form__label-checkbox:before{
+        // visual
+        border: 2px solid $darkGold;
     }
 }
 

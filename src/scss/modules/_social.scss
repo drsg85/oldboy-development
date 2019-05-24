@@ -9,6 +9,19 @@
     text-align: center;
 }
 
+.social__text {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
 .social__item {
     // box model
     display: inline-block;

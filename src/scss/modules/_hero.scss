@@ -26,6 +26,7 @@
     @include atDesktopL {
         // box model
         padding: 50px 80px;
+        padding-bottom: 70px;
     }
 
     &--main {
@@ -88,6 +89,8 @@
         // visual
         background-image: none;
         background-image: url('./img/bgs/hero-t.jpg');
+        background-position: 35% 0%;
+        background-size: cover;
 
         @include atDesktopS {
             // box model
@@ -478,6 +481,16 @@
         // box model
         padding-bottom: 40px;
     }
+
+    &--news {
+        // box model
+        display: none;
+
+        @include atTablet {
+            // box model
+            display: block;
+        }
+    }
 }
 
 .hero__coming {
@@ -486,6 +499,7 @@
 
     @include atTablet {
         // box model
+        margin-bottom: 80px;
         margin-top: -50px;
     }
 
@@ -500,6 +514,7 @@
     
     // visual
     transform: translate(-50%, -50%);
+    z-index: 6;
     }
 }
 
@@ -576,6 +591,19 @@
             background-image: linear-gradient(to left, rgba($golden, 0), rgba($golden, 0.75));
         }
     }
+
+    @include atDesktopL {
+        // box model
+        padding-bottom: 15px;
+
+        &::before {
+            // positioning
+            left: -80px;
+
+            // box model
+            width: 450px;
+        }
+    }
 }
 
 .hero__countdown {
@@ -619,6 +647,11 @@
     }
 
     &--branch {
+        @include atTablet {
+            // box model
+            margin: 0 auto;
+        }
+
         @include atDesktopS {
             // positioning
             position: absolute;
@@ -641,128 +674,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     margin-top: 40px;
 
-    @include atDesktopL {
-        // box model
-        max-width: 336px;
-        width: 100%;
-
-        // typography
-        text-align: right;
-
-        &:after {
-            content: '';
-
-            // positioning
-            position: absolute;
-            right: 100%;
-
-            // box model
-            display: block;
-            width: 400px;
-            height: 600px;
-
-            // visual
-            background-image: url('img/deco/barber/barber.png');
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-    }
-
-    @include atDesktopS {
+    @include atTablet {
         // positioning
         position: absolute;
-        top: 60px;
-        right: 40px;
+        bottom: 270px;
+        right: 0;
+
+        // box model
+        margin: 0;
+        max-width: 250px;
+        
+        // visual
+        z-index: 5;
+    }
+    
+    @include atDesktopS {
+        // positioning
         bottom: 0;
 
         // box model
-        display: flex;
-        max-width: 250px;
-        flex-direction: column;
-        align-items: flex-end;
+        padding-bottom: 35px;
     }
-}
 
-.hero__vacancy-header {
-    // box model
-    // margin-bottom: 40px;
-}
-
-.hero__vacancy-title {
-    // box model
-    margin: 20px 0;
-
-    // positioning
-    position: relative;
-
-    // typography
-    color: #ffffff;
-    font-family: $titleFont;
-    font-size: calc(2.25rem + ((1vw - 3.75px) * -1.92));
-    font-weight: 700;
-    line-height: calc(3rem + ((1vw - 3.75px) * -2.88));
-
-    &:before,
-    &:after{
-        content: '';
-
-        // positioning
-        position: absolute;
-
+    @include atDesktopL {
         // box model
-        display: block;
-        width: 100%;
-        height: 4px;
+        max-width: 280px;
+        padding-bottom: 50px;
 
-        // visual
-        background-color: $golden;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
-
-    &:before {
-        // positioning
-        top: -10px;
-        left: -20px;
-
-        @include atTablet {
-            // positioning
-            left: auto;
-            right: -15px;
-        }
-    }
-
-    &:after {
-        // positioning
-        bottom: -10px;
-        left: -20px;
-
-        @include atTablet {
-            // positioning
-            left: auto;
-            right: -15px;
-        }
-    }
-
-    @include atDesktopS {
         // typography
-        font-size: 1.5rem;
-        line-height: 30px;
+        text-align: right;
     }
-}
-
-.hero__vacancy-subtitle {
-    // box model
-    margin: 0;
-
-    // typography
-    color: $golden;
-    font-family: $titleFont;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 30px;
 }
 
 .hero__app {
@@ -796,13 +740,19 @@
     }
 
     @include atDesktopM {
+        // positioning
+        right: -50px;
+
         // box model
         width: 500px;
     }
 
     @include atDesktopL {
         // positioning
-        bottom: 40px;
+        right: -80px;
+
+        // box model
+        width: 540px;
     }
 }
 
@@ -831,7 +781,7 @@
         transform: translateX(50%);
 
         // box model
-        width: 550px;
+        width: 600px;
 
         // visual
         pointer-events: none;
@@ -842,17 +792,17 @@
         bottom: -60px;
 
         // box model
-        width: 700px;
+        width: 720px;
     }
 
     @include atDesktopL {
         // box model
-        width: 800px;
+        width: 900px;
     }
 
     @include atFullHD {
         // box model
-        width: 900px;
+        width: 1000px;
     }
 }
 
@@ -899,7 +849,9 @@
     z-index: 1;
 
     // box model
-    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    width: 80%;
 }
 
 .hero__subtitle {

@@ -1,0 +1,85 @@
+.vacancy {
+    // typography
+    text-align: center;
+}
+
+.vacancy::after {
+    @include atDesktopS {
+        content: '';
+
+        // positioning
+        position: absolute;
+        bottom: 0;
+        right: -50px;
+
+        // box model
+        display: block;
+        width: 380px;
+        height: 4px;
+
+        // visual
+        background-image: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
+    }
+
+    @include atDesktopL {
+        // positioning
+        right: -80px;
+
+        // box model
+        width: 450px;
+    }
+}
+
+.vacancy__title {
+    // box model
+    margin: 15px 0;
+
+    // positioning
+    position: relative;
+
+    // typography
+    color: #ffffff;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.75rem;
+    }
+}
+
+.vacancy__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.75rem;
+    }
+}
+
+.vacancy__subtitle a {
+    // typography
+    color: $golden;
+    text-decoration: none;
+}
+
+.vacancy__subtitle a:hover {
+    // typography
+    text-decoration: underline;
+}

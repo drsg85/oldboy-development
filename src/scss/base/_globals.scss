@@ -40,3 +40,24 @@ html {
     // box model
     box-sizing: inherit;
 }
+
+
+body::-webkit-scrollbar {
+    // box model
+    width: 8px;
+
+    & * {
+        background: transparent;
+    }
+
+    &-thumb {
+        // visual
+        background: $golden;
+        border-radius: 10px;
+    }
+    
+    &-track {
+        // visual
+        background: transparent !important;
+    }
+}

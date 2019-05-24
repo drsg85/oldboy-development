@@ -33,11 +33,11 @@
     position: relative;
 
     // box model
-    padding: 60px 20px;
+    padding: 100px 20px;
     padding-bottom: 30px;
 
     // visual
-    background-color: $dark;
+    // background-color: $dark;
     
     @include atTablet {
         // box model
@@ -84,7 +84,7 @@
     width: 100%;
     height: 180px;
 
-    background-color: $dark;
+    // background-color: $dark;
 
     @include atTablet {
         // box model
@@ -107,7 +107,7 @@
     width: 100%;
     height: 180px;
 
-    background-color: $dark;
+    // background-color: $dark;
 
     @include atTablet {
         // box model
