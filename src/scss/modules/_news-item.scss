@@ -10,8 +10,6 @@
     
     @include atDesktopS {
        // box model
-        display: block;
-        height: 300px;
         width: 300px;
         margin: 0 auto;
     }
@@ -103,6 +101,7 @@
 
         // visual
         background-color: #fdf6ee;
+        border-radius: 0 0 5px 5px;
     }
 }
 
@@ -174,7 +173,7 @@
         // typography
         color: $golden;
         font-size: 1.25rem;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -227,7 +226,7 @@
     @include atDesktopS {
         // typography
         color: $dark;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -258,9 +257,6 @@
     color: $lightGrey;
     font-family: $titleFont;
     text-transform: uppercase;
-
-    // visual
-        cursor: default;
 
     @include atTablet {
         // typography

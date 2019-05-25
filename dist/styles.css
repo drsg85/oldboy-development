@@ -2948,8 +2948,6 @@ body::-webkit-scrollbar {
       margin-bottom: 40px; } }
   @media (min-width: 1000px) {
     .news-item {
-      display: block;
-      height: 300px;
       width: 300px;
       margin: 0 auto; } }
 
@@ -3012,7 +3010,8 @@ body::-webkit-scrollbar {
       justify-content: space-between;
       height: 100%;
       padding: 20px;
-      background-color: #fdf6ee; } }
+      background-color: #fdf6ee;
+      border-radius: 0 0 5px 5px; } }
 
 @media (min-width: 1000px) {
   .news-item__header {
@@ -3053,7 +3052,7 @@ body::-webkit-scrollbar {
       margin-bottom: 15px;
       color: #d6a354;
       font-size: 1.25rem;
-      text-align: center; } }
+      text-align: left; } }
 
 .news-item__subtitle {
   display: none; }
@@ -3088,7 +3087,7 @@ body::-webkit-scrollbar {
   @media (min-width: 1000px) {
     .news-item__details {
       color: #131313;
-      text-align: center; } }
+      text-align: left; } }
 
 .news-item__footer {
   display: -webkit-box;
@@ -3121,8 +3120,7 @@ body::-webkit-scrollbar {
   align-items: center;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
-  text-transform: uppercase;
-  cursor: default; }
+  text-transform: uppercase; }
   @media (min-width: 700px) {
     .news-item__date {
       font-size: 1rem; } }
