@@ -12,6 +12,7 @@
        // box model
         width: 300px;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
 
@@ -28,6 +29,18 @@
     @include atDesktopS {
         // box model
         display: block;
+
+        // visual
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        transition: ease-in-out 0.1s;
+    }
+}
+
+.news-item__item:hover {
+    @include atDesktopS {
+    // visual
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transform: scale(1.0125);
     }
 }
 
@@ -226,6 +239,7 @@
     @include atDesktopS {
         // typography
         color: $dark;
+        font-size: 0.8rem;
         text-align: left;
     }
 }
@@ -243,7 +257,7 @@
 
     @include atDesktopS {
         // box model
-        align-items: flex-end;
+        justify-content: flex-end;
     }
 }
 
@@ -276,6 +290,9 @@
     @include atDesktopS {
         // box model
         display: inline;
+
+        // typography
+        font-size: 1.8em;
     }
 }
 
@@ -286,6 +303,11 @@
 
     // typography
     font-size: 0.85em;
+
+    @include atDesktopS {
+        // typography
+        font-size: 0.75em;
+    }
 }
 
 .news-item__cta {
