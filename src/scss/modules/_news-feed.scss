@@ -4,12 +4,14 @@
 
 .news-feed__content {
     // box model
-    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
 
     @include atDesktopS {
         // box model
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
