@@ -1,0 +1,5 @@
+oldboyapi.seosettings:
+  title: 'Seo Files Upload'
+  description: 'Upload robots.txt and sitemp.xml'
+  parent: system.admin_config_services
+  route_name: oldboyapi.seosettings

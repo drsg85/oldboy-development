@@ -1,7 +1,7 @@
         <div class="footer__content">
             <div class="footer__info-n-contacts">
                 <div class="footer__info">
-                    <div class="footer__logo"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
+					<div class="footer__logo"><a href="/"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" /></a></div>
                     <div class="footer__caption">
 						<h2 class="footer__title">{{ drupal_entity('block_content', 2) }} {{ drupal_entity('block_content', 3) }}</h2>
                         <p class="footer__subtitle">Крупнейшая международная сеть мужских парикмахерских</p>
@@ -23,7 +23,11 @@
                     </div>
                     <div class="contact contact--footer">
                         <h3 class="contact__title">Телефон</h3>
-                        <p class="contact__value">{{ content.field_phone.0 }}</p>
+						{% set phonelink = content.field_phone.0 %}
+						{% if content.field_phonelink.0 %}
+							{% set phonelink = content.field_phonelink.0 %}
+						{% endif %} 
+						<p class="contact__value"><a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a></p>
                     </div>
                     <div class="contact contact--footer">
                         <h3 class="contact__title">Часы работы</h3>
