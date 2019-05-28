@@ -6359,7 +6359,8 @@ a.chosen-branch__value {
 
 .footer-menu {
   margin: 0;
-  padding: 15px 0;
+  padding: 0;
+  padding-bottom: 15px;
   list-style: none;
   text-align: center; }
   @media (min-width: 700px) {
@@ -6369,12 +6370,15 @@ a.chosen-branch__value {
 .footer-menu__title {
   margin: 0;
   padding: 0;
+  padding-top: 15px;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
   font-size: 1rem;
-  line-height: 2; }
+  line-height: 2;
+  text-align: center; }
   @media (min-width: 700px) {
     .footer-menu__title {
+      text-align: left;
       font-size: 1.125rem; } }
 
 .footer-menu__link {
