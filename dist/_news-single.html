@@ -10,35 +10,49 @@
 </head>
 
 <body>
-    <header class="hero">
+    <header class="hero hero">
         <div class="hero__top">
-            <div class="hero__logo"><a href="#"><img src="/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
+            <div class="hero__logo"><a href="index.html"><img src="/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
+            <div class="hero__nav hero__nav--hidden">
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="news.html">Новости</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="index.html#services">Услуги</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link" href="franchise.html">Франшиза</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="hero__city-select"><a class="city-select" href="choose-city.html">
                     <p class="city-select__title">Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span></p>
                     <p class="city-select__city">Калининград</p>
                 </a></div>
-            <div class="menu-button menu-button--close">
+            <div class="menu-button">
                 <div class="menu-button__middle"></div>
             </div>
         </div>
-        <article class="top-news">
-            <header class="top-news__header">
-                <p class="top-news__category">Новости франшизы</p>
-                <h1 class="top-news__title">Открытие нового барбершопа Oldboy</h1>
-                <p class="top-news__details">Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа</p>
-            </header>
-            <footer class="top-news__footer">
-                <p class="top-news__date"><span>Дата:</span><br>27 июля 2018</p>
-                <p class="top-news__location"><span>Регионы:</span><br>Испания</p>
-            </footer>
-        </article>
-        <div class="hero-social">
-            <p class="hero-social__text">Поделиться:</p>
-            <ul class="social">
-                <li class="social__item"><a class="social__icon icon--vk" href="#">ВКонтакте</a></li>
-                <li class="social__item"><a class="social__icon icon--facebook" href="#">Facebook</a></li>
-                <li class="social__item"><a class="social__icon icon--instagram" href="#">Instagram</a></li>
-            </ul>
+        <div class="hero__content">
+            <div class="hero__news">
+                <article class="top-news">
+                    <header class="top-news__header">
+                        <p class="top-news__category">Новости франшизы</p>
+                        <h1 class="top-news__title">Открытие нового барбершопа Oldboy</h1>
+                        <p class="top-news__details">Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа</p>
+                    </header>
+                    <footer class="top-news__footer">
+                        <p class="top-news__date"><span>Дата:</span><br>27 июля 2020</p>
+                        <p class="top-news__location"><span>Регионы:</span><br>Испания</p>
+                    </footer>
+                </article>
+            </div>
+            <div class="hero__social">
+                <ul class="social">
+                    <p class="social__text">Поделиться:</p>
+                    <li class="social__item"><a class="social__icon icon--vk" href="#">ВКонтакте</a></li>
+                    <li class="social__item"><a class="social__icon icon--facebook" href="#">Facebook</a></li>
+                    <li class="social__item"><a class="social__icon icon--instagram" href="#">Instagram</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <section class="current-news">
@@ -103,31 +117,73 @@
         </article>
     </section>
     <footer class="footer">
-        <div class="footer__info">
-            <div class="footer__logo"><img src="./img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
-            <h2 class="footer__title">Крупнейшая международная сеть мужских парикмахерских</h2>
-            <p class="footer__subtitle">Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.</p>
+        <div class="footer__content">
+            <div class="footer__info-n-contacts">
+                <div class="footer__info">
+                    <div class="footer__logo"><img src="./img/logo.svg" alt="Oldboy Barbershop vector logo" /></div>
+                    <div class="footer__caption">
+                        <h2 class="footer__title">129 филиалов <br>в 5 странах и в 5 столицах</h2>
+                        <p class="footer__subtitle">Крупнейшая международная сеть мужских парикмахерских</p>
+                        <p class="footer__text">Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.</p>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__social">
+                        <p class="footer__social-cta">Следите за нами в соц. сетях</p>
+                        <ul class="social social--golden">
+                            <li class="social__item"><a class="social__icon icon--vk" href="#">ВКонтакте</a></li>
+                            <li class="social__item"><a class="social__icon icon--facebook" href="#">Facebook</a></li>
+                            <li class="social__item"><a class="social__icon icon--instagram" href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact contact--footer">
+                        <h3 class="contact__title">Адрес</h3>
+                        <p class="contact__value">ул. Театральная, 30</p>
+                    </div>
+                    <div class="contact contact--footer">
+                        <h3 class="contact__title">Телефон</h3>
+                        <p class="contact__value">52–57–90</p>
+                    </div>
+                    <div class="contact contact--footer">
+                        <h3 class="contact__title">Часы работы</h3>
+                        <p class="contact__value">10:00 — 21:00 (Вс. с 11:00)</p>
+                    </div>
+                    <div class="footer__city">Калининград</div>
+                </div>
+            </div>
+            <div class="footer__menues">
+                <div class="footer__main-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Меню</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ГЛАВНАЯ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">НОВОСТИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛУГИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ФРАНШИЗА</a></li>
+                    </ul>
+                </div>
+                <div class="footer__services-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Услуги</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">СТРИЖКИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">БРИТЬЁ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ТАТУИРОВКИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">БАРБЕР-СПА</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info-nav">
+                    <ul class="footer-menu">
+                        <h3 class="footer-menu__title">Информация</h3>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                        <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="footer__services-nav">
-            <ul class="footer-menu">
-                <h3 class="footer-menu__title">Услуги</h3>
-                <li class="footer-menu__item"><a class="footer-menu__link" href="">СТРИЖКИ</a></li>
-                <li class="footer-menu__item"><a class="footer-menu__link" href="">БРИТЬЁ</a></li>
-                <li class="footer-menu__item"><a class="footer-menu__link" href="">ТАТУИРОВКИ</a></li>
-                <li class="footer-menu__item"><a class="footer-menu__link" href="">БАРБЕР-СПА</a></li>
-            </ul>
-        </div>
-        <div class="footer__info-nav">
-            <ul class="footer-menu">
-                <h3 class="footer-menu__title">Информация</h3>
-                <li class="footer-menu__item"><a class="footer-menu__link" href="">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
-                <li class="footer-menu__item"><a class="footer-menu__link" href="">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a></li>
-            </ul>
+        <div class="footer__copyrights">
+            <p>© 2014–2019 Oldboy Barbershop</p>
         </div>
     </footer>
-    <div class="footer__copyrights">
-        <p>© 2014–2019 Oldboy Barbershop</p>
-    </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
