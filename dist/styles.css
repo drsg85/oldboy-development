@@ -5160,6 +5160,7 @@ body::-webkit-scrollbar {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
+  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -7090,6 +7091,8 @@ a.chosen-branch__value {
     -webkit-box-shadow: 0 0 30px -17px #131c23;
     box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
+    color: #896322; }
+  .form__input::-moz-placeholder {
     color: #896322; }
   .form__input:-ms-input-placeholder {
     color: #896322; }
