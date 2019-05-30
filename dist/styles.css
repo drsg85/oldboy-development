@@ -2957,47 +2957,65 @@ body::-webkit-scrollbar {
   line-height: 1.22; }
 
 .news-item {
-  margin-bottom: 20px;
-  min-height: 100px; }
-  @media (min-width: 700px) {
-    .news-item {
-      margin-bottom: 40px; } }
-  @media (min-width: 1000px) {
-    .news-item {
-      width: 300px;
-      margin: 0 auto;
-      margin-bottom: 20px; } }
-
-.news-item__item {
   position: relative;
+  min-height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-decoration: none; }
-  @media (min-width: 1000px) {
-    .news-item__item {
+  margin-bottom: 40px;
+  text-decoration: none;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden; }
+  @media (min-width: 700px) {
+    .news-item {
       display: block;
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      height: 400px;
+      -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -ms-flex-negative: 1;
+      flex-shrink: 1;
+      margin: 0 20px;
+      margin-bottom: 40px;
+      -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12); } }
+  @media (min-width: 1000px) {
+    .news-item {
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
       -webkit-transition: ease-in-out 0.1s;
       transition: ease-in-out 0.1s; } }
 
-@media (min-width: 1000px) {
-  .news-item__item:hover {
-    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    -webkit-transform: scale(1.0125);
-    transform: scale(1.0125); } }
+.news-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #131313;
+  opacity: 0;
+  -webkit-transition: opacity 15ms linear,background-color 15ms linear;
+  transition: opacity 15ms linear,background-color 15ms linear; }
+
+@media (min-width: 700px) {
+  .news-item:hover::before {
+    opacity: 0.04; } }
 
 .news-item__image {
   -ms-flex-preferred-size: 40%;
   flex-basis: 40%;
+  background-color: #131313;
   border-radius: 5px;
   overflow: hidden; }
-  @media (min-width: 1000px) {
+  @media (min-width: 700px) {
     .news-item__image {
-      -ms-flex-preferred-size: auto;
-      flex-basis: auto; } }
+      border-radius: 0;
+      height: 200px;
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; } }
 
 .news-item__image img {
   width: 100%;
@@ -3023,12 +3041,11 @@ body::-webkit-scrollbar {
   font-size: 4vw; }
   @media (min-width: 700px) {
     .news-item__content {
-      font-size: 1rem; } }
-  @media (min-width: 1000px) {
-    .news-item__content {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3036,12 +3053,12 @@ body::-webkit-scrollbar {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      height: 100%;
+      height: 200px;
       padding: 20px;
-      background-color: #fdf6ee;
-      border-radius: 0 0 5px 5px; } }
+      font-size: 1rem;
+      background-color: #fdf6ee; } }
 
-@media (min-width: 1000px) {
+@media (min-width: 700px) {
   .news-item__header {
     position: relative; } }
 
@@ -3053,10 +3070,6 @@ body::-webkit-scrollbar {
   font-size: 0.75em;
   text-transform: uppercase; }
   @media (min-width: 700px) {
-    .news-item__category {
-      margin-bottom: 1em;
-      font-size: 1.25em; } }
-  @media (min-width: 1000px) {
     .news-item__category {
       position: absolute;
       top: -60px;
@@ -3073,29 +3086,16 @@ body::-webkit-scrollbar {
   font-size: 1em; }
   @media (min-width: 700px) {
     .news-item__title {
-      margin-bottom: 5px;
-      font-size: 1.75em; } }
-  @media (min-width: 1000px) {
-    .news-item__title {
       margin-bottom: 15px;
+      height: 44px;
       color: #d6a354;
       font-size: 1.25rem;
-      text-align: left; } }
+      text-align: left;
+      overflow: hidden; } }
 
 .news-item__subtitle {
   display: none; }
   @media (min-width: 700px) {
-    .news-item__subtitle {
-      display: block;
-      margin: 0;
-      margin-bottom: 5px;
-      color: #131313;
-      font-family: "Open Sans", Arial, sans-serif;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      text-transform: uppercase;
-      font-weight: 600; } }
-  @media (min-width: 1000px) {
     .news-item__subtitle {
       margin-bottom: 15px;
       color: #ffffff;
@@ -3111,12 +3111,12 @@ body::-webkit-scrollbar {
   font-family: "Open Sans", Arial, sans-serif; }
   @media (min-width: 700px) {
     .news-item__details {
-      display: block; } }
-  @media (min-width: 1000px) {
-    .news-item__details {
+      display: block;
+      height: 44px;
       color: #131313;
       font-size: 0.8rem;
-      text-align: left; } }
+      text-align: left;
+      overflow: hidden; } }
 
 .news-item__footer {
   display: -webkit-box;
@@ -3132,9 +3132,7 @@ body::-webkit-scrollbar {
     .news-item__footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; } }
-  @media (min-width: 1000px) {
-    .news-item__footer {
+      align-items: center;
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end; } }
@@ -3160,7 +3158,7 @@ body::-webkit-scrollbar {
   margin-right: 5px;
   font-size: 2.2em;
   line-height: 1em; }
-  @media (min-width: 1000px) {
+  @media (min-width: 700px) {
     .news-item__date strong {
       display: inline;
       font-size: 1.8em; } }
@@ -3168,7 +3166,7 @@ body::-webkit-scrollbar {
 .news-item__date span {
   display: block;
   font-size: 0.85em; }
-  @media (min-width: 1000px) {
+  @media (min-width: 700px) {
     .news-item__date span {
       font-size: 0.75em; } }
 
@@ -3797,7 +3795,7 @@ body::-webkit-scrollbar {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 50px 25px; }
-  @media (min-width: 1000px) {
+  @media (min-width: 700px) {
     .news-feed__content {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -3808,6 +3806,9 @@ body::-webkit-scrollbar {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; } }
+  @media (min-width: 1500px) {
+    .news-feed__content {
+      padding: 40px calc((100% - 1400px) / 2); } }
 
 .franchise {
   margin-top: 70px;
