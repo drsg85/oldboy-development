@@ -2933,9 +2933,34 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0;
+  align-items: center;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
+  @media (min-width: 700px) {
+    .date {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 1rem; } }
+
+.date strong {
+  display: block;
+  margin-right: 5px;
+  font-size: 2.2em;
+  line-height: 1em; }
+  @media (min-width: 700px) {
+    .date strong {
+      display: inline;
+      font-size: 1.8em; } }
+
+.date span {
+  display: block;
+  font-size: 0.85em; }
+  @media (min-width: 700px) {
+    .date span {
+      font-size: 0.75em; } }
 
 .date__day {
   font-size: 3em;
@@ -2955,42 +2980,6 @@ body::-webkit-scrollbar {
   padding-left: 0.5em;
   font-size: 1.125em;
   line-height: 1.22; }
-
-.date-strong {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  align-items: center;
-  color: #aeaeae;
-  font-family: "Rex", Arial, sans-serif;
-  text-transform: uppercase; }
-  @media (min-width: 700px) {
-    .date-strong {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      font-size: 1rem; } }
-
-.date-strong strong {
-  display: block;
-  margin-right: 5px;
-  font-size: 2.2em;
-  line-height: 1em; }
-  @media (min-width: 700px) {
-    .date-strong strong {
-      display: inline;
-      font-size: 1.8em; } }
-
-.date-strong span {
-  display: block;
-  font-size: 0.85em; }
-  @media (min-width: 700px) {
-    .date-strong span {
-      font-size: 0.75em; } }
 
 .news-item {
   position: relative;
