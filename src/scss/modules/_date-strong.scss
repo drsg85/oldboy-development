@@ -1,0 +1,53 @@
+.date-strong {
+    // box model
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    // typography
+    align-items: center;
+    color: $lightGrey;
+    font-family: $titleFont;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // positioning
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        // typography
+        font-size: 1rem;
+    }
+}
+
+.date-strong strong {
+    // box model
+    display: block;
+    margin-right: 5px;
+
+    // typography
+    font-size: 2.2em;
+    line-height: 1em;
+
+    @include atTablet {
+        // box model
+        display: inline;
+
+        // typography
+        font-size: 1.8em;
+    }
+}
+
+.date-strong span {
+    // box model
+    display: block;
+
+    // typography
+    font-size: 0.85em;
+
+    @include atTablet {
+        // typography
+        font-size: 0.75em;
+    }
+}
