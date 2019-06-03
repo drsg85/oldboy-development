@@ -1,7 +1,8 @@
 .footer-menu {
     // box model
     margin: 0;
-    padding: 15px 0;
+    padding: 0;
+    padding-bottom: 15px;
     list-style: none;
 
     // typography
@@ -17,21 +18,24 @@
     // box model
     margin: 0;
     padding: 0;
+    padding-top: 15px;
 
     // typography
     color: $lightGrey;
     font-family: $titleFont;
     font-size: 1rem;
     line-height: 2;
+    text-align: center;
 
     @include atTablet {
         // typography
+        text-align: left;
         font-size: 1.125rem;
     }
 }
 
 .footer-menu__item {
-    
+    // margin: 0;
 }
 
 .footer-menu__link {

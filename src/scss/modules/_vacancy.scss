@@ -1,11 +1,16 @@
 .vacancy {
+    // typography
+    text-align: center;
+}
+
+.vacancy::after {
     @include atDesktopS {
-        &:after {
         content: '';
 
         // positioning
         position: absolute;
-        bottom: -55px;
+        bottom: 0;
+        right: -50px;
 
         // box model
         display: block;
@@ -14,28 +19,20 @@
 
         // visual
         background-image: linear-gradient(to right, rgba($golden, 0), rgba($golden, 0.75));
-        border-bottom-left-radius: 10px;
-        }
     }
 
-        @include atDesktopM {
-            &::after {
-            // positioning
-            bottom: -77px;
-            }
-        }
+    @include atDesktopL {
+        // positioning
+        right: -80px;
 
-        @include atDesktopL {
-            &::after {
-            // visual
-            z-index: 3;
-            }
-        }
+        // box model
+        width: 450px;
+    }
 }
 
 .vacancy__title {
     // box model
-    margin: 30px 0;
+    margin: 15px 0;
 
     // positioning
     position: relative;
@@ -43,19 +40,16 @@
     // typography
     color: #ffffff;
     font-family: $titleFont;
-    font-size: 2rem;
-    font-weight: 700;
-    // line-height: 2.5rem;
+    font-size: 1.5rem;
 
     @include atTablet {
         // typography
         text-align: right;
     }
 
-    @include atDesktopS {
+    @include atDesktopL {
         // typography
-        font-size: 1.5rem;
-        line-height: 45px;
+        font-size: 1.75rem;
     }
 }
 
@@ -67,26 +61,25 @@
     color: $golden;
     font-family: $titleFont;
     font-size: 1.5rem;
-    font-weight: 700;
-    // line-height: 2rem;
 
     @include atTablet {
         // typography
         text-align: right;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.75rem;
     }
 }
 
 .vacancy__subtitle a {
     // typography
     color: $golden;
-    font-family: $titleFont;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 30px;
     text-decoration: none;
 }
 
 .vacancy__subtitle a:hover {
-    // visual
-    border-bottom: 1px $golden solid;
+    // typography
+    text-decoration: underline;
 }

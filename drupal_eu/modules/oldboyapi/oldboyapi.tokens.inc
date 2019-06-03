@@ -23,17 +23,38 @@ function oldboyapi_token_info() {
 
 	$info = [];
 	$info['types']['oldboy'] = ['name' => t('OldBoy Tokens'), 'description' => t('Tokens for custom things.')];
-	$info['tokens']['oldboy']['template'][] = 'Current Template Folder';
-	$info['tokens']['oldboy']['academy'][] = 'Academy Tpl banner';
-	$info['tokens']['oldboy']['brabercount'][] = 'Brabershop Counter';
-	$info['tokens']['oldboy']['braberplaces'][] = 'Brabershop _ in countries and _ cities';
-	$info['tokens']['oldboy']['franchform'][] = 'New Franchize form';
+	$info['tokens']['oldboy']['template'] = ['name' => 'Current Template Folder'];
+	$info['tokens']['oldboy']['academy'] = ['name' => 'Academy Tpl banner'];
+	$info['tokens']['oldboy']['brabercount'] = ['name' => 'Brabershop Counter'];
+	$info['tokens']['oldboy']['braberplaces'] = ['name' => 'Brabershop _ in countries and _ cities'];
+	$info['tokens']['oldboy']['franchform'] = ['name' => 'New Franchize form'];
+	$info['tokens']['oldboy']['webform'] = array('name' => 'Show Web form', 'description' => '', 'dynamic' => TRUE);
 	return $info;
 }
 
 function oldboyapi_get_template() {
 	$result = '/'.\Drupal::theme()->getActiveTheme()->getPath();
 	return $result;
+}
+
+
+function oldboyapi_render_webform($machine_name) {
+   /* $webform = \Drupal::entityTypeManager()->getStorage('webform')->load($machine_name);*/
+	//$webform = $webform->getSubmissionForm();
+
+	/*$html = \Drupal::service('renderer')->renderRoot($webform);*/
+
+//$my_form = \Drupal\webform\Entity\Webform::load('form_franch');
+//$render = $my_form->getSubmissionForm($values);
+	$render = '';
+	$webform      = \Drupal::entityTypeManager()->getStorage('webform')->load($machine_name);
+	if (!empty($webform)) {
+		$view_builder = \Drupal::service('entity_type.manager')->getViewBuilder('webform');
+		$render        = $view_builder->view($webform);
+	}
+
+	$html = \Drupal::service('renderer')->renderRoot($build);
+	return $html;
 }
 
 function oldboyapi_render_block($machine_name) {
@@ -78,8 +99,15 @@ function oldboyapi_tokens($type, $tokens, array $data, array $options, \Drupal\C
                 break;
                 case 'braberplaces':
                     $replacements[$original] = oldboyapi_render_block($name);
+                break;
                 case 'franchform':
                     $replacements[$original] = oldboyapi_render_block($name);
+                break;
+				default:
+					if (strpos($name, 'webform') === 0) {
+						list($n, $t) = explode(':', $name);
+						$replacements[$original] = oldboyapi_render_webform($t);
+					}
                 break;
             }
         }

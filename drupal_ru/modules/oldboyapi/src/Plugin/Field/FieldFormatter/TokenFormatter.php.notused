@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * Contains \Drupal\oldboyapi\Plugin\field\formatter\TokenFormatter.
+ */
+
+namespace Drupal\oldboyapi\Plugin\Field\FieldFormatter;
+
+use Drupal\Core\Field\FormatterBase;
+use Drupal\Core\Field\FieldItemListInterface;
+
+
+
+/**
+ * Plugin implementation of the 'token_formatter' formatter.
+ *
+ * @FieldFormatter(
+ *   id = "token_formatter",
+ *   label = @Translation("Token Field Formatter"),
+ *   field_types = {
+ *     "text", "text_long"
+ *   }
+ * )
+ */
+
+class TokenFormatter extends FormatterBase {
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function viewElements(FieldItemListInterface $items, $langcode) {
+		$elements = array();
+
+		$token_service = \Drupal::token();
+		foreach ($items as $delta => $item) {
+			//error_log(var_export($item, true));
+
+			//$element[0]['#text'] = 'AAA';//$token_service->replace($element[0]['#text']);
+
+			$elements[$delta] = ['#markup' => $token_service->replace($item->value)];
+		}
+
+		error_log(var_export($elements, true));
+		return $elements;
+	}
+
+}

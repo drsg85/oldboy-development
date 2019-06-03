@@ -46,6 +46,10 @@ body::-webkit-scrollbar {
     // box model
     width: 8px;
 
+    & * {
+        background: transparent;
+    }
+
     &-thumb {
         // visual
         background: $golden;
@@ -54,6 +58,6 @@ body::-webkit-scrollbar {
     
     &-track {
         // visual
-        background: transparent;
+        background: transparent !important;
     }
 }

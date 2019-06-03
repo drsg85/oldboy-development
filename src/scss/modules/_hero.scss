@@ -26,6 +26,7 @@
     @include atDesktopL {
         // box model
         padding: 50px 80px;
+        padding-bottom: 70px;
     }
 
     &--main {
@@ -590,6 +591,19 @@
             background-image: linear-gradient(to left, rgba($golden, 0), rgba($golden, 0.75));
         }
     }
+
+    @include atDesktopL {
+        // box model
+        padding-bottom: 15px;
+
+        &::before {
+            // positioning
+            left: -80px;
+
+            // box model
+            width: 450px;
+        }
+    }
 }
 
 .hero__countdown {
@@ -660,12 +674,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     margin-top: 40px;
 
     @include atTablet {
         // positioning
         position: absolute;
-        top: 430px;
+        bottom: 270px;
         right: 0;
 
         // box model
@@ -678,48 +693,19 @@
     
     @include atDesktopS {
         // positioning
-        position: absolute;
-        bottom: 55px;
-        top: auto;
+        bottom: 0;
 
         // box model
-        display: flex;
-        max-width: 250px;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    @include atDesktopM {
-        // positioning
-        bottom: 77px;
+        padding-bottom: 35px;
     }
 
     @include atDesktopL {
         // box model
-        max-width: 336px;
-        width: 100%;
+        max-width: 280px;
+        padding-bottom: 50px;
 
         // typography
         text-align: right;
-
-        // &:after {
-        //     content: '';
-
-        //     // positioning
-        //     position: absolute;
-        //     bottom: -75px;
-        //     right: 60%;
-
-        //     // box model
-        //     display: block;
-        //     width: 500px;
-        //     height: 700px;
-
-        //     // visual
-        //     background-image: url('img/deco/barber/barber.png');
-        //     background-size: 100%;
-        //     background-repeat: no-repeat;
-        // }
     }
 }
 
@@ -754,13 +740,19 @@
     }
 
     @include atDesktopM {
+        // positioning
+        right: -50px;
+
         // box model
         width: 500px;
     }
 
     @include atDesktopL {
         // positioning
-        bottom: 40px;
+        right: -80px;
+
+        // box model
+        width: 540px;
     }
 }
 
@@ -789,7 +781,7 @@
         transform: translateX(50%);
 
         // box model
-        width: 550px;
+        width: 600px;
 
         // visual
         pointer-events: none;
@@ -800,17 +792,17 @@
         bottom: -60px;
 
         // box model
-        width: 700px;
+        width: 720px;
     }
 
     @include atDesktopL {
         // box model
-        width: 800px;
+        width: 900px;
     }
 
     @include atFullHD {
         // box model
-        width: 900px;
+        width: 1000px;
     }
 }
 
@@ -857,7 +849,9 @@
     z-index: 1;
 
     // box model
-    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    width: 80%;
 }
 
 .hero__subtitle {

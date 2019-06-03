@@ -88,31 +88,50 @@
         </div>
         <div class="hero__content">
             <div class="hero__caption">
-                <div class="hero-caption">
-                    <h1 class="hero-caption__title">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span></h1>
+                <div class="hero-caption hero-caption--city">
+                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span></h1>
 					<p class="hero-caption__location">{{ content.field_city.0 }}</p>
                 </div>
-				<div class="hero__opening">
-					<div class="section-header">
-						<h2 class="section-header__title">Открытие <br><span id="date-open-text">{{ content.field_date_open }}</span></h2>
-					</div>
+			</div>
+			<div class="hero__coming">
+				<div class="coming">
+					<p class="coming__subtitle">Скоро&nbsp;открытие <br><span>барбершопа</span></p>
+					<h2 class="coming__date">{{ node.field_date_open.0.value|raw|date('d.m.Y') }}</h2>
 				</div>
+			</div>
+			<div class="hero__contacts-n-buttons">
 				<div class="hero__contacts">
-                    <div class="contact">
-                        <h2 class="contact__title">Адрес</h2>
-                        <p class="contact__value">{{ content.field_address.0 }}</p>
-                    </div>
-                    <div class="contact">
-                        <h2 class="contact__title">Телефон</h2>
-                        <p class="contact__value">{{ content.field_phone.0 }}</p>
-                    </div>
+					<div class="contact">
+						<h2 class="contact__title">Адрес</h2>
+						<p class="contact__value">{{ node.field_address.0.value|raw }}</p>
+						{% if node.field_place.0.value|trim %}
+							<p class="contact__value--place">{{ node.field_place.0.value|raw|trim }}</p><br> 
+						{% endif %}
+						{% if node.field_metro.0.value|trim %}
+							<p class="contact__value--metro">
+							{% set stations = node.field_metro.0.value|raw|striptags|trim|split("\n") %}
+							{% for station in stations %}
+								{% if station %} <span>{{ station }}</span> {% endif %}
+							{% endfor %}
+							</p>
+						{% endif %}
+					</div>
+					<div class="contact">
+						<h2 class="contact__title">Телефон</h2>
+						{% set phonelink = content.field_phone.0 %}
+						{% if content.field_phonelink.0 %}
+							{% set phonelink = content.field_phonelink.0 %}
+						{% endif %} 
+						<p class="contact__value"><a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a></p>
+					</div>
 					{% if content.field_work_hours %}
-                    <div class="contact">
-                        <h2 class="contact__title">Часы работы</h2>
-                        <p class="contact__value">{{ content.field_work_hours.0 }}</p>
-                    </div>
+					<div class="contact">
+						<h2 class="contact__title">Часы работы</h2>
+						<p class="contact__value">{{ content.field_work_hours.0 }}</p>
+					</div>
 					{% endif %}
-                </div>
+				</div>
+				{#
 				<div class="hero__countdown countdown">
 					<div class="countdown__block">
 						{% set opening = content.field_date_open.0 %}
@@ -184,29 +203,39 @@
 						});
 					</script>
 				</div>
-                <div class="hero__buttons">
-                    <ul class="social">
-                        <li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}">ВКонтакте</a></li>
-                        <li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}">Facebook</a></li>
-                        <li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}">Instagram</a></li>
-                    </ul>
-                </div>
-            </div>
-            <aside class="hero__vacancy">
-				<header class="hero__vacancy-header">
-					<p class="hero__vacancy-subtitle">Наши вакансии</p>
-					<h2 class="hero__vacancy-title">Стань частью команды OldBoy&nbsp;BarberShop</h2>
-					<div class="hero__vacancy-subtitle">Хочешь работать в нашем Барбершопе?</div>
-				</header><a class="button button--ghost" href="#">Оставь заявку</a>
-            </aside>
+				#}
+				<div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
+					<ul class="social">
+						{% if content.field_link_vk.0 %}
+							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}">ВКонтакте</a></li>
+						{% endif %}
+						{% if content.field_link_facebook.0 %}
+							<li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}">Facebook</a></li>
+						{% endif %}
+						{% if content.field_link_instagram.0 %}
+							<li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}">Instagram</a></li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+			{% if node.field_phone_join_team.0.value|trim %}
+			<aside class="hero__vacancy">
+                <div class="vacancy">
+                    <p class="vacancy__subtitle">Хочешь работать в&nbsp;нашем Барбершопе?</p>
+                    <h2 class="vacancy__title">Стань частью команды OldBoy&nbsp;BarberShop</h2>
+					{% set phonehref= node.field_phone_join_team.0.value|raw|replace({'(':'',')':'','-':'',' ':''}) %}
+					<p class="vacancy__subtitle"><a href="tel:{{phonehref}}">Звони: {{ content.field_phone_join_team.0 }}</a></p>
+				</div>
+			</aside>
+			{% endif %}
         </div>
     </header>
 	{% include '@oldboy8/includes/locations.html.twig' %}
     <footer class="footer">
-		{% include '@oldboy8/includes/footer.html.twig' %}
+		{% include '@oldboy8/includes/footer-branch.html.twig' %}
     </footer>
 	{% if content.field_subscribe_link %}
 		{{ node.field_subscribe_link.value|raw }}
 	{% endif %}
     <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
-	<script src="/{{ directory }}/dist/branch.js"></script>
+	<script src="/{{ directory }}/dist/dummy.js"></script>
