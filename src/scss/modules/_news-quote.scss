@@ -47,5 +47,12 @@
         // typography
         color: $golden;
         line-height: 20px;
+
+        @include atTablet {
+            // box model
+            padding: 0 250px;
+            // typography
+            text-align: center;
+        }
     }
 }
