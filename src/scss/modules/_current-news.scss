@@ -61,26 +61,6 @@
     background-color: #fdf6ee;
 }
 
-.current-news__excerption {
-    // box model
-    margin: 0;
-    margin-bottom: 15px;
-    margin-left: -25px;
-    padding: 15px 25px;
-    width: 240px;
-
-    // typography
-    color: $dark;
-    font-family: $titleFont;
-    line-height: 22px;
-    text-align: left;
-    text-transform: uppercase;
-
-    // visual
-    border-top: 2px solid $golden;
-    border-bottom: 2px solid $golden;
-}
-
 .current-news__description {
     // box model
     margin: 0;

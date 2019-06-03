@@ -1,9 +1,9 @@
-.news-qoute {
+.news-quote {
     // box model
     padding: 0 25px;
 }
 
-.news-qoute__text {
+.news-quote__text {
     // box model
     margin: 0;
 
@@ -14,7 +14,7 @@
     text-transform: uppercase;
 }
 
-.news-qoute__text::before {             //change quotes
+.news-quote__text::before {             //change quotes
     content: "\201d";
     // box model
     height: 50px;
@@ -28,7 +28,7 @@
     font-size: 8rem;
 }
 
-.news-qoute__author {
+.news-quote__author {
     // box model
     margin: 0;
     padding: 15px 0;

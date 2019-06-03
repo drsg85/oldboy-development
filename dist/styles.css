@@ -4151,20 +4151,6 @@ body::-webkit-scrollbar {
   margin-top: -50px;
   background-color: #fdf6ee; }
 
-.current-news__excerption {
-  margin: 0;
-  margin-bottom: 15px;
-  margin-left: -25px;
-  padding: 15px 25px;
-  width: 240px;
-  color: #131313;
-  font-family: "Rex", Arial, sans-serif;
-  line-height: 22px;
-  text-align: left;
-  text-transform: uppercase;
-  border-top: 2px solid #d6a354;
-  border-bottom: 2px solid #d6a354; }
-
 .current-news__description {
   margin: 0;
   margin-bottom: 30px;
@@ -4183,18 +4169,26 @@ body::-webkit-scrollbar {
   font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
 
-.news-photo {
-  margin-top: 20px; }
-  .news-photo img {
-    width: 100%;
-    max-height: 180px;
-    border-radius: 5px;
-    -o-object-fit: cover;
-    object-fit: cover; }
+.news-photo img {
+  width: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.news-photo__picture {
+  margin-bottom: 15px;
+  background-color: #131313;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.news-photo__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 .news-photo__description {
   margin: 0;
-  margin-top: 20px;
   margin-bottom: 30px;
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
@@ -4202,17 +4196,17 @@ body::-webkit-scrollbar {
   text-align: center;
   text-transform: uppercase; }
 
-.news-qoute {
+.news-quote {
   padding: 0 25px; }
 
-.news-qoute__text {
+.news-quote__text {
   margin: 0;
   color: #131313;
   font-family: "Rex", Arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
 
-.news-qoute__text::before {
+.news-quote__text::before {
   content: "\201d";
   height: 50px;
   margin: 0 auto;
@@ -4224,14 +4218,14 @@ body::-webkit-scrollbar {
   line-height: 115px;
   font-size: 8rem; }
 
-.news-qoute__author {
+.news-quote__author {
   margin: 0;
   padding: 15px 0;
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
-  .news-qoute__author span {
+  .news-quote__author span {
     display: block;
     margin-top: 5px;
     color: #d6a354;
@@ -5126,6 +5120,20 @@ body::-webkit-scrollbar {
 
 .vacancy__subtitle a:hover {
   border-bottom: 1px #d6a354 solid; }
+
+.excerption {
+  margin: 0;
+  margin-bottom: 15px;
+  margin-left: -25px;
+  padding: 15px 25px;
+  width: 240px;
+  color: #131313;
+  font-family: "Rex", Arial, sans-serif;
+  line-height: 22px;
+  text-align: left;
+  text-transform: uppercase;
+  border-top: 2px solid #d6a354;
+  border-bottom: 2px solid #d6a354; }
 
 @media (min-width: 1500px) {
   .haircut {
