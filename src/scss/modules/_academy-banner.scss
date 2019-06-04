@@ -40,6 +40,18 @@
     }
 }
 
+.academy-banner--cert {
+    // visual
+    background-image: url('./img/banners/cert-s.jpg');
+    background-position: bottom center;
+
+    @include atDesktopS {
+        // visual
+        background-image: url('./img/banners/cert-l.jpg');
+        background-position: center right;
+    }
+}
+
 .academy-banner__header {
     // positioning
     transform: skewY(-15deg);
