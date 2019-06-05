@@ -1,0 +1,191 @@
+.hero-franch {
+    // border: 1px solid red;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        // box model
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 19em;
+        margin-bottom: 3em;
+
+        // typography
+        font-size: 0.7rem;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 6em;
+
+        // typography
+        font-size: 0.85em;
+    }
+}
+
+.hero-franch__lettering {
+    // border: 1px solid yellow;
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+        transform: skewY(-15deg);
+
+        // box model
+        margin-bottom: 5em;
+        width: 100%;
+        
+        // typography
+        color: $light;
+        font-family: $titleFont;
+        text-align: right;
+    }
+}
+
+.hero-franch__lettering::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    // bottom: -1.5em;
+    bottom: -1.5em;
+    right: 0;
+    transform: skewY(15deg);
+
+    // box model
+    display: block;
+    height: 3em;
+    // width: 40%;
+    width: 100%;
+
+    // border
+    background-image: url('./img/razor.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.hero-franch__lettering span {
+    // box model
+    display: block;
+}
+
+.hero-franch__oldboy {
+    // typography
+    color: $golden;
+    font-size: 2.4em;
+}
+
+span.hero-franch__network {
+    // box model
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.125em;
+
+    // typography
+    font-size: 1.125em;
+    line-height: 2em;
+}
+
+.hero-franch__network::after {
+    content: "";
+
+    // box model
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 20;
+    height: 0.2em;
+    margin-left: 1em;
+
+    // visual
+    background-color: $golden;
+}
+
+.hero-franch__barbershops {
+    // typography
+    font-size: 3.37em;
+}
+
+.hero-franch__number {
+    // box model
+    margin-left: -0.05em;
+
+    // typography
+    color: $golden;
+    font-family: $displayFont;
+    font-size: 15.3em;
+    line-height: 0.85em;
+}
+
+span.hero-franch__open {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.125em;
+
+    // typography
+    font-size: 1.125em;
+    line-height: 2em;
+}
+
+.hero-franch__open::before {
+    content: "";
+
+    // box model
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 20;
+    height: 0.2em;
+    margin-right: 1em;
+
+    // visual
+    background-color: $golden;
+}
+
+.hero-franch__family {
+    // positioning
+    position: relative;
+    position: absolute;
+    // left: -50%;
+    left: 0;
+    top: -1.5em;
+    z-index: 2;
+    transform: rotate(-15deg);
+
+    // box model
+    // display: none;
+    height: 4em;
+    width: 50%;
+    // margin-top: -8em;
+    margin-bottom: 2em;
+
+    // visual
+    background-image: url('./img/family/family-franch.svg');
+    background-repeat: no-repeat;
+}
+
+.hero-franch__cta {
+    // typography
+    text-align: center;
+}
+
+.hero-franch__cta .button {
+    // box model
+    margin-bottom: 1em;
+}
+
+.hero-franch__desc {
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
