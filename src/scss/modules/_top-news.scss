@@ -7,6 +7,13 @@
         display: none;
     }
 
+    &--news-article {
+        @include atTablet {
+            // box model
+            display: block;
+        }
+    }
+
 }
 .top-news__header {
     // box model
