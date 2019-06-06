@@ -1,6 +1,15 @@
     <section class="location-selector location-selector--hidden">
         <header class="location-selector__header">
-            <div class="location-selector__caption"><a href="#"><img src="/{{ directory }}/dist/img/logo-dark.svg" alt="" /></a>
+            <div class="location-selector__caption">
+                <a class="location-logo" href="https://oldboybarbershop.com">
+                    <div class="location-logo__image"><img src="/{{ directory }}/dist/img/logos/logo-cis.svg" alt="Oldboy Barbershop CIS logo" /></div>
+                    <p class="location-logo__text">СНГ</p>
+                </a>
+                <a class="location-logo location-logo--out" href="https://eu.oldboybarbershop.com">
+                    <div class="location-logo__image"><img src="/{{ directory }}/dist/img/logos/logo-eu.svg" alt="Oldboy Barbershop EU logo" /></div>
+                    <p class="location-logo__text">ЕВРОПА</p>
+                </a>
+                {# <a href="#"><img src="/{{ directory }}/dist/img/logo-dark.svg" alt="" /></a> #}
                 <p class="location-selector__intro"><em>{{ drupal_entity('block_content', 2) }} барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских</p>
             </div>
             <div class="location-selector__fast-nav">

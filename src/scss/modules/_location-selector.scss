@@ -73,30 +73,36 @@
     @include atDesktopS {
         // box model
         display: flex;
-        //flex-direction: column;
         flex-direction: row;
         justify-content: space-between;
-        width: 385px;
-        //padding-right: 30px;
+        align-items: center;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-left: 65px;
     }
 }
 
-.location-selector__caption img {
-    // positioning
-    position: relative;
-    z-index: 2;
+// .location-selector__caption img {
+//     // positioning
+//     position: relative;
+//     z-index: 2;
     
-    // box model
-    width: 135px;
-    padding-top: 5px;
-    padding-bottom: 10px;
+//     // box model
+//     width: 135px;
+//     padding-top: 5px;
+//     padding-bottom: 10px;
+
+//     // typography
+//     font-family: $titleFont;
     
-    @include atDesktopM {
-        // box model
-        // width: 155px;
-        margin-right: 25px;
-    }
-}
+//     @include atDesktopM {
+//         // box model
+//         // width: 155px;
+//         margin-right: 25px;
+//     }
+// }
 
 .location-selector__intro {
     // box model
@@ -107,7 +113,7 @@
     // typography
     color: $dark;
     font-family: $titleFont;
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.25;
 
     em {

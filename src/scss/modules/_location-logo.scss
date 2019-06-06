@@ -1,0 +1,45 @@
+.location-logo {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-right: 20px;
+
+    // visual
+    transition: all 0.25s ease-out;
+    // border: 1px solid red;
+}
+
+.location-logo--out {
+    // visual
+    opacity: 0.5;
+}
+
+.location-logo:hover {
+    // visual
+    opacity: 0.75;
+}
+
+.location-logo__image {
+    // box model
+    height: 48px;
+}
+
+.location-logo__image img {
+    // box model
+    height: 100%;
+}
+
+.location-logo__text {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+}
