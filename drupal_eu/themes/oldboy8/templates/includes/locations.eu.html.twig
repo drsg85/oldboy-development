@@ -1,7 +1,16 @@
     <section class="location-selector location-selector--hidden">
         <header class="location-selector__header">
-            <div class="location-selector__caption"><a href="#"><img src="/{{ directory }}/dist/img/logo-dark.svg" alt="" /></a>
-                <p class="location-selector__intro"><em>{{ drupal_entity('block_content', 2) }} barbershops in 13 countries</em> the largest barbershops network</p>
+            <div class="location-selector__caption">
+                <a class="location-logo" href="https://eu.oldboybarbershop.com">
+                    <div class="location-logo__image"><img src="/{{ directory }}/dist/img/logos/logo-eu.svg" alt="Oldboy Barbershop EU logo" /></div>
+                    <p class="location-logo__text">EUROPE</p>
+                </a>
+                <a class="location-logo location-logo--out" href="https://oldboybarbershop.com">
+                    <div class="location-logo__image"><img src="/{{ directory }}/dist/img/logos/logo-cis.svg" alt="Oldboy Barbershop CIS logo" /></div>
+                    <p class="location-logo__text">CIS</p>
+                </a>
+
+                <p class="location-selector__intro"><em>{{ drupal_entity('block_content', 2) }} barbershops in 13 countries</em> the&nbsp;largest barbershops network</p>
             </div>
 
 
