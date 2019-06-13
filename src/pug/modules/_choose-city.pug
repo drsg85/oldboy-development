@@ -3,8 +3,14 @@ section.location-selector.location-selector--hidden
     header.location-selector__header
         .location-selector__caption
             //- TODO: refactor
-            a(href="#")
-                img(src="/img/logo-dark.svg", alt="")
+            a(href="#").location-logo
+                .location-logo__image: img(src="/img/logos/logo-cis.svg", alt="Oldboy Barbershop CIS logo")
+                p.location-logo__text СНГ
+
+            a(href="#").location-logo.location-logo--out
+                .location-logo__image: img(src="/img/logos/logo-eu.svg", alt="Oldboy Barbershop EU logo")
+                p.location-logo__text ЕВРОПА
+
             p.location-selector__intro <em>192 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
 
         .location-selector__fast-nav

@@ -15,6 +15,7 @@
 // hero blocks
 @import 'modules/hero';
 @import 'modules/hero-caption';
+@import 'modules/hero-franch';
 
 @import 'modules/contact';
 @import 'modules/language-select';
@@ -29,6 +30,7 @@
 
 // location selector
 @import 'modules/location-selector';
+@import 'modules/location-logo';
 @import 'modules/place-groups';
 @import 'modules/city-form';
 @import 'modules/location-list';
@@ -45,6 +47,7 @@
 @import 'modules/news';
 @import 'modules/editorial';
 @import 'modules/date';
+
 @import 'modules/news-item';
 
 @import 'modules/services';
@@ -75,6 +78,8 @@
 @import 'modules/request-popup';
 @import 'modules/coming';
 @import 'modules/vacancy';
+@import 'modules/excerption';
+@import 'modules/callout';
 
 @import 'modules/haircut';
 @import 'modules/stage';

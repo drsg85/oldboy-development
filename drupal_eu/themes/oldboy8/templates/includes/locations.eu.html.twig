@@ -1,7 +1,16 @@
     <section class="location-selector location-selector--hidden">
         <header class="location-selector__header">
-            <div class="location-selector__caption"><a href="#"><img src="/{{ directory }}/dist/img/logo-dark.svg" alt="" /></a>
-                <p class="location-selector__intro"><em>{{ drupal_entity('block_content', 2) }} barbershops in 13 countries</em> the largest barbershops network</p>
+            <div class="location-selector__caption">
+                <a class="location-logo" href="https://eu.oldboybarbershop.com">
+                    <div class="location-logo__image"><img src="/{{ directory }}/dist/img/logos/logo-eu.svg" alt="Oldboy Barbershop EU logo" /></div>
+                    <p class="location-logo__text">EUROPE</p>
+                </a>
+                <a class="location-logo location-logo--out" href="https://oldboybarbershop.com">
+                    <div class="location-logo__image"><img src="/{{ directory }}/dist/img/logos/logo-cis.svg" alt="Oldboy Barbershop CIS logo" /></div>
+                    <p class="location-logo__text">CIS</p>
+                </a>
+
+                <p class="location-selector__intro"><em>{{ drupal_entity('block_content', 2) }} barbershops in 13 countries</em> the&nbsp;largest barbershops network</p>
             </div>
 
 
@@ -62,7 +71,7 @@
                             </div>
                         </div><a class="chosen-city__button" href="{{ path('entity.node.canonical', {'node': 987})   }}">Select</a>
                     </li>
-                    <li class="chosen-city">
+                    {# <li class="chosen-city">
                         <header class="chosen-city__header">
                             <h3 class="chosen-city__title">Poland</h3>
                         </header>
@@ -84,7 +93,7 @@
                                 <p class="chosen-city__info-subtitle">PON - NIE | 8:00 - 20:00</p>
                             </div>
                         </div><a class="chosen-city__button" href="{{ path('entity.node.canonical', {'node': 992})   }}">Select</a>
-                    </li>
+                    </li> #}
                     <li class="chosen-city">
                         <header class="chosen-city__header">
                             <h3 class="chosen-city__title">Serbia</h3>

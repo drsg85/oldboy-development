@@ -16,7 +16,7 @@ class UpButton {
     });
 
     document.addEventListener('scroll', (evt) => {
-      console.log(window.innerHeight, window, scrollY);
+      // console.log(window.innerHeight, window, scrollY);
       if(window.scrollY > window.innerHeight) {
         this.upButton.style.opacity = '1';
       } else {
