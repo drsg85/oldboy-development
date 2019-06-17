@@ -20,6 +20,14 @@
     background-color: $dark;
     border-radius: 5px;
     overflow: hidden;
+
+    @include atTablet {
+        // box model
+        max-width: 650px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        clear: both;
+    }
 }
 
 .news-photo__picture img {
