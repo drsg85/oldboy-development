@@ -88,6 +88,12 @@
         // box model
         margin: 1rem -40px;
     }
+
+    @include atDesktopS {
+        // box model
+        margin-left: -20%;
+        margin-right: -20%;
+    }
 }
 
 .article .quote::before {
@@ -147,6 +153,11 @@
         // box model
         max-width: 300px;
         float: left;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-left: -20%;
     }
 }
 
