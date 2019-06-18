@@ -787,7 +787,7 @@ body::-webkit-scrollbar {
       position: absolute;
       bottom: auto;
       right: -40px;
-      top: 190px;
+      top: 135px;
       z-index: 1;
       width: 55%; } }
   @media (min-width: 1000px) {
