@@ -10,7 +10,7 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--article(style="background-image:url('../img/news/opening.jpg');")
             .hero__top
                 .hero__logo
                     a(href="index.html")
@@ -28,25 +28,24 @@ html(lang="en")
                     .menu-button__middle
 
             .hero__content
-                .hero__news
-                    article.top-news.top-news--news-article
-                        header.top-news__header
-                            p.top-news__category Новости франшизы
-                            h1.top-news__title Открытие нового барбершопа Oldboy
-                            p.top-news__details Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
-                        footer.top-news__footer
-                            p.top-news__date <span>Дата:</span><br>27 июля 2020
-                            p.top-news__location <span>Регионы:</span><br>Испания
+                //- top-news ---> .news-header
+                article.top-news.top-news--news-article
+                    header.top-news__header
+                        p.top-news__category Новости франшизы
+                        h1.top-news__title Открытие нового барбершопа Oldboy
+                        p.top-news__details Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
+                    footer.top-news__footer
+                        p.top-news__date <span>Дата:</span><br>27 июля 2020
+                        p.top-news__location <span>Регионы:</span><br>Испания
 
-                .hero__social
-                    ul.social
-                        p.social__text Поделиться:
-                        li.social__item
-                            a.social__icon.icon--vk(href="#") ВКонтакте
-                        li.social__item
-                            a.social__icon.icon--facebook(href="#") Facebook
-                        li.social__item
-                            a.social__icon.icon--instagram(href="#") Instagram
+                        ul.social
+                            p.social__text Поделиться:
+                            li.social__item
+                                a.social__icon.icon--vk(href="#") ВКонтакте
+                            li.social__item
+                                a.social__icon.icon--facebook(href="#") Facebook
+                            li.social__item
+                                a.social__icon.icon--instagram(href="#") Instagram
 
         main
             article.article
