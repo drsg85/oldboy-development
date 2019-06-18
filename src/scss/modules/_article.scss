@@ -2,36 +2,50 @@
     // box model
     padding: 20px;
     margin-bottom: 70px;
+    max-width: 800px;
 
     @include atTablet {
         // box model
         padding: 40px;
+        margin: 0 auto;
         margin-bottom: 90px;
     }
 
     @include atDesktopS {
         // box model
-        max-width: 800px;
-        margin: 0 auto;
     }
 
-    // @include atDesktopL {
-    //     // box model
-    //     padding: 40px calc((100% - 800px) / 2);
-    // }
+    @include atDesktopM {
+        // box model
+        max-width: 960px;
+    }
 }
 
 .article h2 {
     // box model
     margin: 1rem 0;
+    max-width: 400px;
 
     // typography
     color: $dark;
     font-family: $mainFont;
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.75;
     text-transform: uppercase;
+
+    @include atDesktopS {
+        // typography
+        line-height: 2;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 500px;
+
+        // typography
+        font-size: 1.125rem;
+    }
 }
 
 .article p {
@@ -43,21 +57,36 @@
     font-family: $mainFont;
     font-size: 1rem;
     line-height: 1.5;
+
+    @include atDesktopS {
+        // typography
+        line-height: 1.75;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin: 2rem 0;
+
+        // typography
+        font-size: 1.0625rem;
+    }
 }
 
 .article img {
     // box model
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     max-width: 100%;
+    max-height: 560px;
 
     // visual
     border-radius: 5px;
+    object-fit: cover;
+    object-position: center center;
 
-    // @include atTablet {
-    //     // box model
-    //     flex-basis: 50%;
-    //     max-height: 320px;
-    // }
+    @include atTablet {
+        // box model
+        width: 100%;
+    }
 }
 
 .current-news__image img {
@@ -66,7 +95,6 @@
     height: 100%;
     
     // visual
-    object-fit: cover;
 }
 
 .article .quote {
@@ -87,12 +115,21 @@
     @include atTablet {
         // box model
         margin: 1rem -40px;
+        padding-left: 120px;
+        padding-right: 120px;
     }
-
+    
     @include atDesktopS {
         // box model
-        margin-left: -20%;
-        margin-right: -20%;
+        margin: 1rem -2rem;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin: 1rem -6rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -108,6 +145,14 @@
     // typography
     color: $golden;
     font-size: 6rem;
+
+    @include atDesktopM {
+        // positioning
+        top: 1rem;
+
+        // typography
+        font-size: 7.5rem;
+    }
 }
 
 .article .quote__text {
@@ -116,6 +161,11 @@
 
     // typography
     font-family: $titleFont;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.25rem;
+    }
 }
 
 .article .quote__author {
@@ -123,7 +173,13 @@
     margin: 0;
 
     // typography
+    font-size: 0.85rem;
     text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .article .quote__position {
@@ -132,7 +188,13 @@
 
     // typography
     color: $golden;
+    font-size: 0.85rem;
     text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .article .note {
@@ -157,7 +219,19 @@
 
     @include atDesktopS {
         // box model
-        margin-left: -20%;
+        margin: 1rem 2rem;
+        margin-left: -2rem;
+        padding: 1rem 2rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 400px;
+        margin-left: -6rem;
+        padding-left: 3rem;
+
+        // typography
+        font-size: 1.25rem;
     }
 }
 
