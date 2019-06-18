@@ -4211,55 +4211,38 @@ span.hero-franch__open {
   -o-object-fit: cover;
   object-fit: cover; }
 
-.current-news {
-  padding: 0 25px;
+.article {
+  padding: 20px;
   margin-bottom: 70px; }
   @media (min-width: 700px) {
-    .current-news {
+    .article {
+      padding: 40px;
       margin-bottom: 90px; } }
-  @media (min-width: 1500px) {
-    .current-news {
-      padding: 40px calc((100% - 800px) / 2); } }
+  @media (min-width: 1000px) {
+    .article {
+      max-width: 800px;
+      margin: 0 auto; } }
 
-@media (min-width: 700px) {
-  .current-news__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
-
-@media (min-width: 700px) {
-  .current-news__text {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    margin-right: 50px; } }
-
-.current-news__title {
-  margin: 0;
-  margin-bottom: 30px;
-  color: #131313;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1.2rem;
-  text-align: left;
-  text-transform: uppercase; }
-
-.current-news__details {
-  margin: 0;
-  margin-bottom: 15px;
+.article h2 {
+  margin: 1rem 0;
   color: #131313;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
-  line-height: 22px; }
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase; }
 
-.current-news__image {
-  margin-bottom: 15px;
-  background-color: #131313;
-  border-radius: 5px;
-  overflow: hidden; }
-  @media (min-width: 700px) {
-    .current-news__image {
-      -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-      max-height: 320px; } }
+.article p {
+  margin: 1rem 0;
+  color: #131313;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.article img {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  border-radius: 5px; }
 
 .current-news__image img {
   width: 100%;
@@ -4267,46 +4250,52 @@ span.hero-franch__open {
   -o-object-fit: cover;
   object-fit: cover; }
 
-.current-news__quote {
-  height: 300px;
-  padding-top: 50px;
-  margin-bottom: 15px;
-  margin-left: -25px;
-  margin-right: -25px;
-  margin-top: -50px;
-  background-color: #fdf6ee; }
-  @media (min-width: 700px) {
-    .current-news__quote {
-      height: 250px;
-      margin-top: 0;
-      padding-top: 30px; } }
-  @media (min-width: 1500px) {
-    .current-news__quote {
-      margin-left: -150px;
-      margin-right: -150px; } }
-
-.current-news__description {
-  margin: 0;
-  margin-bottom: 30px;
-  color: #131313;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 0.70rem;
+.article .quote {
+  position: relative;
+  margin: 1rem -20px;
+  padding: 2rem 20px;
+  padding-top: 4rem;
   text-align: center;
-  text-transform: uppercase; }
+  background-color: #fbf6ee; }
+  @media (min-width: 700px) {
+    .article .quote {
+      margin: 1rem -40px; } }
 
-@media (min-width: 700px) {
-  .current-news__excerption {
-    float: left;
-    margin-right: 50px; } }
+.article .quote::before {
+  content: "”";
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #d6a354;
+  font-size: 6rem; }
 
-.current-news__cta {
-  text-align: center; }
+.article .quote__text {
+  margin-bottom: 2rem;
+  font-family: "Rex", Arial, sans-serif; }
 
-.current-news__see-more {
+.article .quote__author {
   margin: 0;
-  color: #131313;
-  font-family: "Rex", Arial, sans-serif;
   text-transform: uppercase; }
+
+.article .quote__position {
+  margin: 0;
+  color: #d6a354;
+  text-transform: uppercase; }
+
+.article .note {
+  margin: 1.5rem -20px;
+  margin-right: 20px;
+  padding: 1rem 20px;
+  font-family: "Rex", Arial, sans-serif;
+  font-size: 1.125rem;
+  border-top: 2px solid #d6a354;
+  border-bottom: 2px solid #d6a354; }
+  @media (min-width: 700px) {
+    .article .note {
+      max-width: 300px;
+      float: left; } }
 
 .news-photo img {
   width: 100%;
@@ -5416,7 +5405,6 @@ span.hero-franch__open {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
-  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -7355,8 +7343,6 @@ a.chosen-branch__value {
     -webkit-box-shadow: 0 0 30px -17px #131c23;
     box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
-    color: #896322; }
-  .form__input::-moz-placeholder {
     color: #896322; }
   .form__input:-ms-input-placeholder {
     color: #896322; }

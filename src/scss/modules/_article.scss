@@ -1,0 +1,204 @@
+.article {
+    // box model
+    padding: 20px;
+    margin-bottom: 70px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+        margin-bottom: 90px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    // @include atDesktopL {
+    //     // box model
+    //     padding: 40px calc((100% - 800px) / 2);
+    // }
+}
+
+.article h2 {
+    // box model
+    margin: 1rem 0;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.article p {
+    // box model
+    margin: 1rem 0;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.article img {
+    // box model
+    margin-bottom: 1rem;
+    max-width: 100%;
+
+    // visual
+    border-radius: 5px;
+
+    // @include atTablet {
+    //     // box model
+    //     flex-basis: 50%;
+    //     max-height: 320px;
+    // }
+}
+
+.current-news__image img {
+    // box model
+    width: 100%;
+    height: 100%;
+    
+    // visual
+    object-fit: cover;
+}
+
+.article .quote {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 1rem -20px;
+    padding: 2rem 20px;
+    padding-top: 4rem;
+
+    // typography
+    text-align: center;
+
+    // visual
+    background-color: $bianca;
+
+    @include atTablet {
+        // box model
+        margin: 1rem -40px;
+    }
+}
+
+.article .quote::before {
+    content: "”";
+
+    // positioning
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // typography
+    color: $golden;
+    font-size: 6rem;
+}
+
+.article .quote__text {
+    // box model
+    margin-bottom: 2rem;
+
+    // typography
+    font-family: $titleFont;
+}
+
+.article .quote__author {
+    // box model
+    margin: 0;
+
+    // typography
+    text-transform: uppercase;
+}
+
+.article .quote__position {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    text-transform: uppercase;
+}
+
+.article .note {
+    // box model
+    margin: 1.5rem -20px;
+    margin-right: 20px;
+    padding: 1rem 20px;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 1.125rem;
+
+    // borders
+    border-top: 2px solid $golden;
+    border-bottom: 2px solid $golden;
+
+    @include atTablet {
+        // box model
+        max-width: 300px;
+        float: left;
+    }
+}
+
+// .current-news__quote {
+
+
+//     @include atTablet {
+//         // box model
+//         height: 250px;
+//         margin-top: 0;
+//         padding-top: 30px;
+//     }
+
+//     @include atDesktopL {
+//         // box model
+//         margin-left: -150px;
+//         margin-right: -150px;
+//     }
+// }
+
+// .current-news__description {
+//     // box model
+//     margin: 0;
+//     margin-bottom: 30px;
+
+//     // typography
+//     color: $dark;
+//     font-family: $mainFont;
+//     font-size: 0.70rem;
+//     text-align: center;
+//     text-transform: uppercase;
+// }
+
+// .current-news__excerption {
+//     @include atTablet {
+//         // box model
+//         float: left;
+//         margin-right: 50px;
+//     }
+// }
+
+// .current-news__cta {
+//     // typography
+//     text-align: center;
+// }
+
+// .current-news__see-more {
+//     // box model
+//     margin: 0;
+
+//     // typography
+//     color: $dark;
+//     font-family: $titleFont;
+//     text-transform: uppercase;
+// }
