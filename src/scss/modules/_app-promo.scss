@@ -10,21 +10,21 @@
     @include atTablet {
         // positioning
         position: absolute;
-        bottom: 130px;
-        bottom: 0;
-        // left: 0;
         right: 0;
-        
+
         // box model
+        flex-direction: column;
+        align-items: flex-end;
         padding: 20px;
         min-width: 330px;
     }
-
+    
     @include atDesktopS {
+        // positioning
+        bottom: 0;
+
         // box model
-        flex-direction: column;
         padding: 20px 40px;
-        align-items: flex-end;
     }
 
     @include atDesktopM {
@@ -99,7 +99,6 @@
     flex-direction: column;
     justify-content: center;
     flex-basis: 50%;
-    // width: 50%;
 
     @include atTablet {
         // positioning
@@ -108,17 +107,18 @@
         
         // box model
         flex-basis: auto;
-        margin-right: 40px;
+        margin-bottom: 20px;
         margin-left: auto;
-
+        margin-right: 20px;
+        
+        // typography
+        text-align: right;
     }
     
     @include atDesktopS {
         // box model
         margin: 0;
-        // margin-right: 50px;
         margin-bottom: 20px;
-        text-align: right;
     }
 }
 
@@ -227,7 +227,7 @@
 
         // box model
         flex-basis: auto;
-        margin-right: 40px;
+        margin-right: 20px;
         margin-left: auto;
     }
 

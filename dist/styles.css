@@ -785,9 +785,9 @@ body::-webkit-scrollbar {
     .hero__app {
       margin: 0;
       position: absolute;
-      bottom: 20px;
+      bottom: auto;
       right: -40px;
-      top: 0;
+      top: 190px;
       z-index: 1;
       width: 55%; } }
   @media (min-width: 1000px) {
@@ -1529,21 +1529,20 @@ span.hero-franch__open {
   @media (min-width: 700px) {
     .app-promo {
       position: absolute;
-      bottom: 130px;
-      bottom: 0;
       right: 0;
-      padding: 20px;
-      min-width: 330px; } }
-  @media (min-width: 1000px) {
-    .app-promo {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding: 20px 40px;
       -webkit-box-align: end;
       -ms-flex-align: end;
-      align-items: flex-end; } }
+      align-items: flex-end;
+      padding: 20px;
+      min-width: 330px; } }
+  @media (min-width: 1000px) {
+    .app-promo {
+      bottom: 0;
+      padding: 20px 40px; } }
   @media (min-width: 1200px) {
     .app-promo {
       padding: 30px 50px;
@@ -1602,13 +1601,14 @@ span.hero-franch__open {
       z-index: 1;
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
-      margin-right: 40px;
-      margin-left: auto; } }
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: 20px;
+      text-align: right; } }
   @media (min-width: 1000px) {
     .app-promo__header {
       margin: 0;
-      margin-bottom: 20px;
-      text-align: right; } }
+      margin-bottom: 20px; } }
 
 .app-promo__title {
   margin: 0;
@@ -1684,7 +1684,7 @@ span.hero-franch__open {
       z-index: 2;
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
-      margin-right: 40px;
+      margin-right: 20px;
       margin-left: auto; } }
   @media (min-width: 1000px) {
     .app-promo__buttons {
