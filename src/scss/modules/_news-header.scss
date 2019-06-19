@@ -11,10 +11,11 @@
         @include atTablet {
             // box model
             display: block;
+            width: 100%;
         }
     }
-
 }
+
 .news-header__header {
     // box model
     margin-bottom: 50px;
@@ -29,9 +30,14 @@
     font-size: 1rem;
     text-transform: uppercase;
 
-    @include atFullHD {
+    @include atDesktopS {
+    // typography
+    font-size: 1.4rem;
+    }
+
+    @include atDesktopM {
         // typography
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -47,12 +53,17 @@
     font-size: 2rem;
     text-transform: uppercase;
 
-    @include atFullHD {
+    @include atDesktopS {
         // box model
         width: 400px;
 
         // typography
         font-size: 3rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 3.4rem;
     }
 }
 
@@ -64,16 +75,21 @@
     // typography
     color: #aeaeae;
     font-family: $mainFont;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 400;
     text-align: left;
 
-    @include atFullHD {
+    @include atDesktopS {
         // box model
         width: 335px;
 
         // typography
         font-size: 1rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.2rem;
     }
 }
 
@@ -98,9 +114,11 @@
 
 .news-header__footer {
     // box model
-    width: 230px;
+    // width: 230px;
     padding-top: 10px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     // visual
@@ -108,18 +126,26 @@
 
     @include atFullHD {
         // box model
-        width: 280px;
+        // width: 280px;
     }
 }
 
 .news-header__date {
     // box model
     margin: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
 
     // typography
     color: $lightGrey;
     font-family: $titleFont;
     text-transform: uppercase;
+    font-size: 1rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.2rem;
+    }
 
     span {
         // box model
@@ -133,7 +159,7 @@
         text-align: left;
         text-transform: uppercase;
 
-        @include atFullHD {
+        @include atDesktopM {
             // typography
             font-size: 1rem;
         }
@@ -143,11 +169,18 @@
 .news-header__location {
     // box model
     margin: 0;
+    margin-right: auto;
 
     // typography
     color: $lightGrey;
     font-family: $titleFont;
     text-transform: uppercase;
+    font-size: 1rem;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.2rem;
+    }
 
     span {
         // box model
@@ -161,31 +194,9 @@
         text-align: left;
         text-transform: uppercase;
 
-        @include atFullHD {
+        @include atDesktopM {
             // typography
             font-size: 1rem;
         }
-    }
-}
-
-.hero-social {
-
-}
-
-.hero-social__text {
-    // box model
-    margin: 0;
-    margin-bottom: 10px;
-
-    // typography
-    color: $golden;
-    font-family: $titleFont;
-    font-size: 0.85rem;
-    text-align: left;
-    text-transform: uppercase;
-
-    @include atFullHD {
-        // typography
-        font-size: 1rem;
     }
 }
