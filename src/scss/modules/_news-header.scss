@@ -1,25 +1,14 @@
 .news-header {
     // box model
     margin-bottom: 45px;
-
-    @include atTablet {
-        // box model
-        display: none;
-    }
-
-    &--news-article {
-        @include atTablet {
-            // box model
-            display: block;
-            width: 100%;
-        }
-    }
+    width: 100%;
 }
 
 .news-header__header {
     // box model
     margin-bottom: 50px;
 }
+
 .news-header__category {
     // box model
     margin: 0;
@@ -31,8 +20,8 @@
     text-transform: uppercase;
 
     @include atDesktopS {
-    // typography
-    font-size: 1.4rem;
+        // typography
+        font-size: 1.4rem;
     }
 
     @include atDesktopM {
