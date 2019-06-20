@@ -25,8 +25,8 @@
         margin-bottom: 40px;
 
         // visual
-        box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.36);
-        transition: ease-in-out 0.2s;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.125);
+        transition: ease-in-out 0.15s;
     }
 
     @include atDesktopS {
@@ -38,7 +38,7 @@
 .news-item:hover {
     @include atTablet {
         // visual
-        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.36);
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -54,7 +54,6 @@
 
     @include atTablet {
         // visual
-        border-radius: 0;
         height: 250px;
     }
 }
