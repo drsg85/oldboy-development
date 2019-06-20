@@ -25,7 +25,7 @@
         margin-bottom: 40px;
 
         // visual
-        box-shadow: 0px 2px 15px -5px rgba(0,0,0,0.36);
+        box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.36);
         transition: ease-in-out 0.2s;
     }
 
@@ -38,7 +38,7 @@
 .news-item:hover {
     @include atTablet {
         // visual
-        box-shadow: 0px 5px 25px -5px rgba(0,0,0,0.36);
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.36);
     }
 }
 
