@@ -1,0 +1,289 @@
+.article {
+    // box model
+    padding: 20px;
+    margin-bottom: 70px;
+    max-width: 800px;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+        margin: 0 auto;
+        margin-bottom: 90px;
+    }
+
+    @include atDesktopS {
+        // box model
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 960px;
+    }
+}
+
+.article h2 {
+    // box model
+    margin: 1rem 0;
+    max-width: 400px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.75;
+    text-transform: uppercase;
+
+    @include atDesktopS {
+        // typography
+        line-height: 2;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 500px;
+
+        // typography
+        font-size: 1.125rem;
+    }
+}
+
+.article p {
+    // box model
+    margin: 1rem 0;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    @include atDesktopS {
+        // typography
+        line-height: 1.75;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin: 2rem 0;
+
+        // typography
+        font-size: 1.0625rem;
+    }
+}
+
+.article img {
+    // box model
+    margin: 1rem 0;
+    max-width: 100%;
+    max-height: 560px;
+
+    // visual
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center center;
+
+    @include atTablet {
+        // box model
+        width: 100%;
+    }
+}
+
+.current-news__image img {
+    // box model
+    width: 100%;
+    height: 100%;
+    
+    // visual
+}
+
+.article .quote {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 1rem -20px;
+    padding: 2rem 20px;
+    padding-top: 4rem;
+
+    // typography
+    text-align: center;
+
+    // visual
+    background-color: $bianca;
+
+    @include atTablet {
+        // box model
+        margin: 1rem -40px;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        margin: 1rem -2rem;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin: 1rem -6rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.article .quote::before {
+    content: "”";
+
+    // positioning
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // typography
+    color: $golden;
+    font-size: 6rem;
+
+    @include atDesktopM {
+        // positioning
+        top: 1rem;
+
+        // typography
+        font-size: 7.5rem;
+    }
+}
+
+.article .quote__text {
+    // box model
+    margin-bottom: 2rem;
+
+    // typography
+    font-family: $titleFont;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.25rem;
+    }
+}
+
+.article .quote__author {
+    // box model
+    margin: 0;
+
+    // typography
+    font-size: 0.85rem;
+    text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
+}
+
+.article .quote__position {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+
+    @include atDesktopM {
+        // typography
+        font-size: 1rem;
+    }
+}
+
+.article .note {
+    // box model
+    margin: 1.5rem -20px;
+    margin-right: 20px;
+    padding: 1rem 20px;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 1.125rem;
+
+    // borders
+    border-top: 2px solid $golden;
+    border-bottom: 2px solid $golden;
+
+    @include atTablet {
+        // box model
+        max-width: 300px;
+        float: left;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin: 1rem 2rem;
+        margin-left: -2rem;
+        padding: 1rem 2rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 400px;
+        margin-left: -6rem;
+        padding-left: 3rem;
+
+        // typography
+        font-size: 1.25rem;
+    }
+}
+
+// .current-news__quote {
+
+
+//     @include atTablet {
+//         // box model
+//         height: 250px;
+//         margin-top: 0;
+//         padding-top: 30px;
+//     }
+
+//     @include atDesktopL {
+//         // box model
+//         margin-left: -150px;
+//         margin-right: -150px;
+//     }
+// }
+
+// .current-news__description {
+//     // box model
+//     margin: 0;
+//     margin-bottom: 30px;
+
+//     // typography
+//     color: $dark;
+//     font-family: $mainFont;
+//     font-size: 0.70rem;
+//     text-align: center;
+//     text-transform: uppercase;
+// }
+
+// .current-news__excerption {
+//     @include atTablet {
+//         // box model
+//         float: left;
+//         margin-right: 50px;
+//     }
+// }
+
+// .current-news__cta {
+//     // typography
+//     text-align: center;
+// }
+
+// .current-news__see-more {
+//     // box model
+//     margin: 0;
+
+//     // typography
+//     color: $dark;
+//     font-family: $titleFont;
+//     text-transform: uppercase;
+// }

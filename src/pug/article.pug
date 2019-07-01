@@ -10,13 +10,13 @@ html(lang="en")
         title Oldboy Barbershop
 
     body
-        header.hero
+        header.hero.hero--article(style="background-image:url('../img/news/opening.jpg');")
             .hero__top
                 .hero__logo
                     a(href="index.html")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
-                .hero__nav
+                .hero__nav.hero__nav--hidden
                     include modules/_menu.pug
 
                 .hero__city-select
@@ -24,52 +24,163 @@ html(lang="en")
                         p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
                         p.city-select__city Калининград
 
-                .menu-button.menu-button--close
+                .menu-button
                     .menu-button__middle
 
             .hero__content
+                article.news-header
+                    header.news-header__header
+                        p.news-header__category Новости франшизы
+                        h1.news-header__title Открытие нового барбершопа Oldboy
+                        p.news-header__details Долгожданное открытие второго по счёту барбершопа в столице Испании планируется в конце августа
+                    footer.news-header__footer
+                        p.news-header__date <span>Дата:</span><br>27 июля 2020
+                        p.news-header__location <span>Регионы:</span><br>Испания
+
+                        ul.social
+                            p.social__text Поделиться:
+                            li.social__item
+                                a.social__icon.icon--vk(href="#") ВКонтакте
+                            li.social__item
+                                a.social__icon.icon--facebook(href="#") Facebook
+                            li.social__item
+                                a.social__icon.icon--instagram(href="#") Instagram
+
+        main
+            article.article
+                h2 Новости об открытии очередного филиала в столице не заставили себя долго ждать
+                p Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание систем массового участия. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа соответствующий условий активизации. Идейные соображения высшего порядка, а также консультация с широким активом
+                img(src="/img/news/news-feed2.jpg", alt="Oldboy barbershop news photo")
+                p Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание систем массового участия. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа соответствующий условий активизации. Идейные соображения высшего порядка, а также консультация с широким активом
+
+                blockquote.quote
+                    p.quote__text Приоритет в услугах был сделан на классический набор стрижек и бритья, включая всем известное королевское бритьё опасной бритвой
+                    p.quote__author Юрий Артюх
+                    p.quote__position Бренд менеджер сети Oldboy Barbershop
+
+                p Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание систем массового участия. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа соответствующий условий активизации. Идейные соображения высшего порядка, а также консультация с широким активом требуют от нас анализа  позиций, занимаемых
+                p.note Приоритет в услугах был сделан на классический набор стрижек и бритья, включая всем известное королевское бритьё опасной бритвой
+                p Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание систем массового участия. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа соответствующий условий активизации. Идейные соображения
+                p Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание систем массового участия. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа соответствующий условий активизации. Идейные соображения
+
+                //- .current-news__photo
+                //-     .news-photo
+                //-         .news-photo__picture: img(src="/img/news/news-feed3.jpg", alt="Oldboy barbershop news photo")
+                //-         p.news-photo__description Высокий уровень профессиональных навыков и качества услуг - визитная карточка Oldboy Barbershop
+
+                //- p.current-news__details Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание систем массового участия. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа соответствующий условий активизации. Идейные соображения высшего порядка, а также консультация с широким активом требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Таким
+
+                //- .current-news__cta
+                //-     a.button(href="#") Смотреть все новости
+                //-     p.current-news__see-more Узнайте ещё больше новостей барбершопов oldboy
+
+            section.news-feed
+                .news-feed__header
+                    header.section-header
+                        h2.section-header__title Новости<br>регионов
+                        p.section-header__subtitle Со&nbsp;всего&nbsp;мира
+                        
+                .news-feed__content
+                    a.news-item(href="")
+                        .news-item__image: img(src="/img/news/news-feed2.jpg", alt="")
+                        .news-item__content
+                            .news-item__header
+                                p.news-item__category Регионы
+                                h3.news-item__title Новые акции для выпускников
+                                p.news-item__details Скидки в преддверии сезона выпускных
+                            footer.news-item__footer
+                                .date <strong>27</strong> <span>июля<br>2019</span>
+
+                    a.news-item(href="")
+                        .news-item__image: img(src="/img/news/news-feed3.jpg", alt="")
+                        .news-item__content
+                            .news-item__header
+                                p.news-item__category Новинка
+                                h3.news-item__title Новая услуга в линейке Oldboy - Barber Spa
+                                p.news-item__details Спешите попробовать первым. Спрашивайте в вашем городе
+                            footer.news-item__footer
+                                .date <strong>27</strong> <span>июля<br>2019</span>
+
+                    a.news-item(href="")
+                        .news-item__image: img(src="/img/news/news-feed1.jpg", alt="")
+                        .news-item__content
+                            .news-item__header
+                                p.news-item__category Франшиза
+                                h3.news-item__title Старт продаж новой косметики Barber Wild
+                                p.news-item__details Самый ожидаемый старт сезона уже в эти выходные
+                            footer.news-item__footer
+                                .date <strong>27</strong> <span>июля<br>2019</span>
 
         footer.footer
-            .footer__info-n-contacts
-                .footer__info
-                    .footer__logo
-                        img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
-                    h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
-                    p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
-                    p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
+            .footer__content
+                .footer__info-n-contacts
+                    .footer__info
+                        .footer__logo
+                            img(src="./img/logo.svg", alt="Oldboy Barbershop vector logo")
+                        .footer__caption
+                            h2.footer__title 129 филиалов <br>в 5 странах и в 5 столицах
+                            p.footer__subtitle Крупнейшая международная сеть мужских парикмахерских
+                            p.footer__text Oldboy Barbershop — намного больше, чем просто мужская парикмахерская, это даже больше, чем мужской клуб по интересам, это именно то место, где ты найдёшь себя и свой стиль.
 
-            .footer__menues
-                .footer__main-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Меню
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ГЛАВНАЯ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") НОВОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛУГИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ФРАНШИЗА
+                    .footer__contacts
+                        .footer__social
+                            p.footer__social-cta Следите за нами в соц. сетях
+                            ul.social.social--golden
+                                li.social__item
+                                    a.social__icon.icon--vk(href="#") ВКонтакте
+                                li.social__item
+                                    a.social__icon.icon--facebook(href="#") Facebook
+                                li.social__item
+                                    a.social__icon.icon--instagram(href="#") Instagram
 
-                .footer__services-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Услуги
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") СТРИЖКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БРИТЬЁ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ТАТУИРОВКИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") БАРБЕР-СПА
+                        .contact.contact--footer
+                            h3.contact__title Адрес
+                            p.contact__value ул. Театральная, 30
+                            
+                        .contact.contact--footer
+                            h3.contact__title Телефон
+                            p.contact__value 52–57–90
 
-                .footer__info-nav
-                    ul.footer-menu
-                        h3.footer-menu__title Информация
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
-                        li.footer-menu__item
-                            a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+                        .contact.contact--footer
+                            h3.contact__title Часы работы
+                            p.contact__value 10:00 — 21:00 (Вс. с 11:00)
+
+                        .footer__city Калининград
+
+                .footer__menues
+                    .footer__main-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Меню
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ГЛАВНАЯ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") НОВОСТИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") УСЛУГИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ФРАНШИЗА
+
+                    .footer__services-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Услуги
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") СТРИЖКИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") БРИТЬЁ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ТАТУИРОВКИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") БАРБЕР-СПА
+
+                    .footer__info-nav
+                        ul.footer-menu
+                            h3.footer-menu__title Информация
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+                            li.footer-menu__item
+                                a.footer-menu__link(href="") УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
 
             .footer__copyrights
                 p © 2014–2019 Oldboy Barbershop
+
+        script(src="scripts.js")
