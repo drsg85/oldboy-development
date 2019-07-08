@@ -109,6 +109,11 @@ span.hero-franch__network {
 .hero-franch__barbershops {
     // typography
     font-size: 3.37em;
+
+    &--en {
+        // typography
+        letter-spacing: 0.05em;
+    }
 }
 
 .hero-franch__number {
