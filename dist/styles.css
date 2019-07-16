@@ -5983,7 +5983,7 @@ span.hero-franch__open {
 
 .price-table__price {
   padding: 5px 0;
-  vertical-align: top;
+  vertical-align: middle;
   color: #d6a354;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
