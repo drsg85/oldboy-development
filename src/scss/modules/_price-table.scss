@@ -35,39 +35,36 @@
     }
 }
 
-.price-table__service {
+.price-table td {
     // box model
     padding: 6px 0;
     padding-right: 20px;
 
     // typography
-    color: $dark;
     font-family: $mainFont;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.3;
     text-transform: uppercase;
-    
+
     // visual
     border-bottom: 1px solid rgba($dark, 0.25);
 
     @include atTablet {
-        // visual
-        // border-bottom: 1px solid rgba($dark, 0.25);
-
-        // TODO: try to make hairthin line here
-        // @media (min-resolution: 2dppx) {
-        //     border-bottom: 0.5px solid (red, 0.25);
-        // }
-
-        // @media (min-resolution: 3dppx) {
-        //     border-bottom: 0.3333333px solid (red, 0.25);
-        // }
-
-        // @media (min-resolution: 4dppx) {
-        //     border-bottom: 0.5px solid (red, 0.25);
-        // }
+        // typography
+        font-size: 1rem;
     }
+}
+
+.price-table__heading {
+    // typography
+    color: $dark;
+    text-align: right;
+}
+
+.price-table__service {
+    // typography
+    color: $dark;
 }
 
 .price-table__price {
@@ -89,10 +86,6 @@
     @include atTablet {
         // visual
         border-bottom: 1px solid rgba($dark, 0.25);
-
-        @media (min-resolution: 2dppx) {
-            border-bottom: 0.5px solid ($dark, 0.25);
-        }
     }
 }
 

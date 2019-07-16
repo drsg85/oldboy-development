@@ -88,14 +88,13 @@ let scripts = () => (
  * Runs browserSync server
  * @param {Function} done callback
  */
-let browserSyncInit = (done) => {
+let browserSyncInit = () => {
   browserSync.init({
     server: {
       baseDir: dirs.dist
     },
     port: 3000
   });
-  done();
 };
 
 
@@ -112,14 +111,14 @@ let browserSyncReload = (done) => {
 /**
  * Watches files for changes
  */
-let watchFiles = () => {
+let watch = () => {
+  browserSyncInit();
+
   gulp.watch(dirs.pug, gulp.series(pugRender, browserSyncReload));
   gulp.watch(dirs.scss, gulp.parallel(styles));
   gulp.watch(dirs.js, gulp.series(scripts, browserSyncReload));
 };
 
-
-const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 exports.pugRender = pugRender;
 exports.styles = styles;
