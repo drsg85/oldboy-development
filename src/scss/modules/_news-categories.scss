@@ -30,15 +30,4 @@
         // box model
         padding: 0 calc((100% - 1400px) / 2);
     }
-
-    @include atFullHD {
-        // box model
-        // position: absolute;
-        // top: 115px;
-        // right: 90px;
-
-        // // visual
-        // z-index: 1;
-    }
 }
-
