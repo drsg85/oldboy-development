@@ -216,6 +216,36 @@
         }
     }
 
+    &--news {
+        // box model
+        position: relative;
+
+        // visual
+        background-size: cover;
+        background-position: center top;
+
+        &::before {
+            content: "";
+            // box model
+            display: block;
+            position: absolute;
+
+            // positioning
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+
+            // visual
+            background-image: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,1) 100%);
+        }
+
+        @include atTablet {
+            // box model
+            height: 100vh;
+        }
+    }
+
     &--404 {
         // box model
         padding-bottom: 60px;
