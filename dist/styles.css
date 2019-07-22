@@ -402,6 +402,23 @@ body::-webkit-scrollbar {
       top: 0;
       background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(65%, rgba(0, 0, 0, 0.7)), to(black));
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 65%, black 100%); }
+  .hero--news {
+    position: relative;
+    background-size: cover;
+    background-position: center top; }
+    .hero--news::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(65%, rgba(0, 0, 0, 0.7)), to(black));
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 65%, black 100%); }
+    @media (min-width: 700px) {
+      .hero--news {
+        height: 100vh; } }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
@@ -1019,6 +1036,15 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center left; }
+  @media (min-width: 700px) {
+    .hero-caption__big--news {
+      font-size: 2.4rem; } }
+  @media (min-width: 1200px) {
+    .hero-caption__big--news {
+      font-size: 3rem; } }
+  @media (min-width: 1500px) {
+    .hero-caption__big--news {
+      font-size: 3.5rem; } }
 
 .hero-caption__motto {
   margin: 0;
@@ -4174,12 +4200,27 @@ span.hero-franch__open {
   padding: 0 20px; }
   @media (min-width: 700px) {
     .news-categories {
+      position: absolute;
+      top: 55vh;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
+  @media (min-width: 1200px) {
+    .news-categories {
+      top: 73vh;
+      padding: 0 25px;
+      width: 100%;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+  @media (min-width: 1500px) {
+    .news-categories {
+      padding: 0 calc((100% - 1400px) / 2); } }
 
 .news-category {
   position: relative;
@@ -4190,13 +4231,28 @@ span.hero-franch__open {
   background-color: #000000;
   border-radius: 5px;
   overflow: hidden; }
+  @media (min-width: 700px) {
+    .news-category {
+      -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+      max-width: 385px; } }
+  @media (min-width: 1200px) {
+    .news-category {
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+      max-width: 320px;
+      margin: 0 10px; } }
+
+.news-category:hover {
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25); }
 
 .news-category__item:hover .news-category__overlay {
-  background-color: rgba(207, 101, 101, 0.3); }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .news-category__header {
   position: absolute;
-  padding: 30px 0;
+  padding: 30px 10px;
   width: 100%;
   text-align: center;
   z-index: 3; }
@@ -4206,11 +4262,17 @@ span.hero-franch__open {
   margin-bottom: 20px;
   color: #d6a354;
   font-family: "Rex", Arial, sans-serif; }
+  @media (min-width: 1200px) {
+    .news-category__title {
+      font-size: 1.2rem; } }
 
 .news-category__subtitle {
   margin: 0;
   color: #ffffff;
   font-family: "Rex", Arial, sans-serif; }
+  @media (min-width: 1200px) {
+    .news-category__subtitle {
+      font-size: 1.2rem; } }
 
 .news-category__overlay {
   position: absolute;
@@ -5608,6 +5670,7 @@ span.hero-franch__open {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
+  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -7555,6 +7618,8 @@ a.chosen-branch__value {
     -webkit-box-shadow: 0 0 30px -17px #131c23;
     box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
+    color: #896322; }
+  .form__input::-moz-placeholder {
     color: #896322; }
   .form__input:-ms-input-placeholder {
     color: #896322; }

@@ -160,6 +160,23 @@
             background-position: center left;
         }
     }
+
+    &--news {
+        @include atTablet {
+        // typography
+        font-size: 2.4rem;
+        }
+
+        @include atDesktopM {
+            // typography
+            font-size: 3rem;
+        }
+
+        @include atDesktopL {
+            // typography
+            font-size: 3.5rem;
+        }
+    }
 }
 
 .hero-caption__motto {

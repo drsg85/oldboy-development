@@ -6,19 +6,28 @@
     padding: 0 20px;
 
     @include atTablet {
+        // positioning
+        position: absolute;
+        top: 55vh;
+
         // box model
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    @include atFullHD {
+    @include atDesktopM {
+        // positioning
+        top: 73vh;
+        
         // box model
-        // position: absolute;
-        // top: 115px;
-        // right: 90px;
-
-        // // visual
-        // z-index: 1;
+        padding: 0 25px;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    @include atDesktopL {
+        // box model
+        padding: 0 calc((100% - 1400px) / 2);
     }
 }
-
