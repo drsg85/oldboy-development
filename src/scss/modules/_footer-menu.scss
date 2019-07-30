@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     padding-bottom: 15px;
+    padding-top: 15px;
     list-style: none;
 
     // typography
@@ -16,6 +17,7 @@
 
 .footer-menu__title {
     // box model
+    display: none;
     margin: 0;
     padding: 0;
     padding-top: 15px;
@@ -28,6 +30,8 @@
     text-align: center;
 
     @include atTablet {
+        // box model
+
         // typography
         text-align: left;
         font-size: 1.125rem;
