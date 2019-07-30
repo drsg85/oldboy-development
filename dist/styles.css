@@ -5670,7 +5670,6 @@ span.hero-franch__open {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
-  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -6804,7 +6803,6 @@ a.chosen-branch__value {
   margin: 0;
   padding: 0;
   padding-bottom: 15px;
-  padding-top: 15px;
   list-style: none;
   text-align: center; }
   @media (min-width: 700px) {
@@ -6812,19 +6810,18 @@ a.chosen-branch__value {
       text-align: left; } }
 
 .footer-menu__title {
-  display: none;
   margin: 0;
   padding: 0;
   padding-top: 15px;
   color: #aeaeae;
   font-family: "Rex", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 2;
   text-align: center; }
   @media (min-width: 700px) {
     .footer-menu__title {
       text-align: left;
-      font-size: 1.125rem; } }
+      font-size: 1.6rem; } }
 
 .footer-menu__link {
   color: #ffffff;
@@ -7620,8 +7617,6 @@ a.chosen-branch__value {
     -webkit-box-shadow: 0 0 30px -17px #131c23;
     box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
-    color: #896322; }
-  .form__input::-moz-placeholder {
     color: #896322; }
   .form__input:-ms-input-placeholder {
     color: #896322; }
