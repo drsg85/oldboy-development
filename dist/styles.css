@@ -4466,18 +4466,25 @@ span.hero-franch__open {
       margin: 2rem 0;
       font-size: 1.0625rem; } }
 
-.article img {
-  margin: 1rem 0;
-  max-width: 100%;
+.article__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1rem auto;
+  max-width: 80%;
   max-height: 560px;
   border-radius: 5px;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center center;
-  object-position: center center; }
-  @media (min-width: 700px) {
-    .article img {
-      width: 100%; } }
+  object-position: center center;
+  overflow: hidden; }
+
+.article__image img {
+  width: 100%; }
 
 .current-news__image img {
   width: 100%;
