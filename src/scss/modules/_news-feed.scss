@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     padding: 50px 25px;
+    padding-bottom: 0;
 
     @include atTablet {
         // box model
@@ -18,5 +19,23 @@
     @include atDesktopL {
         // box model
         padding: 40px calc((100% - 1400px) / 2);
+        padding-bottom: 0;
     }
+}
+
+.news-feed__more {
+    // box model
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    
+    @include atDesktopL {
+        // box model
+        padding-bottom: 40px;
+    }
+}
+
+.news-feed__more .button {
+    // visual
+    cursor: pointer;
 }
