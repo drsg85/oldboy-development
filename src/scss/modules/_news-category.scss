@@ -27,10 +27,6 @@
     }
 }
 
-.news-category__item {
-    
-}
-
 .news-category:hover {
     // visual
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
@@ -38,7 +34,6 @@
 
 .news-category__item:hover .news-category__overlay {
     // visual
-    // background-color: rgba(207, 101, 101, 0.3);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -99,10 +94,6 @@
     // visual
     background-color: rgba(0, 0, 0, 0.6);
     transition: ease-in-out 0.2s;
-}
-
-.news-category__image {
-
 }
 
 .news-category__image img {

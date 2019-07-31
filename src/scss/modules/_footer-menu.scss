@@ -23,14 +23,16 @@
     // typography
     color: $lightGrey;
     font-family: $titleFont;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 2;
     text-align: center;
 
     @include atTablet {
+        // box model
+
         // typography
         text-align: left;
-        font-size: 1.125rem;
+        font-size: 1.6rem;
     }
 }
 

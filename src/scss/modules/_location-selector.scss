@@ -68,11 +68,13 @@
 
 .location-selector__caption {
     // box model
-    display: none;
+    display: flex;
+    margin-bottom: 25px;
     
     @include atDesktopS {
         // box model
         display: flex;
+        margin: 0;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -106,6 +108,7 @@
 
 .location-selector__intro {
     // box model
+    display: none;
     width: 220px;
     margin: 0;
     padding: 0.5em 0;
@@ -120,6 +123,11 @@
         // typography
         color: $golden;
         font-style: normal;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: block;
     }
 }
 
