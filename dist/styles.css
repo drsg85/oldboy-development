@@ -4230,9 +4230,12 @@ span.hero-franch__open {
 .news-category {
   position: relative;
   max-width: 350px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
   background-color: #000000;
+  background-image: url("./img/news/news-feed.jpg");
+  background-size: cover;
   border-radius: 5px;
   overflow: hidden; }
   @media (min-width: 700px) {
@@ -4255,7 +4258,7 @@ span.hero-franch__open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 150px;
+  height: 150px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }

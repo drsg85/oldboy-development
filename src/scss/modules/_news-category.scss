@@ -1,14 +1,17 @@
 .news-category {
     // positioning
     position: relative;
-
+    
     // box model
     max-width: 350px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
-
+    
     // visual
     background-color: $black;
+    background-image: url('./img/news/news-feed.jpg');
+    background-size: cover;
     border-radius: 5px;
     overflow: hidden;
 
@@ -17,7 +20,7 @@
         flex-basis: 40%;
         max-width: 385px;
     }
-
+    
     @include atDesktopM {
         // box model
         flex-basis: 25%;
@@ -34,7 +37,7 @@
 .news-category__item {
     // box model
     display: flex;
-    max-height: 150px;
+    height: 150px;
     align-items: center;
 }
 
