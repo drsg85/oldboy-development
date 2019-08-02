@@ -2596,7 +2596,8 @@ span.hero-franch__open {
   transform: skewY(-15deg);
   z-index: 8;
   width: 90%;
-  max-width: 325px; }
+  max-width: 325px;
+  pointer-events: none; }
   @media (min-width: 700px) {
     .section-header {
       max-width: inherit;
