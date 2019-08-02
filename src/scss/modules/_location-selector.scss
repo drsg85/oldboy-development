@@ -169,7 +169,8 @@
     visibility: visible;
 
     @include atDesktopS {
-        top: 65px;
+        // top: 65px;
+        top: 50px;
         right: 40px;
     }
 }

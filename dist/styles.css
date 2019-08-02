@@ -2171,7 +2171,7 @@ span.hero-franch__open {
   visibility: visible; }
   @media (min-width: 1000px) {
     .location-selector__close {
-      top: 65px;
+      top: 50px;
       right: 40px; } }
 
 .location-selector__close--hidden {
