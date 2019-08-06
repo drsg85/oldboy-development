@@ -243,6 +243,7 @@
         @include atTablet {
             // box model
             height: 100vh;
+            max-height: 1000px;
         }
     }
 

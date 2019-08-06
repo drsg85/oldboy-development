@@ -418,7 +418,8 @@ body::-webkit-scrollbar {
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 65%, black 100%); }
     @media (min-width: 700px) {
       .hero--news {
-        height: 100vh; } }
+        height: 100vh;
+        max-height: 1000px; } }
   .hero--404 {
     padding-bottom: 60px;
     background-image: none; }
@@ -4214,6 +4215,9 @@ span.hero-franch__open {
         font-size: 1rem; } }
 
 .news-categories {
+  position: relative; }
+
+.news-categories__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4224,9 +4228,9 @@ span.hero-franch__open {
   margin-bottom: -15px;
   padding: 0 20px; }
   @media (min-width: 700px) {
-    .news-categories {
+    .news-categories__content {
       position: absolute;
-      top: 55vh;
+      top: -420px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -4234,8 +4238,8 @@ span.hero-franch__open {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   @media (min-width: 1200px) {
-    .news-categories {
-      top: 73vh;
+    .news-categories__content {
+      top: -260px;
       padding: 0 25px;
       width: 100%;
       -ms-flex-wrap: nowrap;
@@ -4244,7 +4248,7 @@ span.hero-franch__open {
       -ms-flex-pack: justify;
       justify-content: space-between; } }
   @media (min-width: 1500px) {
-    .news-categories {
+    .news-categories__content {
       padding: 0 calc((100% - 1400px) / 2); } }
 
 .news-category {
@@ -5718,7 +5722,6 @@ span.hero-franch__open {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
-  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -7666,8 +7669,6 @@ a.chosen-branch__value {
     -webkit-box-shadow: 0 0 30px -17px #131c23;
     box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
-    color: #896322; }
-  .form__input::-moz-placeholder {
     color: #896322; }
   .form__input:-ms-input-placeholder {
     color: #896322; }
