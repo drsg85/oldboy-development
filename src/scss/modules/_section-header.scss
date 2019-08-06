@@ -8,6 +8,9 @@
     width: 90%;
     max-width: 325px;
 
+    // visual
+    pointer-events: none;
+
     @include atTablet {
         // box model
         max-width: inherit;
