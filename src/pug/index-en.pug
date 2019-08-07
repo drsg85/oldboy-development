@@ -12,13 +12,13 @@ html(lang="en")
     body
         header.hero.hero--main
             .hero__top
-                .hero__logo
+                .hero__logo.hero__logo--en
                     img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
                     include modules/_menu.pug
 
-                .hero__city-select
+                .hero__city-select.hero__city-select--en
                     .language-select
                         .language-select__current EN
                         .language-select__popup.language-select__popup--hidden
@@ -46,7 +46,7 @@ html(lang="en")
             .hero__content
                 .hero__caption
                     .hero-caption
-                        h1.hero-caption__title <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span>
+                        h1.hero-caption__title <span class="hero-caption__big">oldboy <br>barbershop</span>
                         p.hero-caption__motto Намного больше, чем просто мужская&nbsp;парикмахерская
 
                     .hero__buttons

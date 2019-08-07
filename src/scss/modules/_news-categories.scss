@@ -1,4 +1,9 @@
 .news-categories {
+    // positioning
+    position: relative;
+}
+
+.news-categories__content {
     // box model
     display: flex;
     flex-direction: column;
@@ -8,7 +13,7 @@
     @include atTablet {
         // positioning
         position: absolute;
-        top: 55vh;
+        top: -420px;
 
         // box model
         flex-direction: row;
@@ -17,7 +22,7 @@
 
     @include atDesktopM {
         // positioning
-        top: 73vh;
+        top: -260px;
         
         // box model
         padding: 0 25px;
