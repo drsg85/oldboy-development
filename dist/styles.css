@@ -534,6 +534,12 @@ body::-webkit-scrollbar {
     .hero__logo {
       width: 360px; } }
 
+.hero__logo--en {
+  opacity: 0; }
+  @media (min-width: 360px) {
+    .hero__logo--en {
+      opacity: 1; } }
+
 .hero__logo img {
   width: 100%; }
 
@@ -576,8 +582,8 @@ body::-webkit-scrollbar {
   display: -ms-flexbox;
   display: flex;
   vertical-align: top;
-  padding-right: 70px;
-  padding-left: 85px; }
+  padding-left: 85px;
+  padding-right: 70px; }
   @media (min-width: 700px) {
     .hero__city-select {
       left: auto;
@@ -587,6 +593,23 @@ body::-webkit-scrollbar {
   @media (min-width: 1000px) {
     .hero__city-select {
       padding-right: 0; } }
+
+.hero__city-select--en {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  padding-left: 0;
+  padding-right: 70px; }
+  @media (min-width: 360px) {
+    .hero__city-select--en {
+      left: auto;
+      right: 0;
+      padding-left: 85px; } }
 
 .hero__content {
   position: relative;
@@ -5723,6 +5746,7 @@ span.hero-franch__open {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
+  -moz-text-align-last: left;
   text-align-last: left;
   text-transform: uppercase;
   border-bottom: 2px solid #d6a354;
@@ -7670,6 +7694,8 @@ a.chosen-branch__value {
     -webkit-box-shadow: 0 0 30px -17px #131c23;
     box-shadow: 0 0 30px -17px #131c23; }
   .form__input::-webkit-input-placeholder {
+    color: #896322; }
+  .form__input::-moz-placeholder {
     color: #896322; }
   .form__input:-ms-input-placeholder {
     color: #896322; }

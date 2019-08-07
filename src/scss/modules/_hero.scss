@@ -418,6 +418,16 @@
     }
 }
 
+.hero__logo--en {
+    // box model
+    opacity: 0;
+
+    @media (min-width: 360px) {
+        // box model
+        opacity: 1;
+    }
+}
+
 .hero__logo img {
     // box model
     width: 100%;
@@ -483,8 +493,8 @@
     // box model
     display: flex;
     vertical-align: top;
-    padding-right: 70px;
     padding-left: 85px;
+    padding-right: 70px;
 
     @include atTablet {
         // positioning
@@ -499,6 +509,29 @@
     @include atDesktopS {
         // box model
         padding-right: 0;
+    }
+}
+
+.hero__city-select--en {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+
+    // box model
+    display: flex;
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 70px;
+    
+    @media (min-width: 360px) {
+        // positioning
+        left: auto;
+        right: 0;
+        
+        // box model
+        padding-left: 85px;
     }
 }
 
