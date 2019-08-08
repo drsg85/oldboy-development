@@ -15,6 +15,11 @@
     }
 }
 
+.haircut__header > .section-header {
+    // box model
+    margin-bottom: 70px;
+}
+
 .haircut__images {
     // box model
     display: flex;
