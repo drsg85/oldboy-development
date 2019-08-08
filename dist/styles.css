@@ -2630,9 +2630,6 @@ span.hero-franch__open {
     .section-header {
       width: 500px; } }
 
-.section-header--haircut {
-  margin-bottom: 70px; }
-
 .section-header--flipped {
   margin-right: 0;
   margin-left: auto; }
@@ -5619,6 +5616,9 @@ span.hero-franch__open {
   @media (min-width: 1500px) {
     .haircut__header {
       margin-bottom: 40px; } }
+
+.haircut__header > .section-header {
+  margin-bottom: 70px; }
 
 .haircut__images {
   display: -webkit-box;
