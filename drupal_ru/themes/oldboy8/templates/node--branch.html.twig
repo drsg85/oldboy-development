@@ -151,13 +151,13 @@
 -                <div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
                     <ul class="social">
 						{% if content.field_link_vk.0 %}
-							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}">ВКонтакте</a></li>
+							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}" target="_blank">ВКонтакте</a></li>
 						{% endif %}
 						{% if content.field_link_facebook.0 %}
-							<li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}">Facebook</a></li>
+							<li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}" target="_blank">Facebook</a></li>
 						{% endif %}
 						{% if content.field_link_instagram.0 %}
-							<li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}">Instagram</a></li>
+							<li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}" target="_blank">Instagram</a></li>
 						{% endif %}
                     </ul>
                 </div>
@@ -169,7 +169,7 @@
                         <p class="app-promo__subtitle">для удобной онлайн–записи</p>
                     </header>
                     <div class="app-promo__image"><img src="/{{ directory }}/dist/img/mobile-app.png" alt="Oldboy Barbershop mobile application" title="Приложение Oldboy Barbershop" /></div>
-                    <div class="app-promo__buttons"><a class="app-button" href="{{ content.field_app_google.0 }}"><i class="icon--googleplay"></i> Google Play</a><a class="app-button app-button--thin" href="{{ content.field_app_apple.0 }}"><i class="icon--apple"></i> APP STORE</a></div>
+                    <div class="app-promo__buttons"><a class="app-button" href="{{ content.field_app_google.0 }}" target="_blank"><i class="icon--googleplay"></i> Google Play</a><a class="app-button app-button--thin" href="{{ content.field_app_apple.0 }}" target="_blank"><i class="icon--apple"></i> APP STORE</a></div>
                 </article>
             </aside>
         </div>
