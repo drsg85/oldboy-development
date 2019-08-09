@@ -153,13 +153,13 @@
 					{% endif %}
                     <ul class="social">
 						{% if content.field_link_vk.0 %}
-							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}">VK</a></li>
+							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}" target="_blank">VK</a></li>
 						{% endif %}
 						{% if content.field_link_facebook.0 %}
-							<li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}">Facebook</a></li>
+							<li class="social__item"><a class="social__icon icon--facebook" href="{{ content.field_link_facebook.0 }}" target="_blank">Facebook</a></li>
 						{% endif %}
 						{% if content.field_link_instagram.0 %}
-							<li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}">Instagram</a></li>
+							<li class="social__item"><a class="social__icon icon--instagram" href="{{ content.field_link_instagram.0 }}" target="_blank">Instagram</a></li>
 						{% endif %}
                     </ul>
                 </div>
@@ -171,7 +171,7 @@
                         <p class="app-promo__subtitle">{{ 'for online appointment'|trans }}</p>
                     </header>
                     <div class="app-promo__image"><img src="/{{ directory }}/dist/img/mobile-app.png" alt="{{ 'Oldboy Barbershop mobile application'|trans }}" title="{{ 'Mobile App Oldboy Barbershop'|trans }}" /></div>
-                    <div class="app-promo__buttons"><a class="app-button" href="{{ content.field_app_google.0 }}"><i class="icon--googleplay"></i> Google Play</a><a class="app-button app-button--thin" href="{{ content.field_app_apple.0 }}"><i class="icon--apple"></i> APP STORE</a></div>
+                    <div class="app-promo__buttons"><a class="app-button" href="{{ content.field_app_google.0 }}" target="_blank"><i class="icon--googleplay"></i> Google Play</a><a class="app-button app-button--thin" href="{{ content.field_app_apple.0 }}" target="_blank"><i class="icon--apple"></i> APP STORE</a></div>
                 </article>
             </aside>
         </div>
