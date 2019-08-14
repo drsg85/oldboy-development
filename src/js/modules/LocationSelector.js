@@ -30,6 +30,8 @@ class LocationSelector {
       
       this.toggleSelector();
     });
+
+    window.addEventListener('keydown', () => this.closeHandlerByEsc(event));
   }
   
   
@@ -54,6 +56,14 @@ class LocationSelector {
       document.documentElement.style.overflow = 'auto';
     } else {
       document.documentElement.style.overflow = 'hidden';
+    }
+  }
+
+
+  closeHandlerByEsc(evt) {
+    if(evt.keyCode == 27 && !this.citySelector.classList.contains('location-selector--hidden')) {
+      this.citySelectorClose.classList.add('location-selector__close--hidden');
+      this.citySelector.classList.add('location-selector--hidden');
     }
   }
 }
