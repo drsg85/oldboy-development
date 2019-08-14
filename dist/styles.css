@@ -573,6 +573,13 @@ body::-webkit-scrollbar {
     .hero__nav {
       left: 400px; } }
 
+.hero__nav-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 400px); }
+
 .hero__city-select {
   position: absolute;
   right: 0;

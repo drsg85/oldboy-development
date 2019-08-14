@@ -17,6 +17,7 @@ class MobileMenu {
   events () {
     this.menuButton.addEventListener('click', () => {
       this.toggleMenu();
+      this.removeHandlerClass();
     });
 
     for (let i = 0; i < this.menuLinks.length; i++) {
@@ -24,6 +25,9 @@ class MobileMenu {
         this.toggleMenu();
       });
     }
+
+    window.addEventListener('keydown', () => this.closeHandlerByEsc(event));
+    this.menuButton.addEventListener('click', () => this.closeHandlerByClickOnPage(event));
   }
 
 
@@ -33,15 +37,51 @@ class MobileMenu {
   reset () {
     this.menuButton.classList.remove('menu-button--close');
     this.menu.classList.add('hero__nav--hidden');
+    if(document.querySelector('.hero__nav-wrapper')) {
+      const targetEl = document.querySelector('.hero__nav-wrapper');
+      targetEl.remove();
+    }
   }
 
+closeHandlerByEsc(evt) {
+  if(evt.keyCode == 27 && !this.menu.classList.contains('hero__nav--hidden')) {
+    this.menuButton.classList.remove('menu-button--close');
+    this.menu.classList.add('hero__nav--hidden');
+    this.removeHandlerClass();
+  }
+}
 
+closeMobileMenuByClick() {
+  this.menuButton.classList.remove('menu-button--close');
+  this.menu.classList.add('hero__nav--hidden');
+  this.removeHandlerClass();
+}
+
+closeHandlerByClickOnPage(evt) {
+  console.log(evt.target);
+  if(evt.target.classList.contains('menu-button--close')) {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('hero__nav-wrapper');
+    document.body.appendChild(wrapper);
+    wrapper.addEventListener('click', () => this.closeMobileMenuByClick());
+  }
+}
   /**
    * Toggle menu state
    */
   toggleMenu () {
     this.menuButton.classList.toggle('menu-button--close');
     this.menu.classList.toggle('hero__nav--hidden');
+    if(!this.menuButton.classList.contains('menu-button--close')) {
+      this.removeHandlerClass();
+    }
+  }
+
+  removeHandlerClass() {
+    if(document.querySelector('.hero__nav-wrapper')) {
+      const targetEl = document.querySelector('.hero__nav-wrapper');
+      targetEl.remove();
+    }
   }
 }
 

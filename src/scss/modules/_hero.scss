@@ -481,6 +481,17 @@
     }
 }
 
+.hero__nav-wrapper {
+    // positioning
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    // box model
+    height: 100%;
+    width: calc(100% - 400px);
+}
+
 .hero__city-select {
     // TODO: think about another way of positioning
 
