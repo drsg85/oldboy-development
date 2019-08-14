@@ -64,6 +64,7 @@ class LocationSelector {
     if(evt.keyCode == 27 && !this.citySelector.classList.contains('location-selector--hidden')) {
       this.citySelectorClose.classList.add('location-selector__close--hidden');
       this.citySelector.classList.add('location-selector--hidden');
+      document.documentElement.style.overflow = 'auto';
     }
   }
 }

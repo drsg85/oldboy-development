@@ -58,7 +58,6 @@ closeMobileMenuByClick() {
 }
 
 closeHandlerByClickOnPage(evt) {
-  console.log(evt.target);
   if(evt.target.classList.contains('menu-button--close')) {
     const wrapper = document.createElement('div');
     wrapper.classList.add('hero__nav-wrapper');

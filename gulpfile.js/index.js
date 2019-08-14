@@ -5,6 +5,7 @@ const pug = require('gulp-pug');
 const htmlBeautify = require('gulp-html-beautify');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const csso = require('gulp-csso');
 const sassImporter = require('sass-module-importer');
 const autoprefixer = require('gulp-autoprefixer');
 const webpack = require('webpack-stream');
@@ -43,8 +44,8 @@ const webpackConfig = {
     filename: '[name].js'
   },
 
-  // mode: 'production'
-  mode: 'development'
+  mode: 'production'
+  //mode: 'development'
 };
 
 
@@ -69,6 +70,7 @@ let styles = () => (
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(csso({comments: 'exclamation'}))
     .pipe(gulp.dest(dirs.dist))
     .pipe(browserSync.reload({stream: true}))
 );
