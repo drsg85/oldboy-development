@@ -387,6 +387,10 @@
 }
 
 .hero__logo {
+    // positioning
+    position: relative;
+    z-index: 999;
+
     // box model
     display: inline-block;
     vertical-align: top;
@@ -398,6 +402,9 @@
     }
 
     @include atTablet {
+        // positioning
+        position: unset;
+        
         // box model
         width: 190px;
     }
@@ -479,6 +486,17 @@
         // positioning
         left: 400px;
     }
+}
+
+.hero__nav-wrapper {
+    // positioning
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    // box model
+    height: 100%;
+    width: calc(100% - 400px);
 }
 
 .hero__city-select {
