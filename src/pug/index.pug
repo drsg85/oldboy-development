@@ -37,17 +37,20 @@ html(lang="en")
                         a.button.button--ghost(href="#about") О барбершопе
 
                 .hero__deco
-                    img(src="./img/bgs/oleg.png", alt="Стрижка в Oldboy barbershop")
+                    picture
+                        source(srcset="./img/bgs/oleg.png", type="image/png" media="(min-width: 368px)")
+                        source(srcset="./img/bgs/oleg.webp", type="image/webp" media="(min-width: 1000px)")
+                        img(src="./img/bgs/oleg.webp", alt="Стрижка в Oldboy barbershop")
 
                 aside.hero__aside
                     .hero-franch
                         .hero-franch__family
                         p.hero-franch__lettering
-                            span.hero-franch__oldboy Oldboy&nbsp;Barbershop 
-                            span.hero-franch__network Крупнейшая&nbsp;сеть 
-                            span.hero-franch__barbershops БАРБЕРШОПОВ 
+                            span.hero-franch__oldboy Oldboy&nbsp;Barbershop
+                            span.hero-franch__network Крупнейшая&nbsp;сеть
+                            span.hero-franch__barbershops БАРБЕРШОПОВ
                             span.hero-franch__number 210 
-                            span.hero-franch__open открытых&nbsp;филиалов 
+                            span.hero-franch__open открытых&nbsp;филиалов
                         .hero-franch__cta
                             a(href="#").button.button--ghost узнать подробности
                             .hero-franch__desc о том, как открыть свой барбершоп
