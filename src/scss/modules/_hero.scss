@@ -387,6 +387,10 @@
 }
 
 .hero__logo {
+    // positioning
+    position: relative;
+    z-index: 999;
+
     // box model
     display: inline-block;
     vertical-align: top;
@@ -398,6 +402,9 @@
     }
 
     @include atTablet {
+        // positioning
+        position: unset;
+        
         // box model
         width: 190px;
     }
