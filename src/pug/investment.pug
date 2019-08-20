@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--investment
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        p.city-select__city Калининград
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй&nbsp;в <br>Oldboy</span>
+                        p.hero-caption__motto Инвестиции&nbsp;в&nbsp;федеральную&nbsp;сеть барбершопов&nbsp;в Москве
+                
+                .hero__investment
+                    .investment-text
+                        p.investment-text__call.investment-text__call--gold Получайте пассивный доход
+                        p.investment-text__range От 40 000 до 200 000 Р
+                        p.investment-text__call Инвестируя от 704 000 Р
+
+        main
+            section.profit
+                .profit__header
+                    header.section-header
+                        h2.section-header__title Пассивный <br>доход
+                        p.section-header__subtitle.section-header__subtitle--golden-t Зарабатывай&nbsp;с&nbsp;Oldboy
+
+            section.targeting
+                .targeting__header
+                    header.section-header
+                        h2.section-header__title Для&nbsp;кого&nbsp;это <br>предложение
+                        p.section-header__subtitle.section-header__subtitle--light Наши&nbsp;партнёры
+                        .section-header__image
+                            img(src="./img/investment/chair.jpg", alt="Барбершоп Oldboy")
+
+                .targeting__content
+                    h3.targeting__title Это предложение подойдёт:
+
+                    .targeting__items
+                        .target-item
+                            .target-item__image: img(src="", alt="")
+                            p.target-item__title Инвесторам
+                            p.target-item__text Действующим или начинающим
+
+                        .target-item
+                            .target-item__image: img(src="", alt="")
+                            p.target-item__title Всем кто хочет получать пассивных доход
+                            p.target-item__text Со своего капитала
+
+                        .target-item
+                            .target-item__image: img(src="", alt="")
+                            p.target-item__title Бизнесменам
+                            p.target-item__text Любого уровня
+
+                        .target-item
+                            .target-item__image: img(src="", alt="")
+                            p.target-item__title Тем кто думает открыть свой бизнес по франшизе
+                            p.target-item__text Но не готов заниматься операционной работой
+
+                    p.targeting__info Для нас не важно проживаете вы в России или зарубежом, среди наших инвесторов и партнеров есть уже не малое количество граждан СНГ, Евросоюза и других госдударств.
+
+
+
+        include modules/_choose-city.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")

@@ -130,6 +130,13 @@
         }
     }
 
+    &--investment {
+        // visual
+        background-image: url('./img/investment/investment.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
     &--royal {
         // visual
         background-image: url('./img/royal/royal-m.jpg');
@@ -1027,4 +1034,11 @@
         color: $golden;
         font-style: normal;
     }
+}
+
+.hero__investment {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
