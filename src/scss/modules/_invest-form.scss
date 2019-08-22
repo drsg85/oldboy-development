@@ -1,0 +1,20 @@
+.invest-form-container {
+    // positioning
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    // box model
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-height: 700px;
+    width: 675px;
+
+    // visual
+    background-image: url('./img/bgs/chair.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

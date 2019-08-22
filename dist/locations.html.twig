@@ -1,0 +1,17 @@
+	{% set site_url = url('<front>') %}
+	{% set by_version = false %}
+	{% if '.by' in site_url|render|render %}
+		{% set by_version = true %}
+	{% elseif 'by.' in site_url|render|render %}
+		{% set by_version = true %}
+	{% endif %}
+
+
+	{% if by_version %}
+		{% include '@oldboy8/includes/locations.by.html.twig' %}
+	{% else %}
+		<section class="location-selector location-selector--hidden">
+			{{ drupal_view('choose_city', 'block_2') }}
+		</section>
+		{#% include '@oldboy8/includes/locations.com.html.twig' %#}
+	{% endif %}
