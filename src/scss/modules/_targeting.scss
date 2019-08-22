@@ -1,0 +1,66 @@
+.targeting {
+    // positioning
+    position: relative;
+}
+
+.targeting__header {
+    // positioning
+    position: absolute;
+
+    // box model
+    padding: 20px 0;
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        flex-basis: 380px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.targeting__content {
+    // box model
+    padding: 0 20px;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+        top: 1rem;
+
+        // box model
+        // flex-basis: calc(100% - 391px);
+        padding: 20px 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 430px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 580px;
+    }
+}
+
+.targeting__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2rem;
+}
+
+.targeting__items {
+    // box model
+    display: flex;
+    justify-content: space-between;
+}
