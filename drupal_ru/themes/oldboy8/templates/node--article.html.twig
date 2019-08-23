@@ -71,62 +71,73 @@
  */
 #}
 
-	{% if url == '/blog' %}
-		{% include '@oldboy8/node--blog.html.twig' %}
-	{% else %}
-
-
-	{% set academy = drupal_entity('block_content', 1) %}
+	{# set academy = drupal_entity('block_content', 1) #}
+	{# set academy = content.field_banner #}
 	{% set brabercount = drupal_entity('block_content', 2) %}
 	{% set braberplaces = drupal_entity('block_content', 3) %}
-
-	{% set hideFooter = "Off" %}
-	{% if content.field_hide_footer.0 %}
-		{% set hideFooter = content.field_hide_footer.0['#markup'] %}
-	{% endif %}
 
 	{% set bgbig = content.field_bg_big|render|striptags|trim %}
 	{% set bgsmall = content.field_bg_small.0|render|striptags|trim %}
 
 	<style>
-	{% if bgsmall %} .hero { background-image: url("{{ bgsmall }}") !important; } {% endif %}
-	{% if bgbig %} @media (min-width: 1000px) { .hero { background-image: url("{{ bgbig }}") !important; } } {% endif %}
+	{% if bgsmall %} .hero--article { background-image: url("{{ bgsmall }}"); } {% endif %}
+	{% if bgbig %} @media (min-width: 1000px) { .hero--article { background-image: url("{{ bgbig }}"); } } {% endif %}
 	</style>
 
-    <header class="hero {% if node.field_hero_class.value %}
-						{{ node.field_hero_class.value|raw }}
-					{% else %}
-						hero--policy
-			{% endif %}">
+    <header class="hero hero--article">
         <div class="hero__top">
             <div class="hero__logo"><a href="/"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
-            <div class="hero__nav">
+            <div class="hero__nav hero__nav--hidden">
                 <nav class="main-nav">
 					{% include '@oldboy8/includes/topmenu.html.twig' %}
                 </nav>
             </div>
 			{% include '@oldboy8/includes/topcity.html.twig' %}
         </div>
-		{% if content.field_hero_content %}
-			<div class="hero__content">
-					{{ content.field_hero_content }}
-			</div>
-		{% endif %}
+        <div class="hero__content">
+            <article class="news-header">
+                <header class="news-header__header">
+					<p class="news-header__category">{{ content.field_tags }}</p>
+					<h1 class="news-header__title">{{ node.title.0.value }}</h1>
+					<p class="news-header__details">{{ content.field_description }}</p>
+                </header>
+                <footer class="news-header__footer">
+					<p class="news-header__date"><span>Дата:</span><br>{{ content.field_date_publish }} </p>
+					{#
+                    <p class="news-header__location"><span>Регионы:</span><br>Испания</p>
+					#}
+                    <ul class="social">
+                        <p class="social__text">Поделиться:</p>
+                        <li class="social__item"><a class="social__icon icon--vk" href="#">ВКонтакте</a></li>
+                        <li class="social__item"><a class="social__icon icon--facebook" href="#">Facebook</a></li>
+                        <li class="social__item"><a class="social__icon icon--instagram" href="#">Instagram</a></li>
+                    </ul>
+                </footer>
+            </article>
+        </div>
     </header>
     <main>
-		{{ content|without('field_hero_content')|without('field_hide_footer')|without('field_cityname') }}
-	{% if hideFooter == "Off" %}
-		{% include '@oldboy8/includes/totop.html.twig' %}
-	{% endif %}
+        <article class="article">
+			{{ content|without('field_tags')|without('field_bg_big')|without('field_bg_small')|without('field_bg_teaser')|without('field_description')|without('field_date_publish')|without('field_post_type') }}
+        </article>
+
+        <section class="news-feed">
+            <div class="news-feed__header">
+                <header class="section-header">
+                    <h2 class="section-header__title">Наши<br>новости</h2>
+                    <p class="section-header__subtitle">О&nbsp;самом&nbsp;главном</p>
+                </header>
+            </div>
+
+
+			{{ drupal_view('news', 'block_2') }}
+
+		</section>
+
+        {% include '@oldboy8/includes/totop.html.twig' %}
     </main>
 	{% include '@oldboy8/includes/locations.html.twig' %}
-	{% if hideFooter == "Off" %}
     <footer class="footer">
 		{% include '@oldboy8/includes/footer.html.twig' %}
     </footer>
-	{% endif %}
-	<script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
-
-
-	{% endif %}
-
+    <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
