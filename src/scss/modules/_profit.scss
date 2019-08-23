@@ -1,0 +1,61 @@
+.profit {
+    // box model
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.profit__header {
+    
+}
+
+.profit__content {
+    // box model
+    padding-left: 80px;
+}
+
+.profit__title {
+    // box model
+    margin: 0;
+    max-width: 650px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.profit__subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 50px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    text-transform: uppercase;
+}
+
+.profit__value {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    color: $golden;
+    font-size: 1.2rem;
+    font-family: $titleFont;
+    text-transform: uppercase;
+}
+
+.profit__info {
+    // box model
+    max-width: 450px;
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+}
