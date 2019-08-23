@@ -615,6 +615,17 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    &--investment {
+        // box model
+        padding-bottom: 20px;
+        padding-top: 20px;
+        
+        .hero__caption {
+            // box model
+            padding: 0;
+        }
+    }
 }
 
 .hero__caption {
@@ -1076,5 +1087,5 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }

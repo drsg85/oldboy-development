@@ -1,6 +1,9 @@
 .targeting {
     // positioning
     position: relative;
+
+    // box model
+    padding-bottom: 150px;
 }
 
 .targeting__header {
@@ -27,15 +30,16 @@
 .targeting__content {
     // box model
     padding: 0 20px;
-
+    
     @include atTablet {
         // positioning
         position: relative;
         top: 1rem;
-
+        
         // box model
         // flex-basis: calc(100% - 391px);
         padding: 20px 40px;
+        padding-top: 80px;
     }
 
     @include atDesktopS {
@@ -52,6 +56,7 @@
 .targeting__title {
     // box model
     margin: 0;
+    margin-bottom: 60px;
 
     // typography
     color: $golden;
@@ -63,4 +68,16 @@
     // box model
     display: flex;
     justify-content: space-between;
+}
+
+.targeting__info {
+    // box model
+    max-width: 600px;
+    margin: 0 auto;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    font-weight: 600;
+    text-align: center;
 }
