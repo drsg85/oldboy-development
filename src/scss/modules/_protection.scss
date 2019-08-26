@@ -1,0 +1,163 @@
+.protection {
+
+}
+
+.protection__header {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+
+    // visual
+    background-image: url('./img/investment/b-sh.jpg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+}
+
+.protection__header::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    // box model
+    width: 100%;
+    height: 100%;
+
+    // visual
+    background-color: rgba($dark, 0.8);
+}
+
+.protection__caption {
+    // positioning
+    position: relative;
+    z-index: 9;
+
+    // box model
+    margin-left: 80px;
+    padding-bottom: 120px;
+    padding-top: 75px;
+}
+
+.protection__title {
+    // box model
+    max-width: 550px;
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.protection__subtitle {
+    // box model
+    max-width: 410px;
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.protection__content {
+    // box model
+    display: flex;
+    padding-left: 180px;
+    padding-top: 100px;
+}
+
+.protection__headline {
+    // box model
+    margin: 0;
+    height: 100%;
+    flex-basis: 300px;
+    margin-right: 100px;
+    padding: 10px 40px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align-last: left;
+    text-transform: uppercase;
+
+    // visual
+    border-bottom: 2px solid $golden;
+    border-top: 2px solid $golden;
+}
+
+.protection__wrapper {
+    // box model
+    max-width: 600px;
+}
+
+.protection__heading {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+
+    &--gold {
+        // box model
+        margin-bottom: 15px;
+
+        // typography
+        color: $golden;
+    }
+}
+
+.protection__text {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    line-height: 1.5;
+}
+
+.protection__secure {
+
+}
+
+.protection__deco {
+
+}
+
+.protection__image {
+
+}
+
+.protection__image img {
+
+}
+
+.protection__motto {
+
+}
+
+.protection__items {
+    // box model
+    display: flex;
+}

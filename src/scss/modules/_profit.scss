@@ -1,7 +1,7 @@
 .profit {
     // box model
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .profit__header {
@@ -10,7 +10,7 @@
 
 .profit__content {
     // box model
-    padding-left: 80px;
+    margin-left: 80px;
 }
 
 .profit__title {
@@ -34,6 +34,8 @@
     // typography
     color: $golden;
     font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
@@ -44,7 +46,7 @@
 
     // typography
     color: $golden;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: $titleFont;
     text-transform: uppercase;
 }
@@ -58,4 +60,5 @@
     // typography
     color: $dark;
     font-family: $mainFont;
+    line-height: 1.5;
 }
