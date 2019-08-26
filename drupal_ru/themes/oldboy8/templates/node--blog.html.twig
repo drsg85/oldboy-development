@@ -1,5 +1,8 @@
 {#
 /**
+ *
+ *  	FRONT PAGE TEMPLATE
+ *
  * @file
  * Theme override to display a node.
  *
@@ -71,14 +74,9 @@
  */
 #}
 
-	{% if url == '/blog' %}
-		{% include '@oldboy8/node--blog.html.twig' %}
-	{% else %}
-
-
-	{% set academy = drupal_entity('block_content', 1) %}
-	{% set brabercount = drupal_entity('block_content', 2) %}
-	{% set braberplaces = drupal_entity('block_content', 3) %}
+    {% set academy = drupal_entity('block_content', 1) %}
+    {% set brabercount = drupal_entity('block_content', 2) %}
+    {% set braberplaces = drupal_entity('block_content', 3) %}
 
 	{% set hideFooter = "Off" %}
 	{% if content.field_hide_footer.0 %}
@@ -99,34 +97,65 @@
 						hero--policy
 			{% endif %}">
         <div class="hero__top">
-            <div class="hero__logo"><a href="/"><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
-            <div class="hero__nav">
+			<div class="hero__logo"><a href='/'><img src="/{{ directory }}/dist/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
+            <div class="hero__nav hero__nav--hidden">
                 <nav class="main-nav">
-					{% include '@oldboy8/includes/topmenu.html.twig' %}
+                    {% include '@oldboy8/includes/topmenu.html.twig' %}
                 </nav>
             </div>
-			{% include '@oldboy8/includes/topcity.html.twig' %}
+            {% include '@oldboy8/includes/topcity.html.twig' %}
         </div>
 		{% if content.field_hero_content %}
-			<div class="hero__content">
-					{{ content.field_hero_content }}
-			</div>
+        <div class="hero__content">
+            {{ content.field_hero_content }}
+        </div>
 		{% endif %}
     </header>
     <main>
+	<section class="news-categories">
+		{{ drupal_view('last_branches', 'block_1') }}
+	</section>
+
+	<section class="news-feed">
+		<div class="news-feed__header">
+			<header class="section-header">
+				<h2 class="section-header__title">Наши <br>новости</h2>
+				<p class="section-header__subtitle">О&nbsp;самом&nbsp;главном</p>
+			</header>
+		</div>
+
+		{{ drupal_view('news', 'block_1') }}
+
+	</section>
+
+	<section class="news-feed">
+		<div class="news-feed__header">
+			<header class="section-header">
+				<h2 class="section-header__title">Наши <br>статьи</h2>
+				<p class="section-header__subtitle">свежие&nbsp;и&nbsp;регулярные</p>
+			</header>
+		</div>
+
+		{{ drupal_view('articles', 'block_1') }}
+
+	</section>
+
+	{#
 		{{ content|without('field_hero_content')|without('field_hide_footer')|without('field_cityname') }}
+		#}
+
 	{% if hideFooter == "Off" %}
 		{% include '@oldboy8/includes/totop.html.twig' %}
 	{% endif %}
     </main>
-	{% include '@oldboy8/includes/locations.html.twig' %}
+    {% include '@oldboy8/includes/locations.html.twig' %}
 	{% if hideFooter == "Off" %}
     <footer class="footer">
-		{% include '@oldboy8/includes/footer.html.twig' %}
+        {% include '@oldboy8/includes/footer.html.twig' %}
     </footer>
 	{% endif %}
 	<script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
 
 
-	{% endif %}
 
+	<script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>

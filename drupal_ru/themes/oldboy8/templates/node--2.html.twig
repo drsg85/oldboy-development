@@ -150,7 +150,7 @@
             </div>
         </section>
         <section class="about" id="about">
-            {{ content|without('field_hero_content') }}
+            {{ content|without('field_hero_content')|without('field_hide_footer') }}
         </section>
 
         {{ academy }}
@@ -182,4 +182,4 @@
     </footer>
 
     <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
-    <script src="/{{ directory }}/dist/main.js"></script>
+    <script src="/{{ directory }}/dist/main.js?v={{ js_ver }}"></script>
