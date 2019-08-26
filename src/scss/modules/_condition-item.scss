@@ -1,9 +1,9 @@
-.invest-item {
+.condition-item {
     // typography
     text-align: center;
 }
 
-.invest-item__title {
+.condition-item__title {
     // box model
     margin: 0;
 
@@ -13,7 +13,7 @@
     text-transform: uppercase;
 }
 
-.invest-item__subtitle {
+.condition-item__subtitle {
     // box model
     margin: 0;
     margin-bottom: 25px;
@@ -23,7 +23,7 @@
     font-family: $mainFont;
 }
 
-.invest-item__desc {
+.condition-item__desc {
     // box model
     margin: 0;
 
@@ -34,7 +34,7 @@
     line-height: 0.85;
 }
 
-.invest-item__desc span {
+.condition-item__desc span {
     // typography
     font-size: 1.5rem;
 }

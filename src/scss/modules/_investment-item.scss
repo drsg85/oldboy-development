@@ -1,4 +1,4 @@
-.target-item {
+.investment-item {
     // box model
     display: flex;
     max-width: 270px;
@@ -7,20 +7,20 @@
     margin-bottom: 50px;
 }
 
-.target-item__image {
+.investment-item__image {
     // box model
     height: 110px;
     width: 110px;
     margin-bottom: 25px;
 }
 
-.target-item__image img {
+.investment-item__image img {
     // box model
     height: 100%;
     width: 100%;
 }
 
-.target-item__title {
+.investment-item__title {
     // box model
     margin: 0;
     
@@ -31,7 +31,7 @@
     text-align: center;
 }
 
-.target-item__text {
+.investment-item__text {
     // box model
     margin: 0;
     max-width: 190px;
