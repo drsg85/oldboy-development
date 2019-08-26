@@ -9,10 +9,11 @@
             <div class="invest__input-container"><input class="ivest__input" type="tel" name="phone" placeholder="Телефон" /></div>
             <div class="invest__input-container"><input class="ivest__input" type="email" name="email" placeholder="E-mail" /></div>
             <div class="invest__input-container"><input class="ivest__input" type="text" name="income" placeholder="Желаемый уровень инвестиций" /></div>
-            <div class="invest__input-container">
-                <p class="ivest__input-policy">Я соглашаюсь с <a class="invest__input-policy-link" href="#">политикой конфиденциальности</a></p>
-            </div>
-            <div class="invest__input-container"><input id="invest__input-submit" type="submit" value="Отправить заявку" /></div>
+            <div class="invest__input-container"><input class="invest__input-checkbox" id="invest-input-checkbox" type="checkbox" name="policy" required="required" checked="checked" /><label class="ivest__input-policy" for="invest-input-checkbox">Я соглашаюсь с <a class="invest__input-policy-link" href="/privacy.html">политикой конфиденциальности</a></label></div>
+            <div class="invest__input-container"><input class="button button--ghost" id="invest__input-submit" type="submit" value="Отправить заявку" /></div>
+        </div>
+        <div class="invest__close-icon">
+            <div class="close-button"></div>
         </div>
     </form>
 </article>

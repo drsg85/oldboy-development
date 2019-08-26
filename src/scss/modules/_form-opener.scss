@@ -1,0 +1,72 @@
+.form-opener {
+    // positioning
+    position: fixed;
+    top: 70vh;
+    right: 100px;
+    z-index: 1000;
+
+    // box model
+    width: 135px;
+    height: 135px;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 22px;
+    color: $light;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $dark;
+    background-image: url('./img/logo-gold.svg');
+    background-size: 85px 30px;
+    background-repeat: no-repeat;
+    background-position: center 85px;
+    border: 2px solid $golden;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    animation: pulse 2s infinite;
+
+    &--active {
+        // visual
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover {
+        animation: none;
+    }
+}
+
+.form-opener__text {
+    // box model
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba($golden, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 30px rgba($golden, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba($golden, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba($golden, 0.4);
+      box-shadow: 0 0 0 0 rgba($golden, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 30px rgba($golden, 0);
+        box-shadow: 0 0 0 30px rgba($golden, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba($golden, 0);
+        box-shadow: 0 0 0 0 rgba($golden, 0);
+    }
+  }

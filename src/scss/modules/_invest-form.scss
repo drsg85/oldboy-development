@@ -3,19 +3,243 @@
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 999;
+    transform: translateX(100%);
 
     // box model
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    max-height: 700px;
+    max-height: 1000px;
     width: 675px;
 
     // visual
+    background-color: $dark;
     background-image: url('./img/investment/chair.jpg');
-    background-color: rgba(0, 0, 0, 0.5);
-    background-position: center center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url('./img/investment/chair.jpg') no-repeat center center;
     background-size: cover;
-    background-repeat: no-repeat;
+    transition: transform 0.25s ease;
+
+    &--active {
+        // positioning
+        transform: translateX(0);
+    }
+}
+
+.invest {
+    // positioning
+    position: relative;
+}
+
+.invest__close-icon {
+    // positioning
+    position: absolute;
+    top: -45px;
+    right: -45px;
+}
+
+.invest__header {
+    // box model
+    width: 100%;
+    max-width: 330px;
+    margin-bottom: 60px;
+}
+
+.invest__title {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 36px;
+    line-height: 1;
+    color: $light;
+}
+
+.invest__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 24px;
+    line-height: 30px;
+    color: $golden;
+}
+
+.invest__content {}
+
+.invest__input-container {
+    // box model
+    margin-bottom: 20px;
+
+    &:last-child {
+        // box model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+
+.ivest__input {
+    // box model
+    width: 100%;
+    padding: 15px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $light;
+    border: none;
+    border-radius: 3px;
+}
+
+.ivest__input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: $golden;
+    font-weight: 400;
+}
+
+.ivest__input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $golden;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.ivest__input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $golden;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.ivest__input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $golden;
+    font-weight: 400;
+}
+
+.ivest__input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $golden;
+    font-weight: 400;
+}
+
+.ivest__input::placeholder {
+    /* Most modern browsers support this now. */
+    color: $golden;
+    font-weight: 400;
+}
+
+.ivest__input-policy {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 10px;
+    line-height: 48px;
+    color: $light;
+    text-transform: uppercase;
+}
+
+.invest__input-policy-link {
+    // typography
+    color: $golden;
+    text-decoration: none;
+}
+
+.invest__input-checkbox {
+    // positioning
+    position: absolute;
+    left: -9999px;
+
+    &:not(:checked) + .ivest__input-policy,
+    &:checked + .ivest__input-policy {
+        // positioning
+        position: relative;
+
+        // box model
+        padding-left: 20px;
+
+        // visual
+        cursor: pointer;
+    }
+
+    &:not(:checked) + .ivest__input-policy:before,
+    &:checked + .ivest__input-policy:before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        // box model
+        width: 12px;
+        height: 12px;
+
+        // visual
+        background-color: $golden;
+    }
+
+    &:not(:checked) + .ivest__input-policy:after,
+    &:checked + .ivest__input-policy:after {
+        content: url(img/icons/check.svg);
+
+        // positioning
+        position: absolute;
+        top: -17px;
+        left: 2px;
+        
+        // visual
+        border-radius: 3px;
+        transition: opacity 0.25s;
+    }
+
+    &:not(:checked) + .ivest__input-policy:after {
+        // positioning
+        transform: scale(0);
+
+        // visual
+        opacity: 0;
+    }
+
+    &:checked + .ivest__input-policy:after {
+        // positioning
+        transform: scale(1);
+
+        // visual
+        opacity: 1;
+    }
+
+    &:disabled:not(:checked) + .ivest__input-policy:before,
+    &::disabled::checked + .ivest__input-policy::before {
+        // visual
+        background-color: #cccccc;
+        border-color: #cccccc;
+    }
+
+    &::disabled::checked + .ivest__input-policy:after {
+        // typography
+        color: #999999;
+    }
+
+    &::disabled + .ivest__input-policy {
+        //color
+        color: #aaaaaa;
+    }
+}
+
+#invest__input-submit {
+    // visual
+    cursor: pointer;
 }

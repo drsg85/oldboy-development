@@ -14,7 +14,11 @@ article.invest-form-container
             .invest__input-container
                 input.ivest__input(type="text" name="income" placeholder="Желаемый уровень инвестиций")
             .invest__input-container
-                p.ivest__input-policy Я соглашаюсь с #[a.invest__input-policy-link(href="#") политикой конфиденциальности]
+                input.invest__input-checkbox#invest-input-checkbox(type="checkbox" name="policy" required checked)
+                label(for="invest-input-checkbox").ivest__input-policy Я соглашаюсь с #[a.invest__input-policy-link(href="/privacy.html") политикой конфиденциальности]
             
             .invest__input-container
-                input#invest__input-submit(type="submit" value="Отправить заявку")
+                input.button.button--ghost#invest__input-submit(type="submit" value="Отправить заявку")
+
+        .invest__close-icon
+            .close-button
