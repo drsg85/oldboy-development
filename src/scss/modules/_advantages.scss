@@ -1,5 +1,6 @@
 .advantages {
-
+    // box model
+    margin-bottom: 100px;
 }
 
 .advantages__header {
@@ -23,6 +24,15 @@
     font-size: 2rem;
     line-height: 1.5;
     text-transform: uppercase;
+
+    &--bottom {
+        // box model
+        max-width: 750px;
+        margin: 0 auto;
+
+        // typography
+        text-align: center;
+    }
 }
 
 .advantages__subtitle {
@@ -109,9 +119,13 @@
     // box model
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
     padding: 0 150px;
 }
 
 .advantages__cta {
-
+    // typography
+    text-align: center;
 }
