@@ -137,12 +137,25 @@
     line-height: 1.5;
 }
 
-.protection__secure {
+.protection__list {
+    // typography
+    list-style-type: none;
+}
 
+.protection__secure {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+
+    // visual
+    background-color: $bianca;
 }
 
 .protection__deco {
-
+    // positioning
+    position: absolute;
 }
 
 .protection__image {
@@ -150,14 +163,21 @@
 }
 
 .protection__image img {
-
+    // box model
+    height: 100%;
 }
 
 .protection__motto {
-
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .protection__items {
     // box model
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
