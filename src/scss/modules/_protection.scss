@@ -1,5 +1,6 @@
 .protection {
-
+    // box model
+    margin-bottom: 100px;
 }
 
 .protection__header {
@@ -40,8 +41,8 @@
     z-index: 9;
 
     // box model
-    margin-left: 80px;
     padding-bottom: 120px;
+    margin-left: 80px;
     padding-top: 75px;
 }
 
@@ -129,6 +130,7 @@
 .protection__text {
     // box model
     margin: 0;
+    padding: 0;
     margin-bottom: 30px;
 
     // typography
@@ -148,6 +150,10 @@
 
     // box model
     display: flex;
+    padding-bottom: 125px;
+    padding-left: 180px;
+    padding-right: 80px;
+    padding-top: 75px;
 
     // visual
     background-color: $bianca;
@@ -156,10 +162,12 @@
 .protection__deco {
     // positioning
     position: absolute;
+    bottom: 50px;
 }
 
 .protection__image {
-
+    // box model
+    height: 500px;
 }
 
 .protection__image img {
@@ -168,6 +176,11 @@
 }
 
 .protection__motto {
+    // box model
+    max-width: 320px;
+    margin: 0;
+
+
     // typography
     color: $golden;
     font-family: $titleFont;
@@ -179,5 +192,6 @@
     // box model
     display: flex;
     width: 100%;
+    padding-left: 400px;
     justify-content: space-between;
 }
