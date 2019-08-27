@@ -1,6 +1,9 @@
 .targeting {
     // positioning
     position: relative;
+
+    // box model
+    margin-bottom: 100px;
 }
 
 .targeting__header {
@@ -27,15 +30,17 @@
 .targeting__content {
     // box model
     padding: 0 20px;
-
+    
     @include atTablet {
         // positioning
         position: relative;
         top: 1rem;
-
+        
         // box model
         // flex-basis: calc(100% - 391px);
-        padding: 20px 40px;
+        padding: 20px 0;
+        padding-right: 50px;
+        padding-top: 100px;
     }
 
     @include atDesktopS {
@@ -46,12 +51,14 @@
     @include atDesktopL {
         // box model
         padding-left: 580px;
+        padding-right: 80px;
     }
 }
 
 .targeting__title {
     // box model
     margin: 0;
+    margin-bottom: 60px;
 
     // typography
     color: $golden;
@@ -63,4 +70,17 @@
     // box model
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.targeting__info {
+    // box model
+    max-width: 600px;
+    margin: 0 auto;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    font-weight: 600;
+    text-align: center;
 }

@@ -1,0 +1,40 @@
+.condition-item {
+    // typography
+    text-align: center;
+}
+
+.condition-item__title {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.condition-item__subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 25px;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+}
+
+.condition-item__desc {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2rem;
+    line-height: 0.85;
+}
+
+.condition-item__desc span {
+    // typography
+    font-size: 1.5rem;
+}

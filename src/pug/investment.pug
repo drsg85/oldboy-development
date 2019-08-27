@@ -27,15 +27,15 @@ html(lang="en")
                 .menu-button.menu-button--close
                     .menu-button__middle
 
-            .hero__content
+            .hero__content.hero__content--investment
                 .hero__caption
                     .hero-caption
                         h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй&nbsp;в <br>Oldboy</span>
                         p.hero-caption__motto Инвестиции&nbsp;в&nbsp;федеральную&nbsp;сеть барбершопов&nbsp;в Москве
 
                     .hero__buttons
-                        a.button.ms_booking(href="#") Запись онлайн<br>
-                        a.button.button--ghost(href="#about") О барбершопе
+                        a.button.ms_booking(href="#") Оставить заявку<br>
+                        a.button.button--ghost(href="#") Рассчитать доход
                 
                 .hero__investment
                     .investment-text
@@ -44,45 +44,170 @@ html(lang="en")
                         p.investment-text__call Инвестируя от 704 000 Р
 
         main
+            section.invest-info
+                .invest-info__content
+                    .condition-item
+                        h3.condition-item__title Инвестиции
+                        p.condition-item__subtitle Минимальный объём
+                        p.condition-item__desc от&nbsp;704&nbsp;000&nbsp;Р
+
+                    .condition-item
+                        h3.condition-item__title Особые условия
+                        p.condition-item__subtitle С долей свыше&nbsp;60%
+                        p.condition-item__desc Для крупных <br><span>инвесторов</span>
+
+                    .condition-item
+                        h3.condition-item__title Доходность
+                        p.condition-item__subtitle За&nbsp;5&nbsp;лет
+                        p.condition-item__desc до&nbsp;12&nbsp;000&nbsp;000&nbsp;Р
+
+                    .condition-item
+                        h3.condition-item__title Участие в&nbsp;бизнесе
+                        p.condition-item__subtitle Роль инвестора
+                        p.condition-item__desc Пассивный доход <br><span>участие не&nbsp;требуется</span>
+
             section.profit
                 .profit__header
                     header.section-header
                         h2.section-header__title Пассивный <br>доход
                         p.section-header__subtitle.section-header__subtitle--golden-t Зарабатывай&nbsp;с&nbsp;Oldboy
 
+                .profit__content
+                    h3.profit__title Предлагаем инвесторам купить долю&nbsp;от прибыли в одном из наших барбершопов
+                    p.profit__subtitle Участие в бизнесе не нужно. Доход полностью пассивный
+                    p.profit__value Стоимость 10% доли = 704 000 Рассчитать
+                    p.profit__info Вы получаете долю сразу в 5 барбершопах, тем самым, максимально диверсифицируя риски инвестиций
+                    p.profit__info Открытием, управлением и развитием барбершопов будет заниматься головная управляющая компания сети
+
+
             section.targeting
                 .targeting__header
                     header.section-header
                         h2.section-header__title Для&nbsp;кого&nbsp;это <br>предложение
                         p.section-header__subtitle.section-header__subtitle--light Наши&nbsp;партнёры
-                        .section-header__image
+                        .section-header__image.section-header__image--investment
                             img(src="./img/investment/chair.jpg", alt="Барбершоп Oldboy")
 
                 .targeting__content
                     h3.targeting__title Это предложение подойдёт:
 
                     .targeting__items
-                        .target-item
-                            .target-item__image: img(src="", alt="")
-                            p.target-item__title Инвесторам
-                            p.target-item__text Действующим или начинающим
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/employee.svg", alt="")
+                            p.investment-item__title Инвесторам
+                            p.investment-item__text Действующим&nbsp;или <br>начинающим
 
-                        .target-item
-                            .target-item__image: img(src="", alt="")
-                            p.target-item__title Всем кто хочет получать пассивных доход
-                            p.target-item__text Со своего капитала
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/save-money.svg", alt="")
+                            p.investment-item__title Всем кто хочет получать пассивных доход
+                            p.investment-item__text Со своего капитала
 
-                        .target-item
-                            .target-item__image: img(src="", alt="")
-                            p.target-item__title Бизнесменам
-                            p.target-item__text Любого уровня
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/save-money.svg", alt="")
+                            p.investment-item__title Бизнесменам
+                            p.investment-item__text Любого уровня
 
-                        .target-item
-                            .target-item__image: img(src="", alt="")
-                            p.target-item__title Тем кто думает открыть свой бизнес по франшизе
-                            p.target-item__text Но не готов заниматься операционной работой
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/website.svg", alt="")
+                            p.investment-item__title Тем кто думает открыть свой бизнес по франшизе
+                            p.investment-item__text Но не готов заниматься операционной работой
 
                     p.targeting__info Для нас не важно проживаете вы в России или зарубежом, среди наших инвесторов и партнеров есть уже не малое количество граждан СНГ, Евросоюза и других госдударств.
+
+            section.protection
+                .protection__header
+                    header.section-header
+                        h2.section-header__title Защита <br>инвестиций
+                        p.section-header__subtitle.section-header__subtitle--light Контроль дохода
+
+                    .protection__caption
+                        h3.protection__title Мы предлагаем прозрачный доход контроля вложенных средств
+                        p.protection__subtitle Онлайн инструменты, доступные в любое время из любой точки мира
+
+                .protection__content
+                    p.protection__headline Защита&nbsp;инвестиций и&nbsp;контроль доходов
+
+                    .protection__wrapper
+                        h3.protection__heading Вы инвестируете по одному договору в 5 барбершопов
+                        p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за 5 лет способна окупить все осуществленные вами инвестиции.
+                        ul.protection__text Инвестор так же получает возможность <strong>контролировать доходность</strong> используя ряд преимуществ: 
+                            li.protection__list 1. Инвестор может смотреть все цифры бизнеса в <strong>любое время из любой точки мира</strong>.
+                            li.protection__list 2. <strong>Online доступ</strong> к системе учета Yclient.
+                            li.protection__list 3. Барбершопы <strong>полностью автоматизированы</strong> (онлайн запись, мобильное приложение, электронный журнал с напоминаниями).
+                        h3.protection__heading.protection__heading--gold Как проверить бизнес?
+                        ul.protection__text
+                            li.protection__list 1. Предоставим учредительные документы, договоры аренды и прочее
+                            li.protection__list 2. Вы сможете проверить прибыль и все цифры барбершопов через систему учета Yclient
+
+                .protection__secure
+                    .protection__deco
+                        .protection__image: img(src="./img/mobile-app.png", alt="")
+                        p.protection__motto Инвестиции с Oldboy - это удобно и безопасно
+
+                    .protection__items
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/debt.svg", alt="")
+                            p.investment-item__title Контроль
+                            p.investment-item__text Прозрачный<br> и&nbsp;понятный
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/idea.svg", alt="")
+                            p.investment-item__title Безрисковый
+                            p.investment-item__text Оптимальная схема инвестиционного предложения
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/project-management.svg", alt="")
+                            p.investment-item__title Автоматизация
+                            p.investment-item__text Бизнес процессов упрощает контроль доходности
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/online-payment.svg", alt="")
+                            p.investment-item__title Онлайн доступ
+                            p.investment-item__text Ко всем инструментам из любой точки мира
+
+            section.advantages
+                .advantages__header
+                    header.section-header
+                        h2.section-header__title О&nbsp;сети&nbsp;Oldboy <br>Barbershop
+                        p.section-header__subtitle.section-header__subtitle--light Наши&nbsp;преимущества
+                        .section-header__image.section-header__image--investment
+                            img(src="./img/investment/chair.jpg", alt="Барбершоп Oldboy")
+
+                    .advantages__description
+                        h2.advantages__title Сотрудничество с нашим брендом имеет ряд преимуществ для партнёров
+                        p.advantages__subtitle Oldboy Barbershop - это крупнейшая сеть барбершопов в России и СНГ
+                        p.advantages__text <strong>Почему привлекаем инвестиции?</strong> Инвестиции нужны для быстрого масшабирования - открытия новых барбершопов в Москве
+                        p.advantages__plan План за год открыть 139 новых барбершопов
+
+                .advantages__content
+                    p.advantages__confirm Мы подтверждаем свои компетенции на конкретных примерах <br>Роль лидера рынка, это не пусты слова
+
+                    .advantages__items
+                        .advantage-item
+                            header.advantage-item__info
+                                p.advantages-item__count 230
+                                p.advantages-item__subtitle Открытых филиалов по всему миру
+
+                        .advantage-item
+                            header.advantage-item__info
+                                p.advantages-item__count 10
+                                p.advantages-item__subtitle Стран в которых работают нащи барбершопы
+
+                        .advantage-item
+                            header.advantage-item__info
+                                p.advantages-item__count 130
+                                p.advantages-item__subtitle Филиалов открыто уже в этом году
+
+                        .advantage-item
+                            header.advantage-item__info
+                                p.advantages-item__count 0
+                                p.advantages-item__subtitle Закрывшихся филиалов за 15 лет работы бренда
+
+                    .advantage__cta
+                        h3.advantage__title Запишитесь прямо сейчас на презентацию бизнеса в действующем барбершопе, чтобы проверить все цифры
+                        p.advantage__subtitle По договоренности встречи проводим по Skype или по звонку через мессенджеры
+                        .advantage__button
+                             a.button.ms_booking(href="#") Оставить заявку
 
 
 
