@@ -40,7 +40,7 @@
         // flex-basis: calc(100% - 391px);
         padding: 20px 0;
         padding-right: 50px;
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     @include atDesktopS {
@@ -51,7 +51,7 @@
 
     @include atDesktopL {
         // box model
-        padding-left: 580px;
+        padding-left: 700px;
         padding-right: 80px;
     }
 }
@@ -83,6 +83,7 @@
     color: $black;
     font-family: $mainFont;
     font-weight: 600;
+    line-height: 1.5;
     text-align: center;
 }
 

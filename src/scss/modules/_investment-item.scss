@@ -33,12 +33,12 @@
 .investment-item__text {
     // box model
     margin: 0;
-    max-width: 190px;
+    max-width: 195px;
 
     // typography
     color: $lightGrey;
     font-family: $mainFont;
-    font-size: 0.85rem;
+    font-weight: 600;
     line-height: 1.5;
     text-align: center;
 }

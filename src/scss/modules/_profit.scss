@@ -10,7 +10,7 @@
 
 .profit__content {
     // box model
-    margin-left: 80px;
+    margin-left: 200px;
 }
 
 .profit__title {
@@ -58,7 +58,8 @@
     margin-bottom: 30px;
 
     // typography
-    color: $dark;
+    color: $black;
     font-family: $mainFont;
     line-height: 1.5;
+    font-weight: 600;
 }

@@ -1,0 +1,131 @@
+.advantages {
+    // box model
+    margin-bottom: 100px;
+}
+
+.advantages__header {
+    // box model
+    display: flex;
+}
+
+.advantages__description {
+    // box model
+    margin-left: 200px;
+}
+
+.advantages__title {
+    // box model
+    margin: 0;
+    max-width: 650px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    &--bottom {
+        // box model
+        max-width: 750px;
+        margin: 0 auto;
+
+        // typography
+        text-align: center;
+    }
+}
+
+.advantages__subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 50px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.advantages__text {
+    // box model
+    max-width: 400px;
+    margin: 0;
+    margin-bottom: 80px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    line-height: 1.5;
+}
+
+.advantages__text strong {
+
+}
+
+.advantages__plan {
+    // positioning
+    position: relative;
+
+    // box model
+    max-width: 600px;
+    margin: 0;
+    padding-left: 150px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.advantages__plan::before {
+    content: "";
+    // positioning
+    position: absolute;
+    left: 0;
+    top: -7px;
+
+    // box model
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-right: 70px;
+
+    // visual
+    background-image: url('./img/icons/target.svg');
+    background-repeat: no-repeat;
+}
+
+.advantages__content {
+
+}
+
+.advantages__confirm {
+    // box model
+    margin: 0;
+    margin-bottom: 100px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.advantages__items {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    padding: 0 150px;
+}
+
+.advantages__cta {
+    // typography
+    text-align: center;
+}
