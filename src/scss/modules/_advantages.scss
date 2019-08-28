@@ -11,6 +11,7 @@
 .advantages__description {
     // box model
     margin-left: 200px;
+    padding-top: 50px;
 }
 
 .advantages__title {
@@ -38,7 +39,7 @@
 .advantages__subtitle {
     // box model
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 
     // typography
     color: $golden;
@@ -50,9 +51,9 @@
 
 .advantages__text {
     // box model
-    max-width: 400px;
+    max-width: 410px;
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 
     // typography
     color: $dark;
