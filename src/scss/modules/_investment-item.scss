@@ -1,0 +1,44 @@
+.investment-item {
+    // box model
+    display: flex;
+    max-width: 270px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.investment-item__image {
+    // box model
+    height: 110px;
+    width: 110px;
+    margin-bottom: 25px;
+}
+
+.investment-item__image img {
+    // box model
+    height: 100%;
+    width: 100%;
+}
+
+.investment-item__title {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.investment-item__text {
+    // box model
+    margin: 0;
+    max-width: 190px;
+
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+}

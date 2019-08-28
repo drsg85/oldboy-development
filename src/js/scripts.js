@@ -1,12 +1,11 @@
 'use strict';
-
 import MobileMenu from './modules/MobileMenu';
 import LocationSelector from './modules/LocationSelector';
 import LocationSearch from './modules/LocationSearch';
 import UpButton from './modules/UpButton';
 // import smoothscroll from 'smoothscroll-polyfill';
 import LanguageSelector from './modules/LanguageSelector';
-import InvestForm from './modules/InvestForm';
+
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -16,4 +15,4 @@ const upButton = new UpButton();
 // window.__forceSmoothScrollPolyfill__ = true;
 const langSelector = new LanguageSelector();
 
-const investForm = new InvestForm();
+

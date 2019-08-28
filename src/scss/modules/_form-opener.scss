@@ -1,7 +1,7 @@
 .form-opener {
     // positioning
     position: fixed;
-    top: 70vh;
+    top: 55vh;
     right: 100px;
     z-index: 1000;
 
@@ -25,7 +25,7 @@
     border-radius: 50%;
     cursor: pointer;
     opacity: 1;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease, top 0.4s ease;
     animation: pulse 2s infinite;
 
     &--active {
@@ -36,6 +36,11 @@
 
     &:hover {
         animation: none;
+    }
+
+    &--styled {
+        // positioning
+        top: 80vh;
     }
 }
 

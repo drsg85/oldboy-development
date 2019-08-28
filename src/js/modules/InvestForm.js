@@ -1,14 +1,32 @@
 class InvestForm {
     constructor() {
+        this.header = document.querySelector('.hero--investment');
         this.form = document.querySelector('.invest-form-container');
         this.trigger = document.querySelector('.form-opener');
         this.closeButton = this.form.querySelector('.invest__close-icon');
-
         if(this.trigger) {
-            
+            this.headerHeight = this.header.clientHeight - 300;
             this.addEvents();
         }
     }
+
+    checkClassOnScroll() {
+        if((window.pageYOffset > this.header || document.documentElement.scrollTop > this.headerHeight) && !this.trigger.classList.contains('form-opener--active')) {
+            this.trigger.classList.add('form-opener--styled');
+        }
+        else {
+            this.trigger.classList.remove('form-opener--styled');
+        }
+    };
+
+    debounceOnResize(func) {
+        let timer;
+        return function (event) {
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, 250, event);
+        };
+    };
+
     closeHandlerByEsc(evt) {
         if(evt.keyCode == 27 && this.form.classList.contains('invest-form-container--active')) {
           this.form.classList.remove('invest-form-container--active');
@@ -33,6 +51,7 @@ class InvestForm {
     }
 
     addEvents() {
+        console.log(this.headerHeight);
         this.trigger.addEventListener('click', () => {
             if(!this.form.classList.contains('invest-form-container--active')) {
                 this.form.classList.add('invest-form-container--active');
@@ -50,6 +69,8 @@ class InvestForm {
         });
 
         window.addEventListener('keydown', () => this.closeHandlerByEsc(event));
+
+        window.addEventListener('scroll', () => this.debounceOnResize(this.checkClassOnScroll()));
     }
 }
 

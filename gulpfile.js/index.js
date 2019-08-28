@@ -8,6 +8,7 @@ const sass = require('gulp-sass');
 const csso = require('gulp-csso');
 const sassImporter = require('sass-module-importer');
 const autoprefixer = require('gulp-autoprefixer');
+const webPack = require('webpack');
 const webpack = require('webpack-stream');
 
 // No need yet
@@ -29,7 +30,6 @@ const dirs = {
   dist: './dist'
 };
 
-
 // Webpack config
 const webpackConfig = {
   entry: {
@@ -37,15 +37,20 @@ const webpackConfig = {
     city: './src/js/city.js',
     branch: './src/js/branch.js',
     dummy: './src/js/dummy.js',
-    scripts: './src/js/scripts.js'
+    scripts: './src/js/scripts.js',
+    investment: './src/js/investment.js'
   },
 
   output: {
     filename: '[name].js'
   },
 
-  mode: 'production'
+  mode: 'production',
   //mode: 'development'
+
+  plugins: [
+    new webPack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+  ]
 };
 
 
