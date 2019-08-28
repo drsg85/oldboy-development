@@ -1,17 +1,17 @@
 .form-opener {
     // positioning
     position: fixed;
-    top: 55vh;
+    top: 85vh;
     right: 100px;
     z-index: 1000;
 
     // box model
-    width: 135px;
-    height: 135px;
+    width: 100px;
+    height: 100px;
 
     // typography
     font-family: $titleFont;
-    font-size: 22px;
+    font-size: 14px;
     color: $light;
     text-transform: uppercase;
 
@@ -20,7 +20,7 @@
     background-image: url('./img/logo-gold.svg');
     background-size: 85px 30px;
     background-repeat: no-repeat;
-    background-position: center 85px;
+    background-position: center 50px;
     border: 2px solid $golden;
     border-radius: 50%;
     cursor: pointer;

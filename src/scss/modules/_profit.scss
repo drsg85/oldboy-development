@@ -1,16 +1,19 @@
 .profit {
     // box model
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 100px;
 }
 
 .profit__header {
-    
+    // box model
+    margin-right: 50px;
 }
 
 .profit__content {
     // box model
-    margin-left: 200px;
+    margin-bottom: 70px;
 }
 
 .profit__title {
@@ -53,7 +56,7 @@
 
 .profit__info {
     // box model
-    max-width: 450px;
+    max-width: 500px;
     margin: 0;
     margin-bottom: 30px;
 
@@ -67,4 +70,36 @@
 .profit__calculator {
     // box model
     width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profit__calculator-header {
+    // box model
+    width: 100%;
+    max-width: 525px;
+    margin-bottom: 180px;
+}
+
+.profit__calculator-title {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 36px;
+    line-height: 48px;
+    color: $golden;
+}
+
+.profit__calculator-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 24px;
+    line-height: 30px;
+    color: $dark;
 }
