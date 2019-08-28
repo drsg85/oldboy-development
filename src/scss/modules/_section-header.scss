@@ -228,7 +228,8 @@
 
     &--investment {
         // box model
-        height: 450px;
+        height: 535px;
+        width: calc(100% + 120px);
     }
 
     &--investment img {
