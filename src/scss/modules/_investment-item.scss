@@ -4,6 +4,12 @@
     max-width: 270px;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 45px;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .investment-item__image {

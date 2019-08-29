@@ -8,22 +8,40 @@
 
 .targeting__header {
     // positioning
-    position: absolute;
+    // position: absolute;
 
     // box model
     padding: 20px 0;
-    margin-bottom: 30px;
-
+    margin-bottom: 50px;
+    
+    .section-header__subtitle--light {
+        // typography
+        color: $golden;
+    }
+    
+    .section-header__image--investment {
+        // box model
+        display: none;
+    }
+    
     @include atTablet {
         // box model
         flex-basis: 380px;
     }
-
+    
     @include atDesktopS {
         // positioning
         position: absolute;
         top: 0;
         left: 0;
+
+        // box model
+        margin-bottom: 30px;
+
+        .section-header__image--investment {
+            // box model
+            display: block;
+        }
     }
 }
 
@@ -64,14 +82,27 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: center;
+    
+    @include atDesktopS {
+        // box model
+        font-size: 2rem;
+        text-align: left;
+    }
 }
 
 .targeting__items {
     // box model
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
+
+    @include atDesktopS {
+        flex-direction: row;
+    }
 }
 
 .targeting__info {

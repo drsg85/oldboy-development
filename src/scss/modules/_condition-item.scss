@@ -1,6 +1,14 @@
 .condition-item {
+    // box model
+    margin-bottom: 60px;
+
     // typography
     text-align: center;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .condition-item__title {

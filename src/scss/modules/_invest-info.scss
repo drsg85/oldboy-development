@@ -4,10 +4,10 @@
     
     // box model
     padding: 0 50px;
-    margin-bottom: 50px;
-
+    
     @include atDesktopL {
         // box model
+        margin-bottom: 50px;
         padding: 0 80px;
     }
 }
@@ -36,10 +36,17 @@
 .invest-info__content {
     // box model
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 70px 120px;
+    margin: 0 -50px;
     padding-top: 90px;
-
+    
     // visual
     background-color: #fdf6ee;
+    
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        padding: 70px 120px;
+    }
 }
