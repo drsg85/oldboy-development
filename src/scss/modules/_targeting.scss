@@ -3,7 +3,12 @@
     position: relative;
 
     // box model
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+    
+    @include atDesktopS {
+        // box model
+        margin-bottom: 100px;
+    }
 }
 
 .targeting__header {
@@ -96,12 +101,13 @@
 .targeting__items {
     // box model
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 50px;
-
+    
     @include atDesktopS {
+        margin-bottom: 50px;
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -120,12 +126,17 @@
 
 .targeting__compare {
     // box model
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1635px;
-    margin-left: 105px;
+    display: none;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1635px;
+        margin-left: 105px;
+    }
 }
 
 .targeting__compare-header {

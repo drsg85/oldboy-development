@@ -4,35 +4,73 @@
 }
 
 .advantages__header {
-    // box model
-    display: flex;
+    // positioning
+    position: relative;
+
+    .section-header__image--investment {
+        // box model
+        height: 820px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        display: flex;
+
+        .section-header__image--investment {
+            // box model
+            height: 535px;
+        }
+    }
 }
 
 .advantages__description {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 230px;
+    z-index: 9;
+
     // box model
-    margin-left: 200px;
-    padding-top: 50px;
+    padding: 0 20px;
+
+    @include atDesktopS {
+        // positioning
+        position: unset;
+
+        // box model
+        margin-left: 200px;
+        padding: 0;
+        padding-top: 50px;
+    }
 }
 
 .advantages__title {
     // box model
     margin: 0;
-    max-width: 650px;
-
+    
     // typography
-    color: $black;
+    color: $light;
+    font-size: 1.8rem;
     font-family: $titleFont;
-    font-size: 2rem;
-    line-height: 1.5;
     text-transform: uppercase;
-
+    
     &--bottom {
         // box model
         max-width: 750px;
         margin: 0 auto;
-
+        
         // typography
         text-align: center;
+    }
+    
+    @include atDesktopS {
+        // box model
+        max-width: 650px;
+        
+        // typography
+        color: $black;
+        font-size: 2rem;
+        line-height: 1.5;
     }
 }
 
