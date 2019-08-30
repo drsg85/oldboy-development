@@ -262,6 +262,14 @@
 }
 
 .advantages__cta {
+    // box model
+    padding: 0 20px;
+
     // typography
     text-align: center;
+
+    @include atDesktopS {
+        // box model
+        padding: 0;
+    }
 }
