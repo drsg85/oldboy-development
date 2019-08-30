@@ -1,9 +1,112 @@
 .invest-calculator {
     // box model
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 720px;
+    margin-top: -120px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.invest-calculator__special {
+    // positioning
+    position: relative;
+
+    .invest-calculator__result,
+    .invest-calculator__summ,
+    .invest-calculator__passive,
+    .invest-calculator__rest {
+        // box model
+        display: none;
+    }
+        // visual
+        background-image: url('./img/investment/dollar.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        // box model
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        // visual
+        
+    }
+
+    &:before {
+        content: "Эксклюзивные условия для инвесторов более 3.5 млн. руб.";
+
+        // box model
+        height: 417px;
+        width: 100%;
+
+        // typography
+        font-family: $titleFont;
+        font-size: 24px;
+        line-height: 28px;
+        color: $golden;
+    }
+}
+
+.invest-calculator__header {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.invest-calculator__title,
+.invest-calculator__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $grey;
+    text-transform: uppercase;
+}
+
+.invest-calculator__title {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 45px;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        bottom: -30px;
+
+        // box model
+        display: block;
+        height: 3px;
+        width: 100%;
+
+        // visual
+        background-color: #f1f1f1;
+    }
+}
+
+.invest-calculator__subtitle {
+    // box model
+    margin: 0;
 }
 
 .invest-calculator__graph {
@@ -15,6 +118,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 720px;
     padding: 0;
 
     // visual
@@ -52,7 +157,7 @@
         display: block;
         height: 3px;
         width: 0;
-
+        
         // visual
         background-color: #d6a354;
         pointer-events: none;
@@ -80,6 +185,12 @@
     transition: color 0.25s ease;
 }
 
+.invest-calculator__currency {
+    // typography
+    font-family: $mainFont;
+    font-size: 14px;
+}
+
 .invest-calculator__percent {
     // positioning
     position: absolute;
@@ -105,7 +216,7 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 5 + 15px);
+            width: calc(100% / 5 - 5px);
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
@@ -118,7 +229,7 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 2.5 + 15px);
+            width: calc(100% / 2.5 - 15px);
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
@@ -131,7 +242,7 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 1.75 + 15px);
+            width: calc(100% / 1.75 - 5px);
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
@@ -144,7 +255,7 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 1.35 + 15px);
+            width: calc(100% / 1.35);
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
@@ -157,7 +268,7 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% + 15px);
+            width: calc(100%);
         }
         
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
@@ -206,23 +317,124 @@
     }
 }
 
-.invest-calculator__radio:focus ~ .invest-calculator__switcher:after {
+.invest-calculator__radio:focus ~ .invest-calculator__switcher:after,
+.invest-calculator__radio:checked ~ .invest-calculator__switcher:after{
     // visual
     background-color: $golden;
 }
 
-.invest-calculator__radio:focus ~ .invest-calculator__sum {
+.invest-calculator__radio:focus ~ .invest-calculator__sum,
+.invest-calculator__radio:checked ~ .invest-calculator__sum {
     // typography
     color: $golden;
 }
 
-.invest-calculator__radio:focus ~ .invest-calculator__percent {
+.invest-calculator__radio:focus ~ .invest-calculator__percent,
+.invest-calculator__radio:checked ~ .invest-calculator__percent {
     // typography
     color: $grey;
 }
 
-.invest-calculator__radio:not(:focus) ~ .invest-calculator__switcher:after {
+.invest-calculator__radio:not(:focus) ~ .invest-calculator__switcher:after,
+.invest-calculator__radio:not(:checked) ~ .invest-calculator__switcher:after {
     // positioning
     z-index: 2;
 }
 
+.invest-calculator__result {
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 65px;
+    width: 100%;
+    max-width: 430px;
+
+    // visual
+    background-color: #fdf6ee;
+    border-radius: 15px;
+}
+
+.invest-calculator__summ,
+.invest-calculator__passive,
+.invest-calculator__rest {
+    // box model
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.invest-calculator__rest {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invest-calculator__rest .invest-calculator__value {
+    // typography
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.invest-calculator__summ-text {
+    // box model
+    margin: 0;
+    
+    // typography
+    font-family: $mainFont;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $black;
+    text-transform: uppercase;
+}
+
+.invest-calculator__value {
+    // box model
+    display: inline-block;
+    margin: 0;
+    margin-top: 10px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 36px;
+    line-height: 1;
+    color: $golden;
+}
+
+.invest-calculator__curr {
+    // box model
+    display: inline-block;
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 18px;
+    line-height: 1;
+    color: $golden;
+}
+
+.invest-calculator__period {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 30px;
+    color: $grey;
+}
+
+.invest-calculator__request {
+    // box model
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.invest-calculator__result button {
+    // box model
+    margin: 0;
+}

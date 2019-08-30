@@ -29,8 +29,8 @@ html(lang="en")
                         p.hero-caption__motto Инвестиции&nbsp;в&nbsp;федеральную&nbsp;сеть барбершопов&nbsp;в Москве
 
                     .hero__buttons
-                        a.button.ms_booking(href="#") Оставить заявку<br>
-                        a.button.button--ghost(href="#") Рассчитать доход
+                        button.button.form-trigger.ms_booking Оставить заявку<br>
+                        a.button.button--ghost#scrollToCalculator(href="#profit") Рассчитать доход
                 
                 .hero__investment
                     .investment-text
@@ -61,7 +61,7 @@ html(lang="en")
                         p.condition-item__subtitle Роль инвестора
                         p.condition-item__desc Пассивный доход <br><span>участие не&nbsp;требуется</span>
 
-            section.profit
+            section.profit#profit
                 .profit__header
                     header.section-header
                         h2.section-header__title Пассивный <br>доход
@@ -79,54 +79,82 @@ html(lang="en")
                         h3.profit__calculator-title Рассчитайте, какой вы будете получать доход от купленной доли
                         p.profit__calculator-subtitle Размер пассивного дохода инвестора <br>при разных вложениях
                     .invest-calculator
+                        header.invest-calculator-header
+                            h5.invest-calculator__title Сумма инвестиций
+                            p.invest-calculator__subtitle Процент от прибыли барбершопа
+                        
                         .invest-calculator__graph
                             label.invest-calculator__label
-                                input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum 704 000
-                                    span.invest-calculator__currency руб.
+                                input.invest-calculator__radio(type="radio", name="graph" checked)
+                                p.invest-calculator__sum(data-month="40000") 704 000 
+                                    span.invest-calculator__currency.rouble-sign Р
                                 .invest-calculator__switcher
                                 .invest-calculator__line
                                 span.invest-calculator__percent 10%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum 1 408 000
-                                    span.invest-calculator__currency руб.
+                                p.invest-calculator__sum(data-month="80000") 1 408 000 
+                                    span.invest-calculator__currency.rouble-sign Р
                                 .invest-calculator__switcher
                                 .invest-calculator__line
                                 span.invest-calculator__percent 20%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum 2 112 000
-                                    span.invest-calculator__currency руб.
+                                p.invest-calculator__sum(data-month="120000") 2 112 000 
+                                    span.invest-calculator__currency.rouble-sign Р
                                 .invest-calculator__switcher
                                 .invest-calculator__line
                                 span.invest-calculator__percent 30%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum 2 816 000
-                                    span.invest-calculator__currency руб.
+                                p.invest-calculator__sum(data-month="160000") 2 816 000 
+                                    span.invest-calculator__currency.rouble-sign Р
                                 .invest-calculator__switcher
                                 .invest-calculator__line
                                 span.invest-calculator__percent 40%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum 3 520 000
-                                    span.invest-calculator__currency руб.
+                                p.invest-calculator__sum(data-month="200000") 3 520 000 
+                                    span.invest-calculator__currency.rouble-sign Р
                                 .invest-calculator__switcher
                                 .invest-calculator__line
                                 span.invest-calculator__percent 50%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum более 3 520 000
-                                    span.invest-calculator__currency руб.
+                                p.invest-calculator__sum более 3 520 000 
+                                    span.invest-calculator__currency.rouble-sign Р
                                 .invest-calculator__switcher
                                 .invest-calculator__line
-                                span.invest-calculator__percent >50%
+                                span.invest-calculator__percent >60%
+                        
+                        .invest-calculator__result
+                            .invest-calculator__summ
+                                p.invest-calculator__summ-text Сумма инвестиций<br>
+                                    span.invest-calculator__value#invest-calculator__value-invest 704 000 
+                                    span.invest-calculator__curr.rouble-sign Р
+                            .invest-calculator__passive
+                                p.invest-calculator__summ-text Размер пассивного дохода <br>
+                                    span.invest-calculator__value#invest-calculator__value-passive 2 400 000
+                                    span.invest-calculator__curr.rouble-sign Р
+                                p.invest-calculator__period за пять лет
+                            .invest-calculator__rest
+                                .invest-calculator__summ-val
+                                    p.invest-calculator__summ-text
+                                        span.invest-calculator__value#invest-calculator__value-year 480 000
+                                        span.invest-calculator__curr.rouble-sign Р
+                                    p.invest-calculator__period за один год
+                                .invest-calculator__summ-val
+                                    p.invest-calculator__summ-text
+                                        span.invest-calculator__value#invest-calculator__value-month 40 000
+                                        span.invest-calculator__curr.rouble-sign Р
+                                    p.invest-calculator__period в месяц
+                            .invest-calculator__request
+                                button.button.form-trigger.invest-button Оставить заявку
             
             section.targeting
                 .targeting__header
@@ -261,12 +289,17 @@ html(lang="en")
                         h3.advantages__title.advantages__title--bottom Запишитесь прямо сейчас на презентацию бизнеса в действующем барбершопе, чтобы проверить все цифры
                         p.advantages__subtitle По договоренности встречи проводим по Skype или по звонку через мессенджеры
                         .advantages__button
-                             a.button.ms_booking(href="#") Оставить заявку
+                            button.button.form-trigger.ms_booking Оставить заявку
 
             button.form-opener
                 span.form-opener__text Оставить заявку
 
             include modules/_invest-form.pug
+        
+        button.up-button#up-button
+                .up-button__arrow
+                p.up-button__text Наверх
+        
         include modules/_footer.pug
 
         script(src="investment.js")
