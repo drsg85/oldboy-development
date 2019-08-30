@@ -1,20 +1,4 @@
 .advantage-item {
-    // // positioning
-    // position: relative;
-
-    // // box model
-    // display: block;
-    // height: 400px;
-    // flex-basis: 50%;
-    // flex-grow: 1;
-    // flex-shrink: 1;
-    // margin-bottom: 50px;
-
-    // // visual
-    // background-image: url('./img/investment/man.jpg');
-    // background-position: center center;
-    // background-repeat: no-repeat;
-
     // positioning
     position: relative;
 
@@ -73,19 +57,32 @@
     left: 0;
 
     // box model
-    padding-left: 50px;
-    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .advantage-item__count {
     // box model
     margin: 0;
-    margin-left: -8px;
-
+    
     // typography
     color: $light;
     font-family: $displayFont;
-    font-size: 12rem;
+    font-size: 15vw;
+    
+    @include atDesktopS {
+        // box model
+        margin-left: -8px;
+
+        // typography
+        font-size: 10vw;
+    }
 }
 
 .advantage-item__subtitle {
