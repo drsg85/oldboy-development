@@ -1,18 +1,41 @@
 .invest-calculator {
+    // positioning
+    position: relative;
+
     // box model
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
+    max-width: 1200px;
     margin-top: -120px;
     margin-left: auto;
     margin-right: auto;
+
+    @include atTablet {
+        // box model
+        align-items: center;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
 }
 
 .invest-calculator__vip {
     // box model
     display: none;
+    width: 100%;
+    max-width: 115px;
+
+    @include atTablet {
+        // box model
+        max-width: initial;
+    }
 }
 
 .invest-calculator__vip-header {
@@ -54,12 +77,18 @@
 
     // typography
     font-family: $mainFont;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
     font-weight: 400;
     color: $grey;
     text-align: left;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .invest-calculator__vip-title {
@@ -68,9 +97,15 @@
 
     // typography
     font-family: $mainFont;
-    font-size: 36px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 20px;
     color: $golden;
+
+    @include atTablet {
+        // typography
+        font-size: 36px;
+        line-height: 38px;
+    }
 }
 
 .invest-calculator__vip-content-body {
@@ -80,6 +115,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 90px;
+}
+
+.invest-calculator__vip-content .form-trigger {
+    // positioning
+    position: absolute;
+    bottom: -55px;
+    left: calc(-100% + 50px);
+
+    @include atTablet {
+        // positioning
+        position: relative;
+        bottom: initial;
+        left: initial;
+    }
 }
 
 .invest-calculator__vip-content-icon {
@@ -119,6 +168,25 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin-bottom: 80px;
+    width: 100%;
+
+    @include atTablet {
+        // box model
+        width: initial;
+    }
+
+    @include atDesktopS {
+        // box model
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: auto;
+        margin-bottom: 0;
+    }
 }
 
 .invest-calculator__title,
@@ -170,11 +238,11 @@
 
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 720px;
+    align-items: flex-end;
+    width: 45%;
+    height: 500px;
     padding: 0;
 
     // visual
@@ -185,16 +253,49 @@
 
         // positioning
         position: absolute;
-        top: 5px;
-        left: 0;
+        top: 20px;
+        right: 0;
 
         // box model
         display: block;
-        height: 3px;
-        width: 100%;
+        
+        height: 500px;
+        width: 3px;
 
         // visual
         background-color: #f1f1f1;
+    }
+
+    @include atTablet {
+        // box model
+        width: 100%;
+        height: auto;
+        max-width: 720px;
+        flex-direction: row;
+        align-items: center;
+
+        &:before {
+            // positioning
+            left: 0;
+            right: auto;
+            top: 5px;
+
+            // box model
+            height: 3px;
+            width: 100%;
+        }
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: initial;
+        margin-left: initial;
     }
 }
 
@@ -204,40 +305,77 @@
 
         // positioning
         position: absolute;
-        left: 0;
-        top: 5px;
+        right: -1px;
+        top: 22px;
         z-index: 1;
 
         // box model
         display: block;
-        height: 3px;
-        width: 0;
+        height: 0px;
+        width: 3px;
         
         // visual
         background-color: #d6a354;
         pointer-events: none;
-        transition: width 0.25s ease;
+        transition: height 0.25s ease;
+
+        @include atTablet {
+            // positioning
+            top: 5px;
+            left: 0;
+            right: auto;
+
+            // box model
+            height: 3px;
+            width: 0;
+
+            // visual
+            transition: width 0.25s ease;
+        }
     }
 }
 
 .invest-calculator__sum {
     // positioning
-    position: absolute;
-    top: -45px;
-    transform: translateX(-50px);
-    
+    position: relative;
+
     // box model
-    min-width: 160px;
+    min-width: 140px;
     margin: 0;
 
     // typography
     font-family: $titleFont;
     font-size: 18px;
     color: $grey;
+    text-align: center;
 
     // visual
     cursor: pointer;
     transition: color 0.25s ease;
+
+    @include atTablet {
+        // positioning
+        position: absolute;
+        transform: translateX(-50px);
+        top: -25px;
+        transform: rotate3d(1, 1, 1, 45deg) translate(-25px, 25px);
+
+        // box model
+        min-width: 160px;
+
+        // typography
+        font-size: 16px;
+        text-align: left;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: -45px;
+        transform: translateX(-50px);
+
+        // typography
+        font-size: 18px;
+    }
 }
 
 .invest-calculator__currency {
@@ -248,22 +386,35 @@
 
 .invest-calculator__percent {
     // positioning
-    position: absolute;
-    bottom: -55px;
-    transform: translateX(-7px);
-
+    position: relative;
+    
     // box model
-    min-width: 100px;
+    min-width: 100%;
+    display: inline-block;
 
     // typography
     font-family: $titleFont;
     font-size: 30px;
     line-height: 1;
     color: rgba($grey, 0.5);
+    text-align: center;
 
     // visual
     cursor: pointer;
     transition: color 0.25s ease;
+
+    @include atTablet {
+        // positioning
+        position: absolute;
+        transform: translateX(-7px);
+        bottom: -55px;
+
+        // box model
+        min-width: initial;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .invest-calculator__label {
@@ -271,12 +422,22 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 5 - 5px);
+            height: calc(100% / 5 - 5px);
+
+            @include atTablet {
+                // box model
+                height: 3px;
+                width: calc(100% / 5 - 5px);
+            }
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
             // box model
-            width: 0;
+            height: 0;
+
+            @include atTablet {
+                width: 0;
+            }
         }
     }
 
@@ -284,12 +445,23 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 2.5 - 15px);
+            height: calc(100% / 2.5 - 15px);
+
+            @include atTablet {
+                // box model
+                height: 3px;
+                width: calc(100% / 2.5 - 15px);
+            }
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
             // box model
-            width: 0;
+            height: 0;
+
+            @include atTablet {
+                // box model
+                width: 0;
+            }
         }
     }
 
@@ -297,12 +469,23 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 1.75 - 5px);
+            height: calc(100% / 1.75 - 15px);
+
+            @include atTablet {
+                // box model
+                height: 3px;
+                width: calc(100% / 1.75 - 5px);
+            }
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
             // box model
-            width: 0;
+            height: 0;
+
+            @include atTablet {
+                // box model
+                width: 0;
+            }
         }
     }
 
@@ -310,12 +493,23 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100% / 1.35);
+            height: calc(100% / 1.35 - 10px);
+
+            @include atTablet {
+                // box model
+                height: 3px;
+                width: calc(100% / 1.35);
+            }
         }
 
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
             // box model
-            width: 0;
+            height: 0;
+
+            @include atTablet {
+                // box model
+                width: 0;
+            }
         }
     }
 
@@ -323,12 +517,23 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            width: calc(100%);
+            height: calc(100%);
+
+            @include atTablet {
+                // box model
+                height: 3px;
+                width: calc(100%);
+            }
         }
         
         .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
             // box model
-            width: 0;
+            height: 0;
+
+            @include atTablet {
+                // box model
+                width: 0;
+            }
         }
     }
 }
@@ -358,7 +563,7 @@
         // positioning
         position: absolute;
         top: 1.5px;
-        left: 0;
+        right: -4px;
 
         // box model
         width: 10px;
@@ -369,6 +574,12 @@
         border: 1px solid $golden;
         border-radius: 50%;
         transition: 0.25s ease;
+
+        @include atTablet {
+            // positioning
+            left: 0;
+            right: auto;
+        }
     }
 }
 
@@ -403,13 +614,40 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px;
-    width: 100%;
-    max-width: 430px;
+    padding: 50px 20px;
+    width: 55%;
+    margin-right: -30px;
+    margin-left: auto;
 
     // visual
     background-color: #fdf6ee;
     border-radius: 15px;
+    
+    @include atTablet {
+        // box model
+        width: 100%;
+        max-width: 360px;
+        margin-top: 80px;
+        margin-right: initial;
+        padding: 50px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 430px;
+    }
+
+    @include atDesktopM {
+        // box model
+        height: 537px;
+        margin-top: 30px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-top: initial;
+        margin-left: initial;
+    }
 }
 
 .invest-calculator__summ,
@@ -418,20 +656,43 @@
     // box model
     flex-basis: 100%;
     width: 100%;
-    margin-bottom: 50px;
+    max-width: 115px;
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        max-width: initial;
+        margin-bottom: 10px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 50px;
+    }
 }
 
 .invest-calculator__rest {
     // box model
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+
+    @include atTablet {
+        // box model
+        flex-wrap: nowrap;
+    }
 }
 
 .invest-calculator__rest .invest-calculator__value {
     // typography
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 700;
+
+    @include atDesktopS {
+        // typography
+        font-size: 30px;
+    }
 }
 
 .invest-calculator__summ-text {
@@ -440,11 +701,17 @@
     
     // typography
     font-family: $mainFont;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 16px;
     color: $black;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
 
 .invest-calculator__value {
@@ -455,9 +722,19 @@
 
     // typography
     font-family: $mainFont;
-    font-size: 36px;
+    font-size: 18px;
     line-height: 1;
     color: $golden;
+
+    @include atTablet {
+        // typography
+        font-size: 24px;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 36px;
+    }
 }
 
 .invest-calculator__curr {
@@ -484,10 +761,22 @@
 }
 
 .invest-calculator__request {
+    // positioning
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+
     // box model
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+        bottom:initial;
+        left:initial
+    }
 }
 
 .invest-calculator__result button {

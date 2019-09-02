@@ -73,12 +73,58 @@
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 20px;
+
+    @include atTablet {
+        // box model
+        padding: 0 30px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 0 40px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 0;
+    }
 }
 
 .profit__calculator-header {
     // box model
     width: 100%;
-    max-width: 525px;
+    margin-bottom: 150px;
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // positioning
+        transform: translateY(330px);
+        max-width: 44%;
+
+        // box model
+        margin-bottom: initial;
+    }
+
+    @include atDesktopS {
+        // positioning
+        transform: translateY(360px);
+
+        // box model
+        max-width: 50%;
+        margin-bottom: initial;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 525px;
+    }
+
+    @include atDesktopL {
+        // box model
+        transform: none;
+    }
 }
 
 .profit__calculator-title {
@@ -87,9 +133,27 @@
 
     // typography
     font-family: $titleFont;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 24px;
+    line-height: 26px;
     color: $golden;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+
+        // typography
+        font-size: 24px;
+        line-height: 1;
+    }
+    
+    @include atDesktopS {
+        // box model
+        margin-bottom: initial;
+
+        // typography
+        font-size: 36px;
+        line-height: 48px;
+    }
 }
 
 .profit__calculator-subtitle {
@@ -98,7 +162,19 @@
 
     // typography
     font-family: $titleFont;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 1.2;
     color: $dark;
+
+    @include atTablet {
+        // typography
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
