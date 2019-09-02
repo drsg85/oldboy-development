@@ -3,7 +3,7 @@
     font-family: $titleFont;
     text-align: center;
 
-    @include atDesktopS {
+    @include atTablet {
         // typography
         text-align: right;
     }

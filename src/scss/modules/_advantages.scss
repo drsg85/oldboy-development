@@ -16,6 +16,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    .section-header {
+        // positioning
+        transform: skewY(-15deg) translateY(-60px);
+
+        @include atDesktopS {
+            // positioning
+            transform: skewY(-15deg);
+        }
+    }
+
     .section-header__image--investment {
         // box model
         display: none;
@@ -66,8 +76,9 @@
 .advantages__description {
     // box model
     width: 100%;
-    padding: 100px 20px;
+    padding: 0 20px;
     padding-bottom: 50px;
+    padding-top: 20px;
 
     @include atDesktopS {
         // positioning
@@ -91,14 +102,25 @@
     font-family: $titleFont;
     text-transform: uppercase;
 
-    @include atDesktopS {
+    @include atTablet {
         // box model
         max-width: 650px;
-        
+        margin: 0 auto;
+        margin-bottom: 25px;
+
+        // typography
+        text-align: center;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+
         // typography
         color: $black;
         font-size: 2rem;
         line-height: 1.5;
+        text-align: left;
     }
 
     &--bottom {
@@ -154,13 +176,25 @@
     color: $light;
     font-family: $mainFont;
     line-height: 1.5;
+
+    @include atTablet {
+        // box model
+        margin: 0 auto;
+        margin-bottom: 200px;
+
+        // typography
+        text-align: center;
+    }
+
     
     @include atDesktopS {
         // box model
+        margin: 0;
         margin-bottom: 90px;
 
         // typography
         color: $dark;
+        text-align: left;
     }
 }
 
@@ -182,9 +216,15 @@
     font-size: 1.8rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        margin: 0 auto;
+    }
     
     @include atDesktopS {
         // box model
+        margin: 0;
         padding-left: 150px;
         
         // typography

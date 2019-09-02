@@ -35,13 +35,13 @@
         // box model
         margin-bottom: 40px;
         max-height: 340px;
+        flex-basis: calc(50% - 20px);
+        height: calc(31.25vw - 60px);
+        width: auto;
     }
 
     @include atDesktopS {
         // box model
-        flex-basis: calc(50% - 20px);
-        height: calc(31.25vw - 60px);
-        width: auto;
     }
 
     @include atDesktopL {
@@ -75,13 +75,15 @@
     color: $light;
     font-family: $displayFont;
     font-size: 15vw;
+
+    @include atTablet {
+        // typography
+        font-size: 10vw;
+    }
     
     @include atDesktopS {
         // box model
         margin-left: -8px;
-
-        // typography
-        font-size: 10vw;
     }
 }
 

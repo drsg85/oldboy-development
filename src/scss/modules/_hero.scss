@@ -620,6 +620,11 @@
         // box model
         padding-bottom: 20px;
         padding-top: 20px;
+
+        @include atTablet {
+            // box model
+            flex-direction: row;
+        }
         
         .hero__caption {
             // box model
@@ -1089,7 +1094,7 @@
     justify-content: flex-end;
     margin-top: 40px;
     
-    @include atDesktopS {
+    @include atTablet {
         // box model
         margin-bottom: 20px;
         margin-top: 0;

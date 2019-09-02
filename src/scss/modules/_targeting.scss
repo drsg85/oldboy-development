@@ -3,7 +3,7 @@
     position: relative;
 
     // box model
-    margin-bottom: 60px;
+    margin-bottom: 110px;
     
     @include atDesktopS {
         // box model
@@ -53,6 +53,7 @@
 .targeting__content {
     // box model
     padding: 0 20px;
+    padding-top: 30px;
     
     @include atTablet {
         // positioning
@@ -62,14 +63,14 @@
         // box model
         // flex-basis: calc(100% - 391px);
         padding: 20px 0;
-        padding-right: 50px;
-        padding-top: 80px;
     }
-
+    
     @include atDesktopS {
         // box model
         margin-bottom: 150px;
         padding-left: 430px;
+        padding-right: 50px;
+        padding-top: 80px;
     }
 
     @include atDesktopL {
@@ -103,10 +104,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     
     @include atDesktopS {
+        // box model
         margin-bottom: 50px;
-        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-between;
     }
 }

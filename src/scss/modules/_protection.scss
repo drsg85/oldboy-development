@@ -22,6 +22,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    .section-header {
+        // positioning
+        transform: skewY(-15deg) translateY(-60px);
+
+        @include atDesktopS {
+            // positioning
+            transform: skewY(-15deg);
+        }
+    }
+
     .section-header__subtitle--light {
         // typography
         color: $golden;
@@ -64,7 +74,7 @@
     // box model
     padding: 0 20px;
     padding-bottom: 100px;
-    padding-top: 60px;
+    padding-top: 20px;
 
     @include atDesktopS {
         // box model
@@ -84,17 +94,26 @@
     font-family: $titleFont;
     font-size: 1.8rem;
     text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        max-width: 510px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        // typography
+        text-align: center;
+    }
     
     @include atDesktopS {
         // box model
         max-width: 550px;
-        margin-bottom: 30px;
         padding: 0;
         
         // typography
         font-size: 2rem;
         line-height: 1.5;
-
+        text-align: left;
     }
 }
 
@@ -109,6 +128,22 @@
     font-size: 1.25rem;
     line-height: 1.2;
     text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        margin: 0 auto;
+
+        // typography
+        text-align: center;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .protection__content {
@@ -126,8 +161,10 @@
     // box model
     margin: 0;
     height: 100%;
+    max-width: 450px;
     flex-basis: 365px;
     padding: 10px 20px;
+    margin: 0 auto;
     margin-bottom: 25px;
     
     // typography
@@ -142,9 +179,15 @@
     // visual
     border-bottom: 2px solid $golden;
     border-top: 2px solid $golden;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 25px;
+    }
     
     @include atDesktopS {
         // box model
+        margin: 0;
         margin-top: 3px;
         margin-bottom: 0;
         padding: 10px 40px;
@@ -227,6 +270,27 @@
     }
 }
 
+// .protection__secure::before {
+//     content: "";
+
+//     // positioning
+//     position: absolute;
+//     top: -10px;
+//     left: 0;
+//     z-index: 7;
+    
+//     // box model
+//     width: 100%;
+//     height: 80px;
+    
+//     // visual
+//     background-image: url('./img/white-grunge.svg');
+//     background-position: top 2px center;
+//     background-repeat: repeat-x;
+//     background-size: 800px;
+//     transform: rotateX(180deg);
+// }
+
 .protection__deco {
 
     @include atDesktopS {
@@ -281,11 +345,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     
     @include atDesktopS {
     // box model
     width: 100%;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     padding-left: 520px;
     }
 }
