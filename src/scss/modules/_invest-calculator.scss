@@ -10,52 +10,107 @@
     margin-right: auto;
 }
 
+.invest-calculator__vip {
+    // box model
+    display: none;
+}
+
+.invest-calculator__vip-header {
+    // box model
+    margin-bottom: 63px;
+}
+
+.invest-calculator__vip-content {
+    // typography
+    text-align: center;
+}
+
+.invest-calculator__vip-subtitle,
+.invest-calculator__vip-content-title {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+    
+    // typography
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.invest-calculator__vip-subtitle {
+    // box model
+    margin-bottom: 18px;
+}
+
+.invest-calculator__vip-content-text {
+    // box model
+    width: 100%;
+    max-width: 220px;
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $grey;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.invest-calculator__vip-title {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 36px;
+    line-height: 38px;
+    color: $golden;
+}
+
+.invest-calculator__vip-content-body {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.invest-calculator__vip-content-icon {
+    // box model
+    width: 100%;
+    max-width: 90px;
+}
+
+.invest-calculator__vip-content-img {
+    // box model
+    display: block;
+    width: 100%;
+}
+
 .invest-calculator__special {
     // positioning
     position: relative;
 
+    // box model
     .invest-calculator__result,
     .invest-calculator__summ,
     .invest-calculator__passive,
-    .invest-calculator__rest {
+    .invest-calculator__rest,
+    .invest-calculator__request {
         // box model
         display: none;
     }
-        // visual
-        background-image: url('./img/investment/dollar.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
 
-    &:after {
-        content: "";
-
-        // positioning
-        position: absolute;
-        left: 0;
-        top: 0;
-
+    .invest-calculator__vip {
         // box model
         display: block;
-        height: 100%;
-        width: 100%;
-
-        // visual
-        
-    }
-
-    &:before {
-        content: "Эксклюзивные условия для инвесторов более 3.5 млн. руб.";
-
-        // box model
-        height: 417px;
-        width: 100%;
-
-        // typography
-        font-family: $titleFont;
-        font-size: 24px;
-        line-height: 28px;
-        color: $golden;
     }
 }
 
@@ -341,13 +396,14 @@
     z-index: 2;
 }
 
-.invest-calculator__result {
+.invest-calculator__result,
+.invest-calculator__special {
     // box model
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 65px;
+    padding: 50px;
     width: 100%;
     max-width: 430px;
 
@@ -438,3 +494,4 @@
     // box model
     margin: 0;
 }
+
