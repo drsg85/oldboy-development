@@ -9,7 +9,7 @@
     @include atTablet {
         // box model
         flex-basis: 50%;
-        max-width: 320px;
+        max-width: 340px;
     }
 
     @include atDesktopS {

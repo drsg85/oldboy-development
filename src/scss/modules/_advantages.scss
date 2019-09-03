@@ -11,10 +11,15 @@
     margin-bottom: 50px;
 
     // visual
-    background-image: url('./img/investment/adv.jpg');
+    background-image: url('./img/investment/test.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include atDesktopS {
+        // visual
+        background-image: none;
+    }
 
     .section-header {
         // positioning
