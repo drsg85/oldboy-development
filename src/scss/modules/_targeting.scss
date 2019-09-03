@@ -96,6 +96,10 @@
     @include atDesktopS {
         // box model
         font-size: 2rem;
+    }
+    
+    @include atDesktopL {
+        // typography
         text-align: left;
     }
 }
@@ -113,7 +117,12 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 100px;
+    }
+
     @include atDesktopL {
         // box model
         margin-bottom: 50px;

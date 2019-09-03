@@ -12,7 +12,8 @@
 
     @include atDesktopS {
         // box model
-        flex-basis: auto;
+        flex-basis: 25%;
+        max-width: 250px;
         margin-bottom: 0;
     }
 }
@@ -25,6 +26,16 @@
     font-family: $titleFont;
     font-size: 2rem;
     text-transform: uppercase;
+
+    @include atDesktopS {
+        // typography
+        font-size: 2vw;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .condition-item__subtitle {
@@ -36,6 +47,16 @@
     color: $black;
     font-family: $mainFont;
     font-weight: 600;
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.2vw;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .condition-item__desc {
@@ -47,9 +68,30 @@
     font-family: $titleFont;
     font-size: 2rem;
     line-height: 0.85;
+
+    @include atDesktopS {
+        // typography
+        font-size: 2vw;
+        line-height: 1;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 2rem;
+    }
 }
 
 .condition-item__desc span {
     // typography
     font-size: 1.5rem;
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.8vw;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.5rem;
+    }
 }
