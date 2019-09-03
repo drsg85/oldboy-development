@@ -230,6 +230,9 @@
         // box model
         height: 535px;
         width: calc(100% + 120px);
+
+        // visual
+        background-color: $golden;
     }
 
     &--investment img {

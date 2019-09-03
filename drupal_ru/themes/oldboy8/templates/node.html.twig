@@ -71,6 +71,11 @@
  */
 #}
 
+	{% if url == '/blog' %}
+		{% include '@oldboy8/node--blog.html.twig' %}
+	{% else %}
+
+
 	{% set academy = drupal_entity('block_content', 1) %}
 	{% set brabercount = drupal_entity('block_content', 2) %}
 	{% set braberplaces = drupal_entity('block_content', 3) %}
@@ -109,7 +114,7 @@
 		{% endif %}
     </header>
     <main>
-		{{ content|without('field_hero_content')|without('field_hide_footer') }}
+		{{ content|without('field_hero_content')|without('field_hide_footer')|without('field_cityname') }}
 	{% if hideFooter == "Off" %}
 		{% include '@oldboy8/includes/totop.html.twig' %}
 	{% endif %}
@@ -123,4 +128,5 @@
 	<script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
 
 
+	{% endif %}
 

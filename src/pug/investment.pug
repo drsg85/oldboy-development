@@ -19,21 +19,16 @@ html(lang="en")
                 .hero__nav.hero__nav--hidden
                     include modules/_menu.pug
 
-                .hero__city-select
-                    a(href="choose-city.html").city-select
-                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
-                        p.city-select__city Калининград
-
                 .menu-button.menu-button--close
                     .menu-button__middle
 
             .hero__content.hero__content--investment
                 .hero__caption
                     .hero-caption
-                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй&nbsp;в <br>Oldboy</span>
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй в&nbsp;Oldboy</span>
                         p.hero-caption__motto Инвестиции&nbsp;в&nbsp;федеральную&nbsp;сеть барбершопов&nbsp;в Москве
 
-                    .hero__buttons
+                    .hero__buttons.hero__buttons--investment
                         a.button.ms_booking(href="#") Оставить заявку<br>
                         a.button.button--ghost(href="#") Рассчитать доход
                 
@@ -75,11 +70,64 @@ html(lang="en")
                 .profit__content
                     h3.profit__title Предлагаем инвесторам купить долю от&nbsp;прибыли в&nbsp;одном из&nbsp;наших барбершопов
                     p.profit__subtitle Участие в бизнесе не нужно. Доход полностью пассивный
-                    p.profit__value Стоимость 10% доли = 704 000 Рассчитать
-                    p.profit__info Вы получаете долю сразу в 5 барбершопах, тем самым, максимально диверсифицируя риски инвестиций
-                    p.profit__info Открытием, управлением и развитием барбершопов будет заниматься головная управляющая компания сети
+                    p.profit__value Стоимость 10% доли = 704 000
+                    p.profit__info Вы получаете долю сразу в 5 барбершопах, тем самым, максимально диверсифицируя риски инвестиций.
+                    p.profit__info Открытием, управлением и развитием барбершопов будет заниматься головная управляющая компания сети.
 
+                .profit__calculator
+                    header.profit__calculator-header
+                        h3.profit__calculator-title Рассчитайте, какой вы будете получать доход от купленной доли
+                        p.profit__calculator-subtitle Размер пассивного дохода инвестора <br>при разных вложениях
+                    .invest-calculator
+                        .invest-calculator__graph
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum 704 000
+                                    span.invest-calculator__currency руб.
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 10%
 
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum 1 408 000
+                                    span.invest-calculator__currency руб.
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 20%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum 2 112 000
+                                    span.invest-calculator__currency руб.
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 30%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum 2 816 000
+                                    span.invest-calculator__currency руб.
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 40%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum 3 520 000
+                                    span.invest-calculator__currency руб.
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 50%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum более 3 520 000
+                                    span.invest-calculator__currency руб.
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent >50%
+            
             section.targeting
                 .targeting__header
                     header.section-header
@@ -112,7 +160,14 @@ html(lang="en")
                             p.investment-item__title Тем кто думает открыть свой бизнес по франшизе
                             p.investment-item__text Но не готов заниматься операционной работой
 
-                    p.targeting__info Для нас не важно проживаете вы в России или зарубежом, среди наших инвесторов и партнеров есть уже не малое количество граждан СНГ, Евросоюза и других госдударств.
+                    p.targeting__info Для нас не важно проживаете вы в&nbsp;России или&nbsp;зарубежом, среди наших инвесторов и&nbsp;партнеров есть уже не&nbsp;малое количество граждан СНГ, Евросоюза и&nbsp;других госдударств.
+
+                .targeting__compare
+                    header.targeting__compare-header
+                        h4.targeting__compare-title Сравните доходность инвестиций
+                        p.targeting__compare-subtitle Средняя чистая прибыль барбершопов в Москве<br> 400 000 – 450 000 руб. в месяц
+                    .targeting__compare-graph
+                        canvas#targeting-compare-graph
 
             section.protection
                 .protection__header
@@ -122,7 +177,7 @@ html(lang="en")
 
                     .protection__caption
                         h3.protection__title Мы предлагаем прозрачный доход контроля вложенных средств
-                        p.protection__subtitle Онлайн инструменты, доступные в любое время из любой точки мира
+                        p.protection__subtitle Онлайн инструменты, доступные в&nbsp;любое время из&nbsp;любой точки мира
 
                 .protection__content
                     p.protection__headline Защита&nbsp;инвестиций и&nbsp;контроль доходов
@@ -130,7 +185,7 @@ html(lang="en")
                     .protection__wrapper
                         h3.protection__heading Вы инвестируете по одному договору в 5 барбершопов
                         p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за 5 лет способна окупить все осуществленные вами инвестиции.
-                        ul.protection__text Инвестор так же получает возможность <strong>контролировать доходность</strong> используя ряд преимуществ: 
+                        ul.protection__text Инвестор так же получает возможность <strong>контролировать доходность</strong>, используя ряд преимуществ: 
                             li.protection__list 1. Инвестор может смотреть все цифры бизнеса в <strong>любое время из любой точки мира</strong>.
                             li.protection__list 2. <strong>Online доступ</strong> к системе учета Yclient.
                             li.protection__list 3. Барбершопы <strong>полностью автоматизированы</strong> (онлайн запись, мобильное приложение, электронный журнал с напоминаниями).
@@ -142,7 +197,7 @@ html(lang="en")
                 .protection__secure
                     .protection__deco
                         .protection__image: img(src="./img/mobile-app.png", alt="")
-                        p.protection__motto Инвестиции с Oldboy - это удобно и безопасно
+                        p.protection__motto Инвестиции с Oldboy - это удобно и&nbsp;безопасно
 
                     .protection__items
                         .investment-item
@@ -174,13 +229,13 @@ html(lang="en")
                             img(src="./img/investment/adv.jpg", alt="Барбершоп Oldboy")
 
                     .advantages__description
-                        h2.advantages__title Сотрудничество с нашим брендом имеет ряд преимуществ для партнёров
+                        h2.advantages__title Сотрудничество с&nbsp;нашим брендом имеет ряд преимуществ для&nbsp;партнёров
                         p.advantages__subtitle Oldboy Barbershop - это крупнейшая сеть барбершопов в России и СНГ
-                        p.advantages__text <strong>Почему привлекаем инвестиции?</strong> Инвестиции нужны для быстрого масшабирования - открытия новых барбершопов в Москве
+                        p.advantages__text <strong>Почему привлекаем инвестиции?</strong> <br>Инвестиции нужны для быстрого масшабирования - открытие новых барбершопов в Москве
                         p.advantages__plan План за год открыть 139 новых барбершопов
 
                 .advantages__content
-                    p.advantages__confirm Мы подтверждаем свои компетенции на конкретных примерах <br>Роль лидера рынка, это не пусты слова
+                    p.advantages__confirm Мы подтверждаем свои компетенции на&nbsp;конкретных примерах <br>Роль лидера рынка, это не&nbsp;пустые слова
 
                     .advantages__items
                         .advantage-item
@@ -188,30 +243,31 @@ html(lang="en")
                                 p.advantage-item__count 230
                                 p.advantage-item__subtitle Открытых филиалов по всему миру
 
-                        .advantage-item.advantages__items--
+                        .advantage-item.advantage-item--countries
                             header.advantage-item__info
                                 p.advantage-item__count 10
                                 p.advantage-item__subtitle Стран в которых работают нащи барбершопы
 
-                        .advantage-item.advantages__items--
+                        .advantage-item.advantage-item--branches
                             header.advantage-item__info
                                 p.advantage-item__count 130
                                 p.advantage-item__subtitle Филиалов открыто уже в этом году
 
-                        .advantage-item.advantages__items--
+                        .advantage-item.advantage-item--closed
                             header.advantage-item__info
                                 p.advantage-item__count 0
                                 p.advantage-item__subtitle Закрывшихся филиалов за 15 лет работы бренда
 
                     .advantages__cta
                         h3.advantages__title.advantages__title--bottom Запишитесь прямо сейчас на презентацию бизнеса в действующем барбершопе, чтобы проверить все цифры
-                        p.advantages__subtitle По договоренности встречи проводим по Skype или по звонку через мессенджеры
+                        p.advantages__subtitle.advantages__subtitle--bottom По договоренности встречи проводим по Skype или по звонку через мессенджеры
                         .advantages__button
                              a.button.ms_booking(href="#") Оставить заявку
 
+            button.form-opener
+                span.form-opener__text Оставить заявку
 
-
-        include modules/_choose-city.pug
+            include modules/_invest-form.pug
         include modules/_footer.pug
 
-        script(src="scripts.js")
+        script(src="investment.js")
