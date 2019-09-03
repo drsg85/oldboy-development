@@ -14,7 +14,16 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 0;
+        max-width: 270px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 340px;
+    }
+
+    @include atDesktopL {
+        // box model
         max-width: 270px;
     }
 }

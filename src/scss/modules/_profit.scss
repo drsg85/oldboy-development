@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1600px;
+    // margin-right: auto;
+    // margin-left: auto;
     margin-bottom: 100px;
 }
 
@@ -16,6 +20,11 @@
         margin-right: 50px;
         margin-bottom: 0;
     }
+
+    @include atDesktopM {
+        // box model
+        width: initial;
+    }
 }
 
 .profit__content {
@@ -25,8 +34,18 @@
     
     @include atDesktopS {
         // box model
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 40px;
+        margin-top: 80px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        display: block;
+        margin-top: initial;
         margin-bottom: 70px;
-        padding: 0;
     }
 }
 
@@ -43,11 +62,18 @@
     
     @include atDesktopS {
         // box model
-        max-width: 650px;
         
+        width: 100%;
+        max-width: 700px;
+
         // typography
         font-size: 2rem;
         line-height: 1.5;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 650px;
     }
 }
 
@@ -55,6 +81,7 @@
     // box model
     margin: 0;
     margin-bottom: 50px;
+    width: 100%;
     max-width: 210px;
 
     // typography
@@ -65,10 +92,15 @@
     
     @include atDesktopS {
         // box model
-        max-width: auto;
+        max-width: 50%;
 
         // typography
         font-size: 1.25rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 100%;
     }
 }
 
