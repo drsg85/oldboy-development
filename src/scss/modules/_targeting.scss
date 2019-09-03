@@ -107,12 +107,13 @@
 
     @include atTablet {
         // box model
+        align-items: flex-start;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
     
-    @include atDesktopS {
+    @include atDesktopL {
         // box model
         margin-bottom: 50px;
         flex-wrap: nowrap;
@@ -144,6 +145,12 @@
         align-items: flex-start;
         width: 100%;
         max-width: 1635px;
+        padding: 0 40px;
+        margin-left: 0px;
+    }
+
+    @include atDesktopM {
+        // box model
         margin-left: 105px;
     }
 }
@@ -201,7 +208,15 @@
 }
 
 .targeting__compare-graph {
-    width: 100%;
-    max-width: 1100px;
-    height: 400px;
+    @include atDesktopS {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+
+    @include atDesktopM {
+        width: 100%;
+        max-width: 1100px;
+        height: 400px;
+    }
 }
