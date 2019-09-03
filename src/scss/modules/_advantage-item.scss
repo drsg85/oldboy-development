@@ -3,17 +3,51 @@
     position: relative;
 
     // box model
-    display: block;
-    height: 400px;
-    flex-basis: 50%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin-bottom: 50px;
+    width: 100%;
+    height: calc(56.25vw - 40px);
+    min-height: 180px;
+    margin: 0;
+    margin-bottom: 25px;
 
     // visual
+    background-color: $darkGold;
     background-image: url('./img/investment/man.jpg');
+    border-radius: 5px;
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
+
+    &--countries {
+        // visual
+        background-image: url('./img/investment/haircut.jpg');
+    }
+
+    &--branches {
+        // visual
+        background-image: url('./img/investment/branch.jpg');
+    }
+
+    &--closed {
+        // visual
+        background-image: url('./img/investment/closed.jpg');
+    }
+
+    @include atTablet {
+        // box model
+        margin-bottom: 40px;
+        max-height: 340px;
+        flex-basis: calc(50% - 20px);
+        height: calc(31.25vw - 60px);
+        width: auto;
+    }
+
+    @include atDesktopS {
+        // box model
+    }
+
+    @include atDesktopL {
+        // box model
+        max-height: 360px;
+    }
 }
 
 .advantage-item__info {
@@ -23,19 +57,34 @@
     left: 0;
 
     // box model
-    padding-left: 50px;
-    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .advantage-item__count {
     // box model
     margin: 0;
-    margin-left: -8px;
-
+    
     // typography
     color: $light;
     font-family: $displayFont;
-    font-size: 12rem;
+    font-size: 15vw;
+
+    @include atTablet {
+        // typography
+        font-size: 10vw;
+    }
+    
+    @include atDesktopS {
+        // box model
+        margin-left: -8px;
+    }
 }
 
 .advantage-item__subtitle {

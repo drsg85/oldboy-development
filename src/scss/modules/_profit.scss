@@ -8,38 +8,68 @@
 
 .profit__header {
     // box model
-    margin-right: 50px;
+    width: 100%;
+    margin-bottom: 80px;
+
+    @include atDesktopS {
+        // box model
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
 }
 
 .profit__content {
     // box model
-    margin-bottom: 70px;
+    margin-bottom: 30px;
+    padding: 0 25px;
+    
+    @include atDesktopS {
+        // box model
+        margin-bottom: 70px;
+        padding: 0;
+    }
 }
 
 .profit__title {
     // box model
     margin: 0;
-    max-width: 650px;
-
+    
     // typography
     color: $black;
     font-family: $titleFont;
-    font-size: 2rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.2;
     text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        max-width: 650px;
+        
+        // typography
+        font-size: 2rem;
+        line-height: 1.5;
+    }
 }
 
 .profit__subtitle {
     // box model
     margin: 0;
     margin-bottom: 50px;
+    max-width: 210px;
 
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1.25rem;
     line-height: 1.2;
     text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        max-width: auto;
+
+        // typography
+        font-size: 1.25rem;
+    }
 }
 
 .profit__value {
@@ -49,9 +79,14 @@
 
     // typography
     color: $golden;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: $titleFont;
     text-transform: uppercase;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 1.4rem;
+    }
 }
 
 .profit__info {
@@ -64,7 +99,6 @@
     color: $black;
     font-family: $mainFont;
     line-height: 1.5;
-    font-weight: 600;
 }
 
 .profit__calculator {
@@ -130,6 +164,7 @@
 .profit__calculator-title {
     // box model
     margin: 0;
+    margin-bottom: 15px;
 
     // typography
     font-family: $titleFont;

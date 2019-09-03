@@ -1,7 +1,12 @@
 .investment-text {
     // typography
     font-family: $titleFont;
-    text-align: right;
+    text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
 }
 
 .investment-text__call {

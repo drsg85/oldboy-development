@@ -1,6 +1,20 @@
 .condition-item {
+    // box model
+    margin-bottom: 60px;
+
     // typography
     text-align: center;
+
+    @include atTablet {
+        // box model
+        flex-basis: 50%;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
 }
 
 .condition-item__title {
