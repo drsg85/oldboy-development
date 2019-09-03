@@ -24,6 +24,18 @@
     height: 110px;
     width: 110px;
     margin-bottom: 25px;
+
+    @include atDesktopS {
+        // box model
+        width: 50px;
+        height: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        height: 110px;
+        width: 110px;
+    }
 }
 
 .investment-item__image img {
@@ -41,6 +53,16 @@
     font-family: $titleFont;
     font-size: 1.5rem;
     text-align: center;
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.2rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.5rem;
+    }
 }
 
 .investment-item__text {
