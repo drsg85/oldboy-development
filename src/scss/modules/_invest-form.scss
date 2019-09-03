@@ -8,6 +8,7 @@
 
     // box model
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -80,8 +81,6 @@
     color: $golden;
 }
 
-.invest__content {}
-
 .invest__input-container {
     // box model
     margin-bottom: 20px;
@@ -95,7 +94,7 @@
     }
 }
 
-.ivest__input {
+.invest__input {
     // box model
     width: 100%;
     padding: 15px;
@@ -112,45 +111,45 @@
     border-radius: 3px;
 }
 
-.ivest__input::-webkit-input-placeholder {
+.invest__input::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: $golden;
     font-weight: 400;
 }
 
-.ivest__input:-moz-placeholder {
+.invest__input:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: $golden;
     font-weight: 400;
     opacity: 1;
 }
 
-.ivest__input::-moz-placeholder {
+.invest__input::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: $golden;
     font-weight: 400;
     opacity: 1;
 }
 
-.ivest__input:-ms-input-placeholder {
+.invest__input:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: $golden;
     font-weight: 400;
 }
 
-.ivest__input::-ms-input-placeholder {
+.invest__input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: $golden;
     font-weight: 400;
 }
 
-.ivest__input::placeholder {
+.invest__input::placeholder {
     /* Most modern browsers support this now. */
     color: $golden;
     font-weight: 400;
 }
 
-.ivest__input-policy {
+.invest__input-policy {
     // box model
     margin: 0;
 
@@ -173,8 +172,8 @@
     position: absolute;
     left: -9999px;
 
-    &:not(:checked) + .ivest__input-policy,
-    &:checked + .ivest__input-policy {
+    &:not(:checked) + .invest__input-policy,
+    &:checked + .invest__input-policy {
         // positioning
         position: relative;
 
@@ -185,8 +184,8 @@
         cursor: pointer;
     }
 
-    &:not(:checked) + .ivest__input-policy:before,
-    &:checked + .ivest__input-policy:before {
+    &:not(:checked) + .invest__input-policy:before,
+    &:checked + .invest__input-policy:before {
         content: "";
 
         // positioning
@@ -202,8 +201,8 @@
         background-color: $golden;
     }
 
-    &:not(:checked) + .ivest__input-policy:after,
-    &:checked + .ivest__input-policy:after {
+    &:not(:checked) + .invest__input-policy:after,
+    &:checked + .invest__input-policy:after {
         content: url(img/icons/check.svg);
 
         // positioning
@@ -216,7 +215,7 @@
         transition: opacity 0.25s;
     }
 
-    &:not(:checked) + .ivest__input-policy:after {
+    &:not(:checked) + .invest__input-policy:after {
         // positioning
         transform: scale(0);
 
@@ -224,7 +223,7 @@
         opacity: 0;
     }
 
-    &:checked + .ivest__input-policy:after {
+    &:checked + .invest__input-policy:after {
         // positioning
         transform: scale(1);
 
@@ -232,19 +231,19 @@
         opacity: 1;
     }
 
-    &:disabled:not(:checked) + .ivest__input-policy:before,
-    &::disabled::checked + .ivest__input-policy::before {
+    &:disabled:not(:checked) + .invest__input-policy:before,
+    &::disabled::checked + .invest__input-policy::before {
         // visual
         background-color: #cccccc;
         border-color: #cccccc;
     }
 
-    &::disabled::checked + .ivest__input-policy:after {
+    &::disabled::checked + .invest__input-policy:after {
         // typography
         color: #999999;
     }
 
-    &::disabled + .ivest__input-policy {
+    &::disabled + .invest__input-policy {
         //color
         color: #aaaaaa;
     }
