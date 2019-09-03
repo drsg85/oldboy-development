@@ -78,9 +78,15 @@
 
     @include atDesktopS {
         // box model
+        margin-left: 65px;
+        padding: 0;
         padding-bottom: 120px;
-        margin-left: 200px;
         padding-top: 75px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin-left: 180px;
     }
 }
 
@@ -153,6 +159,11 @@
     @include atDesktopS {
         // box model
         display: flex;
+        padding: 0 40px;
+    }
+
+    @include atDesktopM {
+        // box model
         padding-left: 200px;
     }
 }
@@ -194,7 +205,20 @@
         
         // typography
         font-size: 2rem;
-        text-align-last: left;
+        text-align: left;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 10px 35px;
+
+        // typography
+        text-align: center;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 10px 40px;
     }
 }
 
@@ -203,9 +227,14 @@
     
     @include atDesktopS {
         // box model
-        margin-left: 200px;
+        margin-left: 30px;
         max-width: 600px;
         margin-bottom: 80px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-left: 120px;
     }
 }
 
@@ -262,41 +291,39 @@
     @include atDesktopS {
         // box model
         flex-direction: row;
+        padding: 30px 0;
+        margin-top: 230px;
+
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-top: 0;
         padding-bottom: 125px;
         padding-left: 180px;
         padding-right: 80px;
         padding-top: 75px;
-
     }
 }
-
-// .protection__secure::before {
-//     content: "";
-
-//     // positioning
-//     position: absolute;
-//     top: -10px;
-//     left: 0;
-//     z-index: 7;
-    
-//     // box model
-//     width: 100%;
-//     height: 80px;
-    
-//     // visual
-//     background-image: url('./img/white-grunge.svg');
-//     background-position: top 2px center;
-//     background-repeat: repeat-x;
-//     background-size: 800px;
-//     transform: rotateX(180deg);
-// }
 
 .protection__deco {
 
     @include atDesktopS {
         // positioning
         position: absolute;
+        left: 10px;
+        bottom: 230px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        left: 80px;
         bottom: 120px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        left: initial;
     }
 }
 
@@ -307,8 +334,13 @@
     @include atDesktopS {
         // box model
         display: block;
-        height: 580px;
+        height: 560px;
         margin-bottom: 20px;
+    }
+
+    @include atDesktopM {
+        // box model
+        height: 580px;
     }
 }
 
@@ -332,11 +364,18 @@
     
     @include atDesktopS {
         // box model
-        margin-bottom: 0;
+        margin-bottom: 60px;
+        margin-left: 30px;
 
         // typography
         font-size: 2rem;
         text-align: left;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 0;
+        margin-left: 0;
     }
 }
 
@@ -359,6 +398,17 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-left: 520px;
+    margin-top: 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-left: 220px;
+        margin-top: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 520px;
     }
 }

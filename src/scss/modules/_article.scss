@@ -24,7 +24,51 @@
 .article h2 {
     // box model
     margin: 1rem 0;
-    max-width: 400px;
+    //max-width: 750px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    @include atDesktopS {
+        // typography
+        line-height: 1.5;
+    }
+
+    @include atDesktopM {
+        // box model
+        //max-width: 850px;
+
+        // typography
+        font-size: 2rem;
+    }
+}
+
+.article h3 {
+    // box model
+    margin: 1rem 0;
+    //max-width: 400px;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.75;
+    text-transform: uppercase;
+
+    @include atDesktopS {
+        font-size: 1.6rem;
+    }
+}
+.article h4 {
+    // box model
+    margin: 1rem 0;
+    //max-width: 400px;
 
     // typography
     color: $dark;
@@ -36,15 +80,7 @@
 
     @include atDesktopS {
         // typography
-        line-height: 2;
-    }
-
-    @include atDesktopM {
-        // box model
-        max-width: 500px;
-
-        // typography
-        font-size: 1.125rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -56,7 +92,14 @@
     color: $dark;
     font-family: $mainFont;
     font-size: 1rem;
+    text-align: justify;
+    text-indent: 25px;
     line-height: 1.5;
+
+    @include atTablet {
+        // typography
+        text-indent: 45px;
+    }
 
     @include atDesktopS {
         // typography
@@ -69,6 +112,60 @@
 
         // typography
         font-size: 1.0625rem;
+    }
+}
+
+.article ul {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // visual
+    list-style: none;
+}
+
+.article ol {
+    // box model
+    padding: 0;
+}
+
+.article ul li,
+.article ol li {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 15px;
+    margin-left: 15px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 16px;
+    line-height: 1.2;
+
+    
+
+    &:last-child {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.article ul li {
+    &:before {
+        content: "–";
+
+        // positioning
+        position: absolute;
+        left: -15px;
+        top: 50%;
+
+        // box model
+        margin-top: -10px;
+
+        // typography
+        font-family: $mainFont;
+        color: $grey;
     }
 }
 

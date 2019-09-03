@@ -3,6 +3,7 @@ class InvestForm {
         this.header = document.querySelector('.hero--investment');
         this.form = document.querySelector('.invest-form-container');
         this.trigger = document.querySelector('.form-opener');
+        this.formTriggers = document.querySelectorAll('.form-trigger');
         this.closeButton = this.form.querySelector('.invest__close-icon');
         if(this.trigger) {
             this.headerHeight = this.header.clientHeight - 300;
@@ -51,7 +52,6 @@ class InvestForm {
     }
 
     addEvents() {
-        console.log(this.headerHeight);
         this.trigger.addEventListener('click', () => {
             if(!this.form.classList.contains('invest-form-container--active')) {
                 this.form.classList.add('invest-form-container--active');
@@ -63,6 +63,17 @@ class InvestForm {
             }
         });
         
+        this.formTriggers.forEach((el) => {
+            el.addEventListener('click', () => {
+                if(!this.form.classList.contains('invest-form-container--active')) {
+                    this.form.classList.add('invest-form-container--active');
+                    this.trigger.classList.add('form-opener--active');
+                }
+                else {
+                    this.form.classList.remove('invest-form-container--active');
+                }
+            })
+        })
         this.closeButton.addEventListener('click', () => {
             this.form.classList.remove('invest-form-container--active');
             this.trigger.classList.remove('form-opener--active');

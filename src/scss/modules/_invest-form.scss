@@ -12,18 +12,23 @@
     justify-content: center;
     height: 100vh;
     max-height: 1000px;
-    width: 675px;
+    width: 100%;
 
     // visual
     background-color: $dark;
     background-image: url('./img/investment/chair.jpg');
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url('./img/investment/chair.jpg') no-repeat center center;
     background-size: cover;
-    transition: transform 0.25s ease;
+    transition: transform 0.35s ease-in-out;
 
     &--active {
         // positioning
         transform: translateX(0);
+    }
+
+    @include atTablet {
+        // box model
+        width: 675px;
     }
 }
 
@@ -35,8 +40,14 @@
 .invest__close-icon {
     // positioning
     position: absolute;
-    top: -45px;
-    right: -45px;
+    top: -55px;
+    right: 15px;
+
+    @include atTablet {
+        // positioning
+        top: -45px;
+        right: -45px;
+    }
 }
 
 .invest__header {

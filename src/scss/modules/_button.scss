@@ -22,7 +22,8 @@
     border: 2px solid $golden;
     border-radius: 25px; // 1/2 of line-height + 2px border-width
     transition: all 0.25s ease-out;
-
+    cursor: pointer;
+    
     @include atTablet {
         // box model
         padding: 0 30px;

@@ -33,7 +33,7 @@
                     <h1 class="hero-caption__title"><span class="hero-caption__big hero-caption__big--investment">Инвестируй в&nbsp;Oldboy</span></h1>
                     <p class="hero-caption__motto">Инвестиции&nbsp;в&nbsp;федеральную&nbsp;сеть барбершопов&nbsp;в Москве</p>
                 </div>
-                <div class="hero__buttons hero__buttons--investment"><a class="button ms_booking" href="#">Оставить заявку<br></a><a class="button button--ghost" href="#">Рассчитать доход</a></div>
+                <div class="hero__buttons"><button class="button form-trigger ms_booking">Оставить заявку<br></button><a class="button button--ghost" id="scrollToCalculator" href="#profit">Рассчитать доход</a></div>
             </div>
             <div class="hero__investment">
                 <div class="investment-text">
@@ -69,7 +69,7 @@
                 </div>
             </div>
         </section>
-        <section class="profit">
+        <section class="profit" id="profit">
             <div class="profit__header">
                 <header class="section-header">
                     <h2 class="section-header__title">Пассивный <br>доход</h2>
@@ -89,31 +89,68 @@
                     <p class="profit__calculator-subtitle">Размер пассивного дохода инвестора <br>при разных вложениях</p>
                 </header>
                 <div class="invest-calculator">
-                    <div class="invest-calculator__graph"><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" />
-                            <p class="invest-calculator__sum">704 000<span class="invest-calculator__currency">руб.</span></p>
+                    <header class="invest-calculator__header">
+                        <h5 class="invest-calculator__title">Сумма инвестиций</h5>
+                        <p class="invest-calculator__subtitle">Процент от прибыли барбершопа</p>
+                    </header>
+                    <div class="invest-calculator__graph"><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" checked="checked" />
+                            <p class="invest-calculator__sum" data-month="40000">704 000 <span class="invest-calculator__currency rouble-sign">Р</span></p>
                             <div class="invest-calculator__switcher"></div>
                             <div class="invest-calculator__line"></div><span class="invest-calculator__percent">10%</span>
                         </label><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" />
-                            <p class="invest-calculator__sum">1 408 000<span class="invest-calculator__currency">руб.</span></p>
+                            <p class="invest-calculator__sum" data-month="80000">1 408 000 <span class="invest-calculator__currency rouble-sign">Р</span></p>
                             <div class="invest-calculator__switcher"></div>
                             <div class="invest-calculator__line"></div><span class="invest-calculator__percent">20%</span>
                         </label><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" />
-                            <p class="invest-calculator__sum">2 112 000<span class="invest-calculator__currency">руб.</span></p>
+                            <p class="invest-calculator__sum" data-month="120000">2 112 000 <span class="invest-calculator__currency rouble-sign">Р</span></p>
                             <div class="invest-calculator__switcher"></div>
                             <div class="invest-calculator__line"></div><span class="invest-calculator__percent">30%</span>
                         </label><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" />
-                            <p class="invest-calculator__sum">2 816 000<span class="invest-calculator__currency">руб.</span></p>
+                            <p class="invest-calculator__sum" data-month="160000">2 816 000 <span class="invest-calculator__currency rouble-sign">Р</span></p>
                             <div class="invest-calculator__switcher"></div>
                             <div class="invest-calculator__line"></div><span class="invest-calculator__percent">40%</span>
                         </label><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" />
-                            <p class="invest-calculator__sum">3 520 000<span class="invest-calculator__currency">руб.</span></p>
+                            <p class="invest-calculator__sum" data-month="200000">3 520 000 <span class="invest-calculator__currency rouble-sign">Р</span></p>
                             <div class="invest-calculator__switcher"></div>
                             <div class="invest-calculator__line"></div><span class="invest-calculator__percent">50%</span>
                         </label><label class="invest-calculator__label"><input class="invest-calculator__radio" type="radio" name="graph" />
-                            <p class="invest-calculator__sum">более 3 520 000<span class="invest-calculator__currency">руб.</span></p>
+                            <p class="invest-calculator__sum">более 3 520 000 <span class="invest-calculator__currency rouble-sign">Р</span></p>
                             <div class="invest-calculator__switcher"></div>
-                            <div class="invest-calculator__line"></div><span class="invest-calculator__percent">>50%</span>
+                            <div class="invest-calculator__line"></div><span class="invest-calculator__percent">>60%</span>
                         </label></div>
+                    <div class="invest-calculator__result">
+                        <div class="invest-calculator__summ">
+                            <p class="invest-calculator__summ-text">Сумма инвестиций<br><span class="invest-calculator__value" id="invest-calculator__value-invest">704 000 </span><span class="invest-calculator__curr rouble-sign">Р</span></p>
+                        </div>
+                        <div class="invest-calculator__passive">
+                            <p class="invest-calculator__summ-text">Размер пассивного дохода <br><span class="invest-calculator__value" id="invest-calculator__value-passive">2 400 000</span><span class="invest-calculator__curr rouble-sign">Р</span></p>
+                            <p class="invest-calculator__period">за пять лет</p>
+                        </div>
+                        <div class="invest-calculator__rest">
+                            <div class="invest-calculator__summ-val">
+                                <p class="invest-calculator__summ-text"><span class="invest-calculator__value" id="invest-calculator__value-year">480 000</span><span class="invest-calculator__curr rouble-sign">Р</span></p>
+                                <p class="invest-calculator__period">за один год</p>
+                            </div>
+                            <div class="invest-calculator__summ-val">
+                                <p class="invest-calculator__summ-text"><span class="invest-calculator__value" id="invest-calculator__value-month">40 000</span><span class="invest-calculator__curr rouble-sign">Р</span></p>
+                                <p class="invest-calculator__period">в месяц</p>
+                            </div>
+                        </div>
+                        <div class="invest-calculator__request"><button class="button form-trigger invest-button">Оставить заявку</button></div>
+                        <div class="invest-calculator__vip">
+                            <header class="invest-calculator__vip-header">
+                                <p class="invest-calculator__vip-subtitle">Эксклюзивные условия для инвестиций свыше</p>
+                                <h3 class="invest-calculator__vip-title">3 520 000 <span class="invest-calculator__curr rouble-sign">Р</span></h3>
+                            </header>
+                            <div class="invest-calculator__vip-content">
+                                <h4 class="invest-calculator__vip-content-title">Статус VIP-инвестор</h4>
+                                <div class="invest-calculator__vip-content-body">
+                                    <div class="invest-calculator__vip-content-icon"><img class="invest-calculator__vip-content-img" src="./img/investment/vip.svg" alt="VIP" /></div>
+                                    <p class="invest-calculator__vip-content-text">Свяжитесь с нашим менеджером,чтобы узнать какие преимущетва мы предлагаем для крупных инвесторов.</p>
+                                </div><button class="button form-trigger invest-button">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -260,7 +297,7 @@
                 <div class="advantages__cta">
                     <h3 class="advantages__title advantages__title--bottom">Запишитесь прямо сейчас на презентацию бизнеса в действующем барбершопе, чтобы проверить все цифры</h3>
                     <p class="advantages__subtitle advantages__subtitle--bottom">По договоренности встречи проводим по Skype или по звонку через мессенджеры</p>
-                    <div class="advantages__button"><a class="button ms_booking" href="#">Оставить заявку</a></div>
+                    <div class="advantages__button"><button class="button form-trigger ms_booking">Оставить заявку</button></div>
                 </div>
             </div>
         </section><button class="form-opener"><span class="form-opener__text">Оставить заявку</span></button>
@@ -283,7 +320,10 @@
                 </div>
             </form>
         </article>
-    </main>
+    </main><button class="up-button" id="up-button">
+        <div class="up-button__arrow"></div>
+        <p class="up-button__text">Наверх</p>
+    </button>
     <footer class="footer">
         <div class="footer__content">
             <div class="footer__info-n-contacts">
