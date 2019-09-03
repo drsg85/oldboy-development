@@ -75,6 +75,7 @@
 
     @include atDesktopL {
         // box model
+        margin-bottom: 200px;
         padding-left: 700px;
         padding-right: 80px;
     }
@@ -149,7 +150,7 @@
         margin-left: 0px;
     }
 
-    @include atDesktopM {
+    @include atFullHD {
         // box model
         margin-left: 105px;
     }
@@ -216,7 +217,12 @@
 
     @include atDesktopM {
         width: 100%;
-        max-width: 1100px;
+        max-width: 700px;
         height: 400px;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 1100px;
     }
 }
