@@ -90,9 +90,14 @@
         position: unset;
 
         // box model
-        margin-left: 200px;
+        margin-left: 150px;
         padding: 0;
         padding-top: 50px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin-left: 200px;
     }
 }
 
@@ -233,8 +238,13 @@
         padding-left: 150px;
         
         // typography
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: left;
+    }
+    
+    @include atDesktopM {
+        // typography
+        font-size: 2.5rem;
     }
 }
 

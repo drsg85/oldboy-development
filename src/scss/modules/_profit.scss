@@ -4,7 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1600px;
+    // max-width: 1600px;
     // margin-right: auto;
     // margin-left: auto;
     margin-bottom: 100px;
@@ -34,9 +34,9 @@
     
     @include atDesktopS {
         // box model
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
         padding: 0 40px;
         margin-top: 80px;
     }
@@ -136,7 +136,7 @@
 .profit__calculator {
     // box model
     width: 100%;
-    max-width: 1600px;
+    // max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 20px;
@@ -154,6 +154,8 @@
     @include atDesktopL {
         // box model
         padding: 0;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
@@ -220,6 +222,7 @@
         // typography
         font-size: 36px;
         line-height: 48px;
+        text-align: left;
     }
 }
 
@@ -243,5 +246,6 @@
         // typography
         font-size: 24px;
         line-height: 30px;
+        text-align: left;
     }
 }

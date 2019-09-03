@@ -85,6 +85,11 @@
         // box model
         margin-left: -8px;
     }
+
+    @include atDesktopM {
+        // typography
+        font-size: 10rem;
+    }
 }
 
 .advantage-item__subtitle {
