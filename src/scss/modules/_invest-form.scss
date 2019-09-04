@@ -38,15 +38,24 @@
     position: relative;
 }
 
+.invest-content {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 100%;
+    max-width: 330px;
+}
+
 .invest__close-icon {
     // positioning
     position: absolute;
-    top: -55px;
+    top: -250px;
     right: 15px;
 
     @include atTablet {
         // positioning
-        top: -45px;
+        top: -170px;
         right: -45px;
     }
 }

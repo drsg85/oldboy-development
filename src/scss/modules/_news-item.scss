@@ -32,6 +32,7 @@
     @include atDesktopS {
         // box model
         flex-basis: 25%;
+        max-width: 45%;
     }
 }
 
