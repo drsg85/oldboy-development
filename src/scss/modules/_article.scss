@@ -32,6 +32,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.5;
+    text-align: center;
     text-transform: uppercase;
 
     @include atDesktopS {
@@ -59,6 +60,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.75;
+    text-align: center;
     text-transform: uppercase;
 
     @include atDesktopS {
@@ -76,6 +78,7 @@
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.75;
+    text-align: center;
     text-transform: uppercase;
 
     @include atDesktopS {
@@ -304,6 +307,7 @@
     // typography
     font-family: $titleFont;
     font-size: 1.125rem;
+    text-indent: 0;
 
     // borders
     border-top: 2px solid $golden;
