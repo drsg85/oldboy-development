@@ -1,0 +1,58 @@
+.investment-contacts {
+    // box model
+    margin: 0 auto;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        left: calc(100% - 880px);
+        bottom: 20px;
+    }
+}
+
+.investment-contacts__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1rem;
+
+    @include atTablet {
+        // typography
+        font-size: 1.2rem;
+    }
+}
+
+.investment-contacts__phone {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2.5rem;
+    text-decoration: none;
+
+    @include atTablet {
+        // typography
+        font-size: 3rem;
+    }
+}
+
+.investment-contacts__name {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-align: right;
+
+    @include atTablet {
+        // typography
+        font-size: 1.2rem;
+    }
+}

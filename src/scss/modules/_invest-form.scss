@@ -50,7 +50,7 @@
 .invest__close-icon {
     // positioning
     position: absolute;
-    top: -250px;
+    top: -170px;
     right: 15px;
 
     @include atTablet {
@@ -64,19 +64,29 @@
     // box model
     width: 100%;
     max-width: 330px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 60px;
+    }
 }
 
 .invest__title {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     // typography
     font-family: $titleFont;
     font-size: 36px;
     line-height: 1;
     color: $light;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 15px;
+    }
 }
 
 .invest__subtitle {
