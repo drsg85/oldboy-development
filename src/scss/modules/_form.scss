@@ -250,6 +250,11 @@
     color: #000000;
     font-size: 0.625rem;
     text-transform: uppercase;
+
+    &--investment {
+        // typography
+        color: $light;
+    }
 }
 
 
