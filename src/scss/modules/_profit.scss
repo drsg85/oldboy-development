@@ -172,9 +172,6 @@
         // positioning
         transform: translateY(330px);
         max-width: 44%;
-
-        // box model
-        margin-bottom: initial;
     }
 
     @include atDesktopS {
@@ -183,7 +180,6 @@
 
         // box model
         max-width: 50%;
-        margin-bottom: initial;
     }
 
     @include atDesktopM {
@@ -219,7 +215,7 @@
     
     @include atDesktopS {
         // box model
-        margin-bottom: initial;
+        // margin-bottom: initial;
 
         // typography
         font-size: 36px;

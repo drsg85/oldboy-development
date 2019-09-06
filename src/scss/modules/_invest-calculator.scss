@@ -165,11 +165,11 @@
 
 .invest-calculator__header {
     // box model
-    display: flex;
     flex-direction: column;
     align-items: stretch;
     margin-bottom: 80px;
     width: 100%;
+    display: none;
 
     @include atTablet {
         // box model
@@ -184,6 +184,7 @@
 
     @include atDesktopM {
         // box model
+        display: flex;
         width: auto;
         margin-bottom: 0;
     }

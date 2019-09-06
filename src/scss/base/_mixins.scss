@@ -51,3 +51,10 @@
         @content;
     }
 }
+
+// breakpoint for old phones
+@mixin atSmallMobile {
+    @media (min-width: 375px) {
+        @content;
+    }
+}

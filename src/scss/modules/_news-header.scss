@@ -155,6 +155,11 @@
     }
 }
 
+.news-header__footer .social {
+    // box model
+    display: none;
+}
+
 .news-header__location {
     // box model
     margin: 0;
