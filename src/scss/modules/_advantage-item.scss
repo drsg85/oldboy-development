@@ -55,10 +55,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
-
+    
     // box model
     padding-left: 30px;
     padding-bottom: 30px;
+    
+    // visual
+    transition: ease-in-out 0.25s;
 
     @include atDesktopS {
         // box model
