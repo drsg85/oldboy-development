@@ -14,6 +14,7 @@
     height: 100vh;
     max-height: 1000px;
     width: 100%;
+    padding: 0 20px;
 
     // visual
     background-color: $dark;
@@ -27,6 +28,11 @@
         transform: translateX(0);
     }
 
+    @include atSmallMobile {
+        // box model
+        padding: 0;
+    }
+
     @include atTablet {
         // box model
         width: 675px;
@@ -36,6 +42,8 @@
 .invest {
     // positioning
     position: relative;
+
+    
 }
 
 .invest-content {
@@ -50,9 +58,13 @@
 .invest__close-icon {
     // positioning
     position: absolute;
-    top: -170px;
+    top: -100px;
     right: 15px;
 
+    @include atSmallMobile {
+        // positioning
+        top: -170px;
+    }
     @include atTablet {
         // positioning
         top: -170px;
@@ -79,9 +91,14 @@
 
     // typography
     font-family: $titleFont;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 1;
     color: $light;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 36px;
+    }
 
     @include atTablet {
         // box model
@@ -95,9 +112,15 @@
 
     // typography
     font-family: $titleFont;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 1;
     color: $golden;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
 
 .invest__input-container {
@@ -175,9 +198,15 @@
     // typography
     font-family: $mainFont;
     font-size: 10px;
-    line-height: 48px;
+    //line-height: 48px;
     color: $light;
     text-transform: uppercase;
+
+    @include atSmallMobile {
+        // box model
+        font-size: 10px;
+        line-height: 48px;
+    }
 }
 
 .invest__input-policy-link {
@@ -226,7 +255,7 @@
 
         // positioning
         position: absolute;
-        top: -17px;
+        top: 0;
         left: 2px;
         
         // visual
