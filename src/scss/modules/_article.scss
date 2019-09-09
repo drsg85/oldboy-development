@@ -132,6 +132,10 @@
     padding: 0;
 }
 
+.article lh {
+
+}
+
 .article ul li,
 .article ol li {
     // positioning
@@ -182,14 +186,13 @@
 
     // visual
     border-radius: 5px;
-    object-fit: cover;
     object-position: center center;
     overflow: hidden;
 }
 
 .article__image img {
-    // box model
-    width: 100%;
+    // visual
+    object-fit: contain;
 }
 
 .current-news__image img {
