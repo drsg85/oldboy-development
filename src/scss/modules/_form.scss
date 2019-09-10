@@ -51,6 +51,11 @@
     }
 }
 
+.form__input-group .form__label-checkbox {
+    // typography
+    color: $dark;
+}
+
 .form__input {
     // positioning
     position: relative;
@@ -247,7 +252,6 @@
 .form__label-checkbox {
     // typography
     font-family: $mainFont;
-    color: #000000;
     font-size: 0.625rem;
     text-transform: uppercase;
 

@@ -11,13 +11,14 @@
     text-decoration: none;
 
     // visual
+    background-color: #fdf6ee;
     border-radius: 5px;
     overflow: hidden;
 
     @include atTablet {
         // box model
         display: block;
-        height: 400px;
+        min-height: 400px;
         flex-basis: 35%;
         flex-grow: 1;
         flex-shrink: 1;
@@ -87,14 +88,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 150px;
+        min-height: 150px;
         padding: 20px;
+        padding-bottom: 30px;
 
         // typography
         font-size: 1rem;
-
-        // visual
-        background-color: #fdf6ee;
     }
 }
 
@@ -144,7 +143,7 @@
     @include atTablet {
         // box model
         margin-bottom: 0.5rem;
-        height: 1.5rem;
+        min-height: 1.5rem;
 
         // typography
         color: $golden;
@@ -169,7 +168,7 @@
     @include atTablet {
         // box model
         display: block;
-        height: 2.4rem;
+        min-height: 2.4rem;
 
         // typography
         color: $dark;
@@ -179,4 +178,18 @@
         // visual
         overflow: hidden;
     }
+}
+
+.news-item__footer {
+    // positioning
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
 }
