@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--investment
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content.hero__content--investment
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй в&nbsp;Oldboy</span>
+                        p.hero-caption__motto Инвестиции&nbsp;в&nbsp;федеральную&nbsp;сеть барбершопов&nbsp;в Москве
+
+                    .hero__buttons
+                        button.button.form-trigger.ms_booking Оставить заявку<br>
+                        a.button.button--ghost#scrollToCalculator(href="#profit") Рассчитать доход
+                
+                .hero__investment
+                    .investment-text
+                        p.investment-text__call.investment-text__call--gold Получайте пассивный доход
+                        p.investment-text__range От 40&nbsp;000 до 200&nbsp;000
+                            span.currency.rouble-sign P
+                        p.investment-text__call Инвестируя от 1&nbsp;000&nbsp;000
+                            span.currency.rouble-sign P
+
+        main
+            section.invest-info
+                .invest-info__content
+                    .condition-item
+                        h3.condition-item__title Инвестиции
+                        p.condition-item__subtitle Минимальный объём
+                        p.condition-item__desc от&nbsp;1&nbsp;000&nbsp;000&nbsp;
+                            span.currency.rouble-sign P
+
+                    .condition-item
+                        h3.condition-item__title Особые условия
+                        p.condition-item__subtitle С долей свыше&nbsp;60%
+                        p.condition-item__desc Для крупных <br><span>инвесторов</span>
+
+                    .condition-item
+                        h3.condition-item__title Доходность
+                        p.condition-item__subtitle За&nbsp;5&nbsp;лет
+                        p.condition-item__desc до&nbsp;12&nbsp;000&nbsp;000&nbsp;
+                            span.currency.rouble-sign P
+
+                    .condition-item
+                        h3.condition-item__title Участие в&nbsp;бизнесе
+                        p.condition-item__subtitle Роль инвестора
+                        p.condition-item__desc Пассивный доход <br><span>участие не&nbsp;требуется</span>
+
+            section.profit#profit
+                .profit__header
+                    header.section-header
+                        h2.section-header__title Пассивный <br>доход
+                        p.section-header__subtitle.section-header__subtitle--golden-t Зарабатывай&nbsp;с&nbsp;Oldboy
+
+                .profit__content
+                    h3.profit__title Предлагаем инвесторам купить долю от&nbsp;прибыли в&nbsp;одном из&nbsp;наших барбершопов
+                    p.profit__subtitle Участие в бизнесе не&nbsp;нужно. Доход полностью пассивный
+                    p.profit__value Стоимость 10% доли = 1&nbsp;000&nbsp;000
+                        span.currency.rouble-sign P
+                    p.profit__info Вы получаете долю сразу в&nbsp;5&nbsp;барбершопах, тем самым, максимально диверсифицируя риски инвестиций.
+                    p.profit__info Открытием, управлением и&nbsp;развитием барбершопов будет заниматься головная управляющая компания сети.
+
+                .profit__calculator
+                    header.profit__calculator-header
+                        h3.profit__calculator-title Рассчитайте, какой вы&nbsp;будете получать доход от&nbsp;купленной доли
+                        p.profit__calculator-subtitle Размер пассивного дохода инвестора <br>при разных вложениях
+                    .invest-calculator
+                        header.invest-calculator__header
+                            h5.invest-calculator__title Сумма инвестиций
+                            p.invest-calculator__subtitle Процент от&nbsp;прибыли барбершопа
+                        
+                        .invest-calculator__graph
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph" checked)
+                                p.invest-calculator__sum(data-month="40000") 1&nbsp;000&nbsp;000 
+                                    span.invest-calculator__currency.rouble-sign Р
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 12.5%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum(data-month="80000") 2&nbsp;000&nbsp;000 
+                                    span.invest-calculator__currency.rouble-sign Р
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 25%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum(data-month="120000") 3&nbsp;000&nbsp;000 
+                                    span.invest-calculator__currency.rouble-sign Р
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 37.5%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum(data-month="160000") 4&nbsp;000&nbsp;000 
+                                    span.invest-calculator__currency.rouble-sign Р
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent 49%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum более 4&nbsp;000&nbsp;000 
+                                    span.invest-calculator__currency.rouble-sign Р
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent >&nbsp;49%
+                        
+                        .invest-calculator__result
+                            .invest-calculator__summ
+                                p.invest-calculator__summ-text Сумма инвестиций<br>
+                                    span.invest-calculator__value#invest-calculator__value-invest 1&nbsp;000&nbsp;000 
+                                    span.invest-calculator__curr.rouble-sign Р
+                            .invest-calculator__passive
+                                p.invest-calculator__summ-text Размер пассивного дохода <br>
+                                    span.invest-calculator__value#invest-calculator__value-passive 2 400 000
+                                    span.invest-calculator__curr.rouble-sign Р
+                                p.invest-calculator__period за пять лет
+                            .invest-calculator__rest
+                                .invest-calculator__summ-val
+                                    p.invest-calculator__summ-text
+                                        span.invest-calculator__value#invest-calculator__value-year 480&nbsp;000
+                                        span.invest-calculator__curr.rouble-sign Р
+                                    p.invest-calculator__period за один год
+                                .invest-calculator__summ-val
+                                    p.invest-calculator__summ-text
+                                        span.invest-calculator__value#invest-calculator__value-month 40&nbsp;000
+                                        span.invest-calculator__curr.rouble-sign Р
+                                    p.invest-calculator__period в месяц
+                            .invest-calculator__request
+                                button.button.form-trigger.invest-button Оставить заявку
+                            .invest-calculator__vip
+                                header.invest-calculator__vip-header
+                                    p.invest-calculator__vip-subtitle Эксклюзивные условия для инвестиций свыше
+                                    h3.invest-calculator__vip-title 4&nbsp;000&nbsp;000 
+                                        span.invest-calculator__curr.rouble-sign Р
+                                .invest-calculator__vip-content
+                                    h4.invest-calculator__vip-content-title Статус VIP-инвестор
+                                    .invest-calculator__vip-content-body
+                                        .invest-calculator__vip-content-icon
+                                            img.invest-calculator__vip-content-img(src="./img/icons/vip.svg", alt="VIP")
+                                        p.invest-calculator__vip-content-text Свяжитесь с&nbsp;нашим менеджером,чтобы узнать какие преимущетва мы предлагаем для&nbsp;крупных инвесторов.
+
+                                    button.button.form-trigger.invest-button Оставить заявку
+
+                .investment-contacts
+                    p.investment-contacts__title Менеджер по инвестициям
+                    a.investment-contacts__phone(href="tel:+79052476535") +7 (905) 247-65-35
+                    p.investment-contacts__name Владимир
+
+            section.targeting
+                .targeting__header
+                    header.section-header
+                        h2.section-header__title Для&nbsp;кого&nbsp;это <br>предложение
+                        p.section-header__subtitle.section-header__subtitle--light Наши&nbsp;партнёры
+                        .section-header__image.section-header__image--investment
+                            img(src="./img/investment/chair.jpg", alt="Барбершоп Oldboy")
+
+                .targeting__content
+                    h3.targeting__title Это предложение подойдёт:
+
+                    .targeting__items
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/employee.svg", alt="")
+                            p.investment-item__title Инвесторам
+                            p.investment-item__text Действующим <br>или&nbsp;начинающим
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/coins.svg", alt="")
+                            p.investment-item__title Всем кто хочет получать пассивный доход
+                            p.investment-item__text Со своего капитала
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/save-money.svg", alt="")
+                            p.investment-item__title Бизнесменам
+                            p.investment-item__text Любого уровня
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/website.svg", alt="")
+                            p.investment-item__title Тем кто думает открыть свой бизнес по франшизе
+                            p.investment-item__text Но не готов заниматься операционной работой
+
+                    p.targeting__info Для нас не важно проживаете вы в&nbsp;России или&nbsp;зарубежом, среди наших инвесторов и&nbsp;партнеров есть уже не&nbsp;малое количество граждан СНГ, Евросоюза и&nbsp;других госдударств.
+
+                .targeting__compare
+                    header.targeting__compare-header
+                        h4.targeting__compare-title Сравните доходность инвестиций
+                        p.targeting__compare-subtitle Средняя чистая прибыль барбершопов в Москве<br> 400 000 – 450 000 руб. в &nbsp;месяц
+                    .targeting__compare-graph
+                        canvas#targeting-compare-graph
+
+            section.protection
+                .protection__header
+                    header.section-header
+                        h2.section-header__title Защита <br>инвестиций
+                        p.section-header__subtitle.section-header__subtitle--light Контроль дохода
+
+                    .protection__caption
+                        h3.protection__title Мы предлагаем прозрачный контроль дохода вложенных средств
+                        p.protection__subtitle Онлайн инструменты, доступные в&nbsp;любое время из&nbsp;любой точки мира
+
+                .protection__content
+                    p.protection__headline Защита&nbsp;инвестиций и&nbsp;контроль доходов
+
+                    .protection__wrapper
+                        h3.protection__heading Вы инвестируете по одному договору в&nbsp;5&nbsp;барбершопов
+                        p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за&nbsp;5 &nbsp;лет способна окупить все осуществленные вами инвестиции.
+                        ul.protection__text Инвестор так же получает возможность <strong>контролировать доходность</strong>, используя ряд преимуществ: 
+                            li.protection__list 1. Инвестор может смотреть все цифры бизнеса в <strong>любое время из&nbsp;любой точки мира</strong>.
+                            li.protection__list 2. <strong>Online доступ</strong> к&nbsp;системе учета Yclients.
+                            li.protection__list 3. Барбершопы <strong>полностью автоматизированы</strong> (онлайн запись, мобильное приложение, электронный журнал с&nbsp;напоминаниями).
+                        h3.protection__heading.protection__heading--gold Как проверить бизнес?
+                        ul.protection__text
+                            li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
+                            li.protection__list 2. Вы сможете проверить прибыль и&nbsp;все цифры барбершопов через систему учета Yclients
+
+                .protection__secure
+                    .protection__deco
+                        .protection__image: img(src="./img/mobile-app.png", alt="")
+                        p.protection__motto Инвестиции с &nbsp;Oldboy - это удобно и&nbsp;безопасно
+
+                    .protection__items
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/debt.svg", alt="")
+                            p.investment-item__title Контроль
+                            p.investment-item__text Прозрачный<br> и&nbsp;понятный
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/idea.svg", alt="")
+                            p.investment-item__title Безрисковый
+                            p.investment-item__text Оптимальная схема инвестиционного предложения
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/project-management.svg", alt="")
+                            p.investment-item__title Автоматизация
+                            p.investment-item__text Бизнес процессов упрощает контроль доходности
+
+                        .investment-item
+                            .investment-item__image: img(src="./img/icons/online-payment.svg", alt="")
+                            p.investment-item__title Онлайн доступ
+                            p.investment-item__text Ко всем инструментам из&nbsp;любой точки мира
+
+            section.advantages
+                .advantages__header
+                    header.section-header
+                        h2.section-header__title О&nbsp;сети&nbsp;Oldboy <br>Barbershop
+                        p.section-header__subtitle.section-header__subtitle--light Наши&nbsp;преимущества
+                        .section-header__image.section-header__image--investment
+                            img(src="./img/investment/adv.jpg", alt="Барбершоп Oldboy")
+
+                    .advantages__description
+                        h2.advantages__title Сотрудничество с&nbsp;нашим брендом имеет ряд преимуществ для&nbsp;партнёров
+                        p.advantages__subtitle Oldboy Barbershop - это крупнейшая сеть барбершопов в&nbsp;России&nbsp;и&nbsp;СНГ
+                        p.advantages__text <strong>Почему привлекаем инвестиции?</strong> <br>Инвестиции нужны для быстрого масшабирования - открытие новых барбершопов в&nbsp;Европе
+                        p.advantages__plan План за год открыть 139 новых барбершопов
+
+                .advantages__content
+                    p.advantages__confirm Мы подтверждаем свои компетенции на&nbsp;конкретных примерах <br>Роль лидера рынка, это не&nbsp;пустые слова
+
+                    .advantages__items
+                        .advantage-item
+                            header.advantage-item__info
+                                p.advantage-item__count 230
+                                p.advantage-item__subtitle Открытых филиалов по&nbsp;всему миру
+
+                        .advantage-item.advantage-item--countries
+                            header.advantage-item__info
+                                p.advantage-item__count 10
+                                p.advantage-item__subtitle Стран в которых работают нащи барбершопы
+
+                        .advantage-item.advantage-item--branches
+                            header.advantage-item__info
+                                p.advantage-item__count 50
+                                p.advantage-item__subtitle Филиалов открывается ежегодно
+
+                        .advantage-item.advantage-item--closed
+                            header.advantage-item__info
+                                p.advantage-item__count 0
+                                p.advantage-item__subtitle Закрывшихся филиалов за&nbsp;5 лет работы бренда
+
+                    .advantages__cta
+                        h3.advantages__title.advantages__title--bottom Запишитесь прямо сейчас на презентацию бизнеса в&nbsp;действующем барбершопе, чтобы проверить все цифры
+                        p.advantages__subtitle.advantages__subtitle--bottom По договоренности встречи проводим по Skype или по&nbsp;звонку через мессенджеры
+                        .advantages__button
+                            button.button.form-trigger.ms_booking Оставить заявку
+
+            button.form-opener
+                span.form-opener__text Оставить заявку
+
+            include modules/_invest-form.pug
+        
+        button.up-button#up-button
+                .up-button__arrow
+                p.up-button__text Наверх
+        
+        include modules/_footer.pug
+
+        script(src="investment.js")

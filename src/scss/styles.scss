@@ -81,6 +81,17 @@
 @import 'modules/vacancy';
 @import 'modules/excerption';
 @import 'modules/callout';
+@import 'modules/investment-text';
+@import 'modules/targeting';
+@import 'modules/investment-item';
+@import 'modules/profit';
+@import 'modules/invest-info';
+@import 'modules/condition-item';
+@import 'modules/protection';
+@import 'modules/advantages';
+@import 'modules/advantage-item';
+@import 'modules/investment-contacts';
+@import 'modules/currency';
 
 @import 'modules/haircut';
 @import 'modules/stage';
@@ -132,4 +143,10 @@
 @import "modules/landing-info";
 @import "modules/include-item";
 
-@import "modules/up-button"
+@import "modules/up-button";
+
+//invest
+@import "modules/invest-form";
+@import "modules/invest-calculator";
+@import "modules/form-opener";
+@import "modules/rouble";

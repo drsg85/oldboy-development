@@ -1,0 +1,249 @@
+.profit {
+    // positioning
+    position: relative;
+    
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.profit__header {
+    // box model
+    width: 100%;
+    margin-bottom: 80px;
+
+    @include atDesktopS {
+        // box model
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: initial;
+    }
+}
+
+.profit__content {
+    // box model
+    margin-bottom: 30px;
+    padding: 0 25px;
+    
+    @include atDesktopS {
+        // box model
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        padding: 0 40px;
+        margin-top: 80px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        display: block;
+        margin-top: initial;
+        margin-bottom: 70px;
+    }
+}
+
+.profit__title {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        
+        width: 100%;
+        max-width: 700px;
+
+        // typography
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 650px;
+    }
+}
+
+.profit__subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 210px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    line-height: 1.2;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        max-width: 50%;
+
+        // typography
+        font-size: 1.25rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 100%;
+    }
+}
+
+.profit__value {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    color: $golden;
+    font-size: 1.2rem;
+    font-family: $titleFont;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 1.4rem;
+    }
+}
+
+.profit__info {
+    // box model
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    line-height: 1.5;
+}
+
+.profit__calculator {
+    // box model
+    width: 100%;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 70px;
+        padding: 0 30px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+        padding: 0 40px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.profit__calculator-header {
+    // box model
+    width: 100%;
+    margin-bottom: 150px;
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // positioning
+        transform: translateY(330px);
+        max-width: 44%;
+    }
+
+    @include atDesktopS {
+        // positioning
+        transform: translateY(360px);
+
+        // box model
+        max-width: 50%;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 525px;
+    }
+
+    @include atDesktopL {
+        // box model
+        transform: none;
+    }
+}
+
+.profit__calculator-title {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 24px;
+    line-height: 26px;
+    color: $golden;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+
+        // typography
+        font-size: 24px;
+        line-height: 1;
+    }
+    
+    @include atDesktopS {
+        // box model
+        // margin-bottom: initial;
+
+        // typography
+        font-size: 36px;
+        line-height: 48px;
+        text-align: left;
+    }
+}
+
+.profit__calculator-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $dark;
+
+    @include atTablet {
+        // typography
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+    }
+}

@@ -1,11 +1,10 @@
 class UpButton {
   constructor() {
     this.btn = document.querySelector('.up-button');
-    this.btn.style.opacity = '0';
-    this.btn.style.pointerEvents = 'none';
-    this.addEvents();
 
     if (this.btn) {
+      this.btn.style.opacity = '0';
+      this.btn.style.pointerEvents = 'none';
       this.addEvents();
     }
   }

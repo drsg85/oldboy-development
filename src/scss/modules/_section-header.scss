@@ -225,6 +225,20 @@
         // box model
         height: 400px;
     }
+
+    &--investment {
+        // box model
+        height: 535px;
+        width: calc(100% + 120px);
+
+        // visual
+        background-color: $golden;
+    }
+
+    &--investment img {
+        // box model
+        height: 100%;
+    }
 }
 
 .section-header__image::before {

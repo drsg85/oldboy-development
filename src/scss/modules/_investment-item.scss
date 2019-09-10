@@ -1,0 +1,88 @@
+.investment-item {
+    // box model
+    display: flex;
+    max-width: 270px;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 45px;
+
+    @include atTablet {
+        // box model
+        flex-basis: 50%;
+        max-width: 340px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 270px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 340px;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 270px;
+    }
+}
+
+.investment-item__image {
+    // box model
+    height: 110px;
+    width: 110px;
+    margin-bottom: 25px;
+
+    @include atDesktopS {
+        // box model
+        width: 50px;
+        height: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        height: 110px;
+        width: 110px;
+    }
+}
+
+.investment-item__image img {
+    // box model
+    height: 100%;
+    width: 100%;
+}
+
+.investment-item__title {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.2rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        font-size: 1.5rem;
+    }
+}
+
+.investment-item__text {
+    // box model
+    margin: 0;
+    max-width: 195px;
+
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+}

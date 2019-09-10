@@ -1,0 +1,58 @@
+.investment-text {
+    // box model
+    display: none;
+
+    // typography
+    font-family: $titleFont;
+    text-align: center;
+
+    @include atSmallMobile {
+        // box model
+        display: block;
+    }
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+}
+
+.investment-text__call {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    @include atTablet {
+        // typography
+        font-size: 1.125rem;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.25rem;
+    }
+
+    &--gold {
+        // typography
+        color: $golden;
+    }
+}
+
+.investment-text__range {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    @include atTablet {
+        // typography
+        font-size: 2rem;
+    }
+}

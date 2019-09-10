@@ -130,6 +130,48 @@
         }
     }
 
+    &--investment {
+        // box model
+        // height: 100vh;
+        // max-height: 900px;
+
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        min-height: 520px;
+        max-height: 700px;
+
+        // visual
+        background-image: url('./img/investment/investment.jpg');
+        background-size: cover;
+        background-position: center center;
+
+        @include atTablet {
+            // box model
+            min-height: 640px;
+        }
+        
+        @include atDesktopS {
+            // box model
+            max-height: 700px;
+        }
+
+        @include atDesktopM {
+            // box model
+            min-height: 680px;
+            max-height: 740px;
+        }
+
+        @include atDesktopL {
+            // box model
+            min-height: 780px;
+            height: 100vh;
+            max-height: 900px;
+        }
+    }
+
     &--royal {
         // visual
         background-image: url('./img/royal/royal-m.jpg');
@@ -572,6 +614,22 @@
         padding-top: 20px;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    &--investment {
+        // box model
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        @include atTablet {
+            // box model
+            flex-direction: row;
+        }
+        
+        .hero__caption {
+            // box model
+            padding: 0;
+        }
     }
 }
 
@@ -1026,5 +1084,19 @@
         // typography
         color: $golden;
         font-style: normal;
+    }
+}
+
+.hero__investment {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 40px;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 20px;
+        margin-top: 0;
     }
 }

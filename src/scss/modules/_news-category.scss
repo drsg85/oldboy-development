@@ -3,8 +3,9 @@
     position: relative;
     
     // box model
-    max-width: 350px;
+    max-width: 285px;
     width: 100%;
+    width: 385px;
     margin: 0 auto;
     margin-bottom: 20px;
     
@@ -119,4 +120,10 @@
 
    // visual
    object-fit: cover;
+}
+
+.news-category__last-branch {
+    // typography
+    font-size: 1.6rem;
+    line-height: 1.7;
 }
