@@ -423,12 +423,12 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            height: calc(100% / 5 - 5px);
+            height: calc(100% / 5 + 20px);
 
             @include atTablet {
                 // box model
                 height: 3px;
-                width: calc(100% / 5 - 5px);
+                width: calc(100% / 5 + 25px);
             }
         }
 
@@ -446,12 +446,12 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            height: calc(100% / 2.5 - 15px);
+            height: calc(100% / 2 - 25px);
 
             @include atTablet {
                 // box model
                 height: 3px;
-                width: calc(100% / 2.5 - 15px);
+                width: calc(100% / 2 - 25px);
             }
         }
 
@@ -470,36 +470,12 @@
         .invest-calculator__radio:checked ~ .invest-calculator__line:before,
         .invest-calculator__radio:focus ~ .invest-calculator__line:before {
             // box model
-            height: calc(100% / 1.75 - 15px);
+            height: calc(100% / 1.4 - 15px);
 
             @include atTablet {
                 // box model
                 height: 3px;
-                width: calc(100% / 1.75 - 5px);
-            }
-        }
-
-        .invest-calculator__radio:not(:focus) ~ .invest-calculator__line:before {
-            // box model
-            height: 0;
-
-            @include atTablet {
-                // box model
-                width: 0;
-            }
-        }
-    }
-
-    &:nth-child(5) {
-        .invest-calculator__radio:checked ~ .invest-calculator__line:before,
-        .invest-calculator__radio:focus ~ .invest-calculator__line:before {
-            // box model
-            height: calc(100% / 1.35 - 10px);
-
-            @include atTablet {
-                // box model
-                height: 3px;
-                width: calc(100% / 1.35);
+                width: calc(100% / 1.4 - 15px);
             }
         }
 
