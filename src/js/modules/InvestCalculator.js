@@ -74,7 +74,7 @@ class InvestCalculator {
                     this.formYear.innerHTML = "480 000";
                     this.formPassive.innerHTML = "2 400 000";
                     this.formMonth.innerHTML = "40 000";
-                    this.formInvest.innerHTML = "800 000";
+                    this.formInvest.innerHTML = "1 000 000";
                 }
                 else {
                     return;
