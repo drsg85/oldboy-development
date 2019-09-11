@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     margin: 0;
+    margin-left: auto;
 
     // typography
     align-items: center;
@@ -11,11 +12,6 @@
     text-transform: uppercase;
 
     @include atTablet {
-        // positioning
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-
         // typography
         font-size: 1rem;
     }
