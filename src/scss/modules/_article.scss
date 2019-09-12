@@ -172,13 +172,20 @@
 .article__image img {
     // box model
     width: 100%;
+    //height: 260px;
 
     // visual
     border-radius: 5px;
-
+    
     @include atTablet {
         // box model
-        width: auto;
+        // width: auto;
+        max-height: 400px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        max-height: 500px;
     }
 
     // visual
