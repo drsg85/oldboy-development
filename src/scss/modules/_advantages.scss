@@ -125,27 +125,33 @@
     @include atDesktopS {
         // box model
         margin: 0;
+        margin-bottom: 10px;
 
         // typography
         color: $black;
         font-size: 2rem;
-        line-height: 1.5;
+        line-height: 1.2;
         text-align: left;
     }
 
     &--bottom {
         // box model
-        max-width: 750px;
         margin: 0 auto;
         margin-bottom: 15px;
         
         // typography
         color: $dark;
         text-align: center;
-        
+
+        @include atTablet {
+            // box model
+            max-width: 550px;
+        }
+
         @include atDesktopS {
-        // box model
-        margin-bottom: 0;
+            // box model
+            max-width: 810px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -224,6 +230,7 @@
     color: $golden;
     font-family: $titleFont;
     font-size: 1.8rem;
+    line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
 
