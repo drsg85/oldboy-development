@@ -1,14 +1,15 @@
 .form-opener {
     // positioning
     position: fixed;
-    top: 85vh;
-    right: 100px;
+    bottom: 20px;
+    right: 50%;
     z-index: 1000;
 
     // box model
     width: 100px;
     height: 100px;
-
+    margin-right: -50px;
+    
     // typography
     font-family: $titleFont;
     font-size: 14px;
@@ -40,12 +41,24 @@
     }
 
     &--styled {
-        // positioning
-        top: 80vh;
-
         // visual
         pointer-events: initial;
         opacity: 1;
+    }
+
+    @include atTablet {
+        // positioning
+        top: 85vh;
+        bottom: initial;
+        right: 100px;
+
+        // box model
+        margin-right: initial;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: 80vh;
     }
 }
 
@@ -66,6 +79,7 @@
         -webkit-box-shadow: 0 0 0 0 rgba($golden, 0);
     }
   }
+  
   @keyframes pulse {
     0% {
       -moz-box-shadow: 0 0 0 0 rgba($golden, 0.4);
