@@ -45,6 +45,8 @@
 			<p class="news-category__text"><em>{{ fields.field_date_open.content }} </em><br>Открытие нового Oldboy Barbershop <span class="news-category__last-branch">{{ fields.field_cityname.content }}</span></p>
 		</div>
 		<div class="news-category__overlay"></div>
+		{% if fields.field_img_small.content %}
 		<div class="news-category__image"><img src="{{ fields.field_img_small.content|render|striptags|trim }}" alt="" /></div>
+		{% endif %}
 	</a></article>
 
