@@ -259,12 +259,17 @@
     }
 
     &--news {
-        // box model
+        // visual
         position: relative;
 
         // visual
         background-size: cover;
         background-position: center top;
+
+        @include atTablet {
+            // box model
+            min-height: 835px;
+        }
 
         &::before {
             content: "";
