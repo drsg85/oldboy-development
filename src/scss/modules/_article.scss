@@ -67,6 +67,7 @@
         font-size: 1.6rem;
     }
 }
+
 .article h4 {
     // box model
     margin: 1rem 0;
@@ -146,8 +147,6 @@
     font-size: 16px;
     line-height: 1.2;
 
-    
-
     &:last-child {
         // box model
         margin-bottom: 0;
@@ -170,6 +169,7 @@
         // box model
         max-width: 80%;
     }
+}
 
 .article__image img {
     //box-model
@@ -339,7 +339,7 @@
     }
 }
 
-.article__list h4{
+.article__list h4 {
     // typography
     text-align: left;
 }
@@ -349,6 +349,11 @@
     width: 100%;
     margin: 0 !important;
 
+    // typography
+    text-align: center;
+}
+
+.article__button {
     // typography
     text-align: center;
 }
