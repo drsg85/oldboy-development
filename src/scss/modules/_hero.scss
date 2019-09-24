@@ -631,6 +631,11 @@
             flex-direction: row;
         }
         
+        .hero-caption {
+            // box model
+            width: 360px;
+        }
+
         .hero__caption {
             // box model
             padding: 0;
