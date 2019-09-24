@@ -66,3 +66,4 @@ function runFilter() {
 document.addEventListener("DOMContentLoaded", function(event) {
     runFilter();
 });
+
