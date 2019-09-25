@@ -25,7 +25,7 @@ class SmoothScroll {
     }
 
     scrolling(evt) {
-        if(window.location.pathname == '/') {
+        if(window.location.pathname == '/' || window.location.pathname == '/en') {
             evt.preventDefault();
         }
         let href;
