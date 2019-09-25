@@ -28,6 +28,16 @@ class SmoothScroll {
         if(window.location.pathname == '/') {
             evt.preventDefault();
         }
+        let href;
+        if(this.btn.hasAttribute('href')) {
+            href = this.btn.href;
+            if(href !== undefined && href.indexOf('#services') == -1) {
+                evt.preventDefault();
+            }
+        }
+        else {
+            return;
+        }
         
         const scrollEndElem = this.target;
         const anim = requestAnimationFrame(() => {

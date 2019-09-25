@@ -1,10 +1,9 @@
 import SmoothScroll from './SmoothScroll';
 
 class SmoothOnAnchors {
-    constructor(obj) {
+    constructor() {
         this.anchors = [...document.querySelectorAll('.smooth-trigger')];
-        this.targets = [...document.querySelectorAll('.smooth-target')];
-        if(this.anchors && this.targets) {
+        if(this.anchors) {
             this.addEvents();
         }
     }
