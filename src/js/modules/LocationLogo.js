@@ -3,12 +3,13 @@ class LocationLogo {
     this.locationLogo = document.querySelector('.location-logo');
     this.locationLogoEng = document.querySelector('.location-logo--out');
 
-    if (location.href.match(/oldboybarbershop.com/)) {
-        this.locationLogo.style.pointerEvents = 'none';
+    if (location.href.match(/oldboydev.ru/)) {
+        this.locationLogo.removeAttribute("href");
+        this.locationLogo.style.opacity = '1';
     }
 
-    if (location.href.match(/eu.oldboybarbershop.com/)) {
-        this.locationLogoEng.style.pointerEvents = 'auto';
+    if (location.href.match(/eu.oldboydev.ru/)) {
+        this.locationLogo.removeAttribute("href");
     }
     this.events();
   }
