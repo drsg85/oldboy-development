@@ -623,14 +623,25 @@
 
     &--investment {
         // box model
+        height: 90%;
         padding-bottom: 20px;
         padding-top: 20px;
+
+        @include atSmallMobile {
+            // box model
+            height: auto;
+        }
 
         @include atTablet {
             // box model
             flex-direction: row;
         }
         
+        .hero-caption {
+            // box model
+            max-width: 360px;
+        }
+
         .hero__caption {
             // box model
             padding: 0;
@@ -1094,10 +1105,15 @@
 
 .hero__investment {
     // box model
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: 40px;
+    display: none;
+    
+    @include atSmallMobile {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 40px;
+    }
     
     @include atTablet {
         // box model

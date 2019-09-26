@@ -61,3 +61,19 @@ body::-webkit-scrollbar {
         background: transparent !important;
     }
 }
+
+.visually-hidden {
+    // positioning
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    // box model
+    height: 1px;
+    width: 1px;
+
+    // typography
+    word-wrap: normal;
+    
+    // visual
+    overflow: hidden;
+}

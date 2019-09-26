@@ -2,16 +2,18 @@ class LocationLogo {
   constructor () {
     this.locationLogo = document.querySelector('.location-logo');
     this.locationLogoEng = document.querySelector('.location-logo--out');
+    this.addEvents();
+  }
 
-    if (location.href.match(/oldboydev.ru/)) {
-        this.locationLogo.removeAttribute("href");
-        this.locationLogo.style.opacity = '1';
+  addEvents() {
+    if (location.href.match(/oldboybarbershop.com/)) {
+      this.locationLogo.removeAttribute("href");
+      this.locationLogo.style.opacity = '1';
     }
 
-    if (location.href.match(/eu.oldboydev.ru/)) {
+    if (location.href.match(/eu.oldboybarbershop.com/)) {
         this.locationLogo.removeAttribute("href");
     }
-    this.events();
   }
 }
 

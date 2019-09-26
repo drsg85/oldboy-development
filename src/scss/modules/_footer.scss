@@ -50,6 +50,8 @@
 
         // box model
         display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
         align-items: flex-end;
     }
 }
@@ -59,11 +61,12 @@
         // box model
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
 
     @include atDesktopS {
         // box model
-        flex-basis: 300px;
+        //flex-basis: 300px;
     }
 }
 
@@ -83,6 +86,9 @@
     }
 
     @include atDesktopS {
+        // positioning
+        position: absolute;
+
         // box model
         padding-left: 0;
         padding-right: 40px;
@@ -198,16 +204,23 @@
 
     @include atDesktopS {
         // positioning
-        position: absolute;
+        //position: absolute;
         right: 0;
         top: 0;
 
         // box model
-        padding: 40px 20px;
+        padding: 40px 0px;
         padding-bottom: 20px;
         flex-direction: row;
         align-items: flex-start;
-        width: calc(100% - 320px);
+        width: calc(100% - 300px);
+        margin-left: auto;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 40px 20px;
+        padding-bottom: 20px;
     }
 }
 

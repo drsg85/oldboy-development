@@ -38,7 +38,8 @@ const webpackConfig = {
     branch: './src/js/branch.js',
     dummy: './src/js/dummy.js',
     scripts: './src/js/scripts.js',
-    investment: './src/js/investment.js'
+    investment: './src/js/investment.js',
+    scriptsUS: './src/js/scriptsUS.js'
   },
 
   output: {
