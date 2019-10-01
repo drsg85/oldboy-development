@@ -1,5 +1,6 @@
 .chosen-branch {
     // box model
+    margin: 0 10px;
     margin-bottom: 60px;
 
     // typography
@@ -11,6 +12,11 @@
 .chosen-branch__block {
     // box model
     margin-bottom: 20px;
+    
+    @include atTablet {
+        // box model
+        height: 80px;
+    }
 }
 
 .chosen-branch__type {
@@ -23,13 +29,17 @@
 
 .chosen-branch__value {
     // box model
-    margin: 0;
-
+    margin: 0 auto;
+    
     // typography
     color: $light;
 }
 
 a.chosen-branch__value {
+    // box model
+    display: block;
+    max-width: 125px;
+
     // typography
     text-decoration: none;
 

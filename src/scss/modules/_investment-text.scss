@@ -3,11 +3,6 @@
     font-family: $titleFont;
     text-align: center;
 
-    @include atSmallMobile {
-        // box model
-        display: block;
-    }
-
     @include atTablet {
         // typography
         text-align: right;
