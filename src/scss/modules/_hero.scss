@@ -635,11 +635,11 @@
         @include atTablet {
             // box model
             flex-direction: row;
-        }
-        
-        .hero-caption {
-            // box model
-            max-width: 360px;
+
+            .hero-caption {
+                // box model
+                width: 360px;
+            }
         }
 
         .hero__caption {
@@ -1071,6 +1071,7 @@
         display: flex;
         justify-content: space-around;
         align-items: stretch;
+        margin: 0 -10px;
     }
 }
 
