@@ -1,5 +1,7 @@
 .choose-country {
     // box model
+    min-height: calc(100vh - 128px);
+    margin-bottom: 0;
     padding: 40px 25px;
 
     // visual
@@ -44,6 +46,7 @@
 .choose-country__content {
     // box model
     margin: 0;
+    margin-bottom: -30px;
     padding: 0;
 
     // visual

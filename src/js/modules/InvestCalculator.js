@@ -4,9 +4,29 @@ class InvestCalculator {
         this.formGraphLabels = [...document.querySelectorAll('.invest-calculator__radio')];
         this.formInvest = this.formResult.querySelector('#invest-calculator__value-invest');
         this.sumText = [...this.formResult.querySelectorAll('.invest-calculator__summ-text')];
+        this.investCalcSumms = [...document.querySelectorAll('.invest-calculator__sum')];
+        this.investLocation = document.querySelector('.invest-location');
+        this.investLocs = [...this.investLocation.querySelectorAll('.order__radio')];
         this.formPassive = this.formResult.querySelector('#invest-calculator__value-passive');
         this.formYear = this.formResult.querySelector('#invest-calculator__value-year');
         this.formMonth = this.formResult.querySelector('#invest-calculator__value-month');
+        this.location = 'monthRU';
+        this.euInvestment = {
+            0: '1 250 000 ₽',
+            1: '2 500 000 ₽',
+            2: '3 750 000 ₽',
+            3: '5 000 000 ₽',
+            4: '6 250 000 ₽',
+            5: 'более 6 250 000 ₽'
+        }
+        this.ruInvestment = {
+            0: '850 000 ₽',
+            1: '1 700 000 ₽',
+            2: '2 550 000 ₽',
+            3: '3 400 000 ₽',
+            4: '4 250 000 ₽',
+            5: 'более 4 250 000 ₽'
+        }
         this.addEvents();
     }
 
@@ -21,7 +41,11 @@ class InvestCalculator {
         if(this.flag) {
             const parent = this.findParent(el, 'invest-calculator__label');
             const summSelector = parent.querySelector('.invest-calculator__sum');
-            const summInMonth = summSelector.dataset.month;
+            let summInMonth = summSelector.dataset.monthru;
+            if(this.location === 'monthEU') {
+                summInMonth = summSelector.dataset.montheu;
+            }
+            console.log(summInMonth);
             const summInString = summSelector.textContent;
             const summInStringR = (summInString.substring(0, summInString.length-1)).split(' ').join('');
             const regExp = /\d{1,3}(?=(\d{3})+(?!\d))/g;
@@ -50,6 +74,23 @@ class InvestCalculator {
     }
 
     addEvents() {
+        this.investLocs.map((el) => el.addEventListener('change', () => {
+            if(el.id === 'rf') {
+                this.location = 'monthRU';
+                this.investCalcSumms.map((el, i) => {
+                    el.textContent = this.ruInvestment[i];
+                })
+            }
+            else if(el.id === 'eu') {
+                this.location = 'monthEU';
+                this.investCalcSumms.map((el, i) => {
+                    el.textContent = this.euInvestment[i];
+                })
+            }
+
+            
+        }));
+
         this.formGraphLabels.map((el, i, arr) => {
             if(i < arr.length - 1) {
                 el.addEventListener('click', () => this.clicking(el));
@@ -81,6 +122,7 @@ class InvestCalculator {
                 }
             })
         });
+        
     }
 }
 

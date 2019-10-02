@@ -8,6 +8,9 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 100px;
+
+    // visual
+    overflow: hidden;
 }
 
 .profit__header {
@@ -140,9 +143,6 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
-
-    // visual
-    overflow: hidden;
 
     @include atTablet {
         // box model
