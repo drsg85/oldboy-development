@@ -560,7 +560,7 @@
     // box model
     display: flex;
     vertical-align: top;
-    padding-left: 85px;
+    //padding-left: 85px;
     padding-right: 70px;
 
     @include atTablet {
@@ -584,10 +584,7 @@
 
 .hero__city-select--en {
     // positioning
-    position: absolute;
     left: 0;
-    top: 0;
-    z-index: 3;
 
     // box model
     display: flex;
