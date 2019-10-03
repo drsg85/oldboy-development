@@ -85,14 +85,14 @@ html(lang="ru")
                         p.profit__calculator-subtitle Размер пассивного дохода инвестора <br>при разных вложениях
                     .invest-calculator
                         header.invest-calculator__header
-                            h5.invest-calculator__title Сумма инвестиций
+                            h5.invest-calculator__title Сумма инвестиций для
                             form.invest-location(name="invest__location")
-                                .order__radio-wrap
-                                    input#rf.order__radio(type='radio', name='location', value='РФ', checked='checked')
-                                    label.order__label(for='sng') РФ
-                                .order__radio-wrap
-                                    input#eu.order__radio(type='radio', name='location', value='Страны ЕС')
-                                    label.order__label-specific(for='eu') ЕС
+                                .invest-location__radio-wrap
+                                    input#rf.invest-location__radio(type='radio', name='location', value='РФ', checked='checked')
+                                    label.invest-location__label(for='rf') РФ
+                                .invest-location__radio-wrap
+                                    input#eu.invest-location__radio(type='radio', name='location', value='Страны ЕС')
+                                    label.invest-location__label-specific(for='eu') ЕС
                                         
                             p.invest-calculator__subtitle Процент от&nbsp;прибыли барбершопа
                         
@@ -127,7 +127,7 @@ html(lang="ru")
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum 4&nbsp;250&nbsp;000 ₽
+                                p.invest-calculator__sum(data-monthRU="180000" data-monthEU="200000") 4&nbsp;250&nbsp;000 ₽
                                 .invest-calculator__switcher
                                 .invest-calculator__line
                                 span.invest-calculator__percent &nbsp;50%
@@ -142,7 +142,7 @@ html(lang="ru")
                         .invest-calculator__result
                             .invest-calculator__summ
                                 p.invest-calculator__summ-text Сумма инвестиций<br>
-                                    span.invest-calculator__value#invest-calculator__value-invest 1&nbsp;000&nbsp;000 
+                                    span.invest-calculator__value#invest-calculator__value-invest &nbsp;850&nbsp;000 
                                     span.invest-calculator__curr.rouble-sign Р
                             .invest-calculator__passive
                                 p.invest-calculator__summ-text Размер пассивного дохода <br>

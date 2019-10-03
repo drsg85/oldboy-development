@@ -1,0 +1,65 @@
+.invest-location {
+    // positioning
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    max-width: 150px;
+
+    // box model
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.invest-location__label-specific,
+.invest-location__label {
+    // box model
+    display: flex;
+    align-items: center;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 18px;
+
+    // visual
+    cursor: pointer;
+
+    &::before {
+        content: "";
+
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+
+        // visual
+        background-color: #ffffff;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px #cccccc;
+        transition: all 0.25s linear;
+    }
+}
+
+.invest-location__radio {
+    // positioning
+    position: absolute;
+    clip: rect(0 0 0 0);
+    
+    // box model
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    
+    &:checked + .invest-location__label,
+    &:checked + .invest-location__label-specific {
+        &:before {
+            // visual
+            background-color: $golden;
+        }
+    }
+}
