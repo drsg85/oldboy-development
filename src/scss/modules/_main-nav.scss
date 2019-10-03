@@ -15,11 +15,12 @@
     background-color: $dark;
 
     @include atDesktopS {
+        // box model
+        justify-content: flex-start;
+
         // positioning
         position: relative;
         
-        // box model
-        justify-content: flex-start;
 
         // visual
         background-color: transparent;
@@ -30,18 +31,21 @@
     // box model
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 0;
 
     @include atDesktopS {
         // box model
         flex-direction: row;
-        justify-content: flex-start;
-        padding-left: 0;
+        flex-wrap: wrap;
+        // justify-content: flex-start;
+        justify-content: center;
+        // padding-left: 0;
+        padding-left: 40px;
     }
 
     @include atDesktopM {
         // box model
-        padding-left: 40px;
     }
 }
 
@@ -63,8 +67,8 @@
 
 .main-nav__link {
     // box model
-    margin-right: 50px;
-    
+    margin-right: 30px;
+
     // typography
     color: $light;
     font-family: $titleFont;
@@ -84,10 +88,30 @@
         // typography
         font-size: 1.25rem;
     }
-
+    
     @include atDesktopL {
+        // box model
+        margin-right: 50px;
+
         // typography
         font-size: 1.5rem;
+    }
+
+    &--scale {
+        @include atDesktopS {
+            // typography
+            font-size: 1rem;
+        }
+    
+        @include atDesktopM {
+            // typography
+            font-size: 1.125rem;
+        }
+        
+        @include atDesktopL {
+            // typography
+            font-size: 1.3rem;
+        }
     }
 }
 

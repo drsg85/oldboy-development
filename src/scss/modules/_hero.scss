@@ -421,9 +421,10 @@
 .hero__top {
     // positioning
     position: relative;
-    
+
 
     // box model
+    display: flex;
     margin-bottom: 20px;
     margin-top: 5px;
 
@@ -510,9 +511,10 @@
 
     @include atDesktopS {
         // positioning
-        position: absolute;
+        position: unset;
         top: 0;
         left: 210px;
+        max-width: 100%;
         
         // visual
         visibility: visible;
@@ -568,10 +570,13 @@
         z-index: 3;
 
         // box model
-        padding-right: 60px;
+        // padding-right: 60px;
     }
 
     @include atDesktopS {
+        // positioning
+        position: unset;
+
         // box model
         padding-right: 0;
     }
