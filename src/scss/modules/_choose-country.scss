@@ -43,6 +43,15 @@
     }
 }
 
+.choose-country--USA {
+    @include atTablet {
+        // visual
+        background-image: url('./img/city/los-angeles-grey.jpg');
+        background-size: cover;
+        background-position: center left;
+    }
+}
+
 .choose-country__content {
     // box model
     margin: 0;
