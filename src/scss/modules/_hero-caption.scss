@@ -141,6 +141,27 @@
         }
     }
 
+    &--vacancy {
+        &::after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -100%;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-image: url('./img/icons/barber.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+    }
+
     &--royal {
         &::after {
             content: '';
