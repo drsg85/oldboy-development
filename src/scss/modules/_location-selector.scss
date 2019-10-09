@@ -182,3 +182,13 @@
     // visual
     visibility: hidden;
 }
+
+
+.location-selector__geo {
+    // box model
+    margin: 0;
+    
+    // typography
+    font-family: $mainFont;
+    font-size: 0.85rem;
+}
