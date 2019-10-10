@@ -4,6 +4,7 @@ class InvestCalculator {
         this.formGraphLabels = [...document.querySelectorAll('.invest-calculator__radio')];
         this.formInvest = this.formResult.querySelector('#invest-calculator__value-invest');
         this.sumText = [...this.formResult.querySelectorAll('.invest-calculator__summ-text')];
+        this.investVip = document.querySelector('.invest-calculator__vip-title');
         this.investCalcSumms = [...document.querySelectorAll('.invest-calculator__sum')];
         this.investLocation = document.querySelector('.invest-location');
         this.investLocs = [...this.investLocation.querySelectorAll('.invest-location__radio')];
@@ -84,6 +85,7 @@ class InvestCalculator {
                 this.investCalcSumms.map((el, i) => {
                     el.textContent = this.ruInvestment[i];
                 });
+                this.investVip.textContent = this.ruInvestment[4];
                 this.location = 'monthRU';
                 this.formYear.innerHTML = "480 000";
                 this.formPassive.innerHTML = "2 400 000";
@@ -96,10 +98,11 @@ class InvestCalculator {
                 this.investCalcSumms.map((el, i) => {
                     el.textContent = this.euInvestment[i];
                 });
+                this.investVip.textContent = this.euInvestment[4];
                 this.location = 'monthEU';
-                this.formYear.innerHTML = "1 250 000";
-                this.formPassive.innerHTML = "6 000 000";
-                this.formMonth.innerHTML = "100 000";
+                this.formYear.innerHTML = "850 000";
+                this.formPassive.innerHTML = "4 200 000";
+                this.formMonth.innerHTML = "70 000";
                 this.formInvest.innerHTML = "1 250 000";
             }
         }));
@@ -126,9 +129,9 @@ class InvestCalculator {
                 else if(event.target !== document.activeElement && !this.calcFlag) {
                     this.formGraphLabels[0].checked = true;
                     this.formResult.classList.remove('invest-calculator__special');
-                    this.formYear.innerHTML = "1 250 000";
-                    this.formPassive.innerHTML = "6 000 000";
-                    this.formMonth.innerHTML = "100 000";
+                    this.formYear.innerHTML = "840 000";
+                    this.formPassive.innerHTML = "4 200 000";
+                    this.formMonth.innerHTML = "70 000";
                     this.formInvest.innerHTML = "1 250 000";
                 }
                 else {
