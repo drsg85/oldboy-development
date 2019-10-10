@@ -43,29 +43,29 @@ html(lang="en")
                     .vacancy-form__content
                         .vacancy-form__group
                             .vacancy-form__item
-                                p.vacancy-form__title Фио
+                                p.vacancy-form__text Фио
                                 input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович")
 
                             .vacancy-form__item
-                                p.vacancy-form__title E-mail
+                                p.vacancy-form__text E-mail
                                 input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com")
 
                             .vacancy-form__item
-                                p.vacancy-form__title Возраст
+                                p.vacancy-form__text Возраст
                                 input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18")
 
                         .vacancy-form__group
                             .vacancy-form__item
-                                p.vacancy-form__title Город проживания
+                                p.vacancy-form__text Город проживания
                                 input.vacancy-form__input(type="text" name="city" placeholder="Калининград")
 
                             .vacancy-form__item
-                                p.vacancy-form__title Телефон
+                                p.vacancy-form__text Телефон
                                 input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx")
 
                         .vacancy-form__group
                             .vacancy-form__item
-                                p.vacancy-form__title Вакансии
+                                p.vacancy-form__text Вакансии
                                 p.vacancy-form__radio Мастер
                                     input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Master")
                                 p.vacancy-form__radio Тайный покупатель
@@ -78,6 +78,17 @@ html(lang="en")
                                     input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Model")
                                 p.vacancy-form__radio Косметолог
                                     input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Cosmetics")
+                                p.vacancy-form__text Внимание: выберете одну вакансию
+
+                    .vacancy-form__footer
+                        .vacancy-form__input.vacancy-form__input--policy
+                            input.vacancy-form__checkbox#vacancy-form__checkbox(type="checkbox" name="policy" required)
+                            label.vacancy-form__label(for="vacancy-form__checkbox") Я соглашаюсь с<br> <a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
+
+                        .vacancy-form__button
+                            input.vacancy-form__submit.button(type="submit" value="Оставить заявку")
+
+                .fill-form__deco: img(src="", alt="")
 
             section.oldboy-info
                 .oldboy-info__header

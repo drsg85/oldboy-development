@@ -148,7 +148,7 @@
             // positioning
             position: absolute;
             top: 0;
-            right: -100%;
+            right: -95%;
 
             // box model
             height: 100%;
@@ -159,6 +159,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center left;
+            transform: skewX(15deg);
         }
     }
 

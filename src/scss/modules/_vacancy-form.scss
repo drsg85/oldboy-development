@@ -1,0 +1,91 @@
+.vacancy-form {
+    // box model
+    padding-bottom: 120px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 70px;
+
+    // visual
+    background-color: #fdf6ee;
+}
+
+.vacancy-form__header {
+    // box model
+    margin-bottom: 90px;
+
+    // typography
+    text-align: center;
+}
+
+.vacancy-form__title {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.vacancy-form__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.vacancy-form__content {
+    // box model
+    display: flex;
+    justify-content: space-between;
+}
+
+.vacancy-form__group {
+
+}
+
+.vacancy-form__item {
+    // box model
+    margin-bottom: 30px;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+}
+
+.vacancy-form__text {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+    margin-left: 20px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.vacancy-form__input {
+    // box model
+    padding-left: 20px;
+    width: 280px;
+
+    // visual
+    border: none;
+    border-radius: 25px;
+    line-height: 44px;
+    font-size: 0.85rem;
+    outline: none;
+}

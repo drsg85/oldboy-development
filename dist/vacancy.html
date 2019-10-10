@@ -53,36 +53,42 @@
                 <div class="vacancy-form__content">
                     <div class="vacancy-form__group">
                         <div class="vacancy-form__item">
-                            <p class="vacancy-form__title">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" />
+                            <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" />
                         </div>
                         <div class="vacancy-form__item">
-                            <p class="vacancy-form__title">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" />
+                            <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" />
                         </div>
                         <div class="vacancy-form__item">
-                            <p class="vacancy-form__title">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" />
-                        </div>
-                    </div>
-                    <div class="vacancy-form__group">
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__title">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" />
-                        </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__title">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" />
+                            <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" />
                         </div>
                     </div>
                     <div class="vacancy-form__group">
                         <div class="vacancy-form__item">
-                            <p class="vacancy-form__title">Вакансии</p>
+                            <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" />
+                        </div>
+                        <div class="vacancy-form__item">
+                            <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" />
+                        </div>
+                    </div>
+                    <div class="vacancy-form__group">
+                        <div class="vacancy-form__item">
+                            <p class="vacancy-form__text">Вакансии</p>
                             <p class="vacancy-form__radio">Мастер<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Master" /></p>
                             <p class="vacancy-form__radio">Тайный покупатель<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Buyer" /></p>
                             <p class="vacancy-form__radio">Тату мастер<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Tattoo" /></p>
                             <p class="vacancy-form__radio">Администратор<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Admin" /></p>
                             <p class="vacancy-form__radio">Модель<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Model" /></p>
                             <p class="vacancy-form__radio">Косметолог<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Cosmetics" /></p>
+                            <p class="vacancy-form__text">Внимание: выберете одну вакансию</p>
                         </div>
                     </div>
                 </div>
+                <div class="vacancy-form__footer">
+                    <div class="vacancy-form__input vacancy-form__input--policy"><input class="vacancy-form__checkbox" id="vacancy-form__checkbox" type="checkbox" name="policy" required="required" /><label class="vacancy-form__label" for="vacancy-form__checkbox">Я соглашаюсь с<br> <a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
+                    <div class="vacancy-form__button"><input class="vacancy-form__submit button" type="submit" value="Оставить заявку" /></div>
+                </div>
             </form>
+            <div class="fill-form__deco"><img src="" alt="" /></div>
         </section>
         <section class="oldboy-info">
             <div class="oldboy-info__header">
