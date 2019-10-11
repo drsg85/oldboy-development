@@ -31,9 +31,9 @@
  * @see template_preprocess_links()
  */
 #}
+{% if links -%}
 <div class="language-select">
 	<div class="language-select__current">{{ language|upper }}</div>
-{% if links -%}
 	<div class="language-select__popup language-select__popup--hidden">
 	<ul>
     {%- for item in links -%}
@@ -49,5 +49,5 @@
     {%- endfor -%}
 	</ul>
 	</div>
-{%- endif %}
 </div>
+{%- endif %}
