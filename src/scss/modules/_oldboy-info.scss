@@ -1,6 +1,119 @@
+.oldboy-info {
+    
+}
+
 .oldboy-info__header {
+    // positioning
+    position: relative;
+
+    // box model
+    min-height: 350px;
+    margin-bottom: 70px;
+
     // visual
     background-image: url('./img/bgs/vac-banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.oldboy-info__header::after {
+    content: "";
+    // positioning
+    position: absolute;
+    bottom: -40px;
+
+    // box model
+    width: 100%;
+    height: 80px;
+
+    // visual
+    background-image: url('./img/white-grunge.svg');
+    background-position: top 2px center;
+    background-repeat: repeat-x;
+    background-size: 800px;
+}
+
+.oldboy-info__banner {
+    // positioning
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.oldboy-info__about {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+
+.oldboy-info__caption {
+    // box model
+    max-width: 500px;
+    margin-right: 40px;
+}
+
+.oldboy-info__title {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.oldboy-info__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.oldboy-info__text {
+    // box model
+    margin: 0;
+    max-width: 500px;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    line-height: 1.65;
+}
+
+.oldboy-info__confirmation {
+    // box model
+    margin-bottom: 100px;
+    padding-bottom: 60px;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+
+    // visual
+    background-color: #fdf6ee;
+}
+
+.oldboy-info__cta {
+    // box model
+    margin-bottom: 50px;
+    
+    // typography
+    text-align: center;
+}
+
+.oldboy-info__button {
+    // box model
+    margin-top: 60px;
 }

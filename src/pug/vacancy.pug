@@ -42,53 +42,63 @@ html(lang="en")
 
                     .vacancy-form__content
                         .vacancy-form__group
-                            .vacancy-form__item
-                                p.vacancy-form__text Фио
-                                input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович")
+                            .vacancy-form__subgroup
+                                .vacancy-form__item
+                                    p.vacancy-form__text Фио
+                                    input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович")
 
-                            .vacancy-form__item
-                                p.vacancy-form__text E-mail
-                                input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com")
+                                .vacancy-form__item
+                                    p.vacancy-form__text E-mail
+                                    input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com")
 
-                            .vacancy-form__item
-                                p.vacancy-form__text Возраст
-                                input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18")
+                                .vacancy-form__item
+                                    p.vacancy-form__text Возраст
+                                    input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18")
 
-                        .vacancy-form__group
-                            .vacancy-form__item
-                                p.vacancy-form__text Город проживания
-                                input.vacancy-form__input(type="text" name="city" placeholder="Калининград")
+                            .vacancy-form__subgroup
+                                .vacancy-form__item
+                                    p.vacancy-form__text Город проживания
+                                    input.vacancy-form__input(type="text" name="city" placeholder="Калининград")
 
-                            .vacancy-form__item
-                                p.vacancy-form__text Телефон
-                                input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx")
+                                .vacancy-form__item
+                                    p.vacancy-form__text Телефон
+                                    input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx")
 
-                        .vacancy-form__group
-                            .vacancy-form__item
-                                p.vacancy-form__text Вакансии
-                                p.vacancy-form__radio Мастер
-                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Master")
-                                p.vacancy-form__radio Тайный покупатель
-                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Buyer")
-                                p.vacancy-form__radio Тату мастер
-                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Tattoo")
-                                p.vacancy-form__radio Администратор
-                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Admin")
-                                p.vacancy-form__radio Модель
-                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Model")
-                                p.vacancy-form__radio Косметолог
-                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Cosmetics")
-                                p.vacancy-form__text Внимание: выберете одну вакансию
+                        .vacancy-form__group.vacancy-form__group--second
+                            .vacancy-form__subgroup
+                                .vacancy-form__item
+                                    p.vacancy-form__text Вакансии
+                                    .vacancy-form__wrapper
+                                        label.vacancy-form__label
+                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Master")
+                                            .vacancy-form__btn <span>Мастер</span>
+                                        label.vacancy-form__label
+                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Buyer")
+                                            .vacancy-form__btn <span>Тайный покупатель</span>
+                                        label.vacancy-form__label
+                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Tattoo")
+                                            .vacancy-form__btn <span>Тату мастер</span>
+                                        label.vacancy-form__label
+                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Admin")
+                                            .vacancy-form__btn <span>Администратор</span>
+                                        label.vacancy-form__label
+                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Model")
+                                            .vacancy-form__btn <span>Модель</span>
+                                        label.vacancy-form__label
+                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Cosmetics")
+                                            .vacancy-form__btn <span>Косметолог</span>
+                                    p.vacancy-form__text Внимание: выберете одну вакансию
 
                     .vacancy-form__footer
                         .vacancy-form__input.vacancy-form__input--policy
-                            input.vacancy-form__checkbox#vacancy-form__checkbox(type="checkbox" name="policy" required)
-                            label.vacancy-form__label(for="vacancy-form__checkbox") Я соглашаюсь с<br> <a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
+                            label.vacancy-form__checkbox-label(for="vacancy-form__checkbox") Заполняя данные формы, я соглашаюсь с <a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a> и даю согласие на обработку моих персональных данных
+                                input.vacancy-form__checkbox#vacancy-form__checkbox(type="checkbox" name="policy" required)
+                                .vacancy-form__box
 
                         .vacancy-form__button
                             input.vacancy-form__submit.button(type="submit" value="Оставить заявку")
 
-                .fill-form__deco: img(src="", alt="")
+                .fill-form__deco
 
             section.oldboy-info
                 .oldboy-info__header
@@ -98,15 +108,15 @@ html(lang="en")
 
                     .oldboy-info__banner
                         .oldboy-logo
-                            .oldboy-logo__image: img(src="./img/logo-dark.svg", alt="Логотип Oldboy Barbershop")
+                            .oldboy-logo__image: img(src="./img/logo.svg", alt="Логотип Oldboy Barbershop")
                             p.oldboy-logo__text Крупнейшая международная сеть мужских парикмахерских
 
                 .oldboy-info__about
                     .oldboy-info__caption
                         h3.oldboy-info__title Oldboy Barbershop — Намного больше, чем просто мужская парикмахерская
-                        p.oldboy-info__subtitle У нас есть всё, что требуется настоящему мужчине: атмосфера брутальности и мужского духа
+                        p.oldboy-info__subtitle У нас есть всё, что&nbsp;требуется настоящему мужчине: атмосфера брутальности и&nbsp;мужского духа
 
-                    p.oldboy-info__text Мужские стрижки и опасное бритьё — это наш профиль, и мы уверены, что наши барберы делают это лучше всех. Как сказал однажды знаменитый Ральф Лорен: «Какой бы Вы образ жизни ни вели, у вас должен быть свой собственный стиль, свой собственный мир»
+                    p.oldboy-info__text Мужские стрижки и опасное бритьё&nbsp;—&nbsp;это наш профиль, и&nbsp;мы уверены, что наши барберы делают это лучше всех. Как сказал однажды знаменитый Ральф Лорен: «Какой бы Вы образ жизни ни вели, у вас должен быть свой собственный стиль, свой собственный мир»
 
                 .oldboy-info__confirmation
                     .confirmation
@@ -114,21 +124,21 @@ html(lang="en")
 
                         .confirmation__items
                             .confirmation-item
-                                p.confirmation-tem__count 230
+                                p.confirmation-item__count 230
                                 p.confirmation-item__subtitle Открытых филиалов по всему миру
 
                             .confirmation-item
-                                p.confirmation-tem__count 35
+                                p.confirmation-item__count 35
                                 p.confirmation-item__subtitle Филиалов планируется к открытию по всему миру
                                 p.confirmation-item__subtitle.confirmation-item__subtitle--dark Включая Россию, СНГ, Евросоюз и США
 
                             .confirmation-item
-                                p.confirmation-tem__count 10
+                                p.confirmation-item__count 10
                                 p.confirmation-item__subtitle Стран в которых работают наши филиалы
 
                             .confirmation-item
-                                p.confirmation-tem__count 130
-                                p.confirmation-item__subtitle Филиалов уже открыто в этом году
+                                p.confirmation-item__count 130
+                                p.confirmation-item__subtitle Филиалов открыто уже в&nbsp;этом году
 
                 .oldboy-info__cta
                     h3.oldboy-info__title Оставьте заявку на вакансию <br>Мы рады видеть вас в нашей семье

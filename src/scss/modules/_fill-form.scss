@@ -9,3 +9,11 @@
     padding-top: 75px;
 }
 
+.fill-form__deco {
+    // positioning
+    position: absolute;
+    right: 0;
+
+    // visual
+    background-image: url('./img/deco/scissors.png');
+}

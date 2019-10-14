@@ -1,0 +1,25 @@
+.confirmation-item {
+
+}
+
+.confirmation-item__count {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $displayFont;
+    font-size: 8vw;
+}
+
+.confirmation-item__subtitle {
+    // box model
+    margin: 0;
+    max-width: 160px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}

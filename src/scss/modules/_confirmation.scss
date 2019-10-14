@@ -1,0 +1,22 @@
+.confirmation {
+
+}
+
+.confirmantion__text {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.confirmation__items {
+    // box model
+    display: flex;
+    justify-content: space-between;
+}

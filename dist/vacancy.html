@@ -52,43 +52,56 @@
                 </header>
                 <div class="vacancy-form__content">
                     <div class="vacancy-form__group">
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" />
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" />
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" />
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" />
+                            </div>
                         </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" />
-                        </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" />
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" />
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" />
+                            </div>
                         </div>
                     </div>
-                    <div class="vacancy-form__group">
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" />
-                        </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" />
-                        </div>
-                    </div>
-                    <div class="vacancy-form__group">
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Вакансии</p>
-                            <p class="vacancy-form__radio">Мастер<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Master" /></p>
-                            <p class="vacancy-form__radio">Тайный покупатель<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Buyer" /></p>
-                            <p class="vacancy-form__radio">Тату мастер<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Tattoo" /></p>
-                            <p class="vacancy-form__radio">Администратор<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Admin" /></p>
-                            <p class="vacancy-form__radio">Модель<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Model" /></p>
-                            <p class="vacancy-form__radio">Косметолог<input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Cosmetics" /></p>
-                            <p class="vacancy-form__text">Внимание: выберете одну вакансию</p>
+                    <div class="vacancy-form__group vacancy-form__group--second">
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Вакансии</p>
+                                <div class="vacancy-form__wrapper"><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Master" />
+                                        <div class="vacancy-form__btn"><span>Мастер</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Buyer" />
+                                        <div class="vacancy-form__btn"><span>Тайный покупатель</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Tattoo" />
+                                        <div class="vacancy-form__btn"><span>Тату мастер</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Admin" />
+                                        <div class="vacancy-form__btn"><span>Администратор</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Model" />
+                                        <div class="vacancy-form__btn"><span>Модель</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Cosmetics" />
+                                        <div class="vacancy-form__btn"><span>Косметолог</span></div>
+                                    </label></div>
+                                <p class="vacancy-form__text">Внимание: выберете одну вакансию</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="vacancy-form__footer">
-                    <div class="vacancy-form__input vacancy-form__input--policy"><input class="vacancy-form__checkbox" id="vacancy-form__checkbox" type="checkbox" name="policy" required="required" /><label class="vacancy-form__label" for="vacancy-form__checkbox">Я соглашаюсь с<br> <a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a></label></div>
+                    <div class="vacancy-form__input vacancy-form__input--policy"><label class="vacancy-form__checkbox-label" for="vacancy-form__checkbox">Заполняя данные формы, я соглашаюсь с <a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a> и даю согласие на обработку моих персональных данных<input class="vacancy-form__checkbox" id="vacancy-form__checkbox" type="checkbox" name="policy" required="required" />
+                            <div class="vacancy-form__box"></div>
+                        </label></div>
                     <div class="vacancy-form__button"><input class="vacancy-form__submit button" type="submit" value="Оставить заявку" /></div>
                 </div>
             </form>
-            <div class="fill-form__deco"><img src="" alt="" /></div>
+            <div class="fill-form__deco"></div>
         </section>
         <section class="oldboy-info">
             <div class="oldboy-info__header">
@@ -98,7 +111,7 @@
                 </header>
                 <div class="oldboy-info__banner">
                     <div class="oldboy-logo">
-                        <div class="oldboy-logo__image"><img src="./img/logo-dark.svg" alt="Логотип Oldboy Barbershop" /></div>
+                        <div class="oldboy-logo__image"><img src="./img/logo.svg" alt="Логотип Oldboy Barbershop" /></div>
                         <p class="oldboy-logo__text">Крупнейшая международная сеть мужских парикмахерских</p>
                     </div>
                 </div>
@@ -106,30 +119,30 @@
             <div class="oldboy-info__about">
                 <div class="oldboy-info__caption">
                     <h3 class="oldboy-info__title">Oldboy Barbershop — Намного больше, чем просто мужская парикмахерская</h3>
-                    <p class="oldboy-info__subtitle">У нас есть всё, что требуется настоящему мужчине: атмосфера брутальности и мужского духа</p>
+                    <p class="oldboy-info__subtitle">У нас есть всё, что&nbsp;требуется настоящему мужчине: атмосфера брутальности и&nbsp;мужского духа</p>
                 </div>
-                <p class="oldboy-info__text">Мужские стрижки и опасное бритьё — это наш профиль, и мы уверены, что наши барберы делают это лучше всех. Как сказал однажды знаменитый Ральф Лорен: «Какой бы Вы образ жизни ни вели, у вас должен быть свой собственный стиль, свой собственный мир»</p>
+                <p class="oldboy-info__text">Мужские стрижки и опасное бритьё&nbsp;—&nbsp;это наш профиль, и&nbsp;мы уверены, что наши барберы делают это лучше всех. Как сказал однажды знаменитый Ральф Лорен: «Какой бы Вы образ жизни ни вели, у вас должен быть свой собственный стиль, свой собственный мир»</p>
             </div>
             <div class="oldboy-info__confirmation">
                 <div class="confirmation">
                     <p class="confirmantion__text">Мы подтверждаем свои компетенции на конкретных примерах <br>Роль лидера рынка, это не пустые слова</p>
                     <div class="confirmation__items">
                         <div class="confirmation-item">
-                            <p class="confirmation-tem__count">230</p>
+                            <p class="confirmation-item__count">230</p>
                             <p class="confirmation-item__subtitle">Открытых филиалов по всему миру</p>
                         </div>
                         <div class="confirmation-item">
-                            <p class="confirmation-tem__count">35</p>
+                            <p class="confirmation-item__count">35</p>
                             <p class="confirmation-item__subtitle">Филиалов планируется к открытию по всему миру</p>
                             <p class="confirmation-item__subtitle confirmation-item__subtitle--dark">Включая Россию, СНГ, Евросоюз и США</p>
                         </div>
                         <div class="confirmation-item">
-                            <p class="confirmation-tem__count">10</p>
+                            <p class="confirmation-item__count">10</p>
                             <p class="confirmation-item__subtitle">Стран в которых работают наши филиалы</p>
                         </div>
                         <div class="confirmation-item">
-                            <p class="confirmation-tem__count">130</p>
-                            <p class="confirmation-item__subtitle">Филиалов уже открыто в этом году</p>
+                            <p class="confirmation-item__count">130</p>
+                            <p class="confirmation-item__subtitle">Филиалов открыто уже в&nbsp;этом году</p>
                         </div>
                     </div>
                 </div>
