@@ -122,7 +122,11 @@
 						{% if content.field_phonelink.0 %}
 							{% set phonelink = content.field_phonelink.0 %}
 						{% endif %} 
-						<p class="contact__value"><a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a></p>
+						{% set phoneclass = 'ya-phone' %}
+						{% if content.field_phone_class.0 %}
+							{% set phoneclass = content.field_phone_class.0 %}
+						{% endif %} 
+						<div class="contact__value {{ phoneclass }}"><a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a></div>
 					</div>
 					{% if content.field_work_hours %}
 					<div class="contact">
