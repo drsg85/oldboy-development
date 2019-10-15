@@ -104,7 +104,7 @@
         <div class="hero__content">
             <div class="hero__caption hero-caption--city">
                 <div class="hero-caption">
-                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">oldboy <br>barbershop</span></h1>
+                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span></h1>
 					<p class="hero-caption__location">{{ city }}</p>
                 </div>
             </div>
@@ -338,5 +338,5 @@
 		{{ node.field_subscribe_link.value|raw }}
 	{% endif %}
     <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
-	<script src="/{{ directory }}/dist/branch.js"></script>
+	<script src="/{{ directory }}/dist/branch.js?v={{ js_ver }}"></script>
     {{ node.body.0.value|raw }}
