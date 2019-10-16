@@ -8,12 +8,27 @@
 
     // box model
     min-height: 350px;
-    margin-bottom: 70px;
-
+    margin-bottom: 50px;
+    
     // visual
     background-image: url('./img/bgs/vac-banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 70px;
+    }
+
+    .section-header {
+        // positioning
+        transform: skewY(-15deg) translateY(-60px);
+
+        @include atDesktopS {
+            // positioning
+            transform: skewY(-15deg);
+        }
+    }
 }
 
 .oldboy-info__header::after {
@@ -34,40 +49,71 @@
 }
 
 .oldboy-info__banner {
+    // box model
+    padding-bottom: 70px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    
+    @include atDesktopS {
     // positioning
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    }
 }
 
 .oldboy-info__about {
     // box model
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 60px;
-    padding-left: 350px;
-    padding-right: 350px;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        padding-left: 350px;
+        padding-right: 350px;
+        margin-bottom: 60px;
+    }
 }
 
 .oldboy-info__caption {
     // box model
-    max-width: 500px;
-    margin-right: 40px;
+    margin-bottom: 40px;
+
+    @include atTablet {
+        // box model
+        max-width: 500px;
+        margin-bottom: 0;
+        margin-right: 40px;
+    }
 }
 
 .oldboy-info__title {
     // box model
     margin: 0;
-    margin-bottom: 15px;
-
+    margin-bottom: 5px;
+    
     // typography
     color: $black;
     font-family: $titleFont;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     text-transform: uppercase;
+    
+    @include atTablet {
+    // box model
+    margin-bottom: 15px;
+
+    // typography
+    font-size: 1.8rem;
+    }
 }
 
 .oldboy-info__subtitle {
@@ -77,9 +123,13 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1.2rem;
     line-height: 1.2;
     text-transform: uppercase;
+    
+    @include atTablet {
+        // typography
+        font-size: 1.2rem;
+    }
 }
 
 .oldboy-info__text {
@@ -95,25 +145,40 @@
 
 .oldboy-info__confirmation {
     // box model
-    margin-bottom: 100px;
-    padding-bottom: 60px;
-    padding-left: 250px;
-    padding-right: 250px;
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 50px;
-
+    
     // visual
     background-color: #fdf6ee;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 100px;
+        padding-bottom: 60px;
+        padding-left: 250px;
+        padding-right: 250px;
+    }
 }
 
 .oldboy-info__cta {
     // box model
     margin-bottom: 50px;
-    
+    padding-left: 25px;
+    padding-right: 25px;
+
     // typography
     text-align: center;
 }
 
 .oldboy-info__button {
     // box model
-    margin-top: 60px;
+    margin-top: 30px;
+
+    @include atTablet {
+        // box model
+        margin-top: 60px;
+    }
 }

@@ -14,12 +14,18 @@
 
 .confirmation-item__subtitle {
     // box model
-    margin: 0;
+    margin: 0 auto;
     max-width: 160px;
 
     // typography
     color: $black;
     font-family: $titleFont;
     font-size: 0.85rem;
+    text-align: center;
     text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }

@@ -1,20 +1,28 @@
 .oldboy-logo {
     // box model
-    display: flex;
-    margin: 0 auto;
     max-width: 350px;
-
+    margin: 0 auto;
+    
     @include atTablet {
         // box model
+        display: flex;
+        margin: 0 auto;
         max-width: 460px;
+    }
+    
+    @include atDesktopS {
+        // box model
     }
 }
 
 .oldboy-logo__image {
+
+    @include atDesktopS {
     // box model
     flex-basis: 50%;
     margin-right: 10px;
     width: 150px;
+    }
 }
 
 .oldboy-logo__image img {
@@ -26,24 +34,31 @@
 .oldboy-logo__text {
     // box model
     flex-basis: 50%;
-    max-width: 45%;
     margin: 0;
-    
+    margin-top: -50px;
+    max-width: 70%;
+    margin-left: auto;
+
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 3.2vw;
+    font-size: 5vw;
     line-height: 1.5;
+    text-align: right;
     text-transform: uppercase;
 
-    // @include atMobile {
-    //     // typography
-    //     font-size: 0.9rem;
-    // }
-
     @include atTablet {
+        // box model
+        max-width: 45%;
+        margin-top: 0;
+
         // typography
         font-size: 1.2rem;
+        text-align: left;
+    }
+
+    @include atDesktopS {
+
     }
 }
 
