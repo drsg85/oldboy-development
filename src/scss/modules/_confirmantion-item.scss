@@ -1,5 +1,10 @@
 .confirmation-item {
-
+    @include atTablet {
+        // box model
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 }
 
 .confirmation-item__count {
@@ -10,6 +15,7 @@
     color: $golden;
     font-family: $displayFont;
     font-size: 10rem;
+    text-align: center;
 }
 
 .confirmation-item__subtitle {

@@ -8,7 +8,7 @@
 
     // box model
     min-height: 350px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     
     // visual
     background-image: url('./img/bgs/vac-banner.jpg');
@@ -17,7 +17,7 @@
     
     @include atTablet {
         // box model
-        margin-bottom: 70px;
+        margin-bottom: 60px;
     }
 
     .section-header {
@@ -56,30 +56,52 @@
     padding-top: 40px;
     
     @include atDesktopS {
-    // positioning
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+        // positioning
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        // box model
+        margin-left: 150px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-left: auto;
     }
 }
 
 .oldboy-info__about {
     // box model
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 auto;
     margin-bottom: 40px;
     padding-left: 25px;
     padding-right: 25px;
-    
+
     @include atTablet {
         // box model
+        max-width: none;
+        margin-bottom: 60px;
         flex-direction: row;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    @include atDesktopL {
+        // box model
         padding-left: 350px;
         padding-right: 350px;
-        margin-bottom: 60px;
+
     }
 }
 
@@ -156,8 +178,19 @@
     
     @include atTablet {
         // box model
-        margin-bottom: 100px;
         padding-bottom: 60px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    @include atDesktopL {
+        // box model
         padding-left: 250px;
         padding-right: 250px;
     }
@@ -165,7 +198,7 @@
 
 .oldboy-info__cta {
     // box model
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding-left: 25px;
     padding-right: 25px;
 

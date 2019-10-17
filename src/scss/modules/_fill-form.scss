@@ -2,8 +2,12 @@
     // positioning
     position: relative;
 
-    @include atDesktopL {
+    @include atTablet {
+        // box model
+        margin-bottom: 60px;
+    }
 
+    @include atDesktopL {
     // box model
     padding-top: 75px;
     margin-bottom: 120px;

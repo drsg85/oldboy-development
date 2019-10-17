@@ -26,10 +26,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 
     @include atTablet {
         // box model
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include atDesktopM {
+        // box model
+        flex-wrap: nowrap;;
     }
 }
