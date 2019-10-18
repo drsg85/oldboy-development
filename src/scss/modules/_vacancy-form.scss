@@ -8,18 +8,23 @@
     // visual
     background-color: #fdf6ee;
 
-    @include atDesktopS {
+    @include atTablet {
         // box model
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-bottom: 80px;
     }
 
+    @include atDesktopS {
+        // box model
+        padding-left: 50px;
+        padding-right: 50px;
+        }
+
     @include atDesktopL {
-    // box model
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 10px;
-    }
+        // box model
+        padding-left: 150px;
+        padding-right: 150px;
+        padding-top: 10px;
+        }
 }
 
 .vacancy-form__header {
@@ -30,9 +35,9 @@
     text-align: center;
 
     @include atDesktopL {
-    // box model
-    margin-bottom: 90px;
-    }
+        // box model
+        margin-bottom: 90px;
+        }
 }
 
 .vacancy-form__title {
@@ -47,12 +52,12 @@
     text-transform: uppercase;
 
     @include atDesktopL {
-    // box model
-    margin-bottom: 30px;
+        // box model
+        margin-bottom: 30px;
 
-    // typography
-    line-height: 1.2;
-    }
+        // typography
+        line-height: 1.2;
+        }
 }
 
 .vacancy-form__subtitle {
@@ -79,14 +84,15 @@
     flex-direction: column;
 
     @include atDesktopS {
-    // box model
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 850px;
-    width: 100%;
+        // box model
+        align-items: unset;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+        width: 100%;
 }
 
 @include atDesktopL {
@@ -98,27 +104,50 @@
 .vacancy-form__group {
     // box model
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
+    
+    @include atTablet {
+        // box model
+        max-width: 550px;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 490px;
+    }
 
     @include atDesktopL {
     // box model
     flex-direction: row;
     justify-content: space-between;
-    max-width: 660px;
+    max-width: 570px;
     width: 100%;
     }
 
     &--second {
         // box model
         max-width: 300px;
+
+        @include atTablet {
+        // box model
+        max-width: 480px;
+        }
+
+        @include atDesktopS {
+        // box model
+        max-width: 300px;
         width: 100%;
         justify-content: flex-end;
+        }
     }
 }
 
-.vacancy-form__subgroup {
-    // box model
-
+.vacancy-form__subgroup .vacancy-form__text:last-child {
+    // typography
+    text-align: center;
 }
 
 .vacancy-form__item {
@@ -169,6 +198,11 @@
         // box model
         width: 300px;
     }
+    
+    @include atTablet {
+        // box model
+        max-width: 230px;
+    }
 
     &--radio {
         // positioning
@@ -185,21 +219,35 @@
 
     &--age {
         // box model
+        max-width: 100px;
+        
+        @include atDesktopL{
+        // box model
         max-width: 85px;
+        }
     }
 
     &--policy {
         // box model
         margin-bottom: 20px;
+        margin-left: 20px;
         align-self: center;
 
         // typography
         line-height: normal;
 
+        @include atTablet {
+            // box model
+            max-width: 325px;
+            width: 100%;
+        }
+
         @include atDesktopL {
         // box model
         width: 100%;
+        max-width: none;
         margin-bottom: 0;
+        margin-left: 0;
         }
     }
 }
@@ -208,7 +256,6 @@
     // box model
     display: inline-block;
     margin-bottom: 25px;
-    // margin-right: 20px;
 }
 
 .vacancy-form__btn {
