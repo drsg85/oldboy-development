@@ -1,9 +1,17 @@
 .confirmation-item {
+    // box model
+    margin-bottom: 30px;
+
     @include atTablet {
         // box model
         flex-basis: 50%;
         flex-grow: 1;
         flex-shrink: 1;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 0;
     }
 }
 

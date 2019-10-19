@@ -45,24 +45,29 @@ html(lang="en")
                             .vacancy-form__subgroup
                                 .vacancy-form__item
                                     p.vacancy-form__text Фио
-                                    input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович")
+                                    input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required pattern="^[A-z|А-я][a-z|а-я]{2,55}$")
+                                    .vacancy-form__check
 
                                 .vacancy-form__item
                                     p.vacancy-form__text E-mail
-                                    input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com")
+                                    input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com" required)
+                                    .vacancy-form__check
 
                                 .vacancy-form__item
                                     p.vacancy-form__text Возраст
-                                    input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18")
+                                    input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18" min="18" required)
+                                    .vacancy-form__check
 
                             .vacancy-form__subgroup
                                 .vacancy-form__item
                                     p.vacancy-form__text Город проживания
-                                    input.vacancy-form__input(type="text" name="city" placeholder="Калининград")
+                                    input.vacancy-form__input(type="text" name="city" placeholder="Калининград" required pattern="^[A-z|А-я][a-z|а-я]{2,55}$")
+                                    .vacancy-form__check
 
                                 .vacancy-form__item
                                     p.vacancy-form__text Телефон
-                                    input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx")
+                                    input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required minlength="6")
+                                    .vacancy-form__check
 
                         .vacancy-form__group.vacancy-form__group--second
                             .vacancy-form__subgroup

@@ -151,12 +151,30 @@
 }
 
 .vacancy-form__item {
+    // positioning
+    position: relative;
+
     // box model
     margin-bottom: 30px;
 
     // typography
     color: $black;
     font-family: $mainFont;
+}
+
+.vacancy-form__check {
+    // positioning
+    position: absolute;
+    right: 10px;
+    bottom: 17px;
+
+    // box model
+    display: none;
+    width: 10px;
+    height: 10px;
+
+    // visual
+    background-image: url('./img/icons/checked.svg');
 }
 
 .vacancy-form__wrapper {
@@ -244,12 +262,24 @@
 
         @include atDesktopL {
         // box model
+        align-self: auto;
         width: 100%;
         max-width: none;
         margin-bottom: 0;
         margin-left: 0;
         }
     }
+}
+
+.vacancy-form__input:valid {
+    // visual
+    background-color: $golden;
+    color: $light;
+}
+
+.vacancy-form__input:valid + .vacancy-form__check {
+    // box model
+    display: block;
 }
 
 .vacancy-form__label {
@@ -269,6 +299,7 @@
     border-radius: 25px;
     background-color: $light;
     cursor: pointer;
+    transition: ease-in-out 0.25s;
 }
 
 .vacancy-form__btn span {
@@ -325,12 +356,12 @@
 
     // visual
     background-color: $golden;
-    }
 
-    @include atDesktopL {
-    // positioning
-    top: -25px;
-}
+        @include atDesktopL {
+            // box model
+            top: -20px;
+        }
+    }
 
 .vacancy-form__checkbox {
     // positioning
@@ -363,11 +394,6 @@
     box-shadow: 0 0 0 0.1em $golden;
     cursor: pointer;
     overflow: hidden;
-
-    @include atDesktopL {
-        // positioning
-        top: 25px;
-    }
 }
 
 .vacancy-form__checkbox-label {

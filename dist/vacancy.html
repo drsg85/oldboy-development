@@ -54,21 +54,26 @@
                     <div class="vacancy-form__group">
                         <div class="vacancy-form__subgroup">
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" />
+                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,55}$" />
+                                <div class="vacancy-form__check"></div>
                             </div>
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" />
+                                <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" required="required" />
+                                <div class="vacancy-form__check"></div>
                             </div>
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" />
+                                <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" min="18" required="required" />
+                                <div class="vacancy-form__check"></div>
                             </div>
                         </div>
                         <div class="vacancy-form__subgroup">
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" />
+                                <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,55}$" />
+                                <div class="vacancy-form__check"></div>
                             </div>
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" />
+                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required="required" minlength="6" />
+                                <div class="vacancy-form__check"></div>
                             </div>
                         </div>
                     </div>
