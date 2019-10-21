@@ -1,0 +1,67 @@
+.fill-form {
+    // positioning
+    position: relative;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 60px;
+    }
+
+    @include atDesktopL {
+    // box model
+    padding-top: 75px;
+    margin-bottom: 120px;
+    margin-left: 145px;
+    margin-right: 145px;
+    margin-top: -50px;
+    }
+}
+
+.fill-form::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    top: -40px;
+
+    // box model
+    width: 100%;
+    height: 80px;
+    
+    // visual
+    background-image: url('./img/beige-grunge.svg');
+    background-position: top 2px center;
+    background-repeat: repeat-x;
+    background-size: 800px;
+    z-index: 7;
+
+    @include atDesktopL {
+
+    // positioning
+    top: 10px;
+    left: 0;
+    }
+}
+
+.fill-form__deco {
+    // box model
+    display: none;
+
+    @include atDesktopL {
+    // positioning
+    position: absolute;
+    bottom: -250px;
+    right: -90px;
+
+    // box model
+    display: block;
+    width: 430px;
+    height: 630px;
+
+    // visual
+    background-image: url('./img/deco/scissors.png');
+    background-size: cover;
+    transform: rotate(240deg) scale(-1, 1);
+    z-index: 2;
+    }
+}

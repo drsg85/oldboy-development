@@ -1,0 +1,461 @@
+.vacancy-form {
+    // box model
+    padding-bottom: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 35px;
+
+    // visual
+    background-color: #fdf6ee;
+
+    @include atTablet {
+        // box model
+        padding-bottom: 80px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 50px;
+        padding-right: 50px;
+        }
+
+    @include atDesktopL {
+        // box model
+        padding-left: 150px;
+        padding-right: 150px;
+        padding-top: 10px;
+        }
+}
+
+.vacancy-form__header {
+    // box model
+    margin-bottom: 45px;
+
+    // typography
+    text-align: center;
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 90px;
+        }
+}
+
+.vacancy-form__title {
+    // box model
+    margin: 0;
+    margin-bottom: 25px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 30px;
+
+        // typography
+        line-height: 1.2;
+        }
+}
+
+.vacancy-form__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    
+    @include atDesktopL {
+        // typography
+    font-size: 1rem;
+    line-height: 1.2;
+    }
+}
+
+.vacancy-form__content {
+    // box model
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include atDesktopS {
+        // box model
+        align-items: unset;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+        width: 100%;
+}
+
+@include atDesktopL {
+    // box model
+    max-width: 1090px;
+    }
+}
+
+.vacancy-form__group {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    @include atTablet {
+        // box model
+        max-width: 550px;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 490px;
+    }
+
+    @include atDesktopL {
+    // box model
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 570px;
+    width: 100%;
+    }
+
+    &--second {
+        // box model
+        max-width: 300px;
+
+        @include atTablet {
+        // box model
+        max-width: 480px;
+        }
+
+        @include atDesktopS {
+        // box model
+        max-width: 300px;
+        width: 100%;
+        justify-content: flex-end;
+        }
+    }
+}
+
+.vacancy-form__subgroup .vacancy-form__text:last-child {
+    // typography
+    text-align: center;
+}
+
+.vacancy-form__item {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 30px;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+}
+
+.vacancy-form__check {
+    // positioning
+    position: absolute;
+    right: 10px;
+    bottom: 17px;
+
+    // box model
+    display: none;
+    width: 10px;
+    height: 10px;
+
+    // visual
+    background-image: url('./img/icons/checked.svg');
+
+    &--age {
+        // positioning
+        left: 80px;
+    }
+}
+
+.vacancy-form__wrapper {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vacancy-form__text {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+    margin-left: 20px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.vacancy-form__input {
+    // box model
+    width: 270px;
+    padding-left: 20px;
+
+    // visual
+    border: none;
+    border-radius: 25px;
+    line-height: 44px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: ease-in-out 0.25s;
+
+    @include atSmallMobile {
+        // box model
+        width: 300px;
+    }
+    
+    @include atTablet {
+        // box model
+        max-width: 230px;
+    }
+
+    &--radio {
+        // positioning
+        position: absolute;
+        clip: rect(0 0 0 0);
+        
+        // box model
+        width: 1px;
+        height: 1px;
+        
+        // visual
+		overflow: hidden;
+    }
+
+    &--age {
+        // box model
+        max-width: 100px;
+    }
+
+    &--policy {
+        // box model
+        margin-bottom: 20px;
+        margin-left: 20px;
+        align-self: center;
+
+        // typography
+        line-height: normal;
+
+        @include atTablet {
+            // box model
+            max-width: 325px;
+            width: 100%;
+        }
+
+        @include atDesktopL {
+            // box model
+            align-self: auto;
+            width: 100%;
+            max-width: none;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+    }
+}
+
+.vacancy-form__input:valid {
+    // visual
+    background-color: $golden;
+    color: $light;
+}
+
+.vacancy-form__input::placeholder {
+    // typography
+    font-size: 0.85rem;
+    opacity: 0.4;
+}
+
+.vacancy-form__input:valid + .vacancy-form__check {
+    // box model
+    display: block;
+}
+
+.vacancy-form__input:-webkit-autofill {
+    // typography
+    -webkit-text-fill-color: $light !important;
+
+    // visual
+    -webkit-box-shadow: 0 0 0 1000px $golden inset !important;
+}
+
+.vacancy-form__label {
+    // box model
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.vacancy-form__btn {
+    // box model
+    padding: 15px;
+
+    // typography
+    text-align: center;
+
+    // visual
+    border-radius: 25px;
+    background-color: $light;
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
+}
+
+.vacancy-form__btn span {
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+.vacancy-form__input--radio:checked + .vacancy-form__btn {
+    // visual
+    background-color: $golden;
+}
+
+.vacancy-form__input--radio:checked + .vacancy-form__btn span {
+    // typography
+    color: $light;
+
+    // visual
+    opacity: 1;
+}
+
+.vacancy-form__footer {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+
+    @include atDesktopL {
+    // box model
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1090px;
+    padding-left: 5px;
+    width: 100%;
+    }
+}
+
+.vacancy-form__footer::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    top: -10px;
+
+    // box model
+    width: 100%;
+    height: 2px;
+
+    // visual
+    background-color: $golden;
+
+        @include atDesktopL {
+            // box model
+            top: -20px;
+        }
+    }
+
+.vacancy-form__checkbox {
+    // positioning
+    position: absolute;
+    clip: rect(0 0 0 0);
+
+    // box model
+    width: 1px;
+    height: 1px;
+    
+    // visual
+    overflow: hidden;
+}
+
+.vacancy-form__box {
+    // positioning
+    position: absolute;
+    top: 5px;
+
+    // box model
+    width: 1rem;
+    height: 1rem;
+    margin-left: -1.5rem;
+
+    // visual
+    background-color: white;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 0.05em;
+    box-shadow: 0 0 0 0.1em $golden;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.25s;
+}
+
+.vacancy-form__checkbox-label {
+    // box model
+    display: block;
+    max-width: 480px;
+
+    // typography
+    color: $grey;
+    cursor: pointer;
+    font-family: $mainFont;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.vacancy-form__checkbox-label a {
+    // typography
+    color: $grey;
+}
+
+.vacancy-form__checkbox:checked + .vacancy-form__box {
+    // visual
+    background-color: $golden;
+    background-image: url('./img/icons/checked.svg');
+}
+
+.vacancy-form__checkbox:focus + .vacancy-form__box {
+    // visual
+    box-shadow: 0 0 0 0.2em $golden;
+}
+
+.vacancy-form__checkbox:disabled + .vacancy-form__box {
+    // visual
+    background-color: rgba($grey, 0.5);
+    box-shadow: 0 0 0 0.2em $grey;
+}
+
+.vacancy-form__checkbox:disabled:checked + .vacancy-form__box {
+    // visual
+    background-color: $grey;
+}
+
+.vacancy-form__button {
+    // typography
+    text-align: center;
+
+    // visual
+    z-index: 3;
+}

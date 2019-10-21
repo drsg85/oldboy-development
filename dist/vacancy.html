@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <header class="hero hero--shaving">
+    <header class="hero hero--haircut">
         <div class="hero__top">
             <div class="hero__logo"><a href="index.html"><img src="/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
-            <div class="hero__nav">
+            <div class="hero__nav hero__nav--hidden">
                 <nav class="main-nav">
                     <ul class="main-nav__list">
                         <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
@@ -37,22 +37,125 @@
         <div class="hero__content">
             <div class="hero__caption">
                 <div class="hero-caption">
-                    <h1 class="hero-caption__title"><span class="hero-caption__big hero-caption__big--royal">Опасное бритьё</span></h1>
-                    <p class="hero-caption__motto">Oldboy barbershop <br>только качество</p>
+                    <h1 class="hero-caption__title"><span class="hero-caption__big hero-caption__big--vacancy">Вакансии&nbsp;в <br>Oldboy</span></h1>
+                    <p class="hero-caption__motto">Заполни форму и&nbsp;стань частью команды Oldboy</p>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="service">
-            <div class="service__header">
-                <div class="service__image"><img src="./img/shaving/shaving.jpg" alt="Бритьё бороды и головы в Oldboy Barbershop" /></div>
+        <section class="fill-form">
+            <form class="vacancy-form" action="">
+                <header class="vacancy-form__header">
+                    <h2 class="vacancy-form__title">Заполни форму вакансий Oldboy</h2>
+                    <p class="vacancy-form__subtitle">Укажите свои контактные данные и вакансию, которая вас интересует. <br>Наши менеджеры свяжутся с вами в ближайшее время</p>
+                </header>
+                <div class="vacancy-form__content">
+                    <div class="vacancy-form__group">
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" required="required" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" min="18" required="required" />
+                                <div class="vacancy-form__check vacancy-form__check--age"></div>
+                            </div>
+                        </div>
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,55}$" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required="required" minlength="6" pattern="[0-9,+,-]{6,}" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vacancy-form__group vacancy-form__group--second">
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Вакансии</p>
+                                <div class="vacancy-form__wrapper"><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Master" />
+                                        <div class="vacancy-form__btn"><span>Мастер</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Buyer" />
+                                        <div class="vacancy-form__btn"><span>Тайный покупатель</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Tattoo" />
+                                        <div class="vacancy-form__btn"><span>Тату мастер</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Admin" />
+                                        <div class="vacancy-form__btn"><span>Администратор</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Model" />
+                                        <div class="vacancy-form__btn"><span>Модель</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Cosmetics" />
+                                        <div class="vacancy-form__btn"><span>Косметолог</span></div>
+                                    </label></div>
+                                <p class="vacancy-form__text">Внимание: выберете одну вакансию</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vacancy-form__footer">
+                    <div class="vacancy-form__input vacancy-form__input--policy"><label class="vacancy-form__checkbox-label" for="vacancy-form__checkbox">Заполняя данные формы, я соглашаюсь с&nbsp;<a class="vacancy-form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a> и&nbsp;даю согласие на&nbsp;обработку моих персональных данных<input class="vacancy-form__checkbox" id="vacancy-form__checkbox" type="checkbox" name="policy" required="required" />
+                            <div class="vacancy-form__box"></div>
+                        </label></div>
+                    <div class="vacancy-form__button"><input class="vacancy-form__submit button" type="submit" value="Оставить заявку" /></div>
+                </div>
+            </form>
+            <div class="fill-form__deco"></div>
+        </section>
+        <section class="oldboy-info">
+            <div class="oldboy-info__header">
+                <header class="section-header">
+                    <h2 class="section-header__title">Семья&nbsp;Oldboy <br>Barbershop</h2>
+                    <p class="section-header__subtitle section-header__subtitle--light">О&nbsp;нашем&nbsp;барбершопе</p>
+                </header>
+                <div class="oldboy-info__banner">
+                    <div class="oldboy-logo">
+                        <div class="oldboy-logo__image"><img src="./img/logo.svg" alt="Логотип Oldboy Barbershop" /></div>
+                        <p class="oldboy-logo__text">Крупнейшая международная сеть мужских парикмахерских</p>
+                    </div>
+                </div>
             </div>
-            <div class="service__content">
-                <h2 class="service__headline">Бритьё бороды и головы</h2>
-                <p class="service__subtitle">Бритье в Oldboy – это самый настоящий ритуал с сохранением традиций наших предков.</p>
-                <p class="service__text">Этот процесс не быстрый, но именно неспешность и аккуратность делает его настоящим релаксом для эстетов. Осуществляется классическое бритье двумя инструментами в два приёма: машинкой для бритья или опасной бритвой; сначала по направлению, а затем против направления роста волос, обеспечивая таким образом максимально гладкую кожу.</p>
-                <p class="service__text">Наши барберы филигранно владеют искусством бритья: отбор мастеров очень строгий, обучение каждого барбера проводит ведущий барбер, имеющий сертификат «American Crew», брэнд менеджер сети Oldboy Barbershop. А после, владельцы наших филиалов работают над прокачиванием скилла своих сотрудников. Мастера Oldboy хранят традиции классического бритья бороды и головы, тщательно подходят к выбору инструментов и косметики для данной процедуры.</p>
+            <div class="oldboy-info__about">
+                <div class="oldboy-info__caption">
+                    <h3 class="oldboy-info__title">Oldboy Barbershop — Намного больше, чем просто мужская парикмахерская</h3>
+                    <p class="oldboy-info__subtitle">У нас есть всё, что&nbsp;требуется настоящему мужчине: атмосфера брутальности и&nbsp;мужского духа</p>
+                </div>
+                <p class="oldboy-info__text">Мужские стрижки и опасное бритьё&nbsp;—&nbsp;это наш профиль, и&nbsp;мы уверены, что наши барберы делают это лучше всех. Как сказал однажды знаменитый Ральф Лорен: «Какой бы Вы образ жизни ни вели, у вас должен быть свой собственный стиль, свой собственный мир»</p>
+            </div>
+            <div class="oldboy-info__confirmation">
+                <div class="confirmation">
+                    <p class="confirmantion__text">Мы подтверждаем свои компетенции на конкретных примерах <br>Роль лидера рынка, это не пустые слова</p>
+                    <div class="confirmation__items">
+                        <div class="confirmation-item">
+                            <p class="confirmation-item__count">230</p>
+                            <p class="confirmation-item__subtitle">Открытых филиалов по всему миру</p>
+                        </div>
+                        <div class="confirmation-item">
+                            <p class="confirmation-item__count">35</p>
+                            <p class="confirmation-item__subtitle">Филиалов планируется к открытию по всему миру</p>
+                            <p class="confirmation-item__subtitle">Включая Россию, СНГ, Евросоюз и США</p>
+                        </div>
+                        <div class="confirmation-item">
+                            <p class="confirmation-item__count">10</p>
+                            <p class="confirmation-item__subtitle">Стран в которых работают наши филиалы</p>
+                        </div>
+                        <div class="confirmation-item">
+                            <p class="confirmation-item__count">130</p>
+                            <p class="confirmation-item__subtitle">Филиалов открыто уже в&nbsp;этом году</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="oldboy-info__cta">
+                <h3 class="oldboy-info__title">Оставьте заявку на вакансию <br>Мы рады видеть вас в нашей семье</h3>
+                <p class="oldboy-info__subtitle">Наши менеджеры свяжутся с вами в ближайшее время</p>
+                <div class="oldboy-info__button"><button class="button form-trigger ms_booking">Оставить заявку</button></div>
             </div>
         </section>
     </main>
