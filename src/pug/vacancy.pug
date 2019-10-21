@@ -45,7 +45,7 @@ html(lang="en")
                             .vacancy-form__subgroup
                                 .vacancy-form__item
                                     p.vacancy-form__text Фио
-                                    input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required pattern="^[A-z|А-я][a-z|а-я]{2,55}$")
+                                    input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required pattern="^[A-z|А-я][a-z|а-я]{2,}$")
                                     .vacancy-form__check
 
                                 .vacancy-form__item
@@ -56,7 +56,7 @@ html(lang="en")
                                 .vacancy-form__item
                                     p.vacancy-form__text Возраст
                                     input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18" min="18" required)
-                                    .vacancy-form__check
+                                    .vacancy-form__check.vacancy-form__check--age
 
                             .vacancy-form__subgroup
                                 .vacancy-form__item
@@ -66,7 +66,7 @@ html(lang="en")
 
                                 .vacancy-form__item
                                     p.vacancy-form__text Телефон
-                                    input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required minlength="6")
+                                    input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required minlength="6" pattern="[0-9,+,-]{6,}")
                                     .vacancy-form__check
 
                         .vacancy-form__group.vacancy-form__group--second

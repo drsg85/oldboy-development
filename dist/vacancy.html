@@ -54,7 +54,7 @@
                     <div class="vacancy-form__group">
                         <div class="vacancy-form__subgroup">
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,55}$" />
+                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" />
                                 <div class="vacancy-form__check"></div>
                             </div>
                             <div class="vacancy-form__item">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="vacancy-form__item">
                                 <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" min="18" required="required" />
-                                <div class="vacancy-form__check"></div>
+                                <div class="vacancy-form__check vacancy-form__check--age"></div>
                             </div>
                         </div>
                         <div class="vacancy-form__subgroup">
@@ -72,7 +72,7 @@
                                 <div class="vacancy-form__check"></div>
                             </div>
                             <div class="vacancy-form__item">
-                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required="required" minlength="6" />
+                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required="required" minlength="6" pattern="[0-9,+,-]{6,}" />
                                 <div class="vacancy-form__check"></div>
                             </div>
                         </div>
