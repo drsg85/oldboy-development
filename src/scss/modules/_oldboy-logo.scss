@@ -1,0 +1,90 @@
+.oldboy-logo {
+    // box model
+    max-width: 350px;
+    margin: 0 auto;
+    
+    @include atTablet {
+        // box model
+        display: flex;
+        margin: 0 auto;
+        max-width: 460px;
+    }
+    
+    @include atDesktopS {
+        // box model
+    }
+}
+
+.oldboy-logo__image {
+
+    @include atDesktopS {
+    // box model
+    flex-basis: 50%;
+    margin-right: 10px;
+    width: 150px;
+    }
+}
+
+.oldboy-logo__image img {
+    // box model
+    width: 100%;
+    height: 100%;
+}
+
+.oldboy-logo__text {
+    // box model
+    flex-basis: 50%;
+    margin: 0;
+    margin-top: -50px;
+    max-width: 70%;
+    margin-left: auto;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 5vw;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        max-width: 45%;
+        margin-top: 0;
+
+        // typography
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    @include atDesktopS {
+
+    }
+}
+
+.oldboy-logo__text::before {
+    content: "";
+
+    // box model
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+
+    // visual
+    background-image: linear-gradient(to right, rgba($golden, 0.55), rgba($golden, 0.75), rgba($golden, 1));
+}
+
+.oldboy-logo__text::after {
+    content: "";
+
+    // box model
+    display: block;
+    width: 160%;
+    height: 3px;
+    margin-left: -60%;
+    margin-top: 5px;
+
+    // visual
+    background-image: linear-gradient(to right, rgba($golden, 0.25), rgba($golden, 0.75), rgba($golden, 1));
+}

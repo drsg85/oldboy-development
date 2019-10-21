@@ -1,0 +1,42 @@
+.confirmation {
+
+}
+
+.confirmantion__text {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+    
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+
+        // typography
+        font-size: 1.2rem;
+    }
+}
+
+.confirmation__items {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include atDesktopM {
+        // box model
+        flex-wrap: nowrap;;
+    }
+}

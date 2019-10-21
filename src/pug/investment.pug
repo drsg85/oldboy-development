@@ -85,54 +85,64 @@ html(lang="ru")
                         p.profit__calculator-subtitle Размер пассивного дохода инвестора <br>при разных вложениях
                     .invest-calculator
                         header.invest-calculator__header
-                            h5.invest-calculator__title Сумма инвестиций
+                            h5.invest-calculator__title Сумма инвестиций для
+                            form.invest-location(name="invest__location")
+                                .invest-location__radio-wrap
+                                    input#rf.invest-location__radio(type='radio', name='location', value='РФ', checked='checked')
+                                    label.invest-location__label(for='rf') РФ
+                                .invest-location__radio-wrap
+                                    input#eu.invest-location__radio(type='radio', name='location', value='Страны ЕС')
+                                    label.invest-location__label-specific(for='eu') ЕС
+                                        
                             p.invest-calculator__subtitle Процент от&nbsp;прибыли барбершопа
                         
                         .invest-calculator__graph
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph" checked)
-                                p.invest-calculator__sum(data-month="40000") 1&nbsp;000&nbsp;000 
-                                    span.invest-calculator__currency.rouble-sign Р
+                                p.invest-calculator__sum(data-monthRU="40000" data-monthEU="100000") 850&nbsp;000 ₽
                                 .invest-calculator__switcher
                                 .invest-calculator__line
-                                span.invest-calculator__percent 12.5%
+                                span.invest-calculator__percent 10%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum(data-month="80000") 2&nbsp;000&nbsp;000 
-                                    span.invest-calculator__currency.rouble-sign Р
+                                p.invest-calculator__sum(data-monthRU="80000" data-monthEU="100000") 1&nbsp;700&nbsp;000 ₽
                                 .invest-calculator__switcher
                                 .invest-calculator__line
-                                span.invest-calculator__percent 25%
+                                span.invest-calculator__percent 20%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum(data-month="120000") 3&nbsp;000&nbsp;000 
-                                    span.invest-calculator__currency.rouble-sign Р
+                                p.invest-calculator__sum(data-monthRU="120000" data-monthEU="100000") 2&nbsp;550&nbsp;000 ₽
                                 .invest-calculator__switcher
                                 .invest-calculator__line
-                                span.invest-calculator__percent 37.5%
+                                span.invest-calculator__percent 30%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum(data-month="160000") 4&nbsp;000&nbsp;000 
-                                    span.invest-calculator__currency.rouble-sign Р
+                                p.invest-calculator__sum(data-monthRU="160000" data-monthEU="100000") 3&nbsp;400&nbsp;000 ₽
                                 .invest-calculator__switcher
                                 .invest-calculator__line
-                                span.invest-calculator__percent 49%
+                                span.invest-calculator__percent 40%
 
                             label.invest-calculator__label
                                 input.invest-calculator__radio(type="radio", name="graph")
-                                p.invest-calculator__sum более 4&nbsp;000&nbsp;000 
-                                    span.invest-calculator__currency.rouble-sign Р
+                                p.invest-calculator__sum(data-monthRU="180000" data-monthEU="200000") 4&nbsp;250&nbsp;000 ₽
                                 .invest-calculator__switcher
                                 .invest-calculator__line
-                                span.invest-calculator__percent >&nbsp;49%
+                                span.invest-calculator__percent &nbsp;50%
+
+                            label.invest-calculator__label
+                                input.invest-calculator__radio(type="radio", name="graph")
+                                p.invest-calculator__sum более 4&nbsp;250&nbsp;000 ₽
+                                .invest-calculator__switcher
+                                .invest-calculator__line
+                                span.invest-calculator__percent >&nbsp;50%
                         
                         .invest-calculator__result
                             .invest-calculator__summ
                                 p.invest-calculator__summ-text Сумма инвестиций<br>
-                                    span.invest-calculator__value#invest-calculator__value-invest 1&nbsp;000&nbsp;000 
+                                    span.invest-calculator__value#invest-calculator__value-invest &nbsp;850&nbsp;000 
                                     span.invest-calculator__curr.rouble-sign Р
                             .invest-calculator__passive
                                 p.invest-calculator__summ-text Размер пассивного дохода <br>

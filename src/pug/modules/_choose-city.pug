@@ -22,7 +22,10 @@ section.location-selector.location-selector--hidden
                 h2.search-results__title Результаты поиска:
                 p.search-results__not-found такого города не найдено
                 ul.search-results__list
-            
+                
+            .location-selector__text
+                #geo
+
             //- .location-selector__places
                 .place-groups
                     .place-groups__cities
@@ -43,6 +46,8 @@ section.location-selector.location-selector--hidden
 
         .location-selector__close
             .close-button
+    
+    #map
 
     .location-selector__content
         //- include _choose-belarus.pug
@@ -967,3 +972,6 @@ section.location-selector.location-selector--hidden
                             a.location-list__link(href="http://eu.oldboybarbershop.com/en/beograd") Сербия
                         li.location-list__item
                             a.location-list__link(href="http://eu.oldboybarbershop.com/en/budva") Черногория
+
+
+    

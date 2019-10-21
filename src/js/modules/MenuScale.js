@@ -6,7 +6,6 @@ class MenuScale {
 
   addEvents() {
       if (this.menuScale.length > 5) {
-        console.log('its alive');
         this.menuScale.forEach(element => {
             element.classList.add('main-nav__link--scale');
         });

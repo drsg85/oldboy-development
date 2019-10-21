@@ -7,6 +7,8 @@ import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
 import LocationLogo from './modules/LocationLogo';
 import MenuScale from './modules/MenuScale';
+import GeolocationControl from './modules/GeolocationControl';
+import IpInfo from './modules/IpInfo';
 
 
 const mobileMenu = new MobileMenu();
@@ -15,6 +17,9 @@ const locationSearch = new LocationSearch();
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
 const menuScale = new MenuScale();
+const geolocationControl = new GeolocationControl();
+const ipInfo = new IpInfo();
+
 
 new ToTop();
 

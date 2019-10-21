@@ -1,0 +1,45 @@
+.confirmation-item {
+    // box model
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.confirmation-item__count {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $displayFont;
+    font-size: 10rem;
+    text-align: center;
+}
+
+.confirmation-item__subtitle {
+    // box model
+    margin: 0 auto;
+    max-width: 160px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
+}

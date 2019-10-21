@@ -1,12 +1,13 @@
 'use strict';
 import MobileMenu from './modules/MobileMenu';
-import LanguageSelector from './modules/LanguageSelector';
 import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
+import LocationSelector from './modules/LocationSelector';
 
 const mobileMenu = new MobileMenu();
-const langSelector = new LanguageSelector();
 
-new ToTop();
+const toTop = new ToTop();
 
-new SmoothOnAnchors();
+const smoothOnAnchors = new SmoothOnAnchors();
+
+const locationSelector = new LocationSelector();

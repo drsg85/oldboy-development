@@ -8,6 +8,9 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 100px;
+
+    // visual
+    overflow-x: hidden;
 }
 
 .profit__header {
@@ -141,9 +144,6 @@
     margin-right: auto;
     padding: 0 20px;
 
-    // visual
-    overflow: hidden;
-
     @include atTablet {
         // box model
         margin-bottom: 70px;
@@ -179,7 +179,7 @@
 
     @include atDesktopS {
         // positioning
-        transform: translateY(360px);
+        transform: translateY(370px);
 
         // box model
         max-width: 50%;

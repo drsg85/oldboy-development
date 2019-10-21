@@ -25,6 +25,7 @@ class SmoothScroll {
     }
 
     scrolling(evt) {
+        console.log(window.location.pathname);
         if(window.location.pathname == '/' || window.location.pathname == '/en') {
             evt.preventDefault();
         }
@@ -35,11 +36,8 @@ class SmoothScroll {
                 evt.preventDefault();
             }
         }
-        else {
-            return;
-        }
-        
         const scrollEndElem = this.target;
+        
         const anim = requestAnimationFrame(() => {
         const stamp = new Date().getTime();
         const duration = 500;
