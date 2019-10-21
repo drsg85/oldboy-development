@@ -3,13 +3,22 @@
     position: relative;
 
     // box model
-    width: 30%;
     height: 280px;
+    width: 100%;
+    max-width: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 30px;
 
     // visual
     border-radius: 5px;
     overflow: hidden;
+
+    @include atTablet {
+        // box model
+        width: 30%;
+        max-width: 100%;
+    }
 
     @include atDesktopS {
         // box model
