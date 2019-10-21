@@ -39,7 +39,8 @@ const webpackConfig = {
     dummy: './src/js/dummy.js',
     scripts: './src/js/scripts.js',
     investment: './src/js/investment.js',
-    scriptsUS: './src/js/scriptsUS.js'
+    scriptsUS: './src/js/scriptsUS.js',
+    scriptsPL: './src/js/scriptsPL.js'
   },
 
   output: {
