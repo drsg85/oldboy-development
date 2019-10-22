@@ -396,6 +396,20 @@
         background-repeat: no-repeat;
         background-position: center center;
     }
+
+    &--coupon {
+        // positioning
+        position: relative;
+
+        // box model
+        // height: 70vh;
+
+        // visual
+        background-image: url('./img/bgs/coupon-blur.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 .hero::after {

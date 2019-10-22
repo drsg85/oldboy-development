@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--coupon
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        p.city-select__city Калининград
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .coupon
+                    .coupon__header
+                        p.coupon__city Калининград
+                        p.coupon__address Проспект 60-летия октября
+                    p.coupon__sign Акция
+
+                    .coupon__content
+                        .coupon__caption
+                            .hero-caption.hero-caption--coupon
+                                h1.hero-caption__title <span class="hero-caption__big">Барбершоп<br>Oldboy</span>
+                                p.hero-caption__motto.hero-caption__motto--gold Дарит купон к&nbsp;первой стрижке
+                            .coupon__offer
+                                .coupon__text
+                                    p.coupon__cta <span>Жми</span> получить купоны
+                                    p.coupon__desc Проходи опрос и забирай бонус к первой стрижке
+                                .coupon__discount
+                                    p.coupon__value Скидка <br><span>500 </span>руб
+
+                    .coupon__footer
+                        .coupon__button
+                            button.button.form-trigger.ms_booking Получить купон
+
+        main
+            section.coupon-info
+                .coupon-info__text
+                    h3.coupon-info__desc *Бонус действует на первое посещение
+                    p.coupon-info__warning Нажимая на кнопку, вы даёте согласние на обработку персональный данных и соглашаетесь с политикой конфиденциальности
+
+
+        include modules/_choose-city.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")
