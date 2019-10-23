@@ -42,57 +42,54 @@ html(lang="en")
 
                     .vacancy-form__content
                         .vacancy-form__group
-                            .vacancy-form__subgroup
-                                .vacancy-form__item
-                                    p.vacancy-form__text Фио
-                                    input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required pattern="^[A-z|А-я][a-z|а-я]{2,}$")
+                            .vacancy-form__item
+                                p.vacancy-form__text Фио
+                                input.vacancy-form__input(type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required pattern="^[A-z|А-я][a-z|а-я]{2,}$")
+                                .description
                                     .vacancy-form__check
 
-                                .vacancy-form__item
-                                    p.vacancy-form__text E-mail
-                                    input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com" required)
-                                    .vacancy-form__check
+                            .vacancy-form__item
+                                p.vacancy-form__text E-mail
+                                input.vacancy-form__input(type="email" name="email" placeholder="ivan@gmail.com" required)
+                                .vacancy-form__check
 
-                                .vacancy-form__item
-                                    p.vacancy-form__text Возраст
-                                    input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18" min="18" required)
-                                    .vacancy-form__check.vacancy-form__check--age
+                            .vacancy-form__item
+                                p.vacancy-form__text Город проживания
+                                input.vacancy-form__input(type="text" name="city" placeholder="Калининград" required pattern="^[A-z|А-я][a-z|а-я]{2,55}$")
+                                .vacancy-form__check
 
-                            .vacancy-form__subgroup
-                                .vacancy-form__item
-                                    p.vacancy-form__text Город проживания
-                                    input.vacancy-form__input(type="text" name="city" placeholder="Калининград" required pattern="^[A-z|А-я][a-z|а-я]{2,55}$")
-                                    .vacancy-form__check
+                            .vacancy-form__item
+                                p.vacancy-form__text Телефон
+                                input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required minlength="6" pattern="[0-9,+,-]{6,}")
+                                .vacancy-form__check
 
-                                .vacancy-form__item
-                                    p.vacancy-form__text Телефон
-                                    input.vacancy-form__input(type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required minlength="6" pattern="[0-9,+,-]{6,}")
-                                    .vacancy-form__check
+                            .vacancy-form__item
+                                p.vacancy-form__text Возраст
+                                input.vacancy-form__input.vacancy-form__input--age(type="number" name="age" placeholder="18" min="18" required)
+                                .vacancy-form__check.vacancy-form__check--age
 
                         .vacancy-form__group.vacancy-form__group--second
-                            .vacancy-form__subgroup
-                                .vacancy-form__item
-                                    p.vacancy-form__text Вакансии
-                                    .vacancy-form__wrapper
-                                        label.vacancy-form__label
-                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Master")
-                                            .vacancy-form__btn <span>Мастер</span>
-                                        label.vacancy-form__label
-                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Buyer")
-                                            .vacancy-form__btn <span>Тайный покупатель</span>
-                                        label.vacancy-form__label
-                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Tattoo")
-                                            .vacancy-form__btn <span>Тату мастер</span>
-                                        label.vacancy-form__label
-                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Admin")
-                                            .vacancy-form__btn <span>Администратор</span>
-                                        label.vacancy-form__label
-                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Model")
-                                            .vacancy-form__btn <span>Модель</span>
-                                        label.vacancy-form__label
-                                            input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Cosmetics")
-                                            .vacancy-form__btn <span>Косметолог</span>
-                                    p.vacancy-form__text Внимание: выберете одну вакансию
+                            p.vacancy-form__text Вакансии
+                            .vacancy-form__wrapper
+                                label.vacancy-form__label
+                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Master")
+                                    .vacancy-form__btn <span>Мастер</span>
+                                label.vacancy-form__label
+                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Buyer")
+                                    .vacancy-form__btn <span>Тайный покупатель</span>
+                                label.vacancy-form__label
+                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Tattoo")
+                                    .vacancy-form__btn <span>Тату мастер</span>
+                                label.vacancy-form__label
+                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Admin")
+                                    .vacancy-form__btn <span>Администратор</span>
+                                label.vacancy-form__label
+                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Model")
+                                    .vacancy-form__btn <span>Модель</span>
+                                label.vacancy-form__label
+                                    input.vacancy-form__input.input.vacancy-form__input--radio(type="radio" name="vacancy" value="Cosmetics")
+                                    .vacancy-form__btn <span>Косметолог</span>
+                            p.vacancy-form__text Внимание: выберете одну вакансию
 
                     .vacancy-form__footer
                         .vacancy-form__input.vacancy-form__input--policy
