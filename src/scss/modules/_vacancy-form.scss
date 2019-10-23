@@ -96,6 +96,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 
     @include atDesktopS {
         // box model
@@ -146,6 +147,7 @@
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
 
     @include atTablet {
         // box model
@@ -224,6 +226,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .vacancy-form__text {
