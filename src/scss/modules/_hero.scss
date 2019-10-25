@@ -449,11 +449,19 @@
 
     @include atDesktopL {
         // positioning
-        position: relative;
+        position: absolute;
+        left: 735px;
 
         // box model
         margin-bottom: 0;
         width: 345px;
+    }
+}
+
+.hero--coupon .hero__content {
+    @include atDesktopL {
+        // box model
+        padding-top: 0;
     }
 }
 

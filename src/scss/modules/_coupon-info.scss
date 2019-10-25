@@ -24,6 +24,7 @@
 
     @include atDesktopL {
         // box model
+        min-height: 270px;
         margin-left: 85px;
         margin-right: 85px;
         margin-bottom: 130px;
@@ -133,22 +134,23 @@
 .coupon-info__deco {
     // positioning
     position: absolute;
-    left: calc(100% - 700px);
+    // left: calc(100% - 700px);
+    right: 80px;
     bottom: 100px;
     z-index: 999;
 
     // box model
     display: none;
-    width: 540px;
-    height: 550px;
+    width: 470px;
+    height: 480px;
 
     // visual
     background-image: url('./img/chair.png');
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 42% 0;
 
-    @include atDesktopL {
+    @include atDesktopСlearance {
         // box model
         display: block;
     }

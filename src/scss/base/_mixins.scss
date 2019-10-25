@@ -27,6 +27,12 @@
     }
 }
 
+@mixin atDesktopСlearance {
+    @media (min-width: 1700px) {
+        @content;
+    }
+}
+
 @mixin atFullHD {
     @media (min-width: 1920px) {
         @content;
