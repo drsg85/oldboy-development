@@ -1,21 +1,155 @@
 .coupon-info {
+    // positioning
+    position: relative;
+
     // box model
-    padding-left: 25px;
-    padding-right: 25px;
-    
+    padding-bottom: 80px;
+    padding-top: 80px;
+
     // visual
     background-color: #fdf6ee;
+
+    @include atTablet {
+        // box model
+        padding-bottom: 45px;
+        padding-top: 340px;
+    }
+
+    @include atDesktopS {
+        // box model
+        min-height: 360px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-left: 85px;
+        margin-right: 85px;
+        margin-bottom: 130px;
+    }
+}
+
+.coupon-info::before {
+    content: "";
+    
+    // positioning
+    position: absolute;
+    top: -40px;
+    
+    // box model
+    width: 100%;
+    height: 80px;
+    
+    // visual
+    background-image: url('./img/beige-grunge.svg');
+    background-position: top 2px center;
+    background-repeat: repeat-x;
+    background-size: 800px;
+    z-index: 7;
+}
+
+.coupon-info::after {
+    content: "";
+    
+    // positioning
+    position: absolute;
+    bottom: -37px;
+    z-index: 7;
+    transform: rotate(180deg);
+    
+    // box model
+    width: 100%;
+    height: 80px;
+    
+    // visual
+    background-image: url('./img/beige-grunge.svg');
+    background-position: top 2px center;
+    background-repeat: repeat-x;
+    background-size: 800px;
 }
 
 .coupon-info__text {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 20px;
+
     // typography
     text-align: center;
+
+    // visual
+    border-top: 2px $golden solid;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        right: 85px;
+        top: 50px;
+
+        // box model
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include atDesktopM {
+        // positioning
+        right: 200px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        right: calc(100% - 960px);
+    }
 }
 
 .coupon-info__desc {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
 
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    text-transform: uppercase;
 }
 
 .coupon-info__warning {
+    // box model
+    margin: 0 auto;
+    max-width: 315px;
 
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.coupon-info__deco {
+    // positioning
+    position: absolute;
+    left: calc(100% - 700px);
+    bottom: 100px;
+    z-index: 999;
+
+    // box model
+    display: none;
+    width: 540px;
+    height: 550px;
+
+    // visual
+    background-image: url('./img/chair.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 42% 0;
+
+    @include atDesktopL {
+        // box model
+        display: block;
+    }
 }

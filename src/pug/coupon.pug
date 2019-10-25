@@ -11,21 +11,9 @@ html(lang="en")
 
     body
         header.hero.hero--coupon
-            .hero__top
-                .hero__logo
+            .hero__logo
                     a(href="index.html")
                         img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
-
-                .hero__nav.hero__nav--hidden
-                    include modules/_menu.pug
-
-                .hero__city-select
-                    a(href="choose-city.html").city-select
-                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
-                        p.city-select__city Калининград
-
-                .menu-button.menu-button--close
-                    .menu-button__middle
 
             .hero__content
                 .coupon
@@ -41,10 +29,10 @@ html(lang="en")
                                 p.hero-caption__motto.hero-caption__motto--gold Дарит купон к&nbsp;первой стрижке
                             .coupon__offer
                                 .coupon__text
-                                    p.coupon__cta <span>Жми</span> получить купоны
+                                    p.coupon__cta <span>Жми</span> получить купон
                                     p.coupon__desc Проходи опрос и забирай бонус к первой стрижке
                                 .coupon__discount
-                                    p.coupon__value Скидка <br><span>500 </span>руб
+                                    p.coupon__value Скидка <br><span>500</span>руб
 
                     .coupon__footer
                         .coupon__button
@@ -54,10 +42,9 @@ html(lang="en")
             section.coupon-info
                 .coupon-info__text
                     h3.coupon-info__desc *Бонус действует на первое посещение
-                    p.coupon-info__warning Нажимая на кнопку, вы даёте согласние на обработку персональный данных и соглашаетесь с политикой конфиденциальности
+                    p.coupon-info__warning Нажимая на кнопку, вы даёте согласние на&nbsp;обработку персональный данных и&nbsp;соглашаетесь с&nbsp;политикой конфиденциальности
 
+                .coupon-info__deco
 
-        include modules/_choose-city.pug
         include modules/_footer.pug
 
-        script(src="scripts.js")

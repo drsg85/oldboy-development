@@ -402,13 +402,58 @@
         position: relative;
 
         // box model
-        // height: 70vh;
-
+        height: 600px;
+        
         // visual
         background-image: url('./img/bgs/coupon-blur.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        overflow: unset;
+    }
+    
+    @include atTablet {
+        // box model
+        padding-left: 65px;
+        padding-right: 65px;
+        padding-top: 65px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+.hero--coupon .hero__logo {
+    // box model
+    width: 150px;
+    margin-bottom: 20px;
+
+    @include atTablet {
+    // box model
+    width: 210px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 40px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        position: relative;
+
+        // box model
+        margin-bottom: 0;
+        width: 345px;
     }
 }
 
