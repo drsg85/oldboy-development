@@ -10,7 +10,7 @@
 
     // visual
     border-radius: 5px;
-    // box-shadow: 0px 9px 50px -11px rgba(0,0,0,0.35);
+    filter: drop-shadow(0 10px 9px rgba(0, 0, 0, 0.2));
     overflow: hidden;
 
     @include atTablet {
@@ -71,7 +71,6 @@
     border-radius: 100%;
     pointer-events:none;
     transform: translate(-50%, -50%) rotate(45deg);
-    box-shadow: 0 1px 20px 0 #fff, 0 -1px 0 0 #fff;
 
     @include atTablet {
         // positioning
