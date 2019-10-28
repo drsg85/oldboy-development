@@ -13,7 +13,7 @@ class InvestChart {
             data: {
                 labels: ['1 месяц', '1 год', '5 лет'],
                 datasets: [{
-                    label: 'Доля в размере 12.5%',
+                    label: 'Доля в размере 10%',
                     data: [40000, 480000, 2400000],
                     lineTension: 0,
                     fill: false,
@@ -24,7 +24,7 @@ class InvestChart {
                     pointStyle: 'rect'
                 },
                 {
-                    label: 'Доля в размере 25%',
+                    label: 'Доля в размере 20%',
                     data: [80000, 960000, 4800000],
                     lineTension: 0,
                     fill: false,
@@ -35,7 +35,7 @@ class InvestChart {
                     pointStyle: 'rect'
                 },
                 {
-                    label: 'Доля в размере 37.5%',
+                    label: 'Доля в размере 30%',
                     data: [120000, 1440000, 7200000],
                     lineTension: 0,
                     fill: false,
@@ -46,7 +46,7 @@ class InvestChart {
                     pointStyle: 'rect'
                 },
                 {
-                    label: 'Доля в размере 49%',
+                    label: 'Доля в размере 40%',
                     data: [160000, 1920000, 9600000],
                     lineTension: 0,
                     fill: false,
@@ -56,6 +56,17 @@ class InvestChart {
                     pointBorderWidth: 1,
                     pointStyle: 'rect'
                 },
+                {
+                  label: 'Доля в размере 50%',
+                  data: [200000, 2400000, 12000000],
+                  lineTension: 0,
+                  fill: false,
+                  borderWidth: 1,
+                  borderColor: "#d6a354",
+                  pointBackgroundColor: "#d6a354",
+                  pointBorderWidth: 1,
+                  pointStyle: 'rect'
+              },
             ],
             },
             

@@ -5,7 +5,13 @@ class LanguageSelector {
     if (this.langSelect) {
       this.langButton = this.langSelect.querySelector('.language-select__current');
       this.langPopup = this.langSelect.querySelector('.language-select__popup');
-      this.reset();
+      if(this.langPopup) {
+        this.reset();
+      }
+      else {
+        this.langButton.style.display = 'none';
+      }
+
       this.addEvents();
     }
   }

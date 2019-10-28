@@ -28,8 +28,14 @@
 
     @include atDesktopS {
         // box model
+        margin: 0 5px;
         padding-top: 10px;
         order: 1;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin: 0;
     }
 
     .contact__title {
@@ -85,6 +91,12 @@
     }
 
     @include atDesktopM {
+        // typography
+        font-size: 0.89rem;
+        line-height: 1.4;
+    }
+
+    @include atDesktopL {
         // typography
         font-size: 1rem;
     }

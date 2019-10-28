@@ -43,16 +43,122 @@
     }
 }
 
+.footer--coupon {
+    // visual
+    background-image: none;
+
+    @include atDesktopL {
+        background-image: url('./img/white-grunge-180.svg'),
+    }
+}
+
+.footer--coupon .footer__info {
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 40px;
+        width: 100%;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 0;
+    }
+}
+
+.footer--coupon .footer__logo {
+    // box model
+    max-width: 350px;
+    margin: 0 auto;
+
+    @include atTablet {
+        max-width: 220px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 350px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin: 0;
+    }
+}
+
+.footer--coupon .footer__caption {
+    @include atTablet {
+        // box model
+        max-width: 400px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 500px;
+    }
+}
+
+.footer--coupon .footer__title {
+    // box model
+    margin-top: 0;
+}
+
+.footer--coupon .footer__menues {
+    @include atTablet {
+        // box model
+        padding-bottom: 0;
+
+        // visual
+        border-bottom: none;
+    }
+}
+
+.footer--coupon .footer__info-nav {
+    @include atTablet {
+        // box model
+        margin: 0 auto;
+        flex-basis: unset;
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+.footer--coupon .footer-menu {
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+}
+
+.footer--coupon .footer__copyrights {
+    @include atTablet {
+        // typography
+        text-align: center;
+    }
+}
+
 .footer__content {
     @include atDesktopS {
         // positioning
-        position: relative;
+        // position: relative;
 
-        // box model
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: flex-end;
+        // // box model
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: flex-end;
+        // align-items: flex-end;
+        // height: 100%;
+        // min-height: 425px;
     }
 }
 
@@ -87,11 +193,13 @@
 
     @include atDesktopS {
         // positioning
-        position: absolute;
+        // position: absolute;
+        // left: 0;
+        // top: 0;
 
-        // box model
-        padding-left: 0;
-        padding-right: 40px;
+        // // box model
+        // padding-left: 0;
+        // padding-right: 40px;
     }
 
     @include atDesktopL {
@@ -247,7 +355,13 @@
     @include atDesktopM {
         // box model
         display: block;
+        margin-right: 5px;
         order: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-right: 0;
     }
 }
 
@@ -269,7 +383,7 @@
 
     @include atDesktopS {
         // box model
-        flex-basis: calc(100% - 300px);
+        flex-basis: calc(100% - 320px);
     }
 }
 
