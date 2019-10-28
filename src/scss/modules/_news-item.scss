@@ -75,13 +75,19 @@
 
     // box model
     display: flex;
+    min-height: 150px;
     flex-direction: column;
     justify-content: space-between;
     flex-basis: 60%;
-    padding-left: 20px;
+    padding: 30px;
 
     // typography
     font-size: 4vw;
+
+    @include atSmallMobile {
+        // box model
+        min-height: 200px;
+    }
 
     @include atTablet {
         // box model
