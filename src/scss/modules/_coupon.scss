@@ -71,6 +71,7 @@
     border-radius: 100%;
     pointer-events:none;
     transform: translate(-50%, -50%) rotate(45deg);
+    z-index: -2;
 
     @include atTablet {
         // positioning
@@ -81,7 +82,7 @@
         width: 60px;
 
         // visual
-        border: 10px solid transparent;
+        border: 13px solid transparent;
         border-top-color: #fff;
         border-right-color: #fff;
     }
@@ -106,6 +107,7 @@
     border-radius: 100%;
     pointer-events:none;
     transform: translate(-50%, -50%) rotate(225deg);
+    z-index: -2;
 
     @include atTablet {
         // positioning
@@ -116,7 +118,7 @@
         width: 60px;
 
         // visual
-        border: 10px solid transparent;
+        border: 13px solid transparent;
         border-top-color: #fff;
         border-right-color: #fff;
     }
