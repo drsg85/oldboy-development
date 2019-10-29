@@ -26,10 +26,10 @@ class CheckerLengthOfInputValue {
             }
             let parent = this.findParent(el, targetEl);
             if(valLength >= 8) {
-                parent.style.width = '67%';
+                parent.style.width = '55%';
             }
             else {
-                parent.style.width = '28%';
+                parent.style.width = '30%';
             }
         })
     }
