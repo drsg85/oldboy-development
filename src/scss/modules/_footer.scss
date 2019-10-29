@@ -66,6 +66,7 @@
         // box model
         max-width: 1000px;
         margin: 0 auto;
+        padding-left: 0;
     }
 
     @include atDesktopL {
@@ -90,7 +91,9 @@
 
     @include atDesktopM {
         // box model
+        max-width: 450px;
         margin: 0;
+        padding-right: 0;
     }
 }
 
