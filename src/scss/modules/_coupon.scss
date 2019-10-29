@@ -28,6 +28,36 @@
         // box model
         // margin-left: 125px;
     }
+
+    &:after {
+        content: '';
+
+        position: absolute;
+        bottom: 20%;
+        left: 15px;
+
+        // box model
+        width: calc(100% - 30px);
+        height: 1px;
+
+        border: 1px dashed grey;
+    }
+
+    svg {
+        //position
+        position: absolute;
+        top: 0;
+        left: 0;
+        //z-index: -1;
+    
+        // box model
+        width: 100%;
+        height: 100%;
+    }
+    
+    [id='m'] + use {
+        fill: rgba(255, 255, 255, 0.85);
+    }
 }
 
 .coupon__rip {

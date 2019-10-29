@@ -17,6 +17,14 @@ html(lang="en")
 
             .hero__content
                 .coupon
+                    svg
+                        mask(id='m' fill='#fff')
+                            rect#b(width='100%' height='100%')
+                            circle#c(r='15' fill='#000' cx='0' cy='80%')
+                            use(xlink:href='#c' x='100%')
+                        
+                        use(xlink:href='#b' mask='url(#m)')
+
                     .coupon__header
                         p.coupon__city Калининград
                         p.coupon__address Проспект 60-летия октября

@@ -13,7 +13,14 @@
     <header class="hero hero--coupon">
         <div class="hero__logo"><a href="index.html"><img src="/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная" /></a></div>
         <div class="hero__content">
-            <div class="coupon">
+            <div class="coupon"><svg>
+                    <mask id="m" fill="#fff">
+                        <rect id="b" width="100%" height="100%"></rect>
+                        <circle id="c" r="15" fill="#000" cx="0" cy="80%"></circle>
+                        <use xlink:href="#c" x="100%"></use>
+                    </mask>
+                    <use xlink:href="#b" mask="url(#m)"></use>
+                </svg>
                 <div class="coupon__header">
                     <p class="coupon__city">Калининград</p>
                     <p class="coupon__address">Проспект 60-летия октября</p>
