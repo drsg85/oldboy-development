@@ -25,11 +25,12 @@ class CheckerLengthOfInputValue {
                 targetEl = 'js-form-item';
             }
             let parent = this.findParent(el, targetEl);
+            parent.style.width = '30%';
             if(valLength >= 8) {
-                parent.style.width = '55%';
+                parent.style.width = '43%';
             }
-            else {
-                parent.style.width = '30%';
+            else if(valLength >= 15) {
+                parent.style.width == "55%";
             }
         })
     }
