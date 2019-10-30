@@ -1,7 +1,4 @@
 .team {
-    // box model
-    display: none;
-
     @include atTablet {
         // box model
         display: block;
@@ -31,16 +28,26 @@
     }
 }
 
-.team_header {
-    
+.team__header {
+    // box model
+    margin-bottom: 85px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: initial;
+    }
 }
 
 .team__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
     @include atTablet {
         // box model
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
         padding: 40px;
     }

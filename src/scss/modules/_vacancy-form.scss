@@ -79,39 +79,44 @@
 
 .vacancy-form__content {
     // box model
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+    width: 100%;
+
+    @include atDesktopL {
+    // box model
+    max-width: 1090px;
+    }
+}
+
+.vacancy-form__content > .webform-section-wrapper {
+    // box model
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 
     @include atDesktopS {
         // box model
         align-items: unset;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 60px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 850px;
-        width: 100%;
-}
-
-@include atDesktopL {
-    // box model
-    max-width: 1090px;
     }
 }
 
+// .vacancy-form__content .description {
+//     // box model
+//     display: none;
+// }
+
 .vacancy-form__group {
-    // box model
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     
     @include atTablet {
         // box model
         max-width: 550px;
         width: 100%;
-        flex-direction: row;
     }
 
     @include atDesktopS {
@@ -120,9 +125,6 @@
     }
 
     @include atDesktopL {
-    // box model
-    flex-direction: row;
-    justify-content: space-between;
     max-width: 570px;
     width: 100%;
     }
@@ -140,8 +142,34 @@
         // box model
         max-width: 300px;
         width: 100%;
-        justify-content: flex-end;
         }
+    }
+}
+
+.vacancy-form__group > .webform-section-wrapper {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+    }
+
+    @include atDesktopL {
+        // box model
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.vacancy-form__group--second > .webform-section-wrapper {
+    @include atDesktopS {
+        // box model
+        justify-content: flex-end;
     }
 }
 
@@ -150,12 +178,28 @@
     text-align: center;
 }
 
+.vacancy-form__group .js-webform-radios {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.vacancy-form__group .js-form-item {
+    // box model
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
 .vacancy-form__item {
     // positioning
     position: relative;
 
     // box model
     margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
 
     // typography
     color: $black;
@@ -166,7 +210,7 @@
     // positioning
     position: absolute;
     right: 10px;
-    bottom: 17px;
+    bottom: calc(50% - 7px);
 
     // box model
     display: none;
@@ -187,10 +231,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .vacancy-form__text {
     // box model
+    display: block;
     margin: 0;
     margin-bottom: 15px;
     margin-left: 20px;
@@ -284,9 +330,11 @@
     opacity: 0.4;
 }
 
-.vacancy-form__input:valid + .vacancy-form__check {
-    // box model
-    display: block;
+.vacancy-form__input:valid + .description {
+    .vacancy-form__check {
+        // box model
+        display: block;
+    }
 }
 
 .vacancy-form__input:-webkit-autofill {
@@ -301,6 +349,24 @@
     // box model
     display: inline-block;
     margin-bottom: 25px;
+}
+
+.vacancy-form__input + .option {
+    // box model
+    display: block;
+    padding: 15px;
+
+    // typography
+    color: rgba($grey, 0.5);
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    text-align: center;
+
+    // visual
+    border-radius: 25px;
+    background-color: $light;
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
 }
 
 .vacancy-form__btn {
@@ -325,12 +391,14 @@
     opacity: 0.5;
 }
 
-.vacancy-form__input--radio:checked + .vacancy-form__btn {
+.vacancy-form__input--radio:checked + .vacancy-form__btn,
+.vacancy-form__input--radio:checked + .option {
     // visual
     background-color: $golden;
 }
 
-.vacancy-form__input--radio:checked + .vacancy-form__btn span {
+.vacancy-form__input--radio:checked + .vacancy-form__btn span,
+.vacancy-form__input--radio:checked + .option {
     // typography
     color: $light;
 
@@ -356,6 +424,71 @@
     padding-left: 5px;
     width: 100%;
     }
+}
+
+.vacancy-form__footer .webform-section-wrapper {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1090px;
+        padding-left: 5px;
+    }
+}
+
+.vacancy-form__footer .form-type-webform-terms-of-service {
+    // box model
+    width: 270px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    align-self: center;
+
+    // visual
+    border: none;
+    border-radius: 25px;
+
+    // typography
+    line-height: normal;
+    font-size: 0.85rem;
+    outline: none;
+    transition: ease-in-out 0.25s;
+
+    @include atSmallMobile {
+        // box model
+        width: 300px;
+    }
+    
+    @include atTablet {
+        // box model
+        width: 100%;
+        max-width: 325px;
+    }
+
+    @include atDesktopL {
+    // box model
+    align-self: auto;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    }
+}
+
+.vacancy-form__footer .form__label-checkbox {
+    // box model
+    display: none;
 }
 
 .vacancy-form__footer::before {
@@ -434,6 +567,36 @@
     // visual
     background-color: $golden;
     background-image: url('./img/icons/checked.svg');
+}
+
+.vacancy-form__checkbox:checked ~ .description {
+    .vacancy-form__box {
+            // visual
+        background-color: $golden;
+        background-image: url('./img/icons/checked.svg');
+    }
+}
+
+.vacancy-form__checkbox:focus ~ .description {
+    .vacancy-form__box {
+        // visual
+        box-shadow: 0 0 0 0.2em $golden;
+    }
+}
+
+.vacancy-form__checkbox:disabled ~ .description {
+    .vacancy-form__box {
+        // visual
+        background-color: rgba($grey, 0.5);
+        box-shadow: 0 0 0 0.2em $grey;
+    }
+}
+
+.vacancy-form__checkbox:disabled:checked ~ .description {
+    .vacancy-form__box {
+        // visual
+        background-color: $grey;
+    }
 }
 
 .vacancy-form__checkbox:focus + .vacancy-form__box {

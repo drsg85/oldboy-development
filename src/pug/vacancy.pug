@@ -61,7 +61,7 @@ html(lang="en")
                             .vacancy-form__subgroup
                                 .vacancy-form__item
                                     p.vacancy-form__text Город проживания
-                                    input.vacancy-form__input(type="text" name="city" placeholder="Калининград" required pattern="^[A-z|А-я][a-z|а-я]{2,55}$")
+                                    input.vacancy-form__input(type="text" name="city" placeholder="Калининград" required pattern="^[a-zA-Z|а-яА-Я,0-9]+(?:[ '-][a-zA-Z|а-яА-Я,0-9]+)*$")
                                     .vacancy-form__check
 
                                 .vacancy-form__item
