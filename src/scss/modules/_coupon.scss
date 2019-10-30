@@ -1,0 +1,408 @@
+.coupon {
+    // positioning
+    position: relative;
+    z-index: 9;
+
+    // box model
+    margin: 0 auto;
+    width: 100%;
+    max-width: 327px;
+
+    // visual
+    border-radius: 5px;
+    filter: drop-shadow(0 10px 9px rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+
+    @include atTablet {
+        // box model
+        max-width: 450px;
+        // padding-bottom: 35px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        // margin-left: 125px;
+    }
+}
+
+.coupon__rip {
+    // positioning
+    position: relative;
+
+    // box model
+    height: 20px;
+    margin: 0 10px;
+
+    // visual
+    background-color: $light;
+    background-image: url('./img/dot.png');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 5px 2px;
+
+    @include atTablet {
+        // box model
+        height: 35px;
+        margin: 0 20px;
+    }
+}
+
+.coupon__rip::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: -10px;
+    top: 50%;
+
+    // box model
+    width: 30px;
+    height: 30px;
+
+    // visual
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-radius: 100%;
+    pointer-events:none;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: -2;
+
+    @include atTablet {
+        // positioning
+        left: -20px;
+
+        // box model
+        height: 60px;
+        width: 60px;
+
+        // visual
+        border: 13px solid transparent;
+        border-top-color: #fff;
+        border-right-color: #fff;
+    }
+}
+
+.coupon__rip::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    right: -40px;
+    top: 50%;
+
+    // box model
+    width: 30px;
+    height: 30px;
+
+    // visual
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-radius: 100%;
+    pointer-events:none;
+    transform: translate(-50%, -50%) rotate(225deg);
+    z-index: -2;
+
+    @include atTablet {
+        // positioning
+        right: -80px;
+
+        // box model
+        height: 60px;
+        width: 60px;
+
+        // visual
+        border: 13px solid transparent;
+        border-top-color: #fff;
+        border-right-color: #fff;
+    }
+}
+
+.coupon__header {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-left: 30px;
+    padding-top: 20px;
+
+    // visual
+    background-color: $light;
+
+    @include atTablet {
+        // box model
+        padding-left: 45px;
+        padding-top: 35px;
+    }
+}
+
+.coupon__city {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        max-width: 275px;
+
+        // typography
+        font-size: 2rem;
+    }
+}
+
+.coupon__address {
+    // box model
+    margin: 0;
+    max-width: 165px;
+
+
+    // typography
+    font-family: $titleFont;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // box model
+        // max-width: 220px;
+
+        // typography
+        font-size: 1.1rem;
+    }
+}
+
+.coupon__sign {
+    // positioning
+    position: absolute;
+    top: 23px;
+    right: 5px;
+    transform: rotate(90deg);
+    z-index: 5;
+
+    // box model
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    // typography
+    color: $light;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: $titleFont;
+    line-height: 2;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $golden;
+
+    @include atTablet {
+        // positioning
+        top: 36px;
+
+        // box model
+        padding-left: 30px;
+        padding-right: 30px;
+
+        // typography
+        font-size: 1.5rem;
+    }
+}
+
+.coupon__content {
+    // box model
+    padding-bottom: 15px;
+
+    // visual
+    background-color: $light;
+
+    @include atTablet {
+        // box model
+        // margin-bottom: 45px;
+        padding-bottom: 30px;
+    }
+}
+
+.coupon__caption {
+
+}
+
+.coupon__offer {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+
+    @include atTablet {
+        // box model
+        padding-left: 45px;
+    }
+}
+
+.coupon__text {
+    // box model
+    max-width: 125px;
+
+    @include atSmallMobile {
+        // box model
+        max-width: 155px;
+    }
+
+    @include atTablet {
+        // box model
+        max-width: 180px;
+    }
+}
+
+.coupon__cta {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        font-size: 1.2rem;
+    }
+}
+
+.coupon__cta span {
+    // typography
+    color: $dark;
+}
+
+.coupon__desc {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 0.65rem;
+    text-transform: lowercase;
+
+    @include atTablet {
+        // typography
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
+
+.coupon__discount {
+    // positioning
+    position: absolute;
+    right: 0;
+    top: -50px;
+    transform: skewY(-15deg);
+    z-index: 8;
+    
+    @include atTablet {
+        // box model
+        top: -65px;
+    }
+}
+
+.coupon__discount::before {
+    content: '';
+
+    // positioning
+    position: absolute;
+    left: -20px;
+    top: 0;
+
+    // box model
+    height: 100%;
+    width: 40px;
+
+    // visual
+    background-image: url('./img/gold-v-grunge.svg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center center;
+    transform: rotate(180deg);
+}
+
+.coupon__value {
+    // box model
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 10px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    line-height: 1.25;
+
+    // visual
+    background-color: $golden;
+    box-shadow: -15px 10px 40px -10px rgba($dark, 0.5);
+
+    @include atTablet {
+        // box model
+        padding-left: 30px;
+        padding-right: 35px;
+
+        // typography
+        font-size: 1rem;
+    }
+}
+
+.coupon__value span {
+    // box model
+    margin-right: 5px;
+
+    // typography
+    font-family: $displayFont;
+    font-size: 2.3rem;
+    text-shadow: -3px 2px 0 $darkGold;
+
+    @include atTablet {
+        // typography
+        font-size: 4rem;
+        line-height: 1;
+    }
+}
+
+.coupon__footer {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-bottom: 20px;
+    padding-top: 15px;
+
+    // visual
+    background-color: $light;
+
+    @include atTablet {
+        // box model
+        padding-bottom: 35px;
+        // padding-top: 35px;
+    }
+}
+
+.coupon__button {
+    // typography
+    text-align: center;
+}
+
+.coupon__button .button {
+    // box model
+    margin-bottom: 0;
+}
