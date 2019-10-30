@@ -52,43 +52,51 @@
                 </header>
                 <div class="vacancy-form__content">
                     <div class="vacancy-form__group">
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" />
-                            <div class="description">
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Фио</p><input class="vacancy-form__input" type="text" name="fullname" placeholder="Кесорецких Иван Иванович" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" required="required" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" min="18" required="required" />
+                                <div class="vacancy-form__check vacancy-form__check--age"></div>
+                            </div>
+                        </div>
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" required="required" pattern="^[a-zA-Z|а-яА-Я,0-9]+(?:[ '-][a-zA-Z|а-яА-Я,0-9]+)*$" />
+                                <div class="vacancy-form__check"></div>
+                            </div>
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required="required" minlength="6" pattern="[0-9,+,-]{6,}" />
                                 <div class="vacancy-form__check"></div>
                             </div>
                         </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">E-mail</p><input class="vacancy-form__input" type="email" name="email" placeholder="ivan@gmail.com" required="required" />
-                            <div class="vacancy-form__check"></div>
-                        </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Город проживания</p><input class="vacancy-form__input" type="text" name="city" placeholder="Калининград" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,55}$" />
-                            <div class="vacancy-form__check"></div>
-                        </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Телефон</p><input class="vacancy-form__input" type="tel" name="phone" placeholder="+7 xxx xxx xx xx" required="required" minlength="6" pattern="[0-9,+,-]{6,}" />
-                            <div class="vacancy-form__check"></div>
-                        </div>
-                        <div class="vacancy-form__item">
-                            <p class="vacancy-form__text">Возраст</p><input class="vacancy-form__input vacancy-form__input--age" type="number" name="age" placeholder="18" min="18" required="required" />
-                            <div class="vacancy-form__check vacancy-form__check--age"></div>
-                        </div>
                     </div>
                     <div class="vacancy-form__group vacancy-form__group--second">
-                        <p class="vacancy-form__text">Вакансии</p>
-                        <div class="vacancy-form__wrapper"><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Master" />
-                                <div class="vacancy-form__btn"><span>Мастер</span></div>
-                            </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Buyer" />
-                                <div class="vacancy-form__btn"><span>Тайный покупатель</span></div>
-                            </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Tattoo" />
-                                <div class="vacancy-form__btn"><span>Тату мастер</span></div>
-                            </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Admin" />
-                                <div class="vacancy-form__btn"><span>Администратор</span></div>
-                            </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Model" />
-                                <div class="vacancy-form__btn"><span>Модель</span></div>
-                            </label></div>
-                        <p class="vacancy-form__text">Внимание: выберете одну вакансию</p>
+                        <div class="vacancy-form__subgroup">
+                            <div class="vacancy-form__item">
+                                <p class="vacancy-form__text">Вакансии</p>
+                                <div class="vacancy-form__wrapper"><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Master" />
+                                        <div class="vacancy-form__btn"><span>Мастер</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Buyer" />
+                                        <div class="vacancy-form__btn"><span>Тайный покупатель</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Tattoo" />
+                                        <div class="vacancy-form__btn"><span>Тату мастер</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Admin" />
+                                        <div class="vacancy-form__btn"><span>Администратор</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Model" />
+                                        <div class="vacancy-form__btn"><span>Модель</span></div>
+                                    </label><label class="vacancy-form__label"><input class="vacancy-form__input input vacancy-form__input--radio" type="radio" name="vacancy" value="Cosmetics" />
+                                        <div class="vacancy-form__btn"><span>Косметолог</span></div>
+                                    </label></div>
+                                <p class="vacancy-form__text">Внимание: выберете одну вакансию</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="vacancy-form__footer">
