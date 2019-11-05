@@ -5,8 +5,6 @@ class BranchList {
     this.button = document.querySelector('.branch-list__button');
     this.list = document.querySelector('.branch-list');
 
-    console.dir(this.button);
-
     this.events();
     this.reset();
   }
@@ -17,7 +15,6 @@ class BranchList {
    */
   events () {
     this.button.addEventListener('click', (event) => {
-      console.log('toggle list');
       this.toggleList(event);
     });
   }

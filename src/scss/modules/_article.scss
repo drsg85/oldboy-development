@@ -32,7 +32,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 
     @include atDesktopS {
@@ -60,7 +60,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.75;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 
     @include atDesktopS {
@@ -79,7 +79,7 @@
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.75;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 
     @include atDesktopS {
@@ -97,13 +97,7 @@
     font-family: $mainFont;
     font-size: 1rem;
     text-align: justify;
-    text-indent: 25px;
     line-height: 1.5;
-
-    @include atTablet {
-        // typography
-        text-indent: 45px;
-    }
 
     @include atDesktopS {
         // typography
@@ -123,9 +117,10 @@
     // box model
     margin: 0;
     padding: 0;
-
+    margin-left: 20px;
+    
     // visual
-    list-style: circle;
+    list-style: disc;
 }
 
 .article ol {
@@ -145,7 +140,7 @@
     // typography
     font-family: $mainFont;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.75;
 
     &:last-child {
         // box model
@@ -168,6 +163,31 @@
     @include atTablet {
         // box model
         max-width: 80%;
+
+        &--full {
+            // box model
+            max-width: 100%;
+            img {
+                // visual
+                object-fit: cover !important;
+            }
+        }
+
+        &--left {
+            // box model
+            float: left;
+            max-width: 30%;
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+
+        &--right {
+            // box model
+            float: right;
+            max-width: 30%;
+            margin-left: 30px;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -302,8 +322,8 @@
 
 .article .note {
     // box model
-    margin: 1.5rem -20px;
-    margin-right: 20px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     padding: 1rem 20px;
 
     // typography
@@ -318,24 +338,54 @@
     @include atTablet {
         // box model
         max-width: 300px;
-        float: left;
+
+        &--left {
+            // box model
+            float: left;
+            margin-left: -20px;
+            margin-right: 20px;
+        }
+
+        &--right {
+            // box model
+            float: right;
+            margin-left: 20px;
+            margin-right: -20px;
+        }
     }
 
     @include atDesktopS {
         // box model
-        margin: 1rem 2rem;
-        margin-left: -2rem;
         padding: 1rem 2rem;
+
+        &--left {
+            // box model
+            margin: 1rem 2rem;
+            margin-left: -2rem;
+        }
+
+        &--right {
+            margin: 1rem 2rem;
+            margin-right: -2rem;
+        }
     }
 
     @include atDesktopM {
         // box model
         max-width: 400px;
-        margin-left: -6rem;
         padding-left: 3rem;
 
         // typography
         font-size: 1.25rem;
+
+        &--left {
+            // box model
+            margin-left: -6rem;
+        }
+
+        &--right {
+            margin-right: -6rem;
+        }
     }
 }
 
@@ -350,6 +400,7 @@
     margin: 0 !important;
 
     // typography
+    color: $golden;
     text-align: center;
 }
 
@@ -358,6 +409,52 @@
     text-align: center;
 }
 
+.article .clear-float {
+    clear: both;
+}
+
+.article__footer {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    padding-top: 15px;
+
+    // visual
+    border-top: 2px solid $golden;
+}
+
+.article__footer-block {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.article__footer-title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.article__footer-block .article__author,
+.article__footer-block .article__date {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $titleFont;
+    color: $grey;
+    font-size: 16px;
+    line-height: 20px;
+}
 // .current-news__quote {
 
 
