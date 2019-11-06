@@ -132,10 +132,6 @@
 
     &--investment {
         // box model
-        // height: 100vh;
-        // max-height: 900px;
-
-        // box model
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -144,7 +140,7 @@
         max-height: 700px;
 
         // visual
-        background-image: url('./img/investment/investment.jpg');
+        background-image: url('./img/investment/star.jpg');
         background-size: cover;
         background-position: center center;
 
@@ -697,6 +693,33 @@
             }
         }
     }
+}
+
+.hero__content--investment .hero-caption {
+    @include atDesktopS {
+        // positioning
+        transform: none;
+
+        // box model
+        width: 550px;
+        align-self: center;
+        margin-left: 200px;
+    }
+}
+
+.hero__content--investment .hero-caption__big {
+    @include atDesktopS {
+        // box model
+        padding: 15px 0;
+        
+        // typography
+        font-size: 2.5rem;
+    }
+}
+
+.hero__content--investment .hero-caption__big::after {
+    // box model
+    display: none;
 }
 
 .hero__caption {

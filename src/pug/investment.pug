@@ -75,8 +75,23 @@ html(lang="ru")
                     p.profit__subtitle Риск потери инвестиций становится управляемым
                     p.profit__value Цена 10% доли в РФ = 850&nbsp;000&nbsp;
                         span.currency.rouble-sign P
-                    p.profit__info Инвестор получает по 5% доли от каждого из 2-х разных барбершопов.Всю операционку от подбора помещения до получения прибыли берет на себя Управляющая компания сети OldBoy.
-                    p.profit__info Инвесторы контролируют УК имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза
+                    p.profit__info Инвестор получает по 5% доли от каждого из 2-х разных барбершопов. Всю операционку от подбора помещения до получения прибыли берет на себя Управляющая компания сети OldBoy.
+                    p.profit__info Инвесторы контролируют УК, имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза
+
+                .profit__form
+                    form#lead-form(action="")
+                        legend.lead-form__legend
+                            p.lead-form__text Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель
+
+                        .lead-form__content
+                            .lead-form__container
+                                .lead-form__item
+                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                .lead-form__item
+                                    input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
+                            .lead-form__item
+                                input.lead-form__submit.button(type="submit" value="Получить Договор + фин модель")
+
 
                 .profit__calculator.smooth-target#profit-calculator
                     header.profit__calculator-header
@@ -214,7 +229,7 @@ html(lang="ru")
 
                     p.targeting__info Если вас НЕ устраивает доходность банковского вклада, жилой и коммерческой недвижимости, а риски на фондовом рынке, в крипте или венчуре слишком высоки - инвестируйте свои деньги в OldBoy!
 
-                .targeting__compare
+                //- .targeting__compare
                     header.targeting__compare-header
                         h4.targeting__compare-title Сравните доходность инвестиций в РФ
                         p.targeting__compare-subtitle Средняя чистая прибыль барбершопов в Москве<br> 400 000 – 450 000 руб. в &nbsp;месяц
@@ -232,23 +247,24 @@ html(lang="ru")
                         p.protection__subtitle Онлайн инструменты, доступные в&nbsp;любое время из&nbsp;любой точки мира
 
                 .protection__content
-                    p.protection__headline Защита&nbsp;инвестиций и&nbsp;контроль доходов
+                    p.protection__headline 3 ступени контроля
 
                     .protection__wrapper
-                        h3.protection__heading Вы инвестируете по одному договору в несколько барбершопов.
-                        p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за&nbsp;2 &nbsp;года способна окупить все осуществленные вами инвестиции.
-                        ul.protection__text Инвестор так же получает возможность <strong>контролировать доходность</strong>, используя ряд преимуществ: 
-                            li.protection__list 1. Инвестор может смотреть все цифры бизнеса в <strong>любое время из&nbsp;любой точки мира</strong>.
-                            li.protection__list 2. <strong>Online доступ</strong> к&nbsp;системе учета Yclients.
-                            li.protection__list 3. Барбершопы <strong>полностью автоматизированы</strong> (онлайн запись, мобильное приложение, электронный журнал с&nbsp;напоминаниями).
-                        h3.protection__heading.protection__heading--gold Как проверить бизнес?
+                        h3.protection__heading Инструменты контроля за инвестициями
+                        //- p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за&nbsp;2 &nbsp;года способна окупить все осуществленные вами инвестиции.
                         ul.protection__text
-                            li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
-                            li.protection__list 2. Вы сможете проверить прибыль и&nbsp;все цифры барбершопов через систему учета Yclients
+                            li.protection__list 1. Контроль дохода. Полный доступ к CRM системе Yclients (оборот, средний чек, % заполняемости, % повторных клиентов, за час/день/месяц. Веб версия или мобильное приложение)
+                            li.protection__list 2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)
+                            li.protection__list 3. Контроль расхода. Управленческая отчетность в Exel (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
+
+                        //- h3.protection__heading.protection__heading--gold Как проверить бизнес?
+                        //- ul.protection__text
+                        //-     li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
+                        //-     li.protection__list 2. Вы сможете проверить прибыль и&nbsp;все цифры барбершопов через систему учета Yclients
 
                 .protection__secure
                     .protection__deco
-                        .protection__image: img(src="./img/mobile-app.png", alt="")
+                        //- .protection__image: img(src="./img/mobile-app.png", alt="")
                         p.protection__motto Инвестиции с &nbsp;Oldboy - это удобно и&nbsp;безопасно
 
                     .protection__items
@@ -272,7 +288,7 @@ html(lang="ru")
                             p.investment-item__title Онлайн доступ
                             p.investment-item__text Ко всем инструментам из&nbsp;любой точки мира
 
-            section.advantages
+            //- section.advantages
                 .advantages__header
                     header.section-header
                         h2.section-header__title О&nbsp;сети&nbsp;Oldboy <br>Barbershop
