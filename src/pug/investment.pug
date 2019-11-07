@@ -229,6 +229,20 @@ html(lang="ru")
 
                     p.targeting__info Если вас НЕ устраивает доходность банковского вклада, жилой и коммерческой недвижимости, а риски на фондовом рынке, в крипте или венчуре слишком высоки - инвестируйте свои деньги в OldBoy!
 
+                    .targeting__form
+                        form#lead-form(action="")
+                            legend.lead-form__legend
+                                p.lead-form__text Оставьте заявку прямо сейчас чтобы узнать 2 адреса, где мы откроем новые барбершопы в декабре 2019 года
+
+                            .lead-form__content
+                                .lead-form__container
+                                    .lead-form__item
+                                        input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                    .lead-form__item
+                                        input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
+                                .lead-form__item
+                                    input.lead-form__submit.button(type="submit" value="Узнать адреса")
+
                 //- .targeting__compare
                     header.targeting__compare-header
                         h4.targeting__compare-title Сравните доходность инвестиций в РФ
@@ -257,6 +271,9 @@ html(lang="ru")
                             li.protection__list 2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)
                             li.protection__list 3. Контроль расхода. Управленческая отчетность в Exel (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
 
+                        .protection__deco
+                            .protection__image: img(src="./img/mobile-app.png", alt="")
+
                         //- h3.protection__heading.protection__heading--gold Как проверить бизнес?
                         //- ul.protection__text
                         //-     li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
@@ -264,7 +281,7 @@ html(lang="ru")
 
                 .protection__secure
                     .protection__deco
-                        //- .protection__image: img(src="./img/mobile-app.png", alt="")
+                        .protection__image: img(src="./img/mobile-app.png", alt="")
                         p.protection__motto Инвестиции с &nbsp;Oldboy - это удобно и&nbsp;безопасно
 
                     .protection__items

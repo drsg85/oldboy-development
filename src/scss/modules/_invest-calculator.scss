@@ -185,6 +185,11 @@
     }
 
     @include atDesktopM {
+        // positioning
+        position: absolute;
+        right: 500px;
+        top: 0;
+
         // box model
         display: flex;
         width: auto;
@@ -301,7 +306,8 @@
     @include atDesktopM {
         // box model
         margin-right: initial;
-        margin-left: initial;
+        // margin-left: initial;
+        margin-left: calc(100% - 1240px);
     }
 }
 

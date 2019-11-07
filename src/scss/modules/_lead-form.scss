@@ -1,10 +1,12 @@
 #lead-form {
     // box model
-    padding: 25px 0;
     margin-bottom: 70px;
+    padding-bottom: 40px;
+    padding-top: 60px;
 
     // visual
     background-color: #fdf6ee;
+    border-radius: 15px;
 }
 
 .lead-form__legend {

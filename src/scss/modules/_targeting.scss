@@ -135,6 +135,7 @@
     // box model
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 30px;
 
     // typography
     color: $black;
@@ -234,4 +235,8 @@
         // box model
         max-width: 1100px;
     }
+}
+
+.targeting__form {
+   
 }
