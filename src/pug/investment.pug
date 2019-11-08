@@ -29,7 +29,6 @@ html(lang="ru")
                         p.hero-caption__motto Мы берем на себя открытие и управление барбершопом - ты получаешь пассивный доход.
 
                     .hero__buttons
-                        button.button.form-trigger.ms_booking Оставить заявку<br>
                         a.button.button--ghost.smooth-trigger(href="#profit-calculator") Рассчитать доход
                 
                 .hero__investment
@@ -79,7 +78,7 @@ html(lang="ru")
                     p.profit__info Инвесторы контролируют УК, имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза
 
                 .profit__form
-                    form#lead-form(action="")
+                    form#lead-form(action="").lead-form
                         legend.lead-form__legend
                             p.lead-form__text Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель
 
@@ -230,7 +229,7 @@ html(lang="ru")
                     p.targeting__info Если вас НЕ устраивает доходность банковского вклада, жилой и коммерческой недвижимости, а риски на фондовом рынке, в крипте или венчуре слишком высоки - инвестируйте свои деньги в OldBoy!
 
                     .targeting__form
-                        form#lead-form(action="")
+                        form#lead-form(action="").lead-form
                             legend.lead-form__legend
                                 p.lead-form__text Оставьте заявку прямо сейчас чтобы узнать 2 адреса, где мы откроем новые барбершопы в декабре 2019 года
 
@@ -269,10 +268,13 @@ html(lang="ru")
                         ul.protection__text
                             li.protection__list 1. Контроль дохода. Полный доступ к CRM системе Yclients (оборот, средний чек, % заполняемости, % повторных клиентов, за час/день/месяц. Веб версия или мобильное приложение)
                             li.protection__list 2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)
-                            li.protection__list 3. Контроль расхода. Управленческая отчетность в Exel (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
+                            li.protection__list 3. Контроль расхода. Управленческая #[a.protection__link(href="./img/investment/fin.jpg" target="_blank") отчетность в Excel] (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
+
+                        //- a.protection__fin(href="./img/investment/fin.jpg" target="_blank")
+                        //-     img(src="./img/investment/fin.jpg")
 
                         .protection__deco
-                            .protection__image: img(src="./img/mobile-app.png", alt="")
+                            .protection__image: img(src="./img/investment/cam.png", alt="")
 
                         //- h3.protection__heading.protection__heading--gold Как проверить бизнес?
                         //- ul.protection__text
@@ -281,7 +283,7 @@ html(lang="ru")
 
                 .protection__secure
                     .protection__deco
-                        .protection__image: img(src="./img/mobile-app.png", alt="")
+                        .protection__image: img(src="./img/investment/ycl.png", alt="")
                         p.protection__motto Инвестиции с &nbsp;Oldboy - это удобно и&nbsp;безопасно
 
                     .protection__items
@@ -304,6 +306,20 @@ html(lang="ru")
                             .investment-item__image: img(src="./img/icons/online-payment.svg", alt="")
                             p.investment-item__title Онлайн доступ
                             p.investment-item__text Ко всем инструментам из&nbsp;любой точки мира
+
+                .protection__form
+                    form#lead-form(action="").lead-form.lead-form--transparent
+                        legend.lead-form__legend
+                            p.lead-form__text Оставьте заявку чтобы получить доступ к реальной статистике одного из барбершопов и файл (.xls) с управленческой отчетностью за месяц
+
+                        .lead-form__content
+                            .lead-form__container
+                                .lead-form__item
+                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                .lead-form__item
+                                    input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
+                            .lead-form__item
+                                input.lead-form__submit.button(type="submit" value="Получить доступ")
 
             //- section.advantages
                 .advantages__header

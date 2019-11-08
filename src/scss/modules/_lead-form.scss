@@ -1,12 +1,31 @@
 #lead-form {
+
+}
+
+.lead-form {
     // box model
     margin-bottom: 70px;
     padding-bottom: 40px;
     padding-top: 60px;
-
+    
     // visual
     background-color: #fdf6ee;
     border-radius: 15px;
+    
+    &--transparent {
+        // box model
+        display: inline-block;
+        margin-bottom: 0;
+
+        // visual
+        background-color: transparent;
+        border: 1px solid $golden;
+    }
+}
+
+.lead-form--transparent .lead-form__input {
+    // visual
+    background-color: #fdf6ee;
 }
 
 .lead-form__legend {

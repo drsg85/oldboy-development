@@ -36,7 +36,7 @@
                     <h1 class="hero-caption__title"><span class="hero-caption__big hero-caption__big--investment">Инвестируй от 850 тысяч сразу в 2 барбершопа OldBoy и получай от 21 250 рублей на пассиве каждый месяц</h1>
                     <p class="hero-caption__motto">Мы берем на себя открытие и управление барбершопом - ты получаешь пассивный доход.</p>
                 </div>
-                <div class="hero__buttons"><button class="button form-trigger ms_booking">Оставить заявку<br></button><a class="button button--ghost smooth-trigger" href="#profit-calculator">Рассчитать доход</a></div>
+                <div class="hero__buttons"><a class="button button--ghost smooth-trigger" href="#profit-calculator">Рассчитать доход</a></div>
             </div>
             <div class="hero__investment">
                 <div class="investment-text">
@@ -87,7 +87,7 @@
                 <p class="profit__info">Инвесторы контролируют УК, имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза</p>
             </div>
             <div class="profit__form">
-                <form id="lead-form" action="">
+                <form class="lead-form" id="lead-form" action="">
                     <legend class="lead-form__legend">
                         <p class="lead-form__text">Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель</p>
                     </legend>
@@ -213,7 +213,7 @@
                 </div>
                 <p class="targeting__info">Если вас НЕ устраивает доходность банковского вклада, жилой и коммерческой недвижимости, а риски на фондовом рынке, в крипте или венчуре слишком высоки - инвестируйте свои деньги в OldBoy!</p>
                 <div class="targeting__form">
-                    <form id="lead-form" action="">
+                    <form class="lead-form" id="lead-form" action="">
                         <legend class="lead-form__legend">
                             <p class="lead-form__text">Оставьте заявку прямо сейчас чтобы узнать 2 адреса, где мы откроем новые барбершопы в декабре 2019 года</p>
                         </legend>
@@ -246,16 +246,16 @@
                     <ul class="protection__text">
                         <li class="protection__list">1. Контроль дохода. Полный доступ к CRM системе Yclients (оборот, средний чек, % заполняемости, % повторных клиентов, за час/день/месяц. Веб версия или мобильное приложение)</li>
                         <li class="protection__list">2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)</li>
-                        <li class="protection__list">3. Контроль расхода. Управленческая отчетность в Exel (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)</li>
+                        <li class="protection__list">3. Контроль расхода. Управленческая <a class="protection__link" href="./img/investment/fin.jpg" target="_blank">отчетность в Excel</a> (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)</li>
                     </ul>
                     <div class="protection__deco">
-                        <div class="protection__image"><img src="./img/mobile-app.png" alt="" /></div>
+                        <div class="protection__image"><img src="./img/investment/cam.png" alt="" /></div>
                     </div>
                 </div>
             </div>
             <div class="protection__secure">
                 <div class="protection__deco">
-                    <div class="protection__image"><img src="./img/mobile-app.png" alt="" /></div>
+                    <div class="protection__image"><img src="./img/investment/ycl.png" alt="" /></div>
                     <p class="protection__motto">Инвестиции с &nbsp;Oldboy - это удобно и&nbsp;безопасно</p>
                 </div>
                 <div class="protection__items">
@@ -280,6 +280,20 @@
                         <p class="investment-item__text">Ко всем инструментам из&nbsp;любой точки мира</p>
                     </div>
                 </div>
+            </div>
+            <div class="protection__form">
+                <form class="lead-form lead-form--transparent" id="lead-form" action="">
+                    <legend class="lead-form__legend">
+                        <p class="lead-form__text">Оставьте заявку чтобы получить доступ к реальной статистике одного из барбершопов и файл (.xls) с управленческой отчетностью за месяц</p>
+                    </legend>
+                    <div class="lead-form__content">
+                        <div class="lead-form__container">
+                            <div class="lead-form__item"><input class="lead-form__input" type="text" name="fullname" placeholder="Имя" required="required" /></div>
+                            <div class="lead-form__item"><input class="lead-form__input" type="tel" name="phone" placeholder="Телефон" required="required" /></div>
+                        </div>
+                        <div class="lead-form__item"><input class="lead-form__submit button" type="submit" value="Получить доступ" /></div>
+                    </div>
+                </form>
             </div>
         </section><button class="form-opener"><span class="form-opener__text">Оставить заявку</span></button>
         <article class="invest-form-container">
