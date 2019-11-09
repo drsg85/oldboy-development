@@ -4,13 +4,22 @@
 
 .lead-form {
     // box model
-    margin-bottom: 70px;
-    padding-bottom: 40px;
-    padding-top: 60px;
+    // margin-bottom: 70px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
     
     // visual
     background-color: #fdf6ee;
     border-radius: 15px;
+    
+    @include atDesktopS {
+        // box model
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
     
     &--transparent {
         // box model
@@ -37,15 +46,22 @@
     // box model
     margin: 0;
     margin-bottom: 30px;
-    max-width: 600px;
-
+    max-width: 315px;
+    
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1.4rem;
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        max-width: 600px;
+
+        // typography
+        font-size: 1.4rem;
+    }
 }
 
 .lead-form__content {
@@ -57,7 +73,12 @@
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 20px;
-    max-width: 315px;
+    max-width: 300px;
+    
+    @include atDesktopS {
+        // box model
+        max-width: 315px;
+    }
 }
 
 .lead-form__item {
@@ -65,9 +86,19 @@
     text-align: center;
 }
 
+.lead-form__item .button {
+    // typography
+    font-size: 0.75rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 0.85rem;
+    }
+}
+
 .lead-form__input {
     // box model
-    width: 150px;
+    width: 130px;
     padding-left: 20px;
 
     // typography
@@ -80,7 +111,13 @@
     // background-color: rgba($grey, 0.2);
     outline: none;
     transition: ease-in-out 0.25s;
+
+    @include atDesktopS {
+        // box model
+        width: 150px;
+    }
 }
 
 .lead-form__submit {
+
 }

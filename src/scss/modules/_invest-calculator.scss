@@ -185,16 +185,18 @@
     }
 
     @include atDesktopM {
-        // positioning
-        position: absolute;
-        right: 500px;
-        top: 0;
-
         // box model
         display: flex;
         width: auto;
         margin-top: 0;
         margin-bottom: 0;
+    }
+    
+    @include atDesktopL {
+        // positioning
+        position: absolute;
+        right: 550px;
+        top: 50px;
     }
 }
 
@@ -307,7 +309,7 @@
         // box model
         margin-right: initial;
         // margin-left: initial;
-        margin-left: calc(100% - 1240px);
+        margin-left: calc(100% - 1290px);
     }
 }
 
@@ -652,7 +654,7 @@
     @include atDesktopM {
         // box model
         height: 537px;
-        margin-top: 30px;
+        margin-top: 60px;
     }
 
     @include atDesktopL {

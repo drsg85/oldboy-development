@@ -696,22 +696,43 @@
 }
 
 .hero__content--investment .hero-caption {
+    // box model
+    margin: 0 auto;
+
+    @include atTablet {
+        // box model
+        margin: 0;
+    }
+    
     @include atDesktopS {
         // positioning
         transform: none;
 
         // box model
-        width: 550px;
         align-self: center;
+
+        // box model
+        width: 550px;
         margin-left: 200px;
     }
 }
 
 .hero__content--investment .hero-caption__big {
+    // typography
+    font-size: 1.3rem;
+
+    @include atTablet {
+        // box model
+        padding: 10px 0;
+
+        // typography
+        font-size: 2rem;
+    }
+
     @include atDesktopS {
         // box model
         padding: 15px 0;
-        
+
         // typography
         font-size: 2.5rem;
     }
@@ -720,6 +741,13 @@
 .hero__content--investment .hero-caption__big::after {
     // box model
     display: none;
+}
+
+.hero__content--investment .hero__buttons {
+    @include atTablet {
+    // typography
+    text-align: unset;
+    }
 }
 
 .hero__caption {

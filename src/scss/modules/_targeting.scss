@@ -67,8 +67,8 @@
     
     @include atDesktopS {
         // box model
-        margin-bottom: 150px;
-        padding-left: 430px;
+        // margin-bottom: 150px;
+        padding-left: 470px;
         padding-right: 50px;
         padding-top: 80px;
     }
@@ -120,7 +120,7 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     @include atDesktopL {
@@ -238,5 +238,15 @@
 }
 
 .targeting__form {
-   
+   // box model
+   display: flex;
+   justify-content: center;
+   margin-left: -25px;
+   margin-right: -25px;
+
+   @include atSmallMobile {
+       // box model
+       margin-left: 0;
+       margin-right: 0;
+   }
 }
