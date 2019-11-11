@@ -715,6 +715,11 @@
         width: 550px;
         margin-left: 200px;
     }
+
+    @include atDesktopM {
+        // box model
+        width: 750px;
+    }
 }
 
 .hero__content--investment .hero-caption__big {
@@ -735,6 +740,11 @@
 
         // typography
         font-size: 2.5rem;
+    }
+
+    @include atDesktopM {
+        // typography
+        line-height: 1.2;
     }
 }
 
