@@ -328,12 +328,21 @@
     // box model
     margin: 0;
     padding: 0;
-    // margin-bottom: 30px;
-
+    
     // typography
     color: $black;
     font-family: $mainFont;
     line-height: 1.5;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .protection__list {
@@ -414,6 +423,7 @@
         display: block;
         // height: 580px;
         height: 500px;
+        margin-bottom: 30px;
     }
 }
 
