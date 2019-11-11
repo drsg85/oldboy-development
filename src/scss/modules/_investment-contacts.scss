@@ -5,8 +5,18 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        left: calc(100% - 925px);
-        bottom: 20px;
+        left: calc(100% - 520px);
+        bottom: 650px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        bottom: 730px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        bottom: 600px;
     }
 }
 

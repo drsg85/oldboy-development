@@ -132,10 +132,6 @@
 
     &--investment {
         // box model
-        // height: 100vh;
-        // max-height: 900px;
-
-        // box model
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -144,7 +140,7 @@
         max-height: 700px;
 
         // visual
-        background-image: url('./img/investment/investment.jpg');
+        background-image: url('./img/investment/star.jpg');
         background-size: cover;
         background-position: center center;
 
@@ -410,25 +406,6 @@
         background-repeat: no-repeat;
         background-position: center center;
         overflow: unset;
-    }
-    
-    @include atTablet {
-        // box model
-        padding-left: 65px;
-        padding-right: 65px;
-        padding-top: 65px;
-    }
-
-    @include atDesktopS {
-        // box model
-        padding-left: 85px;
-        padding-right: 85px;
-    }
-
-    @include atDesktopM {
-        // box model
-        padding-left: 200px;
-        padding-right: 200px;
     }
 }
 
@@ -704,17 +681,72 @@
         @include atTablet {
             // box model
             flex-direction: row;
-
-            .hero-caption {
+        }
+        
+        .hero__caption {
+            // box model
+            padding: 0;
+            
+            @include atTablet {
                 // box model
                 width: 360px;
             }
         }
+    }
+}
 
-        .hero__caption {
-            // box model
-            padding: 0;
-        }
+.hero__content--investment .hero-caption {
+    // box model
+    margin: 0 auto;
+
+    @include atTablet {
+        // box model
+        margin: 0;
+    }
+    
+    @include atDesktopS {
+        // positioning
+        transform: none;
+
+        // box model
+        align-self: center;
+
+        // box model
+        width: 550px;
+        margin-left: 200px;
+    }
+}
+
+.hero__content--investment .hero-caption__big {
+    // typography
+    font-size: 1.3rem;
+
+    @include atTablet {
+        // box model
+        padding: 10px 0;
+
+        // typography
+        font-size: 2rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 15px 0;
+
+        // typography
+        font-size: 2.5rem;
+    }
+}
+
+.hero__content--investment .hero-caption__big::after {
+    // box model
+    display: none;
+}
+
+.hero__content--investment .hero__buttons {
+    @include atTablet {
+    // typography
+    text-align: unset;
     }
 }
 

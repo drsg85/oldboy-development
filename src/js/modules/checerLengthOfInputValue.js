@@ -17,6 +17,7 @@ class CheckerLengthOfInputValue {
         this.inputValues.map((el) => {
             let val = el.textContent;
             let valLength = val.length;
+            console.log(valLength);
             let targetEl;
             if(this.flagElem) {
                 targetEl = 'vacancy-form__label';
@@ -25,11 +26,12 @@ class CheckerLengthOfInputValue {
                 targetEl = 'js-form-item';
             }
             let parent = this.findParent(el, targetEl);
-            if(valLength >= 8) {
+            parent.style.width = '30%';
+            if(valLength >= 15) {
                 parent.style.width = '55%';
             }
-            else {
-                parent.style.width = '30%';
+            else if(valLength >= 8) {
+                parent.style.width = "43%";
             }
         })
     }

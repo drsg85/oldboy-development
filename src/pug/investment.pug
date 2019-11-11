@@ -25,40 +25,38 @@ html(lang="ru")
             .hero__content.hero__content--investment
                 .hero__caption
                     .hero-caption
-                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй в&nbsp;Oldboy</span>
-                        p.hero-caption__motto Инвестиции в&nbsp;сеть барбершопов Oldboy по всей Европе(Варшава, Прага, Берлин, Вильнюс и&nbsp;многие другие).
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--investment">Инвестируй от&nbsp;850&nbsp;тысяч сразу&nbsp;в&nbsp;2&nbsp;барбершопа OldBoy и&nbsp;получай от&nbsp;21&nbsp;250&nbsp;рублей&nbsp;на&nbsp;пассиве каждый месяц
+                        p.hero-caption__motto Мы берем на себя открытие и&nbsp;управление барбершопом - ты&nbsp;получаешь пассивный доход.
 
                     .hero__buttons
-                        button.button.form-trigger.ms_booking Оставить заявку<br>
                         a.button.button--ghost.smooth-trigger(href="#profit-calculator") Рассчитать доход
                 
                 .hero__investment
                     .investment-text
                         p.investment-text__call.investment-text__call--gold Получайте пассивный доход
-                        p.investment-text__range От 40&nbsp;000 до 500&nbsp;000
+                        p.investment-text__range От 40&nbsp;000 до&nbsp;500&nbsp;000&nbsp;
                             span.currency.rouble-sign P
-                        p.investment-text__call Инвестируя от 850&nbsp;000
+                        p.investment-text__call Инвестируя от 850&nbsp;000&nbsp;
                             span.currency.rouble-sign P
 
         main
             section.invest-info
                 .invest-info__content
                     .condition-item
-                        h3.condition-item__title Инвестиции
-                        p.condition-item__subtitle Минимальный объём
+                        h3.condition-item__title Объём инвестиций
+                        p.condition-item__subtitle Минимальная сумма входа
                         p.condition-item__desc от&nbsp;850&nbsp;000&nbsp;
                             span.currency.rouble-sign P
 
                     .condition-item
-                        h3.condition-item__title Особые условия
-                        p.condition-item__subtitle С долей свыше&nbsp;50%
-                        p.condition-item__desc Для крупных <br><span>инвесторов</span>
+                        h3.condition-item__title Доходность в РФ
+                        p.condition-item__subtitle Средний % доходности за 2018 год
+                        p.condition-item__desc 37,4% <br><span>годовых</span>
 
                     .condition-item
-                        h3.condition-item__title Доходность в РФ
-                        p.condition-item__subtitle За&nbsp;5&nbsp;лет
-                        p.condition-item__desc до&nbsp;12&nbsp;000&nbsp;000&nbsp;
-                            span.currency.rouble-sign P
+                        h3.condition-item__title Окупаемость инвестиций
+                        p.condition-item__subtitle Средний срок возврата инвестиций
+                        p.condition-item__desc 32 месяца / 2,7 года
 
                     .condition-item
                         h3.condition-item__title Участие в&nbsp;бизнесе
@@ -68,16 +66,31 @@ html(lang="ru")
             section.profit#profit
                 .profit__header
                     header.section-header
-                        h2.section-header__title Пассивный <br>доход
-                        p.section-header__subtitle.section-header__subtitle--golden-t Зарабатывай&nbsp;с&nbsp;Oldboy
+                        h2.section-header__title Инвестиции в <br>Oldboy
+                        p.section-header__subtitle.section-header__subtitle--golden-t Ключевые цифры и факты
 
                 .profit__content
-                    h3.profit__title Предлагаем инвесторам купить долю от&nbsp;прибыли в&nbsp;одном из&nbsp;наших барбершопов
-                    p.profit__subtitle Участие в бизнесе не&nbsp;нужно. Доход полностью пассивный
-                    p.profit__value Стоимость 5% доли для РФ = 850&nbsp;000&nbsp;
+                    h3.profit__title Риск минимален. <br>Инвестор покупает долю сразу в 2-х барбершопах.
+                    p.profit__subtitle Риск потери инвестиций становится управляемым
+                    p.profit__value Цена 10% доли в РФ = 850&nbsp;000&nbsp;
                         span.currency.rouble-sign P
-                    p.profit__info Вы получаете долю сразу в&nbsp;2&nbsp;барбершопах, тем самым, максимально диверсифицируя риски инвестиций.
-                    p.profit__info Открытием, управлением и&nbsp;развитием барбершопов будет заниматься головная управляющая компания сети.
+                    p.profit__info Инвестор получает по 5% доли от каждого из 2-х разных барбершопов. Всю операционку от подбора помещения до получения прибыли берет на себя Управляющая компания сети OldBoy.
+                    p.profit__info Инвесторы контролируют УК, имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза
+
+                .profit__form
+                    form#lead-form(action="").lead-form
+                        legend.lead-form__legend
+                            p.lead-form__text Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель
+
+                        .lead-form__content
+                            .lead-form__container
+                                .lead-form__item
+                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                .lead-form__item
+                                    input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
+                            .lead-form__item
+                                input.lead-form__submit.button(type="submit" value="Получить Договор + фин модель")
+
 
                 .profit__calculator.smooth-target#profit-calculator
                     header.profit__calculator-header
@@ -177,9 +190,9 @@ html(lang="ru")
                                     button.button.form-trigger.invest-button Оставить заявку
 
                 .investment-contacts
-                    p.investment-contacts__title Менеджер по инвестициям
-                    a.investment-contacts__phone(href="tel:+79052476535") +7 (905) 247-65-35
-                    p.investment-contacts__name Владимир
+                    p.investment-contacts__title Руководитель отдела по работе с инвесторами
+                    a.investment-contacts__phone(href="tel:+79853331179") +7 (985) 333-11-79
+                    p.investment-contacts__name Виталий
 
             section.targeting
                 .targeting__header
@@ -190,32 +203,46 @@ html(lang="ru")
                             img(src="./img/investment/chair.jpg", alt="Барбершоп Oldboy")
 
                 .targeting__content
-                    h3.targeting__title Это предложение подойдёт:
+                    h3.targeting__title В OldBoy инвестируют:
 
                     .targeting__items
                         .investment-item
                             .investment-item__image: img(src="./img/icons/employee.svg", alt="")
-                            p.investment-item__title Инвесторам
-                            p.investment-item__text Действующим <br>или&nbsp;начинающим
+                            p.investment-item__title ТОП менеджеры
+                            p.investment-item__text Сотрудники средних / крупных коммерческих и государственных корпораций чтобы создать пассивный доход и не зависеть от работы
 
                         .investment-item
                             .investment-item__image: img(src="./img/icons/coins.svg", alt="")
-                            p.investment-item__title Всем кто хочет получать пассивный доход
-                            p.investment-item__text Со своего капитала
+                            p.investment-item__title Бизнесмены
+                            p.investment-item__text Владельцы малого бизнеса, чтобы диверсифицировать источники дохода или войти в проект “для души”
 
                         .investment-item
                             .investment-item__image: img(src="./img/icons/save-money.svg", alt="")
-                            p.investment-item__title Бизнесменам
-                            p.investment-item__text Любого уровня
+                            p.investment-item__title Начинающие предприниматели
+                            p.investment-item__text Те, кто думают открыть свой бизнес по франшизе, но желают максимально снять с себя риски по открытию и управлению барбершопом
 
                         .investment-item
                             .investment-item__image: img(src="./img/icons/website.svg", alt="")
-                            p.investment-item__title Тем кто думает открыть свой бизнес по франшизе
-                            p.investment-item__text Но не готов заниматься операционной работой
+                            p.investment-item__title Адепты бренда
+                            p.investment-item__text Постоянные клиенты OldBoy, которые давно знают нас и просто хотят быть частью бренда
 
-                    p.targeting__info Для нас не важно проживаете вы в&nbsp;России или&nbsp;зарубежом, среди наших инвесторов и&nbsp;партнеров есть уже не&nbsp;малое количество граждан СНГ, Евросоюза и&nbsp;других госдударств.
+                    p.targeting__info Если вас НЕ устраивает доходность банковского вклада, жилой и коммерческой недвижимости, а риски на фондовом рынке, в крипте или венчуре слишком высоки - инвестируйте свои деньги в OldBoy!
 
-                .targeting__compare
+                    .targeting__form
+                        form#lead-form(action="").lead-form
+                            legend.lead-form__legend
+                                p.lead-form__text Оставьте заявку прямо сейчас чтобы узнать 2 адреса, где мы откроем новые барбершопы в декабре 2019 года
+
+                            .lead-form__content
+                                .lead-form__container
+                                    .lead-form__item
+                                        input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                    .lead-form__item
+                                        input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
+                                .lead-form__item
+                                    input.lead-form__submit.button(type="submit" value="Узнать адреса")
+
+                //- .targeting__compare
                     header.targeting__compare-header
                         h4.targeting__compare-title Сравните доходность инвестиций в РФ
                         p.targeting__compare-subtitle Средняя чистая прибыль барбершопов в Москве<br> 400 000 – 450 000 руб. в &nbsp;месяц
@@ -233,23 +260,30 @@ html(lang="ru")
                         p.protection__subtitle Онлайн инструменты, доступные в&nbsp;любое время из&nbsp;любой точки мира
 
                 .protection__content
-                    p.protection__headline Защита&nbsp;инвестиций и&nbsp;контроль доходов
+                    p.protection__headline 3 ступени контроля
 
                     .protection__wrapper
-                        h3.protection__heading Вы инвестируете по одному договору в несколько барбершопов.
-                        p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за&nbsp;2 &nbsp;года способна окупить все осуществленные вами инвестиции.
-                        ul.protection__text Инвестор так же получает возможность <strong>контролировать доходность</strong>, используя ряд преимуществ: 
-                            li.protection__list 1. Инвестор может смотреть все цифры бизнеса в <strong>любое время из&nbsp;любой точки мира</strong>.
-                            li.protection__list 2. <strong>Online доступ</strong> к&nbsp;системе учета Yclients.
-                            li.protection__list 3. Барбершопы <strong>полностью автоматизированы</strong> (онлайн запись, мобильное приложение, электронный журнал с&nbsp;напоминаниями).
-                        h3.protection__heading.protection__heading--gold Как проверить бизнес?
+                        h3.protection__heading Инструменты контроля за инвестициями
+                        //- p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за&nbsp;2 &nbsp;года способна окупить все осуществленные вами инвестиции.
                         ul.protection__text
-                            li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
-                            li.protection__list 2. Вы сможете проверить прибыль и&nbsp;все цифры барбершопов через систему учета Yclients
+                            li.protection__list 1. Контроль дохода. Полный доступ к CRM системе Yclients (оборот, средний чек, % заполняемости, % повторных клиентов, за час/день/месяц. Веб версия или мобильное приложение)
+                            li.protection__list 2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)
+                            li.protection__list 3. Контроль расхода. Управленческая #[a.protection__link(href="./img/investment/fin.jpg" target="_blank") отчетность в Excel] (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
+
+                        //- a.protection__fin(href="./img/investment/fin.jpg" target="_blank")
+                        //-     img(src="./img/investment/fin.jpg")
+
+                        .protection__deco
+                            .protection__image: img(src="./img/investment/cam.png", alt="")
+
+                        //- h3.protection__heading.protection__heading--gold Как проверить бизнес?
+                        //- ul.protection__text
+                        //-     li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
+                        //-     li.protection__list 2. Вы сможете проверить прибыль и&nbsp;все цифры барбершопов через систему учета Yclients
 
                 .protection__secure
                     .protection__deco
-                        .protection__image: img(src="./img/mobile-app.png", alt="")
+                        .protection__image: img(src="./img/investment/ycl.png", alt="")
                         p.protection__motto Инвестиции с &nbsp;Oldboy - это удобно и&nbsp;безопасно
 
                     .protection__items
@@ -273,7 +307,21 @@ html(lang="ru")
                             p.investment-item__title Онлайн доступ
                             p.investment-item__text Ко всем инструментам из&nbsp;любой точки мира
 
-            section.advantages
+                .protection__form
+                    form#lead-form(action="").lead-form.lead-form--transparent
+                        legend.lead-form__legend
+                            p.lead-form__text Оставьте заявку чтобы получить доступ к реальной статистике одного из барбершопов и файл (.xls) с управленческой отчетностью за месяц
+
+                        .lead-form__content
+                            .lead-form__container
+                                .lead-form__item
+                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                .lead-form__item
+                                    input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
+                            .lead-form__item
+                                input.lead-form__submit.button(type="submit" value="Получить доступ")
+
+            //- section.advantages
                 .advantages__header
                     header.section-header
                         h2.section-header__title О&nbsp;сети&nbsp;Oldboy <br>Barbershop

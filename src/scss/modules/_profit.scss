@@ -8,12 +8,22 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 100px;
+
+    @include atDesktopM {
+        // box model
+        // padding-right: 120px;
+    }
 }
 
 .profit__header {
     // box model
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 130px;
+    }
 
     @include atDesktopS {
         // box model
@@ -31,6 +41,11 @@
     // box model
     margin-bottom: 30px;
     padding: 0 25px;
+
+    @include atTablet {
+        // box model
+        margin-right: 80px;
+    }
     
     @include atDesktopS {
         // box model
@@ -44,8 +59,8 @@
     @include atDesktopM {
         // box model
         display: block;
-        margin-top: initial;
-        margin-bottom: 70px;
+        // margin-top: initial;
+        // margin-bottom: 70px;
     }
 }
 
@@ -121,6 +136,22 @@
     }
 }
 
+.profit__form {
+    // box model
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: auto;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 100px;
+    }
+
+    @include atDesktopM {
+        margin-bottom: 70px;
+    }
+}
+
 .profit__info {
     // box model
     max-width: 500px;
@@ -159,8 +190,10 @@
     @include atDesktopL {
         // box model
         padding: 0;
-        padding-left: 40px;
-        padding-right: 40px;
+        // padding-left: 40px;
+        // padding-right: 40px;
+        padding-left: 120px;
+        padding-right: 120px;
     }
 }
 
@@ -174,7 +207,7 @@
     @include atTablet {
         // positioning
         transform: translateY(330px);
-        max-width: 44%;
+        max-width: 40%;
     }
 
     @include atDesktopS {

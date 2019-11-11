@@ -1,6 +1,6 @@
 .protection {
     // box model
-    
+
     @include atDesktopS {
         // box model
         margin-bottom: 100px;
@@ -160,11 +160,14 @@
         // box model
         display: flex;
         padding: 0 40px;
+        padding-bottom: 60px;
     }
 
     @include atDesktopM {
         // box model
         padding-left: 200px;
+        padding-bottom: 120px;
+        padding-top: 60px;
     }
 }
 
@@ -222,19 +225,82 @@
     }
 }
 
-.protection__wrapper {
+.protection__link {
+    // positioning
+    position: relative;
+
+    // typography
+    color: $golden;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.protection__link::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    right: -170px;
+    top: 30px;
+    z-index: 9;
+
     // box model
-    
+    display: inline-block;
+    width: 350px;
+    height: 250px;
+
+    // visual
+    background-image: url('./img/investment/fin.jpg');
+    background-size: cover;
+    border-radius: 5px;
+    opacity: 0;
+    transition: ease-in-out 0.25s;
+    visibility: hidden;
+
+    @include atTablet {
+        // positioning
+        right: -50px;
+    }
+}
+
+.protection__link:hover::after {
+    // visual
+    opacity: 1;
+    visibility: visible;
+}
+
+.protection__wrapper {
+
     @include atDesktopS {
         // box model
         margin-left: 30px;
         max-width: 600px;
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
     }
-
+    
     @include atDesktopM {
+        // positioning
+        position: relative;
+
         // box model
         margin-left: 120px;
+        margin-right: 350px;
+    }
+}
+
+.protection__wrapper .protection__deco {
+    @include atDesktopM {
+        // positioning
+        left: 100%;
+        bottom: 20px;
+        z-index: 9;
+    }
+
+    @include atDesktopL {
+    // positioning
+    right: -400px;
+    top: -175px;
     }
 }
 
@@ -262,15 +328,27 @@
     // box model
     margin: 0;
     padding: 0;
-    margin-bottom: 30px;
-
+    
     // typography
     color: $black;
     font-family: $mainFont;
     line-height: 1.5;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .protection__list {
+    // box model
+    margin-bottom: 15px;
+
     // typography
     list-style-type: none;
 }
@@ -284,6 +362,7 @@
     align-items: center;
     flex-direction: column;
     padding: 60px 20px;
+    margin-bottom: 20px;
     
     // visual
     background-color: $bianca;
@@ -292,7 +371,8 @@
         // box model
         flex-direction: row;
         padding: 30px 0;
-        margin-top: 230px;
+        margin-bottom: 70px;
+        // margin-top: 230px;
 
     }
 
@@ -310,15 +390,16 @@
 
     @include atDesktopS {
         // positioning
-        position: absolute;
         left: 10px;
         bottom: 230px;
     }
-
+    
     @include atDesktopM {
         // positioning
+        position: absolute;
         left: 80px;
-        bottom: 120px;
+        bottom: 100px;
+        // bottom: 120px;
     }
 
     @include atDesktopL {
@@ -333,14 +414,16 @@
 
     @include atDesktopS {
         // box model
-        display: block;
-        height: 560px;
-        margin-bottom: 20px;
+        // height: 560px;
+        // margin-bottom: 20px;
     }
-
+    
     @include atDesktopM {
         // box model
-        height: 580px;
+        display: block;
+        // height: 580px;
+        height: 500px;
+        margin-bottom: 30px;
     }
 }
 
@@ -411,4 +494,10 @@
         // box model
         padding-left: 520px;
     }
+}
+
+.protection__form {
+    // box model
+    display: flex;
+    justify-content: center;
 }
