@@ -42,6 +42,26 @@
         // visual
         background-image: url('./img/bgs/beard.jpg');
     }
+
+    &--royal {
+        // visual
+        background-image: url('./img/royal/royal-d.jpg');
+    }
+
+    &--shaving {
+        // visual
+        background-image: url('./img/shaving/shaving-d.jpg');
+    }
+
+    &--tattoo {
+        // visual
+        background-image: url('./img/tattoo/tattoo-d.jpg');
+    }
+
+    &--spa {
+        // visual
+        background-image: url('./img/icons/spa.png');
+    }
 }
 
 .service-main__header {

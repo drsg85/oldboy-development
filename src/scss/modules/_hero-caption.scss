@@ -29,14 +29,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    }
 
-    @include atTablet {
-        // box model
-        margin-bottom: 80px;
-        padding-bottom: 30px;
-        padding-left: 45px;
-        padding-top: 30px;
+        @include atTablet {
+            // box model
+            margin-bottom: 80px;
+            padding-bottom: 30px;
+            padding-left: 45px;
+            padding-top: 30px;
+        }
     }
 }
 

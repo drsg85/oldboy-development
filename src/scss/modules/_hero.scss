@@ -411,6 +411,14 @@
         background-position: center center;
         overflow: unset;
     }
+
+    &--services {
+        // visual
+        background-image: url('./img/franchise/franchise-d.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 .hero--coupon .hero__logo {
