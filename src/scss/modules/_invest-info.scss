@@ -3,12 +3,19 @@
     position: relative;
     
     // box model
-    padding: 0 50px;
+    // margin-left: 50px;
+    // margin-right: 50px;
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 30px;
+    }
     
     @include atDesktopL {
         // box model
         margin-bottom: 50px;
-        padding: 0 80px;
+        margin-left: 80px;
+        margin-right: 80px;
     }
 }
 
@@ -17,20 +24,18 @@
 
     // positioning
     position: absolute;
-    top: -10px;
-    left: 0;
-    z-index: 7;
-    
+    top: -40px;
+
     // box model
     width: 100%;
     height: 80px;
     
     // visual
-    background-image: url('./img/white-grunge.svg');
+    background-image: url('./img/beige-grunge.svg');
     background-position: top 2px center;
     background-repeat: repeat-x;
     background-size: 800px;
-    transform: rotateX(180deg);
+    z-index: 7;
 }
 
 .invest-info__content {
@@ -38,8 +43,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 -50px;
-    padding-top: 90px;
+    // margin: 0 -50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
     
     // visual
     background-color: #fdf6ee;

@@ -67,15 +67,15 @@
     
     @include atDesktopS {
         // box model
-        margin-bottom: 150px;
-        padding-left: 430px;
+        // margin-bottom: 150px;
+        padding-left: 470px;
         padding-right: 50px;
         padding-top: 80px;
     }
 
     @include atDesktopL {
         // box model
-        margin-bottom: 200px;
+        margin-bottom: 80px;
         padding-left: 700px;
         padding-right: 80px;
     }
@@ -120,7 +120,7 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     @include atDesktopL {
@@ -135,6 +135,7 @@
     // box model
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 30px;
 
     // typography
     color: $black;
@@ -234,4 +235,18 @@
         // box model
         max-width: 1100px;
     }
+}
+
+.targeting__form {
+   // box model
+   display: flex;
+   justify-content: center;
+   margin-left: -25px;
+   margin-right: -25px;
+
+   @include atSmallMobile {
+       // box model
+       margin-left: 0;
+       margin-right: 0;
+   }
 }

@@ -33,7 +33,6 @@ const dirs = {
 // Webpack config
 const webpackConfig = {
   entry: {
-    main: './src/js/main.js',
     city: './src/js/city.js',
     branch: './src/js/branch.js',
     dummy: './src/js/dummy.js',

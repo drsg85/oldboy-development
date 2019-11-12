@@ -28,8 +28,16 @@
     text-transform: uppercase;
 
     @include atDesktopS {
+        // box model
+        height: 2.3em;
+
         // typography
         font-size: 2vw;
+    }
+
+    @include atDesktopM {
+        // box model
+
     }
 
     @include atDesktopL {
@@ -49,6 +57,9 @@
     font-weight: 600;
 
     @include atDesktopS {
+        // box model
+        height: 30px;
+
         // typography
         font-size: 1.2vw;
     }

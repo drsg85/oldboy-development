@@ -1,0 +1,132 @@
+#lead-form {
+
+}
+
+.lead-form {
+    // box model
+    // margin-bottom: 70px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    
+    // visual
+    background-color: #fdf6ee;
+    border-radius: 15px;
+    
+    @include atDesktopS {
+        // box model
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+    
+    &--transparent {
+        // box model
+        display: inline-block;
+        margin-bottom: 0;
+
+        // visual
+        background-color: transparent;
+        border: 1px solid $golden;
+    }
+}
+
+.lead-form--transparent .lead-form__input {
+    // visual
+    background-color: #fdf6ee;
+}
+
+.lead-form__legend {
+    // box model
+    margin: 0 auto;
+}
+
+.lead-form__text {
+    // box model
+    margin: 0;
+    margin-bottom: 30px;
+    max-width: 315px;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        max-width: 600px;
+
+        // typography
+        font-size: 1.4rem;
+    }
+}
+
+.lead-form__content {
+
+}
+
+.lead-form__container {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 300px;
+    
+    @include atDesktopS {
+        // box model
+        max-width: 315px;
+    }
+}
+
+.lead-form__item {
+    // typography
+    text-align: center;
+}
+
+.lead-form__item .button {
+    // typography
+    font-size: 0.75rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 0.85rem;
+    }
+}
+
+.lead-form__input {
+    // box model
+    width: 130px;
+    padding-left: 20px;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 44px;
+    
+    // visual
+    border: none;
+    border-radius: 25px;
+    // background-color: rgba($grey, 0.2);
+    outline: none;
+    transition: ease-in-out 0.25s;
+
+    @include atDesktopS {
+        // box model
+        width: 150px;
+    }
+}
+
+.lead-form__input::placeholder {
+    // typography
+    font-size: 0.85rem;
+    opacity: 0.4;
+}
+
+.lead-form__submit {
+
+}
