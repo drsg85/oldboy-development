@@ -713,7 +713,7 @@
 
         // box model
         width: 550px;
-        margin-left: 200px;
+        // margin-left: 200px;
     }
 
     @include atDesktopM {
@@ -1221,7 +1221,7 @@
     
     @include atSmallMobile {
         // box model
-        display: flex;
+        // display: flex;
         flex-direction: column;
         justify-content: flex-end;
         margin-top: 40px;

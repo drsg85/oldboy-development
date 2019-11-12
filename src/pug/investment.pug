@@ -268,7 +268,10 @@ html(lang="ru")
                         ul.protection__text
                             li.protection__list 1. Контроль дохода. Полный доступ к CRM системе Yclients (оборот, средний чек, % заполняемости, % повторных клиентов, за час/день/месяц. Веб версия или мобильное приложение)
                             li.protection__list 2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)
-                            li.protection__list 3. Контроль расхода. Управленческая #[a.protection__link(href="./img/investment/fin.jpg" target="_blank") отчетность в Excel] (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
+                            li.protection__list 3. Контроль расхода. Управленческая #[a.protection__link(href="#") отчетность в Excel] (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
+
+                                .menu-button.menu-button--close
+                                    .menu-button__middle
 
                         //- a.protection__fin(href="./img/investment/fin.jpg" target="_blank")
                         //-     img(src="./img/investment/fin.jpg")
@@ -365,6 +368,9 @@ html(lang="ru")
                         .advantages__button
                             button.button.form-trigger.ms_booking Оставить заявку
 
+        .investment-popup
+            .investment-popup__content: img(src="./img/investment/fin.jpg", alt="")
+            .investment-popup__close
 
         button.up-button#up-button
                 .up-button__arrow
