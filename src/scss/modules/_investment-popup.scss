@@ -52,8 +52,8 @@
 .investment-popup__close {
     // positioning
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 120px;
+    top: 100px;
     z-index: 999;
 
     // box model
@@ -68,38 +68,79 @@
     transition: all 0.25s ease-out;
 }
 
-.investment-popup__close {
-    &::before {
-        // positioning
-        position: fixed;
-        left: 14px;
-        top: 13px;
-        transform-origin: left center;
-        transform: rotate(45deg);
+.investment-popup__close:before,
+.investment-popup__close:after {
+    // positioning
+    position: absolute;
+    left: 11px;
 
-        // box model
-        display: block;
-        width: 23px;
-        height: 3px;
+    // box model
+    height: 3px;
+    width: 22px;
 
-        // visual
-        background-color: $light;
-    }
-    
-    &::after {
-        // positioning
-        position: fixed;
-        left: 14px;
-        top: 29px;
-        transform-origin: left center;
-        transform: rotate(-45deg);
-
-        // box model
-        display: block;
-        width: 23px;
-        height: 3px;
-
-        // visual
-        background-color: $light;
-    }
+    // visual
+    background-color: $light;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+    transform-origin: center left;
 }
+
+.investment-popup__close:before {
+    content: "";
+    // positioning
+    left: 14px;
+    top: 13px;
+    transform-origin: left center;
+    transform: rotate(45deg);
+
+    // box model
+    width: 23px;
+}
+
+.investment-popup__close:after {
+    content: "";
+    // positioning
+    left: 14px;
+    top: 29px;
+    transform-origin: left center;
+    transform: rotate(-45deg);
+
+    // box model
+    width: 23px;
+}
+
+// .investment-popup__close {
+//     &::before {
+//         // positioning
+//         position: absolute;
+//         left: 14px;
+//         top: 13px;
+//         transform-origin: left center;
+//         transform: rotate(45deg);
+
+//         // box model
+//         display: block;
+//         width: 23px;
+//         height: 3px;
+
+//         // visual
+//         background-color: $light;
+//     }
+    
+//     &::after {
+//         // positioning
+//         position: absolute;
+//         left: 14px;
+//         top: 29px;
+//         transform-origin: left center;
+//         transform: rotate(-45deg);
+
+//         // box model
+//         display: block;
+//         width: 23px;
+//         height: 3px;
+
+//         // visual
+//         background-color: $light;
+//     }
+// }

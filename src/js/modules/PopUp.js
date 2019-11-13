@@ -12,6 +12,7 @@ class PopUp {
 events () {
     this.protectionLink.addEventListener('click', () => {
         this.investmentPopup.style.display = "block";
+        // this.investmentPopup.classList.toggle('.investment-popup--active');
     });
 
     this.investmentPopupClose.addEventListener('click', () => {

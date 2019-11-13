@@ -229,11 +229,20 @@
     // positioning
     position: relative;
 
+    // box model
+    padding: 0;
+
     // typography
     color: $golden;
     font-style: italic;
     font-weight: 800;
     text-transform: uppercase;
+
+    // visual
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
 }
 
 // .protection__link::after {
@@ -430,6 +439,12 @@
 .protection__image img {
     // box model
     height: 100%;
+}
+
+.protection__video {
+    // box model
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .protection__motto {

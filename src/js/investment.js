@@ -6,7 +6,8 @@ import InvestCalculator from './modules/InvestCalculator';
 // import LocationSelector from './modules/LocationSelector';
 // import LocationSearch from './modules/LocationSearch';
 import LocationLogo from './modules/LocationLogo';
-import PopUp from './modules/PopUp'
+import PopUp from './modules/PopUp';
+import Video from './modules/Video';
 
 
 // const investChart = new InvestChart();
@@ -27,3 +28,5 @@ const investCalculator = new InvestCalculator();
 // const locationSearch = new LocationSearch();
 
 const popUp = new PopUp();
+
+const video = new Video();
