@@ -229,45 +229,20 @@
     // positioning
     position: relative;
 
+    // box model
+    padding: 0;
+
     // typography
     color: $golden;
     font-style: italic;
     font-weight: 800;
     text-transform: uppercase;
-}
-
-.protection__link::after {
-    content: "";
-
-    // positioning
-    position: absolute;
-    right: -170px;
-    top: 30px;
-    z-index: 9;
-
-    // box model
-    display: inline-block;
-    width: 350px;
-    height: 250px;
 
     // visual
-    background-image: url('./img/investment/fin.jpg');
-    background-size: cover;
-    border-radius: 5px;
-    opacity: 0;
-    transition: ease-in-out 0.25s;
-    visibility: hidden;
-
-    @include atTablet {
-        // positioning
-        right: -50px;
-    }
-}
-
-.protection__link:hover::after {
-    // visual
-    opacity: 1;
-    visibility: visible;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
 }
 
 .protection__wrapper {
@@ -430,6 +405,12 @@
 .protection__image img {
     // box model
     height: 100%;
+}
+
+.protection__video {
+    // box model
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .protection__motto {

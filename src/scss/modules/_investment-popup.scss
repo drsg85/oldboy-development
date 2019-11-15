@@ -1,0 +1,159 @@
+.investment-popup {
+    // box model
+    display: block;
+
+    // visual
+    transition: all 0.5s ease-in-out;
+}
+
+.investment-popup__hidden {
+    // box model
+    display: none;
+}
+
+.investment-popup__visually {
+    // visual
+    opacity: 0;
+}
+
+.investment-popup::before {
+    content: "";
+
+    // positioning
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    // box model
+    width: 100%;
+    height: 100%;
+
+    // visual
+    background-color: $black;
+    opacity: 0.5;
+}
+
+.investment-popup__content {
+    // positioning
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    // box model
+    width: 75vw;
+    height: 60vh;
+    padding: 1px;
+
+    // visual
+    background-color: $light;
+    border-radius: 15px;
+    background-color: $golden;
+}
+
+.investment-popup__content img {
+    // box model
+    width: 100%;
+    height: 100%;
+
+    // visual
+    border-radius: 15px;
+}
+
+.investment-popup__close {
+    // positioning
+    position: fixed;
+    right: 120px;
+    top: 100px;
+    z-index: 999;
+
+    // box model
+    height: 48px;
+    width: 48px;
+
+    // visual
+    background-color: rgba($dark, 0.5);
+    border: 2px solid $golden;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.investment-popup__close:before,
+.investment-popup__close:after {
+    // positioning
+    position: absolute;
+    left: 11px;
+
+    // box model
+    height: 3px;
+    width: 22px;
+
+    // visual
+    background-color: $light;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+    transform-origin: center left;
+}
+
+.investment-popup__close:before {
+    content: "";
+    // positioning
+    left: 14px;
+    top: 13px;
+    transform-origin: left center;
+    transform: rotate(45deg);
+
+    // box model
+    width: 23px;
+}
+
+.investment-popup__close:after {
+    content: "";
+    // positioning
+    left: 14px;
+    top: 29px;
+    transform-origin: left center;
+    transform: rotate(-45deg);
+
+    // box model
+    width: 23px;
+}
+
+// .investment-popup__close {
+//     &::before {
+//         // positioning
+//         position: absolute;
+//         left: 14px;
+//         top: 13px;
+//         transform-origin: left center;
+//         transform: rotate(45deg);
+
+//         // box model
+//         display: block;
+//         width: 23px;
+//         height: 3px;
+
+//         // visual
+//         background-color: $light;
+//     }
+    
+//     &::after {
+//         // positioning
+//         position: absolute;
+//         left: 14px;
+//         top: 29px;
+//         transform-origin: left center;
+//         transform: rotate(-45deg);
+
+//         // box model
+//         display: block;
+//         width: 23px;
+//         height: 3px;
+
+//         // visual
+//         background-color: $light;
+//     }
+// }
