@@ -1,4 +1,4 @@
-class video {
+class Video {
     constructor () {
         function findVideos() {
             let videos = document.querySelectorAll('.video');
@@ -27,11 +27,17 @@ class video {
         }
         
         function parseMediaURL(media) {
-            let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+            // let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+            let regexp = /\EOnSh3QlpbQ\b/;
             let url = media.src;
             let match = url.match(regexp);
         
             return match[1];
+
+            // let regexp = /youtu\.be\/([a-zA-Z0-9_-]+)/i;
+            // let url = link.href;
+            // let match = url.match(regexp);
+            // return match[1];
         }
         
         function createIframe(id) {
@@ -55,3 +61,4 @@ class video {
     }
 }
 
+export default Video;
