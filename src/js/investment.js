@@ -1,16 +1,16 @@
-import InvestForm from './modules/InvestForm';
-import InvestChart from './modules/InvestChart';
+// import InvestChart from './modules/InvestChart';
 import MobileMenu from './modules/MobileMenu';
 import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
 import InvestCalculator from './modules/InvestCalculator';
-import LocationSelector from './modules/LocationSelector';
-import LocationSearch from './modules/LocationSearch';
+// import LocationSelector from './modules/LocationSelector';
+// import LocationSearch from './modules/LocationSearch';
 import LocationLogo from './modules/LocationLogo';
+import PopUp from './modules/PopUp';
+import Video from './modules/Video';
 
-const investForm = new InvestForm();
 
-const investChart = new InvestChart();
+// const investChart = new InvestChart();
 
 const mobileMenu = new MobileMenu();
 
@@ -23,6 +23,10 @@ new SmoothOnAnchors();
 
 const investCalculator = new InvestCalculator();
 
-const locationSelector = new LocationSelector();
+// const locationSelector = new LocationSelector();
 
-const locationSearch = new LocationSearch();
+// const locationSearch = new LocationSearch();
+
+const popUp = new PopUp();
+
+const video = new Video();
