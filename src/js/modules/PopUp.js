@@ -10,10 +10,9 @@ class PopUp {
     }
 
 events () {
-
     this.protectionLink.addEventListener('click', () => {
-        if (this.investmentPopup.classList.contains('.investment-popup__hidden')) {
-            this.investmentPopup.classList.remove('.investment-popup__hidden');
+        if (this.investmentPopup.classList.contains('investment-popup__hidden')) {
+            this.investmentPopup.classList.remove('investment-popup__hidden');
             setTimeout(() => {
                 this.investmentPopup.remove('investment-popup__visually');
             }, 20);
