@@ -1,12 +1,15 @@
 .investment-popup {
+    position: relative;
+    
     // box model
     display: block;
 
     // visual
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
 }
 
-.investment-popup__hidden {
+.investment-popup--hidden {
     // box model
     display: none;
 }
@@ -31,7 +34,7 @@
 
     // visual
     background-color: $black;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .investment-popup__content {
@@ -43,14 +46,39 @@
     z-index: 999;
 
     // box model
-    width: 75vw;
-    height: 60vh;
+    width: 80vw;
+    height: 25vh;
     padding: 1px;
 
     // visual
     background-color: $light;
     border-radius: 15px;
+    box-shadow: 0 3px 25px $golden;
     background-color: $golden;
+
+    @include atTablet {
+        // box model
+        width: 600px;
+        height: 250px;
+    }
+
+    @include atDesktopS {
+        // box model
+        width: 900px;
+        height: 400px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 1100px;
+        height: 500px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 1300px;
+        height: 600px;
+    }
 }
 
 .investment-popup__content img {
@@ -60,13 +88,14 @@
 
     // visual
     border-radius: 15px;
+    
 }
 
 .investment-popup__close {
     // positioning
     position: fixed;
-    right: 120px;
-    top: 100px;
+    right: 0;
+    top: -70px;
     z-index: 999;
 
     // box model
