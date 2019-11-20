@@ -60,7 +60,32 @@
 
     &--spa {
         // visual
-        background-image: url('./img/icons/spa.png');
+        background-image: url('./img/oldboy-spa.jpg');
+        .service-main__header,
+        .service-main__button {
+            // positioning
+            z-index: 2;
+        }
+        
+        &:after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-color: #cfcece;
+            opacity: 0.6;
+        }
     }
 }
 

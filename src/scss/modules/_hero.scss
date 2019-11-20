@@ -410,7 +410,7 @@
 
     &--services {
         // visual
-        background-image: url('./img/franchise/franchise-d.jpg');
+        background-image: url('./img/bgs/generic.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -611,6 +611,7 @@
 
     // box model
     display: flex;
+    align-items: flex-start;
     vertical-align: top;
     //padding-left: 85px;
     padding-right: 70px;
@@ -721,7 +722,7 @@
 
         // box model
         width: 550px;
-        margin-left: 200px;
+        // margin-left: 200px;
     }
 
     @include atDesktopM {
@@ -1229,7 +1230,7 @@
     
     @include atSmallMobile {
         // box model
-        display: flex;
+        // display: flex;
         flex-direction: column;
         justify-content: flex-end;
         margin-top: 40px;
