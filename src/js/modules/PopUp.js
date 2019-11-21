@@ -9,6 +9,7 @@ class PopUp {
       this.events();
     }
 
+<<<<<<< HEAD
 events () {
     this.protectionLink.addEventListener('click', () => {
         if (this.investmentPopup.classList.contains('investment-popup__hidden')) {
@@ -27,20 +28,28 @@ events () {
             });
         }
     }, false);
+=======
 
-    
-    this.investmentPopupClose.addEventListener('click', () => {
-        this.investmentPopup.classList.add('investment-popup__visually');
-        setTimeout(() => {
-            this.investmentPopup.classList.add('investment-popup__hidden');
-        }, 20);
-    })
-}
+    events () {
+        this.protectionLink.addEventListener('click', () => {
+            if (this.investmentPopup.classList.contains('investment-popup--hidden')) {
+                this.investmentPopup.classList.remove('investment-popup--hidden');
+                setTimeout(() => {
+                    this.investmentPopup.classList.remove('investment-popup__visually');
+                }, 20);
+            }
+        })
+>>>>>>> 481096152bd138dfc9103badcf6b73ead5356893
+
+        this.investmentPopupClose.addEventListener('click', () => {
+            this.investmentPopup.classList.add('investment-popup__visually');
+            setTimeout(() => {
+                this.investmentPopup.classList.add('investment-popup--hidden');
+            }, 500);
+            
+        })
+    }
 }
 
-// this.protectionLink.addEventListener('click', () => {
-//     this.investmentPopup.style.display = "block";
-//     // this.investmentPopup.classList.toggle('.investment-popup--active');
-// });
 
 export default PopUp;

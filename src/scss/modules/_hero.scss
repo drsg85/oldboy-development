@@ -140,13 +140,14 @@
         max-height: 700px;
 
         // visual
-        background-image: url('./img/investment/star.jpg');
+        background-image: url('./img/investment/investment.jpg');
         background-size: cover;
-        background-position: center center;
-
+        background-position: left top;
+        
         @include atTablet {
             // box model
             min-height: 640px;
+            background-position: center center;
         }
         
         @include atDesktopS {
