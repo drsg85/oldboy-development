@@ -27,6 +27,7 @@ class Video {
         }
         
         function parseMediaURL(media) {
+<<<<<<< HEAD
             // let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
             //let regexp = /\EOnSh3QlpbQ\b/;
             //let url = media.src;
@@ -38,6 +39,12 @@ class Video {
              let url = media.href;
              let match = url.match(regexp);
              return match[1];
+=======
+            let regexp = /youtu\.be\/([a-zA-Z0-9_-]+)/i;
+            let url = media.href;
+            let match = url.match(regexp);
+            return match[1];
+>>>>>>> 481096152bd138dfc9103badcf6b73ead5356893
         }
         
         function createIframe(id) {
