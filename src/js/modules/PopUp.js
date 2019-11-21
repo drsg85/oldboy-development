@@ -9,26 +9,6 @@ class PopUp {
       this.events();
     }
 
-<<<<<<< HEAD
-events () {
-    this.protectionLink.addEventListener('click', () => {
-        if (this.investmentPopup.classList.contains('investment-popup__hidden')) {
-            this.investmentPopup.classList.remove('investment-popup__hidden');
-            setTimeout(() => {
-                this.investmentPopup.remove('investment-popup__visually');
-            }, 20);
-        } else {
-            // this.investmentPopup.classList.add('investment-popup__visually');
-            this.investmentPopup.addEventListener('transitioned', (e) => {
-                // this.investmentPopup.classList.add('.investment-popup__hidden');
-            }, {
-                capture: false,
-                once: true,
-                passive: false
-            });
-        }
-    }, false);
-=======
 
     events () {
         this.protectionLink.addEventListener('click', () => {
@@ -39,7 +19,6 @@ events () {
                 }, 20);
             }
         })
->>>>>>> 481096152bd138dfc9103badcf6b73ead5356893
 
         this.investmentPopupClose.addEventListener('click', () => {
             this.investmentPopup.classList.add('investment-popup__visually');
