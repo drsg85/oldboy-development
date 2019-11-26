@@ -155,7 +155,7 @@ html(lang="ru")
                         .invest-calculator__result
                             .invest-calculator__summ
                                 p.invest-calculator__summ-text Сумма инвестиций<br>
-                                    span.invest-calculator__value#invest-calculator__value-invest &nbsp;850&nbsp;000 
+                                    span.invest-calculator__value#invest-calculator__value-invest 850&nbsp;000
                                     span.invest-calculator__curr.rouble-sign Р
                             .invest-calculator__passive
                                 p.invest-calculator__summ-text Размер пассивного дохода <br>
@@ -264,24 +264,16 @@ html(lang="ru")
 
                     .protection__wrapper
                         h3.protection__heading Инструменты контроля за инвестициями
-                        //- p.protection__text Такой подход делает инвестиции <strong>практически безрисковыми</strong>. Ориентировочная прибыль 2-х барбершопов за&nbsp;2 &nbsp;года способна окупить все осуществленные вами инвестиции.
+                        
                         ul.protection__text
                             li.protection__list 1. Контроль дохода. Полный доступ к CRM системе Yclients (оборот, средний чек, % заполняемости, % повторных клиентов, за час/день/месяц. Веб версия или мобильное приложение)
                             li.protection__list 2. Онлайн видеокамеры (2 шт. в клиентской зоне, 1 шт. над стойкой администратора, чтобы было видно, как принимаются оплаты наличными)
                             li.protection__list 3. Контроль расхода. Управленческая #[button.protection__link(href="#") отчетность в Excel] (статистика всех расходов по дням. Направляется на почту до 5 числа каждого месяца)
 
-                        //- a.protection__fin(href="./img/investment/fin.jpg" target="_blank")
-                        //-     img(src="./img/investment/fin.jpg")
-
                         .protection__deco
                             .protection__image: img(src="./img/investment/cam.png", alt="")
 
-                        //- h3.protection__heading.protection__heading--gold Как проверить бизнес?
-                        //- ul.protection__text
-                        //-     li.protection__list 1. Предоставим учредительные документы, договоры аренды и&nbsp;прочее
-                        //-     li.protection__list 2. Вы сможете проверить прибыль и&nbsp;все цифры барбершопов через систему учета Yclients
-
-                        .protection__video
+                        //.protection__video
                             .video
                                 a.video__link(href="https://youtu.be/EOnSh3QlpbQ")
                                     picture
@@ -329,50 +321,6 @@ html(lang="ru")
                                     input.lead-form__input(type="tel" name="phone" placeholder="Телефон" required)
                             .lead-form__item
                                 input.lead-form__submit.button(type="submit" value="Получить доступ")
-
-            //- section.advantages
-                .advantages__header
-                    header.section-header
-                        h2.section-header__title О&nbsp;сети&nbsp;Oldboy <br>Barbershop
-                        p.section-header__subtitle.section-header__subtitle--light Наши&nbsp;преимущества
-                        .section-header__image.section-header__image--investment
-                            img(src="./img/investment/adv.jpg", alt="Барбершоп Oldboy")
-
-                    .advantages__description
-                        h2.advantages__title Сотрудничество с&nbsp;нашим брендом имеет ряд преимуществ для&nbsp;партнёров
-                        p.advantages__subtitle Oldboy Barbershop - это крупнейшая сеть барбершопов в&nbsp;России&nbsp;и&nbsp;СНГ
-                        p.advantages__text <strong>Почему привлекаем инвестиции?</strong> <br>Инвестиции нужны для быстрого масшабирования - открытие новых барбершопов в&nbsp;Европе
-                        p.advantages__plan План за год открыть 139 новых барбершопов
-
-                .advantages__content
-                    p.advantages__confirm Мы подтверждаем свои компетенции на&nbsp;конкретных примерах <br>Роль лидера рынка, это не&nbsp;пустые слова
-
-                    .advantages__items
-                        .advantage-item
-                            header.advantage-item__info
-                                p.advantage-item__count 230
-                                p.advantage-item__subtitle Открытых филиалов по&nbsp;всему миру
-
-                        .advantage-item.advantage-item--countries
-                            header.advantage-item__info
-                                p.advantage-item__count 10
-                                p.advantage-item__subtitle Стран в которых работают нащи барбершопы
-
-                        .advantage-item.advantage-item--branches
-                            header.advantage-item__info
-                                p.advantage-item__count 50
-                                p.advantage-item__subtitle Филиалов открывается ежегодно
-
-                        .advantage-item.advantage-item--closed
-                            header.advantage-item__info
-                                p.advantage-item__count 0
-                                p.advantage-item__subtitle Закрывшихся филиалов за&nbsp;5 лет работы бренда
-
-                    .advantages__cta
-                        h3.advantages__title.advantages__title--bottom Запишитесь прямо сейчас на презентацию бизнеса в&nbsp;действующем барбершопе, чтобы проверить все цифры
-                        p.advantages__subtitle.advantages__subtitle--bottom По договоренности встречи проводим по Skype или по&nbsp;звонку через мессенджеры
-                        .advantages__button
-                            button.button.form-trigger.ms_booking Оставить заявку
 
         .investment-popup.investment-popup--hidden.investment-popup__visually
             .investment-popup__content

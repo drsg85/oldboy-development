@@ -1,5 +1,6 @@
 .application-form {
     // box model
+    padding-top: 60px;
     padding-bottom: 55px;
     
     // visual
@@ -9,7 +10,12 @@
 
     @include atTablet {
         // box model
-        margin-bottom: 150px;
+        margin-bottom: 55px;
+        padding-top: 75px;
+        padding-bottom: 150px;
+
+        // visual
+        overflow: hidden;
     }
 }
 
@@ -22,7 +28,7 @@
     padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
-
+    
     @include atTablet {
         // positioning
         position: relative;
