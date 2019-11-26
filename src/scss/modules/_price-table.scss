@@ -39,6 +39,7 @@
     // box model
     padding: 6px 0;
     padding-right: 20px;
+    max-width: 190px;
 
     // typography
     font-family: $mainFont;
@@ -51,8 +52,26 @@
     border-bottom: 1px solid rgba($dark, 0.25);
 
     @include atTablet {
+        // box model
+        max-width: 250px;
+
         // typography
         font-size: 1rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        min-width: 200px;
+    }
+
+    @include atDesktopM {
+        // box model
+        min-width: 250px;
+    }
+
+    @include atDesktopL {
+        // box model
+        min-width: 300px;
     }
 }
 
@@ -63,8 +82,16 @@
 }
 
 .price-table__service {
+    // box model
+    // min-width: 200px;
+
     // typography
     color: $dark;
+
+    // @include atDesktopM {
+    //     // box model
+    //     min-width: 300px;
+    // }
 }
 
 .price-table__price {
