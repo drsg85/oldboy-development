@@ -408,6 +408,14 @@
         background-position: center center;
         overflow: unset;
     }
+
+    &--services {
+        // visual
+        background-image: url('./img/bgs/generic.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 .hero--coupon .hero__logo {
@@ -604,6 +612,7 @@
 
     // box model
     display: flex;
+    align-items: flex-start;
     vertical-align: top;
     //padding-left: 85px;
     padding-right: 70px;

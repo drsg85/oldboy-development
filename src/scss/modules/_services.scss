@@ -18,6 +18,14 @@
     }
 }
 
+.services__container {
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .services__content {
     // box model
     padding: 20px;

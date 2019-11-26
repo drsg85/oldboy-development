@@ -179,6 +179,7 @@
             max-width: 30%;
             margin-right: 30px;
             margin-bottom: 0;
+            margin-top: 0;
         }
 
         &--right {
@@ -187,6 +188,12 @@
             max-width: 30%;
             margin-left: 30px;
             margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        &--small25 {
+            // box model
+            max-width: 25%;
         }
     }
 }

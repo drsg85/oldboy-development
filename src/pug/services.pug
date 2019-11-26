@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+    body
+        header.hero.hero--services
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big">oldboy <br>barbershop</span>
+                        p.hero-caption__motto Намного больше, чем просто мужская&nbsp;парикмахерская
+
+                    .hero__buttons
+                        a.button.ms_booking(href="#") Запись онлайн<br>
+                        a.button.button--ghost(href="#about").smooth-trigger О барбершопе
+                
+                aside.hero__aside
+                    .hero-franch
+                        .hero-franch__family
+                        p.hero-franch__lettering
+                            span.hero-franch__oldboy Oldboy&nbsp;Barbershop
+                            span.hero-franch__network Крупнейшая&nbsp;сеть
+                            span.hero-franch__barbershops БАРБЕРШОПОВ
+                            span.hero-franch__number 210 
+                            span.hero-franch__open открытых&nbsp;филиалов
+                        .hero-franch__cta
+                            a(href="#").button.button--ghost узнать подробности
+                            .hero-franch__desc о том, как открыть свой барбершоп
+        
+        main
+            <section class="services" id="services">
+                <div class="services__header">
+                    <header class="section-header">
+                        <h2 class="section-header__title">Услуги <br>барбершопа</h2>
+                        <p class="section-header__subtitle section-header__subtitle--golden-t">Стрижем&nbsp;и&nbsp;бреем</p>
+                    </header>
+                </div>
+            <div class="services__content">
+                <div class="services__container">
+                    <article class="service-main service-main--haircut">
+                        <header class="service-main__header">
+                            <h3 class="service-main__title">Мужские <br><strong>стрижки</strong></h3>
+                            <p class="service-main__subtitle">Лучшее качество</p>
+                        </header>
+                        <div class="service-main__button"><a class="button button--ghost" href="/services/haircut">Всё о стрижках</a></div>
+                    </article>
+                    <article class="service-main service-main--beard">
+                        <header class="service-main__header">
+                            <h3 class="service-main__title">Стрижка<br> <strong>усов и&nbsp;бороды</strong></h3>
+                            <p class="service-main__subtitle">Наша специализация</p>
+                        </header>
+                        <div class="service-main__button"><a class="button button--ghost" href="/services/beard">Усы и борода</a></div>
+                    </article>
+                    <article class="service-main service-main--shaving">
+                        <header class="service-main__header">
+                            <h3 class="service-main__title"><strong>Бритьё</strong> <br>бороды и головы</strong></h3>
+                            <p class="service-main__subtitle">Стиль и профессионализм</p>
+                        </header>
+                        <div class="service-main__button"><a class="button button--ghost" href="/services/beard">Услуги бритья</a></div>
+                    </article>
+                    <article class="service-main service-main--tattoo">
+                        <header class="service-main__header">
+                            <h3 class="service-main__title"><strong>Нанесение</strong> <br>татуировок</h3>
+                            <p class="service-main__subtitle">Лучшие мастера</p>
+                        </header>
+                        <div class="service-main__button"><a class="button button--ghost" href="/services/beard">Услуги тату салона</a></div>
+                    </article>
+                    <article class="service-main service-main--royal">
+                        <header class="service-main__header">
+                            <h3 class="service-main__title"><strong>Королевское</strong> <br>бритьё</h3>
+                            <p class="service-main__subtitle">Для настоящих ценителей</p>
+                        </header>
+                        <div class="service-main__button"><a class="button button--ghost" href="/services/beard">Для ценителей</a></div>
+                    </article>
+                    <article class="service-main service-main--spa">
+                        <header class="service-main__header">
+                            <h3 class="service-main__title"><strong>Барбер–SPA</strong> <br>Услуги</h3>
+                            <p class="service-main__subtitle">Комплексный уход</p>
+                        </header>
+                        <div class="service-main__button"><a class="button button--ghost button--disabled" href="/services/beard">coming soon</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        button.up-button#up-button
+            .up-button__arrow
+            p.up-button__text Наверх
+    
+    include modules/_footer.pug
+
+    script(src="scripts.js")
