@@ -6,6 +6,7 @@ import LocationLogo from './modules/LocationLogo';
 import LocationSearch from './modules/LocationSearch';
 import LocationSelector from './modules/LocationSelector';
 import PopUp from './modules/PopUp';
+import MaskTel from './modules/MaskTel';
 
 const mobileMenu = new MobileMenu();
 
@@ -22,3 +23,5 @@ new SmoothOnAnchors();
 const investCalculator = new InvestCalculator();
 
 const popUp = new PopUp();
+
+const inputMask = new MaskTel();

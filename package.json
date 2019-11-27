@@ -26,6 +26,7 @@
     "gulp-html-beautify": "^1.0.1",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
+    "inputmask": "^4.0.9",
     "sass-module-importer": "^1.4.0",
     "webpack": "^4.39.3",
     "webpack-stream": "^5.2.1"
