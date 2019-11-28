@@ -3,7 +3,9 @@ class TabSwitcher {
         this.tabs = [...document.querySelectorAll(obj.tabs)];
         this.elToOpen = [...document.querySelectorAll(obj.elToOpen)];
         this.classActive;
-        this.addEvents();
+        if(this.tabs) {
+            this.addEvents();
+        }
     }
 
     switchClass(element) {
