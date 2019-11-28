@@ -152,87 +152,256 @@
                 </header>
             </div>
             <div class="price-list__content">
-                <table class="price-table">
-                    <caption class="price-table__caption">Основные услуги</caption>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1000</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1000</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">800</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">&nbsp;</td>
-                    </tr>
-                </table>
-                <table class="price-table">
-                    <caption class="price-table__caption">Дополнительные услуги</caption>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1000</td>
-                    </tr>
-                </table>
-                <table class="price-table">
-                    <caption class="price-table__caption">Комплексные услуги</caption>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1000</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">2000</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">2500</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1750</td>
-                    </tr>
-                    <tr class="price-table__row">
-                        <td class="price-table__service">Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
-                        <td class="price-table__price">1000</td>
-                    </tr>
-                </table>
+                <div class="price-list__tabs"><button class="price-list__btn" id="vip">vip</button><button class="price-list__btn price-list__btn--active" id="top">top</button><button class="price-list__btn" id="regular">regular</button></div>
+                <div class="price-list__container" data-content="top">
+                    <table class="price-table">
+                        <caption class="price-table__caption">Основные услуги1</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">800</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">&nbsp;</td>
+                        </tr>
+                    </table>
+                    <table class="price-table">
+                        <caption class="price-table__caption">Дополнительные услуги</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                    </table>
+                    <table class="price-table">
+                        <caption class="price-table__caption">Комплексные услуги</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">2000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">2500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1750</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="price-list__container" data-content="vip">
+                    <table class="price-table">
+                        <caption class="price-table__caption">Основные услуги2</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">800</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">&nbsp;</td>
+                        </tr>
+                    </table>
+                    <table class="price-table">
+                        <caption class="price-table__caption">Дополнительные услуги</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                    </table>
+                    <table class="price-table">
+                        <caption class="price-table__caption">Комплексные услуги</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">2000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">2500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1750</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="price-list__container" data-content="regular">
+                    <table class="price-table">
+                        <caption class="price-table__caption">Основные услуги3</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">800</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">&nbsp;</td>
+                        </tr>
+                    </table>
+                    <table class="price-table">
+                        <caption class="price-table__caption">Дополнительные услуги</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                    </table>
+                    <table class="price-table">
+                        <caption class="price-table__caption">Комплексные услуги</caption>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">2000</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">2500</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1750</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__service">Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a></td>
+                            <td class="price-table__price">1000</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
         <section class="team">
