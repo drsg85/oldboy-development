@@ -198,8 +198,28 @@ class OldboySchemaManager {/*{{{*/
       $tags = $this->getFieldTags($entity, $field_name);
     }
 
+	$noindex = false;
 	$bundle = $entity->bundle();
 	if ($bundle == 'master') {
+		$noindex = true;
+	}
+
+	$current_url = Url::fromRoute('<current>');
+	$path = $current_url->toString();
+
+	if (strpos($path, '/pl/node') !== false) {
+		$noindex = true;
+	} elseif (strpos($path, '/sr/node') !== false) {
+		$noindex = true;
+	} elseif (strpos($path, '/en/node') !== false) {
+		$noindex = true;
+	}
+
+	if ($path == '/en/node/2' || $path == '/pl/node/2' || $path == '/sr/node/2') {
+		$noindex = false;
+	}
+
+	if ($noindex) {
 		$tags['meta'] = array('name' => 'robots', 'content' => 'noindex');
 	}
 
