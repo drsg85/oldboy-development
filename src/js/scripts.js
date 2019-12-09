@@ -10,6 +10,7 @@ import MenuScale from './modules/MenuScale';
 //import GeolocationControl from './modules/GeolocationControl';
 //import IpInfo from './modules/IpInfo';
 import CheckerLengthOfInputValue from './modules/checerLengthOfInputValue';
+import TabSwitcher from './modules/tabSwitcher';
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -25,3 +26,7 @@ new ToTop();
 
 new SmoothOnAnchors();
 
+new TabSwitcher({
+    tabs: '.price-list__btn',
+    elToOpen: '.price-list__container'
+});

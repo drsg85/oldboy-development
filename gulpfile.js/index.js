@@ -40,7 +40,8 @@ const webpackConfig = {
     investment: './src/js/investment.js',
     scriptsUS: './src/js/scriptsUS.js',
     scriptsPL: './src/js/scriptsPL.js',
-    scriptsME: './src/js/scriptsME.js'
+    scriptsME: './src/js/scriptsME.js',
+    scriptsUA: './src/js/scriptsUA.js'
   },
 
   output: {

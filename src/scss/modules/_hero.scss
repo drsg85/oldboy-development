@@ -410,11 +410,42 @@
     }
 
     &--services {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        min-height: 520px;
+        max-height: 700px;
+
         // visual
         background-image: url('./img/bgs/generic.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+
+        @include atTablet {
+            // box model
+            min-height: 640px;
+        }
+
+        @include atDesktopS {
+            // box model
+            max-height: 700px;
+        }
+
+        @include atDesktopM {
+            // box model
+            min-height: 680px;
+            max-height: 740px;
+        }
+
+        @include atDesktopL {
+            // box model
+            min-height: 780px;
+            height: 100vh;
+            max-height: 900px;
+        }
     }
 }
 

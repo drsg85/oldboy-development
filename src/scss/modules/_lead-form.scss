@@ -1,13 +1,11 @@
-#lead-form {
-
-}
-
 .lead-form {
     // box model
-    // margin-bottom: 70px;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 20px;
+
+    // typography
+    text-align: center;
     
     // visual
     background-color: #fdf6ee;
@@ -83,6 +81,9 @@
 }
 
 .lead-form__item {
+    display: inline-block;
+    margin: 0 5px;
+
     // typography
     text-align: center;
 }
@@ -128,5 +129,9 @@
 }
 
 .lead-form__submit {
-
+    // box model
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }

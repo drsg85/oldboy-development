@@ -145,6 +145,9 @@
     margin-bottom: 70px;
     width: auto;
 
+    // visual
+    background-color: #fdf6ee;
+    
     @include atDesktopS {
         // box model
         margin-bottom: 100px;

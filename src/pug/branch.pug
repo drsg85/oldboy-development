@@ -146,72 +146,212 @@ html(lang="en")
                         p.section-header__subtitle.section-header__subtitle--price Стрижём&nbsp;и&nbsp;бреем
 
                 .price-list__content
-                    table.price-table
-                        caption.price-table__caption Основные услуги
+                    .price-list__tabs
+                        button.price-list__btn#vip vip
+                        button.price-list__btn.price-list__btn--active#top top
+                        button.price-list__btn#regular regular
 
-                        tr.price-table__row
-                            td.price-table__service Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1500
-                        tr.price-table__row
-                            td.price-table__service Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1000
-                        tr.price-table__row
-                            td.price-table__service Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 500
-                        tr.price-table__row
-                            td.price-table__service Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1000
-                        tr.price-table__row
-                            td.price-table__service Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1500
-                        tr.price-table__row
-                            td.price-table__service Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 800
-                        tr.price-table__row
-                            td.price-table__service Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 500
-                        tr.price-table__row
-                            td.price-table__service Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1500
-                        tr.price-table__row
-                            td.price-table__service Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price &nbsp;
+                    .price-list__container(data-content="top")
+                        table.price-table
+                            caption.price-table__caption Основные услуги1
 
-                    table.price-table
-                        caption.price-table__caption Дополнительные услуги
+                            tr.price-table__row
+                                td.price-table__service Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 800
+                            tr.price-table__row
+                                td.price-table__service Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price &nbsp;
 
-                        tr.price-table__row
-                            td.price-table__service Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1500
-                        tr.price-table__row
-                            td.price-table__service Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 500
-                        tr.price-table__row
-                            td.price-table__service Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1000
+                        table.price-table
+                            caption.price-table__caption Дополнительные услуги
 
-                    table.price-table
-                        caption.price-table__caption Комплексные услуги
+                            tr.price-table__row
+                                td.price-table__service Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
 
-                        tr.price-table__row
-                            td.price-table__service Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1500
-                        tr.price-table__row
-                            td.price-table__service Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1000
-                        tr.price-table__row
-                            td.price-table__service Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 2000
-                        tr.price-table__row
-                            td.price-table__service Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 2500
-                        tr.price-table__row
-                            td.price-table__service Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1750
-                        tr.price-table__row
-                            td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
-                            td.price-table__price 1000
+                        table.price-table
+                            caption.price-table__caption Комплексные услуги
 
+                            tr.price-table__row
+                                td.price-table__service Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 2000
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 2500
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1750
+                            tr.price-table__row
+                                td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                    
+                    .price-list__container(data-content="vip")
+                        table.price-table
+                            caption.price-table__caption Основные услуги2
+
+                            tr.price-table__row
+                                td.price-table__service Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 800
+                            tr.price-table__row
+                                td.price-table__service Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price &nbsp;
+
+                        table.price-table
+                            caption.price-table__caption Дополнительные услуги
+
+                            tr.price-table__row
+                                td.price-table__service Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+
+                        table.price-table
+                            caption.price-table__caption Комплексные услуги
+
+                            tr.price-table__row
+                                td.price-table__service Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 2000
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 2500
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1750
+                            tr.price-table__row
+                                td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+
+                    .price-list__container(data-content="regular")
+                        table.price-table
+                            caption.price-table__caption Основные услуги3
+
+                            tr.price-table__row
+                                td.price-table__service Стрижка мужская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Стрижка детская&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Коррекция бороды с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Бритьё королевское&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Стрижка под машинку&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 800
+                            tr.price-table__row
+                                td.price-table__service Стрижка усов&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Королевское бритьё головы&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Tattoo&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price &nbsp;
+
+                        table.price-table
+                            caption.price-table__caption Дополнительные услуги
+
+                            tr.price-table__row
+                                td.price-table__service Камуфляж седины&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Окантовка с подбриванием&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 500
+                            tr.price-table__row
+                                td.price-table__service Мытьё и укладка волос&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+
+                        table.price-table
+                            caption.price-table__caption Комплексные услуги
+
+                            tr.price-table__row
+                                td.price-table__service Друг + Друг&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1500
+                            tr.price-table__row
+                                td.price-table__service Папа + Сын&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Коррекция бороды&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 2000
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Королевское бритьё&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 2500
+                            tr.price-table__row
+                                td.price-table__service Стрижка + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1750
+                            tr.price-table__row
+                                td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
+                                td.price-table__price 1000
+            
             section.team
                 .team__header
                     header.section-header

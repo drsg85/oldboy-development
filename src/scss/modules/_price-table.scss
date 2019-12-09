@@ -58,21 +58,6 @@
         // typography
         font-size: 1rem;
     }
-
-    @include atDesktopS {
-        // box model
-        min-width: 200px;
-    }
-
-    @include atDesktopM {
-        // box model
-        min-width: 250px;
-    }
-
-    @include atDesktopL {
-        // box model
-        min-width: 300px;
-    }
 }
 
 .price-table__heading {
@@ -82,16 +67,13 @@
 }
 
 .price-table__service {
-    // box model
-    // min-width: 200px;
-
     // typography
     color: $dark;
 
-    // @include atDesktopM {
-    //     // box model
-    //     min-width: 300px;
-    // }
+    @include atTablet {
+    // box model
+    min-width: 350px;
+    }
 }
 
 .price-table__price {
