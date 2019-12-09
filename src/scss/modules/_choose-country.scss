@@ -61,6 +61,15 @@
     }
 }
 
+.choose-country--UA {
+    @include atTablet {
+        // visual
+        background-image: url('./img/city/harkov-bg.jpg');
+        background-size: cover;
+        background-position: center left;
+    }
+}
+
 .choose-country__content {
     // box model
     margin: 0;
