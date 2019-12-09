@@ -22,7 +22,12 @@
 
 .location-logo__image {
     // box model
-    height: 48px;
+    height: 35px;
+
+    @include atSmallMobile {
+        // box model
+        height: 48px;
+    }
 }
 
 .location-logo__image img {
