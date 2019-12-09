@@ -24,7 +24,7 @@
     // box model
     height: 35px;
 
-    @include atSmallMobile {
+    @include atTablet {
         // box model
         height: 48px;
     }
