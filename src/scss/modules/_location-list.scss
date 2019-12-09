@@ -200,7 +200,7 @@
         height: 14px;
         width: 14px;
         margin-right: 4px;
-        padding: 2px;
+        padding: 1px;
         padding-top: 1px;
 
         // typography
@@ -214,11 +214,12 @@
     }
 }
 
+
 .location-list__metro.piter span {
     &::before {
         // typography
         color: $blue;
-
+        
         // visual
         border: 1px solid rgba($blue, 0.5);
     }
@@ -228,9 +229,137 @@
     &::before {
         // typography
         color: $red;
-
+        
         // visual
-        border: 1px solid rgba($red, 0.75);
+        border: 2px solid rgba($red, 0.75);
+    }
+}
+
+.location-list__metro.moscow.moscow--green span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(green, 0.75);
+        border: 2px solid green;
+    }
+}
+
+.location-list__metro.moscow.moscow--palegreen span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#32CD32, 0.75);
+        border: 2px solid #32CD32;
+    }
+}
+
+.location-list__metro.moscow.moscow--violet span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#8A2BE2, 0.75);
+        border: 2px solid #8A2BE2;
+    }
+}
+
+.location-list__metro.moscow.moscow--lightblue span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#00BFFF, 0.75);
+        border: 2px solid #00BFFF;
+    }
+}
+
+.location-list__metro.moscow.moscow--blue span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#00008B, 0.75);
+        border: 2px solid #00008B;
+    }
+}
+
+.location-list__metro.moscow.moscow--orange span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#FF8C00, 0.75);
+        border: 2px solid #FF8C00;
+    }
+}
+
+.location-list__metro.moscow.moscow--grey span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#778899, 0.75);
+        border: 2px solid #778899;
+    }
+}
+
+.location-list__metro.moscow.moscow--grey span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#778899, 0.75);
+        border: 2px solid red;
+    }
+}
+
+.location-list__metro.piter.piter--green span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(green, 0.75);
+        border: 2px solid green;
+    }
+}
+
+.location-list__metro.piter.piter--palegreen span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#32CD32, 0.75);
+        border: 2px solid #32CD32;
+    }
+}
+
+.location-list__metro.piter.piter--violet span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#8A2BE2, 0.75);
+        border: 2px solid #8A2BE2;
+    }
+}
+
+.location-list__metro.piter.piter--lightblue span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#00BFFF, 0.75);
+        border: 2px solid #00BFFF;
+    }
+}
+
+.location-list__metro.piter.piter--blue span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#00008B, 0.75);
+        border: 2px solid #00008B;
+    }
+}
+
+.location-list__metro.piter.piter--orange span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#FF8C00, 0.75);
+        border: 2px solid #FF8C00;
+    }
+}
+
+.location-list__metro.piter.piter--grey span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#778899, 0.75);
+        border: 2px solid #778899;
+    }
+}
+
+.location-list__metro.piter.piter--red span {
+    &::before {
+        // visual
+        // border: 1px solid rgba(#778899, 0.75);
+        border: 2px solid red;
     }
 }
 
