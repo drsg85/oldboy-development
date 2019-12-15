@@ -71,11 +71,25 @@ string(11) "field_place"
 		<div class="location-list__place">{{ fields['field_place'].content|render|striptags|trim }}</div> 
 	{% endif %}
 	{% if fields['field_metro'].content|striptags|trim %}
-	<div class="location-list__metro moscow">
+        {% set mClass='moscow' %}
 		{% set stations = fields['field_metro'].content|render|striptags|trim|split("\n") %}
 		{% for station in stations %}
 			{% if station %}
-				<span>{{ station }}</span>
+                {% set mm1 = station|split('(') %}
+                {% if mm1 %}
+                    {% set mm2 = mm1[1]|split(')') %}
+                    {% if mm2[0] %}
+                        {% set mClass=mm2[0] %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="location-list__metro {{ mClass }}">
+		{% for station in stations %}
+			{% if station %}
+                {% set secName = station|split('(') %}
+				<span>{{ secName[0] }}</span>
 			{% endif %}
 		{% endfor %}
 	</div>
