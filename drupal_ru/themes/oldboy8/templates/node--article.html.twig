@@ -119,7 +119,7 @@
     <main>
         <article class="article">
 			{{ content|without('field_tags')|without('field_bg_big')|without('field_bg_small')|without('field_bg_teaser')|without('field_display_name')|without('field_description')|without('field_date_publish')|without('field_post_type')|without('field_images')|without('field_author') }}
-			{% if content.field_author %}
+			{% if content.field_author|trim %}
             <footer class="article__footer">
                 <div class="article__footer-block">
                     <h5 class="article__footer-title">Автор:</h5>
