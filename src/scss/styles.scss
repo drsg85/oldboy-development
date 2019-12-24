@@ -1,5 +1,8 @@
 @charset 'utf-8';
 
+//tiny-slider
+@import "../../node_modules/tiny-slider/src/tiny-slider.scss";
+
 // base
 @import 'base/normalize';
 @import 'base/vars';
@@ -141,6 +144,10 @@
 @import "modules/franchize/fr-benefits";
 @import "modules/franchize//fr-benefit";
 @import "modules/franchize/fr-oldboy-why";
+@import "modules/new-format";
+@import "modules/trust-us";
+@import "modules/stars";
+@import "modules/start-stuff";
 
 // landing
 @import "modules/landing-info";

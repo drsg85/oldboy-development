@@ -65,16 +65,16 @@ class LocationSearch {
       for (let j = 0; j < items.length; j++) {
         let itemLink = items[j].querySelector('a');
         let stations = items[j].querySelectorAll('.location-list__metro span');
-
         let branch = {
           city: city,
           address: itemLink.textContent,
           link: itemLink.href,
-          stations: []
+          stations: [],
+          lineOfMetro: []
         };
-
         for (let k = 0; k < stations.length; k++) {
           branch.stations.push(stations[k].textContent);
+          branch.lineOfMetro.push(stations[k].className);
         }
 
         branches.push(branch);
@@ -141,14 +141,16 @@ class LocationSearch {
         link.textContent = branch.city + ', ' + branch.address;
         link.href = branch.link;
         item.appendChild(link);
-
         if (branch.stations.length > 0) {
           let metro = document.createElement('div');
-          metro.classList.add('search-results__metro');
-
-          branch.stations.forEach((station) => {
+          metro.classList.add('location-list__metro');
+          
+          branch.stations.forEach((station, i) => {
             let stationElement = document.createElement('span');
             stationElement.textContent = station;
+            if(branch.lineOfMetro[0] !== "") {
+              stationElement.classList.add(branch.lineOfMetro[i]);
+            }
             metro.appendChild(stationElement);
           });
 

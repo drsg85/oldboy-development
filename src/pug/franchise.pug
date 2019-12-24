@@ -4,9 +4,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-
+        link(rel="stylesheet", href="lightgallery.min.css")
         link(rel="stylesheet", href="styles.css")
-
         title Oldboy Barbershop
 
     body
@@ -28,16 +27,88 @@ html(lang="en")
                     .menu-button__middle
 
             .hero__content
-                .hero__caption
-                    .hero-caption
-                        h1.hero-caption__title <span class="hero-caption__big">ФРАНШИЗА <br>OLDBOY</span>
-                        p.hero-caption__motto Открой барбершоп <br>в своём городе
+                .hero__content-header
+                    h1.hero__content-title Международная франшиза
+                    p.hero__content-subtitle Одна из крупнейших сетей барбершопов в мире
+                    a.button(href='#open') ПОДАТЬ ЗАЯВКУ
+                .hero__content-social
+                    .hero__content-social-items
+                        a.hero__content-social-item(target='_blank', href='https://vk.com/oldboy_barbershop') VK
+                        a.hero__content-social-item(target='_blank', href='https://www.instagram.com/oldboy_kaliningrad/') INST
+
 
         main.main
             section.franchise
                 .franchise__content
+                    .franchise__content-info
+                        .franchise__content-item
+                            p.franchise__content-number 201
+                            p.franchise__content-title филиал
+                        .franchise__content-item
+                            p.franchise__content-number 10
+                            p.franchise__content-title стран мира
+                        .franchise__content-item
+                            p.franchise__content-number 144
+                            p.franchise__content-title открытых <br/>барбершопа
+                        .franchise__content-item
+                            p.franchise__content-number 57
+                            p.franchise__content-title готовится <br/> к открытию
+
                     .franchise__map
                         img(src="/img/franchise-map.svg", alt="Oldboy barbershop locations map")
+
+                    .franchise__countries
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/spain.jpg', alt='')
+
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Испания
+                                .franchise__countries-item-descr Барселона,<br/>Марбелья
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/rus.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Россия
+                                .franchise__countries-item-descr 100+
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/kipr.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Кипр
+                                .franchise__countries-item-descr Лимассол
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/bel.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Беларусь
+                                .franchise__countries-item-descr Минск
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/serb.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Сербия
+                                .franchise__countries-item-descr Белград
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/ukr.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Украина
+                                .franchise__countries-item-descr Одесса
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/azerb.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Азербайджан
+                                .franchise__countries-item-descr Баку
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/kaz.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Казахстан
+                                .franchise__countries-item-descr Астана
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/gruz.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Грузия
+                                .franchise__countries-item-descr Тбилиси
+                        .franchise__countries-item
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/kirg.jpg', alt='')
+                            .franchise__countries-item-text
+                                .franchise__countries-item-title Киргизия
+                                .franchise__countries-item-descr Бишкек
 
                     .franchise__caption
                         h3.franchise__title <strong>ФРАНШИЗА</strong> Oldboy&nbsp;Barbershop
@@ -48,34 +119,143 @@ html(lang="en")
                         p.franchise__count 129
                         p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
 
-            section.application-form
-                header.section-header
-                    h2.section-header__title Форма<br>заявки
-                    p.section-header__subtitle Oldboy&nbsp;Франшиза
-                .application-form__content
-                    form#application-form.form(action="")
-                        legend.form__legend
-                            p.form__title Открой собственный барбершоп oldboy у себя в&nbsp;городе
-                            p.form__subtitle Заполни форму и наш менеджер с&nbsp;вами свяжется
+            
+            section.new-format
+                header.new-format__header
+                    h2.new-format__title Новый формат барбершопов
+                    p.new-format__subtitle Английское качество в русских руках
+
+                .new-format__text-content
+                    p.new-format__text Oldboy – не просто сервис, признанный во всем мире. Это культура и традиция мужских клубов, где есть место для юмора, стиля и неформального общения.
+                    p.new-format__text Наш барбер приедет в твой город и соберет команду профессионалов. Ему не стыдно будет уезжать. Тебе – приятно стать лидером в городе по качеству услуг для мужчин.
+                    p.new-format__text Мы не просто делаем бизнес. У нас – крепкая мужская дружба, приносящая выгоду всем сторонам. Умеем зарабатывать и умеем отдыхать.
+                
+                .new-format__slider-wrap
+                    .new-format__slider
+                        .new-format__slide
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_4805-555x382.jpg', height='382', width='555', alt='')
+                        .new-format__slide
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1.jpg', height='382', width='555', alt='')
+                        .new-format__slide
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/3-555x382.jpg', height='382', width='555', alt='')
+                        .new-format__slide
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_4805-555x382.jpg', height='382', width='555', alt='')
+                        .new-format__slide
+                            img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1.jpg', height='382', width='555', alt='')
+                    .new-format__slider-dots
+                        button.new-format__slider-dot dot
+                        button.new-format__slider-dot dot
+                        button.new-format__slider-dot dot
+                        button.new-format__slider-dot dot
+                        button.new-format__slider-dot dot
+                a.button(href='#open') ПОДАТЬ ЗАЯВКУ
+
+            section.trust-us
+                header.trust-us__header
+                    h2.trust-us__title Почему нам стоит доверять?
+                
+                .trust-us__container
+                    .trust-us__item
+                        .trust-us__number 1
+                        .trust-us__descr Потому что более 200 наших партнеров уже это сделали, и не пожалели.
+                    
+                    .trust-us__item
+                        .trust-us__number 2
+                        .trust-us__descr Мы знаем – за границей не так много мест с качественным сервисом в сфере красоты. Мы подберем персонал. Поможем с помещением. Это приблизит к тебе прибыль быстрее, чем ты ожидал.
+                    
+                    .trust-us__item
+                        .trust-us__number 3
+                        .trust-us__descr У нас самый щедрый роялти и широкий круг поддержки: от SMM-сопровождения до 60%-ных скидок на косметику.
+                    
+                    .trust-us__item
+                        .trust-us__number 4
+                        .trust-us__descr У нас нет ни одного закрывшегося филиала за 4 года существования компании.
+
+            section.stars
+                header.stars__header
+                    h2.stars__title OldBoy в странах мира
+                .stars__slider-container
+                    .stars__slider
+                        .stars__slider-item#stars__slider-item-first
+                            a.stars__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Tbilisi.jpg')
+                                img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Tbilisi-360x360.jpg', alt='Тбилиси')
+                                .stars__slider-descr
+                                    header.stars__slider-header
+                                        h3.stars__slider-title Грузия
+                                        p.stars__slider-subtitle Тбилиси
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Tbilisi2.jpg')
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Tbilisi3.jpg')
+                                
+                        .stars__slider-item#stars__slider-item-second
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Marbelya.jpg')
+                                img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Marbelya-360x360.jpg', alt='Марбелья')
+                                .stars__slider-descr
+                                    header.stars__slider-header
+                                        h3.stars__slider-title Испания
+                                        p.stars__slider-subtitle Марбелья
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Marbelya2.jpg')
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Marbelya3.jpg')
                         
-                        .form__input-group
-                            input.form__input(type="text" name="fullname" placeholder="Фамилия Имя Отчество")
+                        .stars__slider-item#stars__slider-item-third
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Barselona.jpg')
+                                img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Barselona-360x360.jpg', alt='Барселона')
+                                .stars__slider-descr
+                                    header.stars__slider-header
+                                        h3.stars__slider-title Испания
+                                        p.stars__slider-subtitle Барселона
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Barselona2.jpg')
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Barselona3.jpg')
+                            
+                        .stars__slider-item#stars__slider-item-fourth
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Kipr.jpg')
+                                img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Kipr-360x360.jpg', alt='Лимассол')
+                                .stars__slider-descr
+                                    header.stars__slider-header
+                                        h3.stars__slider-title Кипр
+                                        p.stars__slider-subtitle Лимассол
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Kipr2.jpg')
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Kipr3.jpg')
+                            
+                        .stars__slider-item#stars__slider-item-fifth
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Serbiya.jpg')
+                                img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Serbiya-360x360.jpg', alt='Белград')
+                                .stars__slider-descr
+                                    header.stars__slider-header
+                                        h3.stars__slider-title Сербия
+                                        p.stars__slider-subtitle Белград
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Serbiya2.jpg')
 
-                        .form__input-group
-                            input.form__input(type="text" name="phone" placeholder="Номер телефона")
+                            a(href='https://oldboy-franchise.ru/wp-content/uploads/2018/12/Serbiya3.jpg')
 
-                        .form__input-group
-                            input.form__input(type="text" name="city" placeholder="Желаемый город")
-
-                        .form__input-group
-                            input.form__input(type="email" name="email" placeholder="E-mail")
-
-                        .form__input-group.form__input-group--policy
-                            input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
-                            label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
-                        
-                        .form__input-group
-                            input.form__submit-btn.button(type="submit" value="Отправить заявку")
+                    .stars__slider-controls
+                        button.stars__slider-button.stars__slider-button--prev prev
+                        button.stars__slider-button.stars__slider-button--next next
+            
+            section.start-stuff
+                header.start-stuff__header
+                    h2.start-stuff__title Для старта потребуется
+                
+                .start-stuff__content
+                    .start-stuff__item
+                        .start-stuff__item-number 500 000 ₽
+                        .start-stuff__item-title паушальный взнос
+                        .start-stuff__item-subtitle
+                            p.start-stuff__item-text + 100 000 ₽ за город от 100 тыс. до 1 млн. неселения
+                            p.start-stuff__item-text + 300 000 ₽ за город миллионник
+                            p.start-stuff__item-text + 100 000 ₽ за эксклюзив на город
+                    .start-stuff__item
+                        .start-stuff__item-number 5% / мес.
+                        .start-stuff__item-title роялти
+                        h3.start-stuff__item-subtitle Но не более 30 000 ₽ 
+                    .start-stuff__item
+                        .start-stuff__item-number 950 000 ₽
+                        h3.start-stuff__item-title стоимость открытия барбершопа
+                    .start-stuff__item
+                        .start-stuff__item-number от 9 мес.
+                        h3.start-stuff__item-title срок окупаемости
+                    .start-stuff__item
+                        .start-stuff__item-number от 1-2 мес.
+                        h3.start-stuff__item-title время запуска бизнеса
 
 
             section.fr-benefits
@@ -143,7 +323,308 @@ html(lang="en")
                         a.fr-benefits__conclusion-submit.button.button--ghost-dark(href="#application-form") Свяжитесь с нами
                         p.fr-benefits__conclusion-rest И мы ответим на ваши вопросы
                         a.fr-benefits__conclusion-bibos(href="https://www.beboss.ru/franchise/2484-franshiza-oldboy") Франшиза Oldboy Barbershop на Бибосс
+            
+                #steps.steps.block
+                    .sub-wrap
+                        h2 Этапы сотрудничества
+                        .cols-4
+                        .col
+                            .number-block
+                            .number 1
+                            .title
+                            .descr
+                                p
+                                | Позвони нам – мы открыты для диалога и расскажем все, что ты не нашёл в презентации
+                        .col
+                            .number-block
+                            .number 2
+                            .title
+                            .descr
+                                p
+                                | Договор заключается дистанционно. Но если тебе захочется прилететь к нам и посмотреть, как устроена эта кухня изнутри, организуем чартер и проведем экскурсию по филиалам Oldboy.
+                        .col
+                            .number-block
+                            .number 3
+                            .title
+                            .descr
+                                p
+                                | Отправляем тебе бренд! От визиток и сертификатов до полного руководства к открытию.
+                        .col
+                            .number-block
+                            .number 4
+                            .title
+                            .descr
+                                p Наша команда дизайнеров создаст уникальный дизайн-проект для твоего барбершопа.
+                        .col
+                            .number-block
+                            .number 5
+                            .title
+                            .descr
+                                p Передаем всю техническую документацию, необходимую для ремонта.
+                        .col
+                            .number-block
+                            .number 6
+                            .title
+                            .descr
+                                p Содействуем и консультируем на всех этапах подбора и ремонта помещения.
+                        .col
+                            .number-block
+                            .number 7
+                            .title
+                            .descr
+                                p Рекомендуем поставщиков с максимальными скидками на оборудование.
+                        .col
+                            .number-block
+                            .number 8
+                            .title
+                            .descr
+                                p Подключаем мобильное приложение, CRM систему учета и онлайн-запись.
+
+                .stars-block.block
+                    .sub-wrap
+                        h2 Доска знаменитостей
+                        .carusel
+                        .bx-wrapper(style='max-width: 1220px;')
+                            .bx-viewport(aria-live='polite', style='width: 100%; overflow: hidden; position: relative; height: 373px;')
+                            ul(style='width: 28215%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);')
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='false')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/2.jpg', height='360', width='360', alt='Смоки Мо')
+                                    .info
+                                    .name Смоки Мо
+                                    .position Рэп исполнители
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='false')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/3.jpg', height='360', width='360', alt='Сергей Жуков')
+                                    .info
+                                    .name Сергей Жуков
+                                    .position Певец, музыкант
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='false')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-5.jpg', height='360', width='360', alt='Каста')
+                                    .info
+                                    .name Каста
+                                    .position Рэп исполнители
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A4_0003_Stanislav-YArushin-Akter-360x360.jpg', height='360', width='360', alt='Станислав Ярушин')
+                                    .info
+                                    .name Станислав Ярушин
+                                    .position Актер
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A4_0002_Garik-Martirosyan-YUmorist-televedushhii--360x360.jpg', height='360', width='360', alt='Гарик Мартиросян')
+                                    .info
+                                    .name Гарик Мартиросян
+                                    .position Юморист, телеведуший
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0020_Animal-Cult-DJ-model-360x360.jpg', height='360', width='360', alt='Animal Cult')
+                                    .info
+                                    .name Animal Cult
+                                    .position Диджей, модель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0018_Dj-list-Didzhei--360x360.jpg', height='360', width='360', alt='Dj-list')
+                                    .info
+                                    .name Dj-list
+                                    .position Диджей
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0016_Loc-Dog-Muzykalnyi-ispolnitel-360x360.jpg', height='360', width='360', alt='Loc-Dog')
+                                    .info
+                                    .name Loc-Dog
+                                    .position Музыкальный исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0015_Miyagi-_-Endshpil-Rep-ispolniteli-360x360.jpg', height='360', width='360', alt='Miyagi & Эндшпиль')
+                                    .info
+                                    .name Miyagi & Эндшпиль
+                                    .position Рэп исполнители
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0017_Oxxxymiron-Muzykalnyi-ispolnitel-kopiya-360x360.jpg', height='360', width='360', alt='Oxxxymiron')
+                                    .info
+                                    .name Oxxxymiron
+                                    .position Музыкальный исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0014_Slim-Rep-ispolnitel-360x360.jpg', height='360', width='360', alt='Slim')
+                                    .info
+                                    .name Slim
+                                    .position Рэп исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A4_0005_Aleksandr-YAroshuk-Glava-gorodskogo-okruga-Gorod-Kaliningrad--360x360.jpg', height='360', width='360', alt='Александр Ярошук')
+                                    .info
+                                    .name Александр Ярошук
+                                    .position Глава городского округа «Город Калининград»
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0013_Blagoi-Georgiev-Futbolist-360x360.jpg', height='360', width='360', alt='Благой Георгиев')
+                                    .info
+                                    .name Благой Георгиев
+                                    .position Футболист
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0012_Bogdan-Titomir-Prodyuser-muzykant-360x360.jpg', height='360', width='360', alt='Богдан Титомир')
+                                    .info
+                                    .name Богдан Титомир
+                                    .position Продюсер, музыкант
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0011_Vanderson-du-Karmu-Futbolist-360x360.jpg', height='360', width='360', alt='Вандерсон ду Карму')
+                                    .info
+                                    .name Вандерсон ду Карму
+                                    .position Футболист
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0010_Viktor-Loginov-Akter-Televedushhii--360x360.jpg', height='360', width='360', alt='Виктор Логинов')
+                                    .info
+                                    .name Виктор Логинов
+                                    .position Актер, Телеведущий
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0009_Kan-Muzykalnyi-ispolnitel_2-360x360.jpg', height='360', width='360', alt='Кан')
+                                    .info
+                                    .name Кан
+                                    .position Музыкальный исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0008_Kirill-Tolmatskii-Detsl-Muzykalnyi-ispolnitel-kopiya-360x360.jpg', height='360', width='360', alt='Кирилл Толмацкий (Децл)')
+                                    .info
+                                    .name Кирилл Толмацкий (Децл)
+                                    .position Музыкальный исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0019_Kristian-Noboa.-Futbolist-Zenita-i-sbornoi-Ekvadora-360x360.jpg', height='360', width='360', alt='Кристиан Нобоа')
+                                    .info
+                                    .name Кристиан Нобоа
+                                    .position Футболист Зенита и сборной Эквадора
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0002_Ruslan-Belyi-rezident-Comedy-Club-360x360.jpg', height='360', width='360', alt='Руслан Белый')
+                                    .info
+                                    .name Руслан Белый
+                                    .position резидент Comedy Club
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0001_Slava-Panterov-Dizai-ner-model-360x360.jpg', height='360', width='360', alt='Слава Пантеров')
+                                    .info
+                                    .name Слава Пантеров
+                                    .position Дизайнер, модель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A4_0006_YUrii-ZHirkov-Futbolist-igrok-sbornoi-Rossii-360x360.jpg', height='360', width='360', alt='Юрий Жирков')
+                                    .info
+                                    .name Юрий Жирков
+                                    .position Футболист
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A4_0004_Odin-Bai-ron-Akter-360x360.jpg', height='360', width='360', alt='Один Байрон')
+                                    .info
+                                    .name Один Байрон
+                                    .position Актер
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0003_Natalya-Bochkare-va-Aktrisa-vmeste-s-synom-360x360.jpg', height='360', width='360', alt='Наталья Бочкарёва')
+                                    .info
+                                    .name Наталья Бочкарёва
+                                    .position Актер
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0004_Mot-Muzykalnyi-ispolnitel-360x360.jpg', height='360', width='360', alt='Мот')
+                                    .info
+                                    .name Мот
+                                    .position Музыкальный исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0005_Misha-Marvin-Muzykalnyi-ispolnitel-360x360.jpg', height='360', width='360', alt='Миша Марвин')
+                                    .info
+                                    .name Миша Марвин
+                                    .position Музыкальный исполнитель
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0006_Maurisio-Futbolist-360x360.jpg', height='360', width='360', alt='Маурисио')
+                                    .info
+                                    .name Маурисио
+                                    .position Футболист
+                                li(style='float: left; list-style: none; position: relative; width: 373px; margin-right: 10px;', aria-hidden='true')
+                                .item
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/OldBoy_Stars_A5_0007_Marsel-Muzykalnyi-ispolnitel-kopiya-360x360.jpg', height='360', width='360', alt='Марсель')
+                                    .info
+                                    .name Марсель
+                                    .position Музыкальный исполнитель
+                            .bx-controls.bx-has-controls-direction
+                            .bx-controls-direction
+                                a.bx-prev.disabled(href='') Prev
+                                a.bx-next(href='') Next
+
+                .photo-galery-block.block
+                    .sub-wrap
+                        h2 Фотогалерея
+                        .slider
+                        .bx-wrapper(style='max-width: 100%;')
+                            .bx-viewport(aria-live='polite', style='width: 100%; overflow: hidden; position: relative; height: 760.656px;')
+                            ul(style='width: 6215%; position: relative; transition-duration: 0s; transform: translate3d(-1141px, 0px, 0px);')
+                                li.bx-clone(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459-1140x760.jpg', height='760', width='1140', alt='')
+                                li(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='false')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg', height='760', width='1140', alt='')
+                                li(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/2.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/2-1140x760.jpg', height='760', width='1140', alt='')
+                                li(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/4.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/4-1140x760.jpg', height='760', width='1140', alt='')
+                                li(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_0069.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_0069-1140x760.jpg', height='760', width='1140', alt='')
+                                li(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7377.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7377-1140x760.jpg', height='760', width='1140', alt='')
+                                li(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459-1140x760.jpg', height='760', width='1140', alt='')
+                                li.bx-clone(style='float: left; list-style: none; position: relative; width: 1141px;', aria-hidden='true')
+                                a.fancybox(data-fancybox='gallery', href='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg')
+                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg', height='760', width='1140', alt='')
+                            .bx-controls.bx-has-controls-direction
+                            .bx-controls-direction
+                                a.bx-prev(href='') Prev
+                                a.bx-next(href='') Next
+
+            section.application-form
+                header.section-header
+                    h2.section-header__title Форма<br>заявки
+                    p.section-header__subtitle Oldboy&nbsp;Франшиза
+                .application-form__content
+                    form#application-form.form(action="")
+                        legend.form__legend
+                            p.form__title Открой собственный барбершоп oldboy у себя в&nbsp;городе
+                            p.form__subtitle Заполни форму и наш менеджер с&nbsp;вами свяжется
                         
+                        .form__input-group
+                            input.form__input(type="text" name="fullname" placeholder="Фамилия Имя Отчество")
+
+                        .form__input-group
+                            input.form__input(type="text" name="phone" placeholder="Номер телефона")
+
+                        .form__input-group
+                            input.form__input#edit-city(type="text" name="city" placeholder="Желаемый город")
+                            span.form__input-city-incorrect *Этот город имеет статус эксклюзивного и уже занят. Выберите пожалуйста другой город.
+                        .form__input-group
+                            input.form__input(type="email" name="email" placeholder="E-mail")
+
+                        .form__input-group.form__input-group--policy
+                            input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
+                            label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
+                        
+                        .form__input-group
+                            input.form__submit-btn.button(type="submit" value="Отправить заявку")
+
         footer.footer
             .footer__content
                 .footer__info-n-contacts
@@ -193,5 +674,6 @@ html(lang="en")
 
 
         include modules/_choose-city.pug
+
+        script(src="lightgallery.min.js")
         script(src="scripts.js")
-        script(src="main.js")
