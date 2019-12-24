@@ -62,7 +62,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 50px;
-        padding-bottom: 30px;
+        padding-bottom: 70px;
     }
 }
 
@@ -191,4 +191,17 @@
     // typography
     font-family: $mainFont;
     font-size: 0.85rem;
+}
+
+.location-selector__content {
+    // positioning
+    position: relative;
+}
+
+.location-selector__alphabet {
+    // positioning
+    position: absolute;
+    left: 50%;
+    top: -8%;
+    transform: translateX(-50%);
 }
