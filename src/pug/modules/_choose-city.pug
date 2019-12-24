@@ -1,983 +1,1018 @@
-//- section.location-selector
 section.location-selector.location-selector--hidden
-    header.location-selector__header
-        .location-selector__caption
-            //- TODO: refactor
-            a(href="#").location-logo#location-logo
-                .location-logo__image: img(src="/img/logos/logo-cis.svg", alt="Oldboy Barbershop CIS logo")
-                p.location-logo__text СНГ
+            header.location-selector__header
+                .location-selector__caption
+                    a(href="#").location-logo#location-logo
+                        .location-logo__image: img(src="/img/logos/logo-cis.svg", alt="Oldboy Barbershop CIS logo")
+                        p.location-logo__text СНГ
 
-            a(href="#").location-logo.location-logo--out
-                .location-logo__image: img(src="/img/logos/logo-eu.svg", alt="Oldboy Barbershop EU logo")
-                p.location-logo__text ЕВРОПА
+                    a(href="#").location-logo.location-logo--out
+                        .location-logo__image: img(src="/img/logos/logo-eu.svg", alt="Oldboy Barbershop EU logo")
+                        p.location-logo__text ЕВРОПА
 
-            a(href="#").location-logo.location-logo--out
-                .location-logo__image: img(src="/img/logos/logo-usa.svg", alt="Oldboy Barbershop USA logo")
-                p.location-logo__text США
+                    a(href="#").location-logo.location-logo--out
+                        .location-logo__image: img(src="/img/logos/logo-usa.svg", alt="Oldboy Barbershop USA logo")
+                        p.location-logo__text США
 
-            p.location-selector__intro <em>192 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
+                    p.location-selector__intro <em>192 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
 
-        .location-selector__fast-nav
-            .city-form
-                form.city-form__form(autocomplete="off")
-                    input.city-form__input(type="search" name="search" placeholder="Город, улица или метро" autofocus)
+                .location-selector__fast-nav
+                    .city-form
+                        form.city-form__form(autocomplete="off")
+                            input.city-form__input(type="search" name="search" placeholder="Город, улица или метро" autofocus)
 
-            section.search-results
-                h2.search-results__title Результаты поиска:
-                p.search-results__not-found такого города не найдено
-                ul.search-results__list
-                
-            .location-selector__text
-                #geo
+                    section.search-results
+                        h2.search-results__title Результаты поиска:
+                        p.search-results__not-found такого города не найдено
+                        ul.search-results__list
+                        
+                //-     .location-selector__text
+                //-         #geo
 
-            //- .location-selector__places
-                .place-groups
-                    .place-groups__cities
-                        ul.place-groups__list
-                            li.place-groups__item Москва
-                            li.place-groups__item Московская&nbsp;область
-                            li.place-groups__item Санкт-&nbsp;Петербург
+                .location-selector__close
+                    .close-button
 
-                    .place-groups__countries
-                        ul.place-groups__list
-                            li.place-groups__item Испания
-                            li.place-groups__item Кипр
-                            li.place-groups__item Сербия
-                            li.place-groups__item Грузия
-                            li.place-groups__item Казахстан
-                            li.place-groups__item Беларусь
-                            li.place-groups__item Россия
-
-        .location-selector__close
-            .close-button
-    
-    #map
-
-    .location-selector__content
-        //- include _choose-belarus.pug
-
-        .branch-addresses
-            .branch-addresses__index
-                .branch-addresses__letter А
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/aktau") Актау
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/aktau") 6-й Микрорайон, 39
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/astana") Астана
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/astana/izumrud") Динмухамеда Кунаева, 10 (БЦ Изумрудный квартал)
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/astana/milanskiy") Амман, 2 (ЖК Миланский Квартал)
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/astana/imanova") Иманова, 16
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/atyrau") Атырау
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/atyrau") Гурьевская, 1
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/armavir") Армавир
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/armavir") Ефремова, 123/5
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/almetyevsk") Альметьевск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/almetyevsk") Ленина 46/5
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/arhangelsk") Архангельск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/arhangelsk") Набережная сев. Двины 71 (ЖК Омега Хаус)
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ashgabat") Ашхабад
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ashgabat") ул. Ататюрк, д. 82
-            .branch-addresses__index
-                .branch-addresses__letter Б
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/balakovo") Балаково
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/balakovo/trnavskaya") Трнавская, 6
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/balakovo/tc_prospect") Факел Социализма, 24
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/barnaul") Барнаул
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/barnaul") Проспект Ленина, 29
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/belgorod/") Белгород
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/belgorod/gubkina") Губкина, 38Б
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/belgorod/popova") Попова, 36
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/bishkek") Бишкек
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/bishkek") Логвиненко, 51
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/bryansk") Брянск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/bryansk") Дуки, 51
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/beslan") Беслан
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/beslan") Мира, 16
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.by/brest") Брест
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.by/brest") Островского, 8
-            .branch-addresses__index
-                .branch-addresses__letter В
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/vladivostok") Владивосток
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/vladivostok") Океанский проспект, 30
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/vladikavkaz") Владикавказ
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/vladikavkaz") Генерала Плиева, 54
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/vladimir") Владимир
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/vladimir") Тракторная, 50
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/volgograd") Волгоград
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/volgograd") Рабоче-Крестьянская, 27
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/volzhskiy") Волжский
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/volzhskiy") Площадь Труда, 19
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/voronezh/") Воронеж
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/voronezh/leviy-bereg") Пр-т. Ленингский, 1Д, ТРК Левый Берег
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/voronezh/holzunova") Хользунова, 15
-            .branch-addresses__index
-                .branch-addresses__letter Г
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/gel") Геленджик
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/gel") Прасковеевская, 7
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.by/gomel") Гомель
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.by/gomel") Проспект Победы, 8
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/grozny") Грозный
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/grozny") Проспект Махмуда Эсамбаева, 5
-            .branch-addresses__index
-                .branch-addresses__letter Е
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ekaterinburg") Екатеринбург
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ekaterinburg") Академика Шварца, 14
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/essentuki") Ессентуки
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/essentuki") Пятигорская, 133Б
-            .branch-addresses__index
-                .branch-addresses__letter И
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/irkutsk") Иркутск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/irkutsk") Карла Либкнехта, 2
-            .branch-addresses__index
-                .branch-addresses__letter К
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/kaliningrad/") Калининград
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kaliningrad/artilleriyskaya") Артиллерийская, 22
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kaliningrad/teatralnaya") Театральная, 30
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/kazan/") Казань
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kazan/tukaya") Петербургская, 9
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kazan/hakima") Сибгата Хакима, 42
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/kaspiysk") Каспийск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kaspiysk") Махачкалинская, 68
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/karaganda") Караганда
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/karaganda") Бульвар Мира, 29
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/kemerovo") Кемерово
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kemerovo") Кирова, 27
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/komsomolsk") Комсомольск-на-Амуре
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/komsomolsk") Проспект Ленина, 38
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/kostanay") Костанай
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kostanay") Алтынсарина, 110
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/krasnodar/") Краснодар
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/krasnodar/kubanskaya") Кубанская набережная, 64
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/krasnodar/sedina") Седина 150/5
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/krasnoyarsk/") Красноярск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/krasnoyarsk/first-tower") Добровольческой бригады, 78, БЦ Первая Башня
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/krasnoyarsk/svobodniy") Проспект Свободный, 53
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/kursk") Курск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/kursk") Золотая, 2А
-            .branch-addresses__index
-                .branch-addresses__letter М
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/mahachkala") Махачкала
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/mahachkala") Танкаева, 15
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.by/minsk") Минск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.by/minsk") Туровского, 8
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/moscow/") Москва
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/") 13-Я Парковая, 40
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/perovo") 3-Я Владимирская, 20
-                            .location-list__metro.moscow
-                                span.location-list__metro--blue Перово
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/caricino") 6-Я Радиальная, 5 К.4
-                            .location-list__metro
-                                span.location-list__metro--orange Царицино
-                                span.location-list__metro--red Тест
-                                span.location-list__metro--green Тест
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/avtozavodskaya") Автозаводская, 18
-                            .location-list__metro.moscow.moscow--palegreen
-                                span Автозаводская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/altufyevo") Алтуфьевское Шоссе, 70К.1
-                            .location-list__metro.moscow.moscow--violet
-                                span Алтуфьево
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/fili") Береговой Проезд, 5 К2
-                            .location-list__metro.moscow.moscow--lightblue
-                                span.location-list__metro--red Шелепиха
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/vdnh") Бориса Галушкина, 17
-                            .location-list__metro.moscow.moscow--blue
-                                span.location-list__metro--green ВДНХ
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/borisa-pasternaka-d-19") Бориса Пастернака, 19
-                            .location-list__metro.moscow.moscow--orange
-                                span Рассказовка
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/novoperedelkino") Боровское Шоссе, 36
-                            .location-list__metro.moscow.moscow--grey
-                                span Новопеределкино
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/aerobus") Варшавское шоссе, 95, К1 (ТЦ Аэробус)
-                            .location-list__metro.moscow.moscow--red
-                                span Чертановское
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/dmitrovskoye_shosse") Дмитровское шоссе, 169, К1
-                            .location-list__metro.moscow
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/nekrasovka") Вертолётчиков, 9/1
-                            .location-list__metro.moscow
-                                span Люберцы
-                                span Некрасовка
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/veshnyaki") Вешняковская, 2
-                            .location-list__metro.moscow
-                                span Новогиреево
-                                span Выхино
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/tushino") Вишневая, 9К.1
-                            .location-list__metro.moscow
-                                span Тушинская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/volgogradka") Волгоградский Проспект, 26А
-                            .location-list__metro.moscow
-                                span Волгоградский проспект
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/kuzminki") Волжский Бульвар, КВ 114А, К1
-                            .location-list__metro.moscow
-                                span Кузьминки
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/sokol") Волоколамское Шоссе 15/22
-                            .location-list__metro.moscow
-                                span Стрешнево
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/garibaldi") Гарибальди, 7
-                            .location-list__metro.moscow
-                                span Новые Черемушки
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/dmd") Генерала Белова, 28 К1
-                            .location-list__metro.moscow
-                                span Домодедовская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/zhulebino") Генерала Кузнецова, 11К.1
-                            .location-list__metro.moscow
-                                span Жулебино
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/glavmosstroya") Главмосстроя, 12
-                            .location-list__metro.moscow
-                                span Говорово
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/taganka") Гончарная Набережная, 9/16 С2
-                            .location-list__metro.moscow
-                                span Таганская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/dobrolybova") Добролюбова, 20
-                            .location-list__metro.moscow
-                                span Фонвизинская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/rumyancevo") Киевское Шоссе, 6 СТР.1
-                            .location-list__metro.moscow
-                                span Румянцево
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/uznaya") Кировоградская, 9К1
-                            .location-list__metro.moscow
-                                span Южная
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/aviamotornaya") Красноказарменная, 19
-                            .location-list__metro.moscow
-                                span Авиамоторная
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/botsad") Лазоревый Проезд, 5 К3
-                            .location-list__metro.moscow
-                                span Ботанический сад
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/leningradka") Ленинградское Шоссе, 120 К3
-                            .location-list__metro.moscow
-                                span Беломорская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/vershinina") Маршала Вершинина, 8К1
-                            .location-list__metro.moscow
-                                span Октябрьское поле
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/mashkova") Машкова, 24
-                            .location-list__metro.moscow
-                                span Курская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/michurinskiy") Мичуринский Проспект, 26
-                            .location-list__metro.moscow
-                                span Раменки
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/shabolovka") Мытная, 52
-                            .location-list__metro.moscow
-                                span Шаболовская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/nagatinskaya") Нагатинская, 16
-                            .location-list__metro.moscow
-                                span Нагатинская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/nahimovsky") Нахимовский Проспект, 9К1
-                            .location-list__metro.moscow
-                                span Нахимовский проспект
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/novoslobodskaya") Новослободская, 52
-                            .location-list__metro.moscow
-                                span Менделеевская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/krylatskoe") Осенний Бульвар, 7К1
-                            .location-list__metro.moscow
-                                span Крылатское
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/europe-square") Площадь Европы, 2 (Рэдиссон)
-                            .location-list__metro.moscow
-                                span Киевская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/marino") Поречная, 10 (ТЦ Мари)
-                            .location-list__metro.moscow
-                                span Марьино
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/kommunarka") пос. Коммунарка, Липовый парк, д.5, к.2
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/academicheskaya") Пр. 60-Летия Октября, 14
-                            .location-list__metro.moscow
-                                span Академическая
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/presnenskiy") Пресненский Вал, 14 К2
-                            .location-list__metro.moscow
-                                span Улица 1905 года
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/belyaevo") Профсоюзная, 102А
-                            .location-list__metro.moscow
-                                span Беляево
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/central") Пятницкая, 6/1
-                            .location-list__metro.moscow
-                                span Новокузнецкая
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/rublevka") Рублёвское Шоссе, 62
-                            .location-list__metro.moscow
-                                span Крылатское
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/svetmsk") Святоозерская, 16
-                            .location-list__metro.moscow
-                                span Лухмановская
-                                span улица Дмитриевского
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/izmailovo") Сиреневый бульвар, д.16
-                            .location-list__metro.moscow
-                                span Щёлковская
-                                span Первомайская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/degunino") Софьи Ковалевской, 6
-                            .location-list__metro.moscow
-                                span Селигерская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/kutuza") Студенческая, 26
-                            .location-list__metro.moscow
-                                span Студенческая
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/kaleidoscop") Сходненская, 56 (ТРЦ Калейдоскоп)
-                            .location-list__metro.moscow
-                                span Сходненская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/vernad") Удальцова, 71 К2
-                            .location-list__metro.moscow
-                                span Проспект Вернадского
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/hodinka") Ходынский бульвар 20А (ЖК Лайнер)
-                            .location-list__metro.moscow
-                                span ЦСКА
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/you-butovo") Чечерский проезд, 56 К1 (Бутово)
-                            .location-list__metro.moscow
-                                span Бунинская аллея
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/newbutovo") Чечерский проезд, 122 К1 (Бутово Молл)
-                            .location-list__metro.moscow
-                                span Бунинская аллея
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/moscow/sheremetevskaya") Шереметьевская, 20А
-                            .location-list__metro.moscow
-                                span Марьина роща
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/msk-region/") Московская область
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/balashikha") Балашиха
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/vidnoe") Видное
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/voskresensk") Воскресенск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/dzr") Дзержинский
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/dolgoprudniy") Долгопрудный
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/domodedovo") Домодедово
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/zhelezka") Железнодорожный
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/zhukovskiy") Жуковский
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/zelenograd") Зеленоград
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/ilinskoe") Ильинское
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/klin") Клин
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/korolev") Королёв
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/krasnogorsk") Красногорск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/lubercy") Люберцы
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/mytischi") Мытищи
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/novogorsk") Новогорск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/noginsk") Ногинск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/orezuev") Орехово-Зуево
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/podolsk") Подольск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/pushkino") Пушкино
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/ramenskoe") Раменское
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/reutov") Реутов
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/serpukhov") Серпухов
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/troick") Троицк
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/fryazino") Фрязино
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/himki-kalinina") Химки (Калинина)
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/chehov") Чехов
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/schelkovo") Щелково
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/schelkovo-centr") Щелково Центр
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/msk-region/electrostal") Электросталь
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/murmansk") Мурманск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/murmansk") Шмидта, 33А
-            .branch-addresses__index
-                .branch-addresses__letter Н
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/nahodka") Находка
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/nahodka/") Владивостокская, 13
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/nizh-novgorod/") Нижний Новгород
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/nizh-novgorod/belinskogo") Белинского, 102
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/nizh-novgorod/sovetskaya") Советская площадь, 5
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/nizhnevartovsk") Нижневартовск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/nizhnevartovsk") Омская, 38, пом. 1004
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/norilsk/") Норильск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/norilsk/leninskiy") Ленинский проспект, 5
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/talnah") ул. Таймырская, д.32
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/n-urengoi") Новый Уренгой
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/n-urengoi") Проспект Энтузиастов, 1
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/novorossiysk") Новороссийск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/novorossiysk") Свободы, 3/5
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/novosibirsk") Новосибирск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/novosibirsk") Каменская, 23
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/nab-chelny") Набережные Челны
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/nab-chelny") Проспект Вахитова, 54А
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/noyabrsk") Ноябрьск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/noyabrsk") Новоселов, 6
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/neftekamsk") Нефтекамск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/neftekamsk") Проспект Комсомольский, 41
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ntagil") Нижний Тагил
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ntagil") Октябрьской революции, 46
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/novokuznetsk") Новокузнецк
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/novokuznetsk") Кирова, 37
-            .branch-addresses__index
-                .branch-addresses__letter О
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/omsk") Омск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/omsk") Ленина, 14
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/orenburg") Оренбург
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/orenburg") 9 Января, 45
-            .branch-addresses__index
-                .branch-addresses__letter П
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/penza") Пенза
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/penza") ул. Карла Маркса, 28Б
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/perm") Пермь
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/perm") ул. Петропавловская, 82
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/petr-kamchatsky") Петропавловск-Камчатский
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/petr-kamchatsky") ул. Тушканова, 4
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.by/pinsk") Пинск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.by/pinsk") ул. ЖЕЛЕЗНОДОРОЖНАЯ 19
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/pskov") Псков
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/pskov") ул. Кузбасской Дивизии, 19
-            .branch-addresses__index
-                .branch-addresses__letter Р
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/rostov") Ростов-на-Дону
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/rostov") ул. Красноармейская, 210
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/rybinsk") Рыбинск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/rybinsk") ул. Волжская набережная, 67
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ryazan/") Рязань
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ryazan/mayakovskogo") Маяковского, 49
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ryazan/plaza") ТРЦ Виктория Плаза
-            .branch-addresses__index
-                .branch-addresses__letter С
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/spb/") Санкт–Петербург
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/tehnolozhka") 8-Я Красноармейская, 4/5
-                            .location-list__metro.piter
-                                span Технологический институт
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/petrograd") Воскова, 16
-                            .location-list__metro.piter.piter--green
-                                span Горьковская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/ozerki") Выборгское шоссе, 13А
-                            .location-list__metro.piter.piter--palegreen
-                                span Проспект Просвещения
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/gatchina") Гатчина, пр. 25-го октября, 34
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/gjatskaya") Гжатская, 22 К1
-                            .location-list__metro.piter.piter--violet
-                                span Академическая
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/nevsky") Грибоедова, 10
-                            .location-list__metro.piter.piter--lightblue
-                                span Невский проспект
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/kirochnaya") Кирочная, 9
-                            .location-list__metro.piter.piter--blue
-                                span Чернышевская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/kudrovo") Кудрово, Венская 4/1
-                            .location-list__metro.piter.piter--orange
-                                span Дыбенко
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/leninskiy") Ленинский проспект, 78 К1
-                            .location-list__metro.piter.piter--grey
-                                span Ленинский проспект
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/parnas") М. Дудина, 23 К1
-                            .location-list__metro.piter.piter--red
-                                span Парнас
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/sadovaya") Московский проспект, 6
-                            .location-list__metro.piter
-                                span Садовая
-                                span Спасская
-                                span Сенная площадь
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/ostrov") Нахимова, 20
-                            .location-list__metro.piter
-                                span Приморская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/optikov") Оптиков, 34/1
-                            .location-list__metro.piter
-                                span Береговая
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/obuhov") Пр. Обуховской обороны, 271А
-                            .location-list__metro.piter
-                                span Пролетарская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/ozerki-toreza") Проспект Тореза, 95
-                            .location-list__metro.piter
-                                span Озерки
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/koroleva") Проспект Королёва, 59, 5
-                            .location-list__metro.piter
-                                span Пионерская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/pionerskaya") Проспект Королёва, 2
-                            .location-list__metro.piter
-                                span Пионерская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/slava") Проспект Славы, 43/49
-                            .location-list__metro.piter
-                                span Международная
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/mayakovskaya") Пушкинская, 12
-                            .location-list__metro.piter
-                                span Площадь Восстания
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/tipanova") Типанова, 21, Лит. А
-                            .location-list__metro.piter
-                                span Московская
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/spb/ladozhsky") Проспект Энтузиастов, 33 К1
-                            .location-list__metro.piter
-                                span Ладожская
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/sochi/") Сочи
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/sochi/vorovskogo") Воровского, 18
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/sochi/adler") Кирова, 30
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/sevastopol") Севастополь
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/sevastopol") ул. Очаковцев, 19, ТЦ "Плаза"
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/stavropol") Ставрополь
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/stavropol") ул. Космонавтов, 2
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/surgut") Сургут
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/surgut") пр-кт Мира, 47
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/samara") Самара
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/samara") ул. Ново-Садовая, 27
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/simferopol") Симферополь
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/simferopol") ул. Дзюбанова, 2А
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/salehard") Салехард
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/salehard") ул. Республики, д. 75, 124
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/syktyvkar") Сыктывкар
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/syktyvkar") ул. Куратова, 83
-            .branch-addresses__index
-                .branch-addresses__letter Т
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/tyumen") Тюмень
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/tyumen") ул. Мориса Тореза, 12А
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/tambov") Тамбов
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/tambov")  ул. Советская, 156
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/togliatti") Тольятти
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/togliatti") ул. Южное Шоссе, 67Г
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/tomsk") Томск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/tomsk") ул. Трифонова, 22
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/tver") Тверь
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/tver") Волоколамский пр., 25, К.1
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/tbilisi") Тбилиси
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/tbilisi") пр. Александра Казбеги, 11
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/tula") Тула
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/tula") ул. Демонстрации, д.1Б
-            .branch-addresses__index
-                .branch-addresses__letter У
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ust-kaman") Усть-Каменогорск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ust-kaman") ул. Кабанбай Батыра, д. 156
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ufa") Уфа
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ufa") ул. Ленина, 65
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ussuriysk") Уссурийск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ussuriysk") ул. Некрасова, д.36
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ulsk") Ульяновск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ulsk") ул. Октябрьская, д.48
-            .branch-addresses__index
-                .branch-addresses__letter Х
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/khabarovsk") Хабаровск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/khabarovsk") ул. Ким Ю Чена
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/hm") Ханты–Мансийск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/hm") ул. Мира, 44
-            .branch-addresses__index
-                .branch-addresses__letter Ч
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/cheboksary") Чебоксары
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/cheboksary") ул. Ярославская, 58
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/cherepovets") Череповец
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/cherepovets") Шекснинский пр-кт, 21
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/cheliabinsk") Челябинск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/cheliabinsk") ул. Кирова, 86
-            .branch-addresses__index
-                .branch-addresses__letter Ю
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/yugorsk") Югорск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/yugorsk") ул. Кирова, 10
-            .branch-addresses__index
-                .branch-addresses__letter Я
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/yaroslavl") Ярославль
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/yaroslavl") ул. Максимова, 12
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/yakutsk") Якутск
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/yakutsk") ул. Пирогова, 6
-            .branch-addresses__index
-                .branch-addresses__letter UA
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="https://oldboybarbershop.com/ua/") Украина
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ua/odessa") Одесса
-                        li.location-list__item
-                            a.location-list__link(href="https://oldboybarbershop.com/ua/harkov") Харьков
-            .branch-addresses__index
-                .branch-addresses__letter EU
-                .branch-addresses__content
-                    ul.location-list
-                        li.location-list__city
-                            a(href="http://eu.oldboybarbershop.com/en") Europe
-                        li.location-list__item
-                            a.location-list__link(href="http://eu.oldboybarbershop.com/en/barcelona") Испания, Барселона
-                        li.location-list__item
-                            a.location-list__link(href="http://eu.oldboybarbershop.com/en/marbella") Испания, Барселона
-                        li.location-list__item
-                            a.location-list__link(href="http://eu.oldboybarbershop.com/en/cyprus") Кипр
-                        li.location-list__item
-                            a.location-list__link(href="http://eu.oldboybarbershop.com/en/mlawa") Польша
-                        li.location-list__item
-                            a.location-list__link(href="http://eu.oldboybarbershop.com/en/beograd") Сербия
-                        li.location-list__item
-                            a.location-list__link(href="http://eu.oldboybarbershop.com/en/budva") Черногория
-
-
-    
+            .location-selector__content
+                .location-selector__alphabet
+                    ul.alphabet
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-a") а
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-b") б
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-v") в
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-g") г
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-d") д
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-e") е
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-ee") ё
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-zh") ж
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-z") з
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-i") и
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-ii") й
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-k") к
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-l") л
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-m") м
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-n") н
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-o") о
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-p") п
+                        li
+                            a.smooth-trigger(href="#letter-r") р
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-s") с
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-t") т
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-u") у
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-f") ф
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-h") х
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-cc") ц
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-ch") ч
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-sch") ш
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-sh") щ
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-ea") э
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-yu") ю
+                        li.alphabet__item
+                            a.smooth-trigger(href="#letter-ya") я
+                        
+                .branch-addresses
+                    .branch-addresses__container#branch-index
+                        .branch-addresses__index
+                            .branch-addresses__letter.branch-addresses__letter.smooth-target#letter-a А
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/aktau") Актау
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/aktau") 6-й Микрорайон, 39
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/astana") Астана
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/astana/izumrud") Динмухамеда Кунаева, 10 (БЦ Изумрудный квартал)
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/astana/milanskiy") Амман, 2 (ЖК Миланский Квартал)
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/astana/imanova") Иманова, 16
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/atyrau") Атырау
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/atyrau") Гурьевская, 1
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/armavir") Армавир
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/armavir") Ефремова, 123/5
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/almetyevsk") Альметьевск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/almetyevsk") Ленина 46/5
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/arhangelsk") Архангельск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/arhangelsk") Набережная сев. Двины 71 (ЖК Омега Хаус)
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ashgabat") Ашхабад
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ashgabat") ул. Ататюрк, д. 82
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-b Б
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/balakovo") Балаково
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/balakovo/trnavskaya") Трнавская, 6
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/balakovo/tc_prospect") Факел Социализма, 24
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/barnaul") Барнаул
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/barnaul") Проспект Ленина, 29
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/belgorod/") Белгород
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/belgorod/gubkina") Губкина, 38Б
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/belgorod/popova") Попова, 36
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/bishkek") Бишкек
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/bishkek") Логвиненко, 51
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/bryansk") Брянск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/bryansk") Дуки, 51
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/beslan") Беслан
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/beslan") Мира, 16
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.by/brest") Брест
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.by/brest") Островского, 8
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-v В
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/vladivostok") Владивосток
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/vladivostok") Океанский проспект, 30
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/vladikavkaz") Владикавказ
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/vladikavkaz") Генерала Плиева, 54
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/vladimir") Владимир
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/vladimir") Тракторная, 50
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/volgograd") Волгоград
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/volgograd") Рабоче-Крестьянская, 27
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/volzhskiy") Волжский
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/volzhskiy") Площадь Труда, 19
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/voronezh/") Воронеж
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/voronezh/leviy-bereg") Пр-т. Ленингский, 1Д, ТРК Левый Берег
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/voronezh/holzunova") Хользунова, 15
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-g Г
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/gel") Геленджик
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/gel") Прасковеевская, 7
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.by/gomel") Гомель
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.by/gomel") Проспект Победы, 8
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/grozny") Грозный
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/grozny") Проспект Махмуда Эсамбаева, 5
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-e Е
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ekaterinburg") Екатеринбург
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ekaterinburg") Академика Шварца, 14
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/essentuki") Ессентуки
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/essentuki") Пятигорская, 133Б
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-i И
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/irkutsk") Иркутск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/irkutsk") Карла Либкнехта, 2
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-k К
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/kaliningrad/") Калининград
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kaliningrad/artilleriyskaya") Артиллерийская, 22
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kaliningrad/teatralnaya") Театральная, 30
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/kazan/") Казань
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kazan/tukaya") Петербургская, 9
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kazan/hakima") Сибгата Хакима, 42
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/kaspiysk") Каспийск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kaspiysk") Махачкалинская, 68
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/karaganda") Караганда
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/karaganda") Бульвар Мира, 29
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/kemerovo") Кемерово
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kemerovo") Кирова, 27
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/komsomolsk") Комсомольск-на-Амуре
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/komsomolsk") Проспект Ленина, 38
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/kostanay") Костанай
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kostanay") Алтынсарина, 110
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/krasnodar/") Краснодар
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/krasnodar/kubanskaya") Кубанская набережная, 64
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/krasnodar/sedina") Седина 150/5
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/krasnoyarsk/") Красноярск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/krasnoyarsk/first-tower") Добровольческой бригады, 78, БЦ Первая Башня
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/krasnoyarsk/svobodniy") Проспект Свободный, 53
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/kursk") Курск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/kursk") Золотая, 2А
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-m М
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/mahachkala") Махачкала
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/mahachkala") Танкаева, 15
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.by/minsk") Минск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.by/minsk") Туровского, 8
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/moscow/") Москва
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/") 13-Я Парковая, 40
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/perovo") 3-Я Владимирская, 20
+                                        .location-list__metro.moscow
+                                            span Перово
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/caricino") 6-Я Радиальная, 5 К.4
+                                        .location-list__metro.moscow.moscow--green
+                                            span Царицино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/avtozavodskaya") Автозаводская, 18
+                                        .location-list__metro.moscow.moscow--palegreen
+                                            span Автозаводская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/altufyevo") Алтуфьевское Шоссе, 70К.1
+                                        .location-list__metro.moscow.moscow--violet
+                                            span Алтуфьево
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/fili") Береговой Проезд, 5 К2
+                                        .location-list__metro.moscow.moscow--lightblue
+                                            span Шелепиха
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/vdnh") Бориса Галушкина, 17
+                                        .location-list__metro.moscow.moscow--blue
+                                            span ВДНХ
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/borisa-pasternaka-d-19") Бориса Пастернака, 19
+                                        .location-list__metro.moscow.moscow--orange
+                                            span Рассказовка
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/novoperedelkino") Боровское Шоссе, 36
+                                        .location-list__metro.moscow.moscow--grey
+                                            span Новопеределкино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/aerobus") Варшавское шоссе, 95, К1 (ТЦ Аэробус)
+                                        .location-list__metro.moscow.moscow--red
+                                            span Чертановское
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/dmitrovskoye_shosse") Дмитровское шоссе, 169, К1
+                                        .location-list__metro.moscow
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/nekrasovka") Вертолётчиков, 9/1
+                                        .location-list__metro.moscow
+                                            span Люберцы
+                                            span Некрасовка
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/veshnyaki") Вешняковская, 2
+                                        .location-list__metro.moscow
+                                            span Новогиреево
+                                            span Выхино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/tushino") Вишневая, 9К.1
+                                        .location-list__metro.moscow
+                                            span Тушинская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/volgogradka") Волгоградский Проспект, 26А
+                                        .location-list__metro.moscow
+                                            span Волгоградский проспект
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/kuzminki") Волжский Бульвар, КВ 114А, К1
+                                        .location-list__metro.moscow
+                                            span Кузьминки
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/sokol") Волоколамское Шоссе 15/22
+                                        .location-list__metro.moscow
+                                            span Стрешнево
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/garibaldi") Гарибальди, 7
+                                        .location-list__metro.moscow
+                                            span Новые Черемушки
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/dmd") Генерала Белова, 28 К1
+                                        .location-list__metro.moscow
+                                            span Домодедовская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/zhulebino") Генерала Кузнецова, 11К.1
+                                        .location-list__metro.moscow
+                                            span Жулебино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/glavmosstroya") Главмосстроя, 12
+                                        .location-list__metro.moscow
+                                            span Говорово
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/taganka") Гончарная Набережная, 9/16 С2
+                                        .location-list__metro.moscow
+                                            span Таганская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/dobrolybova") Добролюбова, 20
+                                        .location-list__metro.moscow
+                                            span Фонвизинская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/rumyancevo") Киевское Шоссе, 6 СТР.1
+                                        .location-list__metro.moscow
+                                            span Румянцево
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/uznaya") Кировоградская, 9К1
+                                        .location-list__metro.moscow
+                                            span Южная
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/aviamotornaya") Красноказарменная, 19
+                                        .location-list__metro.moscow
+                                            span Авиамоторная
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/botsad") Лазоревый Проезд, 5 К3
+                                        .location-list__metro.moscow
+                                            span Ботанический сад
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/leningradka") Ленинградское Шоссе, 120 К3
+                                        .location-list__metro.moscow
+                                            span Беломорская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/vershinina") Маршала Вершинина, 8К1
+                                        .location-list__metro.moscow
+                                            span Октябрьское поле
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/mashkova") Машкова, 24
+                                        .location-list__metro.moscow
+                                            span Курская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/michurinskiy") Мичуринский Проспект, 26
+                                        .location-list__metro.moscow
+                                            span Раменки
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/shabolovka") Мытная, 52
+                                        .location-list__metro.moscow
+                                            span Шаболовская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/nagatinskaya") Нагатинская, 16
+                                        .location-list__metro.moscow
+                                            span Нагатинская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/nahimovsky") Нахимовский Проспект, 9К1
+                                        .location-list__metro.moscow
+                                            span Нахимовский проспект
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/novoslobodskaya") Новослободская, 52
+                                        .location-list__metro.moscow
+                                            span Менделеевская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/krylatskoe") Осенний Бульвар, 7К1
+                                        .location-list__metro.moscow
+                                            span Крылатское
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/europe-square") Площадь Европы, 2 (Рэдиссон)
+                                        .location-list__metro.moscow
+                                            span Киевская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/marino") Поречная, 10 (ТЦ Мари)
+                                        .location-list__metro.moscow
+                                            span Марьино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/kommunarka") пос. Коммунарка, Липовый парк, д.5, к.2
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/academicheskaya") Пр. 60-Летия Октября, 14
+                                        .location-list__metro.moscow
+                                            span Академическая
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/presnenskiy") Пресненский Вал, 14 К2
+                                        .location-list__metro.moscow
+                                            span Улица 1905 года
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/belyaevo") Профсоюзная, 102А
+                                        .location-list__metro.moscow
+                                            span Беляево
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/central") Пятницкая, 6/1
+                                        .location-list__metro.moscow
+                                            span Новокузнецкая
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/rublevka") Рублёвское Шоссе, 62
+                                        .location-list__metro.moscow
+                                            span Крылатское
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/svetmsk") Святоозерская, 16
+                                        .location-list__metro.moscow
+                                            span Лухмановская
+                                            span улица Дмитриевского
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/izmailovo") Сиреневый бульвар, д.16
+                                        .location-list__metro.moscow
+                                            span Щёлковская
+                                            span Первомайская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/degunino") Софьи Ковалевской, 6
+                                        .location-list__metro.moscow
+                                            span Селигерская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/kutuza") Студенческая, 26
+                                        .location-list__metro.moscow
+                                            span Студенческая
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/kaleidoscop") Сходненская, 56 (ТРЦ Калейдоскоп)
+                                        .location-list__metro.moscow
+                                            span Сходненская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/vernad") Удальцова, 71 К2
+                                        .location-list__metro.moscow
+                                            span Проспект Вернадского
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/hodinka") Ходынский бульвар 20А (ЖК Лайнер)
+                                        .location-list__metro.moscow
+                                            span ЦСКА
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/you-butovo") Чечерский проезд, 56 К1 (Бутово)
+                                        .location-list__metro.moscow
+                                            span Бунинская аллея
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/newbutovo") Чечерский проезд, 122 К1 (Бутово Молл)
+                                        .location-list__metro.moscow
+                                            span Бунинская аллея
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/moscow/sheremetevskaya") Шереметьевская, 20А
+                                        .location-list__metro.moscow
+                                            span Марьина роща
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/msk-region/") Московская область
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/balashikha") Балашиха
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/vidnoe") Видное
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/voskresensk") Воскресенск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/dzr") Дзержинский
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/dolgoprudniy") Долгопрудный
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/domodedovo") Домодедово
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/zhelezka") Железнодорожный
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/zhukovskiy") Жуковский
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/zelenograd") Зеленоград
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/ilinskoe") Ильинское
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/klin") Клин
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/korolev") Королёв
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/krasnogorsk") Красногорск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/lubercy") Люберцы
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/mytischi") Мытищи
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/novogorsk") Новогорск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/noginsk") Ногинск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/orezuev") Орехово-Зуево
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/podolsk") Подольск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/pushkino") Пушкино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/ramenskoe") Раменское
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/reutov") Реутов
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/serpukhov") Серпухов
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/troick") Троицк
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/fryazino") Фрязино
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/himki-kalinina") Химки (Калинина)
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/chehov") Чехов
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/schelkovo") Щелково
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/schelkovo-centr") Щелково Центр
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/msk-region/electrostal") Электросталь
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/murmansk") Мурманск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/murmansk") Шмидта, 33А
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-n Н
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/nahodka") Находка
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/nahodka/") Владивостокская, 13
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/nizh-novgorod/") Нижний Новгород
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/nizh-novgorod/belinskogo") Белинского, 102
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/nizh-novgorod/sovetskaya") Советская площадь, 5
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/nizhnevartovsk") Нижневартовск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/nizhnevartovsk") Омская, 38, пом. 1004
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/norilsk/") Норильск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/norilsk/leninskiy") Ленинский проспект, 5
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/talnah") ул. Таймырская, д.32
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/n-urengoi") Новый Уренгой
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/n-urengoi") Проспект Энтузиастов, 1
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/novorossiysk") Новороссийск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/novorossiysk") Свободы, 3/5
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/novosibirsk") Новосибирск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/novosibirsk") Каменская, 23
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/nab-chelny") Набережные Челны
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/nab-chelny") Проспект Вахитова, 54А
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/noyabrsk") Ноябрьск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/noyabrsk") Новоселов, 6
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/neftekamsk") Нефтекамск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/neftekamsk") Проспект Комсомольский, 41
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ntagil") Нижний Тагил
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ntagil") Октябрьской революции, 46
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/novokuznetsk") Новокузнецк
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/novokuznetsk") Кирова, 37
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-o О
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/omsk") Омск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/omsk") Ленина, 14
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/orenburg") Оренбург
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/orenburg") 9 Января, 45
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-p П
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/penza") Пенза
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/penza") ул. Карла Маркса, 28Б
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/perm") Пермь
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/perm") ул. Петропавловская, 82
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/petr-kamchatsky") Петропавловск-Камчатский
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/petr-kamchatsky") ул. Тушканова, 4
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.by/pinsk") Пинск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.by/pinsk") ул. ЖЕЛЕЗНОДОРОЖНАЯ 19
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/pskov") Псков
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/pskov") ул. Кузбасской Дивизии, 19
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-r Р
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/rostov") Ростов-на-Дону
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/rostov") ул. Красноармейская, 210
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/rybinsk") Рыбинск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/rybinsk") ул. Волжская набережная, 67
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ryazan/") Рязань
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ryazan/mayakovskogo") Маяковского, 49
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ryazan/plaza") ТРЦ Виктория Плаза
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-s С
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/spb/") Санкт–Петербург
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/tehnolozhka") 8-Я Красноармейская, 4/5
+                                        .location-list__metro.piter
+                                            span Технологический институт
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/petrograd") Воскова, 16
+                                        .location-list__metro.piter.piter--green
+                                            span Горьковская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/ozerki") Выборгское шоссе, 13А
+                                        .location-list__metro.piter.piter--palegreen
+                                            span Проспект Просвещения
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/gatchina") Гатчина, пр. 25-го октября, 34
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/gjatskaya") Гжатская, 22 К1
+                                        .location-list__metro.piter.piter--violet
+                                            span Академическая
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/nevsky") Грибоедова, 10
+                                        .location-list__metro.piter.piter--lightblue
+                                            span Невский проспект
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/kirochnaya") Кирочная, 9
+                                        .location-list__metro.piter.piter--blue
+                                            span Чернышевская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/kudrovo") Кудрово, Венская 4/1
+                                        .location-list__metro.piter.piter--orange
+                                            span Дыбенко
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/leninskiy") Ленинский проспект, 78 К1
+                                        .location-list__metro.piter.piter--grey
+                                            span Ленинский проспект
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/parnas") М. Дудина, 23 К1
+                                        .location-list__metro.piter.piter--red
+                                            span Парнас
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/sadovaya") Московский проспект, 6
+                                        .location-list__metro.piter
+                                            span Садовая
+                                            span Спасская
+                                            span Сенная площадь
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/ostrov") Нахимова, 20
+                                        .location-list__metro.piter
+                                            span Приморская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/optikov") Оптиков, 34/1
+                                        .location-list__metro.piter
+                                            span Береговая
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/obuhov") Пр. Обуховской обороны, 271А
+                                        .location-list__metro.piter
+                                            span Пролетарская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/ozerki-toreza") Проспект Тореза, 95
+                                        .location-list__metro.piter
+                                            span Озерки
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/koroleva") Проспект Королёва, 59, 5
+                                        .location-list__metro.piter
+                                            span Пионерская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/pionerskaya") Проспект Королёва, 2
+                                        .location-list__metro.piter
+                                            span Пионерская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/slava") Проспект Славы, 43/49
+                                        .location-list__metro.piter
+                                            span Международная
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/mayakovskaya") Пушкинская, 12
+                                        .location-list__metro.piter
+                                            span Площадь Восстания
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/tipanova") Типанова, 21, Лит. А
+                                        .location-list__metro.piter
+                                            span Московская
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/spb/ladozhsky") Проспект Энтузиастов, 33 К1
+                                        .location-list__metro.piter
+                                            span Ладожская
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/sochi/") Сочи
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/sochi/vorovskogo") Воровского, 18
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/sochi/adler") Кирова, 30
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/sevastopol") Севастополь
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/sevastopol") ул. Очаковцев, 19, ТЦ "Плаза"
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/stavropol") Ставрополь
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/stavropol") ул. Космонавтов, 2
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/surgut") Сургут
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/surgut") пр-кт Мира, 47
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/samara") Самара
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/samara") ул. Ново-Садовая, 27
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/simferopol") Симферополь
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/simferopol") ул. Дзюбанова, 2А
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/salehard") Салехард
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/salehard") ул. Республики, д. 75, 124
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/syktyvkar") Сыктывкар
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/syktyvkar") ул. Куратова, 83
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-t Т
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/tyumen") Тюмень
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/tyumen") ул. Мориса Тореза, 12А
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/tambov") Тамбов
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/tambov")  ул. Советская, 156
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/togliatti") Тольятти
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/togliatti") ул. Южное Шоссе, 67Г
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/tomsk") Томск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/tomsk") ул. Трифонова, 22
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/tver") Тверь
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/tver") Волоколамский пр., 25, К.1
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/tbilisi") Тбилиси
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/tbilisi") пр. Александра Казбеги, 11
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/tula") Тула
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/tula") ул. Демонстрации, д.1Б
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-u У
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ust-kaman") Усть-Каменогорск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ust-kaman") ул. Кабанбай Батыра, д. 156
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ufa") Уфа
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ufa") ул. Ленина, 65
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ussuriysk") Уссурийск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ussuriysk") ул. Некрасова, д.36
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ulsk") Ульяновск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ulsk") ул. Октябрьская, д.48
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-h Х
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/khabarovsk") Хабаровск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/khabarovsk") ул. Ким Ю Чена
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/hm") Ханты–Мансийск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/hm") ул. Мира, 44
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-ch Ч
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/cheboksary") Чебоксары
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/cheboksary") ул. Ярославская, 58
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/cherepovets") Череповец
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/cherepovets") Шекснинский пр-кт, 21
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/cheliabinsk") Челябинск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/cheliabinsk") ул. Кирова, 86
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-yu Ю
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/yugorsk") Югорск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/yugorsk") ул. Кирова, 10
+                        .branch-addresses__index
+                            .branch-addresses__letter.smooth-target#letter-ya Я
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/yaroslavl") Ярославль
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/yaroslavl") ул. Максимова, 12
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/yakutsk") Якутск
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/yakutsk") ул. Пирогова, 6
+                        .branch-addresses__index
+                            .branch-addresses__letter UA
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="https://oldboybarbershop.com/ua/") Украина
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ua/odessa") Одесса
+                                    li.location-list__item
+                                        a.location-list__link(href="https://oldboybarbershop.com/ua/harkov") Харьков
+                        .branch-addresses__index
+                            .branch-addresses__letter EU
+                            .branch-addresses__content
+                                ul.location-list
+                                    li.location-list__city
+                                        a(href="http://eu.oldboybarbershop.com/en") Europe
+                                    li.location-list__item
+                                        a.location-list__link(href="http://eu.oldboybarbershop.com/en/barcelona") Испания, Барселона
+                                    li.location-list__item
+                                        a.location-list__link(href="http://eu.oldboybarbershop.com/en/marbella") Испания, Барселона
+                                    li.location-list__item
+                                        a.location-list__link(href="http://eu.oldboybarbershop.com/en/cyprus") Кипр
+                                    li.location-list__item
+                                        a.location-list__link(href="http://eu.oldboybarbershop.com/en/mlawa") Польша
+                                    li.location-list__item
+                                        a.location-list__link(href="http://eu.oldboybarbershop.com/en/beograd") Сербия
+                                    li.location-list__item
+                                        a.location-list__link(href="http://eu.oldboybarbershop.com/en/budva") Черногория
