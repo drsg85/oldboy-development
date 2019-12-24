@@ -168,6 +168,11 @@
     }
 }
 
+.location-list__metro {
+    // typography
+    color: #af212e;
+}
+
 .location-list__metro span{
     // positioning
     position: relative;
@@ -180,9 +185,9 @@
     padding: 3px 10px;
 
     // typography
-    color: $red;
+    color: inherit;
     font-family: $mainFont;
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -197,53 +202,33 @@
         // box model
         display: inline-block;
         vertical-align: middle;
-        height: 14px;
-        width: 14px;
+        height: 17px;
+        width: 17px;
         margin-right: 4px;
-        padding: 1px;
+        padding: 2px;
         padding-top: 1px;
 
         // typography
         font-weight: 700;
-        line-height: 1;
+        line-height: 0.7;
         text-align: center;
         text-transform: none;
 
         // visual
+        border: 2px solid rgba(175,33,46,.75);
         border-radius: 50%;
     }
 }
 
-
-.location-list__metro.piter span {
-    &::before {
-        // typography
-        color: $blue;
-        
-        // visual
-        border: 1px solid rgba($blue, 0.5);
-    }
-}
-
-.location-list__metro.moscow span {
-    &::before {
-        // typography
-        color: $red;
-        
-        // visual
-        border: 2px solid rgba($red, 0.75);
-    }
-}
-
-.location-list__metro.moscow.moscow--green span {
+.location-list__metro span.location-list__metro--green {
     &::before {
         // visual
         // border: 1px solid rgba(green, 0.75);
-        border: 2px solid green;
+        border: 2px solid #008000;
     }
 }
 
-.location-list__metro.moscow.moscow--palegreen span {
+.location-list__metro span.location-list__metro--palegreen {
     &::before {
         // visual
         // border: 1px solid rgba(#32CD32, 0.75);
@@ -251,7 +236,7 @@
     }
 }
 
-.location-list__metro.moscow.moscow--violet span {
+.location-list__metro span.location-list__metro--violet {
     &::before {
         // visual
         // border: 1px solid rgba(#8A2BE2, 0.75);
@@ -259,7 +244,7 @@
     }
 }
 
-.location-list__metro.moscow.moscow--lightblue span {
+.location-list__metro span.location-list__metro--lightblue {
     &::before {
         // visual
         // border: 1px solid rgba(#00BFFF, 0.75);
@@ -267,7 +252,7 @@
     }
 }
 
-.location-list__metro.moscow.moscow--blue span {
+.location-list__metro span.location-list__metro--blue {
     &::before {
         // visual
         // border: 1px solid rgba(#00008B, 0.75);
@@ -275,7 +260,7 @@
     }
 }
 
-.location-list__metro.moscow.moscow--orange span {
+.location-list__metro span.location-list__metro--orange {
     &::before {
         // visual
         // border: 1px solid rgba(#FF8C00, 0.75);
@@ -283,7 +268,7 @@
     }
 }
 
-.location-list__metro.moscow.moscow--grey span {
+.location-list__metro span.location-list__metro--grey {
     &::before {
         // visual
         // border: 1px solid rgba(#778899, 0.75);
@@ -291,71 +276,7 @@
     }
 }
 
-.location-list__metro.moscow.moscow--grey span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#778899, 0.75);
-        border: 2px solid red;
-    }
-}
-
-.location-list__metro.piter.piter--green span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(green, 0.75);
-        border: 2px solid green;
-    }
-}
-
-.location-list__metro.piter.piter--palegreen span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#32CD32, 0.75);
-        border: 2px solid #32CD32;
-    }
-}
-
-.location-list__metro.piter.piter--violet span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#8A2BE2, 0.75);
-        border: 2px solid #8A2BE2;
-    }
-}
-
-.location-list__metro.piter.piter--lightblue span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#00BFFF, 0.75);
-        border: 2px solid #00BFFF;
-    }
-}
-
-.location-list__metro.piter.piter--blue span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#00008B, 0.75);
-        border: 2px solid #00008B;
-    }
-}
-
-.location-list__metro.piter.piter--orange span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#FF8C00, 0.75);
-        border: 2px solid #FF8C00;
-    }
-}
-
-.location-list__metro.piter.piter--grey span {
-    &::before {
-        // visual
-        // border: 1px solid rgba(#778899, 0.75);
-        border: 2px solid #778899;
-    }
-}
-
-.location-list__metro.piter.piter--red span {
+.location-list__metro span.location-list__metro--red {
     &::before {
         // visual
         // border: 1px solid rgba(#778899, 0.75);

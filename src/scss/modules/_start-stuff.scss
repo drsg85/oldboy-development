@@ -1,0 +1,113 @@
+.start-stuff {
+    // box model
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+
+    @include atTablet {
+        // box model
+        padding: 0 30px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 0;
+    }
+}
+
+.start-stuff__header {
+    // box model
+    margin-bottom: 60px;
+}
+
+.start-stuff__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.start-stuff__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.start-stuff__item {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 100%;
+    
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        flex-basis: 30%;
+        max-width: 30%;
+        margin-right: 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 85px;
+    }
+}
+
+.start-stuff__item-number {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 36px;
+    font-weight: 700;
+
+    @include atDesktopS {
+        // typography
+        font-size: 60px;
+    }
+}
+
+.start-stuff__item-title {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 18px;
+
+    @include atDesktopS {
+        // typography
+        font-size: 30px;
+    }
+}
+
+.start-stuff__item-subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 18px;
+}
+
+.start-stuff__item-text {
+    // box model
+    margin: 0;
+}

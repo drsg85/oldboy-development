@@ -1,0 +1,144 @@
+.new-format {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+    padding: 0 20px;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        padding: 0 30px;
+    }
+}
+
+.new-format__header {
+    // box model
+    max-width: 100%;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.new-format__text-content,
+.new-format__slider-wrap {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 100%;
+
+    @include atTablet {
+        // box model
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+
+.new-format__text-content {
+    @include atTablet {
+        // box model
+        padding-right:30px;
+    }
+}
+
+.new-format__slider-wrap {
+    // positioning
+    position: relative;
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.new-format__header {
+    // box model
+    margin-bottom: 15px;
+}
+
+.new-format__title {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.new-format__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.new-format__text {
+    // box model
+    margin-bottom: 30px;
+    
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.new-format__slide {
+    // visual
+    cursor: pointer;
+}
+
+.new-format__slider-dots {
+    // positioning
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+
+    // box model
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    margin-left: -65px;
+}
+
+.new-format__slider-dot {
+    // box model
+    height: 20px;
+    width: 20px;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    background: none;
+    border: 2px solid $golden;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    outline: none;
+    
+    &:hover {
+        // visual
+        background-color: $golden;
+    }
+}
+
+.tns-nav-active {
+    // visual
+    background-color: $golden;
+}
