@@ -32,6 +32,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "smoothscroll-polyfill": "^0.4.4"
+    "lightgallery.js": "^1.1.3",
+    "smoothscroll-polyfill": "^0.4.4",
+    "tiny-slider": "^2.9.2"
   }
 }

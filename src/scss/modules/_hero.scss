@@ -736,6 +736,87 @@
     }
 }
 
+.hero__content-header {
+    // box model
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 15px;
+
+    // typography
+    color: $light;
+    text-align: left;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.hero__content-title {
+    margin: 0;
+    padding: 0;
+
+    // typography
+    font-size: 24px;
+    font-family: $titleFont;
+    font-weight: 700;
+
+    @include atTablet {
+        // typography
+        font-size: 60px;
+    }
+}
+
+.hero__content-subtitle {
+    // box model
+    margin: 0;
+    margin-bottom: 40px;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 18px;
+
+    @include atTablet {
+        // typography
+        font-size: 48px;
+    }
+}
+
+.hero__content-social {
+    // positioning
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    // typography
+    text-align: right;
+}
+
+.hero__content-social-item {
+    // box model
+    display: inline-block;
+    padding: 0 4px;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-weight: 700;
+    text-decoration: none;
+
+    // visual
+    transition: color 0.25s ease;
+    &:hover {
+        // typography
+        color: $golden;
+    }
+}
+
 .hero__content--investment .hero-caption {
     // box model
     margin: 0 auto;

@@ -119,6 +119,23 @@
     }
 }
 
+.form__input-city-incorrect {
+    // box model
+    display: none;
+    margin-top: 5px;
+
+    // typography
+    color: $red;
+    font-family: $mainFont;
+    font-size: 13px;
+    line-height: 16px;
+    
+    &--active {
+        // box model
+        display: inline-block;
+    }
+}
+
 .form__input-clear {
     // positioning
     position: absolute;
