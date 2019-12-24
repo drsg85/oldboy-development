@@ -4,7 +4,9 @@ class SmoothOnAnchorsHorizontal {
         this.containerTarget = document.querySelector('.branch-addresses__container');
         this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
         this.target = this.containerTarget.querySelectorAll(obj.targets);
-        this.addEvents();
+        if(this.alphabet && this.containerTarget) {
+            this.addEvents();
+        }
     }
 
     ease(t) {
@@ -31,7 +33,7 @@ class SmoothOnAnchorsHorizontal {
         const scrollEndElem = document.querySelector(`#${target}`);
         const anim = requestAnimationFrame(() => {
             const stamp = new Date().getTime();
-            const duration = 500;
+            const duration = 1000;
             const start = stamp;
             const startScrollOffset = scrollEndElem.offsetLeft;
             

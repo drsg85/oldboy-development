@@ -14,6 +14,7 @@ import TabSwitcher from './modules/tabSwitcher';
 import ExclusiveCities from './modules/exclusiveCities';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
 import SmoothOnAnchorsHorizontal from './modules/smoothOnAnchorsHorizontal';
+import HorizontalScroll from './modules/horizontalScroll';
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -83,3 +84,5 @@ new SmoothOnAnchorsHorizontal({
     triggers: '.smooth-trigger',
     targets: '.smooth-target'
 });
+
+new HorizontalScroll();
