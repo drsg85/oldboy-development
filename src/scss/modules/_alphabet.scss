@@ -1,0 +1,33 @@
+.alphabet {
+    // box model
+    display: flex;
+
+    // visual
+    list-style-type: none;
+}
+.alphabet li {
+    // visual
+    transition: all ease-in-out 1s;
+}
+
+.alphabet li a {
+    // box model
+    margin-right: 10px;
+
+    // typography
+    color: $golden;
+    text-transform: uppercase;
+    
+    // visual
+    text-decoration: none;
+    transition: all ease-in-out 1s;
+}
+
+.alphabet li a:hover {
+    // visual
+    border-bottom: 1px solid $golden;
+}
+
+.alphabet li a:active .branch-addresses__letter {
+    background-color: greenyellow;
+}
