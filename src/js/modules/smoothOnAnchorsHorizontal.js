@@ -33,7 +33,7 @@ class SmoothOnAnchorsHorizontal {
         const scrollEndElem = document.querySelector(`#${target}`);
         const anim = requestAnimationFrame(() => {
             const stamp = new Date().getTime();
-            const duration = 1000;
+            const duration = 500;
             const start = stamp;
             const startScrollOffset = scrollEndElem.offsetLeft;
             
