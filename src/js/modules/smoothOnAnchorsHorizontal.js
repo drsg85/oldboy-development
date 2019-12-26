@@ -42,6 +42,8 @@ class SmoothOnAnchorsHorizontal {
         });
     }
 
+    
+
     addEvents() {
         this.btns.map((el) => el.addEventListener('click', (event) => {
             const reg = /.*(#)/g;

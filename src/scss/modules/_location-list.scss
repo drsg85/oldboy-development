@@ -5,7 +5,9 @@
     margin-bottom: 30px;
 
     // visual
+    break-inside: avoid;
     list-style-type: none;
+    page-break-inside: avoid;
 }
 
 .location-list__city {
