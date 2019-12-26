@@ -1,18 +1,35 @@
 .alphabet {
+    @include atTablet {
     // box model
     display: flex;
+    }
+}
+
+.alphabet__content {
+    // box model
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 10px;
 
     // visual
     list-style-type: none;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
 }
-.alphabet li {
+
+.alphabet__item {
     // visual
     transition: all ease-in-out 1s;
 }
 
-.alphabet li a {
+.alphabet__item a {
     // box model
-    margin-right: 10px;
+    margin-right: 5px;
 
     // typography
     color: $golden;
@@ -21,13 +38,15 @@
     // visual
     text-decoration: none;
     transition: all ease-in-out 1s;
+
+    @include atSmallMobile {
+        // box model
+        margin-right: 10px;
+    }
 }
 
-.alphabet li a:hover {
+.alphabet__item a:hover {
     // visual
     border-bottom: 1px solid $golden;
 }
 
-.alphabet li a:active .branch-addresses__letter {
-    background-color: greenyellow;
-}

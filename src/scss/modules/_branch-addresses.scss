@@ -1,16 +1,38 @@
 .branch-addresses {
     // box model
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include atDesktopS {
+      // box model
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    
+    @include atDesktopM {
+      // box model
+      padding-left: 120px;
+      padding-right: 120px;
+    }
 }
 
 .branch-addresses__container {
     // box model
-
     height: 80vh;
-    column-width: 15em;
-    column-fill: auto;
-    overflow: auto;
+
+    @include atTablet {
+      // box model
+      column-fill: auto;
+      // column-width: 25em;
+      column-width: 19em;
+      overflow: auto;
+      overflow-x: hidden;
+    }
+    
+    @include atDesktopS {
+      // box model
+      column-width: 15em;
+    }
 }
 
 .branch-addresses__letter {

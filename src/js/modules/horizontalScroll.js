@@ -3,7 +3,6 @@
 class HorizontalScroll {
     constructor() {
         this.branchContainer = document.querySelector('.branch-addresses__container');
-        this.smoothTriggers = [...document.querySelectorAll('.smooth-trigger')];
         
         if(this.branchContainer) {
             this.events();
