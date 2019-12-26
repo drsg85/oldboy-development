@@ -3,7 +3,6 @@
 class HorizontalScroll {
     constructor() {
         this.branchContainer = document.querySelector('.branch-addresses__container');
-        this.scrollLeft = 0;
         if(this.branchContainer) {
             this.events();
         }
@@ -22,8 +21,7 @@ class HorizontalScroll {
               }
               if (event.deltaY != 0) {
                 // замена вертикальной прокрутки горизонтальной
-                this.scrollLeft += modifier * event.deltaY;
-                this.branchContainer.scrollLeft = this.scrollLeft;
+                this.branchContainer.scrollLeft += modifier * event.deltaY;
               }
         });
     }
