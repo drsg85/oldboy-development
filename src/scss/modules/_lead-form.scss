@@ -86,12 +86,6 @@
 
     // typography
     text-align: center;
-
-    &--full {
-        // box model
-        display: block;
-        margin-top: 20px;
-    }
 }
 
 .lead-form__item .button {
@@ -121,16 +115,10 @@
     // background-color: rgba($grey, 0.2);
     outline: none;
     transition: ease-in-out 0.25s;
-    
+
     @include atDesktopS {
         // box model
         width: 150px;
-    }
-
-    &--full {
-        // box model
-        margin-top: 30px;
-        width: 310px;
     }
 }
 

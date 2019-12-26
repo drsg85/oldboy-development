@@ -204,793 +204,757 @@
                     <p class="search-results__not-found">такого города не найдено</p>
                     <ul class="search-results__list"></ul>
                 </section>
+                <div class="location-selector__text">
+                    <div id="geo"></div>
+                </div>
             </div>
             <div class="location-selector__close">
                 <div class="close-button"></div>
             </div>
         </header>
+        <div id="map"></div>
         <div class="location-selector__content">
-            <div class="location-selector__alphabet">
-                <div class="alphabet">
-                    <ul class="alphabet__content">
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-a">а</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-b">б</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-v">в</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-g">г</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-d">д</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-e">е</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-ee">ё</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-zh">ж</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-z">з</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-i">и</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-ii">й</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-k">к</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-l">л</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-m">м</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-n">н</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-o">о</a></li>
-                    </ul>
-                    <ul class="alphabet__content">
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-p">п</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-r">р</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-s">с</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-t">т</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-u">у</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-f">ф</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-h">х</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-cc">ц</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-ch">ч</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-sch">ш</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-sh">щ</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-ea">э</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-yu">ю</a></li>
-                        <li class="alphabet__item"><a class="smooth-trigger" href="#letter-ya">я</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="branch-addresses">
-                <div class="branch-addresses__container" id="branch-index">
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter branch-addresses__letter smooth-target" id="letter-a">А</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/aktau">Актау</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/aktau">6-й Микрорайон, 39</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/astana">Астана</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/astana/izumrud">Динмухамеда Кунаева, 10 (БЦ Изумрудный квартал)</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/astana/milanskiy">Амман, 2 (ЖК Миланский Квартал)</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/astana/imanova">Иманова, 16</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/atyrau">Атырау</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/atyrau">Гурьевская, 1</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/armavir">Армавир</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/armavir">Ефремова, 123/5</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/almetyevsk">Альметьевск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/almetyevsk">Ленина 46/5</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/arhangelsk">Архангельск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/arhangelsk">Набережная сев. Двины 71 (ЖК Омега Хаус)</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ashgabat">Ашхабад</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ashgabat">ул. Ататюрк, д. 82</a></li>
-                            </ul>
-                        </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">А</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/aktau">Актау</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/aktau">6-й Микрорайон, 39</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/astana">Астана</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/astana/izumrud">Динмухамеда Кунаева, 10 (БЦ Изумрудный квартал)</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/astana/milanskiy">Амман, 2 (ЖК Миланский Квартал)</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/astana/imanova">Иманова, 16</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/atyrau">Атырау</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/atyrau">Гурьевская, 1</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/armavir">Армавир</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/armavir">Ефремова, 123/5</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/almetyevsk">Альметьевск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/almetyevsk">Ленина 46/5</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/arhangelsk">Архангельск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/arhangelsk">Набережная сев. Двины 71 (ЖК Омега Хаус)</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ashgabat">Ашхабад</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ashgabat">ул. Ататюрк, д. 82</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-b">Б</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/balakovo">Балаково</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/balakovo/trnavskaya">Трнавская, 6</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/balakovo/tc_prospect">Факел Социализма, 24</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/barnaul">Барнаул</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/barnaul">Проспект Ленина, 29</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/belgorod/">Белгород</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/belgorod/gubkina">Губкина, 38Б</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/belgorod/popova">Попова, 36</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/bishkek">Бишкек</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/bishkek">Логвиненко, 51</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/bryansk">Брянск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/bryansk">Дуки, 51</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/beslan">Беслан</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/beslan">Мира, 16</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.by/brest">Брест</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/brest">Островского, 8</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Б</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/balakovo">Балаково</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/balakovo/trnavskaya">Трнавская, 6</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/balakovo/tc_prospect">Факел Социализма, 24</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/barnaul">Барнаул</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/barnaul">Проспект Ленина, 29</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/belgorod/">Белгород</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/belgorod/gubkina">Губкина, 38Б</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/belgorod/popova">Попова, 36</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/bishkek">Бишкек</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/bishkek">Логвиненко, 51</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/bryansk">Брянск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/bryansk">Дуки, 51</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/beslan">Беслан</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/beslan">Мира, 16</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.by/brest">Брест</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/brest">Островского, 8</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-v">В</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/vladivostok">Владивосток</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/vladivostok">Океанский проспект, 30</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/vladikavkaz">Владикавказ</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/vladikavkaz">Генерала Плиева, 54</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/vladimir">Владимир</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/vladimir">Тракторная, 50</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/volgograd">Волгоград</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/volgograd">Рабоче-Крестьянская, 27</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/volzhskiy">Волжский</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/volzhskiy">Площадь Труда, 19</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/voronezh/">Воронеж</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/voronezh/leviy-bereg">Пр-т. Ленингский, 1Д, ТРК Левый Берег</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/voronezh/holzunova">Хользунова, 15</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">В</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/vladivostok">Владивосток</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/vladivostok">Океанский проспект, 30</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/vladikavkaz">Владикавказ</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/vladikavkaz">Генерала Плиева, 54</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/vladimir">Владимир</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/vladimir">Тракторная, 50</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/volgograd">Волгоград</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/volgograd">Рабоче-Крестьянская, 27</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/volzhskiy">Волжский</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/volzhskiy">Площадь Труда, 19</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/voronezh/">Воронеж</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/voronezh/leviy-bereg">Пр-т. Ленингский, 1Д, ТРК Левый Берег</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/voronezh/holzunova">Хользунова, 15</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-g">Г</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/gel">Геленджик</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/gel">Прасковеевская, 7</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.by/gomel">Гомель</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/gomel">Проспект Победы, 8</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/grozny">Грозный</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/grozny">Проспект Махмуда Эсамбаева, 5</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Г</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/gel">Геленджик</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/gel">Прасковеевская, 7</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.by/gomel">Гомель</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/gomel">Проспект Победы, 8</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/grozny">Грозный</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/grozny">Проспект Махмуда Эсамбаева, 5</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-e">Е</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ekaterinburg">Екатеринбург</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ekaterinburg">Академика Шварца, 14</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/essentuki">Ессентуки</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/essentuki">Пятигорская, 133Б</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Е</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ekaterinburg">Екатеринбург</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ekaterinburg">Академика Шварца, 14</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/essentuki">Ессентуки</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/essentuki">Пятигорская, 133Б</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-i">И</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/irkutsk">Иркутск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/irkutsk">Карла Либкнехта, 2</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">И</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/irkutsk">Иркутск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/irkutsk">Карла Либкнехта, 2</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-k">К</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/kaliningrad/">Калининград</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kaliningrad/artilleriyskaya">Артиллерийская, 22</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kaliningrad/teatralnaya">Театральная, 30</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/kazan/">Казань</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kazan/tukaya">Петербургская, 9</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kazan/hakima">Сибгата Хакима, 42</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/kaspiysk">Каспийск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kaspiysk">Махачкалинская, 68</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/karaganda">Караганда</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/karaganda">Бульвар Мира, 29</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/kemerovo">Кемерово</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kemerovo">Кирова, 27</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/komsomolsk">Комсомольск-на-Амуре</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/komsomolsk">Проспект Ленина, 38</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/kostanay">Костанай</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kostanay">Алтынсарина, 110</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/krasnodar/">Краснодар</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnodar/kubanskaya">Кубанская набережная, 64</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnodar/sedina">Седина 150/5</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/krasnoyarsk/">Красноярск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnoyarsk/first-tower">Добровольческой бригады, 78, БЦ Первая Башня</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnoyarsk/svobodniy">Проспект Свободный, 53</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/kursk">Курск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kursk">Золотая, 2А</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">К</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/kaliningrad/">Калининград</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kaliningrad/artilleriyskaya">Артиллерийская, 22</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kaliningrad/teatralnaya">Театральная, 30</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/kazan/">Казань</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kazan/tukaya">Петербургская, 9</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kazan/hakima">Сибгата Хакима, 42</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/kaspiysk">Каспийск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kaspiysk">Махачкалинская, 68</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/karaganda">Караганда</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/karaganda">Бульвар Мира, 29</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/kemerovo">Кемерово</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kemerovo">Кирова, 27</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/komsomolsk">Комсомольск-на-Амуре</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/komsomolsk">Проспект Ленина, 38</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/kostanay">Костанай</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kostanay">Алтынсарина, 110</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/krasnodar/">Краснодар</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnodar/kubanskaya">Кубанская набережная, 64</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnodar/sedina">Седина 150/5</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/krasnoyarsk/">Красноярск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnoyarsk/first-tower">Добровольческой бригады, 78, БЦ Первая Башня</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/krasnoyarsk/svobodniy">Проспект Свободный, 53</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/kursk">Курск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/kursk">Золотая, 2А</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-m">М</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/mahachkala">Махачкала</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/mahachkala">Танкаева, 15</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.by/minsk">Минск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/minsk">Туровского, 8</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/moscow/">Москва</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/">13-Я Парковая, 40</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/perovo">3-Я Владимирская, 20</a>
-                                    <div class="location-list__metro moscow"><span>Перово</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/caricino">6-Я Радиальная, 5 К.4</a>
-                                    <div class="location-list__metro moscow moscow--green"><span>Царицино</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/avtozavodskaya">Автозаводская, 18</a>
-                                    <div class="location-list__metro moscow moscow--palegreen"><span>Автозаводская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/altufyevo">Алтуфьевское Шоссе, 70К.1</a>
-                                    <div class="location-list__metro moscow moscow--violet"><span>Алтуфьево</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/fili">Береговой Проезд, 5 К2</a>
-                                    <div class="location-list__metro moscow moscow--lightblue"><span>Шелепиха</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vdnh">Бориса Галушкина, 17</a>
-                                    <div class="location-list__metro moscow moscow--blue"><span>ВДНХ</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/borisa-pasternaka-d-19">Бориса Пастернака, 19</a>
-                                    <div class="location-list__metro moscow moscow--orange"><span>Рассказовка</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/novoperedelkino">Боровское Шоссе, 36</a>
-                                    <div class="location-list__metro moscow moscow--grey"><span>Новопеределкино</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/aerobus">Варшавское шоссе, 95, К1 (ТЦ Аэробус)</a>
-                                    <div class="location-list__metro moscow moscow--red"><span>Чертановское</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/dmitrovskoye_shosse">Дмитровское шоссе, 169, К1</a>
-                                    <div class="location-list__metro moscow"></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nekrasovka">Вертолётчиков, 9/1</a>
-                                    <div class="location-list__metro moscow"><span>Люберцы</span><span>Некрасовка</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/veshnyaki">Вешняковская, 2</a>
-                                    <div class="location-list__metro moscow"><span>Новогиреево</span><span>Выхино</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/tushino">Вишневая, 9К.1</a>
-                                    <div class="location-list__metro moscow"><span>Тушинская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/volgogradka">Волгоградский Проспект, 26А</a>
-                                    <div class="location-list__metro moscow"><span>Волгоградский проспект</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kuzminki">Волжский Бульвар, КВ 114А, К1</a>
-                                    <div class="location-list__metro moscow"><span>Кузьминки</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/sokol">Волоколамское Шоссе 15/22</a>
-                                    <div class="location-list__metro moscow"><span>Стрешнево</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/garibaldi">Гарибальди, 7</a>
-                                    <div class="location-list__metro moscow"><span>Новые Черемушки</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/dmd">Генерала Белова, 28 К1</a>
-                                    <div class="location-list__metro moscow"><span>Домодедовская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/zhulebino">Генерала Кузнецова, 11К.1</a>
-                                    <div class="location-list__metro moscow"><span>Жулебино</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/glavmosstroya">Главмосстроя, 12</a>
-                                    <div class="location-list__metro moscow"><span>Говорово</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/taganka">Гончарная Набережная, 9/16 С2</a>
-                                    <div class="location-list__metro moscow"><span>Таганская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/dobrolybova">Добролюбова, 20</a>
-                                    <div class="location-list__metro moscow"><span>Фонвизинская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/rumyancevo">Киевское Шоссе, 6 СТР.1</a>
-                                    <div class="location-list__metro moscow"><span>Румянцево</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/uznaya">Кировоградская, 9К1</a>
-                                    <div class="location-list__metro moscow"><span>Южная</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/aviamotornaya">Красноказарменная, 19</a>
-                                    <div class="location-list__metro moscow"><span>Авиамоторная</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/botsad">Лазоревый Проезд, 5 К3</a>
-                                    <div class="location-list__metro moscow"><span>Ботанический сад</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/leningradka">Ленинградское Шоссе, 120 К3</a>
-                                    <div class="location-list__metro moscow"><span>Беломорская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vershinina">Маршала Вершинина, 8К1</a>
-                                    <div class="location-list__metro moscow"><span>Октябрьское поле</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/mashkova">Машкова, 24</a>
-                                    <div class="location-list__metro moscow"><span>Курская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/michurinskiy">Мичуринский Проспект, 26</a>
-                                    <div class="location-list__metro moscow"><span>Раменки</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/shabolovka">Мытная, 52</a>
-                                    <div class="location-list__metro moscow"><span>Шаболовская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nagatinskaya">Нагатинская, 16</a>
-                                    <div class="location-list__metro moscow"><span>Нагатинская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nahimovsky">Нахимовский Проспект, 9К1</a>
-                                    <div class="location-list__metro moscow"><span>Нахимовский проспект</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/novoslobodskaya">Новослободская, 52</a>
-                                    <div class="location-list__metro moscow"><span>Менделеевская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/krylatskoe">Осенний Бульвар, 7К1</a>
-                                    <div class="location-list__metro moscow"><span>Крылатское</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/europe-square">Площадь Европы, 2 (Рэдиссон)</a>
-                                    <div class="location-list__metro moscow"><span>Киевская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/marino">Поречная, 10 (ТЦ Мари)</a>
-                                    <div class="location-list__metro moscow"><span>Марьино</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kommunarka">пос. Коммунарка, Липовый парк, д.5, к.2</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/academicheskaya">Пр. 60-Летия Октября, 14</a>
-                                    <div class="location-list__metro moscow"><span>Академическая</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/presnenskiy">Пресненский Вал, 14 К2</a>
-                                    <div class="location-list__metro moscow"><span>Улица 1905 года</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/belyaevo">Профсоюзная, 102А</a>
-                                    <div class="location-list__metro moscow"><span>Беляево</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/central">Пятницкая, 6/1</a>
-                                    <div class="location-list__metro moscow"><span>Новокузнецкая</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/rublevka">Рублёвское Шоссе, 62</a>
-                                    <div class="location-list__metro moscow"><span>Крылатское</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/svetmsk">Святоозерская, 16</a>
-                                    <div class="location-list__metro moscow"><span>Лухмановская</span><span>улица Дмитриевского</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/izmailovo">Сиреневый бульвар, д.16</a>
-                                    <div class="location-list__metro moscow"><span>Щёлковская</span><span>Первомайская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/degunino">Софьи Ковалевской, 6</a>
-                                    <div class="location-list__metro moscow"><span>Селигерская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kutuza">Студенческая, 26</a>
-                                    <div class="location-list__metro moscow"><span>Студенческая</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kaleidoscop">Сходненская, 56 (ТРЦ Калейдоскоп)</a>
-                                    <div class="location-list__metro moscow"><span>Сходненская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vernad">Удальцова, 71 К2</a>
-                                    <div class="location-list__metro moscow"><span>Проспект Вернадского</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/hodinka">Ходынский бульвар 20А (ЖК Лайнер)</a>
-                                    <div class="location-list__metro moscow"><span>ЦСКА</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/you-butovo">Чечерский проезд, 56 К1 (Бутово)</a>
-                                    <div class="location-list__metro moscow"><span>Бунинская аллея</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/newbutovo">Чечерский проезд, 122 К1 (Бутово Молл)</a>
-                                    <div class="location-list__metro moscow"><span>Бунинская аллея</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/sheremetevskaya">Шереметьевская, 20А</a>
-                                    <div class="location-list__metro moscow"><span>Марьина роща</span></div>
-                                </li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/msk-region/">Московская область</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/balashikha">Балашиха</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/vidnoe">Видное</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/voskresensk">Воскресенск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/dzr">Дзержинский</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/dolgoprudniy">Долгопрудный</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/domodedovo">Домодедово</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/zhelezka">Железнодорожный</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/zhukovskiy">Жуковский</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/zelenograd">Зеленоград</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/ilinskoe">Ильинское</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/klin">Клин</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/korolev">Королёв</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/krasnogorsk">Красногорск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/lubercy">Люберцы</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/mytischi">Мытищи</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novogorsk">Новогорск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/noginsk">Ногинск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/orezuev">Орехово-Зуево</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/podolsk">Подольск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/pushkino">Пушкино</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/ramenskoe">Раменское</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/reutov">Реутов</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/serpukhov">Серпухов</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/troick">Троицк</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/fryazino">Фрязино</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/himki-kalinina">Химки (Калинина)</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/chehov">Чехов</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/schelkovo">Щелково</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/schelkovo-centr">Щелково Центр</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/electrostal">Электросталь</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/murmansk">Мурманск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/murmansk">Шмидта, 33А</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">М</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/mahachkala">Махачкала</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/mahachkala">Танкаева, 15</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.by/minsk">Минск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/minsk">Туровского, 8</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/moscow/">Москва</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/">13-Я Парковая, 40</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/perovo">3-Я Владимирская, 20</a>
+                                <div class="location-list__metro moscow"><span class="location-list__metro--blue">Перово</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/caricino">6-Я Радиальная, 5 К.4</a>
+                                <div class="location-list__metro"><span class="location-list__metro--orange">Царицино</span><span class="location-list__metro--red">Тест</span><span class="location-list__metro--green">Тест</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/avtozavodskaya">Автозаводская, 18</a>
+                                <div class="location-list__metro moscow moscow--palegreen"><span>Автозаводская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/altufyevo">Алтуфьевское Шоссе, 70К.1</a>
+                                <div class="location-list__metro moscow moscow--violet"><span>Алтуфьево</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/fili">Береговой Проезд, 5 К2</a>
+                                <div class="location-list__metro moscow moscow--lightblue"><span class="location-list__metro--red">Шелепиха</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vdnh">Бориса Галушкина, 17</a>
+                                <div class="location-list__metro moscow moscow--blue"><span class="location-list__metro--green">ВДНХ</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/borisa-pasternaka-d-19">Бориса Пастернака, 19</a>
+                                <div class="location-list__metro moscow moscow--orange"><span>Рассказовка</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/novoperedelkino">Боровское Шоссе, 36</a>
+                                <div class="location-list__metro moscow moscow--grey"><span>Новопеределкино</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/aerobus">Варшавское шоссе, 95, К1 (ТЦ Аэробус)</a>
+                                <div class="location-list__metro moscow moscow--red"><span>Чертановское</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/dmitrovskoye_shosse">Дмитровское шоссе, 169, К1</a>
+                                <div class="location-list__metro moscow"></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nekrasovka">Вертолётчиков, 9/1</a>
+                                <div class="location-list__metro moscow"><span>Люберцы</span><span>Некрасовка</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/veshnyaki">Вешняковская, 2</a>
+                                <div class="location-list__metro moscow"><span>Новогиреево</span><span>Выхино</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/tushino">Вишневая, 9К.1</a>
+                                <div class="location-list__metro moscow"><span>Тушинская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/volgogradka">Волгоградский Проспект, 26А</a>
+                                <div class="location-list__metro moscow"><span>Волгоградский проспект</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kuzminki">Волжский Бульвар, КВ 114А, К1</a>
+                                <div class="location-list__metro moscow"><span>Кузьминки</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/sokol">Волоколамское Шоссе 15/22</a>
+                                <div class="location-list__metro moscow"><span>Стрешнево</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/garibaldi">Гарибальди, 7</a>
+                                <div class="location-list__metro moscow"><span>Новые Черемушки</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/dmd">Генерала Белова, 28 К1</a>
+                                <div class="location-list__metro moscow"><span>Домодедовская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/zhulebino">Генерала Кузнецова, 11К.1</a>
+                                <div class="location-list__metro moscow"><span>Жулебино</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/glavmosstroya">Главмосстроя, 12</a>
+                                <div class="location-list__metro moscow"><span>Говорово</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/taganka">Гончарная Набережная, 9/16 С2</a>
+                                <div class="location-list__metro moscow"><span>Таганская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/dobrolybova">Добролюбова, 20</a>
+                                <div class="location-list__metro moscow"><span>Фонвизинская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/rumyancevo">Киевское Шоссе, 6 СТР.1</a>
+                                <div class="location-list__metro moscow"><span>Румянцево</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/uznaya">Кировоградская, 9К1</a>
+                                <div class="location-list__metro moscow"><span>Южная</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/aviamotornaya">Красноказарменная, 19</a>
+                                <div class="location-list__metro moscow"><span>Авиамоторная</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/botsad">Лазоревый Проезд, 5 К3</a>
+                                <div class="location-list__metro moscow"><span>Ботанический сад</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/leningradka">Ленинградское Шоссе, 120 К3</a>
+                                <div class="location-list__metro moscow"><span>Беломорская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vershinina">Маршала Вершинина, 8К1</a>
+                                <div class="location-list__metro moscow"><span>Октябрьское поле</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/mashkova">Машкова, 24</a>
+                                <div class="location-list__metro moscow"><span>Курская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/michurinskiy">Мичуринский Проспект, 26</a>
+                                <div class="location-list__metro moscow"><span>Раменки</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/shabolovka">Мытная, 52</a>
+                                <div class="location-list__metro moscow"><span>Шаболовская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nagatinskaya">Нагатинская, 16</a>
+                                <div class="location-list__metro moscow"><span>Нагатинская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/nahimovsky">Нахимовский Проспект, 9К1</a>
+                                <div class="location-list__metro moscow"><span>Нахимовский проспект</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/novoslobodskaya">Новослободская, 52</a>
+                                <div class="location-list__metro moscow"><span>Менделеевская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/krylatskoe">Осенний Бульвар, 7К1</a>
+                                <div class="location-list__metro moscow"><span>Крылатское</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/europe-square">Площадь Европы, 2 (Рэдиссон)</a>
+                                <div class="location-list__metro moscow"><span>Киевская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/marino">Поречная, 10 (ТЦ Мари)</a>
+                                <div class="location-list__metro moscow"><span>Марьино</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kommunarka">пос. Коммунарка, Липовый парк, д.5, к.2</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/academicheskaya">Пр. 60-Летия Октября, 14</a>
+                                <div class="location-list__metro moscow"><span>Академическая</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/presnenskiy">Пресненский Вал, 14 К2</a>
+                                <div class="location-list__metro moscow"><span>Улица 1905 года</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/belyaevo">Профсоюзная, 102А</a>
+                                <div class="location-list__metro moscow"><span>Беляево</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/central">Пятницкая, 6/1</a>
+                                <div class="location-list__metro moscow"><span>Новокузнецкая</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/rublevka">Рублёвское Шоссе, 62</a>
+                                <div class="location-list__metro moscow"><span>Крылатское</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/svetmsk">Святоозерская, 16</a>
+                                <div class="location-list__metro moscow"><span>Лухмановская</span><span>улица Дмитриевского</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/izmailovo">Сиреневый бульвар, д.16</a>
+                                <div class="location-list__metro moscow"><span>Щёлковская</span><span>Первомайская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/degunino">Софьи Ковалевской, 6</a>
+                                <div class="location-list__metro moscow"><span>Селигерская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kutuza">Студенческая, 26</a>
+                                <div class="location-list__metro moscow"><span>Студенческая</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/kaleidoscop">Сходненская, 56 (ТРЦ Калейдоскоп)</a>
+                                <div class="location-list__metro moscow"><span>Сходненская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/vernad">Удальцова, 71 К2</a>
+                                <div class="location-list__metro moscow"><span>Проспект Вернадского</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/hodinka">Ходынский бульвар 20А (ЖК Лайнер)</a>
+                                <div class="location-list__metro moscow"><span>ЦСКА</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/you-butovo">Чечерский проезд, 56 К1 (Бутово)</a>
+                                <div class="location-list__metro moscow"><span>Бунинская аллея</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/newbutovo">Чечерский проезд, 122 К1 (Бутово Молл)</a>
+                                <div class="location-list__metro moscow"><span>Бунинская аллея</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/moscow/sheremetevskaya">Шереметьевская, 20А</a>
+                                <div class="location-list__metro moscow"><span>Марьина роща</span></div>
+                            </li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/msk-region/">Московская область</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/balashikha">Балашиха</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/vidnoe">Видное</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/voskresensk">Воскресенск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/dzr">Дзержинский</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/dolgoprudniy">Долгопрудный</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/domodedovo">Домодедово</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/zhelezka">Железнодорожный</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/zhukovskiy">Жуковский</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/zelenograd">Зеленоград</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/ilinskoe">Ильинское</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/klin">Клин</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/korolev">Королёв</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/krasnogorsk">Красногорск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/lubercy">Люберцы</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/mytischi">Мытищи</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novogorsk">Новогорск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/noginsk">Ногинск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/orezuev">Орехово-Зуево</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/podolsk">Подольск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/pushkino">Пушкино</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/ramenskoe">Раменское</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/reutov">Реутов</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/serpukhov">Серпухов</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/troick">Троицк</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/fryazino">Фрязино</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/himki-kalinina">Химки (Калинина)</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/chehov">Чехов</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/schelkovo">Щелково</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/schelkovo-centr">Щелково Центр</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/msk-region/electrostal">Электросталь</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/murmansk">Мурманск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/murmansk">Шмидта, 33А</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-n">Н</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/nahodka">Находка</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nahodka/">Владивостокская, 13</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/nizh-novgorod/">Нижний Новгород</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nizh-novgorod/belinskogo">Белинского, 102</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nizh-novgorod/sovetskaya">Советская площадь, 5</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/nizhnevartovsk">Нижневартовск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nizhnevartovsk">Омская, 38, пом. 1004</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/norilsk/">Норильск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/norilsk/leninskiy">Ленинский проспект, 5</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/talnah">ул. Таймырская, д.32</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/n-urengoi">Новый Уренгой</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/n-urengoi">Проспект Энтузиастов, 1</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/novorossiysk">Новороссийск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novorossiysk">Свободы, 3/5</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/novosibirsk">Новосибирск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novosibirsk">Каменская, 23</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/nab-chelny">Набережные Челны</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nab-chelny">Проспект Вахитова, 54А</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/noyabrsk">Ноябрьск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/noyabrsk">Новоселов, 6</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/neftekamsk">Нефтекамск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/neftekamsk">Проспект Комсомольский, 41</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ntagil">Нижний Тагил</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ntagil">Октябрьской революции, 46</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/novokuznetsk">Новокузнецк</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novokuznetsk">Кирова, 37</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Н</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/nahodka">Находка</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nahodka/">Владивостокская, 13</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/nizh-novgorod/">Нижний Новгород</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nizh-novgorod/belinskogo">Белинского, 102</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nizh-novgorod/sovetskaya">Советская площадь, 5</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/nizhnevartovsk">Нижневартовск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nizhnevartovsk">Омская, 38, пом. 1004</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/norilsk/">Норильск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/norilsk/leninskiy">Ленинский проспект, 5</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/talnah">ул. Таймырская, д.32</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/n-urengoi">Новый Уренгой</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/n-urengoi">Проспект Энтузиастов, 1</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/novorossiysk">Новороссийск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novorossiysk">Свободы, 3/5</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/novosibirsk">Новосибирск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novosibirsk">Каменская, 23</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/nab-chelny">Набережные Челны</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/nab-chelny">Проспект Вахитова, 54А</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/noyabrsk">Ноябрьск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/noyabrsk">Новоселов, 6</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/neftekamsk">Нефтекамск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/neftekamsk">Проспект Комсомольский, 41</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ntagil">Нижний Тагил</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ntagil">Октябрьской революции, 46</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/novokuznetsk">Новокузнецк</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/novokuznetsk">Кирова, 37</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-o">О</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/omsk">Омск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/omsk">Ленина, 14</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/orenburg">Оренбург</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/orenburg">9 Января, 45</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">О</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/omsk">Омск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/omsk">Ленина, 14</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/orenburg">Оренбург</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/orenburg">9 Января, 45</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-p">П</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/penza">Пенза</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/penza">ул. Карла Маркса, 28Б</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/perm">Пермь</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/perm">ул. Петропавловская, 82</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/petr-kamchatsky">Петропавловск-Камчатский</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/petr-kamchatsky">ул. Тушканова, 4</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.by/pinsk">Пинск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/pinsk">ул. ЖЕЛЕЗНОДОРОЖНАЯ 19</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/pskov">Псков</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/pskov">ул. Кузбасской Дивизии, 19</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">П</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/penza">Пенза</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/penza">ул. Карла Маркса, 28Б</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/perm">Пермь</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/perm">ул. Петропавловская, 82</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/petr-kamchatsky">Петропавловск-Камчатский</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/petr-kamchatsky">ул. Тушканова, 4</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.by/pinsk">Пинск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.by/pinsk">ул. ЖЕЛЕЗНОДОРОЖНАЯ 19</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/pskov">Псков</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/pskov">ул. Кузбасской Дивизии, 19</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-r">Р</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/rostov">Ростов-на-Дону</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/rostov">ул. Красноармейская, 210</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/rybinsk">Рыбинск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/rybinsk">ул. Волжская набережная, 67</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ryazan/">Рязань</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ryazan/mayakovskogo">Маяковского, 49</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ryazan/plaza">ТРЦ Виктория Плаза</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Р</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/rostov">Ростов-на-Дону</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/rostov">ул. Красноармейская, 210</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/rybinsk">Рыбинск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/rybinsk">ул. Волжская набережная, 67</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ryazan/">Рязань</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ryazan/mayakovskogo">Маяковского, 49</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ryazan/plaza">ТРЦ Виктория Плаза</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-s">С</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/samara">Самара</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/samara">ул. Ново-Садовая, 27</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/spb/">Санкт–Петербург</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/tehnolozhka">8-Я Красноармейская, 4/5</a>
-                                    <div class="location-list__metro piter"><span>Технологический институт</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/petrograd">Воскова, 16</a>
-                                    <div class="location-list__metro piter piter--green"><span>Горьковская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ozerki">Выборгское шоссе, 13А</a>
-                                    <div class="location-list__metro piter piter--palegreen"><span>Проспект Просвещения</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/gatchina">Гатчина, пр. 25-го октября, 34</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/gjatskaya">Гжатская, 22 К1</a>
-                                    <div class="location-list__metro piter piter--violet"><span>Академическая</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/nevsky">Грибоедова, 10</a>
-                                    <div class="location-list__metro piter piter--lightblue"><span>Невский проспект</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/kirochnaya">Кирочная, 9</a>
-                                    <div class="location-list__metro piter piter--blue"><span>Чернышевская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/kudrovo">Кудрово, Венская 4/1</a>
-                                    <div class="location-list__metro piter piter--orange"><span>Дыбенко</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/leninskiy">Ленинский проспект, 78 К1</a>
-                                    <div class="location-list__metro piter piter--grey"><span>Ленинский проспект</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/parnas">М. Дудина, 23 К1</a>
-                                    <div class="location-list__metro piter piter--red"><span>Парнас</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/sadovaya">Московский проспект, 6</a>
-                                    <div class="location-list__metro piter"><span>Садовая</span><span>Спасская</span><span>Сенная площадь</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ostrov">Нахимова, 20</a>
-                                    <div class="location-list__metro piter"><span>Приморская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/optikov">Оптиков, 34/1</a>
-                                    <div class="location-list__metro piter"><span>Береговая</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/obuhov">Пр. Обуховской обороны, 271А</a>
-                                    <div class="location-list__metro piter"><span>Пролетарская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ozerki-toreza">Проспект Тореза, 95</a>
-                                    <div class="location-list__metro piter"><span>Озерки</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/koroleva">Проспект Королёва, 59, 5</a>
-                                    <div class="location-list__metro piter"><span>Пионерская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/pionerskaya">Проспект Королёва, 2</a>
-                                    <div class="location-list__metro piter"><span>Пионерская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/slava">Проспект Славы, 43/49</a>
-                                    <div class="location-list__metro piter"><span>Международная</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/mayakovskaya">Пушкинская, 12</a>
-                                    <div class="location-list__metro piter"><span>Площадь Восстания</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/tipanova">Типанова, 21, Лит. А</a>
-                                    <div class="location-list__metro piter"><span>Московская</span></div>
-                                </li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ladozhsky">Проспект Энтузиастов, 33 К1</a>
-                                    <div class="location-list__metro piter"><span>Ладожская</span></div>
-                                </li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/sochi/">Сочи</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/sochi/vorovskogo">Воровского, 18</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/sochi/adler">Кирова, 30</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/sevastopol">Севастополь</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/sevastopol">ул. Очаковцев, 19, ТЦ "Плаза"</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/stavropol">Ставрополь</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/stavropol">ул. Космонавтов, 2</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/surgut">Сургут</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/surgut">пр-кт Мира, 47</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/simferopol">Симферополь</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/simferopol">ул. Дзюбанова, 2А</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/salehard">Салехард</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/salehard">ул. Республики, д. 75, 124</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/syktyvkar">Сыктывкар</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/syktyvkar">ул. Куратова, 83</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">С</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/spb/">Санкт–Петербург</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/tehnolozhka">8-Я Красноармейская, 4/5</a>
+                                <div class="location-list__metro piter"><span>Технологический институт</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/petrograd">Воскова, 16</a>
+                                <div class="location-list__metro piter piter--green"><span>Горьковская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ozerki">Выборгское шоссе, 13А</a>
+                                <div class="location-list__metro piter piter--palegreen"><span>Проспект Просвещения</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/gatchina">Гатчина, пр. 25-го октября, 34</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/gjatskaya">Гжатская, 22 К1</a>
+                                <div class="location-list__metro piter piter--violet"><span>Академическая</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/nevsky">Грибоедова, 10</a>
+                                <div class="location-list__metro piter piter--lightblue"><span>Невский проспект</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/kirochnaya">Кирочная, 9</a>
+                                <div class="location-list__metro piter piter--blue"><span>Чернышевская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/kudrovo">Кудрово, Венская 4/1</a>
+                                <div class="location-list__metro piter piter--orange"><span>Дыбенко</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/leninskiy">Ленинский проспект, 78 К1</a>
+                                <div class="location-list__metro piter piter--grey"><span>Ленинский проспект</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/parnas">М. Дудина, 23 К1</a>
+                                <div class="location-list__metro piter piter--red"><span>Парнас</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/sadovaya">Московский проспект, 6</a>
+                                <div class="location-list__metro piter"><span>Садовая</span><span>Спасская</span><span>Сенная площадь</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ostrov">Нахимова, 20</a>
+                                <div class="location-list__metro piter"><span>Приморская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/optikov">Оптиков, 34/1</a>
+                                <div class="location-list__metro piter"><span>Береговая</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/obuhov">Пр. Обуховской обороны, 271А</a>
+                                <div class="location-list__metro piter"><span>Пролетарская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ozerki-toreza">Проспект Тореза, 95</a>
+                                <div class="location-list__metro piter"><span>Озерки</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/koroleva">Проспект Королёва, 59, 5</a>
+                                <div class="location-list__metro piter"><span>Пионерская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/pionerskaya">Проспект Королёва, 2</a>
+                                <div class="location-list__metro piter"><span>Пионерская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/slava">Проспект Славы, 43/49</a>
+                                <div class="location-list__metro piter"><span>Международная</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/mayakovskaya">Пушкинская, 12</a>
+                                <div class="location-list__metro piter"><span>Площадь Восстания</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/tipanova">Типанова, 21, Лит. А</a>
+                                <div class="location-list__metro piter"><span>Московская</span></div>
+                            </li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/spb/ladozhsky">Проспект Энтузиастов, 33 К1</a>
+                                <div class="location-list__metro piter"><span>Ладожская</span></div>
+                            </li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/sochi/">Сочи</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/sochi/vorovskogo">Воровского, 18</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/sochi/adler">Кирова, 30</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/sevastopol">Севастополь</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/sevastopol">ул. Очаковцев, 19, ТЦ "Плаза"</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/stavropol">Ставрополь</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/stavropol">ул. Космонавтов, 2</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/surgut">Сургут</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/surgut">пр-кт Мира, 47</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/samara">Самара</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/samara">ул. Ново-Садовая, 27</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/simferopol">Симферополь</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/simferopol">ул. Дзюбанова, 2А</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/salehard">Салехард</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/salehard">ул. Республики, д. 75, 124</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/syktyvkar">Сыктывкар</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/syktyvkar">ул. Куратова, 83</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-t">Т</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/tyumen">Тюмень</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tyumen">ул. Мориса Тореза, 12А</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/tambov">Тамбов</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tambov"> ул. Советская, 156</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/togliatti">Тольятти</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/togliatti">ул. Южное Шоссе, 67Г</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/tomsk">Томск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tomsk">ул. Трифонова, 22</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/tver">Тверь</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tver">Волоколамский пр., 25, К.1</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/tbilisi">Тбилиси</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tbilisi">пр. Александра Казбеги, 11</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/tula">Тула</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tula">ул. Демонстрации, д.1Б</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Т</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/tyumen">Тюмень</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tyumen">ул. Мориса Тореза, 12А</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/tambov">Тамбов</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tambov"> ул. Советская, 156</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/togliatti">Тольятти</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/togliatti">ул. Южное Шоссе, 67Г</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/tomsk">Томск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tomsk">ул. Трифонова, 22</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/tver">Тверь</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tver">Волоколамский пр., 25, К.1</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/tbilisi">Тбилиси</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tbilisi">пр. Александра Казбеги, 11</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/tula">Тула</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/tula">ул. Демонстрации, д.1Б</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-u">У</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ust-kaman">Усть-Каменогорск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ust-kaman">ул. Кабанбай Батыра, д. 156</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ufa">Уфа</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ufa">ул. Ленина, 65</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ussuriysk">Уссурийск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ussuriysk">ул. Некрасова, д.36</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ulsk">Ульяновск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ulsk">ул. Октябрьская, д.48</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">У</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ust-kaman">Усть-Каменогорск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ust-kaman">ул. Кабанбай Батыра, д. 156</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ufa">Уфа</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ufa">ул. Ленина, 65</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ussuriysk">Уссурийск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ussuriysk">ул. Некрасова, д.36</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ulsk">Ульяновск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ulsk">ул. Октябрьская, д.48</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-h">Х</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/khabarovsk">Хабаровск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/khabarovsk">ул. Ким Ю Чена</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/hm">Ханты–Мансийск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/hm">ул. Мира, 44</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Х</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/khabarovsk">Хабаровск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/khabarovsk">ул. Ким Ю Чена</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/hm">Ханты–Мансийск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/hm">ул. Мира, 44</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-ch">Ч</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/cheboksary">Чебоксары</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/cheboksary">ул. Ярославская, 58</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/cherepovets">Череповец</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/cherepovets">Шекснинский пр-кт, 21</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/cheliabinsk">Челябинск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/cheliabinsk">ул. Кирова, 86</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Ч</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/cheboksary">Чебоксары</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/cheboksary">ул. Ярославская, 58</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/cherepovets">Череповец</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/cherepovets">Шекснинский пр-кт, 21</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/cheliabinsk">Челябинск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/cheliabinsk">ул. Кирова, 86</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-yu">Ю</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/yugorsk">Югорск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/yugorsk">ул. Кирова, 10</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Ю</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/yugorsk">Югорск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/yugorsk">ул. Кирова, 10</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter smooth-target" id="letter-ya">Я</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/yaroslavl">Ярославль</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/yaroslavl">ул. Максимова, 12</a></li>
-                            </ul>
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/yakutsk">Якутск</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/yakutsk">ул. Пирогова, 6</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">Я</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/yaroslavl">Ярославль</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/yaroslavl">ул. Максимова, 12</a></li>
+                        </ul>
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/yakutsk">Якутск</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/yakutsk">ул. Пирогова, 6</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter">UA</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="https://oldboybarbershop.com/ua/">Украина</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ua/odessa">Одесса</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ua/harkov">Харьков</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">UA</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="https://oldboybarbershop.com/ua/">Украина</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ua/odessa">Одесса</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="https://oldboybarbershop.com/ua/harkov">Харьков</a></li>
+                        </ul>
                     </div>
-                    <div class="branch-addresses__index">
-                        <div class="branch-addresses__letter">EU</div>
-                        <div class="branch-addresses__content">
-                            <ul class="location-list">
-                                <li class="location-list__city"><a href="http://eu.oldboybarbershop.com/en">Europe</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/barcelona">Испания, Барселона</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/marbella">Испания, Барселона</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/cyprus">Кипр</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/mlawa">Польша</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/beograd">Сербия</a></li>
-                                <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/budva">Черногория</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="branch-addresses__index">
+                    <div class="branch-addresses__letter">EU</div>
+                    <div class="branch-addresses__content">
+                        <ul class="location-list">
+                            <li class="location-list__city"><a href="http://eu.oldboybarbershop.com/en">Europe</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/barcelona">Испания, Барселона</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/marbella">Испания, Барселона</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/cyprus">Кипр</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/mlawa">Польша</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/beograd">Сербия</a></li>
+                            <li class="location-list__item"><a class="location-list__link" href="http://eu.oldboybarbershop.com/en/budva">Черногория</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
