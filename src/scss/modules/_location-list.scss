@@ -5,7 +5,9 @@
     margin-bottom: 30px;
 
     // visual
+    break-inside: avoid;
     list-style-type: none;
+    page-break-inside: avoid;
 }
 
 .location-list__city {
@@ -47,7 +49,9 @@
     z-index: 1;
 
     // typography
+    break-inside: avoid;
     font-size: 0.85rem;
+    page-break-inside: avoid;
     list-style: none;
 
     @include atTablet {
