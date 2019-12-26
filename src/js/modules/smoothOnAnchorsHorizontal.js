@@ -2,9 +2,10 @@ class SmoothOnAnchorsHorizontal {
     constructor(obj) {
         this.alphabet = document.querySelector('.location-selector__alphabet');
         this.containerTarget = document.querySelector('.branch-addresses__container');
-        this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
-        this.target = this.containerTarget.querySelectorAll(obj.targets);
+        
         if(this.alphabet && this.containerTarget) {
+            this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
+            this.target = this.containerTarget.querySelectorAll(obj.targets);
             this.addEvents();
         }
     }
@@ -13,17 +14,17 @@ class SmoothOnAnchorsHorizontal {
         return t;
     }
 
-    scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset) {
+    scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset, widthOfEl) {
         const runtime = stamp - start;
         let progress = runtime / duration;
         const ease = this.ease(progress);
         progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemTop * ease + (startScrollOffset - scrollEndElemTop)) - 200;
+        this.containerTarget.scrollLeft = (scrollEndElemTop * ease + (startScrollOffset - scrollEndElemTop)) - widthOfEl;
 
         if(runtime < duration){
         requestAnimationFrame(() => {
             const stamp = new Date().getTime();
-            this.scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+            this.scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset, widthOfEl);
         })
         }
     }
@@ -31,6 +32,11 @@ class SmoothOnAnchorsHorizontal {
     scrolling(evt, target) {
         evt.preventDefault();
         const scrollEndElem = document.querySelector(`#${target}`);
+        let widthOfTargetEl;
+        if(scrollEndElem.parentElement !== null) {
+            widthOfTargetEl = scrollEndElem.parentElement.offsetWidth;
+        }
+
         const anim = requestAnimationFrame(() => {
             const stamp = new Date().getTime();
             const duration = 500;
@@ -38,7 +44,7 @@ class SmoothOnAnchorsHorizontal {
             const startScrollOffset = scrollEndElem.offsetLeft;
             
             const scrollEndElemTop = scrollEndElem.getBoundingClientRect().left;
-        this.scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+        this.scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset, widthOfTargetEl);
         });
     }
 

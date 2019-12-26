@@ -1,0 +1,135 @@
+.photo-gallery {
+    // box model
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+}
+
+.photo-gallery__slider-container {
+    // positioning
+    position: relative;
+}
+
+.photo-gallery__slider {
+    // positioning
+    position: relative;
+    z-index: 2;
+}
+
+.photo-gallery__slider-controls {
+    // positioning
+    position: absolute;
+    z-index: 1;
+    bottom: -80px;
+    left: 0;
+
+    // box model
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 20px;
+    align-items: center;
+    
+    @include atTablet {
+        // positioning
+        bottom: -70px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: 0;
+        left: 80px;
+        bottom: auto;
+
+        // box model
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    @include atDesktopL {
+        // positioning
+        left: -50px;
+
+        // box model
+        width: calc(100% + 100px);
+    }
+}
+
+.photo-gallery__slider-button {
+    // box model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: opacity 0.25s ease;
+
+        &:hover {
+            // visual
+            opacity: 0.7;
+        }
+
+    &:before {
+        // positioning
+        transform: translateY(-10px);
+
+        // box model
+        height: 100%;
+        width: 100%;
+
+        // typography
+        color: $golden;
+        font-family: $titleFont;
+        font-size: 48px;
+    }
+
+    &--prev {
+        &:before {
+            content: '<';
+        }
+    }
+
+    &--next {
+        &:before {
+            content: '>';
+        }
+    }
+}
+
+.photo-gallery__slider-link {
+    // box model
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include atDesktopS {
+        // box model
+        width: 75%;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 100%;
+    }
+}
+
+.photo-gallery__slider-link img {
+    // box model
+    display: block;
+    width: 100%;
+}
