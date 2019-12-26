@@ -11,6 +11,7 @@ class HorizontalScroll {
 
     events() {
         this.branchContainer.addEventListener('wheel', (event) => {
+            console.log(this.branchContainer.scrollLeft);
             event.preventDefault();
             if (event.deltaMode == event.DOM_DELTA_PIXEL) {
                 var modifier = 1;
