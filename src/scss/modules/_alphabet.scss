@@ -24,10 +24,9 @@
 
 .alphabet__item {
     // box model
-    margin-right: 5px;
-
+    
     // visual
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out 0.3s;
 }
 
 .alphabet__item--active {
@@ -38,20 +37,59 @@
 
 .alphabet__trigger {
     // box model
-    padding: 5px;
-
+    display: flex;
+    justify-content: center;
+    width: 17px;
+    
     // typography
     color: $golden;
     font-family: $titleFont;
+    font-size: 0.85rem;
     text-transform: uppercase;
     
     // visual
+    border: 1px solid transparent;
     text-decoration: none;
-    transition: all ease-in-out 1s;
-
+    // transition: all ease-in-out 0.3s;
+    
     @include atSmallMobile {
         // box model
-        // margin-right: 10px;
+        width: 20px;
+
+        // typography
+        font-size: 1rem;
+    }
+    
+    @include atTablet {
+        // box model
+        // width: 20px;
+        // padding: 5px;
+
+        // typography
+        // font-size: 1.2rem;
+    }
+
+    @include atTablet {
+        // box model
+        // margin-right: 5px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-right: 5px;
+        width: 22px;
+
+        // typography
+        font-size: 1.1rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: 10px;
+        width: 25px;
+
+        // typography
+        font-size: 1.3rem;
     }
 }
 
@@ -63,9 +101,8 @@
 
 .alphabet__trigger--active {
     // typography
-    pointer-events: none;
-
+    color: $light;
     background-color: $golden;
     border-radius: 50%;
-
+    pointer-events: none;
 }
