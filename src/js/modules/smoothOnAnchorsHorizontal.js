@@ -78,7 +78,7 @@ class SmoothOnAnchorsHorizontal {
                     el.style.pointerEvents = 'none';
                 }
                 else {
-                    el.style.color = 'initial';
+                    el.style.color = '#d6a354';
                     el.style.pointerEvents = 'initial';
                 }
             })
