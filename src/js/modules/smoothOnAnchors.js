@@ -2,7 +2,7 @@ import SmoothScroll from './SmoothScroll';
 
 class SmoothOnAnchors {
     constructor() {
-        this.anchors = [...document.querySelectorAll('.smooth-trigger')];
+        this.anchors = [...document.querySelectorAll('.alphabet__trigger')];
         if(this.anchors) {
             this.addEvents();
         }

@@ -23,16 +23,26 @@
 }
 
 .alphabet__item {
+    // box model
+    margin-right: 5px;
+
     // visual
     transition: all ease-in-out 1s;
 }
 
-.alphabet__item a {
+.alphabet__item--active {
+    // visual
+    background-color: $golden;
+    border-radius: 50%;
+}
+
+.alphabet__trigger {
     // box model
-    margin-right: 5px;
+    padding: 5px;
 
     // typography
     color: $golden;
+    font-family: $titleFont;
     text-transform: uppercase;
     
     // visual
@@ -41,12 +51,21 @@
 
     @include atSmallMobile {
         // box model
-        margin-right: 10px;
+        // margin-right: 10px;
     }
 }
 
-.alphabet__item a:hover {
+.alphabet__trigger:hover {
     // visual
     border-bottom: 1px solid $golden;
 }
 
+
+.alphabet__trigger--active {
+    // typography
+    pointer-events: none;
+
+    background-color: $golden;
+    border-radius: 50%;
+
+}
