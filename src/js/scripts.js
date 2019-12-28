@@ -149,7 +149,7 @@ if(document.querySelector('.photo-gallery__slider-container')) {
 }
 
 new SmoothOnAnchorsHorizontal({
-    triggers: '.smooth-trigger',
+    triggers: '.alphabet__trigger',
     targets: '.smooth-target'
 });
 

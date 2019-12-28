@@ -19,7 +19,7 @@ class SmoothOnAnchorsHorizontal {
         let progress = runtime / duration;
         const ease = this.ease(progress);
         progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl;
+        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + 120;
 
         if(runtime < duration){
         requestAnimationFrame(() => {
@@ -68,6 +68,7 @@ class SmoothOnAnchorsHorizontal {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];
             const correct = el.href.replace(href, '');
+
             this.btns.map((el) => {
                 const reg = /.*(#)/g;
                 const href = el.href.match(reg)[0];
@@ -78,12 +79,10 @@ class SmoothOnAnchorsHorizontal {
                     el.style.pointerEvents = 'none';
                 }
                 else {
-                    el.style.color = '#d6a354';
-                    el.style.pointerEvents = 'initial';
+                    el.classList.remove('alphabet__trigger--active');
                 }
             })
-            el.style.color = 'red';
-            el.style.pointerEvents = 'none';
+            el.classList.add('alphabet__trigger--active');
             
             this.scrolling(event, correct);
         }))
