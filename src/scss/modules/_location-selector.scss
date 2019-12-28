@@ -52,22 +52,37 @@
 }
 
 .location-selector__header {
+    // positioning
+    position: fixed;
+    z-index: 5;
+
     // box model
-    padding: 25px;
-    padding-bottom: 0;
+    width: 95%;
+    padding-left: 25px;
+    padding-top: 25px;
+
+    // visual
+    background-color: $light;
 
     @include atTablet {
-        // box model
-        // padding-bottom: 70px;
+    position: unset;
+
+    // box model
+    width: auto;
+    margin-bottom: 30px;
+    padding: 25px;
+    padding-bottom: 0;
     }
 
     @include atDesktopS {
         // box model
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0;
         padding: 50px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
 }
 
@@ -79,7 +94,7 @@
     @include atDesktopS {
         // box model
         display: flex;
-        margin: 0;
+        // margin: 0;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -199,18 +214,30 @@
 }
 
 .location-selector__content {
-    // positioning
-    position: relative;
+    // box model
+    margin-top: 230px;
+
+    @include atTablet {
+        // box model
+        margin-top: 0;
+    }
 }
 
 .location-selector__alphabet {
     // positioning
-    // position: fixed;
-    // left: 50%;
-    // top: 18%;
-    // transform: translateX(-50%);
-    
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    // visual
+    background-color: $light;
+
     @include atTablet {
+        // positioning
+        position: unset;
+
+        // box model
         display: flex;
         justify-content: center;
         margin-bottom: 25px;
@@ -218,6 +245,7 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 30px;
+        margin: 0 auto;
+        // margin-bottom: 30px;
     }
 }
