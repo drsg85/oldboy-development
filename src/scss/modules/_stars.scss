@@ -14,7 +14,7 @@
 
     @include atDesktopS {
         // box model
-        max-width: 850px;
+        max-width: 717px;
     }
 
     @include atDesktopM {
@@ -43,6 +43,9 @@
     // positioning
     position: relative;
     z-index: 2;
+
+    // box model
+    padding: 0;
 }
 
 .stars__slider-container {
@@ -71,6 +74,7 @@
 .stars__slider-item img {
     // box model
     display: block;
+    width: 100%;
     max-width: 100%;
     margin-right: auto;
     margin-left: auto;

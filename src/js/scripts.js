@@ -57,6 +57,7 @@ if(document.querySelector('.in-countries__slider-container')) {
         mode: 'carousel',
         container: '.in-countries__slider',
         slideBy: 'page',
+        loop: false,
         mouseDrag: false,
         gutter: 5,
         nav: false,
@@ -86,11 +87,11 @@ if(document.querySelector('.stars__slider-container')) {
     const starsSlider = new tns({
         mode: 'carousel',
         container: '.stars__slider',
-        slideBy: 'page',
+        slideBy: 1,
         mouseDrag: true,
         nav: false,
-        center: true,
-        edgePadding: -45,
+        
+        loop: false,
         controls: true,
         controlsContainer: '.stars__slider-controls',
         navPosition: 'bottom',
@@ -98,13 +99,18 @@ if(document.querySelector('.stars__slider-container')) {
         responsive: {
             700: {
                 items: 2,
-                edgePadding: 0
+                slideBy: 2,
+                gutter: 0
+            },
+
+            1000: {
+                fixedWidth: 360,
+                gutter: 40
             },
             
             1200: {
                 items: 3,
                 slideBy: 3,
-                gutter: 40,
             }
         }
     });
@@ -115,6 +121,7 @@ if(document.querySelector('.photo-gallery__slider-container')) {
         mode: 'carousel',
         container: '.photo-gallery__slider',
         slideBy: 'page',
+        loop: false,
         mouseDrag: false,
         gutter: 0,
         center: true,
