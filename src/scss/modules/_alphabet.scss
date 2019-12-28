@@ -23,10 +23,26 @@
 }
 
 .alphabet__item {
-    // box model
-    
+    // typography
+    font-size: 1rem;
+
     // visual
     transition: all ease-in-out 0.3s;
+
+    @include atTablet {
+        // typography
+        font-size: 1.2rem;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.3rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: 5px;
+    }
 }
 
 .alphabet__item--active {
@@ -39,58 +55,19 @@
     // box model
     display: flex;
     justify-content: center;
-    width: 17px;
+    align-items: center;
+    width: 1.2em;
+    height: 1.2em;
     
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 0.85rem;
     text-transform: uppercase;
     
     // visual
     border: 1px solid transparent;
     text-decoration: none;
     // transition: all ease-in-out 0.3s;
-    
-    @include atSmallMobile {
-        // box model
-        width: 20px;
-
-        // typography
-        font-size: 1rem;
-    }
-    
-    @include atTablet {
-        // box model
-        // width: 20px;
-        // padding: 5px;
-
-        // typography
-        // font-size: 1.2rem;
-    }
-
-    @include atTablet {
-        // box model
-        // margin-right: 5px;
-    }
-
-    @include atDesktopS {
-        // box model
-        margin-right: 5px;
-        width: 22px;
-
-        // typography
-        font-size: 1.1rem;
-    }
-
-    @include atDesktopM {
-        // box model
-        margin-right: 10px;
-        width: 25px;
-
-        // typography
-        font-size: 1.3rem;
-    }
 }
 
 .alphabet__trigger:hover {
