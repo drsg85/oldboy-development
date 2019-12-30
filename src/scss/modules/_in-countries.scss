@@ -3,12 +3,13 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     padding: 0 20px;
 
     @include atTablet {
         // box model
         max-width: 570px;
+        margin-bottom: 60px;
         padding: 0;
     }
 
@@ -155,19 +156,6 @@
 
 .in-countries__slider-controls {
     // positioning
-    // position: absolute;
-    // top: 0;
-    // left: -50px;
-    // z-index: 1;
-
-    // box model
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // width: calc(100% + 100px);
-    // height: 100%;
-
-    // positioning
     position: absolute;
     z-index: 1;
     bottom: -80px;
@@ -177,7 +165,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-left: 20px;
     align-items: center;
     
     @include atTablet {
