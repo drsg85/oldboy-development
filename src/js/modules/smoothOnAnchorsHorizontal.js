@@ -2,7 +2,7 @@ class SmoothOnAnchorsHorizontal {
     constructor(obj) {
         this.alphabet = document.querySelector('.location-selector__alphabet');
         this.containerTarget = document.querySelector('.branch-addresses__container');
-        
+        this.branchAddresses = document.querySelector('.branch-addresses');
         if(this.alphabet && this.containerTarget) {
             this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
             this.target = this.containerTarget.querySelectorAll(obj.targets);
@@ -15,11 +15,13 @@ class SmoothOnAnchorsHorizontal {
     }
 
     scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl) {
+        const leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
+        console.log(leftPadding);
         const runtime = stamp - start;
         let progress = runtime / duration;
         const ease = this.ease(progress);
         progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + 120;
+        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
 
         if(runtime < duration){
         requestAnimationFrame(() => {
