@@ -3,7 +3,7 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     padding: 0 20px;
 
     @include atTablet {
@@ -14,12 +14,12 @@
 
     @include atDesktopS {
         // box model
-        max-width: 850px;
+        max-width: 717px;
     }
 
     @include atDesktopM {
         // box model
-        max-width: 1140px;
+        max-width: 1100px;
     }
 }
 
@@ -43,6 +43,9 @@
     // positioning
     position: relative;
     z-index: 2;
+
+    // box model
+    padding: 0;
 }
 
 .stars__slider-container {
@@ -71,7 +74,8 @@
 .stars__slider-item img {
     // box model
     display: block;
-    max-width: 220px;
+    width: 100%;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
 
