@@ -96,10 +96,15 @@
         </div>
         <div class="hero__content">
             <article class="news-header">
+				{% set description = content.field_description %}
+				{% if (content.field_post_teaser|render|striptags|trim) %}
+					{% set description = content.field_post_teaser %}
+				{% endif %}
+
                 <header class="news-header__header">
 					<p class="news-header__category">{{ content.field_tags }}</p>
 					<h1 class="news-header__title">{{ content.field_display_name }}</h1>
-					<p class="news-header__details">{{ content.field_description }}</p>
+					<p class="news-header__details">{{ description }}</p>
                 </header>
                 <footer class="news-header__footer">
 					<p class="news-header__date"><span>Дата:</span><br>{{ content.field_date_publish }} </p>
