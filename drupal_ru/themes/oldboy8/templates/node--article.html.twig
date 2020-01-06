@@ -123,7 +123,19 @@
     </header>
     <main>
         <article class="article">
-			{{ content|without('field_tags')|without('field_bg_big')|without('field_bg_small')|without('field_bg_teaser')|without('field_display_name')|without('field_description')|without('field_date_publish')|without('field_post_type')|without('field_images')|without('field_author')|without('field_schema')|without('field_schema2') }}
+			{{ content|without('field_tags')|without('field_bg_big')|without('field_bg_small')|without('field_bg_teaser')|without('field_post_teaser')|without('field_display_name')|without('field_description')|without('field_date_publish')|without('field_post_type')|without('field_images')|without('field_author') }}
+			{% if content.field_author %}
+            <footer class="article__footer">
+                <div class="article__footer-block">
+                    <h5 class="article__footer-title">Автор:</h5>
+                    <p class="article__author">{{ content.field_author  }}</p>
+                </div>
+                <div class="article__footer-block">
+                    <h5 class="article__footer-title">Дата публикации:</h5>
+                    <p class="article__date">{{ node.field_date_publish.0.value|date('d.m.Y') }}</p>
+                </div>
+            </footer>
+			{% endif %}
         </article>
 
         <section class="news-feed">
