@@ -121,7 +121,8 @@
 		{% set stations = node.field_metro.0.value|raw|striptags|trim|split("\n") %}
 		{% for station in stations %}
 			{% if station %}
-				<span>{{ station }}</span>
+                {% set secName = station|split('(') %}
+				<span>{{ secName[0] }}</span>
 			{% endif %}
 		{% endfor %}
 	</p>
@@ -153,7 +154,7 @@
 					{% endif %}
                 </div>
 
--                <div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
+-                <div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" id="signup" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
                     <ul class="social">
 						{% if content.field_link_vk.0 %}
 							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}" target="_blank">ВКонтакте</a></li>
