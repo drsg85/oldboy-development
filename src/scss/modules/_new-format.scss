@@ -8,13 +8,18 @@
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
     padding: 0 20px;
 
     @include atTablet {
         // box model
         flex-direction: row;
         padding: 0 30px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 0;
     }
 }
 
