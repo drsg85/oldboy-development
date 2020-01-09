@@ -101,6 +101,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 20px;
@@ -288,7 +289,7 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        bottom: 10px;
+        bottom: 65px;
         right: 30px;
 
         // typography

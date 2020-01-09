@@ -375,14 +375,37 @@
     }
 
     &--franchise {
+        // box model
+        // height: 100vh;
+        // min-height: 520px;
+        // max-height: 700px;
+
         // visual
-        background-image: url('./img/franchise/franchise-m.jpg');
+        background-image: url('./img/franchise/hero-fr.jpg');
         background-size: cover;
         background-position: bottom center;
 
+        @include atTablet {
+            // box model
+            min-height: 640px;
+        }
+
         @include atDesktopS {
-            // visual
-            background-image: url('./img/franchise/franchise-d.jpg');
+            // box model
+            max-height: 700px;
+        }
+
+        @include atDesktopM {
+            // box model
+            min-height: 680px;
+            max-height: 740px;
+        }
+
+        @include atDesktopL {
+            // box model
+            min-height: 780px;
+            height: 100vh;
+            max-height: 900px;
         }
     }
 
@@ -734,6 +757,16 @@
             }
         }
     }
+
+    &--franchise {
+        @include atDesktopS {
+            // box model
+            height: 100%;
+            max-height: 600px;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+    }
 }
 
 .hero__content-header {
@@ -1073,6 +1106,16 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 11;
+
+            // typography
+            text-align: center;
+        }
+    }
+
+    &--franchise {
+        @include atTablet {
+            // box model
+            margin: 0 auto;
 
             // typography
             text-align: center;

@@ -111,4 +111,9 @@
 .start-stuff__item-text {
     // box model
     margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 24px;
 }
