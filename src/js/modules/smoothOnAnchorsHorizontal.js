@@ -21,7 +21,7 @@ class SmoothOnAnchorsHorizontal {
         let progress = runtime / duration;
         const ease = this.ease(progress);
         progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
+        this.containerTarget.scrollLeft = (scrollEndElemLeft + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
 
         if(runtime < duration){
         requestAnimationFrame(() => {
