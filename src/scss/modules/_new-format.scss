@@ -147,3 +147,13 @@
     // visual
     background-color: $golden;
 }
+
+.new-format__button {
+    // box model
+    margin: 0 auto;
+
+    @include atTablet {
+        // box model
+        margin: unset;
+    }
+}
