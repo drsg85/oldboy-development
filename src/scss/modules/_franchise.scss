@@ -73,9 +73,24 @@
 
 .franchise__content-item {
     // box model
+    height: 50px;
     width: 100%;
     max-width: 110px;
     margin-bottom: 30px;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        height: auto;
+    }
+}
+
+.franchise__content-number {
+    // typography
+    color: $golden;
+    font-family: $titleFont;
 }
 
 .franchise__content-title {
@@ -87,6 +102,7 @@
     font-family: $mainFont;
     font-size: 18px;
     font-weight: 700;
+    text-transform: uppercase;
 
     @include atTablet {
         // typography
@@ -101,28 +117,36 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 350px;
+    padding-left: 20px;
 
     @include atTablet {
         // box model
-        padding: 0 30px;
+        display: block;
+        flex-wrap: nowrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        column-width: 170px;
+        column-gap: 40px;
+        padding-left: 40px;
+        margin-bottom: 40px;
     }
-    
-    @include atDesktopL {
+
+    @include atDesktopS {
         // box model
-        padding: 0;
+        padding-left: 60px;
     }
 }
 
 .franchise__countries-item {
     // box model
     display: flex;
+    break-inside: avoid;
     justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     width: 100%;
     max-width: 50%;
     margin-bottom: 40px;
@@ -288,7 +312,7 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        bottom: 10px;
+        bottom: 65px;
         right: 30px;
 
         // typography
