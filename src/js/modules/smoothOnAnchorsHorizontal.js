@@ -14,21 +14,38 @@ class SmoothOnAnchorsHorizontal {
         return t;
     }
 
+    animate({timing, draw, duration}) {
+        const start = performance.now();
+        requestAnimationFrame(function animate(time) {
+            let timeFraction = (time - start) / duration;
+            if(timeFraction > 1) timeFraction = 1;
+            let progress = timing(timeFraction);
+            draw(progress);
+            if(timeFraction < 1) requestAnimationFrame(animate);
+        });
+    }
+
     scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl) {
         const leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
-        console.log(leftPadding);
-        const runtime = stamp - start;
-        let progress = runtime / duration;
-        const ease = this.ease(progress);
-        progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemLeft + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
+        // const runtime = stamp - start;
+        // let progress = runtime / duration;
+        // const ease = this.ease(progress);
+        // progress = Math.min(progress, 1);
+        this.animate({
+            duration: 600,
+            timing: this.ease,
+            draw: pct => {
+                this.containerTarget.scrollLeft = pct * ((scrollEndElemLeft + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding);
+            }
+        })
+        //this.containerTarget.scrollLeft = (scrollEndElemLeft + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
 
-        if(runtime < duration){
+        /* if(runtime < duration){
         requestAnimationFrame(() => {
             const stamp = new Date().getTime();
             this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl);
         })
-        }
+        } */
     }
 
     scrolling(evt, target) {
@@ -52,8 +69,6 @@ class SmoothOnAnchorsHorizontal {
             console.log(scrollEndElem);
         }
     }
-
-    
 
     addEvents() {
         this.btns.map((el) => {
