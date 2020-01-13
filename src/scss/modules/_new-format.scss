@@ -64,6 +64,13 @@
     }
 }
 
+.new-format__slide img {
+    // box model
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .new-format__header {
     // box model
     margin-bottom: 15px;

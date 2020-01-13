@@ -84,6 +84,8 @@
     @include atTablet {
         // box model
         height: auto;
+        width: unset;
+        max-width: unset;
     }
 }
 
