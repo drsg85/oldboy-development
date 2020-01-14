@@ -2,7 +2,7 @@
     // box model
     width: 100%;
     max-width: 1140px;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 20px;
@@ -20,7 +20,7 @@
 
 .start-stuff__header {
     // box model
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .start-stuff__title {
@@ -37,11 +37,20 @@
 .start-stuff__content {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    // justify-content: flex-start;
     justify-content: space-between;
-    // align-items: flex-start;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .start-stuff__item {

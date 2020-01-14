@@ -1,4 +1,7 @@
 .application-form {
+    // positioning
+    position: relative;
+
     // box model
     padding-top: 60px;
     padding-bottom: 55px;
@@ -10,12 +13,16 @@
 
     @include atTablet {
         // box model
-        margin-bottom: 55px;
+        // margin-bottom: 55px;
         padding-top: 75px;
-        padding-bottom: 150px;
 
         // visual
         overflow: hidden;
+
+        @include atDesktopS {
+            // box model
+            padding-bottom: 150px;
+        }
     }
 }
 
@@ -62,5 +69,39 @@
                 right: -550px;
             }
         }
+    }
+}
+
+.application-form__contacts {
+    // box model
+    margin: 0 auto;
+    max-width: 300px;
+
+    @include atTablet {
+        // box model
+        max-width: 350px;
+        margin-top: 200px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        left: calc(100% - 520px);
+        bottom: 780px;
+
+        // box model
+        max-width: unset;
+        margin-top: 0;
+    }
+
+    @include atDesktopM {
+        // positioning
+        // bottom: 780px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        right: 10%;
+        top: 200px;
     }
 }

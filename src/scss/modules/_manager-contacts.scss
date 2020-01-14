@@ -1,26 +1,8 @@
-.investment-contacts {
-    // box model
-    margin: 0 auto;
+.manager-contacts {
 
-    @include atDesktopS {
-        // positioning
-        position: absolute;
-        left: calc(100% - 520px);
-        bottom: 650px;
-    }
-
-    @include atDesktopM {
-        // positioning
-        bottom: 730px;
-    }
-
-    @include atDesktopL {
-        // positioning
-        bottom: 600px;
-    }
 }
 
-.investment-contacts__title {
+.manager-contacts__title {
     // box model
     margin: 0;
 
@@ -35,7 +17,7 @@
     }
 }
 
-.investment-contacts__phone {
+.manager-contacts__phone {
     // box model
     margin: 0;
 
@@ -54,12 +36,12 @@
     }
 }
 
-.investment-contacts__phone:hover {
+.manager-contacts__phone:hover {
     // visual
     opacity: 0.7;
 }
 
-.investment-contacts__name {
+.manager-contacts__name {
     // box model
     margin: 0;
 

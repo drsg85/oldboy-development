@@ -236,20 +236,20 @@ html(lang="en")
             
             section.start-stuff
                 header.start-stuff__header
-                    h2.start-stuff__title Для старта потребуется
+                    h2.start-stuff__title Старт в цифрах
                 
                 .start-stuff__content
                     .start-stuff__item
                         .start-stuff__item-number 500 000 ₽
                         .start-stuff__item-title паушальный взнос
                         .start-stuff__item-subtitle
-                            p.start-stuff__item-text + 100 000 ₽ за город от 100 тыс. до 1 млн. неселения
-                            p.start-stuff__item-text + 300 000 ₽ за город миллионник
-                            p.start-stuff__item-text + 100 000 ₽ за эксклюзив на город
+                            p.start-stuff__item-text + 100 000 ₽ за&nbsp;город&nbsp; с населением от 100&nbsp;тыс. до&nbsp;1&nbsp;млн. человек
+                            p.start-stuff__item-text + 300 000 ₽ за&nbsp;город миллионник
+                            p.start-stuff__item-text + 100 000 ₽ за эксклюзив на&nbsp;город
                     .start-stuff__item
                         .start-stuff__item-number 5% / мес.
                         .start-stuff__item-title роялти
-                        h3.start-stuff__item-subtitle Но не более 30 000 ₽ 
+                        h3.start-stuff__item-text Но не более 30 000 ₽ 
                     .start-stuff__item
                         .start-stuff__item-number 950 000 ₽
                         h3.start-stuff__item-title стоимость открытия барбершопа
@@ -261,7 +261,7 @@ html(lang="en")
                         h3.start-stuff__item-title время запуска бизнеса
                     .start-stuff__item
                         .start-stuff__item-number 24/7
-                        h3.start-stuff__item-title Ваш персональный менеджр всегда на связи
+                        h3.start-stuff__item-title Ваш персональный менеджр всегда на&nbsp;связи
 
 
             section.fr-benefits
@@ -543,48 +543,14 @@ html(lang="en")
                         .stars__slider-controls
                             button.stars__slider-button.stars__slider-button--prev prev
                             button.stars__slider-button.stars__slider-button--next next
-                
-                section.photo-gallery
-                    header.stars__header
-                        h2.stars__title Фотогалерея
-                        
-                    .photo-gallery__slider-container
-                        ul.photo-gallery__slider
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-first
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459-1140x760.jpg', alt='')
-                            
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-second
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg', alt='')
-                            
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-third
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/2.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/2-1140x760.jpg', alt='')
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-fourth
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/4.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/4-1140x760.jpg', alt='')
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-fifth
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_0069.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_0069-1140x760.jpg', alt='')
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-six
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7377.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7377-1140x760.jpg', alt='')
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-seven
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/05/IMG_7459-1140x760.jpg', alt='')
-                            li.photo-gallery__slider-item#photo-gallery__slider-item-eight
-                                a.photo-gallery__slider-link(href='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg')
-                                    img(src='https://oldboy-franchise.ru/wp-content/uploads/2018/04/1-6.jpg', alt='')
-                        
-                        .photo-gallery__slider-controls
-                            button.photo-gallery__slider-button.photo-gallery__slider-button--prev prev
-                            button.photo-gallery__slider-button.photo-gallery__slider-button--next next
+
+
             section.application-form.smooth-target#form-target
                 header.section-header
                     h2.section-header__title Форма<br>заявки
                     p.section-header__subtitle Oldboy&nbsp;Франшиза
                 .application-form__content
+
                     form#application-form.form(action="")
                         legend.form__legend
                             p.form__title Открой собственный барбершоп oldboy у себя в&nbsp;городе
@@ -609,6 +575,12 @@ html(lang="en")
                         .form__input-group
                             input.form__submit-btn.button(type="submit" value="Отправить заявку")
 
+                .application-form__contacts
+                    .manager-contacts
+                        p.manager-contacts__title Менеджер отдела по работе с клиентами
+                        a.manager-contacts__phone(href="tel:+79118660079") +7 (911) 866-00-79
+                        p.manager-contacts__name Ирина
+
         footer.footer
             .footer__content
                 .footer__info-n-contacts
@@ -629,7 +601,7 @@ html(lang="en")
                                 li.social__item
                                     a.social__icon.icon--instagram(href="https://www.instagram.com/oldboy_kaliningrad/") Instagram
 
-                        .contact.contact--footer
+                        //- .contact.contact--footer
                             h3.contact__title Телефон
                             a.contact__value(href="tel:+79814536555") +7 (981) 453-65-55
 

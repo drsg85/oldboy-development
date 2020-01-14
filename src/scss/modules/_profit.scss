@@ -295,3 +295,25 @@
         text-align: left;
     }
 }
+
+.profit__contacts {
+    // box model
+    margin: 0 auto;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        left: calc(100% - 520px);
+        bottom: 650px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        bottom: 730px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        bottom: 600px;
+    }
+}
