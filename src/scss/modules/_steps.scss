@@ -4,7 +4,7 @@
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     
     @include atDesktopS {
         // box model
@@ -19,7 +19,7 @@
 
 .steps__header {
     // box model
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     // typography
     text-align: left;
@@ -78,7 +78,7 @@
 .steps__step-number {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     // typography
     color: $golden;

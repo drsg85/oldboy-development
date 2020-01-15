@@ -76,6 +76,7 @@
     // box model
     margin: 0 auto;
     max-width: 300px;
+    margin-top: 60px;
 
     @include atTablet {
         // box model
@@ -101,7 +102,7 @@
 
     @include atDesktopL {
         // positioning
-        right: 10%;
+        right: 9%;
         top: 200px;
     }
 }

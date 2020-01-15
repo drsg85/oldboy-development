@@ -1,7 +1,11 @@
 .franchise {
     // box model
     margin-top: 70px;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
+
+    @include atTablet {
+    margin-bottom: 96px;
+    }
 }
 
 .franchise__map {
