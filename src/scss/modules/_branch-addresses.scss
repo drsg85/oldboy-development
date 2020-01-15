@@ -36,10 +36,14 @@
 }
 
 .branch-addresses__letter {
+    // positioning
+    position: relative;
+
     // box model
     width: 32px;
     margin-bottom: 15px;
-
+    padding-top: 205px;
+    
     // typography
     color: $light;
     font-family: $titleFont;
@@ -47,15 +51,42 @@
     line-height: 32px;
     text-align: center;
 
-    // visual
-    background-color: $golden;
-    border-radius: 50%;
-
     &--active {
         // box model
         
         // visual
 	    animation: rotate-vert-center .9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    &:after {
+      content: "";
+      
+      // positioning
+      position: absolute;
+      left: 0;
+      z-index: -1;
+
+      // box model
+      width: 100%;
+      height: 32px;
+
+      // visual
+      background-color: $golden;
+      border-radius: 50%;
+    }
+
+    @include atTablet {
+      // box model
+      padding: 0;
+
+      // visual
+      background-color: $golden;
+      border-radius: 50%;
+
+      &:after {
+        // box model
+        display: none;
+      }
     }
 }
 

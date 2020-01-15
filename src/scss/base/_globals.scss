@@ -34,6 +34,11 @@ html {
     -webkit-overflow-scrolling:touch;
 }
 
+body {
+    // positioning
+    position: relative;
+}
+
 *,
 *::before,
 *::after {

@@ -30,8 +30,6 @@ const goToElement = new GoToElement();
 
 new ToTop();
 
-new SmoothOnAnchors();
-
 new TabSwitcher({
     tabs: '.price-list__btn',
     elToOpen: '.price-list__container'
@@ -148,9 +146,14 @@ if(document.querySelector('.photo-gallery__slider-container')) {
     lightGallery(document.getElementById('photo-gallery__slider-item-eight'));
 }
 
-new SmoothOnAnchorsHorizontal({
-    triggers: '.alphabet__trigger',
-    targets: '.smooth-target'
-});
+if(document.body.clientWidth >= 700) {
+    new SmoothOnAnchorsHorizontal({
+        triggers: '.alphabet__trigger',
+        targets: '.smooth-target'
+    });
+}
+else {
+    new SmoothOnAnchors();
+}
 
 new HorizontalScroll();

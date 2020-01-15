@@ -25,27 +25,15 @@ class SmoothOnAnchorsHorizontal {
         });
     }
 
-    scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl) {
+    scrollToLeft(scrollEndElemLeft, startScrollOffset, widthOfEl) {
         const leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
-        // const runtime = stamp - start;
-        // let progress = runtime / duration;
-        // const ease = this.ease(progress);
-        // progress = Math.min(progress, 1);
         this.animate({
             duration: 600,
             timing: this.ease,
             draw: pct => {
-                this.containerTarget.scrollLeft = pct * ((scrollEndElemLeft + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding);
+                this.containerTarget.scrollLeft = (scrollEndElemLeft * pct + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
             }
         })
-        //this.containerTarget.scrollLeft = (scrollEndElemLeft + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
-
-        /* if(runtime < duration){
-        requestAnimationFrame(() => {
-            const stamp = new Date().getTime();
-            this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl);
-        })
-        } */
     }
 
     scrolling(evt, target) {
@@ -54,19 +42,12 @@ class SmoothOnAnchorsHorizontal {
         let widthOfTargetEl;
         if(scrollEndElem !== null) {
             widthOfTargetEl = scrollEndElem.parentElement.offsetWidth;
+
             const anim = requestAnimationFrame(() => {
-                const stamp = new Date().getTime();
-                const duration = 500;
-                const start = stamp;
                 const startScrollOffset = scrollEndElem.offsetLeft;
-                
                 const scrollEndElemLeft = scrollEndElem.getBoundingClientRect().left;
-            this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfTargetEl);
+            this.scrollToLeft(scrollEndElemLeft, startScrollOffset, widthOfTargetEl);
             });
-        }
-        
-        else {
-            console.log(scrollEndElem);
         }
     }
 
@@ -81,6 +62,7 @@ class SmoothOnAnchorsHorizontal {
                 el.style.pointerEvents = 'none';
             }
         })
+        
         this.btns.map((el) => el.addEventListener('click', (event) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];
@@ -99,6 +81,7 @@ class SmoothOnAnchorsHorizontal {
                     el.classList.remove('alphabet__trigger--active');
                 }
             })
+
             el.classList.add('alphabet__trigger--active');
             
             this.scrolling(event, correct);
