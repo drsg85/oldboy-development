@@ -1,0 +1,47 @@
+.investment-features {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 915px;
+    padding-left: 115px;
+}
+
+.investment-features__item {
+    // positioning
+    position: relative;
+
+    // box model
+    max-width: 310px;
+    margin-bottom: 85px;
+
+    // visual
+    background-image: url('./img/icons/scissors.svg');
+    background-repeat: no-repeat;
+    background-position: -50px 0;
+}
+
+.investment-features__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.investment-features__title span {
+    // typography
+    font-size: 1.3rem;
+}
+
+.investment-features__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-size: 1.1rem;
+}

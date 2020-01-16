@@ -733,9 +733,9 @@
 
     &--investment {
         // box model
+        flex-direction: column;
         height: 90%;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 0;
 
         @include atSmallMobile {
             // box model
@@ -744,16 +744,17 @@
 
         @include atTablet {
             // box model
-            flex-direction: row;
+            // flex-direction: row;
         }
         
         .hero__caption {
             // box model
             padding: 0;
+            margin-bottom: 110px;
             
             @include atTablet {
                 // box model
-                width: 360px;
+                // width: 360px;
             }
         }
     }
@@ -864,7 +865,7 @@
         transform: none;
 
         // box model
-        align-self: center;
+        // align-self: center;
 
         // box model
         width: 550px;
@@ -873,7 +874,7 @@
 
     @include atDesktopM {
         // box model
-        width: 750px;
+        width: 870px;
     }
 }
 
@@ -881,9 +882,13 @@
     // typography
     font-size: 1.3rem;
 
+    // visual
+    border-bottom: none;
+    border-top: none;
+
     @include atTablet {
         // box model
-        padding: 10px 0;
+        // padding: 10px 0;
 
         // typography
         font-size: 2rem;
@@ -891,13 +896,17 @@
 
     @include atDesktopS {
         // box model
-        padding: 15px 0;
+        // padding: 15px 0;
 
         // typography
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     @include atDesktopM {
+        // box model
+        margin: 0;
+        padding: 0;
+
         // typography
         line-height: 1.2;
     }
@@ -913,6 +922,14 @@
     // typography
     text-align: unset;
     }
+}
+
+.hero__content--investment .hero-caption__motto--gold {
+    // box model
+    max-width: initial;
+
+    // typography
+    font-size: 1.4rem;
 }
 
 .hero__caption {
@@ -1120,6 +1137,15 @@
             // typography
             text-align: center;
         }
+    }
+
+    &--investment {
+        // positioning
+        top: -200px;
+
+        // box model
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
