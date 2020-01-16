@@ -4,21 +4,56 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 915px;
-    padding-left: 115px;
+    padding-left: 55px;
 }
 
 .investment-features__item {
     // positioning
     position: relative;
+    z-index: 5;
 
     // box model
-    max-width: 310px;
-    margin-bottom: 85px;
+    max-width: 370px;
+    margin-bottom: 40px;
+    padding-left: 60px;
+    padding-top: 25px;
 
     // visual
-    background-image: url('./img/icons/scissors.svg');
+    overflow: hidden;
+}
+
+.investment-features__item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transform: rotate(-15deg);
+    z-index: -1;
+
+    // box model
+    display: block;
+    width: 155px;
+    height: 150px;
+
+    // visual
+    background-image: url('./img/icons/investment-dark.svg');
     background-repeat: no-repeat;
-    background-position: -50px 0;
+}
+
+.investment-features__item::after {
+    content: "";
+
+    // box model
+    display: block;
+    width: 70%;
+    height: 2px;
+    margin-left: -25%;
+    margin-top: 15px;
+
+    // visual
+    background-color: rgba($bianca, 0.3);
 }
 
 .investment-features__title {

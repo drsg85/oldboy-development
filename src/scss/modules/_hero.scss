@@ -750,7 +750,7 @@
         .hero__caption {
             // box model
             padding: 0;
-            margin-bottom: 110px;
+            margin-bottom: 60px;
             
             @include atTablet {
                 // box model
@@ -1141,7 +1141,7 @@
 
     &--investment {
         // positioning
-        top: -200px;
+        top: -150px;
 
         // box model
         margin-left: auto;
