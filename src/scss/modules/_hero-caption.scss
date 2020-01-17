@@ -324,13 +324,29 @@
 }
 
 .hero-caption__reference {
+    // box model
+    // display: none;
+
     // positioning
     position: absolute;
-    bottom: 120px;
+    bottom: 0;
     right: 0;
 
     // typography
     color: $golden;
     font-family: $titleFont;
     text-transform: uppercase;
+
+    @include atDesktopM {
+        // positioning
+        bottom: 70px;
+
+        // box model
+        display: block;
+    }
+
+    @include atDesktopL {
+        // positioning
+        bottom: 120px;
+    }
 }
