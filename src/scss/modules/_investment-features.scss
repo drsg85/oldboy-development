@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 915px;
+    max-width: 985px;
     padding-left: 55px;
 }
 
@@ -28,7 +28,7 @@
     // positioning
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 10px;
     transform: rotate(-15deg);
     z-index: -1;
 
@@ -40,6 +40,16 @@
     // visual
     background-image: url('./img/icons/investment-dark.svg');
     background-repeat: no-repeat;
+}
+
+.investment-features__item--second::before {
+    // visual
+    background-image: url('./img/icons/finance.svg');
+}
+
+.investment-features__item--third::before {
+    // visual
+    background-image: url('./img/icons/laurel.svg');
 }
 
 .investment-features__item::after {
