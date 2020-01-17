@@ -3,30 +3,32 @@
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     padding: 0 20px;
 
     @include atTablet {
         // box model
         flex-direction: row;
+        margin-bottom: 90px;
         padding: 0 30px;
     }
 
     @include atDesktopM {
         // box model
+        margin-bottom: 120px;
         padding: 0;
     }
 }
 
 .trust-us__header {
     // box model
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .trust-us__title {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
 
     // typography
     color: $dark;
@@ -73,10 +75,10 @@
 
 .trust-us__number {
     // box model
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     // typography
-    color: $dark;
+    color: $golden;
     font-family: $titleFont;
     font-size: 60px;
 

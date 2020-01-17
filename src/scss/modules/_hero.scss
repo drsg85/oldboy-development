@@ -733,9 +733,9 @@
 
     &--investment {
         // box model
+        flex-direction: column;
         height: 90%;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 0;
 
         @include atSmallMobile {
             // box model
@@ -744,17 +744,7 @@
 
         @include atTablet {
             // box model
-            flex-direction: row;
-        }
-        
-        .hero__caption {
-            // box model
-            padding: 0;
-            
-            @include atTablet {
-                // box model
-                width: 360px;
-            }
+            // flex-direction: row;
         }
     }
 
@@ -850,56 +840,90 @@
     }
 }
 
-.hero__content--investment .hero-caption {
+.hero__content--investment .hero__caption {
     // box model
-    margin: 0 auto;
-
+    padding: 0;
+    // margin-bottom: 60px;
+        
     @include atTablet {
         // box model
-        margin: 0;
-    }
-    
-    @include atDesktopS {
-        // positioning
-        transform: none;
-
-        // box model
-        align-self: center;
-
-        // box model
-        width: 550px;
-        // margin-left: 200px;
+        // width: 360px;
     }
 
     @include atDesktopM {
         // box model
-        width: 750px;
+        margin-bottom: 40px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 60px;
+    }
+}
+
+.hero__content--investment .hero-caption {
+    // positioning
+    transform: none;
+
+    // box model
+    // margin: 0 auto;
+    width: 300px;
+
+    @include atTablet {
+        // box model
+        margin: 0;
+        width: 450px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        width: 550px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 600px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 870px;
     }
 }
 
 .hero__content--investment .hero-caption__big {
     // typography
-    font-size: 1.3rem;
+    font-size: 2.3rem;
+
+    // visual
+    border-bottom: none;
+    border-top: none;
 
     @include atTablet {
-        // box model
-        padding: 10px 0;
-
         // typography
         font-size: 2rem;
     }
 
     @include atDesktopS {
         // box model
-        padding: 15px 0;
 
         // typography
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     @include atDesktopM {
+        // box model
+        margin: 0;
+        padding: 0;
+
         // typography
-        line-height: 1.2;
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 3.5rem;
     }
 }
 
@@ -913,6 +937,14 @@
     // typography
     text-align: unset;
     }
+}
+
+.hero__content--investment .hero-caption__motto--gold {
+    // box model
+    max-width: initial;
+
+    // typography
+    font-size: 1.4rem;
 }
 
 .hero__caption {
@@ -1119,6 +1151,39 @@
 
             // typography
             text-align: center;
+        }
+    }
+
+    &--investment {
+        // positioning
+        position: relative;
+        top: -70px;
+
+        @include atTablet {
+        // box model
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        @include atDesktopS {
+            // positioning
+            top: 0;
+
+            // box model
+            margin-left: 0;
+        }
+
+        @include atDesktopM {
+            // positioning
+            top: -70px;
+
+            // box model
+            margin-left: auto;
+        }
+
+        @include atDesktopL {
+            // positioning
+            top: -120px;
         }
     }
 }
@@ -1396,5 +1461,15 @@
         // box model
         margin-bottom: 20px;
         margin-top: 0;
+    }
+}
+
+.hero__features {
+    // box model
+    display: none;
+
+    @include atDesktopM {
+        // box model
+        display: block;
     }
 }

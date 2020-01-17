@@ -1,7 +1,7 @@
 .fr-benefits {
     // box model
     padding: 45px 20px;
-    margin-bottom: 30px;
+    // margin-bottom: 120px;
 
     @include atTablet {
         // box model
@@ -94,7 +94,7 @@
 .fr-benefits__list {
     // box model
     margin: 0;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
     padding: 0;
 
     // visual
@@ -126,6 +126,12 @@
 .fr-benefits__conclusion {
     // box model
     padding: 0 calc((100% - 1100px)/2);
+    margin-bottom: 90px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 120px;
+    }
 }
 
 .fr-benefits__conclusion-text {

@@ -2,13 +2,14 @@
     // box model
     width: 100%;
     max-width: 1140px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 20px;
 
     @include atTablet {
         // box model
+        margin-bottom: 90px;
         padding: 0 30px;
     }
 
@@ -20,7 +21,7 @@
 
 .start-stuff__header {
     // box model
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .start-stuff__title {
@@ -37,43 +38,47 @@
 .start-stuff__content {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    // justify-content: flex-start;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .start-stuff__item {
     // box model
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    max-width: 100%;
-    
     margin-bottom: 30px;
 
     @include atTablet {
         // box model
-        flex-basis: 30%;
-        max-width: 30%;
-        margin-right: 20px;
+        width: 290px;
     }
 
     @include atDesktopS {
         // box model
-        margin-bottom: 85px;
+        // margin-bottom: 60px;
     }
 }
 
 .start-stuff__item-number {
     // box model
     margin: 0;
+    margin-bottom: 10px;
 
     // typography
-    color: $dark;
+    // color: $dark;
+    color: $golden;
     font-family: $titleFont;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 700;
 
     @include atDesktopS {
@@ -94,7 +99,7 @@
 
     @include atDesktopS {
         // typography
-        font-size: 30px;
+        font-size: 1.5rem;
     }
 }
 
@@ -104,7 +109,7 @@
     margin-bottom: 20px;
 
     // typography
-    color: $golden;
+    color: $dark;
     font-family: $mainFont;
     font-size: 18px;
 }

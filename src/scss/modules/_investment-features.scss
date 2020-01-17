@@ -1,0 +1,118 @@
+.investment-features {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    padding-left: 55px;
+
+    @include atDesktopL {
+        // box model
+        max-width: 990px;
+    }
+}
+
+.investment-features__item {
+    // positioning
+    position: relative;
+    z-index: 5;
+
+    // box model
+    max-width: 370px;
+    margin-bottom: 20px;
+    padding-left: 60px;
+    padding-top: 25px;
+
+    // visual
+    overflow: hidden;
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 40px;
+    }
+}
+
+.investment-features__item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    transform: rotate(-15deg);
+    z-index: -1;
+
+    // box model
+    display: block;
+    width: 125px;
+    height: 120px;
+
+    // visual
+    background-image: url('./img/icons/investment-dark.svg');
+    background-repeat: no-repeat;
+
+    @include atDesktopL {
+        // box model
+        width: 155px;
+        height: 150px;
+    }
+}
+
+.investment-features__item--second::before {
+    // visual
+    background-image: url('./img/icons/finance.svg');
+}
+
+.investment-features__item--third::before {
+    // visual
+    background-image: url('./img/icons/laurel.svg');
+}
+
+.investment-features__item::after {
+    content: "";
+
+    // box model
+    display: block;
+    width: 70%;
+    height: 2px;
+    margin-left: -25%;
+    margin-top: 15px;
+
+    // visual
+    background-color: rgba($bianca, 0.3);
+}
+
+.investment-features__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.7rem;
+    }
+}
+
+.investment-features__title span {
+    // typography
+    font-size: 1rem;
+
+    @include atDesktopL {
+        // typography
+        font-size: 1.3rem;
+    }
+}
+
+.investment-features__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-size: 1.1rem;
+}

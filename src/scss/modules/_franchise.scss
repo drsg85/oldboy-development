@@ -1,7 +1,11 @@
 .franchise {
     // box model
     margin-top: 70px;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
+
+    @include atTablet {
+    margin-bottom: 96px;
+    }
 }
 
 .franchise__map {
@@ -84,6 +88,8 @@
     @include atTablet {
         // box model
         height: auto;
+        width: unset;
+        max-width: unset;
     }
 }
 
