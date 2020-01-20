@@ -32,7 +32,6 @@
 @import 'modules/franch-promo';
 
 // location selector
-@import 'modules/alphabet';
 @import 'modules/location-selector';
 @import 'modules/location-logo';
 @import 'modules/place-groups';
@@ -95,7 +94,7 @@
 @import 'modules/protection';
 @import 'modules/advantages';
 @import 'modules/advantage-item';
-@import 'modules/investment-contacts';
+@import 'modules/manager-contacts';
 @import 'modules/lead-form';
 @import 'modules/currency';
 @import 'modules/video';
@@ -149,7 +148,10 @@
 @import "modules/trust-us";
 @import "modules/stars";
 @import "modules/start-stuff";
-
+@import "modules/in-countries";
+@import "modules/steps";
+@import "modules/photo-gallery";
+@import "modules/light-gallery";
 // landing
 @import "modules/landing-info";
 @import "modules/include-item";
@@ -163,6 +165,7 @@
 @import "modules/form-opener";
 @import "modules/rouble";
 @import "modules/investment-popup";
+@import "modules/investment-features";
 
 //vacancy
 @import "modules/fill-form";

@@ -6,15 +6,21 @@
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 1140px;
+    margin-bottom: 90px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
     padding: 0 20px;
 
     @include atTablet {
         // box model
         flex-direction: row;
+        margin-bottom: 120px;
         padding: 0 30px;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 0;
     }
 }
 
@@ -59,15 +65,22 @@
     }
 }
 
+.new-format__slide img {
+    // box model
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .new-format__header {
     // box model
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .new-format__title {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     // typography
     color: $dark;
@@ -89,7 +102,8 @@
 
 .new-format__text {
     // box model
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
     
     // typography
     color: $dark;
@@ -141,4 +155,14 @@
 .tns-nav-active {
     // visual
     background-color: $golden;
+}
+
+.new-format__button {
+    // box model
+    margin: 0 auto;
+
+    @include atTablet {
+        // box model
+        margin: unset;
+    }
 }

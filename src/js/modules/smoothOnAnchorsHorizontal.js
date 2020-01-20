@@ -2,9 +2,10 @@ class SmoothOnAnchorsHorizontal {
     constructor(obj) {
         this.alphabet = document.querySelector('.location-selector__alphabet');
         this.containerTarget = document.querySelector('.branch-addresses__container');
-        this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
-        this.target = this.containerTarget.querySelectorAll(obj.targets);
+        
         if(this.alphabet && this.containerTarget) {
+            this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
+            this.target = this.containerTarget.querySelectorAll(obj.targets);
             this.addEvents();
         }
     }
@@ -13,17 +14,17 @@ class SmoothOnAnchorsHorizontal {
         return t;
     }
 
-    scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset) {
+    scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl) {
         const runtime = stamp - start;
         let progress = runtime / duration;
         const ease = this.ease(progress);
         progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemTop * ease + (startScrollOffset - scrollEndElemTop)) - 200;
+        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl;
 
         if(runtime < duration){
         requestAnimationFrame(() => {
             const stamp = new Date().getTime();
-            this.scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+            this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl);
         })
         }
     }
@@ -31,20 +32,38 @@ class SmoothOnAnchorsHorizontal {
     scrolling(evt, target) {
         evt.preventDefault();
         const scrollEndElem = document.querySelector(`#${target}`);
-        const anim = requestAnimationFrame(() => {
-            const stamp = new Date().getTime();
-            const duration = 500;
-            const start = stamp;
-            const startScrollOffset = scrollEndElem.offsetLeft;
-            
-            const scrollEndElemTop = scrollEndElem.getBoundingClientRect().left;
-        this.scrollToTop(start, stamp, duration, scrollEndElemTop, startScrollOffset);
-        });
+        let widthOfTargetEl;
+        if(scrollEndElem !== null) {
+            widthOfTargetEl = scrollEndElem.parentElement.offsetWidth;
+            const anim = requestAnimationFrame(() => {
+                const stamp = new Date().getTime();
+                const duration = 500;
+                const start = stamp;
+                const startScrollOffset = scrollEndElem.offsetLeft;
+                
+                const scrollEndElemLeft = scrollEndElem.getBoundingClientRect().left;
+            this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfTargetEl);
+            });
+        }
+        
+        else {
+            console.log(scrollEndElem);
+        }
     }
 
     
 
     addEvents() {
+        this.btns.map((el) => {
+            const reg = /.*(#)/g;
+            const href = el.href.match(reg)[0];
+            const correct = el.href.replace(href, '');
+
+            if(document.querySelector(`#${correct}`) === null) {
+                el.style.color = '#cccccc';
+                el.style.pointerEvents = 'none';
+            }
+        })
         this.btns.map((el) => el.addEventListener('click', (event) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];

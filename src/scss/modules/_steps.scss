@@ -1,0 +1,100 @@
+.steps {
+    // box model
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 90px;
+    
+    @include atDesktopS {
+        // box model
+        padding: 0 30px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 0;
+    }
+}
+
+.steps__header {
+    // box model
+    margin-bottom: 30px;
+
+    // typography
+    text-align: left;
+}
+
+.steps__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 700px;
+    font-size: 36px;
+}
+
+.steps__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.steps__step {
+    // box model
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    // typography
+    text-align: left;
+
+    @include atTablet {
+        // box model
+        flex-basis: 48%;
+        max-width: 48%;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 47%;
+        max-width: 47%;
+        margin-bottom: 90px;
+    }
+
+    @include atDesktopM {
+        // box model
+        flex-basis: 22%;
+        max-width: 22%;
+    }
+}
+
+.steps__step-number {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.steps__step-descr {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}

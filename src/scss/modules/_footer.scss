@@ -288,6 +288,19 @@
         // box model
         display: none;
     }
+
+    &--franchise {
+        @include atDesktopS {
+            // box model
+            display: block;
+            order: 2;
+        }
+    }
+
+    &--franchise .footer__social-cta {
+        // box model
+        margin-top: 0;
+    }
 }
 
 .footer__social-cta {
@@ -302,6 +315,9 @@
 .footer__contacts {
     // box model
     padding: 15px 0;
+
+    // typography
+    text-align: center;
 
     // visual
     border-top: 2px solid $golden;

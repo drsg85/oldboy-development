@@ -1,41 +1,66 @@
 .branch-addresses {
     // box model
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
+    padding-left: 55px;
 
-    @include atDesktopS {
-      // box model
-      padding-left: 50px;
-      padding-right: 50px;
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 9800px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding-left: 65px;
     }
     
-    @include atDesktopM {
-      // box model
-      padding-left: 120px;
-      padding-right: 120px;
+    @include atDesktopS {
+        // box model
+        padding-top: 40px;
+        padding-left: 20px;
+        max-width: 900px;
+        height: 7000px;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 1270px;
+        height: 5500px;
     }
 }
 
-.branch-addresses__container {
+.branch-addresses__index {
+    // positioning
+    position: relative;
+
     // box model
-    height: 80vh;
+    margin-bottom: 40px;
+    margin-right: -20px;
 
     @include atTablet {
-      // box model
-      column-fill: auto;
-      // column-width: 25em;
-      column-width: 19em;
-      overflow: auto;
-      overflow-x: hidden;
+        // box model
+        width: 50%;
+        max-width: 300px;
     }
     
     @include atDesktopS {
-      // box model
-      column-width: 15em;
+        // box model
+        width: 33%;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: 50px;
     }
 }
 
 .branch-addresses__letter {
+    // positioning
+    position: absolute;
+    left: -41px;
+    top: -5px;
+
     // box model
     width: 32px;
     margin-bottom: 15px;
@@ -50,38 +75,4 @@
     // visual
     background-color: $golden;
     border-radius: 50%;
-
-    &--active {
-        // box model
-        
-        // visual
-	    animation: rotate-vert-center .9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    }
-}
-
-@-webkit-keyframes branch-addresses__letter--active {
-    0% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    100% {
-      -webkit-transform: rotateY(360deg);
-              transform: rotateY(360deg);
-    }
-  }
-  @keyframes rotate-vert-center {
-    0% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    100% {
-      -webkit-transform: rotateY(360deg);
-              transform: rotateY(360deg);
-    }
-  }
-
-.branch-addresses__index {
-    // box model
-    page-break-inside: avoid;
-    break-inside: avoid;
 }

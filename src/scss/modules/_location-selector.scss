@@ -44,7 +44,7 @@
         background: $golden;
         border-radius: 10px;
     }
-
+    
     &-track {
         // visual
         background: transparent !important;
@@ -55,11 +55,6 @@
     // box model
     padding: 25px;
     padding-bottom: 0;
-
-    @include atTablet {
-        // box model
-        // padding-bottom: 70px;
-    }
 
     @include atDesktopS {
         // box model
@@ -196,28 +191,4 @@
     // typography
     font-family: $mainFont;
     font-size: 0.85rem;
-}
-
-.location-selector__content {
-    // positioning
-    position: relative;
-}
-
-.location-selector__alphabet {
-    // positioning
-    // position: fixed;
-    // left: 50%;
-    // top: 18%;
-    // transform: translateX(-50%);
-    
-    @include atTablet {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 25px;
-    }
-
-    @include atDesktopS {
-        // box model
-        margin-bottom: 30px;
-    }
 }

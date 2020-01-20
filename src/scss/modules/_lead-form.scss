@@ -86,6 +86,11 @@
 
     // typography
     text-align: center;
+
+    &--full {
+        // box model
+        display: block;
+    }
 }
 
 .lead-form__item .button {
@@ -119,6 +124,12 @@
     @include atDesktopS {
         // box model
         width: 150px;
+    }
+
+    &--full {
+        // box model
+        width: 310px;
+        margin-top: 20px;
     }
 }
 
