@@ -3,6 +3,7 @@ class SmoothOnAnchorsHorizontal {
         this.alphabet = document.querySelector('.location-selector__alphabet');
         this.containerTarget = document.querySelector('.branch-addresses__container');
         this.branchAddresses = document.querySelector('.branch-addresses');
+        this.leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
         if(this.alphabet && this.containerTarget) {
             this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
             this.target = this.containerTarget.querySelectorAll(obj.targets);
@@ -26,12 +27,11 @@ class SmoothOnAnchorsHorizontal {
     }
 
     scrollToLeft(scrollEndElemLeft, startScrollOffset, widthOfEl) {
-        const leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
         this.animate({
             duration: 600,
             timing: this.ease,
             draw: pct => {
-                this.containerTarget.scrollLeft = (scrollEndElemLeft * pct + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + leftPadding;
+                this.containerTarget.scrollLeft = (scrollEndElemLeft * pct + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + this.leftPadding;
             }
         })
     }
@@ -51,7 +51,26 @@ class SmoothOnAnchorsHorizontal {
         }
     }
 
+    debounceOnResize(func) {
+        let timer;
+        return function (event) {
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, 450, event);
+        };
+    };
+
+    checkWindowWidth() {
+        if(window.innerWidth >=700 && window.innerWidth < 1000) {
+            this.leftPadding = 285;
+        }
+        else if(window.innerWidth >=1000 && window.innerWidth < 1200) {
+            this.leftPadding = 185;
+        }
+    }
+
     addEvents() {
+        window.addEventListener('resize', () => this.debounceOnResize(this.checkWindowWidth()));
+
         this.btns.map((el) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];

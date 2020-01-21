@@ -146,7 +146,7 @@ if(document.querySelector('.photo-gallery__slider-container')) {
     lightGallery(document.getElementById('photo-gallery__slider-item-eight'));
 }
 
-if(document.body.clientWidth >= 700) {
+if(window.innerWidth >= 700) {
     new SmoothOnAnchorsHorizontal({
         triggers: '.alphabet__trigger',
         targets: '.smooth-target'
