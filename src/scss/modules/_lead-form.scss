@@ -128,15 +128,20 @@
 
     &--full {
         // box model
-        width: 310px;
+        width: 280px;
         margin-top: 20px;
+
+        @include atDesktopS {
+            // box model
+            width: 310px;
+        }
     }
 }
 
 .lead-form__input::placeholder {
     // typography
     font-size: 0.85rem;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .lead-form__submit {
