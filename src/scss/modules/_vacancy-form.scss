@@ -324,10 +324,15 @@
     color: $light;
 }
 
+.vacancy-form__input:focus {
+    // visual
+    box-shadow: 0px 0px 15px 0px rgba(214,163,84,0.75);
+}
+
 .vacancy-form__input::placeholder {
     // typography
     font-size: 0.85rem;
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 .vacancy-form__input:valid + .description {
