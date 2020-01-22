@@ -16,6 +16,7 @@ import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
 import SmoothOnAnchorsHorizontal from './modules/smoothOnAnchorsHorizontal';
 import HorizontalScroll from './modules/horizontalScroll';
 import GoToElement from './modules/GoToElement';
+import FetchMasters from './modules/fetchMasters';
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -157,3 +158,5 @@ else {
 }
 
 new HorizontalScroll();
+
+//new FetchMasters();
