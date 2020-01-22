@@ -1280,7 +1280,7 @@
 .hero__app {
     // box model
     margin: 0 -20px;
-    margin-top: 60px;
+    margin-top: 120px;
 
     @include atTablet {
         // box model
@@ -1517,5 +1517,56 @@
     @include atDesktopM {
         // box model
         display: block;
+    }
+}
+
+.hero__rating {
+    // positioning
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 595px;
+
+    // box model
+    display: flex;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    border: 1px solid red;
+
+    @include atTablet {
+        // positioning
+        top: 430px;
+
+        // box model
+        margin: inherit;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: 120px;
+
+        // box model
+        width: 260px;
+        height: 60px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        top: 115px;
+
+        // box model
+        width: 300px;
+        height: 85px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        top: 215px;
+    }
+
+    @include atFullHD {
+        // positioning
+        top: 195px;
     }
 }
