@@ -121,3 +121,12 @@
     // visual
     background-image: url('./img/icons/top-barber.svg');
 }
+
+.member__feedback {
+    // positioning
+    position: absolute;
+    top: 0;
+
+    // box model
+    margin: 20px;
+}

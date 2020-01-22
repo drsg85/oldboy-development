@@ -1,0 +1,58 @@
+.feedback {
+    // positioning
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateZ(0);
+    z-index: 99;
+    backface-visibility: hidden;
+
+    // box model
+    width: 55vw;
+    height: 30vh;
+    margin: auto;
+    padding: 25px;
+
+    // visual
+    background-color: $bianca;
+    border-radius: 5px;
+    box-shadow: -1px 5px 12px 0 rgba(89, 90, 90, 0.3);
+}
+
+.feedback__title {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    font-family: $titleFont;
+    text-align: center;
+}
+
+.feedback__reviewer-name {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    font-family: $mainFont;
+}
+
+.feedback__text {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+
+    // typography
+    font-family: $mainFont;
+}
+
+.feedback__date {
+    // box model
+    margin: 0;
+
+    // typography
+    font-family: $mainFont;
+    text-align: right;
+}
