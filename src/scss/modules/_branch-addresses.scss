@@ -18,13 +18,16 @@
 
 .branch-addresses__container {
     // box model
-    height: 80vh;
+    height: 74vh;
 
     @include atTablet {
       // box model
       column-fill: auto;
       // column-width: 25em;
       column-width: 19em;
+      height: 66vh;
+
+      // visual
       overflow: auto;
       overflow-x: hidden;
     }
