@@ -19,13 +19,6 @@ class SmoothOnAnchors {
                 el.style.pointerEvents = 'none';
             }
         })
-        /* this.anchors.map((el) => {
-            const target = el.href.split('#')[1];
-            const smoothScroll = new SmoothScroll({
-                trigger: el,
-                target: document.querySelector(`#${target}`)
-            })
-        }) */
     }
 }
 

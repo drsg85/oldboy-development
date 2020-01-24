@@ -65,8 +65,8 @@
     &:before {
       content: '';
       display: block;
-      height: 205px;
-      margin-top: -205px;
+      height: 210px;
+      margin-top: -210px;
     }
 
     &:after {
@@ -75,6 +75,7 @@
       // positioning
       position: absolute;
       left: 0;
+      transform: translateY(-3px);
       z-index: -1;
 
       // box model
@@ -87,6 +88,9 @@
     }
 
     @include atTablet {
+      // positioning
+      transform: none;
+
       // box model
       padding: 0;
 
@@ -136,7 +140,7 @@
     &:first-child {
       .branch-addresses__letter {
         // box model
-        margin-top: 205px;
+        margin-top: 210px;
       }
     }
 

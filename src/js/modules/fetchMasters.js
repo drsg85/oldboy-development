@@ -8,7 +8,7 @@ class FetchMasters {
     addEvents() {
         window.onload = () => {
             const id = window["yClientsId"];
-            const url = `https://api.yclients.com/api/v1/staff/${id}`;
+            const url = `https://api.yclients.com/api/v1/comments/staff/${id}`;
 
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url);

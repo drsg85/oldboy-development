@@ -4,6 +4,7 @@ class SmoothOnAnchorsHorizontal {
         this.containerTarget = document.querySelector('.branch-addresses__container');
         this.branchAddresses = document.querySelector('.branch-addresses');
         this.leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
+
         if(this.alphabet && this.containerTarget) {
             this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
             this.target = this.containerTarget.querySelectorAll(obj.targets);
@@ -37,7 +38,9 @@ class SmoothOnAnchorsHorizontal {
     }
 
     scrolling(evt, target) {
-        evt.preventDefault();
+        if(window.innerWidth >= 700) {
+            evt.preventDefault();
+        }
         const scrollEndElem = document.querySelector(`#${target}`);
         let widthOfTargetEl;
         if(scrollEndElem !== null) {
