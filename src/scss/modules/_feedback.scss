@@ -1,5 +1,10 @@
 .feedback {
     // positioning
+    position: relative;
+}
+
+.feedback__container {
+    // positioning
     position: fixed;
     left: 0;
     right: 0;
@@ -9,8 +14,9 @@
     backface-visibility: hidden;
 
     // box model
+    display: none;
     width: 55vw;
-    height: 30vh;
+    height: 60vh;
     margin: auto;
     padding: 25px;
 
@@ -18,16 +24,31 @@
     background-color: $bianca;
     border-radius: 5px;
     box-shadow: -1px 5px 12px 0 rgba(89, 90, 90, 0.3);
+    overflow-y: scroll;
+
+    &--show {
+        // box model
+        display: block;
+    }
 }
 
 .feedback__title {
     // box model
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     // typography
+    color: $golden;
     font-family: $titleFont;
     text-align: center;
+}
+
+.feedback__item {
+    // box model
+    margin-bottom: 35px;
+
+    // visual
+    list-style-type: none;
 }
 
 .feedback__reviewer-name {
@@ -55,4 +76,80 @@
     // typography
     font-family: $mainFont;
     text-align: right;
+}
+
+.feedback__close-button {
+    // positioning
+    position: fixed;
+    right: 20%;
+    top: 15%;
+
+    // box model
+    display: none;
+    width: 20px;
+    height: 20px;
+
+    // visual
+    background: transparent;
+    border: none;
+
+    &--show {
+        // box model
+        display: block;
+    }
+}
+
+.feedback__close-button::after,
+.feedback__close-button::before {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 20px;
+
+  width: 26px;
+  height: 6px;
+  margin: -13px -3px;
+
+  background-color: $dark;
+}
+
+.feedback__close-button::before {
+  transform: rotate(45deg);
+}
+
+.feedback__close-button::after {
+  transform: rotate(-45deg);
+}
+
+.feedback__close-button:hover::after,
+.feedback__close-button:hover::before,
+.feedback__close-button:focus::after,
+.feedback__close-button:focus::before {
+  background-color: $grey;
+}
+
+.feedback__close-button:active::after,
+.feedback__close-button:active::before {
+  background-color: #4023a0;
+}
+
+.feedback__container::-webkit-scrollbar {
+    // box model
+    width: 8px;
+
+    & * {
+        background: transparent;
+    }
+
+    &-thumb {
+        // visual
+        background: $golden;
+        border-radius: 10px;
+    }
+    
+    &-track {
+        // visual
+        background: transparent !important;
+    }
 }
