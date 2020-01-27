@@ -1,6 +1,22 @@
 .feedback {
     // positioning
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 8;
+
+    // box model
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    // visual
+    background-color: rgba($dark, 0.7);
+
+    &--show {
+        // box model
+        display: block;
+    }
 }
 
 .feedback__container {
@@ -14,7 +30,7 @@
     backface-visibility: hidden;
 
     // box model
-    display: none;
+    display: block;
     width: 55vw;
     height: 60vh;
     margin: auto;
@@ -111,7 +127,7 @@
   height: 6px;
   margin: -13px -3px;
 
-  background-color: $dark;
+  background-color: $golden;
 }
 
 .feedback__close-button::before {

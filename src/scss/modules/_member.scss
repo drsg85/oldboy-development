@@ -127,7 +127,25 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 7;
 
     // box model
     margin: 20px;
+}
+
+.member__rating {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9;
+
+    // box model
+    width: 100px;
+    height: 30px;
+
+    // visual
+    border: 1px solid $golden;
 }
