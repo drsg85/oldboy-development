@@ -8,11 +8,7 @@
     max-width: 250px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 30px;
-
-    // visual
-    border-radius: 5px;
-    overflow: hidden;
+    margin-bottom: 60px;
 
     @include atTablet {
         // box model
@@ -24,6 +20,7 @@
         // box model
         max-width: 250px;
         margin: 20px;
+        margin-bottom: 60px;
     }
 }
 
@@ -47,27 +44,7 @@
 
     // visual
     background-image: linear-gradient(to top, $dark, transparent);
-    // border: 1px solid red;
 }
-
-// .member__header::before {
-//     content: '';
-
-//     // positioning
-//     position: absolute;
-//     bottom: -50px;
-//     left: 0;
-//     right: 0;
-//     transform: skewY(-15deg);
-//     z-index: -1;
-
-//     // box model
-//     height: 135px;
-
-//     // visual
-//     background-image: url('./img/dark-h-grunge.svg');
-//     background-size: cover;
-// }
 
 .member__name {
     // box model
@@ -99,6 +76,8 @@
     background-image: url('./img/team/placeholder.jpg');
     background-size: cover;
     background-position: center center;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .member__photo img {
@@ -120,4 +99,36 @@
 
     // visual
     background-image: url('./img/icons/top-barber.svg');
+}
+
+.member__feedback {
+    // positioning
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 7;
+
+    // box model
+    margin: 20px;
+}
+
+.member__rating {
+    // positioning
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    // box model
+    width: 150px; //5 stars
+    // width: 120px; //4 stars
+    // width: 90px; //3 stars
+    // width: 60px; //2 stars
+    // width: 30px; //1 star
+    height: 30px;
+    margin: auto;
+
+    // visual
+    background-image: url('./img/icons/star.svg');
 }
