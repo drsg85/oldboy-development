@@ -13,6 +13,7 @@ import CheckerLengthOfInputValue from './modules/checerLengthOfInputValue';
 import TabSwitcher from './modules/tabSwitcher';
 import ExclusiveCities from './modules/exclusiveCities';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
+import Yclients from './modules/masters';
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -137,3 +138,4 @@ if(document.querySelector('.photo-gallery__slider-container')) {
     lightGallery(document.getElementById('photo-gallery__slider-item-eight'));
 }
 
+new Yclients();
