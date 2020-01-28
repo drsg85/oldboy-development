@@ -8,42 +8,37 @@ class Feedback {
     }
     
     addEvent() {
-
         for (let i = 0; i < this.openFeedbackButton.length; i++) {
             let openButton = this.openFeedbackButton[i];
 
-            console.log();
+        openButton.addEventListener('click', () => {
+            this.feedback.classList.add('feedback--show');
+            this.closeFeedbackButton.classList.add('feedback__close-button--show');
+        });
 
-            openButton.addEventListener('click', () => {
-                console.log(openButton);
-                this.feedback.classList.add('feedback--show');
-                this.closeFeedbackButton.classList.add('feedback__close-button--show');
-            });
-    
-            this.closeFeedbackButton.addEventListener('click', () => {
+        this.closeFeedbackButton.addEventListener('click', () => {
+            this.feedback.classList.remove('feedback--show');
+            this.closeFeedbackButton.classList.remove('feedback__close-button--show');
+        });
+
+        document.addEventListener('keydown', (evt) => {
+            if (evt.keyCode === 27) {
                 this.feedback.classList.remove('feedback--show');
                 this.closeFeedbackButton.classList.remove('feedback__close-button--show');
-            });
-    
-            document.addEventListener('keydown', (evt) => {
-                if (evt.keyCode === 27) {
-                    this.feedback.classList.remove('feedback--show');
-                    this.closeFeedbackButton.classList.remove('feedback__close-button--show');
-                }
-            });
-    
-            this.openSpace = function () {
-                    if (event.target.closest('feedback__container')) return;
-                    this.feedback.classList.remove('feedback--show');
             }
-    
-            document.addEventListener('click', (event) => {
-                if (event.target !== openButton && event.target.classList.contains('feedback')) {
-                this.openSpace();
-            }
-            });
+        });
+
+        this.openSpace = function () {
+                if (event.target.closest('feedback__container')) return;
+                this.feedback.classList.remove('feedback--show');
         }
 
+        document.addEventListener('click', (event) => {
+            if (event.target !== openButton && event.target.classList.contains('feedback')) {
+            this.openSpace();
+        }
+        });
+    }
     }
 }
 
