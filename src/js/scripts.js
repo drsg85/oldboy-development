@@ -13,6 +13,7 @@ import CheckerLengthOfInputValue from './modules/checerLengthOfInputValue';
 import TabSwitcher from './modules/tabSwitcher';
 import ExclusiveCities from './modules/exclusiveCities';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
+import Feedback from './modules/Feedback';
 import Yclients from './modules/masters';
 
 const mobileMenu = new MobileMenu();
@@ -21,6 +22,7 @@ const locationSearch = new LocationSearch();
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
 const menuScale = new MenuScale();
+
 //const geolocationControl = new GeolocationControl();
 //const ipInfo = new IpInfo();
 const checkerLengthOfInputValue = new CheckerLengthOfInputValue();

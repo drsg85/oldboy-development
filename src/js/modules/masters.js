@@ -1,12 +1,15 @@
+import Feedback from "./Feedback";
+
+
 class Yclients {
     constructor() {
         this.api = 'd8m22a27wuwur3yfa474';
         this.userToken = 'e4ebbf9631720ce1587b310af7f90ce5';
-        this.companyId = '34064';
+        this.companyId = '31799';
         this.staff_id = '631239';
         this.urlForComments = `https://api.yclients.com/api/v1/comments/${this.companyId}`;
         this.urlForMasters = `https://api.yclients.com/api/v1/staff/${this.companyId}`;
-        this.masters = document.querySelector('.masters');
+        this.masters = document.querySelector('.team__content');
         this.addEvents();
     }
 
@@ -28,6 +31,35 @@ class Yclients {
         xhr.send(JSON.stringify(body));
     }
 
+    createFragment() {
+            const item = document.createElement('article'),
+            itemHeader = document.createElement('header'),
+            photoContainer = document.createElement('div'),
+            itemName = document.createElement('h3'),
+            spec = document.createElement('span'),
+            btn = document.createElement('button'),
+            img = document.createElement('img'),
+            rating = document.createElement('p'),
+            comments = document.createElement('ul');
+            item.classList.add('member');
+            itemHeader.classList.add('member__header');
+            itemName.classList.add('member__name');
+            spec.classList.add('member__position');
+            rating.classList.add('member__rating');
+            btn.classList.add('member__feedback');
+            btn.textContent = 'Отзывы';
+            itemHeader.appendChild(spec);
+            itemHeader.appendChild(itemName);
+            photoContainer.classList.add('member__photo');
+            photoContainer.appendChild(img);
+            item.dataset.id = 'id';
+            item.appendChild(itemHeader);
+            item.appendChild(photoContainer);
+            item.appendChild(btn);
+            item.appendChild(rating);
+            return item;
+    }
+
     addMasters() {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', this.urlForMasters);
@@ -36,26 +68,28 @@ class Yclients {
         xhr.onreadystatechange = () => {
             if(xhr.readyState == 4) {
                 const data = JSON.parse(xhr.responseText);
-                const item = document.createElement('li');
-                const img = document.createElement('img');
-                const rating = document.createElement('p');
-                const spec = document.createElement('span');
-                const comments = document.createElement('ul');
-                item.classList.add('master-item');
-                item.dataset.id = 'id';
-                item.appendChild(img);
-                item.appendChild(rating);
-                item.appendChild(spec);
-                item.appendChild(comments);
-
+                console.log(data);
+                let item = this.createFragment();
                 data.map((el) => {
-                    let cloned = item.cloneNode(true);
-                    cloned.dataset.id = el.id;
-                    img.src = el.avatar;
-                    rating.textContent = el.rating;
-                    spec.textContent = el.specialization
-                    this.masters.appendChild(cloned);
+                    console.log(typeof el.hidden);
+                    if(el.hidden == 0) {
+                        let cloned = item.cloneNode(true),
+                            img = cloned.querySelector('img'),
+                            rating = cloned.querySelector('.member__rating'),
+                            spec = cloned.querySelector('.member__position'),
+                            itemName = cloned.querySelector('.member__name');
+                        cloned.dataset.id = el.id;
+                        itemName.textContent = el.name;
+                        img.src = el.avatar_big;
+                        rating.textContent = el.rating;
+                        spec.textContent = el.specialization
+                        this.masters.appendChild(cloned);
+                    }
+                    else {
+                        return;
+                    }
                 });
+                new Feedback();
             }
         }
         xhr.send();
@@ -69,7 +103,6 @@ class Yclients {
             xhr.onreadystatechange = () => {
                 if(xhr.readyState == 4) {
                     const data = JSON.parse(xhr.responseText);
-                    console.log(data);
                     const masters = [...document.querySelectorAll('.master-item')];
                     masters.map((el) => {
                         const masterId = el.dataset.id;

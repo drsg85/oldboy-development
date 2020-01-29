@@ -11,7 +11,7 @@ class SmoothOnAnchorsHorizontal {
     }
 
     ease(t) {
-        return t;
+        return Math.pow(t, 2);
     }
 
     scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl) {
