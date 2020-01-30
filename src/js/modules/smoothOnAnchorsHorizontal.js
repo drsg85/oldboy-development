@@ -32,7 +32,7 @@ class SmoothOnAnchorsHorizontal {
             duration: 600,
             timing: this.ease,
             draw: pct => {
-                this.containerTarget.scrollLeft = (scrollEndElemLeft * pct + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + this.leftPadding;
+                this.containerTarget.scrollLeft = (scrollEndElemLeft * pct + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + this.checkWindowWidth();
             }
         })
     }
@@ -63,11 +63,14 @@ class SmoothOnAnchorsHorizontal {
     };
 
     checkWindowWidth() {
-        if(window.innerWidth >=700 && window.innerWidth < 1000) {
-            this.leftPadding = 285;
+        if(window.innerWidth >=700 && window.innerWidth <= 1000) {
+            return 285;
         }
-        else if(window.innerWidth >=1000 && window.innerWidth < 1200) {
-            this.leftPadding = 185;
+        else if(window.innerWidth >1000 && window.innerWidth < 1200) {
+            return 185;
+        }
+        else {
+            return 230;
         }
     }
 
