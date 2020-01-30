@@ -1,39 +1,22 @@
 .branch-addresses {
     // box model
-    padding: 25px;
-    padding-left: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
 
-    @include atTablet {
-        // box model
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        height: 9800px;
-        max-width: 800px;
-        margin: 0 auto;
-        padding-left: 65px;
+    @include atDesktopS {
+      // box model
+      padding-left: 50px;
+      padding-right: 50px;
     }
     
-    @include atDesktopS {
-        // box model
-        padding-top: 40px;
-        padding-left: 20px;
-        max-width: 900px;
-        height: 7000px;
-    }
-
-    @include atDesktopL {
-        // box model
-        max-width: 1270px;
-        height: 5500px;
+    @include atDesktopM {
+      // box model
+      padding-left: 120px;
+      padding-right: 120px;
     }
 }
 
-.branch-addresses__index {
-    // positioning
-    position: relative;
-
+.branch-addresses__container {
     // box model
     height: 74vh;
 
@@ -54,13 +37,8 @@
     }
     
     @include atDesktopS {
-        // box model
-        width: 33%;
-    }
-
-    @include atDesktopM {
-        // box model
-        margin-right: 50px;
+      // box model
+      column-width: 15em;
     }
 }
 
@@ -148,7 +126,8 @@
       -webkit-transform: rotateY(360deg);
               transform: rotateY(360deg);
     }
-  }
+}
+
   @keyframes rotate-vert-center {
     0% {
       -webkit-transform: rotateY(0);
@@ -158,7 +137,7 @@
       -webkit-transform: rotateY(360deg);
               transform: rotateY(360deg);
     }
-  }
+}
 
 .branch-addresses__index {
     // box model

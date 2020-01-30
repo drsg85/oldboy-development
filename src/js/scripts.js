@@ -165,4 +165,6 @@ window.addEventListener('resize', () => debounceOnResize(checkWindowWidth()));
 
 new HorizontalScroll();
 
-new FetchMasters();
+new GoToElement();
+
+//new FetchMasters();
