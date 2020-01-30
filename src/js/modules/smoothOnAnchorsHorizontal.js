@@ -2,7 +2,9 @@ class SmoothOnAnchorsHorizontal {
     constructor(obj) {
         this.alphabet = document.querySelector('.location-selector__alphabet');
         this.containerTarget = document.querySelector('.branch-addresses__container');
-        
+        this.branchAddresses = document.querySelector('.branch-addresses');
+        this.leftPadding = +(window.getComputedStyle(this.branchAddresses, null).getPropertyValue("padding-left").slice(0,-2));
+
         if(this.alphabet && this.containerTarget) {
             this.btns = [...this.alphabet.querySelectorAll(obj.triggers)];
             this.target = this.containerTarget.querySelectorAll(obj.targets);
@@ -11,63 +13,102 @@ class SmoothOnAnchorsHorizontal {
     }
 
     ease(t) {
-        return t;
+        return Math.pow(t, 1.5);
     }
 
-    scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl) {
-        const runtime = stamp - start;
-        let progress = runtime / duration;
-        const ease = this.ease(progress);
-        progress = Math.min(progress, 1);
-        this.containerTarget.scrollLeft = (scrollEndElemLeft * ease + (startScrollOffset - scrollEndElemLeft)) - widthOfEl;
+    animate({timing, draw, duration}) {
+        const start = performance.now();
+        requestAnimationFrame(function animate(time) {
+            let timeFraction = (time - start) / duration;
+            if(timeFraction > 1) timeFraction = 1;
+            let progress = timing(timeFraction);
+            draw(progress);
+            if(timeFraction < 1) requestAnimationFrame(animate);
+        });
+    }
 
-        if(runtime < duration){
-        requestAnimationFrame(() => {
-            const stamp = new Date().getTime();
-            this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfEl);
+    scrollToLeft(scrollEndElemLeft, startScrollOffset, widthOfEl) {
+        this.animate({
+            duration: 600,
+            timing: this.ease,
+            draw: pct => {
+                this.containerTarget.scrollLeft = (scrollEndElemLeft * pct + (startScrollOffset - scrollEndElemLeft)) - widthOfEl + this.checkWindowWidth();
+            }
         })
-        }
     }
 
     scrolling(evt, target) {
-        evt.preventDefault();
+        if(window.innerWidth >= 700) {
+            evt.preventDefault();
+        }
         const scrollEndElem = document.querySelector(`#${target}`);
         let widthOfTargetEl;
         if(scrollEndElem !== null) {
             widthOfTargetEl = scrollEndElem.parentElement.offsetWidth;
+
             const anim = requestAnimationFrame(() => {
-                const stamp = new Date().getTime();
-                const duration = 500;
-                const start = stamp;
                 const startScrollOffset = scrollEndElem.offsetLeft;
-                
                 const scrollEndElemLeft = scrollEndElem.getBoundingClientRect().left;
-            this.scrollToLeft(start, stamp, duration, scrollEndElemLeft, startScrollOffset, widthOfTargetEl);
+            this.scrollToLeft(scrollEndElemLeft, startScrollOffset, widthOfTargetEl);
             });
-        }
-        
-        else {
-            console.log(scrollEndElem);
         }
     }
 
-    
+    debounceOnResize(func) {
+        let timer;
+        return function (event) {
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, 450, event);
+        };
+    };
+
+    checkWindowWidth() {
+        if(window.innerWidth >=700 && window.innerWidth <= 1000) {
+            return 285;
+        }
+        else if(window.innerWidth >1000 && window.innerWidth < 1200) {
+            return 185;
+        }
+        else {
+            return 230;
+        }
+    }
 
     addEvents() {
+        window.addEventListener('resize', () => this.debounceOnResize(this.checkWindowWidth()));
+
         this.btns.map((el) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];
             const correct = el.href.replace(href, '');
-
+            
             if(document.querySelector(`#${correct}`) === null) {
                 el.style.color = '#cccccc';
                 el.style.pointerEvents = 'none';
             }
         })
+        
         this.btns.map((el) => el.addEventListener('click', (event) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];
             const correct = el.href.replace(href, '');
+
+            this.btns.map((el) => {
+                const reg = /.*(#)/g;
+                const href = el.href.match(reg)[0];
+                const correct = el.href.replace(href, '');
+                
+                if(document.querySelector(`#${correct}`) === null) {
+                    el.style.color = '#cccccc';
+                    el.style.pointerEvents = 'none';
+                }
+                else {
+                    el.classList.remove('alphabet__trigger--active');
+                }
+            })
+
+            el.classList.add('alphabet__trigger--active');
+            
             this.scrolling(event, correct);
         }))
     }
