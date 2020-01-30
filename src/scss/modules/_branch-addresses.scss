@@ -21,6 +21,10 @@
     height: 74vh;
 
     @include atTablet {
+      // positioning
+      position: relative;
+      padding-top: 50px;
+      
       // box model
       column-fill: auto;
       // column-width: 25em;
@@ -89,6 +93,8 @@
 
     @include atTablet {
       // positioning
+      position: absolute;
+      top: 0;
       transform: none;
 
       // box model
@@ -136,7 +142,8 @@
     // box model
     page-break-inside: avoid;
     break-inside: avoid;
-
+    break-after: column;
+    
     &:first-child {
       .branch-addresses__letter {
         // box model
