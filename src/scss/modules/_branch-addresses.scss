@@ -62,14 +62,8 @@
 
 .branch-addresses__letter {
     // positioning
-<<<<<<< HEAD
-    position: absolute;
-    left: -41px;
-    top: -5px;
-=======
     position: relative;
     z-index: 1;
->>>>>>> 6cbd4f8b59dcc4e80948efe481b0c296348d996f
 
     // box model
     width: 32px;
@@ -83,12 +77,6 @@
     line-height: 32px;
     text-align: center;
 
-<<<<<<< HEAD
-    // visual
-    background-color: $golden;
-    border-radius: 50%;
-}
-=======
     &--active {
         // box model
         
@@ -187,4 +175,3 @@
       }
     }
 }
->>>>>>> 6cbd4f8b59dcc4e80948efe481b0c296348d996f
