@@ -6,6 +6,11 @@
 
     // visual
     list-style-type: none;
+
+    @include atTablet {
+        // box model
+        break-inside: avoid;
+    }
 }
 
 .location-list__city {
@@ -53,6 +58,7 @@
     @include atTablet {
         // box model
         margin-right: 40px;
+        break-inside: avoid;
     }
 
     &::before {
