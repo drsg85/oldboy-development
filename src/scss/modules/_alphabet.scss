@@ -23,30 +23,63 @@
 }
 
 .alphabet__item {
-    // visual
-    transition: all ease-in-out 1s;
-}
-
-.alphabet__item a {
-    // box model
-    margin-right: 5px;
-
     // typography
-    color: $golden;
-    text-transform: uppercase;
-    
-    // visual
-    text-decoration: none;
-    transition: all ease-in-out 1s;
+    font-size: 1rem;
 
-    @include atSmallMobile {
+    // visual
+    transition: all ease-in-out 0.3s;
+
+    @include atTablet {
+        // typography
+        font-size: 1.2rem;
+    }
+
+    @include atDesktopS {
+        // typography
+        font-size: 1.3rem;
+    }
+
+    @include atDesktopM {
         // box model
-        margin-right: 10px;
+        margin-right: 5px;
     }
 }
 
-.alphabet__item a:hover {
+.alphabet__item--active {
+    // visual
+    background-color: $golden;
+    border-radius: 50%;
+}
+
+.alphabet__trigger {
+    // box model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2em;
+    height: 1.2em;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    text-transform: uppercase;
+    
+    // visual
+    border: 1px solid transparent;
+    text-decoration: none;
+    // transition: all ease-in-out 0.3s;
+}
+
+.alphabet__trigger:hover {
     // visual
     border-bottom: 1px solid $golden;
 }
 
+
+.alphabet__trigger--active {
+    // typography
+    color: $light;
+    background-color: $golden;
+    border-radius: 50%;
+    pointer-events: none;
+}

@@ -14,23 +14,27 @@ class Feedback {
         openButton.addEventListener('click', () => {
             this.feedback.classList.add('feedback--show');
             this.closeFeedbackButton.classList.add('feedback__close-button--show');
+            document.documentElement.style.overflow = 'hidden';
         });
 
         this.closeFeedbackButton.addEventListener('click', () => {
             this.feedback.classList.remove('feedback--show');
             this.closeFeedbackButton.classList.remove('feedback__close-button--show');
+            document.documentElement.style.overflow = 'auto';
         });
 
         document.addEventListener('keydown', (evt) => {
             if (evt.keyCode === 27) {
                 this.feedback.classList.remove('feedback--show');
                 this.closeFeedbackButton.classList.remove('feedback__close-button--show');
+                document.documentElement.style.overflow = 'auto';
             }
         });
 
         this.openSpace = function () {
                 if (event.target.closest('feedback__container')) return;
                 this.feedback.classList.remove('feedback--show');
+                document.documentElement.style.overflow = 'auto';
         }
 
         document.addEventListener('click', (event) => {

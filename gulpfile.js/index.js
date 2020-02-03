@@ -103,7 +103,8 @@ let browserSyncInit = () => {
     server: {
       baseDir: dirs.dist
     },
-    port: 3000
+    port: 3000,
+    online: true
   });
 };
 
