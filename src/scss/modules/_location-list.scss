@@ -44,11 +44,9 @@
 
 .location-list__item {
     // box model
-    padding-left: 15px;
     margin-bottom: 0.25em;
 
     // positioning
-    position: relative;
     z-index: 1;
 
     // typography
@@ -60,32 +58,16 @@
         margin-right: 40px;
         break-inside: avoid;
     }
-
-    &::before {
-        content: "";
-
-        // positioning
-        position: absolute;
-        left: 0;
-        top: 10px;
-        // top: 50%;
-        // transform: translateY(-50%);
-    
-        // box model
-        display: block;
-        height: 8px;
-        width: 8px;
-    
-        // visual
-        background-color: $golden;
-        border-radius: 50%;
-    }
 }
 
 .location-list__item a {
+    // positioning
+    position: relative;
+
     // box model
     display: inline-block;
     padding: 7px 12px;
+    padding-left: 27px;
     max-width: 100%;
 
     // typography
@@ -106,6 +88,26 @@
     @include atTablet {
         // box model
         max-width: 95%;
+    }
+
+    &::before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 10px;
+        // top: 50%;
+        // transform: translateY(-50%);
+    
+        // box model
+        display: block;
+        height: 8px;
+        width: 8px;
+    
+        // visual
+        background-color: $golden;
+        border-radius: 50%;
     }
 }
 
