@@ -6,6 +6,11 @@
 
     // visual
     list-style-type: none;
+
+    @include atTablet {
+        // box model
+        break-inside: avoid;
+    }
 }
 
 .location-list__city {
@@ -39,11 +44,9 @@
 
 .location-list__item {
     // box model
-    padding-left: 15px;
     margin-bottom: 0.25em;
 
     // positioning
-    position: relative;
     z-index: 1;
 
     // typography
@@ -53,7 +56,33 @@
     @include atTablet {
         // box model
         margin-right: 40px;
+        break-inside: avoid;
     }
+}
+
+.location-list__item a {
+    // positioning
+    position: relative;
+    // box model
+    display: inline-block;
+    padding: 7px 12px;
+    padding-left: 27px;
+    max-width: 100%;
+
+    // typography
+    color: $darkGold;
+    font-family: $mainFont;
+    // font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+    // visual
+    border-radius: 20px;
+    overflow: hidden;
 
     &::before {
         content: "";
@@ -74,32 +103,30 @@
         background-color: $golden;
         border-radius: 50%;
     }
-}
-
-.location-list__item a {
-    // box model
-    display: inline-block;
-    padding: 7px 12px;
-    max-width: 100%;
-
-    // typography
-    color: $darkGold;
-    font-family: $mainFont;
-    // font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    white-space: nowrap;
-    
-    // visual
-    border-radius: 20px;
-    overflow: hidden;
 
     @include atTablet {
         // box model
         max-width: 95%;
+    }
+
+    &::before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 10px;
+        // top: 50%;
+        // transform: translateY(-50%);
+    
+        // box model
+        display: block;
+        height: 8px;
+        width: 8px;
+    
+        // visual
+        background-color: $golden;
+        border-radius: 50%;
     }
 }
 

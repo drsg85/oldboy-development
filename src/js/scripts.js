@@ -13,8 +13,12 @@ import CheckerLengthOfInputValue from './modules/checerLengthOfInputValue';
 import TabSwitcher from './modules/tabSwitcher';
 import ExclusiveCities from './modules/exclusiveCities';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
-import Feedback from './modules/Feedback';
-import Yclients from './modules/masters';
+// import Feedback from './modules/Feedback';
+
+import SmoothOnAnchorsHorizontal from './modules/smoothOnAnchorsHorizontal';
+import HorizontalScroll from './modules/horizontalScroll';
+import GoToElement from './modules/GoToElement';
+import FetchMasters from './modules/fetchMasters';
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -22,14 +26,12 @@ const locationSearch = new LocationSearch();
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
 const menuScale = new MenuScale();
-
+// const feedback = new Feedback();
 //const geolocationControl = new GeolocationControl();
 //const ipInfo = new IpInfo();
 const checkerLengthOfInputValue = new CheckerLengthOfInputValue();
 
 new ToTop();
-
-new SmoothOnAnchors();
 
 new TabSwitcher({
     tabs: '.price-list__btn',
@@ -140,4 +142,32 @@ if(document.querySelector('.photo-gallery__slider-container')) {
     lightGallery(document.getElementById('photo-gallery__slider-item-eight'));
 }
 
-new Yclients();
+function checkWindowWidth() {
+    if(window.innerWidth < 700) {
+        new SmoothOnAnchors();
+    }
+    else {
+        new SmoothOnAnchorsHorizontal({
+            triggers: '.alphabet__trigger',
+            targets: '.smooth-target'
+        });
+    }
+};
+
+checkWindowWidth();
+
+function debounceOnResize(func) {
+    let timer;
+    return function (event) {
+        if(timer) clearTimeout(timer);
+        timer = setTimeout(func, 1000, event);
+    };
+};
+
+window.addEventListener('resize', () => debounceOnResize(checkWindowWidth()));
+
+new HorizontalScroll();
+
+new GoToElement();
+
+//new FetchMasters();

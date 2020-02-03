@@ -516,39 +516,39 @@
         }
     }
 
-.vacancy-form__checkbox {
-    // positioning
-    position: absolute;
-    clip: rect(0 0 0 0);
+// .vacancy-form__checkbox {
+//     // positioning
+//     position: absolute;
+//     clip: rect(0 0 0 0);
 
-    // box model
-    width: 1px;
-    height: 1px;
+//     // box model
+//     width: 1px;
+//     height: 1px;
     
-    // visual
-    overflow: hidden;
-}
+//     // visual
+//     overflow: hidden;
+// }
 
-.vacancy-form__box {
-    // positioning
-    position: absolute;
-    top: 5px;
+// .vacancy-form__box {
+//     // positioning
+//     position: absolute;
+//     top: 5px;
 
-    // box model
-    width: 1rem;
-    height: 1rem;
-    margin-left: -1.5rem;
+//     // box model
+//     width: 1rem;
+//     height: 1rem;
+//     margin-left: -1.5rem;
 
-    // visual
-    background-color: white;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 0.05em;
-    box-shadow: 0 0 0 0.1em $golden;
-    cursor: pointer;
-    overflow: hidden;
-    transition: ease-in-out 0.25s;
-}
+//     // visual
+//     background-color: white;
+//     background-position: 50% 50%;
+//     background-repeat: no-repeat;
+//     border-radius: 0.05em;
+//     box-shadow: 0 0 0 0.1em $golden;
+//     cursor: pointer;
+//     overflow: hidden;
+//     transition: ease-in-out 0.25s;
+// }
 
 .vacancy-form__checkbox-label {
     // box model
@@ -568,57 +568,165 @@
     color: $grey;
 }
 
-.vacancy-form__checkbox:checked + .vacancy-form__box {
-    // visual
-    background-color: $golden;
-    background-image: url('./img/icons/checked.svg');
-}
+// .vacancy-form__checkbox:checked + .vacancy-form__box {
+//     // visual
+//     background-color: $golden;
+//     background-image: url('./img/icons/checked.svg');
+// }
 
-.vacancy-form__checkbox:checked ~ .description {
-    .vacancy-form__box {
-            // visual
+// .vacancy-form__checkbox:checked ~ .description {
+//     .vacancy-form__box {
+//             // visual
+//         background-color: $golden;
+//         background-image: url('./img/icons/checked.svg');
+//     }
+// }
+
+// .vacancy-form__checkbox:focus ~ .description {
+//     .vacancy-form__box {
+//         // visual
+//         box-shadow: 0 0 0 0.2em $golden;
+//     }
+// }
+
+// .vacancy-form__checkbox:disabled ~ .description {
+//     .vacancy-form__box {
+//         // visual
+//         background-color: rgba($grey, 0.5);
+//         box-shadow: 0 0 0 0.2em $grey;
+//     }
+// }
+
+// .vacancy-form__checkbox:disabled:checked ~ .description {
+//     .vacancy-form__box {
+//         // visual
+//         background-color: $grey;
+//     }
+// }
+
+// .vacancy-form__checkbox:focus + .vacancy-form__box {
+//     // visual
+//     box-shadow: 0 0 0 0.2em $golden;
+// }
+
+// .vacancy-form__checkbox:disabled + .vacancy-form__box {
+//     // visual
+//     background-color: rgba($grey, 0.5);
+//     box-shadow: 0 0 0 0.2em $grey;
+// }
+
+// .vacancy-form__checkbox:disabled:checked + .vacancy-form__box {
+//     // visual
+//     background-color: $grey;
+// }
+
+.vacancy-form__checkbox {
+    // positioning
+    position: absolute;
+    left: -9999px;
+
+    &:not(:checked) + .vacancy-form__checkbox-label,
+    &:checked + .vacancy-form__checkbox-label{
+        // positioning
+        position: relative;
+
+        // box model
+        display: inline-block;
+        padding-left: 35px;
+
+        // visual
+        cursor: pointer;
+    }
+
+    &:not(:checked) + .vacancy-form__checkbox-label:before,
+    &:checked + .vacancy-form__checkbox-label:before {
+        content: '';
+
+        // positioning
+        position: absolute;
+        top: 0px;
+        left: 0;
+
+        // box model
+        width: 20px;
+        height: 20px;
+
+        // visual
+        border: 2px solid $golden;
+        border-radius: 3px;
+    }
+
+    &:checked + .vacancy-form__checkbox-label:before {
         background-color: $golden;
-        background-image: url('./img/icons/checked.svg');
     }
-}
 
-.vacancy-form__checkbox:focus ~ .description {
-    .vacancy-form__box {
+    &:not(:checked) + .vacancy-form__checkbox-label:after,
+    &:checked + .vacancy-form__checkbox-label:after {
+        content: '';
+
+        // positioning
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        // box model
+        width: 20px;
+        height: 20px;
+
         // visual
-        box-shadow: 0 0 0 0.2em $golden;
+        transition: opacity 0.3s;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='32' fill='%23ffffff'%3E%3Cpath d='M0 16.352q0 1.12.768 1.92L8.64 25.92q.768.8 1.92.8t1.92-.8l16.16-15.84q.8-.768.8-1.888t-.8-1.856q-.8-.8-1.92-.8t-1.92.8l-14.24 13.92-5.92-5.792q-.8-.768-1.92-.768t-1.952.768Q0 15.232 0 16.352z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 10px;
     }
-}
 
-.vacancy-form__checkbox:disabled ~ .description {
-    .vacancy-form__box {
+    &:not(:checked) + .vacancy-form__checkbox-label:after {
+        // positioning
+        transform: scale(0);
+
         // visual
-        background-color: rgba($grey, 0.5);
-        box-shadow: 0 0 0 0.2em $grey;
+        opacity: 0;
     }
-}
 
-.vacancy-form__checkbox:disabled:checked ~ .description {
-    .vacancy-form__box {
+    &:checked + .vacancy-form__checkbox-label:after {
+        // positioning
+        transform: scale(1);
+
         // visual
-        background-color: $grey;
+        opacity: 1;
+    }
+
+    &:disabled:not(:checked) + .vacancy-form__checkbox-label:before,
+    &:disabled::checked + .vacancy-form__checkbox-label:before {
+        // visual
+        background-color: #ccc;
+    }
+
+    &:disabled:checked + .vacancy-form__checkbox-label:after {
+        // typography
+        color: #999999;
+    }
+
+    &:disabled + .vacancy-form__checkbox-label {
+        color: #000000;
+    }
+
+    &:focus + .vacancy-form__checkbox-label:before{
+        // visual
+        border: 2px solid $darkGold;
     }
 }
 
-.vacancy-form__checkbox:focus + .vacancy-form__box {
-    // visual
-    box-shadow: 0 0 0 0.2em $golden;
-}
+// .vacancy-form__checkbox-label {
+//     // typography
+//     font-family: $mainFont;
+//     font-size: 0.625rem;
+//     text-transform: uppercase;
 
-.vacancy-form__checkbox:disabled + .vacancy-form__box {
-    // visual
-    background-color: rgba($grey, 0.5);
-    box-shadow: 0 0 0 0.2em $grey;
-}
-
-.vacancy-form__checkbox:disabled:checked + .vacancy-form__box {
-    // visual
-    background-color: $grey;
-}
+//     // typography
+//     color: $light;
+// }
 
 .vacancy-form__button {
     // typography

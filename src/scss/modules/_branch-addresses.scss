@@ -1,75 +1,58 @@
 .branch-addresses {
     // box model
-    padding: 25px;
-    padding-left: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
 
-    @include atTablet {
-        // box model
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        height: 9800px;
-        max-width: 800px;
-        margin: 0 auto;
-        padding-left: 65px;
+    @include atDesktopS {
+      // box model
+      padding-left: 50px;
+      padding-right: 50px;
     }
     
-    @include atDesktopS {
-        // box model
-        padding-top: 40px;
-        padding-left: 20px;
-        max-width: 900px;
-        height: 7000px;
-    }
-
-    @include atDesktopL {
-        // box model
-        max-width: 1270px;
-        height: 5500px;
+    @include atDesktopM {
+      // box model
+      padding-left: 120px;
+      padding-right: 120px;
     }
 }
 
-.branch-addresses__index {
-    // positioning
-    position: relative;
-
+.branch-addresses__container {
     // box model
-    margin-bottom: 40px;
-    margin-right: -20px;
+    height: 74vh;
 
     @include atTablet {
-        // box model
-        width: 50%;
-        max-width: 300px;
+      // positioning
+      position: relative;
+      padding-top: 50px;
+      
+      // box model
+      column-fill: auto;
+      // column-width: 25em;
+      column-width: 19em;
+      height: 66vh;
+
+      // visual
+      overflow: auto;
+      overflow-x: hidden;
     }
     
     @include atDesktopS {
-        // box model
-        width: 33%;
-    }
-
-    @include atDesktopM {
-        // box model
-        margin-right: 50px;
+      // box model
+      column-width: 15em;
     }
 }
 
 .branch-addresses__letter {
     // positioning
-    position: absolute;
-    left: -41px;
-    top: -5px;
+    position: relative;
+    z-index: 1;
 
     // box model
     width: 32px;
     height: 32px;
     margin-bottom: 15px;
-    padding-top: 3px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-
+    //padding-top: 205px;
+    
     // typography
     color: $light;
     font-family: $titleFont;
@@ -77,7 +60,105 @@
     // line-height: 32px;
     text-align: center;
 
-    // visual
-    background-color: $golden;
-    border-radius: 50%;
+    &--active {
+        // box model
+        
+        // visual
+	    animation: rotate-vert-center .9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      height: 210px;
+      margin-top: -210px;
+    }
+
+    &:after {
+      content: "";
+      
+      // positioning
+      position: absolute;
+      left: 0;
+      transform: translateY(-3px);
+      z-index: -1;
+
+      // box model
+      width: 100%;
+      height: 32px;
+
+      // visual
+      background-color: $golden;
+      border-radius: 50%;
+    }
+
+    @include atTablet {
+      // positioning
+      position: absolute;
+      top: 0;
+      transform: none;
+
+      // box model
+      padding: 0;
+
+      // visual
+      background-color: $golden;
+      border-radius: 50%;
+
+      &:after {
+        // box model
+        display: none;
+      }
+
+      &:before {
+        // box model
+        height: 0;
+        margin-top: 0;
+      }
+    }
+}
+
+@-webkit-keyframes branch-addresses__letter--active {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+}
+
+  @keyframes rotate-vert-center {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+}
+
+.branch-addresses__index {
+    // box model
+    page-break-inside: avoid;
+    break-inside: avoid;
+    break-after: column;
+    
+    &:first-child {
+      .branch-addresses__letter {
+        // box model
+        margin-top: 210px;
+      }
+    }
+
+    @include atTablet {
+      &:first-child {
+        .branch-addresses__letter {
+          // box model
+          margin-top: 0;
+        }
+      }
+    }
 }
