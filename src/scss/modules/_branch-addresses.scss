@@ -49,7 +49,6 @@
 
     // box model
     width: 32px;
-    height: 32px;
     margin-bottom: 15px;
     //padding-top: 205px;
     
@@ -57,7 +56,7 @@
     color: $light;
     font-family: $titleFont;
     font-size: 1.5rem;
-    // line-height: 32px;
+    line-height: 32px;
     text-align: center;
 
     &--active {
