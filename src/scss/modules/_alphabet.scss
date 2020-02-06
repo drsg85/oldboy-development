@@ -1,7 +1,16 @@
 .alphabet {
+    // positioning
+    position: relative;
+
+    // box model
+    max-width: 340px;
+    margin: 0 auto;
+
     @include atTablet {
     // box model
     display: flex;
+    max-width: none;
+    margin: 0;
     }
 }
 
@@ -31,7 +40,7 @@
 
     @include atTablet {
         // typography
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     @include atDesktopS {
@@ -82,4 +91,195 @@
     background-color: $golden;
     border-radius: 50%;
     pointer-events: none;
+}
+
+.alphabet__extended {
+    // positioning
+    position: absolute;
+    right: 0;
+    // top: 25px;
+
+    // box model
+    width: 25px;
+    height: 25px;
+
+    // visual
+    background-image: url('./img/icons/world.svg');
+    background-repeat: no-repeat;
+    transition: 0.25s;
+
+    @include atSmallMobile {
+        // positioning
+        right: -15px;
+        top: 12px;
+    }
+
+    @include atTablet {
+        // positioning
+        right: -30px;
+        top: -2px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: 0;
+    }
+}
+
+.alphabet__extended:hover {
+    // positioning
+    z-index: 99;
+
+    // box model
+    width: auto;
+    height: auto;
+    max-height: 350px;
+    max-width: 350px;
+    padding: 25px 0;
+    padding-left: 25px;
+
+    // visual
+    background-color: $light;
+    background-image: none;
+    border: 2px solid $golden;
+    border-radius: 5px;
+    overflow: auto;
+
+    @include atTablet {
+        // box model
+        max-height: 500px;
+    }
+}
+
+.alphabet__extended:hover .branch-addresses__index{
+    // box model
+    display: flex;
+}
+
+.alphabet__extended::before {
+    content: '';
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 50% !important;
+    border-color: $golden;
+    color: $golden;
+    border: 2px solid !important;
+    width: 105%;
+    height: 105%;
+    box-sizing: border-box !important;
+    -webkit-animation: wave-stroke 2s infinite cubic-bezier(0.37, 0, 0.8, 0.77);
+    -moz-animation: wave-stroke 2s infinite cubic-bezier(0.37, 0, 0.8, 0.77);
+    -o-animation: wave-stroke 2s infinite cubic-bezier(0.37, 0, 0.8, 0.77);
+    animation: wave-stroke 2s infinite cubic-bezier(0.37, 0, 0.8, 0.77);
+}
+
+.alphabet__extended:hover::before {
+    // box model
+    display: none;
+}
+
+@-webkit-keyframes wave-stroke {
+    100% {
+        width: 200%;
+        height: 200%;
+        border-color: transparent;
+        opacity: 0
+    }
+}
+
+@-moz-keyframes wave-stroke {
+    100% {
+        width: 200%;
+        height: 200%;
+        border-color: transparent;
+        opacity: 0
+    }
+}
+
+@-o-keyframes wave-stroke {
+    100% {
+        width: 200%;
+        height: 200%;
+        border-color: transparent;
+        opacity: 0
+    }
+}
+
+@keyframes wave-stroke {
+    100% {
+        width: 200%;
+        height: 200%;
+        border-color: transparent;
+        opacity: 0
+    }
+}
+
+.alphabet__extended::-webkit-scrollbar {
+    // box model
+    width: 3px;
+
+    & * {
+        background: transparent;
+    }
+
+    &-thumb {
+        // visual
+        background: $golden;
+        border-radius: 10px;
+    }
+    
+    &-track {
+        // visual
+        background: transparent !important;
+    }
+}
+
+.alphabet__extended .branch-addresses__letter {
+    // box model
+    margin-right: 15px;
+
+    @include atTablet {
+
+    // positioning
+    position: relative;
+    z-index: 1;
+
+    // box model
+    width: 32px;
+    margin-bottom: 15px;
+
+    // visual
+    background-color: transparent;
+
+     &::after {
+         // box model
+         display: inline-block;
+    }
+
+        &::before {
+            // box model
+            height: 210px;
+            margin-top: -210px;
+        }
+    }
+}
+
+.alphabet__extended .branch-addresses__index {
+    // box model
+    display: none;
+}
+
+.alphabet__extended .branch-addresses__letter:first-child {
+    // box model
+    margin-top: 0;
+}
+
+.alphabet__extended .location-list__item a {
+    // typography
+    text-overflow: unset;
 }
