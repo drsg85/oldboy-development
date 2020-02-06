@@ -49,20 +49,16 @@
 
     // box model
     width: 32px;
-    height: 32px;
     margin-bottom: 15px;
-    //padding-top: 205px;
     
     // typography
     color: $light;
     font-family: $titleFont;
     font-size: 1.5rem;
-    // line-height: 32px;
+    line-height: 32px;
     text-align: center;
 
     &--active {
-        // box model
-        
         // visual
 	    animation: rotate-vert-center .9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }

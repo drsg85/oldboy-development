@@ -13,7 +13,7 @@ import CheckerLengthOfInputValue from './modules/checerLengthOfInputValue';
 import TabSwitcher from './modules/tabSwitcher';
 import ExclusiveCities from './modules/exclusiveCities';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
-// import Feedback from './modules/Feedback';
+import Feedback from './modules/Feedback';
 
 import SmoothOnAnchorsHorizontal from './modules/smoothOnAnchorsHorizontal';
 import HorizontalScroll from './modules/horizontalScroll';
@@ -26,7 +26,7 @@ const locationSearch = new LocationSearch();
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
 const menuScale = new MenuScale();
-// const feedback = new Feedback();
+const feedback = new Feedback();
 //const geolocationControl = new GeolocationControl();
 //const ipInfo = new IpInfo();
 const checkerLengthOfInputValue = new CheckerLengthOfInputValue();
