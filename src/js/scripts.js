@@ -144,7 +144,17 @@ if(document.querySelector('.photo-gallery__slider-container')) {
 
 function checkWindowWidth() {
     if(window.innerWidth < 700) {
-        new SmoothOnAnchors();
+        const anchors = document.querySelectorAll('.alphabet__trigger');
+        anchors.map((el) => {
+            const reg = /.*(#)/g;
+            const href = el.href.match(reg)[0];
+            const correct = el.href.replace(href, '');
+            
+            if(document.querySelector(`#${correct}`) === null) {
+                el.style.color = '#cccccc';
+                el.style.pointerEvents = 'none';
+            }
+        })
     }
     else {
         new SmoothOnAnchorsHorizontal({
@@ -171,3 +181,5 @@ new HorizontalScroll();
 new GoToElement();
 
 //new FetchMasters();
+
+new SmoothOnAnchors();
