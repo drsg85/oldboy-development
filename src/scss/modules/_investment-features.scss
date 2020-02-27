@@ -3,12 +3,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 800px;
-    padding-left: 55px;
+    max-width: 740px;
+    //padding-left: 55px;
 
     @include atDesktopL {
         // box model
-        max-width: 990px;
+        max-width: 750px;
     }
 }
 
@@ -18,54 +18,75 @@
     z-index: 5;
 
     // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     max-width: 370px;
-    margin-bottom: 20px;
-    padding-left: 60px;
-    padding-top: 40px;
+    min-height: 120px;
 
     // visual
     overflow: hidden;
 
     @include atDesktopL {
         // box model
-        margin-bottom: 20px;
+        min-height: 150px;
+    }
+
+    &:first-child {
+        &:before {
+            // visual
+            background-image: url('./img/icons/employee.svg');
+        }
+        
+    }
+
+    &:nth-child(2) {
+        &:before {
+            // visual
+            background-image: url('./img/icons/investment-new.svg');
+        }
+    }
+
+    &:nth-child(3) {
+        &:before {
+            // visual
+            background-image: url('./img/icons/change.svg');
+        }
+    }
+
+    &:last-child {
+        &:before {
+            // visual
+            background-image: url('./img/icons/online-payment-new.svg');
+        }
     }
 }
 
-.investment-features__item::before {
+.investment-features__item:before {
     content: "";
 
     // positioning
     position: absolute;
-    bottom: -10px;
+    top: 55px;
     left: 10px;
     transform: rotate(-15deg);
     z-index: -1;
 
     // box model
     display: block;
-    width: 125px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 
     // visual
-    background-image: url('./img/icons/investment-dark.svg');
     background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.4;
 
     @include atDesktopL {
         // box model
-        width: 155px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
-}
-
-.investment-features__item--second::before {
-    // visual
-    background-image: url('./img/icons/finance.svg');
-}
-
-.investment-features__item--third::before {
-    // visual
-    background-image: url('./img/icons/laurel.svg');
 }
 
 .investment-features__item::after {
@@ -116,4 +137,9 @@
     color: $golden;
     font-family: $mainFont;
     font-size: 0.85rem;
+}
+
+.investment-features__title,
+.investment-features__subtitle {
+    margin-left: 60px;
 }
