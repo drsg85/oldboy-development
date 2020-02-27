@@ -22,10 +22,15 @@
     flex-direction: column;
     justify-content: flex-end;
     max-width: 370px;
-    min-height: 120px;
+    min-height: 80px;
 
     // visual
     overflow: hidden;
+
+    @include atDesktopS {
+        // box model
+        min-height: 120px;
+    }
 
     @include atDesktopL {
         // box model
@@ -67,20 +72,27 @@
 
     // positioning
     position: absolute;
-    top: 55px;
     left: 10px;
+    top: 2px;
     transform: rotate(-15deg);
     z-index: -1;
-
+    
     // box model
     display: block;
     width: 100px;
     height: 100px;
-
+    
     // visual
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.4;
+    
+    @include atDesktopS {
+        // positioning
+        top: 55px;
+
+        // box model
+    }
 
     @include atDesktopL {
         // box model
@@ -110,8 +122,13 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 1.3rem;
+    }
 
     @include atDesktopL {
         // typography
@@ -121,7 +138,13 @@
 
 .investment-features__title span {
     // typography
+    color: $golden;
     font-size: 1rem;
+
+    @include atDesktopS {
+        // typography
+        color: $light;
+    }
 
     @include atDesktopL {
         // typography
@@ -131,12 +154,18 @@
 
 .investment-features__subtitle {
     // box model
+    display: none;
     margin: 0;
 
     // typography
     color: $golden;
     font-family: $mainFont;
     font-size: 0.85rem;
+
+    @include atDesktopS {
+        // box model
+        display: block;
+    }
 }
 
 .investment-features__title,

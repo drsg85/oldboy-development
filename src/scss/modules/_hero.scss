@@ -940,7 +940,7 @@
 
 .hero__content--investment .hero-caption__big {
     // typography
-    font-size: 2.3rem;
+    font-size: 1.5rem;
 
     // visual
     border-bottom: none;
@@ -987,10 +987,10 @@
 
 .hero__content--investment .hero-caption__motto--gold {
     // box model
-    max-width: initial;
+    max-width: 190px;
 
     // typography
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 .hero__caption {
@@ -1511,13 +1511,7 @@
 }
 
 .hero__features {
-    // box model
-    display: none;
-
-    @include atDesktopM {
-        // box model
-        display: block;
-    }
+    
 }
 
 .hero__rating {
