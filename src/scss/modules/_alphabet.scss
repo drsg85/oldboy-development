@@ -279,6 +279,11 @@
     margin-top: 0;
 }
 
+.alphabet__extended .location-list__item {
+    // box model
+    margin: 0;
+}
+
 .alphabet__extended .location-list__item a {
     // typography
     text-overflow: unset;
