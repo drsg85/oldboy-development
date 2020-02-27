@@ -913,18 +913,19 @@
     transform: none;
 
     // box model
-    // margin: 0 auto;
-    width: 300px;
+    width: unset;
+    max-width: 350px;
 
     @include atTablet {
         // box model
         margin: 0;
+        max-width: unset;
         width: 450px;
     }
     
     @include atDesktopS {
         // box model
-        width: 550px;
+        width: 750px;
     }
 
     @include atDesktopM {
@@ -940,7 +941,7 @@
 
 .hero__content--investment .hero-caption__big {
     // typography
-    font-size: 2.3rem;
+    font-size: 1.5rem;
 
     // visual
     border-bottom: none;
@@ -987,10 +988,15 @@
 
 .hero__content--investment .hero-caption__motto--gold {
     // box model
-    max-width: initial;
+    max-width: 190px;
 
     // typography
-    font-size: 1.4rem;
+    font-size: 1rem;
+
+    @include atTablet {
+        // box model
+        max-width: unset;
+    }
 }
 
 .hero__caption {
@@ -1203,7 +1209,7 @@
     &--investment {
         // positioning
         position: relative;
-        top: -70px;
+        // top: -70px;
 
         @include atTablet {
         // box model
@@ -1213,15 +1219,15 @@
 
         @include atDesktopS {
             // positioning
-            top: 0;
+            top: -40px;
 
             // box model
-            margin-left: 0;
+            // margin-left: 0;
         }
 
         @include atDesktopM {
             // positioning
-            top: -20px;
+            top: -40px;
 
             // box model
             margin-left: auto;
@@ -1512,11 +1518,18 @@
 
 .hero__features {
     // box model
-    display: none;
+    margin-bottom: 15px;
+    margin-top: 5px;
 
-    @include atDesktopM {
+    @include atTablet {
         // box model
-        display: block;
+        margin-top: 25px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }
 

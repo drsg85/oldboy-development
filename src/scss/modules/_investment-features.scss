@@ -1,10 +1,15 @@
 .investment-features {
     // box model
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: column;
     max-width: 740px;
-    //padding-left: 55px;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
     @include atDesktopL {
         // box model
@@ -21,14 +26,27 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 370px;
-    min-height: 120px;
+    margin-bottom: 5px;
+    min-height: 75px;
 
     // visual
     overflow: hidden;
 
+    @include atTablet {
+        // box model
+        min-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 370px;
+        min-height: 120px;
+    }
+    
     @include atDesktopL {
         // box model
+        margin-bottom: 0;
         min-height: 150px;
     }
 
@@ -67,20 +85,31 @@
 
     // positioning
     position: absolute;
-    top: 55px;
     left: 10px;
+    top: 10px;
     transform: rotate(-15deg);
     z-index: -1;
-
+    
     // box model
     display: block;
-    width: 100px;
-    height: 100px;
-
+    width: 80px;
+    height: 80px;
+    
     // visual
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.4;
+
+    @include atTablet {
+        // box model
+        width: 100px;
+        height: 100px;
+    }
+    
+    @include atDesktopS {
+        // positioning
+        top: 55px;
+    }
 
     @include atDesktopL {
         // box model
@@ -110,8 +139,13 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 1.3rem;
+    }
 
     @include atDesktopL {
         // typography
@@ -121,7 +155,13 @@
 
 .investment-features__title span {
     // typography
+    color: $golden;
     font-size: 1rem;
+
+    @include atTablet {
+        // typography
+        color: $light;
+    }
 
     @include atDesktopL {
         // typography
@@ -131,12 +171,24 @@
 
 .investment-features__subtitle {
     // box model
+    display: none;
     margin: 0;
 
     // typography
     color: $golden;
     font-family: $mainFont;
     font-size: 0.85rem;
+
+    @include atTablet {
+        // box model
+        display: block;
+        max-width: 185px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 270px;
+    }
 }
 
 .investment-features__title,
