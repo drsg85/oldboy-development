@@ -75,7 +75,7 @@
     
     &--city {
         // visual
-        background-image: url('./img/bgs/city-d.jpg');
+        background-image: url('./img/city/kaliningrad.jpg');
         background-size: cover;
         background-position: top left;
 
@@ -502,6 +502,22 @@
     @include atDesktopL {
         // box model
         padding-top: 0;
+    }
+}
+
+.hero--city .hero__buttons {
+    // box model
+    margin-top: 20px;
+
+    @include atTablet {
+        // box model
+        margin-left: auto;
+        margin-top: 0;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: none;
     }
 }
 
