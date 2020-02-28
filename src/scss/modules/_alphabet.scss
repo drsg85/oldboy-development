@@ -257,6 +257,9 @@
     background-color: transparent;
 
      &::after {
+         // positioning
+         transform: none;
+         
          // box model
          display: inline-block;
     }

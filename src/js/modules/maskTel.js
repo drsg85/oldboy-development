@@ -7,7 +7,6 @@ class MaskTel {
     }
 
     addEvents() {
-        console.log(this.inputTels);
         let telInput = new InputMask({
             'mask': '7(999) 999-99-99'
         }).mask(this.inputTels);

@@ -31,7 +31,6 @@ class TabSwitcher {
         this.classActive = `${tabClass}--active`;
         this.tabs.map((el, i) => {
             if(el.classList.contains(this.classActive)) {
-                console.log(el.id);
                 this.elToOpen.map((element) => {
                     if(el.id == element.dataset.content) {
                         element.style.display = 'block';
