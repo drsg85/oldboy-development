@@ -1463,6 +1463,7 @@
         // box model
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         align-items: stretch;
         margin: 0 -10px;
     }

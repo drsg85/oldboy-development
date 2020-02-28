@@ -1,12 +1,19 @@
 .chosen-branch {
     // box model
-    margin: 0 10px;
+    margin: 0 auto;
     margin-bottom: 60px;
-
+    width: 230px;
+    
     // typography
     font-family: $titleFont;
     line-height: 1.5;
     text-align: center;
+    
+    @include atTablet {
+        // box model
+        margin: 0 10px;
+        margin-bottom: 60px;
+    }
 }
 
 .chosen-branch__block {
