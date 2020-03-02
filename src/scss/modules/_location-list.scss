@@ -63,6 +63,7 @@
 .location-list__item a {
     // positioning
     position: relative;
+
     // box model
     display: inline-block;
     padding: 7px 12px;
@@ -144,6 +145,18 @@
 
     // visual
     background-color: $golden;
+}
+
+.location-list__item--world a {
+    // typography
+    white-space: unset;
+}
+
+.location-list__item--world a:hover {
+    @include atTablet {
+    // box model
+    max-width: 95%;
+    }
 }
 
 .location-list__place {
