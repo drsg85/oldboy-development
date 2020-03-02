@@ -11,8 +11,6 @@ class GoToElement {
 
     events() {
         function gotoelement(e_id, arr) {
-            // document.getElementById('branch-index').scrollLeft = document.getElementById(e_id).offsetLeft - document.getElementById('branch-index').offsetLeft - document.getElementById('branch-index').clientLeft;
-
             const target = document.getElementById(e_id);
             for (let i = 0; i < arr.length; i++) {
                 let everyLetter = arr[i];
