@@ -41,7 +41,6 @@ class BranchList {
   setButtonText (isHidden) {
     let buttonText = this.button.textContent;
     let newText = '<div class="branch-list__button-mid"></div>';
-    console.log(isHidden);
 
     if (isHidden) {
       newText = 'Посмотреть филиалы списком' + newText;

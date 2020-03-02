@@ -41,7 +41,8 @@ const webpackConfig = {
     scriptsUS: './src/js/scriptsUS.js',
     scriptsPL: './src/js/scriptsPL.js',
     scriptsME: './src/js/scriptsME.js',
-    scriptsUA: './src/js/scriptsUA.js'
+    scriptsUA: './src/js/scriptsUA.js',
+    scriptsGE: './src/js/scriptsGE.js'
   },
 
   output: {
