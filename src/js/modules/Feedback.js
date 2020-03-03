@@ -1,7 +1,7 @@
 class Feedback {
     constructor () {
         this.feedback = document.querySelector('.feedback');
-        this.openFeedbackButton = document.querySelectorAll('.member__feedback');
+        this.openFeedbackButton = document.querySelectorAll('.member__review');
         this.closeFeedbackButton = document.querySelector('.feedback__close-button');
 
         this.addEvent();
@@ -11,7 +11,8 @@ class Feedback {
         for (let i = 0; i < this.openFeedbackButton.length; i++) {
             let openButton = this.openFeedbackButton[i];
 
-        openButton.addEventListener('click', () => {
+        openButton.addEventListener('click', (evt) => {
+            evt.preventDefault();
             this.feedback.classList.add('feedback--show');
             this.closeFeedbackButton.classList.add('feedback__close-button--show');
             document.documentElement.style.overflow = 'hidden';

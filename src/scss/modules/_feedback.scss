@@ -27,64 +27,232 @@
 }
 
 .feedback__container {
-    // positioning
-    // position: fixed;
-    // left: 0;
-    // right: 0;
-    // top: 50%;
-    // transform: translateY(-50%) translateZ(0);
-    // z-index: 99;
-    // backface-visibility: hidden;
-
     // box model
     display: block;
-    width: 55vw;
+    width: 85vw;
     height: 60vh;
     margin: auto;
-    padding: 25px;
+    padding-bottom: 20px;
+
+    // typography
+    text-align: center;
 
     // visual
     background-color: $bianca;
     border-radius: 5px;
     box-shadow: -1px 5px 12px 0 rgba(89, 90, 90, 0.3);
     overflow-y: scroll;
+
+    @include atTablet {
+        // box model
+        // width: 55vw;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 62vw;
+        // max-width: 1000px;
+    }
+}
+
+.feedback__header {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-top: 30px;
+
+    // visual
+    background-image: url('./img/bgs/feedback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include atTablet {
+        // box model
+        padding-right: 30px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-bottom: 30px;
+        padding-left: 45px;
+        padding-top: 30px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        padding-right: 70px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 110px;
+    }
+}
+
+.feedback__info {
+    // typography
+    text-align: left;
 }
 
 .feedback__title {
     // box model
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     // typography
     color: $golden;
     font-family: $titleFont;
-    text-align: center;
+    font-size: 1.5rem;
+}
+
+.feedback__desc {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.feedback__summary {
+    // box model
+    display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+    }
+}
+
+.feedback__count {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.feedback__result {
+    // box model
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.9rem;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.feedback__result::after {
+    content: "";
+
+    // box model
+    display: block;
+    width: 75px;
+    height: 15px;
+    margin-left: 5px;
+
+    // visual
+    background-image: url('./img/icons/star-light.svg');
+}
+
+.feedback__content {
+    // box model
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 120px;
+        padding-top: 45px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        padding-right: 70px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 110px;
+    }
 }
 
 .feedback__item {
     // box model
-    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
 
     // visual
     list-style-type: none;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+}
+
+.feedback__reviewer {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 20px;
+    margin-left: 47px;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 50px;
+    }
+}
+
+.feedback__reviewer::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: -47px;
+
+    // box model
+    width: 32px;
+    height: 32px;
+
+    // visual
+    background-image: url('./img/icons/reviewer.svg');
+    background-position-y: 2px;
+    background-repeat: no-repeat;
+    border: 2px solid $golden;
+    border-radius: 50%;
 }
 
 .feedback__reviewer-name {
     // box model
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 
     // typography
+    color: $dark;
     font-family: $mainFont;
-}
-
-.feedback__text {
-    // box model
-    margin: 0;
-    margin-bottom: 15px;
-
-    // typography
-    font-family: $mainFont;
+    font-size: 1rem;
+    text-align-last: left;
+    text-transform: uppercase;
 }
 
 .feedback__date {
@@ -92,15 +260,115 @@
     margin: 0;
 
     // typography
+    color: $grey;
     font-family: $mainFont;
-    text-align: right;
+    font-size: 0.6rem;
+    text-align-last: left;
+    text-transform: uppercase;
+}
+
+.feedback__text {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+    
+    // typography
+    font-family: $mainFont;
+    line-height: 19px;
+    text-align: left;
+
+    @include atDesktopS {
+        // box model
+        max-width: 450px;
+        margin-bottom: 0;
+    }
+    
+    @include atDesktopM {
+        max-width: 350px;
+    }
+
+    @include atDesktopL {
+        max-width: 490px;
+    }
+}
+
+.feedback__rating {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 75px;
+    height: 14px;
+    margin-right: auto;
+    
+    // visual
+    background-image: url('./img/icons/star-empty.svg');
+
+    @include atDesktopS {
+        // box model
+        margin-left: auto;
+        margin-right: unset;
+    }
+}
+
+.feedback__stars {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+    // box model
+    width: 16px;
+    height: 14px;
+
+    // visual
+    background-image: url('./img/icons/star-golden.svg');
+
+    &--two {
+        // box model
+        width: 30px;
+    }
+
+    &--three {
+        // box model
+        width: 45px;
+    }
+
+    &--four {
+        // box model
+        width: 60px;
+    }
+
+    &--five {
+        // box model
+        width: 75px;
+    }
+}
+
+
+.feedback__more {
+    // box model
+    display: inline-block;
+
+    // typography
+    color: $grey;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feedback__more:hover {
+    // typography
+    opacity: 0.6;
 }
 
 .feedback__close-button {
     // positioning
     position: fixed;
-    right: 20%;
-    top: 15%;
+    right: 12%;
+    top: 24%;
     z-index: 15;
 
     // box model
@@ -112,6 +380,17 @@
     background: transparent;
     border: none;
     cursor: pointer;
+
+    @include atTablet {
+        // positioning
+        right: 5%;
+        top: 15%;
+    }
+
+    @include atDesktopM {
+        // positioning
+        right: 15%;
+    }
 
     &--show {
         // box model
