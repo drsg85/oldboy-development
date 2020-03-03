@@ -181,7 +181,7 @@ new HorizontalScroll();
 
 new GoToElement();
 
-//new FetchMasters();
+new FetchMasters();
 
 new SmoothOnAnchors();
 

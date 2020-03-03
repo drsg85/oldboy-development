@@ -11,12 +11,12 @@ class Feedback {
         for (let i = 0; i < this.openFeedbackButton.length; i++) {
             let openButton = this.openFeedbackButton[i];
 
-        openButton.addEventListener('click', (evt) => {
+        /* openButton.addEventListener('click', (evt) => {
             evt.preventDefault();
             this.feedback.classList.add('feedback--show');
             this.closeFeedbackButton.classList.add('feedback__close-button--show');
             document.documentElement.style.overflow = 'hidden';
-        });
+        }); */
 
         this.closeFeedbackButton.addEventListener('click', () => {
             this.feedback.classList.remove('feedback--show');
