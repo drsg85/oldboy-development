@@ -34,8 +34,10 @@
 
     // box model
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
+    // flex-direction: column;
+    // justify-content: flex-end;
     height: 120px;
     padding: 20px;
     
@@ -67,6 +69,55 @@
     font-size: 0.85rem;
 }
 
+.member__count {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.member__count::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+
+    // box model
+    display: block;
+    width: 14px;
+    height: 14px;
+
+    // visual
+    background-image: url('./img/icons/star-light.svg');
+
+}
+
+.member__review {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: ease-in-out 0.25s;
+}
+
+.member__review:hover {
+    // typography
+    color: $light;
+}
+
 .member__photo {
     // box model
     height: 100%;
@@ -90,10 +141,11 @@
 .member__top {
     // positioning
     position: absolute;
-    bottom: 15px;
+    top: 15px;
     right: 15px;
 
     // box model
+    display: flex;
     height: 72px;
     width: 72px;
 
@@ -112,28 +164,23 @@
     margin: 20px;
 }
 
-.member__rating {
-    // positioning
-    position: absolute;
-    bottom: -40px;
-    left: 0;
-    right: 0;
-    z-index: 2;
+// .member__rating {
+//     // positioning
+//     position: absolute;
+//     bottom: -40px;
+//     left: 0;
+//     right: 0;
+//     z-index: 2;
 
-    // box model
-    width: 150px; //5 stars
-    // width: 120px; //4 stars
-    // width: 90px; //3 stars
-    // width: 60px; //2 stars
-    // width: 30px; //1 star
-    height: 30px;
-    margin: auto;
+//     // box model
+//     width: 150px; //5 stars
+//     // width: 120px; //4 stars
+//     // width: 90px; //3 stars
+//     // width: 60px; //2 stars
+//     // width: 30px; //1 star
+//     height: 30px;
+//     margin: auto;
 
-    // visual
-    background-image: url('./img/icons/star.svg');
-}
-
-.member .register {
-    // box model
-    display: none;
-}
+//     // visual
+//     background-image: url('./img/icons/star.svg');
+// }
