@@ -4,16 +4,23 @@ class FetchMasters {
         this.userToken = 'e4ebbf9631720ce1587b310af7f90ce5';
         this.companyId = '34064';
         this.staff_id = '631239';
-        this.urlForComments = `https://api.yclients.com/api/v1/comments/${this.companyId}`;
+        this.ammountOfComments = 200;
+        this.urlForComments = `https://api.yclients.com/api/v1/comments/${this.companyId}&count=${this.ammountOfComments}`;
         this.urlForMasters = `https://api.yclients.com/api/v1/staff/${this.companyId}`;
         this.masters = document.querySelector('.team__content');
         this.feedback = document.querySelector('.feedback');
         this.openFeedbackButton = document.querySelectorAll('.member__review');
         this.closeFeedbackButton = document.querySelectorAll('.feedback__close-button');
+        this.starsContainer = {
+            1: 'feedback__stars--one',
+            2: 'feedback__stars--two',
+            3: 'feedback__stars--three',
+            4: 'feedback__stars--four',
+            5: 'feedback__stars--five'
+        };
         this.data;
         this.copyresult;
-        this.resultData = [];
-        this.resD = [];
+        this.slicedArr = [];
         this.counter = 5;
         this.addEvents();
     }
@@ -47,127 +54,40 @@ class FetchMasters {
         xhr.setRequestHeader('Authorization', `${this.api}, ${this.userToken}`);
         xhr.onreadystatechange = () => {
             if(xhr.readyState == 4) {
-                const data = JSON.parse(xhr.responseText);
-                console.log(data);
-                const item = document.createElement('article');
-                item.classList.add('member')
-
-                const top = document.createElement('div');
-                top.classList.add('member__top');
-
-                const header = document.createElement('header');
-                header.classList.add('member__header');
-
-                const dataWrap = document.createElement('div');
-                dataWrap.classList.add('member__data');
-
-                const name = document.createElement('h3');
-                name.classList.add('member__name');
-
-                const spec = document.createElement('p');
-                spec.classList.add('member__position');
-
-                dataWrap.appendChild(name);
-                dataWrap.insertBefore(spec, name);
-
-                const ratingWrap = document.createElement('div');
-                ratingWrap.classList.add('member__rating');
-
-                const rating = document.createElement('p');
-                rating.classList.add('member__count');
-                
-                const addComments = document.createElement('a');
-                addComments.href = "#";
-                addComments.classList.add('member__review');
-                addComments.textContent = 'Отзывы';
-
-                ratingWrap.appendChild(rating);
-                ratingWrap.appendChild(addComments);
-
-                header.appendChild(dataWrap);
-                header.appendChild(ratingWrap);
-                
-                const imgWrap = document.createElement('div');
-                const img = document.createElement('img');
-                imgWrap.classList.add('member__photo');
-
-                const feedback = document.createElement('div');
-                feedback.classList.add('feedback');
-
-                const feedbackContainer = document.createElement('div');
-                feedbackContainer.classList.add('feedback__container');
-
-                const feedbackHeader = document.createElement('header');
-                feedbackHeader.classList.add('feedback__header');
-
-                const feedbackInfo = document.createElement('div');
-                feedbackInfo.classList.add('feedback__info');
-
-                const feedbackTitle = document.createElement('p');
-                feedbackTitle.classList.add('feedback__title');
-                feedbackTitle.textContent = 'Отзывы наших клиентов';
-
-                const feedbackSubtitle = document.createElement('p');
-                feedbackSubtitle.classList.add('feedback__desc');
-                feedbackSubtitle.textContent = 'Об услугах барберов';
-
-                feedbackInfo.appendChild(feedbackTitle);
-                feedbackInfo.appendChild(feedbackSubtitle);
-
-
-                const feedbackSumm = document.createElement('div');
-                feedbackSumm.classList.add('feedback__summary');
-
-                const feedbackCount = document.createElement('div');
-                feedbackCount.classList.add('feedback__count');
-
-                const feedbackRes = document.createElement('div');
-                feedbackRes.classList.add('feedback__result');
-
-                feedbackSumm.appendChild(feedbackCount);
-                feedbackSumm.appendChild(feedbackRes);
-
-
-                feedbackHeader.appendChild(feedbackInfo);
-                feedbackHeader.appendChild(feedbackSumm);
-
-                const feedbackContent = document.createElement('ul');
-                feedbackContent.classList.add('feedback__content');
-                feedbackContent.dataset.someId = item.dataset.id;
-                const feedbacMore = document.createElement('button');
-                feedbacMore.classList.add('feedback__more');
-                feedbacMore.textContent = 'Показать еще отзывы';
-
-                feedbackContainer.appendChild(feedbackHeader);
-                feedbackContainer.appendChild(feedbackContent);
-                feedbackContainer.appendChild(feedbacMore);
-
-                const feedbackClose = document.createElement('button');
-                feedbackClose.classList.add('feedback__close-button');
-
-                feedback.appendChild(feedbackContainer);
-                feedback.appendChild(feedbackClose);
-
-                imgWrap.appendChild(img)
-
-                item.appendChild(top);
-                item.appendChild(header);
-                item.appendChild(imgWrap);
-                item.appendChild(feedback);
-                item.dataset.id = 'id';
-
+                const data = JSON.parse(xhr.responseText),
+                    templateMaster = document.querySelector('#templateMaster'),
+                    item = templateMaster.content.querySelector('.member'),
+                    top = templateMaster.content.querySelector('.member__top'),
+                    img = templateMaster.content.querySelector('.member__photo img'),
+                    name = templateMaster.content.querySelector('.member__name'),
+                    rating = templateMaster.content.querySelector('.member__count'),
+                    spec = templateMaster.content.querySelector('.member__position'),
+                    feedbackCountNum = templateMaster.content.querySelector('.feedback__count-num'),
+                    feedbackResult = templateMaster.content.querySelector('.feedback__result');
                 data.map((el) => {
+                    let ratingParsed = el.rating.toFixed(1);
+                    let topBarber = el.specialization.toLowerCase();
+                    if(!topBarber.indexOf('топ')) {
+                        top.style.display = 'block';
+                    }
+                    else {
+                        top.style.display = 'none';
+                    }
                     item.dataset.id = el.id;
                     img.src = el.avatar;
                     name.textContent = el.name;
-                    rating.textContent = el.rating;
+                    rating.textContent = ratingParsed;
+                    feedbackResult.textContent = ratingParsed;
                     spec.textContent = el.specialization;
+                    feedbackCountNum.textContent = el.comments_count;
+
                     let cloned = item.cloneNode(true);
+
                     if(el.hidden == 0) {
                         cloned.dataset.id = el.id;
                         img.src = el.avatar;
                         name.textContent = el.name;
-                        rating.textContent = el.rating;
+                        rating.textContent = ratingParsed;
                         spec.textContent = el.specialization;
                         this.masters.appendChild(cloned);
                     }
@@ -182,12 +102,6 @@ class FetchMasters {
                     closeFeedbackButton.classList.add('feedback__close-button--show');
                     document.documentElement.style.overflow = 'hidden';
                 }))
-
-                const feedbacks = document.querySelectorAll('.feedback__close-button');
-                feedbacks.forEach((el) => el.addEventListener('click', () => {
-                    el.parentElement.classList.remove('feedback--show');
-                    document.documentElement.style.overflow = 'auto';
-                }))
             }
         }
         xhr.send();
@@ -200,74 +114,103 @@ class FetchMasters {
             xhr.setRequestHeader('Authorization', `${this.api}, ${this.userToken}`);
             xhr.onreadystatechange = () => {
                 if(xhr.readyState == 4) {
-                    const data = JSON.parse(xhr.responseText);
+                    const data = JSON.parse(xhr.responseText),
+                        templateMaster = document.querySelector('#templateComment'),
+                        comment = templateMaster.content.querySelector('.feedback__item'),
+                        commentAvatar = templateMaster.content.querySelector('.feedback__avatar'),
+                        commentName = templateMaster.content.querySelector('.feedback__reviewer-name'),
+                        commentDate = templateMaster.content.querySelector('.feedback__date'),
+                        commentText = templateMaster.content.querySelector('.feedback__text'),
+                        commentStars = templateMaster.content.querySelector('.feedback__stars');
                     this.data = data;
-                    const triggers = [...document.querySelectorAll('.feedback__more')];
-                    const popupTriggers = [...document.querySelectorAll('.member__review')];
+                    const triggers = [...document.querySelectorAll('.member__review')];
                     this.copyresult = triggers.map((el) => {
                         const parentOfCurrentTrigger = this.findParent(el, 'member');
                         const masterId = parentOfCurrentTrigger.dataset.id;
-                        const result = this.data.filter((el) => el.master_id === masterId);
+                        const result = this.data.filter((el) => el.master_id == masterId);
                         return result;
                     });
-                    popupTriggers.map((el) => {
-                        const parentOfCurrentTrigger = this.findParent(el, 'member');
-                        const ul = parentOfCurrentTrigger.querySelector('.feedback__content');
-                        this.copyresult.map((elComment) => {
-                            elComment.map((el) => {
-                                this.resultData.push(el.text);
-                            })
-                        });
-                        this.resD = this.resultData.splice(0,5);
-                        this.resD = this.resD.flat();
-                        this.counter+=5;
-                        if(this.counter >= this.copyresult.length) {
-                            el.style.display = 'none';
-                            this.counter = 0;
-                        }
-                        this.resD.map((el) => {
-                            const comment = document.createElement('li');
-                            comment.classList.add('feedback__item')
-                            const commentText = document.createElement('p');
-                            commentText.classList.add('feedback__text');
-                            comment.appendChild(commentText);
-                            commentText.textContent = el;
-                            const clonedComment = comment.cloneNode(true);
-                            ul.appendChild(clonedComment);
-                        })
-                    })
+                    const sliced = [this.copyresult.map((arr) => arr.splice(0,5))];
+                    const flatted = sliced.flat().flat();
 
-                    triggers.map((el) => el.addEventListener('click', () => {
-                        
-                        const parentOfCurrentTrigger = this.findParent(el, 'member');
-                        const ul = parentOfCurrentTrigger.querySelector('.feedback__content');
-                        this.copyresult.map((elComment) => {
-                            elComment.map((el) => {
-                                this.resultData.push(el.text);
-                            })
-                        });
-                        this.resD = this.resultData.splice(0,5);
-                        this.resD = this.resD.flat();
-                        this.counter+=5;
-                        if(this.counter >= this.copyresult.length) {
-                            el.style.display = 'none';
-                            this.counter = 0;
-                        }
-                        this.resD.map((el) => {
-                            const comment = document.createElement('li');
-                            comment.classList.add('feedback__item')
-                            const commentText = document.createElement('p');
-                            commentText.classList.add('feedback__text');
-                            comment.appendChild(commentText);
-                            commentText.textContent = el;
-                            const clonedComment = comment.cloneNode(true);
-                            ul.appendChild(clonedComment);
+                    const masters = document.querySelectorAll('.member');
+
+                    masters.forEach((master) => {
+                        const ul = master.querySelector('.feedback__content');
+                        flatted.map((comm) => {
+                            if(master.dataset.id == comm.master_id) {
+                                const avatarSrc = comm.user_avatar;
+                                if(avatarSrc.indexOf('no-master') == -1) {
+                                    commentAvatar.src = avatarSrc;
+                                }
+                                else {
+                                    commentAvatar.src = './img/icons/reviewer.svg';
+                                }
+                                commentName.textContent = comm.user_name;
+                                commentDate.textContent = comm.date;
+                                commentText.textContent = comm.text;
+                                commentStars.className = `feedback__stars ${this.starsContainer[comm.rating]}`;
+                                const clonedComment = comment.cloneNode(true);
+                                ul.appendChild(clonedComment);
+                                }
                         })
+                    });
+
+                    const feedbacks = document.querySelectorAll('.feedback__close-button');
+                    feedbacks.forEach((el) => el.addEventListener('click', () => {
+                        const feedbackParent = this.findParent(el, 'feedback');
+                        feedbackParent.classList.remove('feedback--show');
+                        document.documentElement.style.overflow = 'auto';
+                        //this.counter = 0;
                     }));
+
+                    const moreComments = [...document.querySelectorAll('.feedback__more')];
+                    
+                    moreComments.map((btn) => btn.addEventListener('click', () => {
+                        const parentOfCommentBlock = this.findParent(btn, 'member');
+                        const masterId = parentOfCommentBlock.dataset.id;
+                        const flatted = this.copyresult;
+                        let arr = [];
+                        flatted.map((memberArr) => {
+                            memberArr.map((el) => {
+                                    if(masterId == el.master_id && arr.length + 1 <=this.counter) {
+                                        arr.push(el);
+                                    }
+                                })
+                            })
+                        this.counter+=5;
+                        const ul = parentOfCommentBlock.querySelector('.feedback__content'),
+                        templateMaster = document.querySelector('#templateComment'),
+                        comment = templateMaster.content.querySelector('.feedback__item'),
+                        commentAvatar = templateMaster.content.querySelector('.feedback__avatar'),
+                        commentName = templateMaster.content.querySelector('.feedback__reviewer-name'),
+                        commentDate = templateMaster.content.querySelector('.feedback__date'),
+                        commentText = templateMaster.content.querySelector('.feedback__text'),
+                        commentStars = templateMaster.content.querySelector('.feedback__stars');
+                        console.log(this.counter, arr.length, arr);
+                        arr.map((comm) => {
+                                const avatarSrc = comm.user_avatar;
+                                if(avatarSrc.indexOf('no-master') == -1) {
+                                    commentAvatar.src = avatarSrc;
+                                }
+                                else {
+                                    commentAvatar.src = './img/icons/reviewer.svg';
+                                }
+                                commentName.textContent = comm.user_name;
+                                commentDate.textContent = comm.date;
+                                commentText.textContent = comm.text;
+                                commentStars.className = `feedback__stars ${this.starsContainer[comm.rating]}`;
+                                const clonedComment = comment.cloneNode(true);
+                                ul.appendChild(clonedComment);
+                        });
+                        if(this.counter > arr.length + 5) {
+                            btn.style.display = 'none';
+                        }
+                    }))
                 }
             }
+            
         xhr.send();
-        
     }
 
     addEvents() {

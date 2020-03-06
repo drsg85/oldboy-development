@@ -412,87 +412,47 @@
                     <p class="section-header__subtitle">Команда&nbsp;Oldboy</p>
                 </header>
             </div>
-            <div class="team__content">
-                <article class="member">
-                    <div class="member__top"></div>
-                    <header class="member__header">
-                        <div class="member__data">
-                            <h3 class="member__name">Юрий</h3>
-                            <p class="member__position">Барбер</p>
-                        </div>
-                        <div class="member__rating">
-                            <p class="member__count">4.8</p><a class="member__review" href="#">Отзывы</a>
-                        </div>
-                    </header>
-                    <div class="member__photo"><img src="/img/members/1.jpg" alt="Фотография барбера" /></div>
-                    <div class="feedback">
-                        <div class="feedback__container">
-                            <div class="feedback__header">
-                                <div class="feedback__info">
-                                    <p class="feedback__title">Отзывы наших клиентов</p>
-                                    <p class="feedback__desc">Об услугах барберов</p>
-                                </div>
-                                <div class="feedback__summary">
-                                    <div class="feedback__count">Всего 431 отзыв</div>
-                                    <div class="feedback__result">4.8</div>
-                                </div>
+            <div class="team__content"><template id="templateMaster">
+                    <article class="member" data-id="0">
+                        <div class="member__top"></div>
+                        <header class="member__header">
+                            <div class="member__data">
+                                <p class="member__position"></p>
+                                <h3 class="member__name"></h3>
                             </div>
-                            <ul class="feedback__content">
-                                <li class="feedback__item">
-                                    <div class="feedback__reviewer">
-                                        <h3 class="feedback__reviewer-name">Алексей</h3>
-                                        <p class="feedback__date">27.01.2020</p>
+                            <div class="member__rating">
+                                <p class="member__count"></p><a class="member__review" href="#">Отзывы</a>
+                            </div>
+                        </header>
+                        <div class="member__photo"><img src="" alt="" /></div>
+                        <div class="feedback">
+                            <div class="feedback__container">
+                                <div class="feedback__header">
+                                    <div class="feedback__info">
+                                        <p class="feedback__title">Отзывы наших клиентов</p>
+                                        <p class="feedback__desc">Об услугах барберов</p>
                                     </div>
-                                    <p class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, saepe voluptate. Aliquid architecto ea quo</p>
-                                    <div class="feedback__rating">
-                                        <div class="feedback__stars"></div>
+                                    <div class="feedback__summary">
+                                        <div class="feedback__count">Количество отзывов: <span class="feedback__count-num"></span></div>
+                                        <div class="feedback__result">4.8</div>
                                     </div>
-                                </li>
-                                <li class="feedback__item">
-                                    <div class="feedback__reviewer">
-                                        <h3 class="feedback__reviewer-name">Алексей</h3>
-                                        <p class="feedback__date">27.01.2020</p>
-                                    </div>
-                                    <p class="feedback__text">Lorem ipsum</p>
-                                    <div class="feedback__rating">
-                                        <div class="feedback__stars feedback__stars--four"></div>
-                                    </div>
-                                </li>
-                                <li class="feedback__item">
-                                    <div class="feedback__reviewer">
-                                        <h3 class="feedback__reviewer-name">Алексей</h3>
-                                        <p class="feedback__date">27.01.2020</p>
-                                    </div>
-                                    <p class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, saepe voluptate. Aliquid architecto ea quo error quisquam doloremque optio, incidunt dolor a, quam explicabo illum voluptatum qui alias delectus corporis!</p>
-                                    <div class="feedback__rating">
-                                        <div class="feedback__stars feedback__stars--three"></div>
-                                    </div>
-                                </li>
-                                <li class="feedback__item">
-                                    <div class="feedback__reviewer">
-                                        <h3 class="feedback__reviewer-name">Алексей</h3>
-                                        <p class="feedback__date">27.01.2020</p>
-                                    </div>
-                                    <p class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, saepe voluptate. Aliquid architecto ea quo error quisquam doloremque optio, incidunt dolor a, quam explicabo illum voluptatum qui alias delectus corporis!</p>
-                                    <div class="feedback__rating">
-                                        <div class="feedback__stars feedback__stars--five"></div>
-                                    </div>
-                                </li>
-                                <li class="feedback__item">
-                                    <div class="feedback__reviewer">
-                                        <h3 class="feedback__reviewer-name">Алексей</h3>
-                                        <p class="feedback__date">27.01.2020</p>
-                                    </div>
-                                    <p class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.!</p>
-                                    <div class="feedback__rating">
-                                        <div class="feedback__stars feedback__stars--two"></div>
-                                    </div>
-                                </li>
-                            </ul><button class="feedback__more" id="request" href="#">Показать ещё отзывы</button>
-                        </div><button class="feedback__close-button"></button>
-                    </div>
-                </article>
-            </div>
+                                </div>
+                                <ul class="feedback__content"><template id="templateComment">
+                                        <li class="feedback__item"><img class="feedback__avatar" src="#" alt="Feedback avatar" />
+                                            <div class="feedback__reviewer">
+                                                <h3 class="feedback__reviewer-name"></h3>
+                                                <p class="feedback__date"></p>
+                                            </div>
+                                            <p class="feedback__text"></p>
+                                            <div class="feedback__rating">
+                                                <div class="feedback__stars"></div>
+                                            </div><button class="feedback__close-button"></button>
+                                        </li>
+                                    </template></ul><button class="feedback__more" id="request" href="#">Показать ещё отзывы</button>
+                            </div>
+                        </div>
+                    </article>
+                </template></div>
         </section>
         <section class="academy-banner academy-banner--cert">
             <header class="academy-banner__header">

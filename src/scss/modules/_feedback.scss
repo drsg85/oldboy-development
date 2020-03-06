@@ -192,6 +192,9 @@
 }
 
 .feedback__item {
+    // positioning
+    position: relative;
+    
     // box model
     display: flex;
     flex-direction: column;
@@ -223,7 +226,7 @@
     }
 }
 
-.feedback__reviewer::before {
+/* .feedback__reviewer::before {
     content: "";
 
     // positioning
@@ -240,6 +243,28 @@
     background-repeat: no-repeat;
     border: 2px solid $golden;
     border-radius: 50%;
+} */
+
+.feedback__avatar {
+    // positioning
+    position: absolute;
+    left: 0;
+
+    // box model
+    width: 32px;
+    height: 32px;
+
+    // visual
+    background-image: url('./img/icons/reviewer.svg');
+    background-position-y: 2px;
+    background-repeat: no-repeat;
+    border: 2px solid $golden;
+    border-radius: 50%;
+
+    @include atDesktopS {
+        // positioning
+        left: -45px;
+    }
 }
 
 .feedback__reviewer-name {
