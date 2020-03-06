@@ -4,7 +4,7 @@ class FetchMasters {
         this.userToken = 'e4ebbf9631720ce1587b310af7f90ce5';
         this.companyId = '34064';
         this.staff_id = '631239';
-        this.ammountOfComments = 200;
+        this.ammountOfComments = 5000;
         this.urlForComments = `https://api.yclients.com/api/v1/comments/${this.companyId}&count=${this.ammountOfComments}`;
         this.urlForMasters = `https://api.yclients.com/api/v1/staff/${this.companyId}`;
         this.masters = document.querySelector('.team__content');
@@ -22,6 +22,8 @@ class FetchMasters {
         this.copyresult;
         this.slicedArr = [];
         this.counter = 5;
+        this.resD = [];
+        this.arr = [];
         this.addEvents();
     }
 
@@ -161,34 +163,36 @@ class FetchMasters {
                         const feedbackParent = this.findParent(el, 'feedback');
                         feedbackParent.classList.remove('feedback--show');
                         document.documentElement.style.overflow = 'auto';
-                        //this.counter = 0;
+                        this.counter = 5;
+                        this.resD = [];
+                        this.arr = [];
                     }));
 
                     const moreComments = [...document.querySelectorAll('.feedback__more')];
                     
                     moreComments.map((btn) => btn.addEventListener('click', () => {
-                        const parentOfCommentBlock = this.findParent(btn, 'member');
-                        const masterId = parentOfCommentBlock.dataset.id;
-                        const flatted = this.copyresult;
-                        let arr = [];
-                        flatted.map((memberArr) => {
-                            memberArr.map((el) => {
-                                    if(masterId == el.master_id && arr.length + 1 <=this.counter) {
-                                        arr.push(el);
-                                    }
-                                })
-                            })
-                        this.counter+=5;
-                        const ul = parentOfCommentBlock.querySelector('.feedback__content'),
-                        templateMaster = document.querySelector('#templateComment'),
+                        const parentOfCommentBlock = this.findParent(btn, 'member'),
+                        ul = parentOfCommentBlock.querySelector('.feedback__content--more'),
+                        templateMaster = document.querySelector('#templateMoreComments'),
                         comment = templateMaster.content.querySelector('.feedback__item'),
                         commentAvatar = templateMaster.content.querySelector('.feedback__avatar'),
                         commentName = templateMaster.content.querySelector('.feedback__reviewer-name'),
                         commentDate = templateMaster.content.querySelector('.feedback__date'),
                         commentText = templateMaster.content.querySelector('.feedback__text'),
-                        commentStars = templateMaster.content.querySelector('.feedback__stars');
-                        console.log(this.counter, arr.length, arr);
-                        arr.map((comm) => {
+                        commentStars = templateMaster.content.querySelector('.feedback__stars'),
+                        masterId = parentOfCommentBlock.dataset.id,
+                        flatted = this.copyresult;
+                        ul.innerHTML = '';
+                        flatted.map((memberArr) => {
+                            memberArr.map((el) => {
+                                if(masterId == el.master_id && this.counter <= memberArr.length && this.arr.length <= memberArr.length) {
+                                        this.arr.push(el);
+                                    }
+                                })
+                            })
+                        this.counter+=5;
+                        this.resD.push((this.arr.splice(0,5)));
+                        this.resD.flat().map((comm) => {
                                 const avatarSrc = comm.user_avatar;
                                 if(avatarSrc.indexOf('no-master') == -1) {
                                     commentAvatar.src = avatarSrc;
@@ -202,8 +206,10 @@ class FetchMasters {
                                 commentStars.className = `feedback__stars ${this.starsContainer[comm.rating]}`;
                                 const clonedComment = comment.cloneNode(true);
                                 ul.appendChild(clonedComment);
-                        });
-                        if(this.counter > arr.length + 5) {
+                            });
+                            
+                            console.log(this.resD.flat());
+                        if(this.resD.flat().length >= this.arr.length) {
                             btn.style.display = 'none';
                         }
                     }))

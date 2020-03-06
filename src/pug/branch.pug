@@ -393,6 +393,18 @@ html(lang="en")
                                                 .feedback__rating
                                                     .feedback__stars
                                                 button.feedback__close-button
+                                        
+                                    ul.feedback__content.feedback__content--more
+                                        template#templateMoreComments
+                                            li.feedback__item
+                                                img.feedback__avatar(src="#" alt="Feedback avatar")
+                                                .feedback__reviewer
+                                                    h3.feedback__reviewer-name
+                                                    p.feedback__date
+                                                p.feedback__text
+                                                .feedback__rating
+                                                    .feedback__stars
+                                                button.feedback__close-button
                                     button.feedback__more#request(href="#") Показать ещё отзывы
             include modules/_banner.pug
 
