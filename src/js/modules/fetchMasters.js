@@ -20,7 +20,6 @@ class FetchMasters {
         };
         this.data;
         this.copyresult;
-        this.slicedArr = [];
         this.counter = 5;
         this.resD = [];
         this.arr = [];
@@ -66,15 +65,18 @@ class FetchMasters {
                     spec = templateMaster.content.querySelector('.member__position'),
                     feedbackCountNum = templateMaster.content.querySelector('.feedback__count-num'),
                     feedbackResult = templateMaster.content.querySelector('.feedback__result');
+
                 data.map((el) => {
                     let ratingParsed = el.rating.toFixed(1);
                     let topBarber = el.specialization.toLowerCase();
+
                     if(!topBarber.indexOf('топ')) {
                         top.style.display = 'block';
                     }
                     else {
                         top.style.display = 'none';
                     }
+
                     item.dataset.id = el.id;
                     img.src = el.avatar;
                     name.textContent = el.name;
@@ -94,7 +96,9 @@ class FetchMasters {
                         this.masters.appendChild(cloned);
                     }
                 });
+
                 const popupTriggers = [...document.querySelectorAll('.member__review')];
+
                 popupTriggers.map((el) => el.addEventListener('click', (event) => {
                     event.preventDefault();
                     const parentOfCurrentTrigger = this.findParent(el, 'member');
@@ -103,7 +107,7 @@ class FetchMasters {
                     feedback.classList.add('feedback--show');
                     closeFeedbackButton.classList.add('feedback__close-button--show');
                     document.documentElement.style.overflow = 'hidden';
-                }))
+                }));
             }
         }
         xhr.send();
@@ -123,19 +127,20 @@ class FetchMasters {
                         commentName = templateMaster.content.querySelector('.feedback__reviewer-name'),
                         commentDate = templateMaster.content.querySelector('.feedback__date'),
                         commentText = templateMaster.content.querySelector('.feedback__text'),
+                        triggers = [...document.querySelectorAll('.member__review')],
                         commentStars = templateMaster.content.querySelector('.feedback__stars');
                     this.data = data;
-                    const triggers = [...document.querySelectorAll('.member__review')];
+
                     this.copyresult = triggers.map((el) => {
                         const parentOfCurrentTrigger = this.findParent(el, 'member');
                         const masterId = parentOfCurrentTrigger.dataset.id;
                         const result = this.data.filter((el) => el.master_id == masterId);
                         return result;
                     });
-                    const sliced = [this.copyresult.map((arr) => arr.splice(0,5))];
-                    const flatted = sliced.flat().flat();
 
-                    const masters = document.querySelectorAll('.member');
+                    const sliced = [this.copyresult.map((arr) => arr.splice(0,5))],
+                        flatted = sliced.flat().flat(),
+                        masters = document.querySelectorAll('.member');
 
                     masters.forEach((master) => {
                         const ul = master.querySelector('.feedback__content');
@@ -159,6 +164,7 @@ class FetchMasters {
                     });
 
                     const feedbacks = document.querySelectorAll('.feedback__close-button');
+
                     feedbacks.forEach((el) => el.addEventListener('click', () => {
                         const feedbackParent = this.findParent(el, 'feedback');
                         feedbackParent.classList.remove('feedback--show');
@@ -207,8 +213,6 @@ class FetchMasters {
                                 const clonedComment = comment.cloneNode(true);
                                 ul.appendChild(clonedComment);
                             });
-                            
-                            console.log(this.resD.flat());
                         if(this.resD.flat().length >= this.arr.length) {
                             btn.style.display = 'none';
                         }
