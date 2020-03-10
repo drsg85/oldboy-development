@@ -353,6 +353,16 @@
     }
 }
 
+.footer__rating {
+    // box model
+    align-self: center;
+
+    @include atDesktopM {
+        // box model
+        margin-right: 10px;
+    }
+}
+
 .footer__city {
     // box model
     display: none;
@@ -376,6 +386,7 @@
     @include atDesktopM {
         // box model
         display: block;
+        align-self: center;
         margin-right: 5px;
         order: 0;
     }
