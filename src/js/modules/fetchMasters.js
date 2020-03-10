@@ -76,6 +76,7 @@ class FetchMasters {
                         top.style.display = 'none';
                     }
                     item.dataset.id = el.id;
+                    item.dataset.commentsCount = el.comments_count;
                     img.src = el.avatar;
                     name.textContent = el.name;
                     rating.textContent = ratingParsed;
@@ -104,6 +105,16 @@ class FetchMasters {
                     closeFeedbackButton.classList.add('feedback__close-button--show');
                     document.documentElement.style.overflow = 'hidden';
                 }))
+
+                const masters = [...document.querySelectorAll('.member')];
+                masters.map((master) => {
+                    if(master.dataset.commentsCount == 0) {
+                        const button = master.querySelector('.member__review');
+                        const votes = master.querySelector('.member__count');
+                        button.style.display = 'none';
+                        votes.style.display = 'none';
+                    }
+                })
             }
         }
         xhr.send();
@@ -207,8 +218,6 @@ class FetchMasters {
                                 const clonedComment = comment.cloneNode(true);
                                 ul.appendChild(clonedComment);
                             });
-                            
-                            console.log(this.resD.flat());
                         if(this.resD.flat().length >= this.arr.length) {
                             btn.style.display = 'none';
                         }
