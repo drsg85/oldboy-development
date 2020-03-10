@@ -37,7 +37,9 @@
 }
 
 .footer-menu__item {
-    // margin: 0;
+    &--rating {
+        margin-top: 8px;
+    }
 }
 
 .footer-menu__link {
