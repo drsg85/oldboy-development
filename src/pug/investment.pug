@@ -19,6 +19,11 @@ html(lang="ru")
                 .hero__nav.hero__nav--hidden
                     include modules/_menu.pug
 
+                .hero__city-select
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        p.city-select__city Калининград
+
                 .menu-button.menu-button--close
                     .menu-button__middle
 
@@ -343,6 +348,7 @@ html(lang="ru")
                 .up-button__arrow
                 p.up-button__text Наверх
         
+        include modules/_choose-city.pug
         include modules/_footer.pug
 
         script(src="investment.js")
