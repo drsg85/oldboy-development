@@ -108,9 +108,6 @@ class FetchMasters {
                     feedback.classList.add('feedback--show');
                     closeFeedbackButton.classList.add('feedback__close-button--show');
                     document.documentElement.style.overflow = 'hidden';
-<<<<<<< HEAD
-                }));
-=======
                 }))
 
                 const masters = [...document.querySelectorAll('.member')];
@@ -122,7 +119,6 @@ class FetchMasters {
                         votes.style.display = 'none';
                     }
                 })
->>>>>>> test-new-code
             }
         }
         xhr.send();
