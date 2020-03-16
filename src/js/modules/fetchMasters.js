@@ -185,6 +185,15 @@ class FetchMasters {
                         this.arr = [];
                     }));
 
+                    document.addEventListener('keydown', (evt) => {
+                        if (evt.keyCode === 27) {
+                            this.feedback.classList.remove('feedback--show');
+                            this.closeFeedbackButton.classList.remove('feedback__close-button--show');
+                            document.documentElement.style.overflow = 'auto';
+                        }
+                    });
+
+
                     const moreComments = [...document.querySelectorAll('.feedback__more')];
                     
                     moreComments.map((btn) => btn.addEventListener('click', () => {
