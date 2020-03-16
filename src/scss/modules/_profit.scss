@@ -326,3 +326,11 @@
         bottom: 600px;
     }
 }
+
+.profit__offers {
+    // box model
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 120px;
+}

@@ -1,0 +1,70 @@
+.offers-card {
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.offers-card__item {
+    // box model
+    max-width: 430px;
+    width: 100%;
+
+    // typography
+    text-align: center;
+}
+
+.offers-card__content {
+    // box model
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-top: 40px;
+
+    // typography
+    text-align: center;
+
+    // visual
+    border: 2px solid rgba(210, 156, 78, 0.1);
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
+}
+
+.offers-card__content:hover {
+    // visual
+    background: rgba(210, 156, 78, 0.05);
+}
+
+.offers-card__city {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.offers-card__mark {
+    // box model
+    margin: 0;
+
+    // typography
+    color: #726969;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.offers-card__download {
+    // box model
+    display: block;
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}

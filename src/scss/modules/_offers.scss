@@ -1,0 +1,59 @@
+.offers {
+    // box model
+}
+
+.offers__text {
+
+}
+
+.offers__caption {
+    @include atDesktopS {
+        // box model
+        max-width: 260px;
+        margin-bottom: 50px;
+    }
+}
+
+.offers__advantages {
+
+}
+
+.offers__title {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.offers__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.offers__desk {
+    // box model
+    margin: 0;
+    max-width: 380px;
+
+    // typography
+    color: #726969;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+}
+
+.offers__cards {
+    // box model
+    max-width: 1000px;
+    width: 100%;
+}
