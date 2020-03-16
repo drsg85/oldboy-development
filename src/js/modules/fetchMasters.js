@@ -107,7 +107,13 @@ class FetchMasters {
                     const closeFeedbackButton = parentOfCurrentTrigger.querySelector('.feedback__close-button');
                     feedback.classList.add('feedback--show');
                     closeFeedbackButton.classList.add('feedback__close-button--show');
-                    document.documentElement.style.overflow = 'hidden';
+                    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+                    const body = document.body;
+                    body.style.position = 'fixed';
+                    body.style.top = `-${scrollY}`;
+                    body.style.left = 0;
+                    body.style.width = `calc(100% - 8px)`;
+                    //document.documentElement.style.overflow = 'hidden';
                 }))
 
                 const masters = [...document.querySelectorAll('.member')];
@@ -179,12 +185,20 @@ class FetchMasters {
                     feedbacks.forEach((el) => el.addEventListener('click', () => {
                         const feedbackParent = this.findParent(el, 'feedback');
                         feedbackParent.classList.remove('feedback--show');
-                        document.documentElement.style.overflow = 'auto';
+                        //document.documentElement.style.overflow = 'auto';
+                        const body = document.body;
+                        const scrollY = body.style.top;
+                        body.style.position = '';
+                        body.style.top = '';
+                        body.style.left = '';
+                        body.style.width = '';
+                        window.scrollTo(0, parseInt(scrollY || '0') * -1);
                         this.counter = 5;
                         this.resD = [];
                         this.arr = [];
                     }));
 
+<<<<<<< HEAD
                     document.addEventListener('keydown', (evt) => {
                         if (evt.keyCode === 27) {
                             this.feedback.classList.remove('feedback--show');
@@ -193,6 +207,17 @@ class FetchMasters {
                         }
                     });
 
+=======
+                    feedbacks.forEach((feedback) => {
+                        const feedbackParent = this.findParent(feedback, 'feedback');
+                        document.addEventListener('keydown', (evt) => {
+                            if (evt.keyCode === 27) {
+                                feedbackParent.classList.remove('feedback--show');
+                                document.documentElement.style.overflow = 'auto';
+                            }
+                        });
+                    })
+>>>>>>> dfbc3829d3807958efa08faae937ea244643378e
 
                     const moreComments = [...document.querySelectorAll('.feedback__more')];
                     
@@ -243,7 +268,21 @@ class FetchMasters {
         xhr.send();
     }
 
+    checkPositionPopup() {
+        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    }
+
+    debounceOnScroll(func, time) {
+        let timer;
+        return function (event) {
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, time, event);
+        };
+    };
+
     addEvents() {
+        const debounced = this.debounceOnScroll(this.checkPositionPopup, 400);
+        window.addEventListener('scroll', debounced);
         this.addComments();
         this.addMasters();
     }
