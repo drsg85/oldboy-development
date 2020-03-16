@@ -198,16 +198,6 @@ class FetchMasters {
                         this.arr = [];
                     }));
 
-<<<<<<< HEAD
-                    document.addEventListener('keydown', (evt) => {
-                        if (evt.keyCode === 27) {
-                            this.feedback.classList.remove('feedback--show');
-                            this.closeFeedbackButton.classList.remove('feedback__close-button--show');
-                            document.documentElement.style.overflow = 'auto';
-                        }
-                    });
-
-=======
                     feedbacks.forEach((feedback) => {
                         const feedbackParent = this.findParent(feedback, 'feedback');
                         document.addEventListener('keydown', (evt) => {
@@ -217,7 +207,6 @@ class FetchMasters {
                             }
                         });
                     })
->>>>>>> dfbc3829d3807958efa08faae937ea244643378e
 
                     const moreComments = [...document.querySelectorAll('.feedback__more')];
                     
