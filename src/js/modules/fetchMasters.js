@@ -20,7 +20,6 @@ class FetchMasters {
         };
         this.data;
         this.copyresult;
-        this.slicedArr = [];
         this.counter = 5;
         this.resD = [];
         this.arr = [];
@@ -66,15 +65,18 @@ class FetchMasters {
                     spec = templateMaster.content.querySelector('.member__position'),
                     feedbackCountNum = templateMaster.content.querySelector('.feedback__count-num'),
                     feedbackResult = templateMaster.content.querySelector('.feedback__result');
+
                 data.map((el) => {
                     let ratingParsed = el.rating.toFixed(1);
                     let topBarber = el.specialization.toLowerCase();
+
                     if(!topBarber.indexOf('топ')) {
                         top.style.display = 'block';
                     }
                     else {
                         top.style.display = 'none';
                     }
+
                     item.dataset.id = el.id;
                     item.dataset.commentsCount = el.comments_count;
                     img.src = el.avatar;
@@ -95,7 +97,9 @@ class FetchMasters {
                         this.masters.appendChild(cloned);
                     }
                 });
+
                 const popupTriggers = [...document.querySelectorAll('.member__review')];
+
                 popupTriggers.map((el) => el.addEventListener('click', (event) => {
                     event.preventDefault();
                     const parentOfCurrentTrigger = this.findParent(el, 'member');
@@ -103,7 +107,13 @@ class FetchMasters {
                     const closeFeedbackButton = parentOfCurrentTrigger.querySelector('.feedback__close-button');
                     feedback.classList.add('feedback--show');
                     closeFeedbackButton.classList.add('feedback__close-button--show');
-                    document.documentElement.style.overflow = 'hidden';
+                    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+                    const body = document.body;
+                    body.style.position = 'fixed';
+                    body.style.top = `-${scrollY}`;
+                    body.style.left = 0;
+                    body.style.width = `calc(100% - 8px)`;
+                    //document.documentElement.style.overflow = 'hidden';
                 }))
 
                 const masters = [...document.querySelectorAll('.member')];
@@ -134,19 +144,20 @@ class FetchMasters {
                         commentName = templateMaster.content.querySelector('.feedback__reviewer-name'),
                         commentDate = templateMaster.content.querySelector('.feedback__date'),
                         commentText = templateMaster.content.querySelector('.feedback__text'),
+                        triggers = [...document.querySelectorAll('.member__review')],
                         commentStars = templateMaster.content.querySelector('.feedback__stars');
                     this.data = data;
-                    const triggers = [...document.querySelectorAll('.member__review')];
+
                     this.copyresult = triggers.map((el) => {
                         const parentOfCurrentTrigger = this.findParent(el, 'member');
                         const masterId = parentOfCurrentTrigger.dataset.id;
                         const result = this.data.filter((el) => el.master_id == masterId);
                         return result;
                     });
-                    const sliced = [this.copyresult.map((arr) => arr.splice(0,5))];
-                    const flatted = sliced.flat().flat();
 
-                    const masters = document.querySelectorAll('.member');
+                    const sliced = [this.copyresult.map((arr) => arr.splice(0,5))],
+                        flatted = sliced.flat().flat(),
+                        masters = document.querySelectorAll('.member');
 
                     masters.forEach((master) => {
                         const ul = master.querySelector('.feedback__content');
@@ -170,14 +181,32 @@ class FetchMasters {
                     });
 
                     const feedbacks = document.querySelectorAll('.feedback__close-button');
+
                     feedbacks.forEach((el) => el.addEventListener('click', () => {
                         const feedbackParent = this.findParent(el, 'feedback');
                         feedbackParent.classList.remove('feedback--show');
-                        document.documentElement.style.overflow = 'auto';
+                        //document.documentElement.style.overflow = 'auto';
+                        const body = document.body;
+                        const scrollY = body.style.top;
+                        body.style.position = '';
+                        body.style.top = '';
+                        body.style.left = '';
+                        body.style.width = '';
+                        window.scrollTo(0, parseInt(scrollY || '0') * -1);
                         this.counter = 5;
                         this.resD = [];
                         this.arr = [];
                     }));
+
+                    feedbacks.forEach((feedback) => {
+                        const feedbackParent = this.findParent(feedback, 'feedback');
+                        document.addEventListener('keydown', (evt) => {
+                            if (evt.keyCode === 27) {
+                                feedbackParent.classList.remove('feedback--show');
+                                document.documentElement.style.overflow = 'auto';
+                            }
+                        });
+                    })
 
                     const moreComments = [...document.querySelectorAll('.feedback__more')];
                     
@@ -228,7 +257,21 @@ class FetchMasters {
         xhr.send();
     }
 
+    checkPositionPopup() {
+        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    }
+
+    debounceOnScroll(func, time) {
+        let timer;
+        return function (event) {
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, time, event);
+        };
+    };
+
     addEvents() {
+        const debounced = this.debounceOnScroll(this.checkPositionPopup, 400);
+        window.addEventListener('scroll', debounced);
         this.addComments();
         this.addMasters();
     }

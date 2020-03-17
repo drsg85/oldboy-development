@@ -204,6 +204,7 @@
 
     @include atDesktopS {
         // box model
+        margin-bottom: 100px;
         padding-bottom: 0;
         padding: 0 40px;
     }
@@ -211,8 +212,6 @@
     @include atDesktopL {
         // box model
         padding: 0;
-        // padding-left: 40px;
-        // padding-right: 40px;
         padding-left: 120px;
         padding-right: 120px;
     }
@@ -308,12 +307,13 @@
 .profit__contacts {
     // box model
     margin: 0 auto;
+    margin-bottom: 70px;
 
     @include atDesktopS {
         // positioning
-        position: absolute;
-        left: calc(100% - 520px);
-        bottom: 650px;
+        // position: absolute;
+        // left: calc(100% - 520px);
+        // bottom: 650px;
     }
 
     @include atDesktopM {
@@ -324,5 +324,25 @@
     @include atDesktopL {
         // positioning
         bottom: 600px;
+    }
+}
+
+.profit__offers {
+    // box model
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+    
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        padding: 0 40px;
+    }
+    
+    @include atDesktopM {
+        // box model
+        padding: 0 120px;
     }
 }

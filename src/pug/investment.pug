@@ -19,6 +19,11 @@ html(lang="ru")
                 .hero__nav.hero__nav--hidden
                     include modules/_menu.pug
 
+                .hero__city-select
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        p.city-select__city Калининград
+
                 .menu-button.menu-button--close
                     .menu-button__middle
 
@@ -203,8 +208,62 @@ html(lang="ru")
                 .profit__contacts
                     .manager-contacts
                         p.manager-contacts__title Руководитель отдела по работе с инвесторами
-                        a.manager-contacts__phone(href="tel:+79853331179") +7 (985) 333-11-79
-                        p.manager-contacts__name Виталий
+                        a.manager-contacts__phone(href="tel:+79052476535") +7 (905) 247-65-35
+                        p.manager-contacts__name Владимир
+
+                .profit__offers
+                    .offers
+                        .offers__text
+                            .offers__caption
+                                h3.offers__title Инвестиционные предложения
+                                p.offers__subtitle Объекты и преимущества
+
+                            .offers__advantages
+                                .offer-advantages
+                                    .offer-advantages__item
+                                        h4.offer-advantages__title Независимость от изменения курсов валют
+                                        p.offer-advantages__text Все наши поставщики находятся в России и&nbsp;тем&nbsp;самым мы застрахованы от подобных рисков
+
+                                    .offer-advantages__item.offer-advantages__item--stable
+                                        h4.offer-advantages__title Стабильность поступлений
+                                        p.offer-advantages__text Основной источник дохода барбершопа - это работа барбера, а ее стоимость не зависит от курса валют
+
+                            p.offers__desk Управляющая компания “OldBoy Barbershop“ привлекает инвестиции в свои филиалы, а не в филиалы франчайзинговой сети. По вопросам инвестиционных предложений необходимо обращаться напрямую к руководителю отдела по работе с инвесторами
+
+                    .offers__cards
+                        .offers-card
+                            .offers-card__item
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Москва
+                                        p.offers-card__mark Автозаводская
+                                    a.offers-card__download(href="./files/caesar.rtf") Скачать предложение
+                                button.button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Москва
+                                        p.offers-card__mark Таганская
+                                    a.offers-card__download(href="") Скачать предложение
+                                button.button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content.offers-card__content--medal
+                                    .offers-card__place
+                                        p.offers-card__city Варшава
+                                        p.offers-card__mark
+                                    a.offers-card__download(href="") Скачать предложение
+                                button.button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Симферополь
+                                        p.offers-card__mark
+                                    a.offers-card__download(href="") Скачать предложение
+                                button.button Оставить заявку
+
 
             section.targeting
                 .targeting__header
@@ -343,6 +402,7 @@ html(lang="ru")
                 .up-button__arrow
                 p.up-button__text Наверх
         
+        include modules/_choose-city.pug
         include modules/_footer.pug
 
         script(src="investment.js")
