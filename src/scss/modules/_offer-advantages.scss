@@ -3,10 +3,36 @@
 }
 
 .offer-advantages__item {
+    // positioning
+    position: relative;
+
     // box model
     margin-bottom: 30px;
     max-width: 370px;
     padding-left: 60px;
+}
+
+.offer-advantages__item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 3px;
+
+    // box model
+    display: block;
+    width: 40px;
+    height: 40px;
+    
+    // visual
+    background-image: url('./img/icons/profit.svg');
+    background-repeat: no-repeat;
+}
+
+.offer-advantages__item--stable::before {
+    // visual
+    background-image: url('./img/icons/safe.svg');
 }
 
 .offer-advantages__title {

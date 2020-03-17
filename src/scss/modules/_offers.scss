@@ -1,5 +1,12 @@
 .offers {
     // box model
+    margin-bottom: 50px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
 }
 
 .offers__text {
