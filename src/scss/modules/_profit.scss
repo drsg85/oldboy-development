@@ -307,12 +307,13 @@
 .profit__contacts {
     // box model
     margin: 0 auto;
+    margin-bottom: 70px;
 
     @include atDesktopS {
         // positioning
-        position: absolute;
-        left: calc(100% - 520px);
-        bottom: 650px;
+        // position: absolute;
+        // left: calc(100% - 520px);
+        // bottom: 650px;
     }
 
     @include atDesktopM {

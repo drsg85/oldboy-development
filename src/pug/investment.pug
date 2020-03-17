@@ -205,11 +205,11 @@ html(lang="ru")
                                         p.invest-calculator__vip-content-text Свяжитесь с&nbsp;нашим менеджером,чтобы узнать какие преимущетва мы предлагаем для&nbsp;крупных инвесторов.
 
                                     button.button.form-trigger.invest-button Оставить заявку
-                //- .profit__contacts
-                //-     .manager-contacts
-                //-         p.manager-contacts__title Руководитель отдела по работе с инвесторами
-                //-         a.manager-contacts__phone(href="tel:+79052476535") +7 (905) 247-65-35
-                //-         p.manager-contacts__name Владимир
+                .profit__contacts
+                    .manager-contacts
+                        p.manager-contacts__title Руководитель отдела по работе с инвесторами
+                        a.manager-contacts__phone(href="tel:+79052476535") +7 (905) 247-65-35
+                        p.manager-contacts__name Владимир
 
                 .profit__offers
                     .offers
@@ -234,29 +234,33 @@ html(lang="ru")
                         .offers-card
                             .offers-card__item
                                 .offers-card__content
-                                    p.offers-card__city Москва
-                                    p.offers-card__mark Автозаводская
+                                    .offers-card__place
+                                        p.offers-card__city Москва
+                                        p.offers-card__mark Автозаводская
                                     a.offers-card__download(href="./files/caesar.rtf") Скачать предложение
                                 button.button Оставить заявку
 
                             .offers-card__item
                                 .offers-card__content
-                                    p.offers-card__city Москва
-                                    p.offers-card__mark Таганская
+                                    .offers-card__place
+                                        p.offers-card__city Москва
+                                        p.offers-card__mark Таганская
+                                    a.offers-card__download(href="") Скачать предложение
+                                button.button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content.offers-card__content--medal
+                                    .offers-card__place
+                                        p.offers-card__city Варшава
+                                        p.offers-card__mark
                                     a.offers-card__download(href="") Скачать предложение
                                 button.button Оставить заявку
 
                             .offers-card__item
                                 .offers-card__content
-                                    p.offers-card__city Варшава
-                                    p.offers-card__mark
-                                    a.offers-card__download(href="") Скачать предложение
-                                button.button Оставить заявку
-
-                            .offers-card__item
-                                .offers-card__content
-                                    p.offers-card__city Симферополь
-                                    p.offers-card__mark
+                                    .offers-card__place
+                                        p.offers-card__city Симферополь
+                                        p.offers-card__mark
                                     a.offers-card__download(href="") Скачать предложение
                                 button.button Оставить заявку
 

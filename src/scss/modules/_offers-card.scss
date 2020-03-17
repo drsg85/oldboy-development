@@ -31,6 +31,9 @@
 }
 
 .offers-card__content {
+    // positioning
+    position: relative;
+
     // box model
     margin-bottom: 25px;
     padding-bottom: 25px;
@@ -45,9 +48,87 @@
     transition: all ease-in-out 0.2s;
 }
 
+.offers-card__content::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    // box model
+    display: block;
+    width: 70px;
+    height: 70px;
+
+    @include atDesktopM {
+    // visual
+    background-image: url('./img/icons/laurel-2.svg');
+    background-repeat: no-repeat;
+    }
+}
+
+.offers-card__content--medal::after {
+    @include atDesktopM {
+    // visual
+    background-image: url('./img/icons/medal-2.svg');
+    }
+}
+
 .offers-card__content:hover {
     // visual
     background: rgba(210, 156, 78, 0.05);
+}
+
+.offers-card__place {
+    // positioning
+    position: relative;
+
+    // box model
+
+    // visual
+    overflow: hidden;
+}
+
+.offers-card__place::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 50px;
+
+    // box model
+    display: block;
+    width: 70px;
+    height: 60px;
+
+    // visual
+    background-image: url('./img/icons/report.svg');
+    background-repeat: no-repeat;
+
+    @include atDesktopL {
+        // positioning
+        left: 90px;
+    }
+}
+
+.offers-card__place::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 50px;
+    
+    // box model
+    width: 70%;
+    height: 2px;
+    margin: auto;
+
+    // visual
+    background: rgba(210, 156, 78, 0.2);
 }
 
 .offers-card__city {
@@ -64,34 +145,24 @@
     text-transform: uppercase;
 }
 
-.offers-card__city::after {
-    content: "";
-
-    // positioning
-    position: absolute;
-    bottom: -25px;
-
-    // box model
-    width: 230px;
-    height: 2px;
-
-    // visual
-    background: rgba(210, 156, 78, 0.2);
-}
-
 .offers-card__mark {
     // box model
+    height: 15px;
     margin: 0;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 
     // typography
     color: #726969;
     font-family: $mainFont;
     font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
 .offers-card__download {
+    // positioning
+    position: relative;
+
     // box model
     display: inline-block;
     margin: 0;
@@ -100,6 +171,24 @@
     color: $golden;
     font-family: $mainFont;
     font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.offers-card__download::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: -20px;
+
+    // box model
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    // visual
+    background-image: url('./img/icons/download.svg');
+    background-repeat: no-repeat;
 }
