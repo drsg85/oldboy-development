@@ -11,6 +11,7 @@ import SortBranches from './modules/SortBranches';
 import SmoothOnAnchorsHorizontal from './modules/smoothOnAnchorsHorizontal';
 import HorizontalScroll from './modules/horizontalScroll';
 import GoToElement from './modules/GoToElement';
+import InvestCardForm from './modules/InvestCardForm';
 
 const mobileMenu = new MobileMenu();
 
@@ -29,6 +30,8 @@ const investCalculator = new InvestCalculator();
 const popUp = new PopUp();
 
 const inputMask = new MaskTel();
+
+const investCardForm = new InvestCardForm;
 
 function checkWindowWidth() {
     if(window.innerWidth < 700) {

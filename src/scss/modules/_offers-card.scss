@@ -11,6 +11,9 @@
 }
 
 .offers-card__item {
+    // positioning
+    position: relative;
+
     // box model
     max-width: 300px;
     margin-bottom: 50px;
@@ -85,8 +88,6 @@
 .offers-card__place {
     // positioning
     position: relative;
-
-    // box model
 
     // visual
     overflow: hidden;
@@ -193,4 +194,109 @@
     // visual
     background-image: url('./img/icons/download.svg');
     background-repeat: no-repeat;
+}
+
+.offers-card__form {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+
+    // box model
+    display: none;
+    margin-left: -25px;
+    margin-right: -25px;
+
+    @include atTablet {
+        // box model
+        // margin-left: 0;
+        // margin-right: 0;
+    }
+
+    &--active {
+        // box model
+        display: block;
+    }
+}
+
+.offers-card__form .lead-form {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-bottom: 5px;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.offers-card__close-button {
+    // positioning
+    position: absolute;
+    right: 0;
+    top: -20px;
+    z-index: 15;
+
+    // box model
+    width: 20px;
+    height: 20px;
+
+    // visual
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include atTablet {
+        // positioning
+        right: -20px;
+    }
+
+    @include atDesktopM {
+    }
+
+    &--show {
+        // box model
+        display: block;
+    }
+}
+
+.offers-card__close-button::after,
+.offers-card__close-button::before {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 20px;
+
+  width: 26px;
+  height: 6px;
+  margin: -13px -3px;
+
+  background-color: $golden;
+}
+
+.offers-card__close-button::before {
+  transform: rotate(45deg);
+}
+
+.offers-card__close-button::after {
+  transform: rotate(-45deg);
+}
+
+.offers-card__close-button:hover::after,
+.offers-card__close-button:hover::before,
+.offers-card__close-button:focus::after,
+.offers-card__close-button:focus::before {
+  background-color: $grey;
+}
+
+.offers-cars__close-button:active::after,
+.offers-cars__close-button:active::before {
+  background-color: #4023a0;
 }
