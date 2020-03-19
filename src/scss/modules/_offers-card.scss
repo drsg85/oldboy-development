@@ -24,6 +24,39 @@
     // typography
     text-align: center;
 
+    &--inactive {
+        .offers-card__content {
+            // visual
+            pointer-events: none;
+        }
+
+        .offer-button,
+        .offers-card__download {
+            // box model
+            display: none;
+        }
+
+        &:after {
+            content: 'Продано';
+
+            // positioning
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+
+            // box model
+            margin-left: -30px;
+            
+            // typography
+            color: #ff0000;
+            font-family: $mainFont;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
     @include atDesktopL {
         // box model
         max-width: 430px;
