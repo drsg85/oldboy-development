@@ -375,12 +375,15 @@
         color: $light;
         font-family: $titleFont;
         font-size: 3rem;
-        text-align: center;
+        text-align: left;
     }
 
     @include atDesktopS {
         // box model
         display: none;
+
+        // typography
+        text-align: center;
     }
 
     @include atDesktopM {
