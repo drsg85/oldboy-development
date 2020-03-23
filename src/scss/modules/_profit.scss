@@ -44,6 +44,7 @@
 
     @include atTablet {
         // box model
+        margin-bottom: 60px;
         margin-right: 80px;
     }
     
@@ -53,6 +54,7 @@
         // flex-direction: row;
         // flex-wrap: wrap;
         padding: 0 40px;
+        margin-bottom: 90px;
         margin-right: 0;
         margin-top: 80px;
     }
@@ -204,7 +206,7 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 100px;
+        // margin-bottom: 30px;
         padding-bottom: 0;
         padding: 0 40px;
     }
@@ -334,13 +336,15 @@
     padding: 0 20px;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 30px;
     
     @include atTablet {
         // box model
         flex-direction: row;
         padding: 0 40px;
+        margin-bottom: 60px;
     }
-    
+
     @include atDesktopM {
         // box model
         padding: 0 120px;
