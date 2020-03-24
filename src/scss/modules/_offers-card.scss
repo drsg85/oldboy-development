@@ -24,6 +24,24 @@
     // typography
     text-align: center;
 
+    &--inactive {
+        .offers-card__content {
+            // visual
+            pointer-events: none;
+        }
+
+        .offer-button,
+        .offers-card__download {
+            // box model
+            display: none;
+        }
+
+        .offers-card__status {
+            // box model
+            display: block;
+        }
+    }
+
     @include atDesktopL {
         // box model
         max-width: 430px;
@@ -196,6 +214,17 @@
     background-repeat: no-repeat;
 }
 
+.offers-card__status {
+    // box model
+    display: none;
+
+    // typography
+    color: red;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
 .offers-card__form {
     // positioning
     position: absolute;
@@ -219,6 +248,9 @@
     &--active {
         // box model
         display: block;
+
+        // visual
+        background-color: #ffffff;
     }
 }
 

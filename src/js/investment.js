@@ -31,7 +31,9 @@ const popUp = new PopUp();
 
 const inputMask = new MaskTel();
 
-const investCardForm = new InvestCardForm;
+if(document.querySelector('.profit__offers')) {
+    const investCardForm = new InvestCardForm;
+}
 
 function checkWindowWidth() {
     if(window.innerWidth < 700) {

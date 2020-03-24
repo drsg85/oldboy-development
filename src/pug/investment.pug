@@ -94,19 +94,160 @@ html(lang="ru")
                     p.profit__info Инвестор получает по 5% доли от каждого из 2-х разных барбершопов. Всю операционку от подбора помещения до получения прибыли берет на себя Управляющая компания сети OldBoy.
                     p.profit__info Инвесторы контролируют УК, имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза
 
-                .profit__form
-                    form#lead-form(action="").lead-form
-                        legend.lead-form__legend
-                            p.lead-form__text Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель
+                //- .profit__form
+                //-     form#lead-form(action="").lead-form
+                //-         legend.lead-form__legend
+                //-             p.lead-form__text Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель
 
-                        .lead-form__content
-                            .lead-form__container
-                                .lead-form__item
-                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
-                                .lead-form__item
-                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
-                            .lead-form__item
-                                input.lead-form__submit.button(type="submit" value="Получить Договор + фин модель")
+                //-         .lead-form__content
+                //-             .lead-form__container
+                //-                 .lead-form__item
+                //-                     input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                //-                 .lead-form__item
+                //-                     input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                //-             .lead-form__item
+                //-                 input.lead-form__submit.button(type="submit" value="Получить Договор + фин модель")
+
+                .profit__offers
+                    .offers
+                        .offers__text
+                            .offers__caption
+                                h3.offers__title Инвестиционные предложения
+                                p.offers__subtitle Объекты и преимущества
+
+                            .offers__advantages
+                                .offer-advantages
+                                    .offer-advantages__item
+                                        h4.offer-advantages__title Независимость от изменения курсов валют
+                                        p.offer-advantages__text Все наши поставщики находятся в России и&nbsp;тем&nbsp;самым мы застрахованы от подобных рисков
+
+                                    .offer-advantages__item.offer-advantages__item--stable
+                                        h4.offer-advantages__title Стабильность поступлений
+                                        p.offer-advantages__text Основной источник дохода барбершопа - это работа барбера, а ее стоимость не зависит от курса валют
+
+                            p.offers__desk Управляющая компания “OldBoy Barbershop“ привлекает инвестиции в свои филиалы, а не в филиалы франчайзинговой сети. По вопросам инвестиционных предложений необходимо обращаться напрямую к руководителю отдела по работе с инвесторами
+
+                    .offers__cards
+                        .offers-card
+                            .offers-card__item
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Москва
+                                        p.offers-card__mark Ривьера
+                                    a.offers-card__download(href="./files/investment-moscow.pdf") Скачать предложение
+
+                                .offers-card__form
+                                    form#lead-form(action="").lead-form
+                                        legend.lead-form__legend
+
+                                        .lead-form__content
+                                            .lead-form__container
+                                                .lead-form__item
+                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                                .lead-form__item
+                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                                            .lead-form__item
+                                                input.lead-form__submit.button(type="submit" value="Отправить")
+
+                                        .offers-card__close-button
+                                    
+                                button.button.offer-button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Москва
+                                        p.offers-card__mark Таганская
+                                    a.offers-card__download(href="./files/investment-rivyera.pdf") Скачать предложение
+
+                                .offers-card__form
+                                    form#lead-form(action="").lead-form
+                                        legend.lead-form__legend
+
+                                        .lead-form__content
+                                            .lead-form__container
+                                                .lead-form__item
+                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                                .lead-form__item
+                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                                            .lead-form__item
+                                                input.lead-form__submit.button(type="submit" value="Отправить")
+
+                                        .offers-card__close-button
+
+                                button.button.offer-button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content.offers-card__content--medal
+                                    .offers-card__place
+                                        p.offers-card__city Варшава
+                                        p.offers-card__mark
+                                    a.offers-card__download(href="./files/investment-warsaw.pdf") Скачать предложение
+                                    .offers-card__status Продано
+
+                                .offers-card__form
+                                    form#lead-form(action="").lead-form
+                                        legend.lead-form__legend
+
+                                        .lead-form__content
+                                            .lead-form__container
+                                                .lead-form__item
+                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                                .lead-form__item
+                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                                            .lead-form__item
+                                                input.lead-form__submit.button(type="submit" value="Отправить")
+
+                                        .offers-card__close-button
+
+                                button.button.offer-button Оставить заявку
+
+                            .offers-card__item.offers-card__item--inactive
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Симферополь
+                                        p.offers-card__mark
+                                    a.offers-card__download(href="./files/iInvestment-simferopol.pdf") Скачать предложение
+                                    .offers-card__status Продано
+                                .offers-card__form
+                                    form#lead-form(action="").lead-form
+                                        legend.lead-form__legend
+
+                                        .lead-form__content
+                                            .lead-form__container
+                                                .lead-form__item
+                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                                .lead-form__item
+                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                                            .lead-form__item
+                                                input.lead-form__submit.button(type="submit" value="Отправить")
+
+                                        .offers-card__close-button
+
+                                button.button.offer-button Оставить заявку
+
+                            .offers-card__item
+                                .offers-card__content
+                                    .offers-card__place
+                                        p.offers-card__city Симферополь
+                                        p.offers-card__mark
+                                    a.offers-card__download(href="./files/iInvestment-simferopol.pdf") Скачать предложение
+                                .offers-card__form
+                                    form#lead-form(action="").lead-form
+                                        legend.lead-form__legend
+
+                                        .lead-form__content
+                                            .lead-form__container
+                                                .lead-form__item
+                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                                .lead-form__item
+                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                                            .lead-form__item
+                                                input.lead-form__submit.button(type="submit" value="Отправить")
+
+                                        .offers-card__close-button
+
+                                button.button.offer-button Оставить заявку
 
 
                 .profit__calculator.smooth-target#profit-calculator
@@ -210,123 +351,6 @@ html(lang="ru")
                         p.manager-contacts__title Руководитель отдела по работе с инвесторами
                         a.manager-contacts__phone(href="tel:+79052476535") +7 (905) 247-65-35
                         p.manager-contacts__name Владимир
-
-                .profit__offers
-                    .offers
-                        .offers__text
-                            .offers__caption
-                                h3.offers__title Инвестиционные предложения
-                                p.offers__subtitle Объекты и преимущества
-
-                            .offers__advantages
-                                .offer-advantages
-                                    .offer-advantages__item
-                                        h4.offer-advantages__title Независимость от изменения курсов валют
-                                        p.offer-advantages__text Все наши поставщики находятся в России и&nbsp;тем&nbsp;самым мы застрахованы от подобных рисков
-
-                                    .offer-advantages__item.offer-advantages__item--stable
-                                        h4.offer-advantages__title Стабильность поступлений
-                                        p.offer-advantages__text Основной источник дохода барбершопа - это работа барбера, а ее стоимость не зависит от курса валют
-
-                            p.offers__desk Управляющая компания “OldBoy Barbershop“ привлекает инвестиции в свои филиалы, а не в филиалы франчайзинговой сети. По вопросам инвестиционных предложений необходимо обращаться напрямую к руководителю отдела по работе с инвесторами
-
-                    .offers__cards
-                        .offers-card
-                            .offers-card__item
-                                .offers-card__content
-                                    .offers-card__place
-                                        p.offers-card__city Москва
-                                        p.offers-card__mark Автозаводская
-                                    a.offers-card__download(href="./files/investment-moscow.pdf") Скачать предложение
-
-                                .offers-card__form
-                                    form#lead-form(action="").lead-form
-                                        legend.lead-form__legend
-
-                                        .lead-form__content
-                                            .lead-form__container
-                                                .lead-form__item
-                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
-                                                .lead-form__item
-                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
-                                            .lead-form__item
-                                                input.lead-form__submit.button(type="submit" value="Отправить")
-
-                                        .offers-card__close-button
-                                    
-                                button.button.offer-button Оставить заявку
-
-                            .offers-card__item
-                                .offers-card__content
-                                    .offers-card__place
-                                        p.offers-card__city Москва
-                                        p.offers-card__mark Таганская
-                                    a.offers-card__download(href="./files/investment-rivyera.pdf") Скачать предложение
-
-                                .offers-card__form
-                                    form#lead-form(action="").lead-form
-                                        legend.lead-form__legend
-
-                                        .lead-form__content
-                                            .lead-form__container
-                                                .lead-form__item
-                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
-                                                .lead-form__item
-                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
-                                            .lead-form__item
-                                                input.lead-form__submit.button(type="submit" value="Отправить")
-
-                                        .offers-card__close-button
-
-                                button.button.offer-button Оставить заявку
-
-                            .offers-card__item
-                                .offers-card__content.offers-card__content--medal
-                                    .offers-card__place
-                                        p.offers-card__city Варшава
-                                        p.offers-card__mark
-                                    a.offers-card__download(href="./files/investment-warsaw.pdf") Скачать предложение
-
-                                .offers-card__form
-                                    form#lead-form(action="").lead-form
-                                        legend.lead-form__legend
-
-                                        .lead-form__content
-                                            .lead-form__container
-                                                .lead-form__item
-                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
-                                                .lead-form__item
-                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
-                                            .lead-form__item
-                                                input.lead-form__submit.button(type="submit" value="Отправить")
-
-                                        .offers-card__close-button
-
-                                button.button.offer-button Оставить заявку
-
-                            .offers-card__item
-                                .offers-card__content
-                                    .offers-card__place
-                                        p.offers-card__city Симферополь
-                                        p.offers-card__mark
-                                    a.offers-card__download(href="./files/iInvestment-simferopol.pdf") Скачать предложение
-                                .offers-card__form
-                                    form#lead-form(action="").lead-form
-                                        legend.lead-form__legend
-
-                                        .lead-form__content
-                                            .lead-form__container
-                                                .lead-form__item
-                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
-                                                .lead-form__item
-                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
-                                            .lead-form__item
-                                                input.lead-form__submit.button(type="submit" value="Отправить")
-
-                                        .offers-card__close-button
-
-                                button.button.offer-button Оставить заявку
-
 
             section.targeting
                 .targeting__header

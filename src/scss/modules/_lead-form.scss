@@ -28,6 +28,11 @@
         background-color: transparent;
         border: 1px solid $golden;
     }
+
+    &--offers {
+        // box model
+        width: 100%;
+    }
 }
 
 .lead-form--transparent .lead-form__input {
