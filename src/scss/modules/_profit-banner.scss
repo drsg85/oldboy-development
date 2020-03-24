@@ -1,0 +1,39 @@
+.profit-banner {
+    // visual
+    background-image: url('./img/investment/phoneman.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include atDesktopM {
+    // box model
+    padding-left: 120px;
+    padding-top: 65px;
+    }
+}
+
+.profit-banner__content {
+    // box model
+    display: flex;
+}
+
+.profit-banner__cta {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 64px;
+    text-transform: uppercase;
+}
+
+.profit-banner__cta span {
+    // box model
+    display: block;
+
+    // typography
+    color: $golden;
+    font-size: 1.5rem;
+}
