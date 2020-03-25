@@ -36,24 +36,9 @@
             display: none;
         }
 
-        &:after {
-            content: 'Продано';
-
-            // positioning
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-
+        .offers-card__status {
             // box model
-            margin-left: -30px;
-            
-            // typography
-            color: #ff0000;
-            font-family: $mainFont;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-decoration: none;
+            display: block;
         }
     }
 
@@ -227,6 +212,17 @@
     // visual
     background-image: url('./img/icons/download.svg');
     background-repeat: no-repeat;
+}
+
+.offers-card__status {
+    // box model
+    display: none;
+
+    // typography
+    color: red;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-size: 0.75rem;
 }
 
 .offers-card__form {
