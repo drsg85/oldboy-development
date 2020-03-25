@@ -99,9 +99,15 @@
 }
 
 .profit-banner__item {
+    // positioning
+    position: relative;
+
     // box model
+    display: flex;
+    align-items: center;
     margin: 0;
     max-width: 100px;
+    padding-left: 60px;
 
     // typography
     color: $light;
@@ -109,6 +115,33 @@
     font-size: 0.75rem;
     line-height: 16px;
     text-transform: uppercase;
+}
+
+.profit-banner__item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 0;
+
+    // box model
+    display: block;
+    width: 55px;
+    height: 55px;
+
+    // visual
+    background-image: url('./img/icons/pie-chart.svg');
+    background-repeat: no-repeat;
+}
+
+.profit-banner__item--item-2::before {
+    // visual
+    background-image: url('./img/icons/website-gold.svg');
+}
+
+.profit-banner__item--item-3::before {
+    // visual
+    background-image: url('./img/icons/save-money-gold.svg');
 }
 
 .profit-banner__image {
