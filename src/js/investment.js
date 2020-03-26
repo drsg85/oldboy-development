@@ -1,7 +1,6 @@
 import MobileMenu from './modules/MobileMenu';
 import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
-import InvestCalculator from './modules/InvestCalculator';
 import LocationLogo from './modules/LocationLogo';
 import LocationSearch from './modules/LocationSearch';
 import LocationSelector from './modules/LocationSelector';
@@ -25,14 +24,20 @@ new ToTop();
 
 new SmoothOnAnchors();
 
-const investCalculator = new InvestCalculator();
-
 const popUp = new PopUp();
 
 const inputMask = new MaskTel();
 
 if(document.querySelector('.profit__offers')) {
-    const investCardForm = new InvestCardForm;
+    const investCardForm = new InvestCardForm({
+        formParent: 'offers-card__item' 
+    });
+}
+
+if(document.querySelector('.profit__international-content')) {
+    const investCardForm = new InvestCardForm({
+        formParent: 'profit-item'
+    })
 }
 
 function checkWindowWidth() {

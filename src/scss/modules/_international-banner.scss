@@ -1,0 +1,122 @@
+.international-banner {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    
+    // visual
+    background-image: url('./img/investment/poland.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    @include atTablet {
+        
+    }
+    
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        padding-bottom: 30px;
+        padding-left: 70px;
+        padding-right: 10%;
+        padding-top: 40px;
+        // padding-right: 15%;
+    }
+    
+    @include atDesktopM {
+        // box model
+        padding-right: 15%;
+    }
+}
+
+.international-banner__cta {
+    // box model
+    margin: 0;
+    max-width: 425px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include atDesktopL {
+        // box model
+        margin-right: 15px;
+
+        // typography
+        font-size: 2.9rem;
+        line-height: 60px;
+    }
+}
+
+.international-banner__text {
+    // positioning
+    position: relative;
+
+    // box model
+    max-width: 625px;
+}
+
+.international-banner__text::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    right: -35%;
+
+    // box model
+    display: none;
+    width: 187px;
+    height: 187px;
+
+    // visual
+    background-image: url('./img/icons/target-gold.svg');
+    background-repeat: no-repeat;
+
+    @include atDesktopM {
+        // visual
+        top: 70px;
+
+        // box model
+        display: block;
+    }
+
+    @include atDesktopL {
+        // visual
+        top: 20px;
+    }
+}
+
+.international-banner__header {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.international-banner__desc {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 1rem;
+    line-height: 22px;
+}

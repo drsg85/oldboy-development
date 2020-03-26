@@ -1,0 +1,256 @@
+.profit-banner {
+    // box model
+    padding: 20px;
+    padding-bottom: 40px;
+
+    // visual
+    background-image: url('./img/investment/phoneman.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include atTablet {
+        // box model
+        padding: 40px;
+    }
+
+    @include atDesktopM {
+    // box model
+    padding-bottom: 100px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 80px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 0;
+    }
+}
+
+.profit-banner__content {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // max-width: 1235px;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+    }
+}
+
+.profit-banner__caption {
+    // box model
+    max-width: 450px;
+    // margin-right: 215px;
+    margin-bottom: 35px;
+    margin-right: 30px;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.profit-banner__cta {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 2.5rem;
+    line-height: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 3rem;
+        line-height: 48px;
+    }
+    
+    @include atDesktopL {
+        // typography
+        font-size: 4rem;
+        line-height: 64px;
+    }
+}
+
+.profit-banner__cta span {
+    // box model
+    display: block;
+    margin-top: 5px;
+
+    // typography
+    color: $golden;
+    font-size: 1.5rem;
+    line-height: 24px;
+
+    @include atDesktopS {
+        // box model
+        margin-top: 0;
+
+        // typography
+        line-height: 48px;
+    }
+
+    @include atDesktopL {
+        // typography
+        line-height: 64px;
+    }
+}
+
+.profit-banner__promo {
+    // box model
+    max-width: 580px;
+    
+    @include atDesktopL {
+        // box model
+        margin-right: 400px;
+    }
+}
+
+.profit-banner__text {
+    // box model
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 390px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    font-weight: 700px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        max-width: none;
+
+        // typography
+        font-size: 1.875rem;
+        line-height: 36px;
+        text-align: left;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin-bottom: 55px;
+    }
+}
+
+.profit-banner__advantages {
+    // box model
+
+}
+
+.profit-banner__desc {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 255px;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    
+    @include atDesktopS {
+        // box model
+        margin-bottom: 35px;
+    }
+}
+
+.profit-banner__items {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+    }
+}
+
+.profit-banner__item {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 25px;
+    max-width: 155px;
+    padding-left: 60px;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.profit-banner__item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 0;
+
+    // box model
+    display: block;
+    width: 55px;
+    height: 55px;
+
+    // visual
+    background-image: url('./img/icons/pie-chart.svg');
+    background-repeat: no-repeat;
+}
+
+.profit-banner__item--item-2::before {
+    // visual
+    background-image: url('./img/icons/website-gold.svg');
+}
+
+.profit-banner__item--item-3::before {
+    // visual
+    background-image: url('./img/icons/save-money-gold.svg');
+}
+
+.profit-banner__image {
+    // positioning
+    position: absolute;
+    right: 30px;
+
+    // box model
+    display: none;
+
+    @include atDesktopL {
+        // box model
+        display: block;
+    }
+}
+
+.profit-banner__image img {
+    // box model
+    width: 100%;
+    height: 100%;
+}
