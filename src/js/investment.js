@@ -36,7 +36,7 @@ if(document.querySelector('.profit__offers')) {
 
 if(document.querySelector('.profit__international-content')) {
     const investCardForm = new InvestCardForm({
-        formParent: 'profit__international-items'
+        formParent: 'profit-item'
     })
 }
 

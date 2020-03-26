@@ -273,7 +273,7 @@ html(lang="ru")
 
                             .offers__advantages
                                 .offer-advantages
-                                    .offer-advantages__item
+                                    .offer-advantages__item.offer-advantages__item--int
                                         h4.offer-advantages__title Доходность выше, чем инвестиции в рублях
                                         p.offer-advantages__text Из-за разницы курса доходность инвестиций выше, а значит и выше пассивных ежемесячны доход который получает инвестор
 
@@ -293,8 +293,8 @@ html(lang="ru")
                                             p.profit-item__count От 30&nbsp;000 до 80&nbsp;000
                                                 span.currency.rouble-sign P
                                 button.button.offer-button Оставить заявку
-                            .offers-card__form
-                                form#lead-form(action="").lead-form
+                                .offers-card__form
+                                    form#lead-form(action="").lead-form
                                         legend.lead-form__legend
 
                                         .lead-form__content
@@ -305,10 +305,7 @@ html(lang="ru")
                                                     input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
                                             .lead-form__item
                                                 input.lead-form__submit.button(type="submit" value="Отправить")
-
                                         .offers-card__close-button
-                                
-                        .profit__international-items
                             .profit-item
                                 .profit-item__content
                                     .profit-item__image

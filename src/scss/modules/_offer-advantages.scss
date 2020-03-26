@@ -35,6 +35,11 @@
     background-image: url('./img/icons/safe.svg');
 }
 
+.offer-advantages__item--int::before {
+    // visual
+    background-image: url('./img/icons/calcmoney.svg');
+}
+
 .offer-advantages__title {
     // box model
     margin: 0;

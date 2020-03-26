@@ -150,16 +150,57 @@
 .profit__int {
     // box model
     width: 100%;
-    padding: 0 50px;
+    padding: 0 20px;
+    
+    @include atDesktopS {
+        // box model
+        padding: 0 50px;
+        padding-bottom: 100px;
+    }
+
+        @include atDesktopL {
+        // visual
+        background-image: url('./img/investment/map.svg');
+        background-repeat: no-repeat;
+        background-position: 80% 80%;
+    }
 }
 
 .profit__international-content {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    padding-left: 70px;
-    padding-right: 85px;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    @include atDesktopL {
+        // box model
+        padding-left: 70px;
+        padding-right: 85px;
+    }
+}
+
+.profit__international-items {
+    // box model
+    margin: 0 auto;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 100%;
+        max-width: 1000px;
+        justify-content: space-between;
+        margin: 0;
+    }
 }
 
 .profit__international-items {

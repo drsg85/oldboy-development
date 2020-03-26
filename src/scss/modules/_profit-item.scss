@@ -1,16 +1,46 @@
 .profit-item {
+    // positioning
+    position: relative;
+    
+    // box model
+    max-width: 360px;
+    margin-bottom: 25px;
+
     // typography
     text-align: center;
+
+    @include atTablet {
+        // box model
+        max-width: 430px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
 }
 
 .profit-item__content {
     // positioning
     position: relative;
+
+    // box model
+    margin-bottom: 10px;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 25px;
+    }
 }
 
 .profit-item__image {
+    // typography
+    font-size: 0;
+
     // visual
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .profit-item__image img {
@@ -27,20 +57,19 @@
     // positioning
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 10px;
 
     // box model
     margin: 0;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 5px;
-
 
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-align: center;
     text-transform: uppercase;
 
@@ -48,6 +77,47 @@
     background-color: $golden;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+
+    @include atTablet {
+        // positioning
+        top: 20px;
+
+        // box model
+        padding-bottom: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        // typography
+        font-size: 1rem;
+    }
+
+    @include atDesktopS {
+        // positioning
+        top: 10px;
+
+        // box model
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 25px;
+        padding-top: 5px;
+
+        // typography
+        font-size: 0.85rem;
+    }
+
+    @include atDesktopM {
+        // positioning
+        top: 20px;
+
+        // box model
+        padding-bottom: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 7px;
+
+        // typography
+        font-size: 1rem;
+    }
 }
 
 .profit-item__offer {
@@ -77,10 +147,25 @@
     width: 230px;
     height: 2px;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 5px;
 
     // visual
     background-color: $light;
+    
+    @include atTablet {
+        // box model
+        margin-top: 15px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-top: 5px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-top: 15px;
+    }
 }
 
 .profit-item__numbers {
@@ -90,10 +175,15 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 36px;
     text-transform: uppercase;
+    
+    @include atTablet {
+        // typography
+        font-size: 2.25rem;
+        line-height: 36px;
+    }
 }
 
 .profit-item__numbers span {
@@ -114,7 +204,22 @@
 
 .profit-item__profit {
     // box model
-    padding-top: 15px;
+    margin-top: 5px;
+
+    @include atTablet {
+        // box model
+        margin-top: 15px;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-top: 5px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-top: 15px;
+    }
 }
 
 .profit-item__count {
