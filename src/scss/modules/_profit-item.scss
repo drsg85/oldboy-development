@@ -1,0 +1,129 @@
+.profit-item {
+    // typography
+    text-align: center;
+}
+
+.profit-item__content {
+    // positioning
+    position: relative;
+}
+
+.profit-item__image {
+    // visual
+    border-radius: 10px;
+}
+
+.profit-item__image img {
+    // box model
+    width: 100%;
+    height: 100%;
+
+    // visual
+    object-fit: cover;
+}
+
+.profit-item__city {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+    // box model
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $golden;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.profit-item__offer {
+    // positioning
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    // box model
+    margin: auto;
+
+    // typography
+    text-align: center;
+}
+
+.profit-item__cost {
+
+}
+
+.profit-item__cost::after {
+    content: "";
+
+    // box model
+    display: block;
+    width: 230px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 15px;
+
+    // visual
+    background-color: $light;
+}
+
+.profit-item__numbers {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.profit-item__numbers span {
+    // typography
+    font-size: 1.125rem;
+}
+
+.profit-item__desc {
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.125rem;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.profit-item__profit {
+    // box model
+    padding-top: 15px;
+}
+
+.profit-item__count {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 24px;
+    text-transform: uppercase;
+}
