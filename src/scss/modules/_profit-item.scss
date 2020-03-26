@@ -21,6 +21,15 @@
     }
 }
 
+.profit-item .lead-form__item {
+    // box model
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .profit-item__content {
     // positioning
     position: relative;
