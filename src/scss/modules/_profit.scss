@@ -162,6 +162,37 @@
     padding-right: 85px;
 }
 
+.profit__international-items {
+    // positioning
+    position: relative;
+}
+
+.profit__international-items .offers-card__form {
+    // box model
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.profit__international-items .lead-form {
+    // box model
+    height: 284px;
+}
+
+.profit__international-items .lead-form__container {
+    // box model
+    flex-direction: column;
+}
+
+.profit__international-items .lead-form__item {
+    // box model
+    margin-bottom: 30px;
+}
+
+.profit__international-items .lead-form__input {
+    // box model
+    width: 100%;
+}
+
 .profit__form {
     // box model
     margin-left: -25px;

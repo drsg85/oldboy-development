@@ -93,21 +93,7 @@ html(lang="ru")
                         span.currency.rouble-sign P
                     p.profit__info Инвестор получает по 5% доли от каждого из 2-х разных барбершопов. Всю операционку от подбора помещения до получения прибыли берет на себя Управляющая компания сети OldBoy.
                     p.profit__info Инвесторы контролируют УК, имея полный доступ к CRM Yclients, видеокамерам, управленческой отчетности (.xls) и получают ежемесячные выплаты. <br>* Инвестировать можно в барбершопы на территории России и Евросоюза
-
-                //- .profit__form
-                //-     form#lead-form(action="").lead-form
-                //-         legend.lead-form__legend
-                //-             p.lead-form__text Оставьте заявку прямо сейчас чтобы получить образец инвестиционного договора и фин модель
-
-                //-         .lead-form__content
-                //-             .lead-form__container
-                //-                 .lead-form__item
-                //-                     input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
-                //-                 .lead-form__item
-                //-                     input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
-                //-             .lead-form__item
-                //-                 input.lead-form__submit.button(type="submit" value="Получить Договор + фин модель")
-
+                    
                 .profit__banner
                     .profit-banner
                         .profit-banner__content
@@ -306,8 +292,22 @@ html(lang="ru")
                                             p.profit-item__desc Пассивный доход в месяц
                                             p.profit-item__count От 30&nbsp;000 до 80&nbsp;000
                                                 span.currency.rouble-sign P
-                                button.button Оставить заявку
+                                button.button.offer-button Оставить заявку
+                            .offers-card__form
+                                form#lead-form(action="").lead-form
+                                        legend.lead-form__legend
 
+                                        .lead-form__content
+                                            .lead-form__container
+                                                .lead-form__item
+                                                    input.lead-form__input(type="text" name="fullname" placeholder="Имя" required)
+                                                .lead-form__item
+                                                    input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
+                                            .lead-form__item
+                                                input.lead-form__submit.button(type="submit" value="Отправить")
+
+                                        .offers-card__close-button
+                                
                         .profit__international-items
                             .profit-item
                                 .profit-item__content
@@ -323,104 +323,7 @@ html(lang="ru")
                                             p.profit-item__desc Пассивный доход в месяц
                                             p.profit-item__count От 50&nbsp;000 до 13          0&nbsp;000
                                                 span.currency.rouble-sign P
-                                button.button Оставить заявку
-
-                //- .profit__calculator.smooth-target#profit-calculator
-                //-     header.profit__calculator-header
-                //-         h3.profit__calculator-title Рассчитайте, какой вы&nbsp;будете получать доход от&nbsp;купленной доли
-                //-         p.profit__calculator-subtitle Размер пассивного дохода инвестора <br>при разных вложениях
-                //-     .invest-calculator
-                //-         header.invest-calculator__header
-                //-             h5.invest-calculator__title Сумма инвестиций для
-                //-             form.invest-location(name="invest__location")
-                //-                 .invest-location__radio-wrap
-                //-                     input#rf.invest-location__radio(type='radio', name='location', value='РФ', checked='checked')
-                //-                     label.invest-location__label(for='rf') РФ
-                //-                 .invest-location__radio-wrap
-                //-                     input#eu.invest-location__radio(type='radio', name='location', value='Страны ЕС')
-                //-                     label.invest-location__label-specific(for='eu') ЕС
-                                        
-                //-             p.invest-calculator__subtitle Процент от&nbsp;прибыли барбершопа
-                        
-                //-         .invest-calculator__graph
-                //-             label.invest-calculator__label
-                //-                 input.invest-calculator__radio(type="radio", name="graph" checked)
-                //-                 p.invest-calculator__sum(data-monthRU="40000" data-monthEU="70000") 850&nbsp;000 ₽
-                //-                 .invest-calculator__switcher
-                //-                 .invest-calculator__line
-                //-                 span.invest-calculator__percent 10%
-
-                //-             label.invest-calculator__label
-                //-                 input.invest-calculator__radio(type="radio", name="graph")
-                //-                 p.invest-calculator__sum(data-monthRU="80000" data-monthEU="140000") 1&nbsp;700&nbsp;000 ₽
-                //-                 .invest-calculator__switcher
-                //-                 .invest-calculator__line
-                //-                 span.invest-calculator__percent 20%
-
-                //-             label.invest-calculator__label
-                //-                 input.invest-calculator__radio(type="radio", name="graph")
-                //-                 p.invest-calculator__sum(data-monthRU="120000" data-monthEU="210000") 2&nbsp;550&nbsp;000 ₽
-                //-                 .invest-calculator__switcher
-                //-                 .invest-calculator__line
-                //-                 span.invest-calculator__percent 30%
-
-                //-             label.invest-calculator__label
-                //-                 input.invest-calculator__radio(type="radio", name="graph")
-                //-                 p.invest-calculator__sum(data-monthRU="160000" data-monthEU="250000") 3&nbsp;400&nbsp;000 ₽
-                //-                 .invest-calculator__switcher
-                //-                 .invest-calculator__line
-                //-                 span.invest-calculator__percent 40%
-
-                //-             label.invest-calculator__label
-                //-                 input.invest-calculator__radio(type="radio", name="graph")
-                //-                 p.invest-calculator__sum(data-monthRU="200000" data-monthEU="320000") 4&nbsp;250&nbsp;000 ₽
-                //-                 .invest-calculator__switcher
-                //-                 .invest-calculator__line
-                //-                 span.invest-calculator__percent &nbsp;50%
-
-                //-             label.invest-calculator__label
-                //-                 input.invest-calculator__radio(type="radio", name="graph")
-                //-                 p.invest-calculator__sum более 4&nbsp;250&nbsp;000 ₽
-                //-                 .invest-calculator__switcher
-                //-                 .invest-calculator__line
-                //-                 span.invest-calculator__percent >&nbsp;50%
-                        
-                //-         .invest-calculator__result
-                //-             .invest-calculator__summ
-                //-                 p.invest-calculator__summ-text Сумма инвестиций<br>
-                //-                     span.invest-calculator__value#invest-calculator__value-invest 850&nbsp;000
-                //-                     span.invest-calculator__curr.rouble-sign Р
-                //-             .invest-calculator__passive
-                //-                 p.invest-calculator__summ-text Размер пассивного дохода <br>
-                //-                     span.invest-calculator__value#invest-calculator__value-passive 2 400 000
-                //-                     span.invest-calculator__curr.rouble-sign Р
-                //-                 p.invest-calculator__period за пять лет
-                //-             .invest-calculator__rest
-                //-                 .invest-calculator__summ-val
-                //-                     p.invest-calculator__summ-text
-                //-                         span.invest-calculator__value#invest-calculator__value-year 480&nbsp;000
-                //-                         span.invest-calculator__curr.rouble-sign Р
-                //-                     p.invest-calculator__period за один год
-                //-                 .invest-calculator__summ-val
-                //-                     p.invest-calculator__summ-text
-                //-                         span.invest-calculator__value#invest-calculator__value-month 40&nbsp;000
-                //-                         span.invest-calculator__curr.rouble-sign Р
-                //-                     p.invest-calculator__period в месяц
-                //-             .invest-calculator__request
-                //-                 button.button.form-trigger.invest-button Оставить заявку
-                //-             .invest-calculator__vip
-                //-                 header.invest-calculator__vip-header
-                //-                     p.invest-calculator__vip-subtitle Эксклюзивные условия для инвестиций свыше
-                //-                     h3.invest-calculator__vip-title 4&nbsp;000&nbsp;000 
-                //-                         span.invest-calculator__curr.rouble-sign Р
-                //-                 .invest-calculator__vip-content
-                //-                     h4.invest-calculator__vip-content-title Статус VIP-инвестор
-                //-                     .invest-calculator__vip-content-body
-                //-                         .invest-calculator__vip-content-icon
-                //-                             img.invest-calculator__vip-content-img(src="./img/icons/vip.svg", alt="VIP")
-                //-                         p.invest-calculator__vip-content-text Свяжитесь с&nbsp;нашим менеджером,чтобы узнать какие преимущетва мы предлагаем для&nbsp;крупных инвесторов.
-
-                //-                     button.button.form-trigger.invest-button Оставить заявку
+                                button.button.offer-button Оставить заявку
 
             section.targeting
                 .targeting__header
@@ -469,13 +372,6 @@ html(lang="ru")
                                         input.lead-form__input.lead-form--masked(type="tel" name="phone" placeholder="Телефон" required)
                                 .lead-form__item
                                     input.lead-form__submit.button(type="submit" value="Узнать адреса")
-
-                //- .targeting__compare
-                    header.targeting__compare-header
-                        h4.targeting__compare-title Сравните доходность инвестиций в РФ
-                        p.targeting__compare-subtitle Средняя чистая прибыль барбершопов в Москве<br> 400 000 – 450 000 руб. в &nbsp;месяц
-                    .targeting__compare-graph
-                        canvas#targeting-compare-graph
 
             section.protection
                 .protection__header
