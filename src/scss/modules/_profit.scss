@@ -185,6 +185,13 @@
     }
 }
 
+.profit__international-content .offers__caption {
+    @include atDesktopM {
+    // box model
+    max-width: 300px;
+    }
+}
+
 .profit__international-items {
     // box model
     margin: 0 auto;
