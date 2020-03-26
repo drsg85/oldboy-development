@@ -10,14 +10,17 @@
     padding-top: 15px;
     
     // visual
-    background-image: url('./img/investment/poland.jpg');
+    background-image: url('./img/investment/poland.png');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
     
     @include atTablet {
-        
+        // box model
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
     }
     
     @include atDesktopS {
@@ -81,6 +84,7 @@
     // visual
     background-image: url('./img/icons/target-gold.svg');
     background-repeat: no-repeat;
+    opacity: 0.5;
 
     @include atDesktopM {
         // visual

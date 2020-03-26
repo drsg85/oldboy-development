@@ -1559,6 +1559,7 @@
 
     // box model
     display: flex;
+    justify-content: center;
     width: 200px;
     height: 50px;
     margin: auto;
@@ -1569,6 +1570,7 @@
 
         // box model
         margin: inherit;
+        justify-content: flex-start;
     }
 
     @include atDesktopS {

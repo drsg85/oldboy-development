@@ -1,8 +1,7 @@
 class investCardForm {
-    constructor() {
+    constructor(obj) {
+        this.currentFormParent = obj.formParent
         this.openFormButton = document.querySelectorAll('.offer-button');
-        this.offersCard = document.querySelector('.offers-card__form');
-        this.cardCloseButton = document.querySelector('.offers-card__close-button');
         this.addEvents();
     }
 
@@ -16,15 +15,14 @@ class investCardForm {
             let formButton = this.openFormButton[i];
 
                 formButton.addEventListener('click', () => {
-                    // this.offersCard.classList.add('offers-card__form--active');
                     formButton.style.opacity="0";
                     
-                    const findParent = this.findParent(formButton, 'offers-card__item');
+                    const parentOfCurrentForm = this.findParent(formButton, this.currentFormParent);
 
-                    let form = findParent.querySelector('.offers-card__form');
+                    let form = parentOfCurrentForm.querySelector('.offers-card__form');
                     form.classList.add('offers-card__form--active');
 
-                    let closeButton = findParent.querySelector('.offers-card__close-button');
+                    let closeButton = parentOfCurrentForm.querySelector('.offers-card__close-button');
                     closeButton.addEventListener ('click', () => {
                         form.classList.remove('offers-card__form--active');
                         formButton.style.opacity="1";

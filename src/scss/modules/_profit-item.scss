@@ -1,4 +1,7 @@
 .profit-item {
+    // positioning
+    position: relative;
+    
     // box model
     max-width: 360px;
     margin-bottom: 25px;
@@ -46,6 +49,7 @@
     height: 100%;
 
     // visual
+    border-radius: 15px;
     object-fit: cover;
 }
 
