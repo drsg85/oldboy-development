@@ -153,6 +153,15 @@
     padding: 0 50px;
 }
 
+.profit__international-content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 85px;
+}
+
 .profit__form {
     // box model
     margin-left: -25px;
