@@ -150,16 +150,30 @@
 .profit__int {
     // box model
     width: 100%;
-    padding: 0 50px;
+    padding: 0 20px;
+    
+    @include atDesktopS {
+        // box model
+        padding: 0 50px;
+    }
 }
 
 .profit__international-content {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    padding-left: 70px;
-    padding-right: 85px;
+    
+    @include atDesktopS {
+        // box model
+        padding-left: 70px;
+        padding-right: 85px;
+    }
+}
+
+.profit__international-items {
+    // box model
+    margin: 0 auto;
 }
 
 .profit__form {

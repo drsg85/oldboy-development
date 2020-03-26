@@ -6,6 +6,9 @@
 .profit-item__content {
     // positioning
     position: relative;
+
+    // box model
+    max-width: 430px;
 }
 
 .profit-item__image {
