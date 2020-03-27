@@ -3,6 +3,7 @@
     position: relative;
     
     // box model
+    flex-basis: 360px;
     max-width: 360px;
     margin-bottom: 25px;
 
@@ -11,6 +12,7 @@
 
     @include atTablet {
         // box model
+        flex-basis: 430px;
         max-width: 430px;
     }
 
@@ -21,12 +23,28 @@
     }
 }
 
+.profit-item .lead-form__item {
+    // box model
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .profit-item__content {
     // positioning
     position: relative;
 
     // box model
+    height: 100%;
+    max-height: 285px;
     margin-bottom: 10px;
+
+    // visual
+    background-color: $dark;
+    border-radius: 10px;
+    overflow: hidden;
 
     @include atDesktopS {
         // box model
@@ -38,9 +56,14 @@
     // typography
     font-size: 0;
 
-    // visual
-    border-radius: 10px;
-    overflow: hidden;
+    // box model
+    height: 240px;
+    // margin-bottom: 10px;
+
+    @include atDesktopS {
+        // box model
+        height: 285px;
+    }
 }
 
 .profit-item__image img {
