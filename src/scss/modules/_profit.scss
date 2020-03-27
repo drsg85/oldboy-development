@@ -194,19 +194,22 @@
 
 .profit__international-items {
     // box model
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
     @include atDesktopS {
         // box model
         display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        margin-right: 0;
     }
-
+    
     @include atDesktopL {
         // box model
         width: 100%;
         max-width: 1000px;
         justify-content: space-between;
-        margin: 0;
     }
 }
 
