@@ -1601,3 +1601,15 @@
         top: 195px;
     }
 }
+
+.hero__branch {
+    // box model
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // visual
+    background-color: blue($color: #000000);
+}

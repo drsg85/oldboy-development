@@ -20,6 +20,7 @@ import HorizontalScroll from './modules/horizontalScroll';
 import GoToElement from './modules/GoToElement';
 import FetchMasters from './modules/fetchMasters';
 import SortBranches from './modules/SortBranches';
+import BranchPopup from './modules/BranchPopup'
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -187,4 +188,8 @@ new SmoothOnAnchors();
 
 if(document.querySelector('.location-selector')) {
     new SortBranches();
+}
+
+if(document.querySelector('.branch-popup')) {
+    new BranchPopup();
 }
