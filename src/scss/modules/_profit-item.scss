@@ -27,9 +27,18 @@
     // box model
     display: block;
     width: 100%;
-    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+
+    @include atDesktopS {
+        // box model
+        max-width: 240px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 300px;
+    }
 }
 
 .profit-item__content {
