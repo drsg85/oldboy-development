@@ -147,7 +147,6 @@ if(document.querySelector('.photo-gallery__slider-container')) {
 function checkWindowWidth() {
     if(window.innerWidth < 700) {
         const anchors = [...document.querySelectorAll('.alphabet__trigger')];
-        console.log(anchors);
         anchors.map((el) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];

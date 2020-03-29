@@ -1,0 +1,64 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain one or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+ #}{% set js_ver="1.2" %}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/{{ directory }}/dist/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/{{ directory }}/dist/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/{{ directory }}/dist/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/{{ directory }}/dist/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/{{ directory }}/dist/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#ffffff">
+    <css-placeholder token="{{ placeholder_token|raw }}">
+
+	{% set site_url = url('<front>') %}
+	{% set dev_version = false %}
+	{% if 'zixo.local' in site_url|render|render %}
+		{% set dev_version = true %}
+	{% elseif 'oldboydev.ru' in site_url|render|render %}
+		{% set dev_version = true %}
+	{% endif %}
+	
+	{% set counters_header = drupal_entity('block_content', 5) %}
+	{% set counters_body = drupal_entity('block_content', 6) %}
+
+	{% if not dev_version %}
+		{{ counters_header }}
+	{% endif %}
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
+  <body{{ attributes }}>
+	{% if not dev_version %}
+		{{ counters_body }}
+	{% endif %}
+    {{ page }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
