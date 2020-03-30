@@ -78,8 +78,8 @@
 .branch-popup__close {
     // positioning
     position: absolute;
-    right: 5px;
-    top: -20px;
+    right: -10px;
+    top: 35px;
 
     // box model
     width: 2rem;
@@ -101,18 +101,18 @@
 
     @include atTablet {
         // positioning
-        top: -30px;
+        top: 70px;
     }
 
     @include atDesktopS {
         // positioning
-        right: 65px;
-        top: -25px;
+        right: -5px;
+        top: 60px;
     }
 
     @include atDesktopM {
         // positioning
-        right: 135px;
+        top: 30px;
     }
 }
 
