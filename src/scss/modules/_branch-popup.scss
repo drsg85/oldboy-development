@@ -62,13 +62,8 @@
     display: flex;
     height: 100%;
     width: 100%;
-    // padding-left: 3%;
-    // padding-right: 3%;
 
     // visual
-    overflow: hidden;
-    background-color: rgba($golden, 0.6);
-    border-radius: 25px;
 }
 
 .branch-popup__image img {
@@ -83,19 +78,19 @@
 .branch-popup__close {
     // positioning
     position: absolute;
-    right: -1rem;
-    top: -1rem;
+    right: 5px;
+    top: -20px;
 
     // box model
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
 
     // typography
-    background-color: $dark;
-    color: $golden;
+    background-color: $golden;
+    color: $light;
     font-family: $titleFont;
     font-size: 0.85rem;
-    line-height: 3rem;
+    line-height: 2rem;
     text-align: center;
     text-transform: uppercase;
 
@@ -103,4 +98,25 @@
     border-radius: 100%;
     cursor: pointer;
     text-decoration: none;
+
+    @include atTablet {
+        // positioning
+        top: -30px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        right: 65px;
+        top: -25px;
+    }
+
+    @include atDesktopM {
+        // positioning
+        right: 135px;
+    }
+}
+
+.branch-popup__close:hover {
+    // typography
+    color: $dark;
 }
