@@ -182,7 +182,12 @@ new HorizontalScroll();
 
 new GoToElement();
 
-//new FetchMasters();
+window.addEventListener('load', function() {
+    const yID = window.yClientsId;
+    new FetchMasters({
+        yclientsId: yID
+    });
+})
 
 new SmoothOnAnchors();
 
