@@ -24,14 +24,6 @@ class Feedback {
             document.documentElement.style.overflow = 'auto';
         });
 
-        document.addEventListener('keydown', (evt) => {
-            if (evt.keyCode === 27) {
-                this.feedback.classList.remove('feedback--show');
-                this.closeFeedbackButton.classList.remove('feedback__close-button--show');
-                document.documentElement.style.overflow = 'auto';
-            }
-        });
-
         this.openSpace = function () {
                 if (event.target.closest('feedback__container')) return;
                 this.feedback.classList.remove('feedback--show');
