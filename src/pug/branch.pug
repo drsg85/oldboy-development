@@ -413,6 +413,18 @@ html(lang="en")
                                     button.feedback__close-button
             include modules/_banner.pug
 
+            .branch-modal
+                .branch-modal__header
+                    p.branch-modal__headline <span>Приложение</span> Oldboy Barbershop
+                .branch-modal__content
+                    .branch-modal__text
+                        p.branch-modal__cta <span>Установите специальное</span> Мобильное приложение
+                        p.branch-modal__desc Для удобной онлайн записи
+                    .branch-modal__links
+                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
+
+                        a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> APP STORE
+
             //- section.testimonials
                 .testimonials__header
                     header.section-header
