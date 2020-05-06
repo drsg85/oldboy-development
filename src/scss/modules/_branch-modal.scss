@@ -1,13 +1,14 @@
 .branch-modal {
     // positioning
     position: fixed;
-    right: -300px;
+    right: -325px;
     top: 50%;
     z-index: 9999;
 
     // box model
     display: flex;
-    padding: 20px 25px 20px 10px;
+    // padding: 20px 25px 20px 10px;
+    padding-right: 25px;
     background-color: #000;
 
     // visual
@@ -26,6 +27,9 @@
 .branch-modal__header {
     // box model
     display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    padding-left: 7px;
 
     // visual
     cursor: pointer;
@@ -37,15 +41,14 @@
 
     // box model
     margin: 0;
-    margin-right: 7px;
-    height: 80px;
+    max-height: 80px;
     align-self: flex-end;
 
     // typography
     color: $light;
     font-family: $titleFont;
     font-size: 0.625rem;
-    line-height: 10px;
+    // line-height: 10px;
     writing-mode: vertical-rl;
     text-transform: uppercase;
 }
@@ -58,16 +61,26 @@
     color: $golden;
 }
 
+.branch-modal__arrow {
+    // box model
+    width: 7px;
+    height: 13px;
+
+    // visual
+    background-image: url('./img/arrow-left.png');
+    background-repeat: no-repeat;
+}
+
 .branch-modal__content {
     // box model
     display: flex;
-    margin-left: 13px;
+    margin-left: 20px;
 }
 
 .branch-modal__text {
     // box model
-    max-width: 125px;
-    margin-right: 30px;
+    max-width: 135px;
+    margin-right: 15px;
 }
 
 .branch-modal__cta {
@@ -83,6 +96,9 @@
 }
 
 .branch-modal__cta span {
+    // box model
+    display: block;
+
     // typography
     color: $golden;
     font-size: 0.75rem;
@@ -92,6 +108,7 @@
 .branch-modal__desc {
     // box model
     margin: 0;
+    max-width: 75px;
 
     // typography
     color: $light;
@@ -102,7 +119,10 @@
 }
 
 .branch-modal__links {
-
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .branch-modal__links .app-button {
@@ -112,4 +132,9 @@
     // typography
     font-size: 0.5rem;
     line-height: 26px;
+
+    &--thin {
+        // typography
+        font-size: 0.33rem;
+    }
 }
