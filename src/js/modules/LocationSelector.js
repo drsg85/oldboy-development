@@ -20,9 +20,11 @@ class LocationSelector {
       evt.preventDefault();
       
       this.toggleSelector();
-      setTimeout(() => {
-        this.cityInput.focus();
-      }, 250);
+      if(this.cityInput) {
+        setTimeout(() => {
+          this.cityInput.focus();
+        }, 250);
+      }
     });
     
     this.citySelectorClose.addEventListener('click', (evt) => {
