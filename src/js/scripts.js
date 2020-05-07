@@ -21,7 +21,7 @@ import GoToElement from './modules/GoToElement';
 import FetchMasters from './modules/fetchMasters';
 import SortBranches from './modules/SortBranches';
 import BranchPopup from './modules/BranchPopup';
-import BranchModal from './modules/BranchModal'
+import BranchModal from './modules/BranchHelper'
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -200,6 +200,6 @@ if(document.querySelector('.branch-popup')) {
     new BranchPopup();
 }
 
-if(document.querySelector('.branch-modal')) {
+if(document.querySelector('.branch-helper')) {
     new BranchModal();
 }
