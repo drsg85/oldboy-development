@@ -1,0 +1,263 @@
+.branch-modal {
+    // positioning
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+
+    // box model
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 20px;
+
+    // visual
+    // background-color: rgba($dark, 0.9);
+    background-color: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+
+    &--visible {
+        // box model
+        display: flex;
+    }
+}
+
+.branch-modal__inner {
+    // positioning
+    position: relative;
+    bottom: 0;
+    right: 0;
+
+    // box model
+    max-width: 350px;
+    padding-left: 45px;
+    padding-right: 50px;
+    padding-top: 45px;
+
+    // visual
+    background-image: url('./img/bgs/branch-modal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        max-width: unset;
+        width: 1280px;
+        justify-content: space-between;
+        padding-bottom: 45px;
+
+        // visual
+        background-image: url('./img/bgs/branch-modal-l.png');
+        overflow: unset;
+    }
+}
+
+.branch-modal__inner::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    // box model
+    display: block;
+    width: 0;
+    height: 0;
+
+    // visual
+    border: 0 solid transparent;
+    border-top-width: 150px;
+    border-bottom-width: 0px;
+    border-right: 350px solid $light;
+
+    @include atDesktopS {
+        // visual
+        border-right: 470px solid $light;
+    }
+}
+
+.branch-modal__close {
+    // positioning
+    position: absolute;
+    right: 20px;
+    top: 30px;
+
+    // box model
+    width: 22px;
+    height: 22px;
+
+    // visual
+    background-image: url('./img/deco/cross.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.branch-modal__content {
+    // box model
+    margin-bottom: 30px;
+
+    @include atDesktopS {
+        // box model
+        width: 100%;
+        max-width: 510px;
+        margin-bottom: 0;
+    }
+}
+
+.branch-modal__text {
+    // box model
+    margin-bottom: 30px;
+
+    @include atDesktopS {
+        // box model
+        max-width: 280px;
+    }
+}
+
+.branch-modal__cta {
+    // box model
+    margin: 0;
+    margin-bottom: 3px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.branch-modal__cta span {
+    // box model
+    display: block;
+    margin-bottom: 5px;
+
+    // typography
+    color: $golden;
+    font-size: 1rem;
+    line-height: 16px;
+}
+
+.branch-modal__desc {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+    max-width: 105px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.branch-modal__desc::before {
+    content: "4.9";
+
+    // positioning
+    position: absolute;
+    right: -90px;
+    bottom: 7px;
+
+    // box model
+    display: block;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 2.25rem;
+}
+
+.branch-modal__desc::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    right: -120px;
+    bottom: 5px;
+
+    // box model
+    display: block;
+    width: 28px;
+    height: 28px;
+
+    // visual
+    background-image: url('./img/icons/star-golden.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.branch-modal__links {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.branch-modal__links .app-button {
+    // box model
+    min-width: 235px;
+
+    // typography
+    font-size: 1.125rem;
+    line-height: 46px;
+
+    // visual
+    border: 1px solid #898989;
+
+    &--thin {
+        // typography
+        font-size: 1.25rem;
+        line-height: 46px;
+    }
+}
+
+.branch-modal__links .app-button i::before {
+    // typography
+    vertical-align: baseline;
+}
+
+.branch-modal__deco {
+    // positioning
+    position: relative;
+    z-index: 2;
+
+    // box model
+    width: 234px;
+    height: 330px;
+
+    // visual
+    background-image: url('./img/deco/hand.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        right: 100px;
+        bottom: 0;
+
+        // box model
+        width: 285px;
+        height: 380px;
+    }
+}
