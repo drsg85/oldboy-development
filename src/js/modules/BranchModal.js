@@ -9,6 +9,14 @@ class BranchModal {
     }
 
     addEvent() {
+        // this.ybtn.classList.remove('yButton');
+        // this.ybtnSquare.classList.remove('ms_booking');
+
+        // this.ybtnSquare.addEventListener('click', (evt) => {
+        //     evt.preventDefault();
+        //     alert('done');
+        // });
+
         this.triggers.forEach((trigger) => trigger.addEventListener('click', () => {
             this.modal.classList.add('branch-modal--visible');
         }))

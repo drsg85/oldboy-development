@@ -9,6 +9,14 @@ class BranchHelper {
     }
 
     addEvent() {
+        setTimeout(() => {
+            this.helper.classList.add('branch-helper--visible');
+        }, 5000);
+
+        setTimeout(() => {
+            this.helper.classList.add('branch-helper--visible');
+        }, 60000);
+
         this.btn.addEventListener('click', () => {
             this.helper.classList.toggle('branch-helper--visible');
 
