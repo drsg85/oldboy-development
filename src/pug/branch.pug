@@ -78,11 +78,11 @@ html(lang="en")
 
                             a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> APP STORE
             .hero__popup
-                .branch-popup.branch-popup--active
-                    .branch-popup__inner
-                        .branch-popup__image
-                            img(src="./img/closed.jpg", alt="")
-                        .branch-popup__close x
+                //- .branch-popup.branch-popup--active
+                //-     .branch-popup__inner
+                //-         .branch-popup__image
+                //-             img(src="./img/closed.jpg", alt="")
+                //-         .branch-popup__close x
 
         main
             section.promos
@@ -412,6 +412,31 @@ html(lang="en")
                                     button.feedback__more#request(href="#") Показать ещё отзывы
                                     button.feedback__close-button
             include modules/_banner.pug
+
+            .branch-helper
+                .branch-helper__header
+                    .branch-helper__arrow
+                    p.branch-helper__headline <span>Приложение</span> Oldboy Barbershop
+                .branch-helper__content
+                    .branch-helper__text
+                        p.branch-helper__cta <span>Установите специальное</span> Мобильное приложение
+                        p.branch-helper__desc Для удобной онлайн записи
+                    .branch-helper__links
+                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
+                        a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> App Store
+
+            .branch-modal
+                .branch-modal__inner
+                    .branch-modal__close
+                    .branch-modal__content
+                        .branch-modal__text
+                            p.branch-modal__cta <span>Установите специальное</span> Мобильное приложение
+                            p.branch-modal__desc Для удобной онлайн записи
+                        .branch-modal__links
+                            a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
+                            a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> App Store
+                    .branch-modal__deco
+
 
             //- section.testimonials
                 .testimonials__header
