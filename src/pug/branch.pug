@@ -53,7 +53,7 @@ html(lang="en")
                             p.contact__value 10:00 — 21:00 (Вс. с 11:00)
 
                     .hero__buttons.hero__buttons--branch
-                        a.button.ms_booking(href="#") Запись онлайн<br>
+                        a.button.popup-trigger(href="#") Запись онлайн<br>
                         a.button.button--ghost(href="#") Сертификат
 
                         ul.social
@@ -427,7 +427,7 @@ html(lang="en")
 
             .branch-modal
                 .branch-modal__inner
-                    .branch-modal__close
+                    .branch-modal__close.ms_booking
                     .branch-modal__content
                         .branch-modal__text
                             p.branch-modal__cta <span>Установите специальное</span> Мобильное приложение
@@ -511,6 +511,6 @@ html(lang="en")
         include modules/_footer-branch.pug
 
         <script type="text/javascript" src="https://w61357.yclients.com/widgetJS" charset="UTF-8"></script>
-
         script(src="scripts.js")
+
         script(src="branch.js")
