@@ -2,15 +2,16 @@ class BranchModal {
     constructor () {
         this.modal = document.querySelector('.branch-modal');
         this.cbtn = document.querySelector('.branch-modal__close');
-        this.ybtn = document.querySelector('yButton');
-
+        this.ybtn = document.querySelector('.yButton');
+        this.ybtnSquare = document.querySelector('.ms_booking');
+        this.triggers = [this.ybtn, this.ybtnSquare];
         this.addEvent();
     }
 
     addEvent() {
-        this.ybtn.addEventListener('click', () => {
+        this.triggers.forEach((trigger) => trigger.addEventListener('click', () => {
             this.modal.classList.add('branch-modal--visible');
-        });
+        }))
 
         this.cbtn.addEventListener('click', () => {
             this.modal.classList.remove('branch-modal--visible');

@@ -13,10 +13,10 @@ class BranchHelper {
             this.helper.classList.toggle('branch-helper--visible');
 
             if (this.helper.classList.contains('branch-helper--visible')) {
-                this.arrow.style.backgroundImage = "url('./img/arrow-right.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.png')";
                 this.headline.style.opacity = "1";
             } else {
-                this.arrow.style.backgroundImage = "url('./img/arrow-left.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.png')";
                 this.headline.style.opacity = "0.5";
             }
         });
