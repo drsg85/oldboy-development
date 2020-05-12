@@ -5,6 +5,7 @@ class BranchModal {
         this.ybtn = document.querySelector('.yButton');
         this.ybtnSquare = document.querySelector('.button');
         this.triggers = [this.ybtn, this.ybtnSquare];
+        this.newYbtn = document.querySelector('.ybutton');
         this.addEvent();
     }
 
@@ -13,10 +14,14 @@ class BranchModal {
             this.ybtnSquare.addEventListener('click', () => {
                 this.modal.classList.add('branch-modal--visible');
             });
+
+            this.newYbtn.addEventListener('click', () => {
+                this.modal.classList.add('branch-modal--visible');
+            });
             
             this.cbtn.addEventListener('click', () => {
                 this.modal.classList.remove('branch-modal--visible');
-                this.ybtn.style.visibility = "visible";
+                // this.ybtn.style.visibility = "visible";
         });
     }
 }
