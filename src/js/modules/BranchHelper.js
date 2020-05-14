@@ -13,10 +13,10 @@ class BranchHelper {
         setTimeout(() => {
             this.helper.classList.add('branch-helper--visible');
             if (this.helper.classList.contains('branch-helper--visible')) {
-                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
                 this.headline.style.opacity = "1";
             } else {
-                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
                 this.headline.style.opacity = "0.5";
             }
         }, 5000);
@@ -24,10 +24,10 @@ class BranchHelper {
         setTimeout(() => {
             this.helper.classList.add('branch-helper--visible');
             if (this.helper.classList.contains('branch-helper--visible')) {
-                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
                 this.headline.style.opacity = "1";
             } else {
-                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
                 this.headline.style.opacity = "0.5";
             }
         }, 60000);
@@ -36,10 +36,10 @@ class BranchHelper {
             this.helper.classList.toggle('branch-helper--visible');
 
             if (this.helper.classList.contains('branch-helper--visible')) {
-                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
                 this.headline.style.opacity = "1";
             } else {
-                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.png')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
                 this.headline.style.opacity = "0.5";
             }
         });

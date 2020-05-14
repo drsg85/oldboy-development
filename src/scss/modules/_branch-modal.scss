@@ -102,6 +102,9 @@
 }
 
 .branch-modal__content {
+    // positioning
+    position: relative;
+
     // box model
     margin-bottom: 30px;
 
@@ -234,6 +237,41 @@
 .branch-modal__links .app-button i::before {
     // typography
     vertical-align: baseline;
+}
+
+.branch-modal__caption {
+    // positioning
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    // box model
+    display: none;
+    width: 230px;
+    height: 190px;
+
+    // visual
+    background: url('./img/book.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include atDesktopS {
+        // box model
+        display: block;
+    }
+
+    @include atDesktopM {
+        // positioning
+        right: -190px;
+
+        // box model
+        width: 345px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        right: -280px;
+    }
 }
 
 .branch-modal__deco {
