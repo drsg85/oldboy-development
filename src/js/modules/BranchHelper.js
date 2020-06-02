@@ -18,7 +18,8 @@ class BranchHelper {
     closeHandlerByEsc(evt) {
         if(evt.keyCode == 27 && this.helper.classList.contains('branch-helper--visible')) {
             this.helper.classList.remove('branch-helper--visible');
-            //this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
+            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+            // this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
             this.rightArrow.style.display = 'none';
             this.leftArrow.style.display = 'block';
             this.headline.style.opacity = "0.5";
@@ -44,14 +45,14 @@ class BranchHelper {
         setTimeout(() => {
             this.helper.classList.add('branch-helper--visible');
             if (this.helper.classList.contains('branch-helper--visible')) {
-                //this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
-                this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
+                // this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
                 this.leftArrow.style.display = 'none';
                 this.rightArrow.style.display = 'block';
                 this.headline.style.opacity = "1";
             } else {
-                //this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
-                this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+                // this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
                 this.leftArrow.style.display = 'block';
                 this.rightArrow.style.display = 'none';
                 this.headline.style.opacity = "0.5";
@@ -61,14 +62,14 @@ class BranchHelper {
         setTimeout(() => {
             this.helper.classList.add('branch-helper--visible');
             if (this.helper.classList.contains('branch-helper--visible')) {
-                //this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
                 this.headline.style.opacity = "1";
-                this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
+                // this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
                 this.leftArrow.style.display = 'none';
                 this.rightArrow.style.display = 'block';
             } else {
-                //this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
-                this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
+                this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+                // this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
                 this.leftArrow.style.display = 'block';
                 this.rightArrow.style.display = 'none';
                 this.headline.style.opacity = "0.5";

@@ -30,6 +30,10 @@
     // box model
     margin: 0;
     padding: 0;
+    height: 75vh;
+
+    // visual
+    overflow-y: scroll;
 
     // @include atTablet {
     //     // box model
@@ -37,6 +41,26 @@
     //     flex-direction: row;
     //     flex-wrap: wrap;
     // }
+}
+
+.search-results__list::-webkit-scrollbar {
+    // box model
+    width: 4px;
+
+    & * {
+        background: transparent;
+    }
+
+    &-thumb {
+        // visual
+        background: $golden;
+        border-radius: 10px;
+    }
+    
+    &-track {
+        // visual
+        background: transparent !important;
+    }
 }
 
 .search-results__title {
