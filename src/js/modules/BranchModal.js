@@ -3,19 +3,25 @@ class BranchModal {
         this.modal = document.querySelector('.branch-modal');
         this.cbtn = document.querySelector('.branch-modal__close');
         this.ybtn = document.querySelector('.yButton');
-        this.popupTrigger = document.querySelector('.popup-trigger');
-        this.ybtnSquare = document.querySelector('.ms_booking');
+        this.ybtnSquare = document.querySelector('.button');
+        this.triggers = [this.ybtn, this.ybtnSquare];
+        this.newYbtn = document.querySelector('.ybutton');
         this.addEvent();
     }
 
     addEvent() {
-        this.popupTrigger.addEventListener('click', () => {
-            this.modal.classList.add('branch-modal--visible');
-        })
+        this.ybtn.style.visibility = "hidden";
+            this.ybtnSquare.addEventListener('click', () => {
+                this.modal.classList.add('branch-modal--visible');
+            });
 
-
-        this.cbtn.addEventListener('click', () => {
-            this.modal.classList.remove('branch-modal--visible');
+            this.newYbtn.addEventListener('click', () => {
+                this.modal.classList.add('branch-modal--visible');
+            });
+            
+            this.cbtn.addEventListener('click', () => {
+                this.modal.classList.remove('branch-modal--visible');
+                // this.ybtn.style.visibility = "visible";
         });
     }
 }

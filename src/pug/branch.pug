@@ -53,14 +53,14 @@ html(lang="en")
                             p.contact__value 10:00 — 21:00 (Вс. с 11:00)
 
                     .hero__buttons.hero__buttons--branch
-                        a.button.popup-trigger(href="#") Запись онлайн<br>
-                        a.button.button--ghost(href="#") Сертификат
+                        a.button(href="#") Запись онлайн<br>
+                        //- a.button.button--ghost(href="#") Сертификат
 
                         ul.social
                             li.social__item
                                 a.social__icon.icon--vk(href="#") ВКонтакте
                             li.social__item
-                                a.social__icon.icon--facebook(href="#") Facebook
+                                //- a.social__icon.icon--facebook(href="#") Facebook
                             li.social__item
                                 a.social__icon.icon--instagram(href="#") Instagram
 
@@ -416,14 +416,16 @@ html(lang="en")
             .branch-helper
                 .branch-helper__header
                     .branch-helper__arrow
+                        .branch-helper__arrow-movleft
+                        .branch-helper__arrow-movright
                     p.branch-helper__headline <span>Приложение</span> Oldboy Barbershop
                 .branch-helper__content
                     .branch-helper__text
                         p.branch-helper__cta <span>Установите специальное</span> Мобильное приложение
                         p.branch-helper__desc Для удобной онлайн записи
                     .branch-helper__links
-                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
                         a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> App Store
+                        a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
 
             .branch-modal
                 .branch-modal__inner
@@ -433,9 +435,14 @@ html(lang="en")
                             p.branch-modal__cta <span>Установите специальное</span> Мобильное приложение
                             p.branch-modal__desc Для удобной онлайн записи
                         .branch-modal__links
-                            a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
                             a.app-button.app-button--thin(href="#") <i class="icon--apple"></i> App Store
+                            a.app-button(href="#") <i class="icon--googleplay"></i> Google Play
+                        .branch-modal__caption
                     .branch-modal__deco
+
+            .ybutton
+                p.ybutton__text Онлайн запись
+                .ybutton__wave
 
 
             //- section.testimonials
@@ -514,3 +521,4 @@ html(lang="en")
         script(src="scripts.js")
 
         script(src="branch.js")
+
