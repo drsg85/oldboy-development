@@ -46,7 +46,7 @@ class BranchHelper {
             this.helper.classList.add('branch-helper--visible');
             if (this.helper.classList.contains('branch-helper--visible')) {
                 this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
-                // this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
+                //this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
                 this.leftArrow.style.display = 'none';
                 this.rightArrow.style.display = 'block';
                 this.headline.style.opacity = "1";
@@ -64,7 +64,7 @@ class BranchHelper {
             if (this.helper.classList.contains('branch-helper--visible')) {
                 this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
                 this.headline.style.opacity = "1";
-                // this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
+                //this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
                 this.leftArrow.style.display = 'none';
                 this.rightArrow.style.display = 'block';
             } else {
