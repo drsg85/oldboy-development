@@ -81,11 +81,11 @@ if(document.querySelector('.in-countries__slider-container')) {
         }
     });
     
-    lightGallery(document.getElementById('in-countries__slider-item-first'));
-    lightGallery(document.getElementById('in-countries__slider-item-second'));
-    lightGallery(document.getElementById('in-countries__slider-item-third'));
-    lightGallery(document.getElementById('in-countries__slider-item-fourth'));
-    lightGallery(document.getElementById('in-countries__slider-item-fifth'));
+    // lightGallery(document.getElementById('in-countries__slider-item-first'));
+    // lightGallery(document.getElementById('in-countries__slider-item-second'));
+    // lightGallery(document.getElementById('in-countries__slider-item-third'));
+    // lightGallery(document.getElementById('in-countries__slider-item-fourth'));
+    // lightGallery(document.getElementById('in-countries__slider-item-fifth'));
 }
 
 if(document.querySelector('.stars__slider-container')) {
