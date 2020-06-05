@@ -213,8 +213,10 @@ if(document.querySelector('.branch-modal')) {
 }
 
 if(window.innerWidth < 1199) {
-    new Swiper({
-        target: '.branch-helper',
-        classToSwitch: 'branch-helper--visible'
-    })
+    if(document.querySelector('.branch-helper')) {
+        new Swiper({
+            target: '.branch-helper',
+            classToSwitch: 'branch-helper--visible'
+        })
+    }
 }
