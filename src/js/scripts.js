@@ -64,7 +64,7 @@ if(document.querySelector('.in-countries__slider-container')) {
         slideBy: 'page',
         loop: false,
         mouseDrag: false,
-        gutter: 5,
+        // gutter: 5,
         nav: false,
         controls: true,
         controlsContainer: '.in-countries__slider-controls',
