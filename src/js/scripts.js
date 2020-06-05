@@ -23,6 +23,7 @@ import SortBranches from './modules/SortBranches';
 import BranchPopup from './modules/BranchPopup';
 import BranchHelper from './modules/BranchHelper';
 import BranchModal from './modules/BranchModal'
+import Swiper from './modules/Swiper';
 
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
@@ -201,10 +202,19 @@ if(document.querySelector('.branch-popup')) {
     new BranchPopup();
 }
 
-if(document.querySelector('.branch-helper')) {
-    new BranchHelper();
+if(window.innerWidth >= 1200) {
+    if(document.querySelector('.branch-helper')) {
+        new BranchHelper();
+    }
 }
 
 if(document.querySelector('.branch-modal')) {
     new BranchModal();
+}
+
+if(window.innerWidth < 1199) {
+    new Swiper({
+        target: '.branch-helper',
+        classToSwitch: 'branch-helper--visible'
+    })
 }
