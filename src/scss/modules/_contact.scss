@@ -104,6 +104,10 @@
 }
 
 .contact__value a {
+    // box model
+    display: block;
+    max-width: fit-content;
+
     // typography
     color: $light;
     text-decoration: none;

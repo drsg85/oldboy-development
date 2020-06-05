@@ -127,11 +127,33 @@
 }
 
 .in-countries__slider-header {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
     // box model
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    padding: 15px 20px;
     align-items: center;
-    margin-bottom: 30px;
+
+    // visual
+    background-color: rgba(0, 0, 0, 0.7);
+
+    @include atTablet {
+        width: 260px;
+        padding: 15px 10px;
+    }
+
+    @include atDesktopS {
+        // box model
+        width: 360px;
+        padding: 20px;
+    }
 }
 
 .in-countries__slider-title {
@@ -142,17 +164,59 @@
     color: $light;
     font-family: $titleFont;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 24px;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 30px;
+    }
 }
 
 .in-countries__slider-subtitle {
     // box model
+    display: none;
     margin: 0;
 
     // typography
     color: $golden;
     font-family: $mainFont;
     font-size: 16px;
+}
+
+.in-countries__slider-count {
+    // box model
+    display: flex;
+}
+
+.in-countries__slider-quantity {
+    // box model
+    margin: 0;
+    max-width: 80px;
+    margin-right: 10px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    line-height: 17px;
+    font-size: 0.6rem;
+    text-align: right;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 1rem;
+
+    }
+}
+
+.in-counties__slider-number {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 3rem;
+    line-height: 34px;
 }
 
 .in-countries__slider-controls {
@@ -213,6 +277,7 @@
     cursor: pointer;
     outline: none;
     transition: opacity 0.25s ease;
+    -webkit-tap-highlight-color: transparent;
 
         &:hover {
             // visual

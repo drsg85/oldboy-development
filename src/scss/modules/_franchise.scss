@@ -170,13 +170,15 @@
 .franchise__countries-item img {
     // box model
     display: block;
-    height: 25px;
+    height: 100%;
     width: 25px;
     margin-right: 7px;
 
+    // visual
+    border: 1px solid rgba($lightGrey, 0.3);
+
     @include atTablet {
         // box model
-        height: 38px;
         width: 38px;
         margin-right: 15px;
     }
