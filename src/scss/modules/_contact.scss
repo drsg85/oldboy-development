@@ -107,10 +107,18 @@
     // box model
     display: block;
     max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 
     // typography
     color: $light;
     text-decoration: none;
+
+    @include atTablet {
+        // box model
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .contact__value--place {

@@ -24,7 +24,7 @@ import BranchPopup from './modules/BranchPopup';
 import BranchHelper from './modules/BranchHelper';
 import BranchModal from './modules/BranchModal'
 import Swiper from './modules/Swiper';
-
+import BarberSwitcher from './modules/barberSwitcher';
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
 const locationSearch = new LocationSearch();
@@ -96,7 +96,8 @@ if(document.querySelector('.stars__slider-container')) {
         slideBy: 1,
         mouseDrag: true,
         nav: false,
-        
+        lazyload: true,
+        lazyloadSelector: '.stars__slider-img',
         loop: false,
         controls: true,
         controlsContainer: '.stars__slider-controls',
@@ -202,14 +203,10 @@ if(document.querySelector('.branch-popup')) {
     new BranchPopup();
 }
 
-if(window.innerWidth >= 1200) {
+if(window.innerWidth >= 1199) {
     if(document.querySelector('.branch-helper')) {
         new BranchHelper();
     }
-}
-
-if(document.querySelector('.branch-modal')) {
-    new BranchModal();
 }
 
 if(window.innerWidth < 1199) {
@@ -220,3 +217,5 @@ if(window.innerWidth < 1199) {
         })
     }
 }
+
+//new BarberSwitcher();

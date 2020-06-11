@@ -170,7 +170,6 @@
 .franchise__countries-item img {
     // box model
     display: block;
-    height: 100%;
     width: 25px;
     margin-right: 7px;
 
@@ -179,6 +178,7 @@
 
     @include atTablet {
         // box model
+        height: 24px;
         width: 38px;
         margin-right: 15px;
     }
