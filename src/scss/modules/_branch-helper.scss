@@ -23,6 +23,10 @@
     @include atDesktopM {
         // positioning
         right: -385px;
+
+        // box model
+        width: 430px;
+
     }
 
     &--visible {
@@ -169,6 +173,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;
+
+    @include atDesktopM {
+        // positioning
+        right: -220px;
+    }
 }
 
 .branch-helper__text {
@@ -253,11 +262,38 @@
     background-size: cover;
 }
 
+.branch-helper__deco {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+
+    // box model
+    display: none;
+    width: 140px;
+    height: 130px;
+
+    // visual
+    background-image: url('./img/deco/branch-hand.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include atDesktopM {
+        // box model
+        display: block;
+    }
+}
+
 .branch-helper__links {
     // box model
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include atDesktopM {
+        // box model
+        display: none;
+    }
 }
 
 .branch-helper__links .app-button {
