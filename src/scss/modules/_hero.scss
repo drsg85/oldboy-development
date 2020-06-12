@@ -40,6 +40,7 @@
 
         // visual
         background-image: url('./img/bgs/hero-m.jpg');
+        //background-image: url('./img/bgs/hero-bg-mobile.jpg');
         background-position: bottom center;
         
         @include atTablet {
@@ -996,6 +997,9 @@
 }
 
 .hero__content--investment .hero__buttons {
+    // box model
+    width: auto;
+    
     @include atTablet {
     // typography
     text-align: unset;
@@ -1016,6 +1020,9 @@
 }
 
 .hero__caption {
+    // positioning
+    z-index: 1;
+
     // box model
     display: flex;
     flex-direction: column;
@@ -1243,7 +1250,7 @@
 
         @include atDesktopM {
             // positioning
-            top: -40px;
+            top: -60px;
 
             // box model
             margin-left: auto;
@@ -1352,27 +1359,34 @@
 
     // visual
     user-select: none;
-    
+
     @include atTablet {
         // positioning
         position: absolute;
         bottom: -70px;
         right: -100px;
-
+        //right: 0;
+        //width: 850px;
+        //left: -425px;
+        //z-index: 0;
         // box model
         display: block;
         width: 640px;
+        //width: 1000px;
+        //margin-left: 50%;
     }
 
     @include atDesktopS {
         // positioning
         z-index: 2;
+        //z-index: 0;
         right: 50%;
         transform: translateX(50%);
+        //left: -600px;
 
         // box model
         width: 600px;
-
+        //width: 1200px;
         // visual
         pointer-events: none;
     }
@@ -1380,13 +1394,19 @@
     @include atDesktopM {
         // positioning
         bottom: -60px;
+        //left: -650px;
 
         // box model
         width: 720px;
+        //width: 1300px;
     }
 
     @include atDesktopL {
+        // positioning
+        //left: -700px;
+
         // box model
+        //width: 1400px;
         width: 900px;
     }
 

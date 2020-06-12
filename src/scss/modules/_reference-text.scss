@@ -1,0 +1,10 @@
+.reference-text {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
