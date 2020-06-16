@@ -1,12 +1,13 @@
 .branch-helper {
     // positioning
     position: fixed;
-    right: -330px;
+    right: -260px;
     top: 50%;
     z-index: 9999;
 
     // box model
     display: flex;
+    // width: 300px;
     
     // visual
     background-color: #000;
@@ -20,13 +21,20 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     //transition: right 0.15s ease;
 
+    @include atSmallMobile {
+        // positioning
+        right: -330px;
+
+        // box model
+        width: auto;
+    }
+
     @include atDesktopM {
         // positioning
         right: -385px;
 
         // box model
         width: 430px;
-
     }
 
     &--visible {
@@ -150,9 +158,14 @@
 
     // box model
     display: flex;
-    margin-left: 20px;
+    margin-left: 10px;
     padding-right: 25px;
     padding-top: 20px;
+    
+    @include atSmallMobile {
+        // box model
+        margin-left: 20px;
+    }
 }
 
 .branch-helper__content::after {
@@ -194,9 +207,14 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.5rem;
-    line-height: 28px;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    
+    @include atSmallMobile {
+        // typography
+        font-size: 1.5rem;
+        line-height: 28px;
+    }
 }
 
 .branch-helper__cta span {
@@ -231,16 +249,24 @@
 
     // positioning
     position: absolute;
-    right: -30px;
     top: 8px;
-
+    right: -25px;
+    
     // box model
     display: block;
-
+    
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    
+    @include atSmallMobile {
+        // positioning
+        right: -30px;
+
+        // typography
+        font-size: 1.5rem;
+    }
 }
 
 .branch-helper__desc::after {
@@ -248,18 +274,23 @@
 
     // positioning
     position: absolute;
-    right: -50px;
+    right: -40px;
     top: 5px;
-
+    
     // box model
     display: block;
     width: 16px;
     height: 16px;
-
+    
     // visual
     background-image: url('./img/icons/star-golden.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    
+    @include atSmallMobile {
+        // positioning
+        right: -50px;
+    }
 }
 
 .branch-helper__deco {
