@@ -70,6 +70,15 @@
     }
 }
 
+.choose-country--ME {
+    @include atTablet {
+        // visual
+        background-image: url('./img/city/montenegro-grey.jpg');
+        background-size: cover;
+        background-position: center left;
+    }
+}
+
 .choose-country__content {
     // box model
     margin: 0;
