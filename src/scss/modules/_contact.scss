@@ -51,7 +51,7 @@
 
     .contact__value a {
         // box model
-        display: inline;
+        max-width: initial;
     }
 }
 
