@@ -37,12 +37,18 @@
         height: 100vh;
         min-height: 520px;
         max-height: 700px;
+        padding-bottom: 20px;
 
         // visual
-        background-image: url('./img/bgs/hero-m.jpg');
-        //background-image: url('./img/bgs/hero-bg-mobile.jpg');
+        //background-image: url('./img/bgs/hero-m.jpg');
+        background-image: url('./img/bgs/hero-bg-mobile.jpg');
         background-position: bottom center;
         
+        .hero__caption {
+            // box model
+            padding-bottom: 0;
+        }
+
         @include atTablet {
             // box model
             min-height: 640px;
@@ -50,6 +56,11 @@
             // visual
             background-image: url('./img/bgs/hero-t.jpg');
             background-size: cover;
+
+            .hero__caption {
+                // box model
+                padding-bottom: 20px;
+            }
         }
         
         @include atDesktopS {
@@ -1355,38 +1366,38 @@
 
 .hero__deco {
     // box model
-    display: none;
+    // display: none;
 
-    // visual
-    user-select: none;
+    // // visual
+    // user-select: none;
 
-    @include atTablet {
+    // @include atTablet {
         // positioning
         position: absolute;
         bottom: -70px;
-        right: -100px;
-        //right: 0;
-        //width: 850px;
-        //left: -425px;
-        //z-index: 0;
+        //right: -100px;
+        right: 0;
+        width: 850px;
+        left: -500px;
+        z-index: 0;
         // box model
         display: block;
-        width: 640px;
-        //width: 1000px;
-        //margin-left: 50%;
-    }
+        //width: 640px;
+        width: 1000px;
+        margin-left: 50%;
+    // }
 
     @include atDesktopS {
         // positioning
-        z-index: 2;
-        //z-index: 0;
-        right: 50%;
-        transform: translateX(50%);
+        //z-index: 2;
+        z-index: 0;
+        //right: 50%;
+        //transform: translateX(50%);
         //left: -600px;
 
         // box model
-        width: 600px;
-        //width: 1200px;
+        //width: 600px;
+        width: 1200px;
         // visual
         pointer-events: none;
     }
@@ -1394,26 +1405,26 @@
     @include atDesktopM {
         // positioning
         bottom: -60px;
-        //left: -650px;
+        left: -650px;
 
         // box model
-        width: 720px;
-        //width: 1300px;
+        //width: 720px;
+        width: 1300px;
     }
 
     @include atDesktopL {
         // positioning
-        //left: -700px;
+        left: -700px;
 
         // box model
-        //width: 1400px;
-        width: 900px;
+        width: 1400px;
+        //width: 900px;
     }
 
-    @include atFullHD {
-        // box model
-        width: 1000px;
-    }
+    // @include atFullHD {
+    //     // box model
+    //     width: 1000px;
+    // }
 }
 
 .hero__deco img {

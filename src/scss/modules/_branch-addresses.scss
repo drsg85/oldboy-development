@@ -23,7 +23,6 @@
     @include atTablet {
       // positioning
       position: relative;
-      padding-top: 50px;
       
       // box model
       column-fill: auto;
@@ -138,10 +137,14 @@
 }
 
 .branch-addresses__index {
+    // positioning
+    position: relative;
+
     // box model
     page-break-inside: avoid;
     break-inside: avoid;
     break-after: column;
+    padding-top: 50px;
     
     &:first-child {
       .branch-addresses__letter {

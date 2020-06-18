@@ -186,12 +186,12 @@ new HorizontalScroll();
 
 new GoToElement();
 
-window.addEventListener('load', function() {
-    const yID = window.yClientsId;
-    new FetchMasters({
-        yclientsId: yID
-    });
-})
+// window.addEventListener('load', function() {
+//     const yID = window.yClientsId;
+//     new FetchMasters({
+//         yclientsId: yID
+//     });
+// })
 
 new SmoothOnAnchors();
 
@@ -218,4 +218,4 @@ if(window.innerWidth < 1199) {
     }
 }
 
-//new BarberSwitcher();
+new BarberSwitcher();
