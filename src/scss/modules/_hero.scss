@@ -147,7 +147,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
         min-height: 520px;
         max-height: 700px;
 
@@ -158,6 +157,7 @@
         
         @include atTablet {
             // box model
+            height: 100vh;
             min-height: 640px;
             background-position: center center;
         }
@@ -778,8 +778,6 @@
         @include atTablet {
             // box model
             // flex-direction: row;
-            flex-direction: row;
-
             .hero__caption,
             .hero__features,
             .hero__buttons {
@@ -791,6 +789,15 @@
                 // typography
                 text-align: center;
             }
+
+            .hero__caption {
+                min-height: initial;
+            }
+        }
+        
+        @include atDesktopS {
+            // box model
+            flex-direction: row;
         }
     }
 
