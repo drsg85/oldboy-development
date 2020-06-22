@@ -765,6 +765,11 @@
         height: 90%;
         padding: 0;
 
+        .hero__caption {
+            // box model
+            min-height: 180px;
+        }
+        
         @include atSmallMobile {
             // box model
             height: auto;
@@ -773,6 +778,19 @@
         @include atTablet {
             // box model
             // flex-direction: row;
+            flex-direction: row;
+
+            .hero__caption,
+            .hero__features,
+            .hero__buttons {
+                // box model
+                width: 100%;
+            }
+
+            .hero__buttons {
+                // typography
+                text-align: center;
+            }
         }
     }
 
