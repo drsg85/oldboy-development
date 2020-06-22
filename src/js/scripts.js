@@ -104,6 +104,7 @@ if(document.querySelector('.stars__slider-container')) {
         navPosition: 'bottom',
         items: 1,
         responsive: {
+
             700: {
                 items: 2,
                 slideBy: 2,
@@ -218,4 +219,6 @@ if(window.innerWidth < 1199) {
     }
 }
 
-new BarberSwitcher();
+// if(document.querySelector('#bgList')) {
+//     new BarberSwitcher();
+// }
