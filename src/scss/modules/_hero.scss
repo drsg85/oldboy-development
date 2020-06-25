@@ -147,7 +147,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
         min-height: 520px;
         max-height: 700px;
 
@@ -158,6 +157,7 @@
         
         @include atTablet {
             // box model
+            height: 100vh;
             min-height: 640px;
             background-position: center center;
         }
@@ -765,6 +765,11 @@
         height: 90%;
         padding: 0;
 
+        .hero__caption {
+            // box model
+            min-height: 180px;
+        }
+        
         @include atSmallMobile {
             // box model
             height: auto;
@@ -773,6 +778,26 @@
         @include atTablet {
             // box model
             // flex-direction: row;
+            .hero__caption,
+            .hero__features,
+            .hero__buttons {
+                // box model
+                width: 100%;
+            }
+
+            .hero__buttons {
+                // typography
+                text-align: center;
+            }
+
+            .hero__caption {
+                min-height: initial;
+            }
+        }
+        
+        @include atDesktopS {
+            // box model
+            flex-direction: row;
         }
     }
 

@@ -25,6 +25,7 @@ import BranchHelper from './modules/BranchHelper';
 import BranchModal from './modules/BranchModal'
 import Swiper from './modules/Swiper';
 import BarberSwitcher from './modules/barberSwitcher';
+import VoiceSearch from './modules/voiceSearch';
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
 const locationSearch = new LocationSearch();
@@ -219,6 +220,8 @@ if(window.innerWidth < 1199) {
     }
 }
 
-// if(document.querySelector('#bgList')) {
-//     new BarberSwitcher();
-// }
+if(document.querySelector('#bgList')) {
+    new BarberSwitcher();
+}
+
+new VoiceSearch();

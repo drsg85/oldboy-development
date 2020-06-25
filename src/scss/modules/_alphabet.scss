@@ -63,9 +63,7 @@
 
 .alphabet__trigger {
     // box model
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     width: 1.2em;
     height: 1.2em;
     
@@ -73,7 +71,8 @@
     color: $golden;
     font-family: $titleFont;
     text-transform: uppercase;
-    
+    text-align: center;
+
     // visual
     border: 1px solid transparent;
     text-decoration: none;
@@ -88,10 +87,12 @@
 
 .alphabet__trigger--active {
     // typography
-    color: $light;
-    background-color: $golden;
-    border-radius: 50%;
-    pointer-events: none;
+    // color: $light;
+    // background-color: $golden;
+    // border-radius: 50%;
+    // pointer-events: none;
+    // visual
+    text-decoration: underline;
 }
 
 .alphabet__extended {
