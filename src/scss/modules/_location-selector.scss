@@ -77,20 +77,27 @@
 
     @include atDesktopS {
         // box model
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         margin-bottom: 0;
         padding: 50px;
         padding-bottom: 50px;
     }
 }
 
+.location-selector__logo-text {
+    // box model
+    display: flex;
+}
+
 .location-selector__caption {
     // box model
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
     
     @include atDesktopS {
         // box model
@@ -98,7 +105,7 @@
         // margin: 0;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
     }
 
     @include atDesktopM {
@@ -107,32 +114,14 @@
     }
 }
 
-// .location-selector__caption img {
-//     // positioning
-//     position: relative;
-//     z-index: 2;
-    
-//     // box model
-//     width: 135px;
-//     padding-top: 5px;
-//     padding-bottom: 10px;
 
-//     // typography
-//     font-family: $titleFont;
-    
-//     @include atDesktopM {
-//         // box model
-//         // width: 155px;
-//         margin-right: 25px;
-//     }
-// }
 
 .location-selector__intro {
     // box model
     display: none;
     width: 220px;
     margin: 0;
-    padding: 0.5em 0;
+    // padding: 0.5em 0;
 
     // typography
     color: $dark;
@@ -157,13 +146,31 @@
     position: relative;
 
     // box model
-    padding-right: 45px;
+    margin-bottom: 40px;
 
     @include atDesktopS {
         // box model
         padding-right: 65px;
         width: 400px;
     }
+}
+
+.location-selector__cta {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.location-selector__cta span {
+    // typography
+    color: $dark;
 }
 
 .location-selector__places {
@@ -240,6 +247,7 @@
 
         // box model
         display: flex;
+        flex-direction: column;
         justify-content: center;
         margin-bottom: 25px;
     }
@@ -249,4 +257,34 @@
         margin: 0 auto;
         // margin-bottom: 30px;
     }
+}
+
+.location-selector__links {
+    // box model
+    display: flex;
+    width: 100%;
+    max-width: 290px;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.location-selector__top {
+    // box model
+    display: block;
+    height: 71px;
+
+    // visual
+    transition: ease-in-out 0.25s;
+}
+
+.location-selector__top:hover {
+    // visual
+    opacity: 0.75;
+}
+
+.location-selector__top img {
+    // box model
+    display: block;
+    height: 100%;
 }

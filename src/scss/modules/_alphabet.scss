@@ -5,12 +5,13 @@
     // box model
     max-width: 340px;
     margin: 0 auto;
+    margin-bottom: 40px;
 
     @include atTablet {
     // box model
     display: flex;
     max-width: none;
-    margin: 0;
+    // margin: 0 auto;
     }
 }
 
