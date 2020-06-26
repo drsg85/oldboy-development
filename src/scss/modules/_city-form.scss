@@ -6,6 +6,12 @@
     // box model
     max-width: 600px;
     width: 100%;
+    margin: 0 auto;
+
+    @include atDesktopL {
+        // box model
+        max-width: 700px;
+    }
 }
 
 .city-form__title {
@@ -19,16 +25,11 @@
     font-family: $titleFont;
 }
 
-.city-form {
-    
-}
-
 .city-form__input {
     // box model
     display: block;
     width: 100%;
     padding: 0 16px;
-    margin-bottom: 20px;
     
     // typography
     color: $dark;
@@ -46,4 +47,35 @@
     // visual
     border: 2px solid $darkGold;
     box-shadow: 0 0 15px rgba($golden, 0.5);
+}
+
+// .city-form__input::-webkit-search-cancel-button{
+//     -webkit-appearance: none;
+//     height: 20px;
+//     width: 20px;
+//     border-radius:10px;
+//     background: red;
+// }
+
+
+.city-form__mic {
+    // positioning
+    position: absolute;
+    right: 40px;
+    top: 8px;
+
+    // box model
+    width: 17px;
+    height: 24px;
+
+    // visual
+    background-image: url('./img/deco/mic.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    &--active {
+        // visual
+        background-image: url('./img/deco/mic-active.svg');
+    }
 }

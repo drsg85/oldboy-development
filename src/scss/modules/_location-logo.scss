@@ -3,11 +3,17 @@
     position: relative;
 
     // box model
-    margin-right: 20px;
+    // margin-right: 20px;
 
     // visual
     transition: all 0.25s ease-out;
-    // border: 1px solid red;
+}
+
+.location-logo:first-child {
+    @include atDesktopS {
+        // box model
+        margin-right: 30px;
+    }
 }
 
 .location-logo--out {
@@ -22,17 +28,85 @@
 
 .location-logo__image {
     // box model
-    height: 35px;
+    height: 45px;
 
-    @include atTablet {
+    @include atDesktopS {
         // box model
-        height: 48px;
+        height: 65px;
+    }
+
+    @include atDesktopL {
+        // box model
+        height: 86px;
     }
 }
 
 .location-logo__image img {
     // box model
     height: 100%;
+}
+
+.location-logo__wrapper {
+    // box model
+    max-width: 160px;
+    width: 100%;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        max-width: 325px;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 410px;
+    }
+}
+
+.location-logo__box {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+        order: 1;
+    }
+}
+
+.location-logo__subtitle {
+    // box model
+    margin: 0;
+    order: 0;
+
+    // typography
+    color: $lightGrey;
+    font-family: $titleFont;
+    font-size: 0.625rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include atDesktopS {
+        // box model
+        margin-right: 30px;
+        align-self: center;
+
+        // typography
+        font-size: 0.8rem;
+        text-align: right;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1rem;
+    }
+}
+
+.location-logo__subtitle span {
+    // typography
+    color: $golden;
 }
 
 .location-logo__text {

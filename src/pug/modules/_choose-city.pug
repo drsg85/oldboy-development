@@ -2,25 +2,28 @@
 section.location-selector.location-selector--hidden
     header.location-selector__header
         .location-selector__caption
-            //- TODO: refactor
-            a(href="#").location-logo#location-logo
-                .location-logo__image: img(src="/img/logos/logo-cis.svg", alt="Oldboy Barbershop CIS logo")
-                p.location-logo__text СНГ
+            .location-selector__logo-text
+                a(href="#").location-logo#location-logo
+                    .location-logo__image: img(src="/img/logos/location-rus-hover.png", alt="Oldboy Barbershop CIS logo")
+                p.location-selector__intro <em>254 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
 
-            a(href="#").location-logo.location-logo--out
-                .location-logo__image: img(src="/img/logos/logo-eu.svg", alt="Oldboy Barbershop EU logo")
-                p.location-logo__text ЕВРОПА
+            .location-logo__wrapper
+                .location-logo__box
+                    a(href="#").location-logo.location-logo--out
+                        .location-logo__image: img(src="/img/logos/location-europe-hover.png", alt="Oldboy Barbershop EU logo")
 
-            a(href="#").location-logo.location-logo--out
-                .location-logo__image: img(src="/img/logos/logo-usa.svg", alt="Oldboy Barbershop USA logo")
-                p.location-logo__text США
+                    a(href="#").location-logo.location-logo--out
+                        .location-logo__image: img(src="/img/logos/location-usa-hover.png", alt="Oldboy Barbershop USA logo")
 
-            p.location-selector__intro <em>192 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
+                p.location-logo__subtitle <span>Выбрать</span> другой регион
+
 
         .location-selector__fast-nav
+            p.location-selector__cta <span>Выбери</span> свой барбершоп
             .city-form
                 form.city-form__form(autocomplete="off")
                     input.city-form__input(type="search" name="search" placeholder="Город, улица или метро" autofocus)
+                .city-form__mic.city-form__mic--active
             section.search-results
                 h2.search-results__title Результаты поиска:
                 p.search-results__not-found такого города не найдено
@@ -93,25 +96,31 @@ section.location-selector.location-selector--hidden
                     li.alphabet__item
                         a.alphabet__trigger(href="#letter-ya") я
 
-                .alphabet__extended
-                    .branch-addresses__index
-                        .branch-addresses__letter EU
-                        .branch-addresses__content
-                            ul.location-list
-                                li.location-list__city
-                                    a(href="http://eu.oldboybarbershop.com/en") Europe
-                                li.location-list__item
-                                    a.location-list__link(href="http://eu.oldboybarbershop.com/en/barcelona") Испания, Барселона
-                                li.location-list__item
-                                    a.location-list__link(href="http://eu.oldboybarbershop.com/en/marbella") Испания, Барселона
-                                li.location-list__item
-                                    a.location-list__link(href="http://eu.oldboybarbershop.com/en/cyprus") Кипр
-                                li.location-list__item
-                                    a.location-list__link(href="http://eu.oldboybarbershop.com/en/mlawa") Польша
-                                li.location-list__item
-                                    a.location-list__link(href="http://eu.oldboybarbershop.com/en/beograd") Сербия
-                                li.location-list__item
-                                    a.location-list__link(href="http://eu.oldboybarbershop.com/en/budva") Черногория
+            .location-selector__links
+                a.location-selector__top(href="https://oldboybarbershop.com/moscow")
+                    img(src="./img/logos/location-moscow.png", alt="Oldboy Barbershop Moscow logo")
+                a.location-selector__top(href="https://oldboybarbershop.com/spb")
+                    img(src="./img/logos/location-peterburg.png", alt="Oldboy Barbershop St. Peterburg logo")
+
+                //- .alphabet__extended
+                //-     .branch-addresses__index
+                //-         .branch-addresses__letter EU
+                //-         .branch-addresses__content
+                //-             ul.location-list
+                //-                 li.location-list__city
+                //-                     a(href="http://eu.oldboybarbershop.com/en") Europe
+                //-                 li.location-list__item
+                //-                     a.location-list__link(href="http://eu.oldboybarbershop.com/en/barcelona") Испания, Барселона
+                //-                 li.location-list__item
+                //-                     a.location-list__link(href="http://eu.oldboybarbershop.com/en/marbella") Испания, Барселона
+                //-                 li.location-list__item
+                //-                     a.location-list__link(href="http://eu.oldboybarbershop.com/en/cyprus") Кипр
+                //-                 li.location-list__item
+                //-                     a.location-list__link(href="http://eu.oldboybarbershop.com/en/mlawa") Польша
+                //-                 li.location-list__item
+                //-                     a.location-list__link(href="http://eu.oldboybarbershop.com/en/beograd") Сербия
+                //-                 li.location-list__item
+                //-                     a.location-list__link(href="http://eu.oldboybarbershop.com/en/budva") Черногория
 
                     .branch-addresses__index
                         .branch-addresses__letter UA
