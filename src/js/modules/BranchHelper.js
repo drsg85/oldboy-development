@@ -83,11 +83,11 @@ class BranchHelper {
             this.arrowSwitcher();
         }, 5000);
 
-        setTimeout(() => {
-            this.helper.classList.add('branch-helper--visible');
+        // setTimeout(() => {
+        //     this.helper.classList.add('branch-helper--visible');
             
-            this.arrowSwitcher();
-        }, 60000);
+        //     this.arrowSwitcher();
+        // }, 60000);
 
         this.btn.addEventListener('click', (event) => this.switchVisibility(event));
 

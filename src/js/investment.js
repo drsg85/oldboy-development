@@ -81,3 +81,7 @@ new GoToElement();
 if(document.querySelector('.location-selector')) {
     new SortBranches();
 }
+
+if(document.querySelector('.city-form__mic')) {
+    new VoiceSearch();
+}

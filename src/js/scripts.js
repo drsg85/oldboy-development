@@ -105,6 +105,7 @@ if(document.querySelector('.stars__slider-container')) {
         navPosition: 'bottom',
         items: 1,
         responsive: {
+
             700: {
                 items: 2,
                 slideBy: 2,
@@ -223,5 +224,11 @@ if(document.querySelector('#bgList')) {
     new BarberSwitcher();
 }
 
+<<<<<<< HEAD
 
 new VoiceSearch();
+=======
+if(document.querySelector('.city-form__mic')) {
+    new VoiceSearch();
+}
+>>>>>>> master

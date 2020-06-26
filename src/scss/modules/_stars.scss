@@ -15,7 +15,7 @@
 
     @include atDesktopS {
         // box model
-        max-width: 717px;
+        max-width: 760px;
     }
 
     @include atDesktopM {
@@ -78,14 +78,20 @@
 .stars__slider-item img {
     // box model
     display: block;
-    width: 100%;
-    max-width: 100%;
+    height: 300px;
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
-
+    
     @include atTablet {
         // box model
-        max-width: 100%;
+        height: 275px;
+        width: auto;
+    }
+    
+    @include atDesktopS {
+        // box model
+        height: 360px;
     }
 }
 
@@ -132,16 +138,30 @@
     }
 }
 
+.stars__spinner {
+    // positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 40px;
+    top: 60px;
+}
+
 .stars__slider-header {
     // box model
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 15px 0;
+    width: 300px;
+    padding: 15px 10px;
 
     // visual
     background-color: rgba(0, 0, 0, 0.7);
+
+    @include atTablet {
+        // box model
+        width: 100%;
+    }
 }
 
 .stars__slider-title {

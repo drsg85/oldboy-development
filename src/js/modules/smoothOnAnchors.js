@@ -1,5 +1,4 @@
-import SmoothScroll from './SmoothScroll';
-
+import Jump from 'jump.js'
 class SmoothOnAnchors {
     constructor() {
         this.anchors = [...document.querySelectorAll('.smooth-trigger')];
@@ -8,14 +7,13 @@ class SmoothOnAnchors {
         }
     }
 
+    scrolling(evt) {
+        const target = evt.target.href.split('#')[1];
+        Jump(`#${target}`);
+    }
+
     addEvents() {
-        this.anchors.map((el) => {
-            const target = el.href.split('#')[1];
-            const smoothScroll = new SmoothScroll({
-                trigger: el,
-                target: document.querySelector(`#${target}`)
-            })
-        })
+        this.anchors.map((trigger) => trigger.addEventListener('click', (event) => this.scrolling(event)))
     }
 }
 

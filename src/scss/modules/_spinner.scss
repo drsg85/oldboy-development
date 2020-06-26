@@ -1,0 +1,87 @@
+// .spinner {
+//     width: 200px;
+//     height: 200px;
+//     display: inline-block;
+//     overflow: hidden;
+//     background: transparent;
+//   }
+  
+// .spinner__content {
+//     width: 100%;
+//     height: 100%;
+//     position: relative;
+//     transform: translateZ(0) scale(1);
+//     backface-visibility: hidden;
+//     transform-origin: 0 0; /* see note above */
+// }
+
+// @keyframes spinner-animate {
+//   0% { opacity: 1 }
+//   100% { opacity: 0 }
+// }
+
+// .spinner__item {
+//   left: 99px;
+//   top: 55px;
+//   position: absolute;
+//   animation: spinner-animate linear 1.0416666666666665s infinite;
+//   background: #d6a354;
+//   width: 2px;
+//   height: 18px;
+//   border-radius: 1px / 9px;
+//   transform-origin: 1px 45px;
+// }
+
+// .spinner__item:nth-child(1) {
+//   transform: rotate(0deg);
+//   animation-delay: -0.9259259259259258s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(2) {
+//   transform: rotate(40deg);
+//   animation-delay: -0.8101851851851851s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(3) {
+//   transform: rotate(80deg);
+//   animation-delay: -0.6944444444444444s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(4) {
+//   transform: rotate(120deg);
+//   animation-delay: -0.5787037037037037s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(5) {
+//   transform: rotate(160deg);
+//   animation-delay: -0.4629629629629629s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(6) {
+//   transform: rotate(200deg);
+//   animation-delay: -0.3472222222222222s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(7) {
+//   transform: rotate(240deg);
+//   animation-delay: -0.23148148148148145s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(8) {
+//   transform: rotate(280deg);
+//   animation-delay: -0.11574074074074073s;
+//   background: #d6a354;
+// }
+
+// .spinner__item:nth-child(9) {
+//   transform: rotate(320deg);
+//   animation-delay: 0s;
+//   background: #d6a354;
+// }

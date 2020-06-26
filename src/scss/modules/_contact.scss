@@ -48,6 +48,11 @@
         // typography
         color: $lightGrey;
     }
+
+    .contact__value a {
+        // box model
+        max-width: initial;
+    }
 }
 
 .contact__title {
