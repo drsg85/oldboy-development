@@ -102,15 +102,21 @@
     @include atDesktopS {
         // box model
         display: flex;
-        // margin: 0;
         flex-direction: row;
         justify-content: space-between;
-        // align-items: center;
+        margin-bottom: 80px;
     }
 
     @include atDesktopM {
         // box model
         padding-left: 65px;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 100px;
+        padding-left: 275px;
+        padding-right: 250px;
     }
 }
 
@@ -119,7 +125,7 @@
 .location-selector__intro {
     // box model
     display: none;
-    width: 220px;
+    width: 225px;
     margin: 0;
     // padding: 0.5em 0;
 
@@ -138,6 +144,13 @@
     @include atDesktopS {
         // box model
         display: block;
+        align-self: center;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1rem;
+        line-height: 24px;
     }
 }
 
@@ -150,8 +163,20 @@
 
     @include atDesktopS {
         // box model
-        padding-right: 65px;
-        width: 400px;
+        // padding-right: 65px;
+        width: 600px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 700px;
     }
 }
 
@@ -257,6 +282,11 @@
         margin: 0 auto;
         // margin-bottom: 30px;
     }
+
+    @include atDesktopM {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .location-selector__links {
@@ -267,6 +297,11 @@
     justify-content: space-between;
     align-self: center;
     margin: 0 auto;
+
+    @include atDesktopM {
+        // box model
+        margin: initial;
+    }
 }
 
 .location-selector__top {
