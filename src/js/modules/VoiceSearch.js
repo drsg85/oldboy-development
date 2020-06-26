@@ -188,6 +188,13 @@ class VoiceSearch {
             event.target.placeholder = 'Говорите...';
             this.trigger.style.display = 'block';
         })
+
+        this.searchInput.addEventListener('change', () => {
+            if(this.searchInput.value == '') {
+                event.target.placeholder = 'Говорите...';
+                this.trigger.style.display = 'block';
+            }
+        })
     }
 }
 
