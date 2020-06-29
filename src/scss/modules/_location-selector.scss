@@ -77,62 +77,57 @@
 
     @include atDesktopS {
         // box model
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         margin-bottom: 0;
         padding: 50px;
         padding-bottom: 50px;
     }
 }
 
+.location-selector__logo-text {
+    // box model
+    display: flex;
+}
+
 .location-selector__caption {
     // box model
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
     
     @include atDesktopS {
         // box model
         display: flex;
-        // margin: 0;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        margin-bottom: 80px;
     }
 
     @include atDesktopM {
         // box model
         padding-left: 65px;
     }
+
+    @include atDesktopL {
+        // box model
+        margin-bottom: 100px;
+        padding-left: 275px;
+        padding-right: 250px;
+    }
 }
 
-// .location-selector__caption img {
-//     // positioning
-//     position: relative;
-//     z-index: 2;
-    
-//     // box model
-//     width: 135px;
-//     padding-top: 5px;
-//     padding-bottom: 10px;
 
-//     // typography
-//     font-family: $titleFont;
-    
-//     @include atDesktopM {
-//         // box model
-//         // width: 155px;
-//         margin-right: 25px;
-//     }
-// }
 
 .location-selector__intro {
     // box model
     display: none;
-    width: 220px;
+    width: 225px;
     margin: 0;
-    padding: 0.5em 0;
+    // padding: 0.5em 0;
 
     // typography
     color: $dark;
@@ -149,6 +144,13 @@
     @include atDesktopS {
         // box model
         display: block;
+        align-self: center;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 1rem;
+        line-height: 24px;
     }
 }
 
@@ -157,13 +159,43 @@
     position: relative;
 
     // box model
-    padding-right: 45px;
+    margin-bottom: 40px;
 
     @include atDesktopS {
         // box model
-        padding-right: 65px;
-        width: 400px;
+        // padding-right: 65px;
+        width: 600px;
+        margin: auto;
+        margin-bottom: 40px;
     }
+
+    @include atDesktopM {
+        // box model
+        margin-bottom: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 700px;
+    }
+}
+
+.location-selector__cta {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.location-selector__cta span {
+    // typography
+    color: $dark;
 }
 
 .location-selector__places {
@@ -240,6 +272,7 @@
 
         // box model
         display: flex;
+        flex-direction: column;
         justify-content: center;
         margin-bottom: 25px;
     }
@@ -249,4 +282,44 @@
         margin: 0 auto;
         // margin-bottom: 30px;
     }
+
+    @include atDesktopM {
+        // box model
+        flex-direction: row;
+    }
+}
+
+.location-selector__links {
+    // box model
+    display: flex;
+    width: 100%;
+    max-width: 290px;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 auto;
+
+    @include atDesktopM {
+        // box model
+        margin: initial;
+    }
+}
+
+.location-selector__top {
+    // box model
+    display: block;
+    height: 71px;
+
+    // visual
+    transition: ease-in-out 0.25s;
+}
+
+.location-selector__top:hover {
+    // visual
+    opacity: 0.75;
+}
+
+.location-selector__top img {
+    // box model
+    display: block;
+    height: 100%;
 }

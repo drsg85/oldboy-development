@@ -224,11 +224,6 @@ if(document.querySelector('#bgList')) {
     new BarberSwitcher();
 }
 
-<<<<<<< HEAD
-
-new VoiceSearch();
-=======
 if(document.querySelector('.city-form__mic')) {
     new VoiceSearch();
 }
->>>>>>> master

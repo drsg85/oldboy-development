@@ -27,9 +27,9 @@
       
       // box model
       column-fill: auto;
-      // column-width: 25em;
       column-width: 19em;
-      height: 66vh;
+      // height: 66vh;
+      height: 43vh;
 
       // visual
       overflow: auto;
@@ -39,6 +39,12 @@
     @include atDesktopS {
       // box model
       column-width: 15em;
+      height: 34vh;
+
+      @include atDesktopM {
+        // box model
+        height: 43vh;
+      }
     }
 }
 
@@ -67,7 +73,7 @@
       content: '';
       display: block;
       width: 32px;
-      height: 210px;
+      height: 475px;
       margin-top: -210px;
     }
 

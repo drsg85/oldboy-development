@@ -3,14 +3,28 @@
     position: relative;
 
     // box model
+    display: flex;
+    flex-direction: column;
     max-width: 340px;
     margin: 0 auto;
+    margin-bottom: 30px;
 
     @include atTablet {
     // box model
-    display: flex;
+    flex-direction: row;
     max-width: none;
-    margin: 0;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-direction: column;
+    }
+    
+    @include atDesktopM {
+        // box model
+        margin: initial;
+        margin-bottom: 0;
+        margin-right: 50px;
     }
 }
 
@@ -28,6 +42,13 @@
     @include atTablet {
         // box model
         margin-bottom: 0;
+    }
+}
+
+.alphabet__content:first-child {
+    @include atDesktopS {
+    // box model
+    margin-bottom: 5px;
     }
 }
 
@@ -51,6 +72,7 @@
     @include atDesktopM {
         // box model
         margin-right: 5px;
+        font-size: 1rem;
     }
 }
 
