@@ -22,7 +22,7 @@ class VoiceSearch {
     listenStart(evt) {
         evt.preventDefault();
         const trigger = evt.target;
-        trigger.classList.add('city-form__mic--active');
+        trigger.classList.add('city-form__microphone-trigger--active');
         this.searchInput.placeholder = 'Говорите...';
         this.trigger.classList.add('active');
         this.recognition.start();
@@ -148,8 +148,9 @@ class VoiceSearch {
         const speechOutput = this._parseTranscript(evt);
         this.searchInput.value = speechOutput;
         if(evt.results[0].isFinal) {
-            this.trigger.classList.remove('city-form__mic--active');
+            this.trigger.classList.remove('city-form__microphone-trigger--active');
             this.searchInput.placeholder = null;
+            //this.form.submit();
             let searchPhrase = this.locationInput.value;
             if (searchPhrase.length > 0) {
                 this.trigger.style.display = 'none';
@@ -184,13 +185,13 @@ class VoiceSearch {
         this.trigger.addEventListener('click', (event) => this.listenStart(event));
 
         this.searchInput.addEventListener('search', (event) => {
-            event.target.placeholder = 'Город, улица или метро';
+            event.target.placeholder = 'Говорите...';
             this.trigger.style.display = 'block';
         })
 
         this.searchInput.addEventListener('change', () => {
             if(this.searchInput.value == '') {
-                event.target.placeholder = 'Город, улица или метро';
+                event.target.placeholder = 'Говорите...';
                 this.trigger.style.display = 'block';
             }
         })
