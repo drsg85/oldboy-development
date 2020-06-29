@@ -74,7 +74,7 @@
       display: block;
       width: 32px;
       height: 475px;
-      margin-top: -210px;
+      margin-top: -475px;
     }
 
     &:after {
@@ -152,7 +152,7 @@
     &:first-child {
       .branch-addresses__letter {
         // box model
-        margin-top: 210px;
+        margin-top: 475px;
       }
     }
 
