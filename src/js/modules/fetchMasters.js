@@ -2,12 +2,13 @@ class FetchMasters {
     constructor() {
         this.api = 'd8m22a27wuwur3yfa474';
         this.userToken = 'd3e4e1e2145d915f66261dad60fceaab';
-        this.companyId = '37300';
-        //this.companyId = obj.yclientsId;
+        //this.companyId = '37300';
+        this.companyId = window.yClientsId;
         this.staff_id = '631239';
         this.ammountOfComments = 5000;
         this.urlForComments = `https://api.yclients.com/api/v1/comments/${this.companyId}&count=${this.ammountOfComments}`;
         this.urlForMasters = `https://api.yclients.com/api/v1/staff/${this.companyId}`;
+        this.urlForServices = `https://api.yclients.com/api/v1/company/${this.companyId}/services/`;
         this.masters = document.querySelector('.team__content');
         this.feedback = document.querySelector('.feedback');
         this.openFeedbackButton = document.querySelectorAll('.member__review');
@@ -80,7 +81,90 @@ class FetchMasters {
                         spec = templateMaster.content.querySelector('.member__position'),
                         feedbackCountNum = templateMaster.content.querySelector('.feedback__count-num'),
                         feedbackResult = templateMaster.content.querySelector('.feedback__result');
+                    console.log(data);
+                    data.map((el) => {
+                        let ratingParsed = el.rating.toFixed(1);
+                        let topBarber = el.specialization.toLowerCase();
 
+                        if(!topBarber.indexOf('топ')) {
+                            top.style.display = 'block';
+                        }
+                        else {
+                            top.style.display = 'none';
+                        }
+                        const elID = el.id;
+                        item.dataset.id = el.id;
+                        item.dataset.commentsCount = el.comments_count;
+                        img.src = photos[`${elID}`] ? photos[`${elID}`] : '';
+                        img.alt = photos[`${elID}`] ? photos[`${elID}-name`] : '';
+                        name.textContent = el.name;
+                        rating.textContent = ratingParsed;
+                        feedbackResult.textContent = ratingParsed;
+                        spec.textContent = el.specialization;
+                        feedbackCountNum.textContent = el.comments_count;
+
+                        let cloned = item.cloneNode(true);
+
+                        if(el.hidden == 0) {
+                            cloned.dataset.id = el.id;
+                            name.textContent = el.name;
+                            rating.textContent = ratingParsed;
+                            spec.textContent = el.specialization;
+                            this.masters.appendChild(cloned);
+                        }
+                    });
+
+                    const popupTriggers = [...document.querySelectorAll('.member__review')];
+
+                    popupTriggers.map((el) => el.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const parentOfCurrentTrigger = this.findParent(el, 'member');
+                        const feedback = parentOfCurrentTrigger.querySelector('.feedback');
+                        const closeFeedbackButton = parentOfCurrentTrigger.querySelector('.feedback__close-button');
+                        feedback.classList.add('feedback--show');
+                        closeFeedbackButton.classList.add('feedback__close-button--show');
+                        const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+                        const body = document.body;
+                        body.style.position = 'fixed';
+                        body.style.top = `-${scrollY}`;
+                        body.style.left = 0;
+                        body.style.width = `calc(100% - 8px)`;
+                    }));
+
+                    const masters = [...document.querySelectorAll('.member')];
+                    masters.map((master) => {
+                        if(master.dataset.commentsCount == 0) {
+                            const button = master.querySelector('.member__review');
+                            const votes = master.querySelector('.member__count');
+                            button.style.display = 'none';
+                            votes.style.display = 'none';
+                        }
+                    })
+                }
+            }
+            xhr.send();
+        }
+    }
+
+    addServices() {
+        if(document.querySelector('#templateServicesList')) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', this.urlForServices);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('Authorization', `${this.api}, ${this.userToken}`);
+            xhr.onreadystatechange = () => {
+                if(xhr.readyState == 4) {
+                    const data = JSON.parse(xhr.responseText),
+                        templateMaster = document.querySelector('#templateMaster'),
+                        item = templateMaster.content.querySelector('.member'),
+                        top = templateMaster.content.querySelector('.member__top'),
+                        img = templateMaster.content.querySelector('.member__photo img'),
+                        name = templateMaster.content.querySelector('.member__name'),
+                        rating = templateMaster.content.querySelector('.member__count'),
+                        spec = templateMaster.content.querySelector('.member__position'),
+                        feedbackCountNum = templateMaster.content.querySelector('.feedback__count-num'),
+                        feedbackResult = templateMaster.content.querySelector('.feedback__result');
+                    console.log(data);
                     data.map((el) => {
                         let ratingParsed = el.rating.toFixed(1);
                         let topBarber = el.specialization.toLowerCase();

@@ -40,7 +40,7 @@
     // justify-content: flex-end;
     height: 120px;
     padding: 20px;
-    
+
     // typography
     text-align: left;
 
@@ -51,7 +51,7 @@
 .member__name {
     // box model
     margin: 0;
-    
+
     // typography
     color: $light;
     font-family: $titleFont;
@@ -145,16 +145,31 @@
 .member__top {
     // positioning
     position: absolute;
-    top: 15px;
-    right: 15px;
+    bottom: 0;
+    right: 0;
 
     // box model
     display: flex;
-    height: 72px;
-    width: 72px;
+    height: 85px;
+    width: 85px;
 
     // visual
     background-image: url('./img/icons/top-barber.svg');
+}
+
+.member__premium {
+    // positioning
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+
+    // box model
+    display: flex;
+    height: 85px;
+    width: 85px;
+
+    // visual
+    background-image: url('./img/icons/premium-barber.svg');
 }
 
 .member__feedback {

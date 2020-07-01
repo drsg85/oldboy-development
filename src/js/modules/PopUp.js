@@ -1,16 +1,16 @@
 'use strict';
 
 class PopUp {
-    constructor () {
-      this.investmentPopup = document.querySelector('.investment-popup');
-      this.protectionLink = document.querySelector('.protection__link');
-      this.investmentPopupClose = document.querySelector('.investment-popup__close');
+    constructor() {
+        this.investmentPopup = document.querySelector('.investment-popup');
+        this.protectionLink = document.querySelector('.protection__link');
+        this.investmentPopupClose = document.querySelector('.investment-popup__close');
 
-      this.events();
+        this.events();
     }
 
 
-    events () {
+    events() {
         this.protectionLink.addEventListener('click', () => {
             if (this.investmentPopup.classList.contains('investment-popup--hidden')) {
                 this.investmentPopup.classList.remove('investment-popup--hidden');
@@ -25,7 +25,7 @@ class PopUp {
             setTimeout(() => {
                 this.investmentPopup.classList.add('investment-popup--hidden');
             }, 500);
-            
+
         })
     }
 }
