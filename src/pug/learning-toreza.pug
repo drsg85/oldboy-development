@@ -2,10 +2,10 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
-        link(rel="stylesheet", href="styles.css")
+        link(rel="stylesheet" href="styles.css")
 
         title Oldboy Barbershop
 
@@ -14,7 +14,7 @@ html(lang="en")
             .hero__top
                 .hero__logo
                     a(href="index.html")
-                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+                        img(src="/img/logo.svg" alt="Oldboy Barbershop vector logo" title="Oldboy Barbershop Главная")
 
                 .hero__nav.hero__nav--hidden
                     include modules/_menu.pug
@@ -41,7 +41,7 @@ html(lang="en")
                             p.contact__value--place ТЦ «ЕВРОПА»
                             <br>
                             p.contact__value--metro <span>Несуществующая</span> <span>Центральная</span>
-                            
+
                         .contact
                             h2.contact__title Телефон
                             p.contact__value: a(href="tel:52–57–90") 52–57–90
@@ -64,7 +64,7 @@ html(lang="en")
                         //- legend.form__legend
                         //-     p.form__title Открой собственный барбершоп oldboy у себя в&nbsp;городе
                         //-     p.form__subtitle Заполни форму и наш менеджер с&nbsp;вами свяжется
-                        
+
                         .form__input-group
                             input.form__input(type="text" name="fullname" placeholder="Фамилия Имя Отчество")
 
@@ -77,7 +77,7 @@ html(lang="en")
                         .form__input-group.form__input-group--policy
                             input.form__checkbox#form__checkbox(type="checkbox" name="policy" required checked)
                             label(for="form__checkbox").form__label-checkbox Я соглашаюсь с<br> <a class="form__policy" href="#">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</a>
-                        
+
                         .form__input-group
                             input.form__submit-btn.button.button--ghost-dark(type="submit" value="Отправить заявку")
 
@@ -85,7 +85,7 @@ html(lang="en")
                 header.fr-benefits__header
                     p.fr-benefits__subtitle наши преимущества
                     h2.fr-benefits__title Выбирая нас,<br>вы получаете
-                
+
                 ol.fr-benefits__list
                     li.fr-benefit
                         p.fr-benefit__text Индивидуальный подход.
@@ -112,7 +112,7 @@ html(lang="en")
                         h2.section-header__title Программа <br>курса
                         p.section-header__subtitle.section-header__subtitle--light Oldboy&nbsp;Barbershop
                         .section-header__image
-                            img(src="./img/about.jpg", alt="Барбершоп Oldboy")
+                            img(src="./img/about.jpg" alt="Барбершоп Oldboy")
 
                 .about__caption
                     h3.about__headline.about__headline Программа курса включает в&nbsp;себя все аспекты и&nbsp;навыки работы профессионального мужского&nbsp;мастера
@@ -121,40 +121,40 @@ html(lang="en")
                 .about__content
                     .about__includes
                         article.include-item
-                            .include-item__icon: img(src="./img/icons/guide.svg", alt="")
+                            .include-item__icon: img(src="./img/icons/guide.svg" alt="")
                             p.include-item__title Мужские стрижки
                             p.include-item__text Короткие, классические, длинные волосы. Изучение формы.
                         article.include-item
-                            .include-item__icon: img(src="./img/icons/electric.svg", alt="")
+                            .include-item__icon: img(src="./img/icons/electric.svg" alt="")
                             p.include-item__title Фэйдинг
                             p.include-item__text Работа машинкой, сведение, работа по&nbsp;градиенту
                         article.include-item
-                            .include-item__icon: img(src="./img/icons/razor--land.svg", alt="")
+                            .include-item__icon: img(src="./img/icons/razor--land.svg" alt="")
                             p.include-item__title Опасное бритьё
                             p.include-item__text Техника и&nbsp;правила использования инструментов
                         article.include-item
-                            .include-item__icon: img(src="./img/icons/beard.svg", alt="")
+                            .include-item__icon: img(src="./img/icons/beard.svg" alt="")
                             p.include-item__title Моделирование бороды
                             p.include-item__text Основные подходы и&nbsp;техники выполнения работ
                         article.include-item
-                            .include-item__icon: img(src="./img/icons/shave.svg", alt="")
+                            .include-item__icon: img(src="./img/icons/shave.svg" alt="")
                             p.include-item__title Работа с&nbsp;мужской косметикой
                             p.include-item__text Укладки и&nbsp;бритьё, камуфляж
                         article.include-item
-                            .include-item__icon: img(src="./img/icons/hair.svg", alt="")
+                            .include-item__icon: img(src="./img/icons/hair.svg" alt="")
                             p.include-item__title Работа с&nbsp;клиентом
                             p.include-item__text Обучение правильному взаимодействию с&nbsp;клиентом для получения лояльной базы в&nbsp;работе
 
             section.haircut
                 .haircut__images
                     .haircut__image.haircut__image--zero
-                        img(src="/img/haircut/crop1.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                        img(src="/img/haircut/crop1.jpg" alt="Стрижка «Кроп» в барбершопе Oldboy")
                     .haircut__image.haircut__image--main
-                        img(src="/img/haircut/crop2.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                        img(src="/img/haircut/crop2.jpg" alt="Стрижка «Кроп» в барбершопе Oldboy")
                     .haircut__image.haircut__image--secondary
-                        img(src="/img/haircut/crop3.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                        img(src="/img/haircut/crop3.jpg" alt="Стрижка «Кроп» в барбершопе Oldboy")
                     .haircut__image.haircut__image--secondary
-                        img(src="/img/haircut/crop4.jpg", alt="Стрижка «Кроп» в барбершопе Oldboy")
+                        img(src="/img/haircut/crop4.jpg" alt="Стрижка «Кроп» в барбершопе Oldboy")
 
                 .haircut__content
                     p.haircut__headline Мы не ставим жёстких рамок по сроку обучения
