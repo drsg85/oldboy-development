@@ -1342,6 +1342,11 @@
     }
 }
 
+.hero__price-link {
+    // box model
+    margin-bottom: 20px;
+}
+
 .hero__app {
     // box model
     margin: 0 -20px;

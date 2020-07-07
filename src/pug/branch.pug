@@ -58,6 +58,8 @@ html(lang="en")
                     .hero__buttons.hero__buttons--branch
                         a.button(href="#") Запись онлайн<br>
                         //- a.button.button--ghost(href="#") Сертификат
+                        .hero__price-link
+                            a(href="#price-list").price-link.smooth-trigger Посмотреть прайс-лист
 
                         ul.social
                             li.social__item
@@ -66,6 +68,7 @@ html(lang="en")
                                 //- a.social__icon.icon--facebook(href="#") Facebook
                             li.social__item
                                 a.social__icon.icon--instagram(href="#") Instagram
+                                
 
                 aside.hero__app
                     article.app-promo
@@ -150,7 +153,7 @@ html(lang="en")
                         .promo__image
                             img(src="./img/promos/royal-shaving.jpg", alt="Отец и сын, комплексная услуга Oldboy Barbershop")
 
-            section.price-list
+            section.price-list#price-list
                 .price-list__header
                     header.section-header
                         h2.section-header__title Прайс-лист на&nbsp;услуги
@@ -362,6 +365,9 @@ html(lang="en")
                             tr.price-table__row
                                 td.price-table__service Борода + Камуфляж&nbsp;<a href="#" class="price-table__icon icon--info"></a>
                                 td.price-table__price 1000
+
+                .price-list__button
+                    a.button(href="#").ms_booking Запись онлайн
             
             section.team
                 .team__header
