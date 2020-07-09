@@ -8,7 +8,16 @@
     padding-top: 70px;
       
     // visual
-    background-color: #fdf6ee;;
+    background-color: #fdf6ee;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        height: 340px;
+        margin-bottom: 70px;
+        padding-left: 70px;
+        padding-top: 60px;
+    }
 }
 
 .dividends::after {
@@ -42,6 +51,11 @@
 
     // typography
     text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .dividends__title {
@@ -59,12 +73,17 @@
 .dividends__subtitle {
     // box model
     margin: 0;
-
+    
     // typography
     color: $golden;
     font-family: $titleFont;
     font-size: 1.5rem;
     text-transform: uppercase;
+    
+    @include atTablet {
+        // box model
+        width: 320px;
+    }
 }
 
 .dividends__example {
@@ -77,6 +96,14 @@
     font-family: $mainFont;
     font-size: 1rem;
     text-align: center;
+
+    @include atTablet {
+        // box model
+        max-width: 270px;
+
+        // typography
+        text-align: left;
+    }
 }
 
 .dividends__button {
@@ -85,6 +112,11 @@
 
     // typography
     text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
 }
 
 .dividends__image {
