@@ -29,6 +29,23 @@
     @include atDesktopS {
         // box model
         padding-left: 130px;
+
+        // visual
+        background-position: 355px 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        justify-content: space-between;
+
+        // visual
+        background-position: 405px 40px;
+    }
+
+    @include atDesktopL {
+        // box model
+        justify-content: flex-end;
+        background-position: 435px 40px;
     }
 }
 
@@ -36,6 +53,11 @@
     // positioning
     position: relative;
     z-index: 5;
+
+    @include atDesktopL {
+        // box model
+        margin-right: -30px;
+    }
 }
 
 .dividends__header {
@@ -77,6 +99,11 @@
         // box model
         width: 320px;
     }
+
+    @include atDesktopL {
+        // box model
+        width: auto;
+    }
 }
 
 .dividends__example {
@@ -112,28 +139,6 @@
     }
 }
 
-// .dividends__deco-bgi {
-//     // positioning
-//     position: absolute;
-//     left: -75px;
-//     top: 33%;
-//     z-index: 1;
-
-//     // visual
-//     overflow: hidden;
-// }
-
-// .dividends__bgi {
-//     // box model
-//     display: block;
-//     width: 315px;
-//     height: 350px;
-
-//     // visual
-//     background-image: url('./img/icons/money.svg');
-//     background-repeat: no-repeat;
-// }
-
 .dividends__image {
     // positioning
     position: relative;
@@ -152,6 +157,11 @@
         width: 490px;
         height: 450px;
     }
+
+    @include atDesktopM {
+        // box model
+        margin: 0;
+    }
 }
 
 .dividends__image img {
@@ -164,6 +174,18 @@
 .dividends__deco {
     // box model
     display: none;
+
+    @include atDesktopL {
+        // positioning
+        position: absolute;
+        left: 25px;
+        top: -150px;
+
+        // box model
+        display: block;
+        width: 530px;
+        height: 530px;
+    }
 }
 
 .dividends__deco img {
