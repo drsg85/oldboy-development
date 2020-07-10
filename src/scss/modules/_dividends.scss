@@ -9,6 +9,10 @@
       
     // visual
     background-color: #fdf6ee;
+    background-image: url('./img/icons/money.svg');
+    background-position: -85px 230px;
+    background-repeat: no-repeat;
+    background-size: 320px 350px;
 
     @include atTablet {
         // box model
@@ -17,26 +21,15 @@
         margin-bottom: 70px;
         padding-left: 70px;
         padding-top: 60px;
+
+        // visual
+        background-position: -85px 80px;
     }
-}
 
-.dividends::after {
-    content: "";
-
-    // positioning
-    position: absolute;
-    left: 0;
-    top: 33%;
-    z-index: 1;
-
-    // box model
-    display: block;
-    width: 315px;
-    height: 350px;
-
-    // visual
-    background-image: url('./img/icons/money.svg');
-    background-repeat: no-repeat;
+    @include atDesktopS {
+        // box model
+        padding-left: 130px;
+    }
 }
 
 .dividends__content {
@@ -119,6 +112,28 @@
     }
 }
 
+// .dividends__deco-bgi {
+//     // positioning
+//     position: absolute;
+//     left: -75px;
+//     top: 33%;
+//     z-index: 1;
+
+//     // visual
+//     overflow: hidden;
+// }
+
+// .dividends__bgi {
+//     // box model
+//     display: block;
+//     width: 315px;
+//     height: 350px;
+
+//     // visual
+//     background-image: url('./img/icons/money.svg');
+//     background-repeat: no-repeat;
+// }
+
 .dividends__image {
     // positioning
     position: relative;
@@ -128,6 +143,15 @@
     width: 360px; 
     height: 350px;
     margin: 0 auto;
+
+    @include atDesktopS {
+        // positioning
+        top: -100px;
+
+        // box model
+        width: 490px;
+        height: 450px;
+    }
 }
 
 .dividends__image img {
