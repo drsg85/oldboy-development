@@ -7,23 +7,37 @@
 
     // visual
     transition: all 0.25s ease-out;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    transition: filter 0.25s ease;
 }
 
 .location-logo:first-child {
     @include atDesktopS {
         // box model
-        margin-right: 30px;
+        margin-right: 10px;
     }
 }
 
-.location-logo--out {
+.location-logo:last-child {
+    @include atDesktopS {
+        // box model
+        margin-right: 10px;
+    }
+}
+
+.location-logo:active,
+.location-logo__out:active {
     // visual
-    opacity: 0.5;
+    filter: drop-shadow(1px 1px 0px orange);
 }
 
 .location-logo:hover {
     // visual
-    opacity: 0.75;
+    filter: drop-shadow(1px 1px 0px orange);
 }
 
 .location-logo__image {
@@ -32,12 +46,7 @@
 
     @include atDesktopS {
         // box model
-        height: 65px;
-    }
-
-    @include atDesktopL {
-        // box model
-        height: 86px;
+        height: 85px;
     }
 }
 
