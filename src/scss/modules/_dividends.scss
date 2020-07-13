@@ -1,0 +1,196 @@
+.dividends {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 70px;
+      
+    // visual
+    background-color: #fdf6ee;
+    background-image: url('./img/icons/money.svg');
+    background-position: -85px 230px;
+    background-repeat: no-repeat;
+    background-size: 320px 350px;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        height: 340px;
+        margin-bottom: 70px;
+        padding-left: 70px;
+        padding-top: 60px;
+
+        // visual
+        background-position: -85px 80px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-left: 130px;
+
+        // visual
+        background-position: 355px 40px;
+    }
+
+    @include atDesktopM {
+        // box model
+        justify-content: space-between;
+
+        // visual
+        background-position: 405px 40px;
+    }
+
+    @include atDesktopL {
+        // box model
+        justify-content: flex-end;
+        background-position: 435px 40px;
+    }
+}
+
+.dividends__content {
+    // positioning
+    position: relative;
+    z-index: 5;
+
+    @include atDesktopL {
+        // box model
+        margin-right: -30px;
+    }
+}
+
+.dividends__header {
+    // box model
+    margin-bottom: 30px;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
+}
+
+.dividends__title {
+    // box model
+    margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.dividends__subtitle {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    
+    @include atTablet {
+        // box model
+        width: 320px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: auto;
+    }
+}
+
+.dividends__example {
+    // box model
+    margin: 0;
+    margin-bottom: 60px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 1rem;
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        max-width: 270px;
+
+        // typography
+        text-align: left;
+    }
+}
+
+.dividends__button {
+    // box model
+    margin-bottom: 40px;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
+}
+
+.dividends__image {
+    // positioning
+    position: relative;
+    z-index: 5;
+
+    // box model
+    width: 360px; 
+    height: 350px;
+    margin: 0 auto;
+
+    @include atDesktopS {
+        // positioning
+        top: -100px;
+
+        // box model
+        width: 490px;
+        height: 450px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin: 0;
+    }
+}
+
+.dividends__image img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.dividends__deco {
+    // box model
+    display: none;
+
+    @include atDesktopL {
+        // positioning
+        position: absolute;
+        left: 25px;
+        top: -150px;
+
+        // box model
+        display: block;
+        width: 530px;
+        height: 530px;
+    }
+}
+
+.dividends__deco img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 100%;
+}
