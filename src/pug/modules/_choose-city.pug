@@ -2,20 +2,19 @@
 section.location-selector.location-selector--hidden
     header.location-selector__header
         .location-selector__caption
-            .location-selector__logo-text
-                a(href="#").location-logo#location-logo
-                    .location-logo__image: img(src="/img/logos/location-rus-hover.png", alt="Oldboy Barbershop CIS logo")
-                p.location-selector__intro <em>254 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
+            .location-selector__main-countries
+                .location-selector__logo-text
+                    a(href="#").location-logo.location-logo--reset#location-logo
+                        .location-logo__image: img(src="/img/logos/location-rus-hover.png", alt="Oldboy Barbershop CIS logo")
+                    button.location-logo.location-logo--out.location-logo--switcher
+                        .location-logo__image: img(src="/img/logos/abroad.png", alt="Oldboy Barbershop EU logo")
+            p.location-selector__intro <em>254 барбершопа в 13 странах</em> крупнейшая международная сеть мужских парикмахерских
+            .location-logo__box
+                a(href="#").location-logo.location-logo--out
+                    .location-logo__image: img(src="/img/logos/location-europe-hover.png", alt="Oldboy Barbershop EU logo")
 
-            .location-logo__wrapper
-                .location-logo__box
-                    a(href="#").location-logo.location-logo--out
-                        .location-logo__image: img(src="/img/logos/location-europe-hover.png", alt="Oldboy Barbershop EU logo")
-
-                    a(href="#").location-logo.location-logo--out
-                        .location-logo__image: img(src="/img/logos/location-usa-hover.png", alt="Oldboy Barbershop USA logo")
-
-                p.location-logo__subtitle <span>Выбрать</span> другой регион
+                a(href="#").location-logo.location-logo--out
+                    .location-logo__image: img(src="/img/logos/location-usa-hover.png", alt="Oldboy Barbershop USA logo")
 
 
         .location-selector__fast-nav
@@ -1074,3 +1073,97 @@ section.location-selector.location-selector--hidden
                                 a.location-list__link(href="http://eu.oldboybarbershop.com/en/beograd") Сербия
                             li.location-list__item
                                 a.location-list__link(href="http://eu.oldboybarbershop.com/en/budva") Черногория
+    .location-selector__abroad
+        .branch-addresses
+            .branch-addresses__container
+                .branch-addresses__index
+                    .branch-addresses__letter UA
+                    .branch-addresses__content
+                        ul.location-list
+                            li.location-list__city
+                                a(href='https://oldboybarbershop.com.ua') &Ucy;&kcy;&rcy;&acy;&icy;&ncy;&acy;
+                            li.location-list__item
+                                a.location-list__link(href='https://oldboybarbershop.com.ua/dnepr') &ucy;&lcy;. &Mcy;&acy;&rcy;&icy;&icy; &Kcy;&yucy;&rcy;&icy;, &dcy;. 5
+                                .location-list__place &Tcy;&TScy; &laquo;NEO PLAZA&raquo;
+                            li.location-list__item
+                                a.location-list__link(href='https://oldboybarbershop.com.ua/odessa') &Ocy;&dcy;&iecy;&scy;&scy;&acy;, &ucy;&lcy;. &Pcy;&acy;&scy;&tcy;&iecy;&rcy;&acy;, &dcy;. 64
+                                .location-list__place &tscy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&softcy;&ncy;&ycy;&jcy; &vcy;&khcy;&ocy;&dcy; &vcy; &Gcy;&ocy;&rcy;&scy;&acy;&dcy;
+                            li.location-list__item
+                                a.location-list__link(href='https://oldboybarbershop.com.ua/harkov/shekspira') &ucy;&lcy;. &SHcy;&iecy;&kcy;&scy;&pcy;&icy;&rcy;&acy;, 1&Acy;
+                                .location-list__metro
+                                span.location-list__metro--green &Bcy;&ocy;&tcy;&acy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&jcy; &Scy;&acy;&dcy;
+                            li.location-list__item
+                                a.location-list__link(href='https://oldboybarbershop.com.ua/harkov/bakulina') &KHcy;&acy;&rcy;&softcy;&kcy;&ocy;&vcy;, &ucy;&lcy;. &Bcy;&acy;&kcy;&ucy;&lcy;&icy;&ncy;&acy;, &dcy;. 13
+                                .location-list__metro
+                                span.location-list__metro--green &Ncy;&acy;&ucy;&chcy;&ncy;&acy;&yacy;
+                .branch-addresses__index
+                    .branch-addresses__letter BY
+                    .branch-addresses__content
+                        ul.location-list
+                            li.location-list__city
+                                a(href='https://oldboybarbershop.by/') &Bcy;&IEcy;&Lcy;&Acy;&Rcy;&Ucy;&Scy;&SOFTcy;
+                            li.location-list__item
+                                a.location-list__link(href='https://oldboybarbershop.by/pinsk') &Pcy;&Icy;&Ncy;&Scy;&Kcy;
+                .branch-addresses__index
+                    .branch-addresses__letter KZ
+                    .branch-addresses__content
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/astana') &Acy;&scy;&tcy;&acy;&ncy;&acy;
+                            li.location-list__item
+                                a.location-list__link(href='/astana/milanskiy') &ucy;&lcy;. &Acy;&mcy;&mcy;&acy;&ncy;, &dcy;. 2
+                                .location-list__place &ZHcy;&Kcy; &laquo;&Mcy;&icy;&lcy;&acy;&ncy;&scy;&kcy;&icy;&jcy; &kcy;&vcy;&acy;&rcy;&tcy;&acy;&lcy;&raquo;
+                            li.location-list__item
+                                a.location-list__link(href='/astana/imanova') &ucy;&lcy;. &Icy;&mcy;&acy;&ncy;&ocy;&vcy;&acy;, &dcy;. 16
+                            li.location-list__item
+                                a.location-list__link(href='/astana/izumrud') &ucy;&lcy;. &Dcy;&icy;&ncy;&mcy;&ucy;&khcy;&acy;&mcy;&iecy;&dcy;&acy; &Kcy;&ucy;&ncy;&acy;&iecy;&vcy;&acy;, &dcy;. 10
+                                .location-list__place &Bcy;&TScy; &laquo;&Icy;&zcy;&ucy;&mcy;&rcy;&ucy;&dcy;&ncy;&ycy;&jcy; &Kcy;&vcy;&acy;&rcy;&tcy;&acy;&lcy;&raquo;
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/atyrau') &Acy;&tcy;&ycy;&rcy;&acy;&ucy;
+                            li.location-list__item
+                                a.location-list__link(href='/atyrau') &ucy;&lcy;. &Gcy;&ucy;&rcy;&softcy;&iecy;&vcy;&scy;&kcy;&acy;&yacy;, &dcy;. 1
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/karaganda') &Kcy;&acy;&rcy;&acy;&gcy;&acy;&ncy;&dcy;&acy;
+                            li.location-list__item
+                                a.location-list__link(href='/karaganda') &pcy;&rcy;&ocy;&scy;&pcy;&iecy;&kcy;&tcy; &Ncy;&ucy;&rcy;&scy;&ucy;&lcy;&tcy;&acy;&ncy;&acy; &Ncy;&acy;&zcy;&acy;&rcy;&bcy;&acy;&iecy;&vcy;&acy; (&bcy;&ucy;&lcy;&softcy;&vcy;&acy;&rcy; &Mcy;&icy;&rcy;&acy;), &dcy;. 29
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/kostanay') &Kcy;&ocy;&scy;&tcy;&acy;&ncy;&acy;&jcy;
+                            li.location-list__item
+                                a.location-list__link(href='/kostanay') &ucy;&lcy;. &Acy;&lcy;&tcy;&ycy;&ncy;&scy;&acy;&rcy;&icy;&ncy;&acy;, &dcy;. 110
+
+                .branch-addresses__index
+                    .branch-addresses__letter KG
+                    .branch-addresses__content
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/kg') &Kcy;&icy;&rcy;&gcy;&icy;&zcy;&icy;&yacy;
+
+                            li.location-list__item
+                                a.location-list__link(href='/bishkek') &ucy;&lcy;. &Lcy;&ocy;&gcy;&vcy;&icy;&ncy;&iecy;&ncy;&kcy;&ocy;, &dcy;. 51
+                .branch-addresses__index
+                    .branch-addresses__letter GE
+                    .branch-addresses__content
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/ge') Грузия
+
+                            li.location-list__item
+                                a.location-list__link(href='/tbilisi') &ucy;&lcy;. &Lcy;&ocy;&gcy;&vcy;&icy;&ncy;&iecy;&ncy;&kcy;&ocy;, &dcy;. 51
+                .branch-addresses__index
+                    .branch-addresses__letter TM
+                    .branch-addresses__content
+                        ul.location-list
+                            li.location-list__city
+                                a(href='/tm') &Tcy;&ucy;&rcy;&kcy;&mcy;&iecy;&ncy;&icy;&scy;&tcy;&acy;&ncy;
+                            li.location-list__item
+                                a.location-list__link(href='/ashgabat') &Acy;&shcy;&khcy;&acy;&bcy;&acy;&dcy;, &ucy;&lcy;. &Acy;&tcy;&acy;&tcy;&yucy;&rcy;&kcy;, &dcy;. 80
+                                .location-list__place &Tcy;&Rcy;&TScy; &laquo;&Bcy;&iecy;&rcy;&kcy;&iecy;&rcy;&acy;&rcy;&raquo;, 1 &ecy;&tcy;&acy;&zhcy;, b15
+
+                
+
+
+
+

@@ -6,11 +6,32 @@ class LocationSelector {
     this.citySelector = document.querySelector('.location-selector');
     this.citySelectorClose = document.querySelector('.location-selector__close');
     this.cityInput = document.querySelector('.city-form__input');
-
+    this.locationAbroad = document.querySelector('.location-selector__abroad');
+    this.locationLogo = document.querySelector('.location-logo--reset');
+    this.locationLogo.style.filter = `drop-shadow(1px 1px 0px orange)`;
+    this.locationAbroadSwitcher = document.querySelector('.location-logo--switcher');
+    this.toSwitchBlocks = [this.citySelector.querySelector('.location-selector__fast-nav'), this.citySelector.querySelector('.location-selector__alphabet'), this.citySelector.querySelector('.location-selector__content')]
     this.reset();
     this.events();
   }
+
+  switchAbroad() {
+    this.toSwitchBlocks.map((switchBlock) => {
+      switchBlock.classList.add('location-selector--invisible');
+    });
+    this.locationAbroad.classList.add('location-selector__abroad--visible');
+    this.locationLogo.style.filter = null;
+    this.locationAbroadSwitcher.style.filter = `drop-shadow(1px 1px 0px orange)`;
+  }
   
+  resetSwitch() {
+    this.toSwitchBlocks.map((switchBlock) => {
+      switchBlock.classList.remove('location-selector--invisible')
+    })
+    this.locationAbroad.classList.remove('location-selector__abroad--visible');
+    this.locationAbroadSwitcher.style.filter = null;
+    this.locationLogo.style.filter = `drop-shadow(1px 1px 0px orange)`;
+  }
   
   /**
    * Adds click events to open and close city selector
@@ -34,6 +55,10 @@ class LocationSelector {
     });
 
     window.addEventListener('keydown', () => this.closeHandlerByEsc(event));
+
+    this.locationAbroadSwitcher.addEventListener('click', () => this.switchAbroad());
+
+    this.locationLogo.addEventListener('click', () => this.resetSwitch())
   }
   
   
