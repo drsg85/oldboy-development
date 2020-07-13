@@ -28,6 +28,8 @@ const popUp = new PopUp();
 
 const inputMask = new MaskTel();
 
+import VoiceSearch from './modules/voiceSearch';
+
 if(document.querySelector('.profit__offers')) {
     const investCardForm = new InvestCardForm({
         formParent: 'offers-card__item' 
