@@ -1,0 +1,65 @@
+.sales {
+
+}
+
+.sales__price {
+    // positioning
+    position: relative;
+    z-index: 2;
+
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 6rem;
+    line-height: 80px;
+}
+
+.sales__price::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: skewY(-15deg);
+    z-index: -1;
+
+    // box model
+    display: block;
+    width: 230px;
+    height: 90px;
+    margin: auto;
+
+    // visual
+    background-color: $golden;
+}
+
+.sales__price span {
+    // typography
+    font-size: 4rem;
+}
+
+.sales__desc {
+    // positioning
+    position: relative;
+    z-index: 2;
+    
+    // box model
+    margin: 0 auto;
+    max-width: 150px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.sales__desc span {
+    // typography
+    color: $light;
+    font-size: 2.25rem;
+}

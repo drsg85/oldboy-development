@@ -26,18 +26,21 @@ html(lang="en")
                 .menu-button.menu-button--close
                     .menu-button__middle
 
-            .hero__content
-                .hero__franch-container
-                    .hero__content-header
-                        h1.hero__content-title Международная франшиза <span>Oldboy Barbershop</span>
-                        p.hero__content-subtitle Одна из&nbsp;крупнейших сетей барбершопов в&nbsp;мире
-                    .hero__buttons.hero__buttons--franchise
-                        a.button.smooth-trigger(href='#form-target') Подать заявку
-                        //- ul.social
-                        //-     li.social__item
-                        //-         a.social__icon.icon--vk(href="https://vk.com/oldboy_barbershop") ВКонтакте
-                        //-     li.social__item
-                        //-         a.social__icon.icon--instagram(href="https://www.instagram.com/oldboy_kaliningrad/") Instagram
+            .hero__content.hero__content--franch
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title.hero-caption__title--franch <span class="hero-caption__title-small">Стань</span> владельцем <br><span class="hero-caption__title-big">барбершопа</span>
+                        p.hero-caption__subtitle <span>Крупнейшей в мире сети</span><br> Oldboy barbershop
+                        p.hero-caption__cta Зарабатывай <span>от&nbsp;250&nbsp;000&nbsp;рублей</span> в&nbsp;месяц
+                .hero__center
+                    .hero__sales
+                        .sales
+                            p.sales__price -25<span>%</span>
+                            p.sales__desc <span>Скидка</span> на&nbsp;паушальный взнос до&nbsp;30&nbsp;июля
+                    .hero__buttons
+                        a.button(href="#") Получить презентацию
+                .hero__franch-deco
+                    img(src="./img/deco/franch-hand.png", alt="Изображение Oldboy Barbershop")
 
         main.main
             section.franchise
