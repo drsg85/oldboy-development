@@ -35,6 +35,11 @@
 
     // visual
     background-color: $golden;
+
+    @include atTablet {
+        // box model
+        width: 248px;
+    }
 }
 
 .sales__price span {

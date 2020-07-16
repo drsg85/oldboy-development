@@ -802,16 +802,39 @@
         // box model
         flex-direction: column;
     }
-
-    .hero-caption {
+    @include atDesktopL {
         // box model
-        width: inherit;
+        max-width: calc(50% + 123px);
+        flex-direction: row;
     }
 }
 
-.hero__center {
+.hero__content--franch .hero__caption {
     // box model
-    align-items: flex-end;
+    flex-grow: initial;
+}
+
+.hero__center {
+    @include atDesktopL {
+        // box model
+        margin-bottom: -80px;
+        align-self: flex-end;
+    }
+}
+
+.hero__center .hero__buttons {
+    @include atTablet {
+        // box model
+        width: 100%;
+        
+        // typography
+        text-align: center;
+    }
+}
+
+.hero__center .button {
+    // box model
+    margin-bottom: 0;
 }
 
 .hero__sales {
@@ -820,18 +843,19 @@
     margin-top: 15px;
 }
 
-.hero__center {
-    @include atTablet {
-        .hero__buttons {
-            // box model
-            margin: 0 auto;
-        }
-    }
-}
-
 .hero__franch-deco {
     // box model
     display: none;
+
+    @include atDesktopL {
+        // positioning
+        position: relative;
+        bottom: 0;
+        right: 0;
+
+        // box model
+        // display: block;
+    }
 }
 
 .hero__content-header {
