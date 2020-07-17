@@ -95,6 +95,9 @@
 }
 
 .hero-caption--franch {
+    // box model
+    width: 245px;
+
     @include atDesktopL {
         // box model
         width: 100%;
