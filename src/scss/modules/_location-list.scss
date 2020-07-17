@@ -134,7 +134,6 @@
 .location-list__item a:hover {
     // positioning
     position: relative;
-    z-index: 9;
 
     // box model
     max-width: unset;
@@ -145,6 +144,11 @@
 
     // visual
     background-color: $golden;
+
+    @include atTablet {
+        // positioning
+        z-index: 9;
+    }
 }
 
 .location-list__item--world a {
