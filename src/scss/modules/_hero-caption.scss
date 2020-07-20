@@ -94,6 +94,131 @@
     }
 }
 
+.hero-caption--franch {
+    // box model
+    width: 245px;
+
+    @include atDesktopL {
+        // box model
+        width: 478px;
+    }
+}
+
+.hero-caption__title--franch  {
+    // typography
+    font-family: $titleFont;
+    font-size: 2.5rem;
+    line-height: 47px;
+
+    @include atDesktopL {
+        // typography
+        font-size: 4rem;
+        line-height: 80px;
+    }
+}
+
+.hero-caption__title-small {
+    // box model
+    display: flex;
+    max-width: 235px;
+
+    // typography
+    line-height: 28px;
+
+    @include atDesktopL {
+        // typography
+        line-height: 44px;
+        max-width: 100%;
+    }
+}
+
+.hero-caption__title-small::after {
+    content: "";
+
+    // box model
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 20;
+    height: 4px;
+    margin-left: 0.4em;
+    align-self: center;
+
+    // visual
+    background-color: $golden;
+}
+
+.hero-caption__title-big {
+    // typography
+    font-size: 3.75rem;
+
+    @include atDesktopL {
+        // typography
+        font-size: 6rem;
+        line-height: 69px;
+    }
+}
+
+.hero-caption__subtitle {
+    // box model
+    margin: 0;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 28px;
+
+    // visual
+    border-bottom: 4px solid $golden;
+
+    @include atDesktopL {
+        // box model
+        width: 100%;
+
+        // typography
+        font-size: 2.25rem;
+        line-height: 36px;
+    }
+}
+
+.hero-caption__subtitle span {
+    // typography
+    color: $golden;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-caption__cta {
+    // box model
+    margin: 0;
+    max-width: 200px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 28px;
+
+    @include atDesktopL {
+        // typography
+        font-size: 2.25rem;
+        line-height: 36px;
+    }
+}
+
+.hero-caption__cta span {
+    // typography
+    color: $light;
+}
+
+.hero__center {
+    // typography
+    text-align: center;
+}
+
 .hero-caption__big {
     // positioning
     position: relative;
