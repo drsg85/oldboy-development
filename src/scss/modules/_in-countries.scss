@@ -73,14 +73,11 @@
 .in-countries__slider-item img {
     // box model
     display: block;
-    max-width: 300px;
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
     margin-right: auto;
     margin-left: auto;
-
-    @include atTablet {
-        // box model
-        max-width: 260px;
-    }
 
     @include atDesktopS {
         // box model

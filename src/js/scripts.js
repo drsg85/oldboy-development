@@ -64,7 +64,7 @@ if(document.querySelector('.in-countries__slider-container')) {
     const newFormatSlider = new tns({
         mode: 'carousel',
         container: '.in-countries__slider',
-        slideBy: 'page',
+        slideBy: 1,
         loop: false,
         mouseDrag: false,
         // gutter: 5,
@@ -146,9 +146,13 @@ if(document.querySelector('.photo-gallery__slider-container')) {
     lightGallery(document.getElementById('photo-gallery__slider-item-third'));
     lightGallery(document.getElementById('photo-gallery__slider-item-fourth'));
     lightGallery(document.getElementById('photo-gallery__slider-item-fifth'));
-    lightGallery(document.getElementById('photo-gallery__slider-item-six'));
-    lightGallery(document.getElementById('photo-gallery__slider-item-seven'));
+    lightGallery(document.getElementById('photo-gallery__slider-item-sixth'));
+    lightGallery(document.getElementById('photo-gallery__slider-item-seventh'));
     lightGallery(document.getElementById('photo-gallery__slider-item-eight'));
+    lightGallery(document.getElementById('photo-gallery__slider-item-ninth'));
+    lightGallery(document.getElementById('photo-gallery__slider-item-ten'));
+    lightGallery(document.getElementById('photo-gallery__slider-item-eleventh'));
+    lightGallery(document.getElementById('photo-gallery__slider-item-twelve'));
 }
 
 function checkWindowWidth() {
