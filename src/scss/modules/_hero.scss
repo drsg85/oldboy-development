@@ -839,8 +839,13 @@
 
 .hero__sales {
     // box model
+    margin-bottom: 10px;
+
+    @include atSmallMobile {
+    // box model
     margin-bottom: 25px;
     margin-top: 15px;
+    }
 }
 
 .hero__franch-deco {
