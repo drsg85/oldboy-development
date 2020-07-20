@@ -1,0 +1,21 @@
+.hero-content-franch {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+    
+    @include atDesktopS {
+        // box model
+        flex-direction: column;
+    }
+    @include atDesktopL {
+        // box model
+        max-width: calc(50% + 123px);
+        flex-direction: row;
+    }
+}

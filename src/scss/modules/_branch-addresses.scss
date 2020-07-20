@@ -18,7 +18,7 @@
 
 .branch-addresses__container {
     // box model
-    height: 74vh;
+    height: 56vh;
 
     @include atTablet {
       // positioning
@@ -73,8 +73,8 @@
       content: '';
       display: block;
       width: 32px;
-      height: 475px;
-      margin-top: -475px;
+      height: 400px;
+      margin-top: -400px;
     }
 
     &:after {
@@ -152,7 +152,7 @@
     &:first-child {
       .branch-addresses__letter {
         // box model
-        margin-top: 475px;
+        margin-top: 400px;
       }
     }
 

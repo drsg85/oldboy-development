@@ -36,6 +36,7 @@
     "lightgallery.js": "^1.1.3",
     "npm": "^6.14.5",
     "smoothscroll-polyfill": "^0.4.4",
+    "sourcebuster": "^1.1.0",
     "tiny-slider": "^2.9.2"
   }
 }

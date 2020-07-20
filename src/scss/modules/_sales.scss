@@ -13,8 +13,13 @@
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 6rem;
-    line-height: 80px;
+    font-size: 4rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 6rem;
+        line-height: 80px;
+    }
 }
 
 .sales__price::before {
@@ -44,7 +49,12 @@
 
 .sales__price span {
     // typography
-    font-size: 4rem;
+    font-size: 2.5rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 4rem;
+    }
 }
 
 .sales__desc {

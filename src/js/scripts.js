@@ -26,6 +26,7 @@ import BranchModal from './modules/BranchModal'
 import Swiper from './modules/Swiper';
 import BarberSwitcher from './modules/barberSwitcher';
 import VoiceSearch from './modules/voiceSearch';
+import IncludeSourceInForm from './modules/includeSourceInForm';
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
 const locationSearch = new LocationSearch();
@@ -186,7 +187,7 @@ window.addEventListener('resize', () => debounceOnResize(checkWindowWidth()));
 
 new HorizontalScroll();
 
-new GoToElement();
+//new GoToElement();
 
 // window.addEventListener('load', function() {
 //     const yID = window.yClientsId;
@@ -227,3 +228,5 @@ if(document.querySelector('#bgList')) {
 if(document.querySelector('.city-form__mic')) {
     new VoiceSearch();
 }
+
+new IncludeSourceInForm();

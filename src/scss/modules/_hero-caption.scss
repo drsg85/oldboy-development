@@ -100,15 +100,21 @@
 
     @include atDesktopL {
         // box model
-        width: 100%;
+        width: 478px;
     }
 }
 
 .hero-caption__title--franch  {
     // typography
     font-family: $titleFont;
+    font-size: 1.5rem;
+    line-height: 1;
+
+    @include atSmallMobile {
+    // typography
     font-size: 2.5rem;
     line-height: 47px;
+}
 
     @include atDesktopL {
         // typography
@@ -120,10 +126,15 @@
 .hero-caption__title-small {
     // box model
     display: flex;
-    max-width: 235px;
+    max-width: 195px;
 
-    // typography
-    line-height: 28px;
+    @include atSmallMobile {
+        // box model
+        max-width: 235px;
+
+        // typography
+        line-height: 28px;
+    }
 
     @include atDesktopL {
         // typography
@@ -149,7 +160,12 @@
 
 .hero-caption__title-big {
     // typography
+    font-size: 2rem;
+
+    @include atSmallMobile {
+    // typography
     font-size: 3.75rem;
+    }
 
     @include atDesktopL {
         // typography
@@ -160,19 +176,29 @@
 
 .hero-caption__subtitle {
     // box model
-    margin: 0;
     display: inline-block;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-
+    margin: 0;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 1.5rem;
-    line-height: 28px;
-
+    font-size: 1.2rem;
+    
     // visual
     border-bottom: 4px solid $golden;
+    
+    @include atSmallMobile {
+        // box model
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        // typography
+        font-size: 1.5rem;
+        line-height: 28px;
+
+    }
 
     @include atDesktopL {
         // box model
@@ -187,8 +213,13 @@
 .hero-caption__subtitle span {
     // typography
     color: $golden;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 }
 
 .hero-caption__cta {
@@ -199,8 +230,13 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 1.5rem;
-    line-height: 28px;
+    font-size: 1.2rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 1.5rem;
+        line-height: 28px;
+    }
 
     @include atDesktopL {
         // typography

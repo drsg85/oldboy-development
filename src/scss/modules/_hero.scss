@@ -410,9 +410,9 @@
 
         @include atDesktopL {
             // box model
-            min-height: 780px;
-            // height: 100vh;
-            max-height: 900px;
+            //min-height: 780px;
+            // max-height: 900px;
+            height: 900px;
         }
     }
 
@@ -839,8 +839,13 @@
 
 .hero__sales {
     // box model
+    margin-bottom: 10px;
+
+    @include atSmallMobile {
+    // box model
     margin-bottom: 25px;
     margin-top: 15px;
+    }
 }
 
 .hero__franch-deco {
@@ -852,13 +857,13 @@
         position: relative;
         bottom: 0;
         right: 0;
-
+        transform: translateY(270px);
+        
         // box model
         display: block;
         width: 320px;
         height: 435px;
         margin-left: auto;
-        margin-top: -200px;
     }
 }
 
