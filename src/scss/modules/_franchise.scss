@@ -127,29 +127,34 @@
     margin-bottom: 40px;
     max-width: 350px;
     padding-left: 20px;
+    grid-template-columns: 50% 50%;
 
     @include atTablet {
         // box model
-        display: block;
-        flex-wrap: nowrap;
+        // display: block;
+        // flex-wrap: nowrap;
         max-width: 1200px;
         margin: 0 auto;
-        column-width: 170px;
-        column-gap: 40px;
+        //column-width: 170px;
+        //column-gap: 40px;
         padding-left: 40px;
         margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+
     }
 
     @include atDesktopS {
         // box model
         padding-left: 60px;
+        grid-template-columns: 20% 20% 20% 20%;
     }
 }
 
 .franchise__countries-item {
     // box model
     display: flex;
-    break-inside: avoid;
+    //break-inside: avoid;
     justify-content: flex-start;
     align-items: center;
     // flex-wrap: wrap;

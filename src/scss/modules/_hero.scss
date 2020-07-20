@@ -1607,6 +1607,14 @@
     }
 }
 
+.hero__branches-subtitle {
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 .hero__investment {
     // box model
     display: none;
