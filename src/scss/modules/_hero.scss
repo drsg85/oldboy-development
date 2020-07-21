@@ -815,10 +815,15 @@
 }
 
 .hero__center {
+    @include atDesktopS {
+        // box model
+        margin-bottom: -40px;
+        align-self: flex-end;
+    }
+
     @include atDesktopL {
         // box model
         margin-bottom: -80px;
-        align-self: flex-end;
     }
 }
 
