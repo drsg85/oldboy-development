@@ -815,10 +815,15 @@
 }
 
 .hero__center {
+    @include atDesktopS {
+        // box model
+        margin-bottom: -40px;
+        align-self: flex-end;
+    }
+
     @include atDesktopL {
         // box model
         margin-bottom: -80px;
-        align-self: flex-end;
     }
 }
 
@@ -1610,6 +1615,14 @@
         color: $golden;
         font-style: normal;
     }
+}
+
+.hero__branches-subtitle {
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .hero__investment {

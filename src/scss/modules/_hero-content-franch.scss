@@ -11,11 +11,12 @@
     
     @include atDesktopS {
         // box model
-        flex-direction: column;
-    }
-    @include atDesktopL {
-        // box model
+        // flex-direction: column;
         max-width: calc(50% + 123px);
         flex-direction: row;
     }
+    // @include atDesktopL {
+    //     // box model
+        
+    // }
 }

@@ -34,7 +34,7 @@
 
     // box model
     display: block;
-    width: 230px;
+    width: 227px;
     height: 90px;
     margin: auto;
 
@@ -43,7 +43,17 @@
 
     @include atTablet {
         // box model
-        width: 248px;
+        width: 246px;
+    }
+
+    @include atDesktopS {
+        // box model
+        width: 225px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 247px;
     }
 }
 

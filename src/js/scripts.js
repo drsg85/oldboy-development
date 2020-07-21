@@ -64,7 +64,7 @@ if(document.querySelector('.in-countries__slider-container')) {
     const newFormatSlider = new tns({
         mode: 'carousel',
         container: '.in-countries__slider',
-        slideBy: 'page',
+        slideBy: 1,
         loop: false,
         mouseDrag: false,
         // gutter: 5,
