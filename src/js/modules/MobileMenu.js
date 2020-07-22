@@ -18,6 +18,8 @@ class MobileMenu {
     this.menuButton.addEventListener('click', () => {
       this.toggleMenu();
       this.removeHandlerClass();
+
+      document.documentElement.style.overflow = "unset";
     });
 
     for (let i = 0; i < this.menuLinks.length; i++) {
@@ -63,6 +65,7 @@ closeHandlerByClickOnPage(evt) {
     wrapper.classList.add('hero__nav-wrapper');
     document.body.appendChild(wrapper);
     wrapper.addEventListener('click', () => this.closeMobileMenuByClick());
+    document.documentElement.style.overflow = "hidden";
   }
 }
   /**
