@@ -88,3 +88,13 @@
     color: $light;
     font-size: 2.25rem;
 }
+
+.sales__note {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.8rem;
+}
