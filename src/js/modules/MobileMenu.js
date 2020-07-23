@@ -18,7 +18,6 @@ class MobileMenu {
     this.menuButton.addEventListener('click', () => {
       this.toggleMenu();
       this.removeHandlerClass();
-
       document.documentElement.style.overflow = "unset";
     });
 
