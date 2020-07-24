@@ -8,6 +8,7 @@ class MobileMenu {
 
     this.reset();
     this.events();
+    this.disableScroll();
   }
 
 
@@ -18,7 +19,6 @@ class MobileMenu {
     this.menuButton.addEventListener('click', () => {
       this.toggleMenu();
       this.removeHandlerClass();
-      document.documentElement.style.overflow = "unset";
     });
 
     for (let i = 0; i < this.menuLinks.length; i++) {
@@ -64,7 +64,6 @@ closeHandlerByClickOnPage(evt) {
     wrapper.classList.add('hero__nav-wrapper');
     document.body.appendChild(wrapper);
     wrapper.addEventListener('click', () => this.closeMobileMenuByClick());
-    document.documentElement.style.overflow = "hidden";
   }
 }
   /**
@@ -83,6 +82,19 @@ closeHandlerByClickOnPage(evt) {
       const targetEl = document.querySelector('.hero__nav-wrapper');
       targetEl.remove();
     }
+  }
+
+  disableScroll() {
+    this.menuButton.addEventListener('click', () => {
+      if(this.menu.classList.contains('hero__nav--hidden')) {
+        document.documentElement.style.overflow = "unset";
+        document.body.style.overflow = "unset";
+      }
+      else {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+      }
+    });
   }
 }
 
