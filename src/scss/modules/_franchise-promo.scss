@@ -1,0 +1,81 @@
+.franchise-promo {
+   
+}
+
+.franchise-promo::before {
+    content: "";
+
+    // box model
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    // visual
+    background: linear-gradient(90deg, $golden 0%, rgba(196, 196, 196, 0) 100%);;
+}
+
+.franchise-promo__content {
+    // box model
+    display: flex;
+}
+
+.franchise-promo__sale {
+    // box model
+    margin: 0;
+    margin-right: 15px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 2rem;
+
+    @include atSmallMobile {
+        // typography
+        font-size: 3rem;
+    }
+}
+
+.franchise-promo__desc {
+    // box model
+    margin: 0;
+    width: 145px;
+    align-self: center;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1rem;
+    line-height: 22px;
+}
+
+.franchise-promo__desc span {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+}
+
+.franchise-promo__note {
+    // box model
+    margin: 0;
+    display: flex;
+
+    // typography
+    color: $grey;
+    font-size: 0.625rem;
+}
+
+.franchise-promo__note::after {
+    content: "";
+
+    // box model
+    display: block;
+    flex-grow: 1;
+    height: 4px;
+    align-self: center;
+    margin-left: 20px;
+
+    // visual
+    background: linear-gradient(to right, rgba(196, 196, 196, 0) 0%, $golden 100%);
+}
