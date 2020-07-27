@@ -4,7 +4,6 @@
 
 .franchise-promo::before {
     content: "";
-
     // box model
     display: block;
     width: 100%;
@@ -17,6 +16,7 @@
 .franchise-promo__content {
     // box model
     display: flex;
+    padding-top: 5px;
 }
 
 .franchise-promo__sale {
