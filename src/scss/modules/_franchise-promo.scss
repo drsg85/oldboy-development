@@ -17,6 +17,7 @@
 .franchise-promo__content {
     // box model
     display: flex;
+    padding-top: 5px;
 }
 
 .franchise-promo__sale {
@@ -63,6 +64,7 @@
 
     // typography
     color: $grey;
+    font-family: $mainFont;
     font-size: 0.625rem;
 }
 
