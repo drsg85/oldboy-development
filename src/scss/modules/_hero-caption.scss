@@ -250,6 +250,20 @@
     color: $light;
 }
 
+.hero-caption__plus {
+
+    @include atSmallMobile {
+    // typography
+    font-size: 3rem;
+    vertical-align: bottom;
+    }
+
+    @include atDesktopL {
+        // typography
+        font-size: 3.5rem;
+    }
+}
+
 .hero__center {
     // typography
     text-align: center;
