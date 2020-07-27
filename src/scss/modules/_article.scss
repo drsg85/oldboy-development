@@ -415,6 +415,10 @@
     // typography
     text-align: center;
 }
+.article__button .button {
+    // box model
+    margin-bottom: 0;
+}
 
 .article .clear-float {
     clear: both;

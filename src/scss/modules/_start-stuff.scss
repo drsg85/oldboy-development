@@ -111,12 +111,13 @@
 .start-stuff__item-subtitle {
     // box model
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     // typography
-    color: $dark;
-    font-family: $mainFont;
+    color: $golden;
+    font-family: $titleFont;
     font-size: 18px;
+    text-transform: uppercase;
 }
 
 .start-stuff__item-text {
