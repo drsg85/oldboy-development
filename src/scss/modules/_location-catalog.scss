@@ -1,0 +1,117 @@
+.location-catalog {
+    // box model
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+
+    // visual
+    list-style-type: none;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+.location-catalog__item {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-bottom: 0.25em;
+
+    // typography
+    list-style: none;
+    border: 1px solid transparent;
+
+    @include atTablet {
+        // box model
+        margin-right: 40px;
+        flex-basis: 40%;
+        width: 40%;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 270px;
+        width: 270px;
+    }
+
+    @include atDesktopM {
+        // box model
+        flex-basis: 320px;
+        width: 320px;
+    }
+
+    @include atDesktopL {
+        // box model
+        flex-basis: 300px;
+        width: 300px;
+    }
+}
+
+.location-catalog__item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 5px;
+    top: 10px;
+
+    // box model
+    display: block;
+    width: 13px;
+    height: 13px;
+
+    // visual
+    background-image: url('./img/icons/metro-sign.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.location-catalog__item:hover {
+    // visual
+    border: 1px solid $golden;
+}
+
+.location-catalog__link {
+    // box model
+    display: block;
+    padding: 7px 12px;
+    padding-left: 27px;
+    max-width: 100%;
+    
+    // visual
+    text-decoration: none;
+}
+
+.location-catalog__link span {
+    // box model
+    display: block;
+    margin-bottom: 3px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 1.125rem;
+    line-height: 18px;
+}
+
+.location-catalog__address span {
+    // typography
+    color: $lightGrey;
+    font-size: 0.75rem;
+}
+
+.location-catalog__place {
+    // box model
+    margin: 0;
+
+    // typography
+    color: rgba(0, 0, 0, 0.5);
+    font-family: $mainFont;
+    font-size: 0.625rem;
+}
+
