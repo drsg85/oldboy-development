@@ -29,7 +29,14 @@ import VoiceSearch from './modules/voiceSearch';
 import IncludeSourceInForm from './modules/includeSourceInForm';
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
-const locationSearch = new LocationSearch();
+const locationSearch = new LocationSearch({
+    selector: '.location-selector',
+    parent: '.location-selector'
+});
+const locationSearchMoscow = new LocationSearch({
+    selector: '.branch-section__content',
+    parent: '.hero__caption',
+});
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
 const menuScale = new MenuScale();

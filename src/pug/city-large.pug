@@ -36,6 +36,18 @@ html(lang="en")
                     .hero__buttons.hero__buttons--center
                         a.button(href="#") Запись онлайн<br>
 
+                    .location-selector__fast-nav
+                        p.location-selector__cta <span>Выбери</span> свой барбершоп
+                        .city-form
+                            form.city-form__form(autocomplete="off")
+                                input.city-form__input(type="search" name="search" placeholder="Город, улица или метро" autofocus)
+                            .city-form__mic.city-form__mic--active
+                        section.search-results
+                            h2.search-results__title Результаты поиска:
+                            p.search-results__not-found такого города не найдено
+                            ul.search-results__list
+                    .location-selector__close
+                        .close-button
 
         main
             section.branch-section

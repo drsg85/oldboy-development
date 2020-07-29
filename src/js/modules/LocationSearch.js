@@ -1,18 +1,18 @@
 'use strict';
 
 class LocationSearch {
-  constructor () {
+  constructor (obj) {
     // Location selector (for faster search)
-    this.locationSelector = document.querySelector('.location-selector');
-
+    this.locationSelector = document.querySelector(obj.selector);
+    this.parentSelector = document.querySelector(obj.parent);
     // Search form elements
-    this.locationForm = this.locationSelector.querySelector('.city-form__form');
-    this.locationInput = this.locationSelector.querySelector('.city-form__input');
+    this.locationForm = this.parentSelector.querySelector('.city-form__form');
+    this.locationInput = this.parentSelector.querySelector('.city-form__input');
 
     // Search results elements
-    this.resultsSection = this.locationSelector.querySelector('.search-results');
-    this.resultsList = this.locationSelector.querySelector('.search-results__list');
-    this.notFoundLabel = this.locationSelector.querySelector('.search-results__not-found');
+    this.resultsSection = this.parentSelector.querySelector('.search-results');
+    this.resultsList = this.parentSelector.querySelector('.search-results__list');
+    this.notFoundLabel = this.parentSelector.querySelector('.search-results__not-found');
 
     // Check if not European version
     if (this.locationForm) {
@@ -59,7 +59,11 @@ class LocationSearch {
     let locationLists = this.locationSelector.querySelectorAll('.location-list');
 
     for (let i = 0; i < locationLists.length; i++) {
-      let city = locationLists[i].querySelector('.location-list__city').textContent;
+      let city = '';
+      if(locationLists[i].querySelector('.location-list__city')) {
+         city = locationLists[i].querySelector('.location-list__city').textContent;
+      }
+
       let items = locationLists[i].querySelectorAll('.location-list__item');
 
       for (let j = 0; j < items.length; j++) {
