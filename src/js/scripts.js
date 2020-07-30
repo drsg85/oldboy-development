@@ -11,7 +11,6 @@ import MenuScale from './modules/MenuScale';
 //import IpInfo from './modules/IpInfo';
 import CheckerLengthOfInputValue from './modules/checerLengthOfInputValue';
 import TabSwitcher from './modules/tabSwitcher';
-import ExclusiveCities from './modules/exclusiveCities';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
 import Feedback from './modules/Feedback';
 
@@ -31,11 +30,15 @@ const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
 const locationSearch = new LocationSearch({
     selector: '.location-selector',
-    parent: '.location-selector'
+    parent: '.location-selector',
+    list: '.location-list',
+    listItem: '.location-list__item'
 });
 const locationSearchMoscow = new LocationSearch({
     selector: '.branch-section__content',
     parent: '.hero__caption',
+    list: '.location-catalog',
+    listItem: '.location-catalog__item'
 });
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
@@ -51,8 +54,6 @@ new TabSwitcher({
     tabs: '.price-list__btn',
     elToOpen: '.price-list__container'
 });
-
-new ExclusiveCities();
 
 if(document.querySelector('.new-format__slider-wrap')) {
     const newFormatSlider = new tns({

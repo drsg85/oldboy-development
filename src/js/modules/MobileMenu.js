@@ -9,6 +9,7 @@ class MobileMenu {
     this.reset();
     this.events();
     this.disableScroll();
+    this.disableScrollIos();
   }
 
 
@@ -95,6 +96,17 @@ closeHandlerByClickOnPage(evt) {
         document.body.style.overflow = "hidden";
       }
     });
+  }
+  disableScrollIos() {
+    const isSafari = navigator.userAgent.indexOf("Safari") !== -1;
+    const isIphone = navigator.userAgent.indexOf("iPhone") !== -1;
+    const isMobileIosSafari = isSafari && isIphone;
+
+    if (this.menu.classList.contains('menu-button--close') && isMobileIosSafari) {
+        document.ontouchmove = (e) => e.preventDefault();
+    } else {
+        document.ontouchmove = (e) => true;
+    }
   }
 }
 

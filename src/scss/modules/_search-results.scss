@@ -18,11 +18,17 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        left: -10px;
+        //left: -10px;
+        left: 0;
         right: 55px;
 
         // box model
-        width: auto;
+        //width: auto;
+        width: 100%;
+
+        // visual
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 }
 

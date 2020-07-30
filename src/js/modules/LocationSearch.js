@@ -5,6 +5,11 @@ class LocationSearch {
     // Location selector (for faster search)
     this.locationSelector = document.querySelector(obj.selector);
     this.parentSelector = document.querySelector(obj.parent);
+    this.list = obj.list;
+    this.listItem = obj.listItem;
+    this.listLink = obj.listLink;
+    this.listAddress = obj.listAddress;
+
     // Search form elements
     this.locationForm = this.parentSelector.querySelector('.city-form__form');
     this.locationInput = this.parentSelector.querySelector('.city-form__input');
@@ -56,7 +61,7 @@ class LocationSearch {
    */
   generateBranches () {
     let branches = [];
-    let locationLists = this.locationSelector.querySelectorAll('.location-list');
+    let locationLists = this.locationSelector.querySelectorAll(this.list);
 
     for (let i = 0; i < locationLists.length; i++) {
       let city = '';
@@ -64,7 +69,7 @@ class LocationSearch {
          city = locationLists[i].querySelector('.location-list__city').textContent;
       }
 
-      let items = locationLists[i].querySelectorAll('.location-list__item');
+      let items = locationLists[i].querySelectorAll(this.listItem);
 
       for (let j = 0; j < items.length; j++) {
         let itemLink = items[j].querySelector('a');
