@@ -9,10 +9,35 @@
 
     @include atTablet {
         // box model
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
+    
+    @include atDesktopS {
+        // box model
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    @include atDesktopM {
+        // box model
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    @include atDesktopL {
+        // box model
+        grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    }
+}
+
+.location-catalog--without-metro {
+    // box model
+    padding-top: 30px;
+
+    // visual
+    border-top: 1px solid rgba($lightGrey, 0.5);
 }
 
 .location-catalog__item {
@@ -29,26 +54,26 @@
     @include atTablet {
         // box model
         margin-right: 40px;
-        flex-basis: 40%;
-        width: 40%;
+        // flex-basis: 40%;
+        // width: 40%;
     }
 
     @include atDesktopS {
         // box model
-        flex-basis: 270px;
-        width: 270px;
+        // flex-basis: 270px;
+        // width: 270px;
     }
 
     @include atDesktopM {
         // box model
-        flex-basis: 320px;
-        width: 320px;
+        // flex-basis: 320px;
+        // width: 320px;
     }
 
     @include atDesktopL {
         // box model
-        flex-basis: 300px;
-        width: 300px;
+        // flex-basis: 300px;
+        // width: 300px;
     }
 }
 
@@ -58,7 +83,7 @@
     // positioning
     position: absolute;
     left: 5px;
-    top: 10px;
+    top: 9px;
 
     // box model
     display: block;
@@ -69,6 +94,11 @@
     background-image: url('./img/icons/metro-sign.svg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.location-catalog__item--without-metro::before {
+    // visual
+    background-image: url('./img/icons/ellipse.svg');
 }
 
 .location-catalog__item:hover {
