@@ -333,7 +333,8 @@
 
 .location-selector__top:hover {
     // visual
-    opacity: 0.75;
+    filter:drop-shadow(orange 1px 1px 0px);
+    opacity: 1;
 }
 
 .location-selector__top img {

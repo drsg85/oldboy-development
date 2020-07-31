@@ -16,7 +16,18 @@ const mobileMenu = new MobileMenu();
 
 const locationSelector = new LocationSelector();
 
-const locationSearch = new LocationSearch();
+const locationSearch = new LocationSearch({
+    selector: '.location-selector',
+    parent: '.location-selector',
+    list: '.location-list',
+    listItem: '.location-list__item'
+});
+const locationSearchMoscow = new LocationSearch({
+    selector: '.branch-section__content',
+    parent: '.hero__caption',
+    list: '.location-catalog',
+    listItem: '.location-catalog__item'
+});
 
 const locationLogo = new LocationLogo();
 
@@ -44,7 +55,7 @@ if(document.querySelector('.profit__international-content')) {
 
 function checkWindowWidth() {
     if(window.innerWidth < 700) {
-        const anchors = document.querySelectorAll('.alphabet__trigger');
+        const anchors = [...document.querySelectorAll('.alphabet__trigger')];
         anchors.map((el) => {
             const reg = /.*(#)/g;
             const href = el.href.match(reg)[0];

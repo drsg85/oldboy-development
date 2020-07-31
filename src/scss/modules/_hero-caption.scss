@@ -504,7 +504,7 @@
 
     // positioning
     position: absolute;
-    right: 0;
+    left: 0;
     
     @include atTablet {
         // box model
@@ -515,16 +515,6 @@
     @include atDesktopS {
         // positioning
         bottom: 70px;
-    }
-
-    @include atDesktopM {
-        // positioning
-        bottom: 90px;
-    }
-
-    @include atDesktopL {
-        // positioning
-        bottom: 120px;
     }
 }
 

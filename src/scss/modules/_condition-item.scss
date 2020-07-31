@@ -53,7 +53,7 @@
 
     // typography
     color: $black;
-    font-family: $mainFont;
+    font-family: $titleFont;
     font-weight: 600;
 
     @include atDesktopS {
@@ -95,15 +95,5 @@
 
 .condition-item__desc span {
     // typography
-    font-size: 1.5rem;
-
-    @include atDesktopS {
-        // typography
-        font-size: 1.8vw;
-    }
-
-    @include atDesktopL {
-        // typography
-        font-size: 1.5rem;
-    }
+    font-size: 1.2rem;
 }
