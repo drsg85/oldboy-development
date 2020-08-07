@@ -149,7 +149,7 @@
             </div>
         </section>
         <section class="about" id="about">
-            {{ content|without('field_hero_content')|without('field_hide_footer') }}
+            {{ content|without('field_hero_content')|without('field_hide_footer')|without('field_schema')|without('field_schema2') }}
         </section>
 
         {{ academy }}
@@ -181,5 +181,5 @@
         {% include '@oldboy8/includes/footer.html.twig' %}
     </footer>
 
-    <script src="/{{ directory }}/dist/scripts.js"></script>
+    <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
     <script src="/{{ directory }}/dist/main.js"></script>

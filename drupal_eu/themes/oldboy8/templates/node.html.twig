@@ -102,7 +102,7 @@
 		{% endif %}
     </header>
     <main>
-		{{ content|without('field_hero_content')|without('field_hide_footer') }}
+		{{ content|without('field_hero_content')|without('field_hide_footer')|without('field_cityname')|without('field_schema')|without('field_schema2') }}
 		{% include '@oldboy8/includes/totop.html.twig' %}
     </main>
 	{% include '@oldboy8/includes/locations.html.twig' %}

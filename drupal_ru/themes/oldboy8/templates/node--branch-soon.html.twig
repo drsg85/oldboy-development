@@ -89,7 +89,7 @@
         <div class="hero__content">
             <div class="hero__caption">
                 <div class="hero-caption hero-caption--city">
-                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">oldboy <br>barbershop</span></h1>
+                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span></h1>
 					<p class="hero-caption__location">{{ content.field_city.0 }}</p>
                 </div>
 			</div>
@@ -122,7 +122,11 @@
 						{% if content.field_phonelink.0 %}
 							{% set phonelink = content.field_phonelink.0 %}
 						{% endif %} 
-						<p class="contact__value"><a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a></p>
+						{% set phoneclass = 'ya-phone' %}
+						{% if content.field_phone_class.0 %}
+							{% set phoneclass = content.field_phone_class.0 %}
+						{% endif %} 
+						<div class="contact__value {{ phoneclass }}"><a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a></div>
 					</div>
 					{% if content.field_work_hours %}
 					<div class="contact">
@@ -238,4 +242,4 @@
 		{{ node.field_subscribe_link.value|raw }}
 	{% endif %}
     <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
-	<script src="/{{ directory }}/dist/dummy.js"></script>
+	<script src="/{{ directory }}/dist/dummy.js?v={{ js_ver }}"></script>

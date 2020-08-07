@@ -176,9 +176,7 @@ function oldboyapi_get_schema_from_route($entity = NULL) {/*{{{*/
       return NULL;
     }
 
-    foreach ($schema_manager->tagsFromEntity($entity) as $tag => $data) {
-      $metatags[$tag] = $data;
-    }
+	$metatags = $schema_manager->tagsFromEntity($entity);
   }
 
   $result = array();
@@ -195,8 +193,34 @@ class OldboySchemaManager {/*{{{*/
 
     /* @var \Drupal\field\Entity\FieldConfig $field_info */
     foreach ($fields as $field_name => $field_info) {
-      $tags = $this->getFieldTags($entity, $field_name);
+      //$tags[$field_name] = $this->getFieldTags($entity, $field_name);
+      $tags += $this->getFieldTags($entity, $field_name);
     }
+
+	$noindex = false;
+	$bundle = $entity->bundle();
+	if ($bundle == 'master') {
+		$noindex = true;
+	}
+
+	$current_url = Url::fromRoute('<current>');
+	$path = $current_url->toString();
+
+	if (strpos($path, '/pl/node') !== false) {
+		$noindex = true;
+	} elseif (strpos($path, '/sr/node') !== false) {
+		$noindex = true;
+	} elseif (strpos($path, '/en/node') !== false) {
+		$noindex = true;
+	}
+
+	if ($path == '/en/node/2' || $path == '/pl/node/2' || $path == '/sr/node/2') {
+		$noindex = false;
+	}
+
+	if ($noindex) {
+		$tags['meta'] = array('name' => 'robots', 'content' => 'noindex');
+	}
 
     return $tags;
   }
@@ -242,7 +266,7 @@ class OldboySchemaManager {/*{{{*/
 
 
   protected function fieldTypes() {
-    return ['field_schema'];
+    return ['field_schema','field_schema2'];
   }
 
   public function generateElements(array $tags, $entity = NULL) {
@@ -274,8 +298,15 @@ class OldboySchemaManager {/*{{{*/
     // Each element of the $values array is a tag with the tag plugin name as
     // the key.
     foreach ($tags as $tag_name => $value) {
-        $tag = new OldboySchema($tag_name);
 
+		$tag = false;
+		if ($tag_name == 'meta') {
+			$tag = new OldboyMeta($tag_name);
+		} elseif ($tag_name == 'field_schema' || $tag_name == 'field_schema2') {
+        $tag = new OldboySchema($tag_name);
+		}
+
+		if ($tag !== false) {
         $tag->setValue($value);
 
         $output = $tag->output();
@@ -294,6 +325,7 @@ class OldboySchemaManager {/*{{{*/
           }
         }
     }
+    }
 
     return $rawTags;
   }
@@ -301,11 +333,13 @@ class OldboySchemaManager {/*{{{*/
 
 class OldboySchema {/*{{{*/
 
+  protected $tag_name;
   protected $value;
   protected $multiple;
 
 	public function __construct($tag_name) {
 		$this->multiple = false;
+		$this->tag_name = $tag_name;
 	}
 
   public function value() {
@@ -322,6 +356,14 @@ class OldboySchema {/*{{{*/
     return trim($value);
   }
   public function output() {
+	  $result = array();
+	  $result = $this->output_ld();
+	  return $result;
+  }
+
+
+
+  public function output_ld() {
     if (empty($this->value)) {
       return $this->multiple() ? [] : '';
     }
@@ -342,6 +384,65 @@ class OldboySchema {/*{{{*/
 		   //'#markup' => $value
 	   ];
     }
+
+    return $this->multiple() ? $elements : reset($elements);
+  }
+
+}/*}}}*/
+
+class OldboyMeta {/*{{{*/
+
+  protected $tag_name;
+  protected $value;
+  protected $multiple;
+
+	public function __construct($tag_name) {
+		$this->multiple = false;
+		$this->tag_name = $tag_name;
+	}
+
+  public function value() {
+    return $this->value;
+  }
+
+  public function setValue($value) {
+    $this->value = $value;
+  }
+  public function multiple() {
+    return $this->multiple;
+  }
+
+  private function tidy($value) {
+    return trim($value);
+  }
+
+  public function output() {
+	  $result = array();
+	  $result = $this->output_meta();
+	  return $result;
+  }
+
+  public function output_meta() {
+    if (empty($this->value)) {
+      return $this->multiple() ? [] : '';
+    }
+
+	$value = $this->value();
+    $elements = [];
+
+	if (isset($value['name'])
+		&& isset($value['content'])) {
+
+		$elements[] = [
+			'#type' => 'html_tag',
+			'#tag' => 'meta',
+			'#attributes' => array(
+				'name' => $value['name'],
+				'content' => $value['content'],
+			),
+			'#allowed_tags' => ['meta'],
+		];
+	}
 
     return $this->multiple() ? $elements : reset($elements);
   }
