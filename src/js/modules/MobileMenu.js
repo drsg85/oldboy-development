@@ -17,6 +17,9 @@ class MobileMenu {
    * Add event listeners
    */
   events () {
+    const debounced = this.debounceOnScroll(this.checkPositionPopup, 400);
+        window.addEventListener('scroll', debounced);
+
     this.menuButton.addEventListener('click', () => {
       this.toggleMenu();
       this.removeHandlerClass();
@@ -85,15 +88,32 @@ closeHandlerByClickOnPage(evt) {
     }
   }
 
+  debounceOnScroll(func, time) {
+    let timer;
+    return function (event) {
+        if(timer) clearTimeout(timer);
+        timer = setTimeout(func, time, event);
+    };
+};
+
+  checkPositionPopup() {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+}
+
   disableScroll() {
     this.menuButton.addEventListener('click', () => {
       if(this.menu.classList.contains('hero__nav--hidden')) {
-        document.documentElement.style.overflow = "unset";
-        document.body.style.overflow = "unset";
+        const body = document.body;
+        const scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
       }
       else {
-        document.documentElement.style.overflow = "hidden";
-        document.body.style.overflow = "hidden";
+        const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+        const body = document.body;
+        body.style.position = 'fixed';
+        body.style.top = `-${scrollY}`;
       }
     });
   }

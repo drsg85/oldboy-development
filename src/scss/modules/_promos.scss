@@ -19,14 +19,19 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    align-items: stretch;
 
     @include atTablet {
         // box model
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         // align-items: flex-start;
         padding: 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        justify-content: space-between;
     }
 
     @include atDesktopM {

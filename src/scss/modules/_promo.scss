@@ -3,9 +3,10 @@
     position: relative;
 
     // box model
-    height: 380px;
+    height: 320px;
+    width: 320px;
     margin-bottom: 20px;
-    flex-grow: 1;
+    //flex-grow: 1;
 
     // visual
     background-color: $darkGold;
@@ -16,13 +17,9 @@
         // box model
         margin: 0 20px;
         margin-bottom: 40px;
-        flex-basis: 40%;
+        height: 420px;
+        flex-basis: 420px;
         flex-shrink: 1;
-    }
-
-    @include atDesktopS {
-        // box model
-        flex-basis: 25%;
     }
 }
 
