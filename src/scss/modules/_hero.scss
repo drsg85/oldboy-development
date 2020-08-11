@@ -95,6 +95,11 @@
             // visual
             background-size: cover;
         }
+
+        .location-selector__cta span {
+            // typography
+            color: $light;
+        }
     }
     
     &--branch {

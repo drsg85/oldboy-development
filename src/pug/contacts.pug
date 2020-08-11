@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--haircut
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        p.city-select__city Калининград
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--vacancy">Контакты&nbsp;<br>Oldboy Barbershop</span>
+                        p.hero-caption__motto Структура управляющей компании
+
+        main
+            section.contacts-info
+                header.contacts-info__header
+                    h2.contacts-info__title Контакты
+                    p.contacts-info__subtitle Управляющей комании oldboy barbershop
+                    .contacts-info__address-bottom
+                        p.contacts-info__address-branches <span class="contacts-info__address-branches--stress">262 барбершопа в 14 странах</span> крупнейшая международная сеть мужских парикмахерских
+
+                .contacts-info__address
+                    .contacts-info__block
+                        h4.contacts-info__block-title Адрес:
+                        p.contacts-info__block-text Калининград, Ул. Сержанта Колоскова, 4а
+                    .contacts-info__block
+                        h4.contacts-info__block-title oldboybarbershop.com
+                    .contacts-info__block
+                        h4.contacts-info__block-title Телефон:
+                        p.contacts-info__block-text +7(911) 866-00-79
+                    .contacts-info__block
+                        h4.contacts-info__block-title E-mail:
+                        p.contacts-info__block-text info@oldboybarbershop.com
+
+            section.contacts-team
+                .contacts-team__header
+                    header.section-header
+                        h2.section-header__title Команда <br>oldboy barbershop
+                        p.section-header__subtitle.section-header__subtitle--golden-t структура&nbsp;компании
+                .contacts-team__top
+                    .employee-card
+                        .employee-card__image
+                            .employee-card__img
+                        .employee-card__info
+                            h4.employee-card__title Эльдар мирзоев
+                            p.employee-card__subtitle основатель сети
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com") info@oldboybarbershop.com
+                    .employee-card
+                        .employee-card__image
+                            .employee-card__img
+                        .employee-card__info
+                            h4.employee-card__title Андрей Суленко
+                            p.employee-card__subtitle Исполнительный директор
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com") info@oldboybarbershop.com
+                .contacts-team__bottom
+                    header.contacts-team__managers
+                        h4.contacts-team__managers-title Руководители отделов <span class="contacts-team__stress"> управляющей компании</span>
+                    .contacts-team__content
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="", alt="")
+                            .employee-card__info
+                                h4.employee-card__title
+                                p.employee-card__subtitle
+                                a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                        .contacts__branches
+                            header.contacts__branches
+                                img.contacts__branches-img(src="", alt="")
+                                p.contacts__branches-text
+                            .contacts__branches-info
+                                .franchise__summary
+                                    p.franchise__count 129
+                                    p.franchise__details <strong>ФИЛИАЛОВ</strong> в 5 странах и в 5 столицах
+            section.contacts-map
+                header.contacts-map__header
+                    h3.contacts-map__title Карта партнерской сети
+                    p.contacts-map__subtitle Все филиалы барбершопов сети OldBoy Barbershop. Для детальной информации о филиале выберите его из списка
+                .contacts-map__container
+            section.international-banner
+                h3.international-banner__cta Не нашел свой город?<br><span class="international-banner__cta--stress">Открой свой барбершоп!</span>
+                .international-banner__text
+                    h4.international-banner__header Новый формат барбершопов
+                    p.international-banner__desc Мы не просто делаем нетбизнес. У нас – крепкая мужская дружба, приносящая выгоду всем сторонам. Умеем зарабатывать и умеем отдыхать.
+                    button.button Получить презентацию
+            section.contacts-partners
+                .contacts-partners__header
+                    header.section-header
+                        h2.section-header__title Партнерская<br>сеть
+                        p.section-header__subtitle.section-header__subtitle--golden-t контакты&nbsp;франчайзи
+                    .contacts-partners__header-info
+                        img.contacts-partners__header-img(src="", alt="")
+                        header.contacts-partners__franchise-header
+                            h4.contacts-partners__franchise-title
+                            p.contacts-partners__franchise-subtitle
+                            p.contacts-partners__franchise-text
+                .contacts-partners__content
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="", alt="")
+                        .employee-card__info
+                            h4.employee-card__title
+                            p.employee-card__subtitle
+                            a.employee-card__email(href="mailto:info@oldboybarbershop.com")
+
+        include modules/_choose-city.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")
