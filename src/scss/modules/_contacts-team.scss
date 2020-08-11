@@ -1,0 +1,15 @@
+.contacts-team {
+    // visual
+    background-image: url("./img/bgs/contacts-team-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.contacts-team__header {
+    .section-header {
+        @include atDesktopL {
+            // box model
+            width: 600px;
+        }
+    }
+}
