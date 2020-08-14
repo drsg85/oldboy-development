@@ -1,0 +1,168 @@
+.employee-card {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 312px;
+    height: 495px;
+
+    // visual
+    border: 2px solid #d29c4e;
+    border-radius: 10px;
+
+    &:after {
+        content: '';
+
+        // positioning
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        // box model
+        height: 100%;
+        width: 93%;
+
+        // visual
+        background-image: url('./img/icons/border-decor--white.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+    }
+
+    &:hover {
+        .employee-card__info {
+            z-index: 0;
+
+            // visual
+            background: rgba(235, 209, 169, 0.1);
+        }
+    }
+
+    &--golden {
+        &:hover {
+            border: 2px solid $light;
+
+            &:after {
+                // visual
+                background-image: url('./img/icons/border-decor.svg');
+            }
+        }
+    }
+}
+
+.employee-card__image {
+    height: 354px;
+    width: 100%;
+}
+
+.employee-card__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.employee-card__info {
+    // positioning
+    z-index: 4;
+
+    // box model
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    // typography
+    text-align: center;
+
+    // visual
+    background-color: $light;
+}
+
+.employee-card__header {
+    &:after {
+        content: '';
+
+        // positioning
+        position: relative;
+
+        // box model
+        display: block;
+        height: 2px;
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 8px;
+        margin-bottom: 12px;
+
+        // visual
+        background: rgba(210, 156, 78, 0.2);
+    }
+}
+
+.employee-card__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.employee-card__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: #726969;
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.employee-card__email {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $mainFont;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.employee-card__city {
+    // box model
+    margin: 0;
+
+    // typography
+    color: rgba($black, 0.5);
+    font-family: $mainFont;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.employee-card__tel {
+    // box model
+    display: block;
+    margin: 0;
+
+    // typography
+    color: rgba($black, 0.5);
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: none;
+}

@@ -34,12 +34,15 @@ const locationSearch = new LocationSearch({
     list: '.location-list',
     listItem: '.location-list__item'
 });
-const locationSearchMoscow = new LocationSearch({
-    selector: '.branch-section__content',
-    parent: '.hero__caption',
-    list: '.location-catalog',
-    listItem: '.location-catalog__item'
-});
+if(window.location.pathname.slice(1) === 'moscow') {
+    const locationSearchMoscow = new LocationSearch({
+        selector: '.branch-section__content',
+        parent: '.hero__caption',
+        list: '.location-catalog',
+        listItem: '.location-catalog__item'
+    });
+}
+
 const langSelector = new LanguageSelector();
 const locationLogo = new LocationLogo();
 const menuScale = new MenuScale();

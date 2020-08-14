@@ -1,0 +1,86 @@
+.contacts-partners {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.contacts-partners__header {
+    // box model
+    display: flex;
+    flex-direction: column;
+    flex-basis: 550px;
+    max-width: 550px;
+}
+
+.contacts-partners__header-info {
+}
+
+.contacts-partners__header-img {
+
+}
+
+.contacts-partners__franchise-header {
+
+}
+
+.contacts-partners__franchise-title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.contacts-partners__franchise-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+
+.contacts-partners__franchise-text {
+    // box model
+    margin: 0;
+
+    // typography
+    color: rgba($black, 0.5);
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.contacts-partners__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacts-partners__content > * {
+    // box model
+    margin-bottom: 55px;
+}
+
+.contacts-partners__content .employee-card__header:after {
+    // box model
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}

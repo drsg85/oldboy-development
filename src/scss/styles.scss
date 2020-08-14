@@ -146,6 +146,7 @@
 @import 'modules/social';
 @import 'modules/y-clients';
 @import "modules/reference-text";
+@import "modules/wwf-banner";
 
 // TODO: "city-catalog"
 @import 'modules/city-catalogue';
@@ -211,3 +212,6 @@
 //contacts
 @import "modules/contacts-info";
 @import "modules/contacts-team";
+@import "modules/contacts-map";
+@import "modules/contacts-partners";
+@import "modules/employee-card";

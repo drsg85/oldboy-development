@@ -649,7 +649,8 @@
         position: unset;
         top: 0;
         left: 210px;
-        max-width: 100%;
+        max-width: 750px;
+        width: 100%;
         
         // visual
         visibility: visible;
@@ -714,6 +715,7 @@
         position: unset;
 
         // box model
+        margin-left: auto;
         padding-right: 0;
     }
 }

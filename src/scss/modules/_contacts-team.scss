@@ -1,8 +1,39 @@
 .contacts-team {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1700px;
+    width: 100%;
+    padding-right: 100px;
+    margin-bottom: 20px;
+    
     // visual
     background-image: url("./img/bgs/contacts-team-bg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+
+    &:before {
+        content: '';
+
+        // positioning
+        position: absolute;
+        top: -32px;
+        left: 0;
+
+        // box model
+        display: block;
+        height: 70px;
+        width: 100%;
+
+        // visual
+        background-image: url('./img/team-grunge.svg');
+        background-repeat: repeat-x;
+    }
 }
 
 .contacts-team__header {
@@ -12,4 +43,153 @@
             width: 600px;
         }
     }
+}
+
+.contacts-team__top {
+    // positioning
+    z-index: 4;
+
+    // box model
+    display: flex;
+    width: 100%;
+    max-width: 745px;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.contacts-team__bottom {
+    // positioning
+    position: relative;
+    z-index: 3;
+
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 100%;
+    max-width: 1650px;
+
+    &:before {
+        content: '';
+
+        // positioning
+        position: absolute;
+        top: -293px;
+        left: 0;
+        z-index: 0;
+
+        // box model
+        height: 500px;
+        width: 1920px;
+
+        // visual
+        background-color: #FBF5EC;
+        background-image: url('./img/deco/barberpull-white.svg');
+        background-repeat: no-repeat;
+        background-position: 30px 160px;
+    }
+}
+
+.contacts-team__managers {
+    // positioning
+    z-index: 3;
+
+    // box model
+    flex-basis: 230px;
+    max-width: 230px;
+    margin-left: 122px;
+}
+
+.contacts-team__managers-title {
+    // positioning
+    transform: matrix(1, -0.27, 0, 0.97, 0, 0);
+
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 700;
+
+    &:before {
+        content: '';
+        
+        // positioning
+        transform: rotate(180deg);
+
+        // box model
+        display: block;
+        height: 4px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        // visual
+        background: linear-gradient(90deg, #D6A354 0%, rgba(196, 196, 196, 0) 100%);
+    }
+}
+
+.contacts-team__stress {
+    // positioning
+    position: relative;
+
+    // typography
+    color: $golden;
+
+    &:after {
+        content: '';
+
+        // positioning
+        position: absolute;
+        right: -90px;
+        bottom: 20px;
+
+        // box model
+        display: block;
+        height: 4px;
+        width: 80px;
+
+        // visual
+        background: linear-gradient(90deg, #D6A354 0%, rgba(196, 196, 196, 0) 100%);
+    }
+}
+
+.contacts-team__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.contacts-team__content > *{
+    // box model
+    margin-bottom: 50px;
+}
+
+.contacts-team__branches {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 100px;
+
+    // visual
+    background-image: url('./img/investment/map.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.contacts-team__branches .franchise__summary {
+    // positioning
+    position: relative;
+    bottom: 0;
+    right: 0;
 }
