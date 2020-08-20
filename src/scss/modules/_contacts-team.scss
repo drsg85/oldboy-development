@@ -7,15 +7,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1700px;
     width: 100%;
-    padding-right: 100px;
     margin-bottom: 20px;
-    
-    // visual
-    background-image: url("./img/bgs/contacts-team-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
 
     &:before {
         content: '';
@@ -34,14 +27,29 @@
         background-image: url('./img/team-grunge.svg');
         background-repeat: repeat-x;
     }
+
+    @include atDesktopS {
+        // visual
+        background-image: url("./img/bgs/contacts-team-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 .contacts-team__header {
+    // box model
+    margin-bottom: 30px;
+
     .section-header {
         @include atDesktopL {
             // box model
             width: 600px;
         }
+    }
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
     }
 }
 
@@ -51,11 +59,60 @@
 
     // box model
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 745px;
-    justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 80px;
+
+    @include atTablet {
+        // box model
+        max-width: 100%;
+        margin-top: 80px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 745px;
+        margin-right: 100px;
+        justify-content: space-between;
+    }
+}
+
+.contacts-team__top > .employee-card {
+    // box model
+    margin: 0 5px;
+
+    @include atTablet {
+        // box model
+        margin-top: 0;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-left: 0;
+    }
+}
+
+.contacts-team__top .employee-card:first-child {
+    // box model
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .contacts-team__bottom {
@@ -65,11 +122,10 @@
 
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     flex-basis: 100%;
-    max-width: 1650px;
 
     &:before {
         content: '';
@@ -81,14 +137,27 @@
         z-index: 0;
 
         // box model
-        height: 500px;
-        width: 1920px;
+        height: 570px;
+        width: 100%;
 
         // visual
         background-color: #FBF5EC;
         background-image: url('./img/deco/barberpull-white.svg');
         background-repeat: no-repeat;
         background-position: 30px 160px;
+    }
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-wrap: nowrap;
+        margin: 0;
     }
 }
 
@@ -99,7 +168,19 @@
     // box model
     flex-basis: 230px;
     max-width: 230px;
-    margin-left: 122px;
+    margin-left: 30px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 60px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        margin-left: 122px;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
 }
 
 .contacts-team__managers-title {
@@ -108,7 +189,8 @@
 
     // box model
     margin: 0;
-    
+    margin-bottom: 30px;
+
     // typography
     color: $black;
     font-family: $titleFont;
@@ -131,6 +213,14 @@
         // visual
         background: linear-gradient(90deg, #D6A354 0%, rgba(196, 196, 196, 0) 100%);
     }
+}
+
+.contacts-team__managers-subtitle {
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 .contacts-team__stress {
@@ -160,31 +250,53 @@
 
 .contacts-team__content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1170px;
+    max-width: 100%;
     width: 100%;
+
+    @include atTablet {
+        // box model
+        max-width: 1170px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: 100px;
+    }
 }
 
-.contacts-team__content > *{
+.contacts-team__content > .employee-card {
     // box model
     margin-bottom: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .contacts-team__branches {
     // box model
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    padding-left: 100px;
+    display: none;
 
-    // visual
-    background-image: url('./img/investment/map.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
+    @include atDesktopS {
+        // box model
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding-left: 100px;
+        height: 490px;
+
+        // visual
+        background-image: url('./img/investment/map.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+    }
 }
 
 .contacts-team__branches .franchise__summary {

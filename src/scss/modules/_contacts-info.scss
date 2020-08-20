@@ -5,14 +5,14 @@
     width: 100%;
     max-width: 1700px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: -15px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 90px;
-    padding: 45px 100px;
+    padding: 50px 20px;
 
     // visual
     background-color: rgba(#D29C4E, 0.1);
@@ -50,13 +50,23 @@
 
         // box model
         display: block;
-        height: 80px;
+        height: 50px;
         width: 100%;
 
         // visual
         background-image: url("./img/golden-grunge.svg");
         background-repeat: repeat-x;
         background-position: left center;
+    }
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 60px 100px;
     }
 }
 
@@ -67,8 +77,12 @@
     align-items: flex-start;
     width: 100%;
     max-width: 340px;
+    margin-bottom: 30px;
 
-    
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .contacts-info__title {
@@ -153,11 +167,13 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 955px;
-    padding: 60px 115px;
+    max-width: 800px;
 
     &:after {
         content: '';
+        
+        // box model
+        display: none;
 
         // positioning
         position: absolute;
@@ -169,6 +185,11 @@
         background-image: url('./img/icons/decoBorder.svg');
         background-repeat: no-repeat;
         background-size: contain;
+        
+        @include atDesktopL {
+            // box model
+            display: block;
+        }
     }
 
     &:before {
@@ -181,6 +202,7 @@
         z-index: 12;
 
         // box model
+        display: none;
         width: 360px;
         height: 156px;
 
@@ -189,18 +211,37 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-color: #FBF5EC;
+
+        @include atDesktopL{
+            // box model
+            display: block;
+        }
+    }
+
+    @include atTablet {
+        // box model
+        justify-content: flex-end;
+    }
+
+    @include atDesktopL {
+        // box model
+        max-width: 955px;
+        padding: 60px 115px;
+        justify-content: space-between;
     }
 }
 
 .contacts-info__block {
     // box model
     width: 100%;
-    max-width: 280px;
+    max-width: 360px;
     margin-bottom: 20px;
 
     &:nth-child(2) {
-        // box model
-        margin-top: 100px;
+        @include atDesktopL {
+            // box model
+            margin-top: 100px;
+        }
     }
 }
 
@@ -211,10 +252,14 @@
     // typography
     color: $golden;
     font-family: $titleFont;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.2;
 
+    @include atTablet {
+        // typography
+        font-size: 24px;
+    }
 }
 
 .contacts-info__block-text {
@@ -224,7 +269,12 @@
     // typography
     color: $black;
     font-family: $titleFont;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.2;
+
+    @include atTablet {
+        // typography
+        font-size: 24px;
+    }
 }
