@@ -453,3 +453,157 @@
         padding: 0 120px;
     }
 }
+
+.profit__comments {
+    // box model
+    width: 100%;
+    max-width: 1820px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+
+    // visual
+    background-image: url("./img/bgs/profit-comment-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include atDesktopS{
+        // visual
+        background-size: 100% 170px;
+    }
+}
+
+.profit__comments-content {
+    // positioning
+    position: relative;
+
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1350px;
+    padding: 30px 15px;
+
+    @include atTablet {
+        // box model
+        padding: 14px 30px;
+        flex-direction: row;
+    }
+
+    @include atDesktopM{
+        // box model
+        margin-left: 70px;
+    }
+
+    @include atDesktopL {
+        &:after {
+            content: '';
+
+            // positioning
+            position: absolute;
+            right: -150px;
+            bottom: -75px;
+
+            // box model
+            display: block;
+            width: 150px;
+            height: 190px;
+
+            // visual
+            background-image: url("./img/icons/partners-comment.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+}
+
+.profit__comments-header {
+    // box model
+    margin-bottom: 15px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+
+    @include atDesktopM {
+        // box model
+        margin-right: 0;
+    }
+}
+
+.profit__comments-title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 24px;
+    line-height: 1.2;
+
+    @include atDesktopS {
+        // typography
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+.profit__comments-header-content {
+    @include atTablet {
+        // box model
+        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 100%;
+        width: auto;
+        flex-grow: initial;
+        flex-shrink: initial;
+    }
+}
+
+.profit__comments-header-content-title {
+    // box model
+    margin: 0;
+    margin-bottom: 15px;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 18px;
+    font-weight: 7000;
+    line-height: 1.2;
+
+    @include atTablet {
+        // typography
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+.profit__comments-header-content-subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    @include atDesktopS {
+        // box model
+        max-width: 690px;
+    }
+}
