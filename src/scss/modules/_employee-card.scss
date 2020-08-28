@@ -56,6 +56,15 @@
 .employee-card__image {
     height: 354px;
     width: 100%;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    background-image: url('./img/bgs/default-partner.jpg');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .employee-card__img {
