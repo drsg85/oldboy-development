@@ -11,7 +11,7 @@
 
     // visual
     border: 2px solid #d29c4e;
-    border-radius: 10px;
+    border-radius: 12px;
 
     &:after {
         content: '';
@@ -62,9 +62,11 @@
 
     // visual
     background-image: url('./img/bgs/default-partner.jpg');
-    background-size: 100%;
-    background-position: center center;
+    background-size: 308px 350px;
+    background-position: top center;
     background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .employee-card__img {
