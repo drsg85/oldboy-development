@@ -699,6 +699,11 @@
     }
 }
 
+.hero__nav-banner {
+    // box model
+    height: 80px;
+}
+
 .hero__nav-wrapper {
     // positioning
     position: fixed;
