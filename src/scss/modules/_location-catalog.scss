@@ -10,28 +10,57 @@
     // visual
     list-style-type: none;
 
+    &--small {
+        // box model
+        grid-template-rows: repeat(1, 1fr);
+    }
+
     @include atTablet {
         // box model
         grid-auto-flow: column;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(24, 1fr);
+
+        &--small {
+            // box model
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
     }
 
     @include atDesktopS {
         // box model
         grid-template-columns: repeat(3, 1fr);
+
+        &--small {
+            // box model
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
     }
     
     @include atDesktopM {
         // box model
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(16, 1fr);
+
+        &--small {
+            // box model
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
     }
     
     @include atDesktopL {
         // box model
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(12, 1fr);
+
+        &--small {
+            // box model
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
     }
 }
 
@@ -39,7 +68,8 @@
     // box model
     padding-top: 30px;
     display: grid;
-
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     // visual
     border-top: 1px solid rgba($lightGrey, 0.5);
 
