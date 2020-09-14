@@ -11,7 +11,8 @@
     "url": "git+https://github.com/oldboydevelop/oldboy-development.git"
   },
   "browserslist": [
-    "last 2 versions", "ios >= 8" 
+    "last 2 versions",
+    "ios >= 8"
   ],
   "author": "Yuriy Kurenkov",
   "license": "ISC",
