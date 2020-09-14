@@ -4,6 +4,7 @@
 
     // box model
     width: 360px;
+    height: 300px;
     background-color: $dark;
 }
 
@@ -21,10 +22,13 @@
     transform: translate(-50%, -50%);
 
     // box model
+    display: none;
     width: 68px;
     height: 48px;
+    padding: 0;
 
     // visual
-    background-color: #ff0000;
+    background-color: transparent;
     border: none;
+    outline: none;
 }

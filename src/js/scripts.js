@@ -26,6 +26,7 @@ import Swiper from './modules/Swiper';
 import BarberSwitcher from './modules/barberSwitcher';
 import VoiceSearch from './modules/voiceSearch';
 import IncludeSourceInForm from './modules/includeSourceInForm';
+import Video from './modules/video';
 const mobileMenu = new MobileMenu();
 const locationSelector = new LocationSelector();
 const locationSearch = new LocationSearch({
@@ -245,3 +246,5 @@ if(document.querySelector('.city-form__mic')) {
 }
 
 new IncludeSourceInForm();
+
+new Video();
