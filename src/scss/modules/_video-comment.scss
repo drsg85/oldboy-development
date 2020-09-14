@@ -1,0 +1,30 @@
+.video-comment {
+    // positioning
+    position: relative;
+
+    // box model
+    width: 360px;
+    background-color: $dark;
+}
+
+.video-comment img {
+    // box model
+    display: block;
+    width: 100%;
+}
+
+.video-comment__button {
+    // positioning
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // box model
+    width: 68px;
+    height: 48px;
+
+    // visual
+    background-color: #ff0000;
+    border: none;
+}

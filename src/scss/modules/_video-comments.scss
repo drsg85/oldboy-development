@@ -1,0 +1,41 @@
+.video-comments {
+    // box model
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.video-comments__header {
+    // box model
+    margin-bottom: 30px;
+
+    // typography
+    text-align: left;
+}
+
+.video-comments__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.video-comments__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.video-comments__content > * + * {
+    // box model
+    margin-left: 30px;
+}
