@@ -44,7 +44,7 @@
 
 .video-comments__content > * + * {
     // box model
-    margin-top: 15px;
+    margin-top: 30px;
 
     @include atTablet {
         // box model
