@@ -3,16 +3,10 @@
     position: relative;
 
     // box model
-    width: 360px;
-    height: 300px;
+    width: 280px;
+    height: 220px;
     background-color: $dark;
     box-shadow: 0 0 2px 2px $dark;
-
-    @include atTablet {
-        // box model
-        width: 260px;
-        height: 200px;
-    }
 
     @include atDesktopS {
         // box model
