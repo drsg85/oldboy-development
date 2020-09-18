@@ -1,0 +1,146 @@
+.investor-comment {
+    // box model
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.investor-comment__image {
+    // box model
+    width: 260px;
+    background-image: url("./img/icons/investor-no-image.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.investor-comment__img {
+    // box model
+    display: block;
+    width: 100%;
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.investor-comment__user {
+    // typography
+    text-align: center;
+}
+
+.investor-comment__title {
+    // box model
+    margin: 0;
+    margin-bottom: 5px;
+
+    // typography
+    color: $black;
+    font-family: $titleFont;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &:after {
+        content: '';
+
+        // box model
+        display: block;
+        width: 160px;
+        height: 2px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5px;
+
+        // visual
+        background: rgba(210, 156, 78, 0.2);
+    }
+}
+
+.investor-comment__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: rgba($black, 0.5);
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.investor-comment__info {
+    // positioning
+    position: relative;
+
+    // box model
+    max-width: 580px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+
+    &:after {
+        content: '';
+
+        // positioning
+        position: absolute;
+        right: 0px;
+        bottom: -50px;
+
+        // box model
+        height: 75px;
+        width: 65px;
+
+        // visual
+        background-image: url("./img/icons/quotes.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 0;
+    }
+}
+
+.investor-comment__info-text,
+.investor-comment__info-text--stress {
+    // box model
+    margin: 20px 0;
+
+    // typography
+    color: $black;
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.investor-comment__info-text--stress {
+    // box model
+    max-width: 320px;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.investor-comment__experience {
+    // typography
+    margin: 0;
+
+    // typography
+    color: rgba($black, 0.5);
+    font-family: $mainFont;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18px;
+}

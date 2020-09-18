@@ -1,0 +1,52 @@
+.wwf-banner {
+    // positioning
+    position: absolute;
+    top: 55px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    
+    // box model
+    display: block;
+
+    // visual
+    background-image: url("./img/banners/wwf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include atTablet {
+        // positioning
+        right: -50px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+        transform: translateY(-20px);
+        right: auto;
+        top: auto;
+
+        // box model
+        width: 220px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // @include atDesktopM {
+    //     // positioning
+    //     transform: translateY(-20px);
+
+    //     // box model
+    //     width: 350px;
+    // }
+
+    // @include atDesktopL {
+    //     // positioning
+    //     transform: translateY(-35px);
+
+    //     // box model
+    //     width: 362px;
+    // }
+}

@@ -12,7 +12,7 @@ class Video {
             let link = video.querySelector('.video__link');
             let media = video.querySelector('.video__media');
             let button = video.querySelector('.video__button');
-            let id = parseMediaURL(link);
+            let id = parseMediaURL(media);
         
             video.addEventListener('click', () => {
                 let iframe = createIframe(id);
@@ -27,8 +27,8 @@ class Video {
         }
         
         function parseMediaURL(media) {
-            let regexp = /youtu\.be\/([a-zA-Z0-9_-]+)/i;
-            let url = media.href;
+            let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+            let url = media.src;
             let match = url.match(regexp);
             return match[1];
         }

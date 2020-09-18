@@ -104,7 +104,7 @@
         <div class="hero__content">
             <div class="hero__caption hero-caption--city">
                 <div class="hero-caption">
-                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">oldboy <br>barbershop</span></h1>
+                    <h1 class="hero-caption__title hero-caption__title--hidden">Крупнейшая международная сеть мужских парикмахерских <span class="hero-caption__big">OLDBOY <br>BARBERSHOP</span></h1>
 					<p class="hero-caption__location">{{ city }}</p>
                 </div>
             </div>
@@ -121,7 +121,8 @@
 		{% set stations = node.field_metro.0.value|raw|striptags|trim|split("\n") %}
 		{% for station in stations %}
 			{% if station %}
-				<span>{{ station }}</span>
+                {% set secName = station|split('(') %}
+				<span>{{ secName[0] }}</span>
 			{% endif %}
 		{% endfor %}
 	</p>
@@ -136,9 +137,14 @@
 						{% if content.field_phonelink.0 %}
 							{% set phonelink = content.field_phonelink.0 %}
 						{% endif %} 
-                        <p class="contact__value">
+
+						{% set phoneclass = 'ya-phone' %}
+						{% if content.field_phone_class.0 %}
+							{% set phoneclass = content.field_phone_class.0 %}
+						{% endif %} 
+						<div class="contact__value {{ phoneclass }}">
                             <a href="tel:{{ phonelink }}">{{ content.field_phone.0 }}</a>
-                        </p>
+                        </div>
                     </div>
 					{% if content.field_work_hours %}
                     <div class="contact">
@@ -148,7 +154,7 @@
 					{% endif %}
                 </div>
 
--                <div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
+-                <div class="hero__buttons hero__buttons--branch"><a class="button ms_booking" id="signup" href="#">Запись онлайн<br></a>{% if content.field_present_link.0 %}<a class="button button--ghost" href="javascript:void(0);" data-cp-widget="{{ content.field_present_link.0 }}">Сертификат</a><script async data-id="cp-loader" data-url=""{{ content.field_present_link.0 }}" src="https://cardspro.ru/loader/loader.js"></script>{% endif %}
                     <ul class="social">
 						{% if content.field_link_vk.0 %}
 							<li class="social__item"><a class="social__icon icon--vk" href="{{ content.field_link_vk.0 }}" target="_blank">ВКонтакте</a></li>
@@ -333,5 +339,5 @@
 		{{ node.field_subscribe_link.value|raw }}
 	{% endif %}
     <script src="/{{ directory }}/dist/scripts.js?v={{ js_ver }}"></script>
-	<script src="/{{ directory }}/dist/branch.js"></script>
+	<script src="/{{ directory }}/dist/branch.js?v={{ js_ver }}"></script>
     {{ node.body.0.value|raw }}

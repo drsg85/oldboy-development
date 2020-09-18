@@ -146,6 +146,7 @@
 @import 'modules/social';
 @import 'modules/y-clients';
 @import "modules/reference-text";
+@import "modules/wwf-banner";
 
 // TODO: "city-catalog"
 @import 'modules/city-catalogue';
@@ -172,6 +173,9 @@
 @import "modules/photo-gallery";
 @import "modules/light-gallery";
 @import "modules/hero-content-franch";
+@import "modules/video-comments";
+@import "modules/video-comment";
+
 // landing
 @import "modules/landing-info";
 @import "modules/include-item";
@@ -186,6 +190,8 @@
 @import "modules/rouble";
 @import "modules/investment-popup";
 @import "modules/investment-features";
+@import "modules/_investors-comments";
+@import "modules/investor-comment";
 
 //vacancy
 @import "modules/fill-form";
@@ -207,3 +213,10 @@
 
 //branch
 @import "modules/register";
+
+//contacts
+@import "modules/contacts-info";
+@import "modules/contacts-team";
+@import "modules/contacts-map";
+@import "modules/contacts-partners";
+@import "modules/employee-card";
