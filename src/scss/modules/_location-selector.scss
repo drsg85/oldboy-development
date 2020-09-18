@@ -87,6 +87,15 @@
     }
 }
 
+.location-selector__header--int {
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
 .location-selector__logo-text {
     // box model
     display: flex;
@@ -119,6 +128,27 @@
         padding-right: 250px;
     }
 }
+
+.location-selector__caption--int {
+    display: flex;
+    margin-bottom: 0;
+    justify-content: flex-start;
+
+    @include atDesktopS {
+        display: flex;
+        margin: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-top: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    @include atDesktopM {
+        padding-left:65px;
+    }
+}
+
 
 .location-selector__main-countries {
     // box model
@@ -171,6 +201,23 @@
         line-height: 1.2;
     }
 }
+
+.location-selector__intro--int {
+    display: none;
+    width: 220px;
+    margin: 0;
+    padding: .5em 0;
+    color: #131313;
+    font-family: "Rex",Arial,sans-serif;
+    font-size: .85rem;
+    line-height: 1.25;
+    text-align: left;
+
+    @include atDesktopS {
+        display:block;
+    }
+}
+
 
 .location-selector__fast-nav {
     // positioning
