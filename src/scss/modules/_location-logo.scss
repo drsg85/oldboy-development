@@ -40,6 +40,15 @@
     filter: drop-shadow(1px 1px 0px orange);
 }
 
+.location-logo--out {
+    // opacity: 0,5;
+}
+
+.location-logo--int {
+    margin-right: 20px;
+    opacity: 1;
+}
+
 .location-logo__image {
     // box model
     height: 45px;
@@ -48,6 +57,10 @@
         // box model
         height: 85px;
     }
+}
+
+.location-logo__image--int {
+    height: 48px;
 }
 
 .location-logo__image img {
