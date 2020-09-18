@@ -77,8 +77,8 @@ class BranchHelper {
     }
 
     addEvent() {
-        const correctUrl = ''
-        if(this.url.indexOf('.com')) {
+        let correctUrl = ''
+        if(this.url.indexOf('.com') !== -1) {
             correctUrl = '/sites/all/themes/oldboy8/dist'
         }
         else {
