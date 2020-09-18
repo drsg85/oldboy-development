@@ -1,3 +1,4 @@
+import csso from 'gulp-csso';
 import Swiper from './Swiper';
 class BranchHelper {
     constructor () {
@@ -7,19 +8,19 @@ class BranchHelper {
         this.leftArrow = document.querySelector('.branch-helper__arrow-movleft');
         this.rightArrow = document.querySelector('.branch-helper__arrow-movright');
         this.headline = document.querySelector('.branch-helper__headline');
-
+        this.url = window.location.href;
         this.addEvent();
     }
 
-    arrowSwitcher() {
+    arrowSwitcher(url) {
         if (this.helper.classList.contains('branch-helper--visible')) {
-            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
+            this.arrow.style.backgroundImage = `url('${url}/img/arrow-right.svg')`;
             //this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
             this.leftArrow.style.display = 'none';
             this.rightArrow.style.display = 'block';
             this.headline.style.opacity = "1";
         } else {
-            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+            this.arrow.style.backgroundImage = `url('${url}/img/arrow-left.svg')`;
             // this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
             this.leftArrow.style.display = 'block';
             this.rightArrow.style.display = 'none';
@@ -32,10 +33,10 @@ class BranchHelper {
             return el;
     }
 
-    closeHandlerByEsc(evt) {
+    closeHandlerByEsc(evt, url) {
         if(evt.keyCode == 27 && this.helper.classList.contains('branch-helper--visible')) {
             this.helper.classList.remove('branch-helper--visible');
-            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+            this.arrow.style.backgroundImage = `url('${url}/img/arrow-left.svg')`;
             // this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
             this.rightArrow.style.display = 'none';
             this.leftArrow.style.display = 'block';
@@ -43,13 +44,13 @@ class BranchHelper {
         }
     }
 
-    closeHandlerByClickOnFreeSpace(evt) {
+    closeHandlerByClickOnFreeSpace(evt, url) {
         const target = evt.target;
         const currentTarget = target == this.btn || this.btn.classList.contains(target);
         const currentOpenedBlock = target == this.helper;
         if(!currentTarget && !currentOpenedBlock && this.helper.classList.contains('branch-helper--visible')) {
             this.helper.classList.toggle('branch-helper--visible');
-            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+            this.arrow.style.backgroundImage = `url('${url}/img/arrow-left.svg')`;
             //this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
             this.rightArrow.style.display = 'none';
             this.leftArrow.style.display = 'block';
@@ -57,17 +58,17 @@ class BranchHelper {
         }
     }
 
-    switchVisibility(evt) {
+    switchVisibility(evt, url) {
         evt.stopPropagation();
         this.helper.classList.toggle('branch-helper--visible');
         if (this.helper.classList.contains('branch-helper--visible')) {
-            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-right.svg')";
+            this.arrow.style.backgroundImage = `url('${url}/img/arrow-right.svg')`;
             //this.arrow.style.backgroundImage = "url('./img/arrow-right.svg')";
             this.leftArrow.style.display = 'none';
             this.rightArrow.style.display = 'block';
             this.headline.style.opacity = "1";
         } else {
-            this.arrow.style.backgroundImage = "url('/sites/all/themes/oldboy8/dist/img/arrow-left.svg')";
+            this.arrow.style.backgroundImage = `url('${url}/img/arrow-left.svg')`;
             //this.arrow.style.backgroundImage = "url('./img/arrow-left.svg')";
             this.rightArrow.style.display = 'none';
             this.leftArrow.style.display = 'block';
@@ -76,11 +77,17 @@ class BranchHelper {
     }
 
     addEvent() {
-
+        let correctUrl = ''
+        if(this.url.indexOf('.com') !== -1) {
+            correctUrl = '/sites/all/themes/oldboy8/dist'
+        }
+        else {
+            correctUrl = '/assets';
+        }
         setTimeout(() => {
             this.helper.classList.add('branch-helper--visible');
             
-            this.arrowSwitcher();
+            this.arrowSwitcher(correctUrl);
         }, 5000);
 
         // setTimeout(() => {
@@ -89,11 +96,11 @@ class BranchHelper {
         //     this.arrowSwitcher();
         // }, 60000);
 
-        this.btn.addEventListener('click', (event) => this.switchVisibility(event));
+        this.btn.addEventListener('click', (event) => this.switchVisibility(event, correctUrl));
 
-        window.addEventListener('keydown', () => this.closeHandlerByEsc(event));
+        window.addEventListener('keydown', () => this.closeHandlerByEsc(event, correctUrl));
 
-        document.addEventListener('click', (event) => this.closeHandlerByClickOnFreeSpace(event));
+        document.addEventListener('click', (event) => this.closeHandlerByClickOnFreeSpace(event, correctUrl));
     }
 }
 
