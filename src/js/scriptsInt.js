@@ -6,6 +6,8 @@ import LocationSelector from './modules/LocationSelector';
 import BarberSwitcher from './modules/barberSwitcher';
 import LanguageSelector from './modules/LanguageSelector';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
+import BranchHelper from './modules/BranchHelper';
+import Swiper from './modules/Swiper';
 
 const mobileMenu = new MobileMenu();
 
@@ -16,6 +18,21 @@ const smoothOnAnchors = new SmoothOnAnchors();
 const locationSelector = new LocationSelector();
 
 const langSelector = new LanguageSelector();
+
+if(window.innerWidth >= 1199) {
+    if(document.querySelector('.branch-helper')) {
+        new BranchHelper();
+    }
+}
+
+if(window.innerWidth < 1199) {
+    if(document.querySelector('.branch-helper')) {
+        new Swiper({
+            target: '.branch-helper',
+            classToSwitch: 'branch-helper--visible'
+        })
+    }
+}
 
 if(document.querySelector('#bgList')) {
     new BarberSwitcher();

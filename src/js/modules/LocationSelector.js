@@ -8,7 +8,9 @@ class LocationSelector {
     this.cityInput = document.querySelector('.city-form__input');
     this.locationAbroad = document.querySelector('.location-selector__abroad');
     this.locationLogo = document.querySelector('.location-logo--reset');
-    this.locationLogo.style.filter = `drop-shadow(1px 1px 0px orange)`;
+    if(this.locationLogo) {
+      this.locationLogo.style.filter = `drop-shadow(1px 1px 0px orange)`;
+    }
     this.locationAbroadSwitcher = document.querySelector('.location-logo--switcher');
     this.toSwitchBlocks = [this.citySelector.querySelector('.location-selector__fast-nav'), this.citySelector.querySelector('.location-selector__alphabet'), this.citySelector.querySelector('.location-selector__content')]
     this.reset();
@@ -56,9 +58,14 @@ class LocationSelector {
 
     window.addEventListener('keydown', () => this.closeHandlerByEsc(event));
 
-    this.locationAbroadSwitcher.addEventListener('click', () => this.switchAbroad());
-
-    this.locationLogo.addEventListener('click', () => this.resetSwitch())
+    if(this.locationAbroadSwitcher) {
+      this.locationAbroadSwitcher.addEventListener('click', () => this.switchAbroad());
+    }
+    
+    if(this.locationLogo) {
+      this.locationLogo.addEventListener('click', () => this.resetSwitch());
+    }
+  
   }
   
   
