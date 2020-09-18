@@ -96,10 +96,15 @@
         </div>
         <div class="hero__content">
             <article class="news-header">
+				{% set description = content.field_description %}
+				{% if (content.field_post_teaser|render|striptags|trim) %}
+					{% set description = content.field_post_teaser %}
+				{% endif %}
+
                 <header class="news-header__header">
 					<p class="news-header__category">{{ content.field_tags }}</p>
-					<h1 class="news-header__title">{{ node.title.0.value }}</h1>
-					<p class="news-header__details">{{ content.field_description }}</p>
+					<h1 class="news-header__title">{{ content.field_display_name }}</h1>
+					<p class="news-header__details">{{ description }}</p>
                 </header>
                 <footer class="news-header__footer">
 					<p class="news-header__date"><span>Дата:</span><br>{{ content.field_date_publish }} </p>
@@ -118,7 +123,11 @@
     </header>
     <main>
         <article class="article">
+<<<<<<< HEAD
 			{{ content|without('field_tags')|without('field_bg_big')|without('field_bg_small')|without('field_bg_teaser')|without('field_display_name')|without('field_description')|without('field_date_publish')|without('field_post_type')|without('field_images')|without('field_author') }}
+=======
+			{{ content|without('field_tags')|without('field_bg_big')|without('field_bg_small')|without('field_bg_teaser')|without('field_post_teaser')|without('field_display_name')|without('field_description')|without('field_date_publish')|without('field_post_type')|without('field_images')|without('field_author') }}
+>>>>>>> 9172491d69809acbd8d92992abe1fc71143e32a2
 			{% if content.field_author %}
             <footer class="article__footer">
                 <div class="article__footer-block">

@@ -69,12 +69,38 @@
 
             // visual
             background-image: url('./img/bgs/hero.jpg');
+
+            .hero__nav {
+                // box model
+                max-width: 850px;
+
+                .main-nav__link {
+                    // box model
+                    margin-right: 10px;
+
+                    // typography
+                    font-size: 1rem;
+                }
+            }
         }
 
         @include atDesktopM {
             // box model
             min-height: 680px;
             max-height: 740px;
+
+            .hero__nav {
+                // box model
+                max-width: 850px;
+
+                .main-nav__link {
+                    // box model
+                    margin-right: 20px;
+                    
+                    // typography
+                    font-size: 1.125rem;
+                }
+            }
         }
 
         @include atDesktopL {
@@ -94,6 +120,11 @@
         @include atDesktopS {
             // visual
             background-size: cover;
+        }
+
+        .location-selector__cta span {
+            // typography
+            color: $light;
         }
     }
     
@@ -644,7 +675,8 @@
         position: unset;
         top: 0;
         left: 210px;
-        max-width: 100%;
+        max-width: 750px;
+        width: 100%;
         
         // visual
         visibility: visible;
@@ -665,6 +697,11 @@
         // positioning
         left: 400px;
     }
+}
+
+.hero__nav-banner {
+    // box model
+    height: 80px;
 }
 
 .hero__nav-wrapper {
@@ -709,6 +746,7 @@
         position: unset;
 
         // box model
+        margin-left: auto;
         padding-right: 0;
     }
 }

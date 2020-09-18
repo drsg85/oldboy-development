@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="styles.css")
+
+        title Oldboy Barbershop
+
+    body
+        header.hero.hero--haircut
+            .hero__top
+                .hero__logo
+                    a(href="index.html")
+                        img(src="/img/logo.svg", alt="Oldboy Barbershop vector logo", title="Oldboy Barbershop Главная")
+
+                .hero__nav.hero__nav--hidden
+                    include modules/_menu.pug
+
+                .hero__city-select
+                    a(href="choose-city.html").city-select
+                        p.city-select__title Выбрать&nbsp;барбершоп&nbsp;<span class="city-select__triangle">▼</span>
+                        p.city-select__city Калининград
+
+                .menu-button.menu-button--close
+                    .menu-button__middle
+
+            .hero__content
+                .hero__caption
+                    .hero-caption
+                        h1.hero-caption__title <span class="hero-caption__big hero-caption__big--vacancy">Контакты&nbsp;<br>Oldboy Barbershop</span>
+                        p.hero-caption__motto Структура управляющей компании
+
+        main
+            section.contacts-info
+                header.contacts-info__header
+                    h2.contacts-info__title Контакты
+                    p.contacts-info__subtitle Управляющей компании oldboy&nbsp;barbershop
+                    .contacts-info__address-bottom
+                        p.contacts-info__address-branches <span class="contacts-info__address-branches--stress">262 барбершопа в 14 странах</span> крупнейшая международная сеть<br> мужских парикмахерских
+
+                .contacts-info__address
+                    .contacts-info__block
+                        h4.contacts-info__block-title Адрес:
+                        p.contacts-info__block-text 236022, Россия,<br> г. Калининград,<br> ул. Сержанта Колоскова, 4А
+                    .contacts-info__block
+                        h4.contacts-info__block-title Сайт
+                        p.contacts-info__block-text www.oldboybarbershop.com
+                    .contacts-info__block
+                        h4.contacts-info__block-title Телефон:
+                        p.contacts-info__block-text +8 (800) 350 55 34
+                    .contacts-info__block
+                        h4.contacts-info__block-title E-mail:
+                        p.contacts-info__block-text info@oldboybarbershop.com
+
+            section.contacts-partners
+                .contacts-partners__header
+                    header.section-header
+                        h2.section-header__title Партнерская<br>сеть
+                        p.section-header__subtitle.section-header__subtitle--golden-t контакты&nbsp;франчайзи
+                    .contacts-partners__header-info
+                        img.contacts-partners__header-img(src="./img/family/oldboy-family.svg", alt="Oldboy family")
+                        .contacts-partners__header-content
+                            header.contacts-partners__franchise-header
+                                h4.contacts-partners__franchise-title Контакты
+                                p.contacts-partners__franchise-subtitle франчайзинговой сети oldboy barbershop
+                            p.contacts-partners__franchise-text Наша большая Семья друзей и партнеров, вы можете связаться с каждым из них, если у вас возникнут вопросы по работе франшизы в конкретном городе 
+                .contacts-partners__content
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/smm.jpg", alt="SMM")
+                        .employee-card__info
+                            header.employee-card__header
+                                h4.employee-card__title Данил Куплевацкий
+                            p.employee-card__city Калининград
+                            a.employee-card__email(href="mailto:smm@oldboybarbershop.com") smm@oldboybarbershop.com
+                            a.employee-card__tel(href="tel:12345689") 123456789
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/seo.jpg", alt="Отдел продвижения")
+                        .employee-card__info
+                            header.employee-card__header
+                                h4.employee-card__title Николай Юськов
+                            p.employee-card__city Тверь
+                            a.employee-card__email(href="mailto:promotion@oldboybarbershop.com") promotion@oldboybarbershop.com
+                            a.employee-card__tel(href="tel:12345689") 123456789
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/manager.jpg", alt="Менеджер")
+                        .employee-card__info
+                            header.employee-card__header
+                                h4.employee-card__title Кирилл Овчинников
+                            p.employee-card__city Псков
+                            a.employee-card__email(href="mailto:managers@oldboybarbershop.com") managers@oldboybarbershop.com
+                            a.employee-card__tel(href="tel:12345689") 123456789
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/sales.jpg", alt="Отдел продаж")
+                        .employee-card__info
+                            header.employee-card__header
+                                h4.employee-card__title Игорь Петров
+                            p.employee-card__city Москва
+                            a.employee-card__email(href="mailto:oldboyinfo@gmail.com") oldboyinfo@gmail.com
+                            a.employee-card__tel(href="tel:12345689") 123456789
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/design.jpg", alt="Отдел дизайна")
+                        .employee-card__info
+                            header.employee-card__header
+                                h4.employee-card__title Андрей Валитов
+                            p.employee-card__city Ростов
+                            a.employee-card__email(href="mailto:design@oldboybarbershop.com") design@oldboybarbershop.com
+                            a.employee-card__tel(href="tel:12345689") 123456789
+                    .employee-card
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/design.jpg", alt="Отдел дизайна")
+                        .employee-card__info
+                            header.employee-card__header
+                                h4.employee-card__title Андрей Валитов
+                            p.employee-card__city Ростов
+                            a.employee-card__email(href="mailto:design@oldboybarbershop.com") design@oldboybarbershop.com
+                            a.employee-card__tel(href="tel:12345689") 123456789
+
+            section.contacts-team
+                .contacts-team__header
+                    header.section-header
+                        h2.section-header__title Команда oldboy
+                        p.section-header__subtitle.section-header__subtitle--golden-t структура&nbsp;компании
+                .contacts-team__top
+                    .employee-card.employee-card--golden
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/general-manager.png")
+                        .employee-card__info
+                            h4.employee-card__title Эльдар мирзоев
+                            p.employee-card__subtitle основатель сети
+                            a.employee-card__email(href="mailto:e.mirzoev@oldboybarbershop.com") e.mirzoev@oldboybarbershop.com
+                    .employee-card.employee-card--golden
+                        .employee-card__image
+                            img.employee-card__img(src="./img/team/executive-director.jpg")
+                        .employee-card__info
+                            h4.employee-card__title Андрей Суленко
+                            p.employee-card__subtitle Исполнительный директор
+                            a.employee-card__email(href="mailto:a.sulenko@oldboybarbershop.com") a.sulenko@oldboybarbershop.com
+                .contacts-team__bottom
+                    header.contacts-team__managers
+                        h4.contacts-team__managers-title Руководители отделов <span class="contacts-team__stress"> управляющей компании</span>
+                        p.contacts-team__managers-subtitle Количество сотрудников управляющей компании Oldboy составляет 58 человек.
+                    .contacts-team__content
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/operate-director.jpg", alt="Операционный директор")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Александр
+                                    p.employee-card__subtitle Операционный директор
+                                a.employee-card__email(href="mailto:smm@oldboybarbershop.com") test@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/development.jpg", alt="Директор по развитию")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Владимир
+                                    p.employee-card__subtitle Директор по развитию
+                                a.employee-card__email(href="mailto:smm@oldboybarbershop.com") test@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/smm.jpg", alt="SMM")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Данил Куплевацкий
+                                    p.employee-card__subtitle Руководитель отдела SMM
+                                a.employee-card__email(href="mailto:smm@oldboybarbershop.com") smm@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/seo.jpg", alt="Отдел продвижения")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Николай Юськов
+                                    p.employee-card__subtitle Руководитель отдела продвижения
+                                a.employee-card__email(href="mailto:promotion@oldboybarbershop.com") promotion@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/manager.jpg", alt="Менеджер")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Кирилл Овчинников
+                                    p.employee-card__subtitle Руководитель отдела сопровождения клиентов
+                                a.employee-card__email(href="mailto:managers@oldboybarbershop.com") managers@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/sales.jpg", alt="Отдел продаж")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Игорь Петров
+                                    p.employee-card__subtitle Руководитель отдела продаж
+                                a.employee-card__email(href="mailto:oldboyinfo@gmail.com") oldboyinfo@gmail.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/design.jpg", alt="Отдел дизайна")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Андрей Валитов
+                                    p.employee-card__subtitle Руководитель отдела дизайна
+                                a.employee-card__email(href="mailto:design@oldboybarbershop.com") design@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/dev.jpg", alt="Отдел разработки")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Эдуард Жулега
+                                    p.employee-card__subtitle Руководитель отдела разработки
+                                a.employee-card__email(href="mailto:dev@oldboybarbershop.com") dev@oldboybarbershop.com
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/accounting.jpg", alt="Руководитель отдела бухгалтерского учета")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Ольга Дурманова
+                                    p.employee-card__subtitle Руководитель отдела бухгалтерского учета
+                                a.employee-card__email(href="mailto:finance@oldboybarbershop.com") finance@oldboybarbershop.com
+                        
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/property.jpg", alt="Руководитель отдела по работе с недвижимостью")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Василий
+                                    p.employee-card__subtitle Руководитель отдела по работе с недвижимостью
+                                a.employee-card__email(href="test@oldboybarbershop.com") test@oldboybarbershop.com
+
+
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/architecture.jpg", alt="Руководитель отдела архитектуры")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Игорь
+                                    p.employee-card__subtitle Руководитель отдела архитектуры
+                                a.employee-card__email(href="mailto:finance@oldboybarbershop.com") test2@oldboybarbershop.com
+
+                        .employee-card
+                            .employee-card__image
+                                img.employee-card__img(src="./img/team/lawer.jpg", alt="Руководитель юридического отдела")
+                            .employee-card__info
+                                header.employee-card__header
+                                    h4.employee-card__title Вячеслав
+                                    p.employee-card__subtitle Руководитель юридического отдела
+                                a.employee-card__email(href="mailto:finance@oldboybarbershop.com") test2@oldboybarbershop.com
+                        .contacts-team__branches
+                            header.contacts-team__branches-header
+                                img.contacts-team__branches-img(src="./img/logos/logo-map.png", alt="")
+                                p.contacts-team__branches-text
+                            
+                            .franchise__summary
+                                p.franchise__count 263
+                                p.franchise__details <strong>ФИЛИАЛА</strong> в 14 странах и в 9 столицах
+            
+            section.contacts-map
+                header.contacts-map__header
+                    h3.contacts-map__title Карта партнерской сети
+                    p.contacts-map__subtitle Все филиалы барбершопов сети OldBoy Barbershop. Для детальной информации о филиале выберите его из списка
+                .contacts-map__container
+            
+            section.international-banner
+                h3.international-banner__cta Не нашел свой город?<br><span class="international-banner__cta--stress">Открой свой барбершоп!</span>
+                .international-banner__text
+                    h4.international-banner__header Новый формат барбершопов
+                    p.international-banner__desc Мы не просто делаем нетбизнес. У нас – крепкая мужская дружба, приносящая выгоду всем сторонам. Умеем зарабатывать и умеем отдыхать.
+                    .international-banner__link
+                        button.button Получить презентацию
+            
+        include modules/_choose-city.pug
+        include modules/_footer.pug
+
+        script(src="scripts.js")

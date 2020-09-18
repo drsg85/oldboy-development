@@ -1,19 +1,20 @@
 .search-results {
     // positioning
     position: relative;
-    left: -5px;
     z-index: 10;
 
     // box model
     margin-top: -40px;
     padding: 20px;
     padding-top: 40px;
-    width: calc(100% + 55px);
+    width: 100%;
     
     // visual
     background-color: $light;
     border: 1px solid rgba($lightGrey, 0.5);
     box-shadow: 0 0 15px rgba($dark, 0.125);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     @include atDesktopS {
         // positioning
@@ -71,7 +72,7 @@
 
 .search-results__title {
     // box model
-    margin-top: 0;
+    margin-top: 15px;
 
     // typography
     color: $dark;

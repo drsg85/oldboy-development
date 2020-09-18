@@ -7,19 +7,8 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const csso = require('gulp-csso');
 const sassImporter = require('sass-module-importer');
-const autoprefixer = require('gulp-autoprefixer');
 const webPack = require('webpack');
 const webpack = require('webpack-stream');
-
-// No need yet
-// "babel": "^6.23.0",
-// "babel-core": "^6.26.3",
-// "babel-preset-env": "^1.7.0",
-// "babel-register": "^6.26.0",
-// "gulp-notify": "^3.2.0",
-// "gulp-wait": "0.0.2",
-// "gulp-watch": "^5.0.1",
-
 
 // Paths
 const dirs = {
@@ -42,7 +31,8 @@ const webpackConfig = {
     scriptsPL: './src/js/scriptsPL.js',
     scriptsME: './src/js/scriptsME.js',
     scriptsUA: './src/js/scriptsUA.js',
-    scriptsGE: './src/js/scriptsGE.js'
+    scriptsGE: './src/js/scriptsGE.js',
+    scriptsInt: './src/js/scriptsInt.js'
   },
 
   output: {
@@ -75,10 +65,6 @@ let pugRender = () => (
 let styles = () => (
   gulp.src(dirs.scss)
     .pipe(sass({ importer: sassImporter() }))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
     .pipe(csso({comments: 'exclamation'}))
     .pipe(gulp.dest(dirs.dist))
     .pipe(browserSync.reload({stream: true}))

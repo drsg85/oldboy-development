@@ -114,7 +114,7 @@
 		{% endif %}
     </header>
     <main>
-		{{ content|without('field_hero_content')|without('field_hide_footer')|without('field_cityname') }}
+		{{ content|without('field_hero_content')|without('field_hide_footer')|without('field_cityname')|without('field_schema')|without('field_schema2') }}
 	{% if hideFooter == "Off" %}
 		{% include '@oldboy8/includes/totop.html.twig' %}
 	{% endif %}

@@ -11,6 +11,7 @@ import SmoothOnAnchorsHorizontal from './modules/smoothOnAnchorsHorizontal';
 import HorizontalScroll from './modules/horizontalScroll';
 import GoToElement from './modules/GoToElement';
 import InvestCardForm from './modules/InvestCardForm';
+import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
 
 const mobileMenu = new MobileMenu();
 
@@ -97,4 +98,16 @@ if(document.querySelector('.location-selector')) {
 
 if(document.querySelector('.city-form__mic')) {
     new VoiceSearch();
+}
+
+if(document.querySelector('.investors-comments')) {
+    const newFormatSlider = new tns({
+        mode: 'carousel',
+        container: '.investors-comments__slider',
+        mouseDrag: true,
+        nav: false,
+        controls: true,
+        controlsContainer: '.investors-comment__nav',
+        items: 1,
+    })
 }
