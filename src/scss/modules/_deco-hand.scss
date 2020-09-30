@@ -1,0 +1,86 @@
+.deco-hand {
+    // positioning
+    position: relative;
+}
+
+.deco-hand img {
+    // box model
+    width: 100%;
+    height: 100%;
+}
+
+.deco-hand__banner {
+    // positioning
+    position: absolute;
+    right: 110px;
+    top: 95px;
+    transform: rotate(-15deg) skewX(-15deg);
+    z-index: 9;
+
+    // box model
+    max-width: 165px;
+}
+
+.deco-hand__text {
+    // box model
+    margin: 0;
+    margin-bottom: 5px;
+
+    // typography
+    color: $dark;
+    font-family: $titleFont;
+    font-size: 16px;
+    text-align: right;
+}
+
+.deco-hand__text--golden {
+    // positioning
+    position: relative;
+
+    // typography
+    color: $golden;
+}
+
+.deco-hand__text--golden span {
+    // box model
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.deco-hand__text--golden span::before {
+    content: "";
+    // box model
+    display: block;
+    max-width: 100%;
+    margin-right: 10px;
+    flex-grow: 1;
+    flex-shrink: 2;
+    height: 4px;
+
+    // visual
+    background: linear-gradient(to right, rgba(214, 163, 84, 0), rgba(214, 163, 84, 1) 100%);
+}
+
+.deco-hand__text strong {
+    // typography
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 36px;
+}
+
+.deco-hand__logo {
+    // positioning
+    position: absolute;
+    left: 100px;
+    top: 235px;
+
+    // box model
+    width: 110px;
+    height: 60px;
+
+    // visual
+    background-image: url("./img/logos/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
