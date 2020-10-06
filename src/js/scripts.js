@@ -245,6 +245,10 @@ if(document.querySelector('.city-form__mic')) {
     new VoiceSearch();
 }
 
+if(document.querySelector('.branch-modal')) {
+    new BranchModal();
+}
+
 new IncludeSourceInForm();
 
 new Video();

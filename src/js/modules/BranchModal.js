@@ -2,26 +2,17 @@ class BranchModal {
     constructor () {
         this.modal = document.querySelector('.branch-modal');
         this.cbtn = document.querySelector('.branch-modal__close');
-        this.ybtn = document.querySelector('.yButton');
-        this.ybtnSquare = document.querySelector('.button');
-        this.triggers = [this.ybtn, this.ybtnSquare];
-        this.newYbtn = document.querySelector('.ybutton');
         this.addEvent();
     }
 
     addEvent() {
-        this.ybtn.style.visibility = "hidden";
-            this.ybtnSquare.addEventListener('click', () => {
-                this.modal.classList.add('branch-modal--visible');
-            });
+        setTimeout(() => {
+            this.modal.classList.add('branch-modal--visible');
+        }, 5000);
 
-            this.newYbtn.addEventListener('click', () => {
-                this.modal.classList.add('branch-modal--visible');
-            });
-            
-            this.cbtn.addEventListener('click', () => {
-                this.modal.classList.remove('branch-modal--visible');
-                // this.ybtn.style.visibility = "visible";
+        this.cbtn.addEventListener('click', () => {
+            this.modal.classList.remove('branch-modal--visible');
+            console.log('yeah');
         });
     }
 }
