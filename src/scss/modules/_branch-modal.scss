@@ -34,9 +34,7 @@
     right: 0;
 
     // box model
-    max-width: 350px;
-    padding: 30px;
-
+    display: none;
 
     // visual
     background-image: url('./img/bgs/branch-modal.png');
@@ -46,16 +44,21 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     overflow: hidden;
 
+    @include atTablet {
+        // box model
+        display: block;
+    }
+
     @include atDesktopS {
         // box model
         display: flex;
         max-width: unset;
         width: 1280px;
         justify-content: space-between;
-        padding-bottom: 45px;
-        padding-left: 45px;
-        padding-right: 50px;
-        padding-top: 45px;
+        // padding-bottom: 45px;
+        // padding-left: 45px;
+        // padding-right: 50px;
+        // padding-top: 45px;
 
         // visual
         background-image: url('./img/bgs/branch-modal-l.png');
@@ -63,33 +66,60 @@
     }
 }
 
-.branch-modal__close {
-    // positioning
-    position: absolute;
-    right: 15px;
-    top: 30px;
-
-    // box model
-    width: 22px;
-    height: 22px;
-
-    // visual
-    background-image: url('./img/deco/cross.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-
 .branch-modal__content {
     // positioning
     position: relative;
 
+    // box model
+    display: flex;
+    justify-content: space-between;
+
     @include atDesktopS {
         // box model
         width: 100%;
-        max-width: 510px;
+        // max-width: 510px;
         margin-bottom: 0;
+    }
+}
+
+.branch-modal__info {
+    // box model
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.branch-modal__title {
+    // box model
+    margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1.5rem;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 2.5rem;
+    }
+}
+
+.branch-modal__subtitle {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    text-transform: uppercase;
+    font-size: 1rem;
+    
+    @include atDesktopS {
+        // typography
+        font-size: 1.5rem;
     }
 }
 
@@ -109,14 +139,23 @@
 }
 
 .branch-modal__form {
+    // box model
+    max-width: 410px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+    // visual
+    // background-color: $lightGrey;
+
     .form__title {
         // typography
         color: $light;
         font-size: 1rem;
+        text-align: left;
 
         @include atTablet {
             // typography
-            font-size: 1.875rem;
+            font-size: 1.3rem;
         }
     }
 
@@ -125,4 +164,22 @@
         margin-bottom: 0;
         margin-top: 20px;
     }
+}
+
+.branch-modal__close {
+    // positioning
+    position: absolute;
+    right: 15px;
+    top: 30px;
+
+    // box model
+    width: 22px;
+    height: 22px;
+
+    // visual
+    background-image: url('./img/deco/cross.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
