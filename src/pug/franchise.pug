@@ -739,6 +739,22 @@ html(lang="en")
             .footer__copyrights
                 p © 2014–2019 Oldboy Barbershop
 
+            .branch-modal
+                .branch-modal__inner
+                    .branch-modal__content
+                        .branch-modal__info
+                            h2.branch-modal__title Oldboy Barbershop
+                            p.branch-modal__subtitle Франшиза № 1
+                        .branch-modal__form
+                            form#application-form.form(action="")
+                            legend.form__legend
+                                p.form__title Если Вы хотите стать владельцем нашей франшизы, напишите или позвоните нам
+                            .form__input-group
+                                input.form__input(type="tel" name="phone" placeholder="Номер телефона")
+                            .form__input-group
+                                input.form__submit-btn.button(type="submit" value="Отправить заявку")
+                    .branch-modal__close
+
             button.up-button#up-button
                 .up-button__arrow
                 p.up-button__text Наверх
