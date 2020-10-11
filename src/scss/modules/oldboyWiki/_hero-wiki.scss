@@ -1,0 +1,61 @@
+.hero {
+    // positioning
+    position: relative;
+
+    // box model
+    padding: 20px;
+
+    // visual
+    background-color: $dark;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero__top {
+    // positioning
+    position: relative;
+    
+    // box model
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hero__logo {
+    // positioning
+    position: relative;
+    z-index: 999;
+
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    width: 85px;
+
+    @include atTablet {
+        // positioning
+        position: unset;
+        
+        // box model
+        width: 190px;
+    }
+
+    @include atDesktopM {
+        // box model
+        width: 230px;
+    }
+
+    @include atDesktopL {
+        // box model
+        width: 300px;
+    }
+
+    @include atFullHD {
+        // box model
+        width: 360px;
+    }
+}
+
+.hero__logo img {
+    // box model
+    width: 100%;
+}
