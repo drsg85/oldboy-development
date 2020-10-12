@@ -1,0 +1,467 @@
+.footer {
+    // box model
+    padding: 40px 20px;
+    padding-top: 60px;
+
+    // visual
+    background-color: $dark;
+    background-image: url('./img/white-grunge-180.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: top -170px center;
+
+    @include atTablet {
+        // box model
+        padding: 80px 40px;
+        padding-bottom: 40px;
+
+        // visual
+        background-image:
+            url('./img/white-grunge-180.svg'),
+            url('./img/bgs/barberpull.jpg');
+        background-position:
+            top -170px center,
+            center center;
+        background-size:
+            800px,
+            cover;
+        background-repeat:
+            repeat-x,
+            no-repeat;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 80px 50px;
+        padding-bottom: 50px;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 100px 80px;
+        padding-bottom: 60px;
+    }
+}
+
+.footer--coupon {
+    // visual
+    background-image: none;
+
+    @include atDesktopL {
+        background-image: url('./img/white-grunge-180.svg'),
+    }
+}
+
+.footer--coupon .footer__info {
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 40px;
+        width: 100%;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding-right: 0;
+    }
+}
+
+.footer--coupon .footer__logo {
+    // box model
+    max-width: 350px;
+    margin: 0 auto;
+
+    @include atTablet {
+        max-width: 220px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 350px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 450px;
+        margin: 0;
+        padding-right: 0;
+    }
+}
+
+.footer--coupon .footer__caption {
+    @include atTablet {
+        // box model
+        max-width: 400px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 500px;
+    }
+}
+
+.footer--coupon .footer__title {
+    // box model
+    margin-top: 0;
+}
+
+.footer--coupon .footer__menues {
+    @include atTablet {
+        // box model
+        padding-bottom: 0;
+
+        // visual
+        border-bottom: none;
+    }
+}
+
+.footer--coupon .footer__info-nav {
+    @include atTablet {
+        // box model
+        margin: 0 auto;
+        flex-basis: unset;
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+.footer--coupon .footer-menu {
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+}
+
+.footer--coupon .footer__copyrights {
+    @include atTablet {
+        // typography
+        text-align: center;
+    }
+}
+
+.footer__content {
+    @include atDesktopS {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100%;
+        min-height: 425px;
+    }
+}
+
+.footer__info-n-contacts {
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    @include atDesktopS {
+        // box model
+        //flex-basis: 300px;
+    }
+}
+
+.footer__info {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.footer__logo {
+    // box model
+    width: 150px;
+    padding: 10px 40px;
+
+    @include atTablet {
+        // box model
+        width: 300px;
+        padding: 0;
+        padding-right: 30px;
+    }
+}
+
+.footer__caption {
+    // box model
+    width: 100%;
+    max-width: 600px;
+}
+
+.footer__logo img {
+    // box model
+    width: 100%;
+}
+
+.footer__title {
+    // box model
+    margin: 0;
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
+}
+
+.footer__subtitle {
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include atTablet {
+        // typography
+        text-align: left;
+    }
+}
+
+.footer__text {
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0.5em;
+
+        // typography
+        text-align: left;
+    }
+}
+
+.footer__social {
+    // box model
+    margin-bottom: 20px;
+
+    // typography
+    text-align: center;
+
+    @include atDesktopS {
+        // box model
+        display: none;
+    }
+
+    &--franchise {
+        @include atDesktopS {
+            // box model
+            display: block;
+            order: 2;
+        }
+    }
+
+    &--franchise .footer__social-cta {
+        // box model
+        margin-top: 0;
+    }
+}
+
+.footer__social-cta {
+    // box model
+    
+    // typography
+    color: $golden;
+    font-family: $titleFont;
+    font-size: 1rem;
+}
+
+.footer__contacts {
+    // box model
+    padding: 15px 0;
+
+    // typography
+    text-align: center;
+
+    // visual
+    border-top: 2px solid $golden;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px 20px;
+        padding-top: 20px;
+    }
+
+    @include atDesktopS {
+        // positioning
+        //position: absolute;
+        right: 0;
+        top: 0;
+
+        // box model
+        padding: 40px 0px;
+        padding-bottom: 20px;
+        flex-direction: row;
+        align-items: flex-start;
+        width: calc(100% - 300px);
+        margin-left: auto;
+    }
+
+    @include atDesktopL {
+        // box model
+        padding: 40px 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.footer__rating {
+    // box model
+    align-self: center;
+
+    @include atDesktopM {
+        // box model
+        margin-right: 10px;
+    }
+}
+
+.footer__city {
+    // box model
+    display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+
+        // typography
+        color: $light;
+        font-family: $titleFont;
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: none;
+
+        // typography
+        text-align: center;
+    }
+
+    @include atDesktopM {
+        // box model
+        display: block;
+        align-self: center;
+        margin-right: 5px;
+        order: 0;
+    }
+
+    @include atDesktopL {
+        // box model
+        margin-right: 0;
+    }
+}
+
+.footer__menues {
+    // box model
+    margin-bottom: 40px;
+
+    // visual
+    border-top: 2px solid $golden;
+    border-bottom: 2px solid $golden;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        justify-content: space-around;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: calc(100% - 320px);
+    }
+}
+
+.footer__main-nav {
+    // box model
+    display: none;
+
+    @include atTablet {
+        // box model
+        display: block;
+        flex-basis: 25%;
+    }
+}
+
+.footer__services-nav {
+    // box model
+    display: none;
+    
+    @include atTablet {
+        // box model
+        display: block;
+        flex-basis: 40%;
+    }
+}
+
+.footer__info-nav {
+    @include atTablet {
+        // box model
+        display: block;
+        flex-basis: 270px;
+    }
+}
+
+.footer__copyrights {
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+}
+
+.footer__copyrights p {
+    // box model
+    margin: 0;
+    padding: 0;
+    
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer__copyrights-stress {
+    color: $light;
+    font-size: 10px;
+    font-weight: 700;
+}
