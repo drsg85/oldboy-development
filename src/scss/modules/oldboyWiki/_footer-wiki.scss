@@ -1,0 +1,60 @@
+.footer {
+    // box model
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    min-height: 150px;
+    
+    // visual
+    background-color: $dark;
+    background-image: url('./img/white-grunge-180.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: top -170px center;
+
+    @include atTablet {
+        // visual
+        background-image:
+            url('./img/white-grunge-180.svg'),
+            url('./img/bgs/barberpull.jpg');
+        background-position:
+            top -170px center,
+            center center;
+        background-size:
+            800px,
+            cover;
+        background-repeat:
+            repeat-x,
+            no-repeat;
+    }
+}
+
+.footer__copyrights {
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // typography
+        text-align: right;
+    }
+}
+
+.footer__copyrights p {
+    // box model
+    margin: 0;
+    padding: 0;
+    
+    // typography
+    color: $lightGrey;
+    font-family: $mainFont;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer__copyrights-stress {
+    color: $light;
+    font-size: 10px;
+    font-weight: 700;
+}

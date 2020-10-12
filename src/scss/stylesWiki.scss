@@ -1,14 +1,24 @@
+@charset 'utf-8';
+
 // base
 @import 'base/normalize';
 @import 'base/vars';
 @import 'base/mixins';
 @import 'base/globals';
-
-// fonts
 @import 'fonts/fonts';
+@import 'modules/button';
 
-// header
-@import 'modules/hero-wiki';
+// hero
+@import 'modules/oldboyWiki/hero-wiki';
 
 // footer
-@import 'modules/footer-wiki';
+@import 'modules/oldboyWiki/footer-wiki';
+
+// main view
+@import 'modules/oldboyWiki/main-veiw';
+
+// category menu
+@import 'modules/oldboyWiki/category-menu';
+
+// main search
+@import 'modules/oldboyWiki/main-search';

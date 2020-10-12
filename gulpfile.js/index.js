@@ -9,7 +9,8 @@ const csso = require('gulp-csso');
 const sassImporter = require('sass-module-importer');
 const webPack = require('webpack');
 const webpack = require('webpack-stream');
-
+const rename = require('gulp-rename');
+const { parallel } = require('gulp');
 // Paths
 const dirs = {
   pug: './src/pug/**/*.pug',
@@ -70,6 +71,14 @@ let styles = () => (
     .pipe(browserSync.reload({stream: true}))
 );
 
+let stylesWiki = () => (
+  gulp.src("./src/scss/stylesWiki.scss")
+  .pipe(rename("template_styles.css"))
+  .pipe(sass({ importer: sassImporter() }))
+  .pipe(csso({comments: 'exclamation'}))
+  .pipe(gulp.dest(dirs.dist))
+  .pipe(browserSync.reload({stream: true}))
+);
 
 /**
  * Compiles js files
@@ -114,11 +123,13 @@ let watch = () => {
 
   gulp.watch(dirs.pug, gulp.series(pugRender, browserSyncReload));
   gulp.watch(dirs.scss, gulp.parallel(styles));
+  gulp.watch(dirs.scss, gulp.parallel(stylesWiki));
   gulp.watch(dirs.js, gulp.series(scripts, browserSyncReload));
 };
 
 
 exports.pugRender = pugRender;
 exports.styles = styles;
+exports.stylesWiki = stylesWiki;
 exports.scripts = scripts;
 exports.watch = watch;
